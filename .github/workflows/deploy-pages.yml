@@ -50,14 +50,16 @@ jobs:
 
       # =========================
       # Python
-      # Only needed for scheduled
-      # or manual data updates
+      # Needed for scheduled/manual updates.
+      # The [seed-jet] condition is a one-time
+      # initial backfill trigger for this commit.
       # =========================
 
       - name: Setup Python
         if: >
           github.event_name == 'schedule' ||
-          github.event_name == 'workflow_dispatch'
+          github.event_name == 'workflow_dispatch' ||
+          contains(github.event.head_commit.message, '[seed-jet]')
         uses: actions/setup-python@v6
         with:
           python-version: '3.12'
@@ -70,10 +72,11 @@ jobs:
       - name: Install dependencies
         if: >
           github.event_name == 'schedule' ||
-          github.event_name == 'workflow_dispatch'
+          github.event_name == 'workflow_dispatch' ||
+          contains(github.event.head_commit.message, '[seed-jet]')
         run: |
           python -m pip install --upgrade pip
-          pip install yfinance==1.7.0 requests
+          pip install yfinance==1.7.0 requests beautifulsoup4
 
 
       # =========================
@@ -89,19 +92,18 @@ jobs:
 
 
       # =========================
-      # Test CME Jet Fuel
-      # Manual diagnostic only.
-      # CME currently blocks automated
-      # GitHub runner requests with 403,
-      # so this test must never prevent
-      # market data saving or Pages deploy.
+      # Update Singapore Jet Fuel
+      # Public FOB Singapore indicative
+      # archive; not licensed CME/Platts.
       # =========================
 
-      - name: Test CME Singapore Jet Kerosene (diagnostic only)
-        if: github.event_name == 'workflow_dispatch'
-        continue-on-error: true
+      - name: Update Singapore Jet Kerosene data
+        if: >
+          github.event_name == 'schedule' ||
+          github.event_name == 'workflow_dispatch' ||
+          contains(github.event.head_commit.message, '[seed-jet]')
         run: |
-          python scripts/probe_cme_jet_fuel.py
+          python scripts/update_jet_fuel.py
 
 
       # =========================
@@ -111,7 +113,8 @@ jobs:
       - name: Save updated market data
         if: >
           github.event_name == 'schedule' ||
-          github.event_name == 'workflow_dispatch'
+          github.event_name == 'workflow_dispatch' ||
+          contains(github.event.head_commit.message, '[seed-jet]')
         run: |
           if git diff --quiet -- data/market_data.json; then
 
