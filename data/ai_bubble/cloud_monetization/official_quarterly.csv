@@ -1,0 +1,5 @@
+calendar_quarter,company,metric,growth_yoy_pct,revenue_usd_bn,source,source_url
+2026Q2,Microsoft,Azure and other cloud services revenue,43,,Microsoft FY26 Q4 Investor Relations,https://www.microsoft.com/en-us/investor/earnings/fy-2026-q4/metrics
+2026Q2,Amazon,AWS net sales,37,42.2,Amazon Q2 2026 Investor Relations,https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Second-Quarter-Results/default.aspx
+2026Q2,Alphabet,Google Cloud revenue,82,24.768,Alphabet Q2 2026 results,https://www.sec.gov/Archives/edgar/data/1652044/000165204426000066/googexhibit991q22026.htm
+2026Q2,Oracle,Cloud Infrastructure IaaS revenue,93,5.8,Oracle FY26 Q4 Investor Relations,https://investor.oracle.com/investor-news/news-details/2026/Oracle-Announces-Record-Q4-and-FY-2026-Results-Driven-by-Cloud-Infrastructure--Cloud-Applications/default.aspx
