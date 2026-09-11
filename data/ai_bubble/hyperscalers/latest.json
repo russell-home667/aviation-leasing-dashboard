@@ -1,0 +1,103 @@
+{
+  "module": "AI Bubble Monitor - Hyperscaler Financials",
+  "step": 6,
+  "timezone": "Asia/Shanghai",
+  "generated_at_bjt": "2026-09-11T22:24:12+08:00",
+  "source_policy": {
+    "automated_source": "Yahoo Finance quarterly financial statements via yfinance",
+    "official_validation_source": "SEC EDGAR / company investor relations",
+    "sec_github_actions_note": "data.sec.gov currently returns HTTP 403 from GitHub-hosted Azure runners; official sources will be used for validation/backfill rather than unattended runner fetches."
+  },
+  "accounting_policy": {
+    "cash_capex": "Absolute value of quarterly CapitalExpenditure cash-flow line; normalized as positive cash spent.",
+    "fcf": "Operating Cash Flow - Cash CapEx",
+    "h5_alignment": "Companies grouped by calendar quarter containing each fiscal period end; MSFT and ORCL fiscal calendars differ from calendar-year companies."
+  },
+  "companies": {
+    "MSFT": {
+      "company": "Microsoft",
+      "fiscal_year": 2026,
+      "fiscal_quarter": "Q4",
+      "period_end": "2026-06-30",
+      "calendar_quarter": "2026Q2",
+      "revenue_usd_bn": 90.007,
+      "cfo_usd_bn": 55.441,
+      "cash_capex_usd_bn": 35.802,
+      "da_usd_bn": 11.022,
+      "fcf_usd_bn": 19.639,
+      "capex_revenue_pct": 39.777,
+      "fcf_margin_pct": 21.819
+    },
+    "GOOGL": {
+      "company": "Alphabet",
+      "fiscal_year": 2026,
+      "fiscal_quarter": "Q2",
+      "period_end": "2026-06-30",
+      "calendar_quarter": "2026Q2",
+      "revenue_usd_bn": 119.796,
+      "cfo_usd_bn": 39.069,
+      "cash_capex_usd_bn": 44.924,
+      "da_usd_bn": 7.104,
+      "fcf_usd_bn": -5.855,
+      "capex_revenue_pct": 37.5,
+      "fcf_margin_pct": -4.887
+    },
+    "AMZN": {
+      "company": "Amazon",
+      "fiscal_year": 2026,
+      "fiscal_quarter": "Q1",
+      "period_end": "2026-03-31",
+      "calendar_quarter": "2026Q1",
+      "revenue_usd_bn": 181.519,
+      "cfo_usd_bn": 26.032,
+      "cash_capex_usd_bn": 44.203,
+      "da_usd_bn": 18.945,
+      "fcf_usd_bn": -18.171,
+      "capex_revenue_pct": 24.352,
+      "fcf_margin_pct": -10.011
+    },
+    "META": {
+      "company": "Meta",
+      "fiscal_year": 2026,
+      "fiscal_quarter": "Q2",
+      "period_end": "2026-06-30",
+      "calendar_quarter": "2026Q2",
+      "revenue_usd_bn": 60.801,
+      "cfo_usd_bn": 31.862,
+      "cash_capex_usd_bn": 30.116,
+      "da_usd_bn": 6.356,
+      "fcf_usd_bn": 1.746,
+      "capex_revenue_pct": 49.532,
+      "fcf_margin_pct": 2.872
+    },
+    "ORCL": {
+      "company": "Oracle",
+      "fiscal_year": 2026,
+      "fiscal_quarter": "Q4",
+      "period_end": "2026-05-31",
+      "calendar_quarter": "2026Q2",
+      "revenue_usd_bn": 19.184,
+      "cfo_usd_bn": 14.62,
+      "cash_capex_usd_bn": 16.493,
+      "da_usd_bn": 2.847,
+      "fcf_usd_bn": -1.873,
+      "capex_revenue_pct": 85.973,
+      "fcf_margin_pct": -9.763
+    }
+  },
+  "h5_latest_complete": {
+    "calendar_quarter": "2026Q1",
+    "revenue_usd_bn": 447.802,
+    "cfo_usd_bn": 157.878,
+    "cash_capex_usd_bn": 148.385,
+    "da_usd_bn": 44.159,
+    "fcf_usd_bn": 9.493,
+    "capex_revenue_pct": 33.136,
+    "fcf_margin_pct": 2.12,
+    "da_revenue_pct": 9.861,
+    "cash_capex_yoy_pct": null,
+    "revenue_yoy_pct": null,
+    "fcf_yoy_pct": null
+  },
+  "errors": {}
+}
