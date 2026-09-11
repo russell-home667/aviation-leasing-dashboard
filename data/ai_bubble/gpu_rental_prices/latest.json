@@ -1,0 +1,76 @@
+{
+  "module": "AI Bubble Monitor - GPU Rental Price Index",
+  "step": 8,
+  "timezone": "Asia/Shanghai",
+  "generated_at_bjt": "2026-09-11T22:42:55+08:00",
+  "methodology": {
+    "primary": "Median $/GPU/hour across verified, rentable, on-demand Vast.ai offers; machine price divided by GPU count.",
+    "fallback": "Runpod Community Cloud published price when VAST_API_KEY is unavailable or Vast fetch fails.",
+    "daily": "Median of all intraday snapshots for the same GPU and source series.",
+    "source_switch_rule": "7/30/90-day changes are calculated only within the same source series, preventing false jumps when switching between Runpod and Vast.",
+    "gpu_scope": [
+      "H100 SXM",
+      "H200",
+      "B200"
+    ]
+  },
+  "vast_api_key_configured": false,
+  "vast_error": null,
+  "runpod_status": "LIVE_PUBLIC_PAGE",
+  "gpus": {
+    "H100": {
+      "variant": "H100 SXM 80GB",
+      "date_bjt": "2026-09-11",
+      "daily_price_usd_per_gpu_hr": 2.69,
+      "source_series": "runpod_community_reference",
+      "index": 100.0,
+      "change_7d_pct": null,
+      "change_30d_pct": null,
+      "change_90d_pct": null,
+      "runpod_reference_usd_per_gpu_hr": 2.69,
+      "latest_snapshot_bjt": "2026-09-11T22:42:55+08:00",
+      "offers_count": null,
+      "status": "REFERENCE_FALLBACK",
+      "source": "Runpod Community Cloud public pricing"
+    },
+    "H200": {
+      "variant": "H200 SXM 141GB",
+      "date_bjt": "2026-09-11",
+      "daily_price_usd_per_gpu_hr": 3.59,
+      "source_series": "runpod_community_reference",
+      "index": 100.0,
+      "change_7d_pct": null,
+      "change_30d_pct": null,
+      "change_90d_pct": null,
+      "runpod_reference_usd_per_gpu_hr": 3.59,
+      "latest_snapshot_bjt": "2026-09-11T22:42:55+08:00",
+      "offers_count": null,
+      "status": "REFERENCE_FALLBACK",
+      "source": "Runpod Community Cloud public pricing"
+    },
+    "B200": {
+      "variant": "B200 180/192GB",
+      "date_bjt": "2026-09-11",
+      "daily_price_usd_per_gpu_hr": 5.98,
+      "source_series": "runpod_community_reference",
+      "index": 100.0,
+      "change_7d_pct": null,
+      "change_30d_pct": null,
+      "change_90d_pct": null,
+      "runpod_reference_usd_per_gpu_hr": 5.98,
+      "latest_snapshot_bjt": "2026-09-11T22:42:55+08:00",
+      "offers_count": null,
+      "status": "REFERENCE_FALLBACK",
+      "source": "Runpod Community Cloud public pricing"
+    }
+  },
+  "composite": {
+    "date_bjt": "2026-09-11",
+    "source_series": "runpod_community_reference",
+    "composite_index": 100.0,
+    "change_7d_pct": null,
+    "change_30d_pct": null,
+    "change_90d_pct": null
+  },
+  "errors": {}
+}

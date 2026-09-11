@@ -1,0 +1,4 @@
+date_bjt,gpu,source_series,daily_price_usd_per_gpu_hr,daily_low,daily_high,samples,runpod_reference_usd_per_gpu_hr,index,change_7d_pct,change_30d_pct,change_90d_pct
+2026-09-11,B200,runpod_community_reference,5.98,5.98,5.98,1,5.98,100.0,,,
+2026-09-11,H100,runpod_community_reference,2.69,2.69,2.69,1,2.69,100.0,,,
+2026-09-11,H200,runpod_community_reference,3.59,3.59,3.59,1,3.59,100.0,,,

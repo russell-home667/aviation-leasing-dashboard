@@ -1,0 +1,4 @@
+snapshot_bjt,date_bjt,hour_bjt,gpu,variant,source_series,price_usd_per_gpu_hr,runpod_reference_usd_per_gpu_hr,offers_count,market_min,market_p25,market_median,market_p75,market_max,source,source_url,status
+2026-09-11T22:42:55+08:00,2026-09-11,22:42:55,B200,B200 180/192GB,runpod_community_reference,5.98,5.98,,,,,,,Runpod Community Cloud public pricing,https://www.runpod.io/gpu-models,REFERENCE_FALLBACK
+2026-09-11T22:42:55+08:00,2026-09-11,22:42:55,H100,H100 SXM 80GB,runpod_community_reference,2.69,2.69,,,,,,,Runpod Community Cloud public pricing,https://www.runpod.io/gpu-models,REFERENCE_FALLBACK
+2026-09-11T22:42:55+08:00,2026-09-11,22:42:55,H200,H200 SXM 141GB,runpod_community_reference,3.59,3.59,,,,,,,Runpod Community Cloud public pricing,https://www.runpod.io/gpu-models,REFERENCE_FALLBACK
