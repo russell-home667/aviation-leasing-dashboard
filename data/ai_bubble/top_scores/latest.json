@@ -2,7 +2,7 @@
   "module": "AI Bubble Monitor - Top Scores",
   "step": 10,
   "timezone": "Asia/Shanghai",
-  "generated_at_bjt": "2026-09-11T23:27:56+08:00",
+  "generated_at_bjt": "2026-09-11T23:36:46+08:00",
   "methodology_version": "heuristic_v1_pre_backtest",
   "calibration_note": "Weights and thresholds are deliberately transparent but provisional. Step 12 will backtest/calibrate them; current scores are monitoring signals, not probabilities.",
   "bubble_score": {
@@ -120,8 +120,8 @@
     }
   },
   "source_generated_at": {
-    "derived_indicators": "2026-09-11T22:47:33+08:00",
-    "market_liquidity": "2026-09-11T22:41:42+08:00",
+    "derived_indicators": "2026-09-11T23:36:32+08:00",
+    "market_liquidity": "2026-09-11T23:36:10+08:00",
     "hyperscalers": "2026-09-11T22:27:04+08:00"
   },
   "errors": {}
