@@ -1,0 +1,142 @@
+{
+  "module": "AI Bubble Monitor - Historical Backtest & Calibration",
+  "step": 12,
+  "timezone": "Asia/Shanghai",
+  "generated_at_bjt": "2026-09-11T23:44:57+08:00",
+  "methodology": {
+    "full_bubble_score_backtestable_to_2000": false,
+    "reason": "Hyperscaler AI CapEx, comparable cloud monetization and GPU rental series are modern-only; reconstructing them for 2000 would create false precision.",
+    "breakdown_proxy": "45% market trend/drawdown + 35% long-history liquidity/credit stress + 20% TSMC semiconductor-demand deterioration.",
+    "bubble_proxy": "65% market heat + 20% TSMC semiconductor strength + 15% Nasdaq-100 12-month momentum. This is a historical overheat proxy, not the live Bubble Score.",
+    "controls": "GFC and COVID are included deliberately to test whether Breakdown identifies unwind mechanics even when the shock is not an AI/technology bubble."
+  },
+  "breakdown_proxy_percentiles": {
+    "p50": 39.7,
+    "p65": 45.1,
+    "p75": 48.7,
+    "p80": 51.8,
+    "p90": 60.5,
+    "p95": 63.5,
+    "p97": 70.5,
+    "p99": 85.6
+  },
+  "live_band_validation": {
+    "25": {
+      "normal_months_above_pct": 71.9,
+      "crisis_months_above_pct": 92.4,
+      "historical_percentile_rank_pct": 24.0
+    },
+    "45": {
+      "normal_months_above_pct": 25.5,
+      "crisis_months_above_pct": 74.2,
+      "historical_percentile_rank_pct": 64.9
+    },
+    "65": {
+      "normal_months_above_pct": 1.5,
+      "crisis_months_above_pct": 16.7,
+      "historical_percentile_rank_pct": 95.5
+    },
+    "80": {
+      "normal_months_above_pct": 0.0,
+      "crisis_months_above_pct": 10.6,
+      "historical_percentile_rank_pct": 97.9
+    }
+  },
+  "events": [
+    {
+      "event": "Dot-com build-up",
+      "start": "1999-01-01",
+      "end": "2000-03-31",
+      "available": true,
+      "max_breakdown_proxy": 30.6,
+      "max_breakdown_date": "1999-09-30",
+      "max_bubble_proxy": 100.0,
+      "max_bubble_date": "1999-01-31",
+      "months_breakdown_ge_45": 0,
+      "months_breakdown_ge_65": 0,
+      "months_breakdown_ge_80": 0
+    },
+    {
+      "event": "Dot-com unwind",
+      "start": "2000-03-01",
+      "end": "2002-10-31",
+      "available": true,
+      "max_breakdown_proxy": 85.6,
+      "max_breakdown_date": "2001-09-30",
+      "max_bubble_proxy": 100.0,
+      "max_bubble_date": "2000-03-31",
+      "months_breakdown_ge_45": 25,
+      "months_breakdown_ge_65": 4,
+      "months_breakdown_ge_80": 1
+    },
+    {
+      "event": "GFC control",
+      "start": "2007-10-01",
+      "end": "2009-03-31",
+      "available": true,
+      "max_breakdown_proxy": 90.7,
+      "max_breakdown_date": "2008-10-31",
+      "max_bubble_proxy": 53.5,
+      "max_bubble_date": "2007-10-31",
+      "months_breakdown_ge_45": 16,
+      "months_breakdown_ge_65": 7,
+      "months_breakdown_ge_80": 6
+    },
+    {
+      "event": "COVID control",
+      "start": "2020-02-01",
+      "end": "2020-05-31",
+      "available": true,
+      "max_breakdown_proxy": 52.7,
+      "max_breakdown_date": "2020-03-31",
+      "max_bubble_proxy": 65.6,
+      "max_bubble_date": "2020-05-31",
+      "months_breakdown_ge_45": 1,
+      "months_breakdown_ge_65": 0,
+      "months_breakdown_ge_80": 0
+    },
+    {
+      "event": "2022 tech/rate selloff",
+      "start": "2021-11-01",
+      "end": "2022-10-31",
+      "available": true,
+      "max_breakdown_proxy": 62.6,
+      "max_breakdown_date": "2022-09-30",
+      "max_bubble_proxy": 60.9,
+      "max_bubble_date": "2021-11-30",
+      "months_breakdown_ge_45": 7,
+      "months_breakdown_ge_65": 0,
+      "months_breakdown_ge_80": 0
+    },
+    {
+      "event": "AI boom to date",
+      "start": "2023-01-01",
+      "end": "2026-09-30",
+      "available": true,
+      "max_breakdown_proxy": 41.7,
+      "max_breakdown_date": "2025-03-31",
+      "max_bubble_proxy": 71.6,
+      "max_bubble_date": "2024-06-30",
+      "months_breakdown_ge_45": 0,
+      "months_breakdown_ge_65": 0,
+      "months_breakdown_ge_80": 0
+    }
+  ],
+  "current_live_scores": {
+    "bubble_score": 58.2,
+    "breakdown_score": 26.3,
+    "regime": "Speculative Expansion"
+  },
+  "calibration_conclusion": {
+    "status": "hybrid_calibrated",
+    "live_score_bands_retained": true,
+    "note": "Long-history proxy is used to validate ordering/severity of Breakdown bands. Modern-only Bubble components remain transparent heuristic weights until a longer live history accumulates."
+  },
+  "limitations": [
+    "The proxy does not reconstruct historical AI/hyperscaler CapEx or cloud monetization.",
+    "BAA10Y is used as a long-history credit proxy where licensed HY OAS history is unavailable.",
+    "TSMC monthly revenue is a semiconductor-cycle proxy and is not a pure AI-demand measure before the AI era.",
+    "COVID is an exogenous shock control: a high Breakdown score does not by itself prove a bubble caused the selloff."
+  ],
+  "errors": {}
+}
