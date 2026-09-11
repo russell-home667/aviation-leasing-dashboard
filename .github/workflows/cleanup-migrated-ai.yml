@@ -1,0 +1,51 @@
+name: Cleanup Migrated AI Bubble Project
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/cleanup-migrated-ai.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Remove migrated AI Bubble files only
+        run: |
+          set -euo pipefail
+          rm -rf ai-bubble data/ai_bubble
+          rm -f AI_BUBBLE_CALIBRATION.md
+          rm -f \
+            scripts/apply_ai_calibration.py \
+            scripts/apply_ai_hyperscaler_overrides.py \
+            scripts/backtest_ai_scores.py \
+            scripts/calculate_ai_derived_indicators.py \
+            scripts/canonicalize_nvda_periods.py \
+            scripts/update_ai_compute_fundamentals.py \
+            scripts/update_ai_gpu_prices.py \
+            scripts/update_ai_hyperscaler_financials.py \
+            scripts/update_ai_market_liquidity.py \
+            scripts/update_ai_top_scores.py
+
+      - name: Commit cleanup
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A ai-bubble data/ai_bubble scripts AI_BUBBLE_CALIBRATION.md 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo 'No migrated AI files remain to delete.'
+            exit 0
+          fi
+          git commit -m 'Remove migrated AI Bubble project from aviation repository'
+          git pull --rebase origin main
+          git push origin HEAD:main
