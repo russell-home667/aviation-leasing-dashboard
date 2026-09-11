@@ -1,35 +1,138 @@
-name: Deploy to GitHub Pages
+name: Update Market Data and Deploy Pages
 
 on:
+
+  # Every normal code push still deploys the website
   push:
     branches:
       - main
+
+  # Allows us to manually test the automatic update
   workflow_dispatch:
 
+  # Daily automatic update
+  # 00:30 UTC = 08:30 Singapore time
+  schedule:
+    - cron: '30 0 * * *'
+
+
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+
 jobs:
-  deploy:
+
+  update-and-deploy:
+
     runs-on: ubuntu-latest
+
 
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
 
+
     steps:
-      - name: Checkout
+
+      # =========================
+      # Checkout repository
+      # =========================
+
+      - name: Checkout repository
         uses: actions/checkout@v6
+
+
+      # =========================
+      # Python
+      # Only needed for scheduled
+      # or manual data updates
+      # =========================
+
+      - name: Setup Python
+        if: >
+          github.event_name == 'schedule' ||
+          github.event_name == 'workflow_dispatch'
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+
+      # =========================
+      # Install yfinance
+      # =========================
+
+      - name: Install dependencies
+        if: >
+          github.event_name == 'schedule' ||
+          github.event_name == 'workflow_dispatch'
+        run: |
+          python -m pip install --upgrade pip
+          pip install yfinance==1.7.0
+
+
+      # =========================
+      # Update Brent
+      # =========================
+
+      - name: Update Brent market data
+        if: >
+          github.event_name == 'schedule' ||
+          github.event_name == 'workflow_dispatch'
+        run: |
+          python scripts/update_brent.py
+
+
+      # =========================
+      # Commit changed data
+      # =========================
+
+      - name: Save updated market data
+        if: >
+          github.event_name == 'schedule' ||
+          github.event_name == 'workflow_dispatch'
+        run: |
+
+          if git diff --quiet -- data/market_data.json; then
+
+            echo "No new market data."
+
+          else
+
+            git config user.name "github-actions[bot]"
+
+            git config user.email \
+            "41898282+github-actions[bot]@users.noreply.github.com"
+
+            git add data/market_data.json
+
+            git commit \
+            -m "Update Brent market data"
+
+            git push
+
+          fi
+
+
+      # =========================
+      # GitHub Pages
+      # =========================
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      - name: Upload artifact
+
+      - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4
         with:
           path: '.'
+
 
       - name: Deploy to GitHub Pages
         id: deployment
