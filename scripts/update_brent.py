@@ -183,7 +183,7 @@ market["brent"]["data"] = merged_records
 
 
 market["updated_at"] = datetime.now(
-    ZoneInfo("Asia/Singapore")
+    ZoneInfo("Asia/Shanghai")
 ).isoformat(
     timespec="seconds"
 )
