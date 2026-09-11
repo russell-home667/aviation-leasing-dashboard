@@ -1,0 +1,31 @@
+{
+  "module": "AI Bubble Monitor - Compute Fundamentals",
+  "step": 7,
+  "timezone": "Asia/Shanghai",
+  "generated_at_bjt": "2026-09-11T22:34:40+08:00",
+  "nvda": {
+    "period_end": "2026-07-31",
+    "fiscal_year": "2027",
+    "fiscal_quarter": "Q2",
+    "total_revenue_usd_bn": 96.221,
+    "data_center_revenue_usd_bn": 89.023,
+    "data_center_yoy_pct": 116.62,
+    "data_center_qoq_pct": 18.31,
+    "gross_margin_pct": 75.0,
+    "inventory_usd_bn": 31.575,
+    "inventory_days": 109.71,
+    "accounts_receivable_usd_bn": 63.059,
+    "dso_days": 60.0,
+    "source": "NVIDIA Q2 FY2027 10-Q and earnings call",
+    "source_url": "https://investor.nvidia.com/files/doc_financials/2027/NVDA-2027-Q2-10Q-Final-including-exhibits.pdf"
+  },
+  "tsmc": {
+    "month": "2026-08",
+    "revenue_twd_mn": 514806.0,
+    "yoy_pct_reported": 53.3,
+    "rolling_3m_yoy_pct": 54.45,
+    "source": "TSMC Investor Relations",
+    "source_url": "https://investor.tsmc.com/english/monthly-revenue/2026"
+  },
+  "errors": {}
+}
