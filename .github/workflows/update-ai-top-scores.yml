@@ -1,0 +1,82 @@
+name: Update AI Top Scores
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/update_ai_top_scores.py'
+      - '.github/workflows/update-ai-top-scores.yml'
+  workflow_run:
+    workflows: ['Update AI Derived Indicators']
+    types: [completed]
+  schedule:
+    - cron: '55 0 * * *'
+      timezone: 'Asia/Shanghai'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ai-top-scores
+  cancel-in-progress: false
+
+jobs:
+  update:
+    if: >-
+      github.event_name != 'workflow_run' ||
+      github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout latest main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Calculate top scores
+        run: |
+          set -euo pipefail
+          python scripts/update_ai_top_scores.py
+
+      - name: Validate top scores
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p = Path('data/ai_bubble/top_scores/latest.json')
+          if not p.exists():
+              raise SystemExit('top_scores/latest.json missing')
+          d = json.loads(p.read_text(encoding='utf-8'))
+          if d.get('errors'):
+              raise SystemExit(f"Top-score errors: {d['errors']}")
+          for key in ['bubble_score', 'breakdown_score']:
+              score = d.get(key, {}).get('score_0_100')
+              if score is None or not 0 <= float(score) <= 100:
+                  raise SystemExit(f'Invalid {key}: {score}')
+          if not d.get('regime'):
+              raise SystemExit('Regime missing')
+          print('Bubble:', d['bubble_score'])
+          print('Breakdown:', d['breakdown_score'])
+          print('Regime:', d['regime'])
+          PY
+
+      - name: Commit refreshed top scores
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/ai_bubble/top_scores/
+          if git diff --cached --quiet; then
+            echo 'No top-score changes to commit.'
+            exit 0
+          fi
+          git commit -m 'data: refresh AI top scores'
+          git pull --rebase origin main
+          git push origin HEAD:main
