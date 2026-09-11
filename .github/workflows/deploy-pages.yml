@@ -90,11 +90,16 @@ jobs:
 
       # =========================
       # Test CME Jet Fuel
-      # Manual runs only
+      # Manual diagnostic only.
+      # CME currently blocks automated
+      # GitHub runner requests with 403,
+      # so this test must never prevent
+      # market data saving or Pages deploy.
       # =========================
 
-      - name: Test CME Singapore Jet Kerosene
+      - name: Test CME Singapore Jet Kerosene (diagnostic only)
         if: github.event_name == 'workflow_dispatch'
+        continue-on-error: true
         run: |
           python scripts/probe_cme_jet_fuel.py
 
@@ -122,7 +127,7 @@ jobs:
             git add data/market_data.json
 
             git commit \
-            -m "Update Brent market data"
+            -m "Update market data"
 
             git push
 
