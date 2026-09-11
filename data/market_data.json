@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-11T21:34:13+08:00",
+  "updated_at": "2026-09-11T21:40:40+08:00",
   "brent": {
     "name": "Brent Crude",
     "ticker": "BZ=F",
@@ -19060,7 +19060,7 @@
     "name": "Singapore Jet Kerosene",
     "ticker": "FOB Singapore Mid",
     "unit": "USD/bbl",
-    "source": "Public Singapore jet archive + U.S. EIA legacy series + ANA Cargo disclosed monthly averages",
+    "source": "Public Singapore jet archive + U.S. EIA legacy series + ANA/JAL official period averages",
     "frequency": "Daily / published observations",
     "data": [
       {
@@ -43472,6 +43472,158 @@
         "value": 87.95
       },
       {
+        "date": "2010-10-31",
+        "value": 94.32
+      },
+      {
+        "date": "2010-11-30",
+        "value": 97.45
+      },
+      {
+        "date": "2010-12-31",
+        "value": 103.53
+      },
+      {
+        "date": "2011-01-31",
+        "value": 109.83
+      },
+      {
+        "date": "2012-02-29",
+        "value": 132.46
+      },
+      {
+        "date": "2012-03-31",
+        "value": 136.12
+      },
+      {
+        "date": "2012-04-30",
+        "value": 133.31
+      },
+      {
+        "date": "2012-06-30",
+        "value": 110.31
+      },
+      {
+        "date": "2012-07-31",
+        "value": 117.58
+      },
+      {
+        "date": "2013-01-31",
+        "value": 128.18
+      },
+      {
+        "date": "2013-02-28",
+        "value": 133.59
+      },
+      {
+        "date": "2013-07-31",
+        "value": 121.17
+      },
+      {
+        "date": "2016-02-29",
+        "value": 41.17
+      },
+      {
+        "date": "2016-03-31",
+        "value": 47.24
+      },
+      {
+        "date": "2016-07-31",
+        "value": 54.52
+      },
+      {
+        "date": "2016-08-31",
+        "value": 53.68
+      },
+      {
+        "date": "2016-10-31",
+        "value": 60.91
+      },
+      {
+        "date": "2016-11-30",
+        "value": 56.47
+      },
+      {
+        "date": "2016-12-31",
+        "value": 63.72
+      },
+      {
+        "date": "2017-01-31",
+        "value": 65.07
+      },
+      {
+        "date": "2017-03-31",
+        "value": 61.92
+      },
+      {
+        "date": "2018-03-31",
+        "value": 79.07
+      },
+      {
+        "date": "2018-04-30",
+        "value": 85.1
+      },
+      {
+        "date": "2018-05-31",
+        "value": 90.43
+      },
+      {
+        "date": "2018-06-30",
+        "value": 86.95
+      },
+      {
+        "date": "2018-09-30",
+        "value": 91.74
+      },
+      {
+        "date": "2018-10-31",
+        "value": 95.02
+      },
+      {
+        "date": "2018-11-30",
+        "value": 83.16
+      },
+      {
+        "date": "2018-12-31",
+        "value": 71.7
+      },
+      {
+        "date": "2019-02-28",
+        "value": 78.02
+      },
+      {
+        "date": "2019-04-30",
+        "value": 82.49
+      },
+      {
+        "date": "2019-06-30",
+        "value": 74.61
+      },
+      {
+        "date": "2019-07-31",
+        "value": 78.29
+      },
+      {
+        "date": "2019-08-31",
+        "value": 74.6
+      },
+      {
+        "date": "2019-09-30",
+        "value": 77.72
+      },
+      {
+        "date": "2019-11-30",
+        "value": 74.95
+      },
+      {
+        "date": "2019-12-31",
+        "value": 77.19
+      },
+      {
+        "date": "2020-02-29",
+        "value": 63.0
+      },
+      {
         "date": "2020-10-31",
         "value": 41.66
       },
@@ -44163,7 +44315,7 @@
     "source_url": "https://commodityscope.com/prices/singapore-jet-kerosene",
     "price_field": "Indicative / historical FOB Singapore jet kerosene reference",
     "status": "LIVE",
-    "note": "Long history contains source/frequency breaks. Daily EIA/current observations are retained; the 2010-2026 gap is supplemented with official ANA Cargo Singapore kerosene monthly averages where available.",
+    "note": "Long history contains frequency/source breaks. Daily EIA/current data are preserved. The 2010-2026 gap is filled where possible with official ANA and JAL Singapore kerosene period averages; no synthetic interpolation is used.",
     "history_segments": [
       {
         "source": "U.S. EIA legacy Singapore Kerosene-Type Jet Fuel Spot Price FOB",
@@ -44545,6 +44697,362 @@
           "period_end": "2025-12-31",
           "source": "ANA Cargo disclosed Singapore kerosene monthly average",
           "source_url": "https://www.anacargo.jp/en/news/revision_of_fuel_surcharge_for_ex-japan_cargo_1-feb-26_onward.html"
+        }
+      ]
+    },
+    "jal_wayback_history_backfill": {
+      "source": "Japan Airlines official fuel-surcharge releases recovered through Internet Archive",
+      "method": "Extract Singapore kerosene monthly averages and, where useful, explicitly published two-month averages from archived official JAL releases",
+      "target_gap": "2010-07-28 to 2026-01-25",
+      "from": "2010-10-01",
+      "to": "2020-02-29",
+      "parsed_observations": 38,
+      "monthly_average_observations": 38,
+      "two_month_average_observations": 0,
+      "new_gap_fill_points_added": 38,
+      "caveat": "Period averages are retained as period averages and are not expanded or interpolated into synthetic daily values. Existing higher-frequency observations are never overwritten.",
+      "observations": [
+        {
+          "date": "2010-10-31",
+          "value": 94.32,
+          "observation_type": "monthly_average",
+          "period_start": "2010-10-01",
+          "period_end": "2010-10-31",
+          "source": "Japan Airlines official Singapore kerosene monthly average (Wayback copy)",
+          "source_url": "https://press.jal.co.jp/en/release/201011/003338.html"
+        },
+        {
+          "date": "2010-11-30",
+          "value": 97.45,
+          "observation_type": "monthly_average",
+          "period_start": "2010-11-01",
+          "period_end": "2010-11-30",
+          "source": "Japan Airlines official Singapore kerosene monthly average (Wayback copy)",
+          "source_url": "https://press.jal.co.jp/en/release/201012/003345.html"
+        },
+        {
+          "date": "2010-12-31",
+          "value": 103.53,
+          "observation_type": "monthly_average",
+          "period_start": "2010-12-01",
+          "period_end": "2010-12-31",
+          "source": "Japan Airlines official Singapore kerosene monthly average (Wayback copy)",
+          "source_url": "https://press.jal.co.jp/en/release/201101/003351.html"
+        },
+        {
+          "date": "2011-01-31",
+          "value": 109.83,
+          "observation_type": "monthly_average",
+          "period_start": "2011-01-01",
+          "period_end": "2011-01-31",
+          "source": "Japan Airlines official Singapore kerosene monthly average (Wayback copy)",
+          "source_url": "https://press.jal.co.jp/en/release/201102/003356.html"
+        },
+        {
+          "date": "2012-02-29",
+          "value": 132.46,
+          "observation_type": "monthly_average",
+          "period_start": "2012-02-01",
+          "period_end": "2012-02-29",
+          "source": "Japan Airlines official Singapore kerosene monthly average (Wayback copy)",
+          "source_url": "https://press.jal.co.jp/en/release/201203/003436.html"
+        },
+        {
+          "date": "2012-03-31",
+          "value": 136.12,
+          "observation_type": "monthly_average",
+          "period_start": "2012-03-01",
+          "period_end": "2012-03-31",
+          "source": "Japan Airlines official Singapore kerosene monthly average (Wayback copy)",
+          "source_url": "https://press.jal.co.jp/en/release/201204/003443.html"
+        },
+        {
+          "date": "2012-04-30",
+          "value": 133.31,
+          "observation_type": "monthly_average",
+          "period_start": "2012-04-01",
+          "period_end": "2012-04-30",
+          "source": "Japan Airlines official Singapore kerosene monthly average (Wayback copy)",
+          "source_url": "https://press.jal.co.jp/en/release/201205/003451.html"
+        },
+        {
+          "date": "2012-06-30",
+          "value": 110.31,
+          "observation_type": "monthly_average",
+          "period_start": "2012-06-01",
+          "period_end": "2012-06-30",
+          "source": "Japan Airlines official Singapore kerosene monthly average (Wayback copy)",
+          "source_url": "https://press.jal.co.jp/en/release/201207/003468.html"
+        },
+        {
+          "date": "2012-07-31",
+          "value": 117.58,
+          "observation_type": "monthly_average",
+          "period_start": "2012-07-01",
+          "period_end": "2012-07-31",
+          "source": "Japan Airlines official Singapore kerosene monthly average (Wayback copy)",
+          "source_url": "https://press.jal.co.jp/en/release/201208/003473.html"
+        },
+        {
+          "date": "2013-01-31",
+          "value": 128.18,
+          "observation_type": "monthly_average",
+          "period_start": "2013-01-01",
+          "period_end": "2013-01-31",
+          "source": "Japan Airlines official Singapore kerosene monthly average (Wayback copy)",
+          "source_url": "https://press.jal.co.jp/en/release/201302/003518.html"
+        },
+        {
+          "date": "2013-02-28",
+          "value": 133.59,
+          "observation_type": "monthly_average",
+          "period_start": "2013-02-01",
+          "period_end": "2013-02-28",
+          "source": "Japan Airlines official Singapore kerosene monthly average (Wayback copy)",
+          "source_url": "https://press.jal.co.jp/en/release/201303/003528.html"
+        },
+        {
+          "date": "2013-07-31",
+          "value": 121.17,
+          "observation_type": "monthly_average",
+          "period_start": "2013-07-01",
+          "period_end": "2013-07-31",
+          "source": "Japan Airlines official Singapore kerosene monthly average (Wayback copy)",
+          "source_url": "https://press.jal.co.jp/en/release/201308/003561.html"
+        },
+        {
+          "date": "2016-02-29",
+          "value": 41.17,
+          "observation_type": "monthly_average",
+          "period_start": "2016-02-01",
+          "period_end": "2016-02-29",
+          "source": "Japan Airlines official Singapore kerosene monthly average (Wayback copy)",
+          "source_url": "https://press.jal.co.jp/en/release/201603/003831.html"
+        },
+        {
+          "date": "2016-03-31",
+          "value": 47.24,
+          "observation_type": "monthly_average",
+          "period_start": "2016-03-01",
+          "period_end": "2016-03-31",
+          "source": "Japan Airlines official Singapore kerosene monthly average (Wayback copy)",
+          "source_url": "https://press.jal.co.jp/en/release/201604/003840.html"
+        },
+        {
+          "date": "2016-07-31",
+          "value": 54.52,
+          "observation_type": "monthly_average",
+          "period_start": "2016-07-01",
+          "period_end": "2016-07-31",
+          "source": "Japan Airlines official Singapore kerosene monthly average (Wayback copy)",
+          "source_url": "https://press.jal.co.jp/en/release/201608/003874.html"
+        },
+        {
+          "date": "2016-08-31",
+          "value": 53.68,
+          "observation_type": "monthly_average",
+          "period_start": "2016-08-01",
+          "period_end": "2016-08-31",
+          "source": "Japan Airlines official Singapore kerosene monthly average (Wayback copy)",
+          "source_url": "https://press.jal.co.jp/en/release/201609/003887.html"
+        },
+        {
+          "date": "2016-10-31",
+          "value": 60.91,
+          "observation_type": "monthly_average",
+          "period_start": "2016-10-01",
+          "period_end": "2016-10-31",
+          "source": "Japan Airlines official Singapore kerosene monthly average (Wayback copy)",
+          "source_url": "https://press.jal.co.jp/en/release/201611/004035.html"
+        },
+        {
+          "date": "2016-11-30",
+          "value": 56.47,
+          "observation_type": "monthly_average",
+          "period_start": "2016-11-01",
+          "period_end": "2016-11-30",
+          "source": "Japan Airlines official Singapore kerosene monthly average (Wayback copy)",
+          "source_url": "https://press.jal.co.jp/en/release/201612/004069.html"
+        },
+        {
+          "date": "2016-12-31",
+          "value": 63.72,
+          "observation_type": "monthly_average",
+          "period_start": "2016-12-01",
+          "period_end": "2016-12-31",
+          "source": "Japan Airlines official Singapore kerosene monthly average (Wayback copy)",
+          "source_url": "https://press.jal.co.jp/en/release/201701/004108.html"
+        },
+        {
+          "date": "2017-01-31",
+          "value": 65.07,
+          "observation_type": "monthly_average",
+          "period_start": "2017-01-01",
+          "period_end": "2017-01-31",
+          "source": "Japan Airlines official Singapore kerosene monthly average (Wayback copy)",
+          "source_url": "https://press.jal.co.jp/en/release/201702/004167.html"
+        },
+        {
+          "date": "2017-03-31",
+          "value": 61.92,
+          "observation_type": "monthly_average",
+          "period_start": "2017-03-01",
+          "period_end": "2017-03-31",
+          "source": "Japan Airlines official Singapore kerosene monthly average (Wayback copy)",
+          "source_url": "https://press.jal.co.jp/en/release/201704/004246.html"
+        },
+        {
+          "date": "2018-03-31",
+          "value": 79.07,
+          "observation_type": "monthly_average",
+          "period_start": "2018-03-01",
+          "period_end": "2018-03-31",
+          "source": "Japan Airlines official Singapore kerosene monthly average (Wayback copy)",
+          "source_url": "https://press.jal.co.jp/en/release/201804/004686.html"
+        },
+        {
+          "date": "2018-04-30",
+          "value": 85.1,
+          "observation_type": "monthly_average",
+          "period_start": "2018-04-01",
+          "period_end": "2018-04-30",
+          "source": "Japan Airlines official Singapore kerosene monthly average (Wayback copy)",
+          "source_url": "https://press.jal.co.jp/en/release/201805/004720.html"
+        },
+        {
+          "date": "2018-05-31",
+          "value": 90.43,
+          "observation_type": "monthly_average",
+          "period_start": "2018-05-01",
+          "period_end": "2018-05-31",
+          "source": "Japan Airlines official Singapore kerosene monthly average (Wayback copy)",
+          "source_url": "https://press.jal.co.jp/en/release/201806/004757.html"
+        },
+        {
+          "date": "2018-06-30",
+          "value": 86.95,
+          "observation_type": "monthly_average",
+          "period_start": "2018-06-01",
+          "period_end": "2018-06-30",
+          "source": "Japan Airlines official Singapore kerosene monthly average (Wayback copy)",
+          "source_url": "https://press.jal.co.jp/en/release/201807/004802.html"
+        },
+        {
+          "date": "2018-09-30",
+          "value": 91.74,
+          "observation_type": "monthly_average",
+          "period_start": "2018-09-01",
+          "period_end": "2018-09-30",
+          "source": "Japan Airlines official Singapore kerosene monthly average (Wayback copy)",
+          "source_url": "https://press.jal.co.jp/en/release/201810/004934.html"
+        },
+        {
+          "date": "2018-10-31",
+          "value": 95.02,
+          "observation_type": "monthly_average",
+          "period_start": "2018-10-01",
+          "period_end": "2018-10-31",
+          "source": "Japan Airlines official Singapore kerosene monthly average (Wayback copy)",
+          "source_url": "https://press.jal.co.jp/en/release/201811/004968.html"
+        },
+        {
+          "date": "2018-11-30",
+          "value": 83.16,
+          "observation_type": "monthly_average",
+          "period_start": "2018-11-01",
+          "period_end": "2018-11-30",
+          "source": "Japan Airlines official Singapore kerosene monthly average (Wayback copy)",
+          "source_url": "https://press.jal.co.jp/en/release/201812/004999.html"
+        },
+        {
+          "date": "2018-12-31",
+          "value": 71.7,
+          "observation_type": "monthly_average",
+          "period_start": "2018-12-01",
+          "period_end": "2018-12-31",
+          "source": "Japan Airlines official Singapore kerosene monthly average (Wayback copy)",
+          "source_url": "https://press.jal.co.jp/en/release/201901/005016.html"
+        },
+        {
+          "date": "2019-02-28",
+          "value": 78.02,
+          "observation_type": "monthly_average",
+          "period_start": "2019-02-01",
+          "period_end": "2019-02-28",
+          "source": "Japan Airlines official Singapore kerosene monthly average (Wayback copy)",
+          "source_url": "https://press.jal.co.jp/en/release/201903/005113.html"
+        },
+        {
+          "date": "2019-04-30",
+          "value": 82.49,
+          "observation_type": "monthly_average",
+          "period_start": "2019-04-01",
+          "period_end": "2019-04-30",
+          "source": "Japan Airlines official Singapore kerosene monthly average (Wayback copy)",
+          "source_url": "https://press.jal.co.jp/en/release/201905/005176.html"
+        },
+        {
+          "date": "2019-06-30",
+          "value": 74.61,
+          "observation_type": "monthly_average",
+          "period_start": "2019-06-01",
+          "period_end": "2019-06-30",
+          "source": "Japan Airlines official Singapore kerosene monthly average (Wayback copy)",
+          "source_url": "https://press.jal.co.jp/en/release/201907/005239.html"
+        },
+        {
+          "date": "2019-07-31",
+          "value": 78.29,
+          "observation_type": "monthly_average",
+          "period_start": "2019-07-01",
+          "period_end": "2019-07-31",
+          "source": "Japan Airlines official Singapore kerosene monthly average (Wayback copy)",
+          "source_url": "https://press.jal.co.jp/en/release/201908/005270.html"
+        },
+        {
+          "date": "2019-08-31",
+          "value": 74.6,
+          "observation_type": "monthly_average",
+          "period_start": "2019-08-01",
+          "period_end": "2019-08-31",
+          "source": "Japan Airlines official Singapore kerosene monthly average (Wayback copy)",
+          "source_url": "https://press.jal.co.jp/en/release/201909/005313.html"
+        },
+        {
+          "date": "2019-09-30",
+          "value": 77.72,
+          "observation_type": "monthly_average",
+          "period_start": "2019-09-01",
+          "period_end": "2019-09-30",
+          "source": "Japan Airlines official Singapore kerosene monthly average (Wayback copy)",
+          "source_url": "https://press.jal.co.jp/en/release/201910/005351.html"
+        },
+        {
+          "date": "2019-11-30",
+          "value": 74.95,
+          "observation_type": "monthly_average",
+          "period_start": "2019-11-01",
+          "period_end": "2019-11-30",
+          "source": "Japan Airlines official Singapore kerosene monthly average (Wayback copy)",
+          "source_url": "https://press.jal.co.jp/en/release/201912/005427.html"
+        },
+        {
+          "date": "2019-12-31",
+          "value": 77.19,
+          "observation_type": "monthly_average",
+          "period_start": "2019-12-01",
+          "period_end": "2019-12-31",
+          "source": "Japan Airlines official Singapore kerosene monthly average (Wayback copy)",
+          "source_url": "https://press.jal.co.jp/en/release/202001/005453.html"
+        },
+        {
+          "date": "2020-02-29",
+          "value": 63.0,
+          "observation_type": "monthly_average",
+          "period_start": "2020-02-01",
+          "period_end": "2020-02-29",
+          "source": "Japan Airlines official Singapore kerosene monthly average (Wayback copy)",
+          "source_url": "https://press.jal.co.jp/en/release/202003/005548.html"
         }
       ]
     }
