@@ -33,7 +33,6 @@ jobs:
 
     runs-on: ubuntu-latest
 
-
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -65,7 +64,7 @@ jobs:
 
 
       # =========================
-      # Install yfinance
+      # Install dependencies
       # =========================
 
       - name: Install dependencies
@@ -74,7 +73,7 @@ jobs:
           github.event_name == 'workflow_dispatch'
         run: |
           python -m pip install --upgrade pip
-          pip install yfinance==1.7.0
+          pip install yfinance==1.7.0 requests
 
 
       # =========================
@@ -90,6 +89,17 @@ jobs:
 
 
       # =========================
+      # Test CME Jet Fuel
+      # Manual runs only
+      # =========================
+
+      - name: Test CME Singapore Jet Kerosene
+        if: github.event_name == 'workflow_dispatch'
+        run: |
+          python scripts/probe_cme_jet_fuel.py
+
+
+      # =========================
       # Commit changed data
       # =========================
 
@@ -98,7 +108,6 @@ jobs:
           github.event_name == 'schedule' ||
           github.event_name == 'workflow_dispatch'
         run: |
-
           if git diff --quiet -- data/market_data.json; then
 
             echo "No new market data."
