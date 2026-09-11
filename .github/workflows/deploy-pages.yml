@@ -8,7 +8,7 @@ on:
 
   workflow_dispatch:
 
-  # 00:30 UTC = 08:30 Singapore time
+  # Daily automatic update: 00:30 UTC = 08:30 Singapore time
   schedule:
     - cron: '30 0 * * *'
 
@@ -43,8 +43,7 @@ jobs:
           github.event_name == 'schedule' ||
           github.event_name == 'workflow_dispatch' ||
           contains(github.event.head_commit.message, '[seed-jet]') ||
-          contains(github.event.head_commit.message, '[seed-bai]') ||
-          contains(github.event.head_commit.message, '[probe-bai]')
+          contains(github.event.head_commit.message, '[seed-bai]')
         uses: actions/setup-python@v6
         with:
           python-version: '3.12'
@@ -54,16 +53,10 @@ jobs:
           github.event_name == 'schedule' ||
           github.event_name == 'workflow_dispatch' ||
           contains(github.event.head_commit.message, '[seed-jet]') ||
-          contains(github.event.head_commit.message, '[seed-bai]') ||
-          contains(github.event.head_commit.message, '[probe-bai]')
+          contains(github.event.head_commit.message, '[seed-bai]')
         run: |
           python -m pip install --upgrade pip
           pip install yfinance==1.7.0 requests beautifulsoup4
-
-      - name: Probe TAC BAI public API
-        if: contains(github.event.head_commit.message, '[probe-bai]')
-        run: |
-          python scripts/probe_bai_api.py
 
       - name: Update Brent market data
         if: >
@@ -79,6 +72,14 @@ jobs:
           contains(github.event.head_commit.message, '[seed-jet]')
         run: |
           python scripts/update_jet_fuel.py
+
+      - name: Update Baltic Air Freight Index data
+        if: >
+          github.event_name == 'schedule' ||
+          github.event_name == 'workflow_dispatch' ||
+          contains(github.event.head_commit.message, '[seed-bai]')
+        run: |
+          python scripts/update_bai.py
 
       - name: Sync dashboard source labels
         if: >
