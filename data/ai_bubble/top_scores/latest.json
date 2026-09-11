@@ -1,0 +1,121 @@
+{
+  "module": "AI Bubble Monitor - Top Scores",
+  "step": 10,
+  "timezone": "Asia/Shanghai",
+  "generated_at_bjt": "2026-09-11T22:59:18+08:00",
+  "methodology_version": "heuristic_v1_pre_backtest",
+  "calibration_note": "Weights and thresholds are deliberately transparent but provisional. Step 12 will backtest/calibrate them; current scores are monitoring signals, not probabilities.",
+  "bubble_score": {
+    "score_0_100": 58.2,
+    "label": "high",
+    "question": "How stretched/excessive is the AI investment and valuation cycle?",
+    "components": {
+      "investment_monetization_gap": {
+        "score_0_100": 56.2,
+        "weight_pct": 30
+      },
+      "investment_cash_flow_gap": {
+        "score_0_100": 86.8,
+        "weight_pct": 25
+      },
+      "market_heat": {
+        "score_0_100": 49.4,
+        "weight_pct": 20
+      },
+      "capital_burden": {
+        "score_0_100": 65.3,
+        "weight_pct": 15
+      },
+      "price_fundamental_excess": {
+        "score_0_100": 0.0,
+        "weight_pct": 10
+      }
+    },
+    "capital_burden_detail": {
+      "h5_capex_revenue_pct": 37.02,
+      "h5_da_revenue_pct": 9.65,
+      "capex_intensity_score": 73.4,
+      "da_burden_score": 46.5
+    }
+  },
+  "breakdown_score": {
+    "score_0_100": 26.3,
+    "label": "watch",
+    "question": "Has the AI boom started a self-reinforcing fundamental/market/credit unwind?",
+    "components": {
+      "liquidity_stress": {
+        "score_0_100": 24.8,
+        "weight_pct": 25
+      },
+      "market_trend_breakdown": {
+        "score_0_100": 17.9,
+        "weight_pct": 30
+      },
+      "fundamental_deterioration": {
+        "score_0_100": 24.1,
+        "weight_pct": 25
+      },
+      "cashflow_deterioration": {
+        "score_0_100": 87.0,
+        "weight_pct": 10
+      },
+      "monetization_deterioration": {
+        "score_0_100": 0.0,
+        "weight_pct": 10
+      }
+    },
+    "market_breakdown_detail": {
+      "ndx": {
+        "ath_drawdown_pct": -5.08,
+        "distance_from_200dma_pct": 7.38,
+        "drawdown_stress": 20.3,
+        "trend_stress": 0.0,
+        "combined_stress": 11.2
+      },
+      "sox": {
+        "ath_drawdown_pct": -20.64,
+        "distance_from_200dma_pct": 17.04,
+        "drawdown_stress": 59.0,
+        "trend_stress": 0.0,
+        "combined_stress": 32.4
+      },
+      "nvda": {
+        "ath_drawdown_pct": -7.37,
+        "distance_from_200dma_pct": 10.69,
+        "drawdown_stress": 18.4,
+        "trend_stress": 0.0,
+        "combined_stress": 10.1
+      }
+    },
+    "compute_demand_input_coverage_pct": 70.0
+  },
+  "regime": "Fundamental Divergence / Strong Demand",
+  "coverage_pct": 92.5,
+  "interpretation": {
+    "bubble_high_breakdown_low": "Excess/overinvestment is elevated, but demand, market trend and financing have not jointly confirmed a bust.",
+    "bubble_high_breakdown_high": "A stretched cycle is also showing multi-pillar unwind confirmation; this is the dangerous combination.",
+    "current": "Capital-return divergence is elevated while compute demand remains strong and liquidity/market breakdown confirmation is limited."
+  },
+  "thresholds": {
+    "bubble": {
+      "0-30": "normal",
+      "30-50": "elevated",
+      "50-70": "high",
+      "70-85": "bubble",
+      "85-100": "extreme"
+    },
+    "breakdown": {
+      "0-25": "stable",
+      "25-45": "watch",
+      "45-65": "deteriorating",
+      "65-80": "breakdown",
+      "80-100": "severe"
+    }
+  },
+  "source_generated_at": {
+    "derived_indicators": "2026-09-11T22:47:33+08:00",
+    "market_liquidity": "2026-09-11T22:41:42+08:00",
+    "hyperscalers": "2026-09-11T22:27:04+08:00"
+  },
+  "errors": {}
+}
