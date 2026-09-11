@@ -39,6 +39,14 @@ jobs:
         with:
           fetch-depth: 0
 
+      # A push-triggered run normally checks out the triggering commit, which may
+      # already be behind a high-frequency market-data commit. Always calculate
+      # history backfills from the newest main branch to avoid JSON rebase conflicts.
+      - name: Sync latest main before data work
+        run: |
+          git fetch origin main
+          git reset --hard origin/main
+
       - name: Setup Python
         if: >
           github.event_name == 'schedule' ||
@@ -47,6 +55,7 @@ jobs:
           contains(github.event.head_commit.message, '[seed-jet]') ||
           contains(github.event.head_commit.message, '[seed-bai]') ||
           contains(github.event.head_commit.message, '[backfill-ana]') ||
+          contains(github.event.head_commit.message, '[backfill-jal-static]') ||
           contains(github.event.head_commit.message, '[quote-now]')
         uses: actions/setup-python@v6
         with:
@@ -59,7 +68,8 @@ jobs:
           contains(github.event.head_commit.message, '[seed-brent]') ||
           contains(github.event.head_commit.message, '[seed-jet]') ||
           contains(github.event.head_commit.message, '[seed-bai]') ||
-          contains(github.event.head_commit.message, '[backfill-ana]')
+          contains(github.event.head_commit.message, '[backfill-ana]') ||
+          contains(github.event.head_commit.message, '[backfill-jal-static]')
         run: |
           python -m pip install --upgrade pip
           pip install yfinance==1.7.0 requests beautifulsoup4
@@ -93,6 +103,11 @@ jobs:
         run: |
           python scripts/backfill_jet_fuel_ana.py
 
+      - name: Backfill verified JAL Singapore kerosene averages
+        if: contains(github.event.head_commit.message, '[backfill-jal-static]')
+        run: |
+          python scripts/backfill_jet_fuel_jal_static.py
+
       - name: Update Baltic Air Freight Index data
         if: >
           github.event_name == 'schedule' ||
@@ -118,6 +133,7 @@ jobs:
           contains(github.event.head_commit.message, '[seed-jet]') ||
           contains(github.event.head_commit.message, '[seed-bai]') ||
           contains(github.event.head_commit.message, '[backfill-ana]') ||
+          contains(github.event.head_commit.message, '[backfill-jal-static]') ||
           contains(github.event.head_commit.message, '[quote-now]')
         run: |
           if git diff --quiet -- data/market_data.json index.html; then
