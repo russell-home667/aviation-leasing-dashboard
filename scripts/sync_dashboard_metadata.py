@@ -8,6 +8,8 @@ text = INDEX_FILE.read_text(encoding="utf-8")
 replacements = {
     '<div class="chart-subtitle" id="jetSubtitle">Jet fuel · USD/bbl</div>':
         '<div class="chart-subtitle" id="jetSubtitle">FOB Singapore indicative mid · USD/bbl</div>',
+    '<div class="chart-subtitle" id="baiSubtitle">Baltic Air Freight Index</div>':
+        '<div class="chart-subtitle" id="baiSubtitle">Weekly headline index · TAC Index / Baltic Exchange</div>',
     'Data source: Yahoo Finance · CME / alternative source pending · TAC Index':
         'Data source: Yahoo Finance · Public FOB Singapore jet/kerosene archive · TAC Index',
 }
