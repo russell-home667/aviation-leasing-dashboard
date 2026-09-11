@@ -15,51 +15,69 @@ Aircraft Leasing Market Dashboard
 </title>
 
 <script
-src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js">
+  src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js">
 </script>
 
 
 <style>
 
+/* =========================
+   GLOBAL
+========================= */
+
 * {
   box-sizing: border-box;
 }
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
 body {
 
-  margin: 0;
-
   background:
-  radial-gradient(
-    circle at 50% 0%,
-    #14253a 0%,
-    #08111d 38%,
-    #030811 100%
-  );
+    radial-gradient(
+      circle at 50% 0%,
+      #13243a 0%,
+      #08111d 38%,
+      #030811 100%
+    );
 
   color: #eaf7ff;
 
   font-family:
-  Arial,
-  "Microsoft YaHei",
-  sans-serif;
+    Arial,
+    "Microsoft YaHei",
+    sans-serif;
 
   min-height: 100vh;
 
 }
 
 
+/* =========================
+   DASHBOARD
+========================= */
+
 .dashboard {
 
   width: 96%;
-  max-width: 1600px;
 
-  margin: auto;
+  max-width: 1700px;
 
-  padding: 24px;
+  margin: 0 auto;
+
+  padding: 20px 24px 28px;
 
 }
 
+
+/* =========================
+   HEADER
+========================= */
 
 .header {
 
@@ -78,21 +96,23 @@ body {
 
   letter-spacing: 3px;
 
+  font-weight: 700;
+
 }
 
 
-.header p {
+.subtitle {
 
   margin-top: 8px;
 
-  color: #7da2bd;
+  color: #7797ae;
 
   font-size: 14px;
 
 }
 
 
-.demo {
+.status-badge {
 
   display: inline-block;
 
@@ -104,19 +124,34 @@ body {
 
   font-size: 11px;
 
-  background: #784a00;
+  background: #74500b;
 
-  color: #ffd891;
+  color: #ffd47b;
 
 }
 
+
+.last-update {
+
+  margin-top: 3px;
+
+  color: #7394aa;
+
+  font-size: 13px;
+
+}
+
+
+/* =========================
+   KPI GRID
+========================= */
 
 .kpi-grid {
 
   display: grid;
 
   grid-template-columns:
-  repeat(3, 1fr);
+    repeat(3, 1fr);
 
   gap: 18px;
 
@@ -128,41 +163,50 @@ body {
 .card {
 
   background:
-  rgba(9,24,40,0.86);
+    rgba(9, 24, 40, 0.88);
 
   border:
-  1px solid
-  rgba(70,193,255,0.32);
+    1px solid
+    rgba(70, 193, 255, 0.28);
 
   border-radius: 10px;
 
+  box-shadow:
+    0 0 18px
+    rgba(0, 156, 255, 0.055);
+
+}
+
+
+.kpi-card {
+
   padding: 20px;
 
-  box-shadow:
-  0 0 18px
-  rgba(0,156,255,0.08);
+  min-height: 138px;
 
 }
 
 
 .kpi-title {
 
-  color: #8eaabe;
+  color: #88a9bf;
 
   font-size: 14px;
 
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 
 }
 
 
 .kpi-value {
 
-  font-size: 34px;
+  font-size: 35px;
 
-  font-weight: bold;
+  font-weight: 700;
 
   margin-bottom: 8px;
+
+  letter-spacing: 0.3px;
 
 }
 
@@ -175,27 +219,37 @@ body {
 
 
 .up {
-
-  color: #47d7a3;
-
+  color: #52dcaf;
 }
-
 
 .down {
-
-  color: #ff718b;
-
+  color: #ff6f8c;
 }
 
+.neutral {
+  color: #8fa7b7;
+}
+
+
+/* =========================
+   CHART GRID
+========================= */
 
 .chart-grid {
 
   display: grid;
 
   grid-template-columns:
-  2fr 1fr;
+    2.05fr 1fr;
 
   gap: 18px;
+
+}
+
+
+.chart-card {
+
+  padding: 18px 20px 10px;
 
 }
 
@@ -204,9 +258,20 @@ body {
 
   font-size: 16px;
 
-  font-weight: bold;
+  font-weight: 700;
 
-  margin-bottom: 10px;
+  margin-bottom: 4px;
+
+}
+
+
+.chart-subtitle {
+
+  color: #617d91;
+
+  font-size: 12px;
+
+  margin-bottom: 2px;
 
 }
 
@@ -216,30 +281,44 @@ body {
 
   width: 100%;
 
-  height: 420px;
+  height: 440px;
 
 }
 
 
+/* =========================
+   FOOTER
+========================= */
+
 .footer {
 
-  margin-top: 20px;
+  margin-top: 18px;
 
   text-align: right;
 
-  color: #61798c;
+  color: #58778e;
 
   font-size: 12px;
 
 }
 
 
-@media(max-width:900px) {
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1000px) {
 
   .kpi-grid,
   .chart-grid {
 
     grid-template-columns: 1fr;
+
+  }
+
+  .header h1 {
+
+    font-size: 24px;
 
   }
 
@@ -250,148 +329,181 @@ body {
 </head>
 
 
-
 <body>
 
 
 <div class="dashboard">
 
 
-<div class="header">
+  <!-- ======================
+       HEADER
+  ======================= -->
 
-<h1>
-AIRCRAFT LEASING MARKET DASHBOARD
-</h1>
+  <div class="header">
 
-<p>
+    <h1>
+      AIRCRAFT LEASING MARKET DASHBOARD
+    </h1>
 
-航空租赁市场监测
+    <div class="subtitle">
 
-<span class="demo">
-BRENT LIVE · JET FUEL & BAI00 DEMO
-</span>
+      航空租赁市场监测
 
-<br>
+      <span
+        class="status-badge"
+        id="statusBadge">
+        LOADING
+      </span>
 
-Last Update:
-<span id="lastUpdate">
-Loading...
-</span>
+    </div>
 
-</p>
+    <div class="last-update">
 
-</div>
+      Last Update:
+      <span id="lastUpdate">
+        Loading...
+      </span>
 
+    </div>
 
-
-<div class="kpi-grid">
-
-
-<div class="card">
-
-<div class="kpi-title">
-BRENT CRUDE
-</div>
-
-<div
-class="kpi-value"
-id="brentValue">
---
-</div>
-
-<div
-class="kpi-change"
-id="brentChange">
---
-</div>
-
-</div>
+  </div>
 
 
 
-<div class="card">
+  <!-- ======================
+       KPI CARDS
+  ======================= -->
 
-<div class="kpi-title">
-SINGAPORE JET KEROSENE
-</div>
-
-<div
-class="kpi-value"
-id="jetValue">
---
-</div>
-
-<div
-class="kpi-change"
-id="jetChange">
---
-</div>
-
-</div>
+  <div class="kpi-grid">
 
 
+    <!-- Brent -->
 
-<div class="card">
+    <div class="card kpi-card">
 
-<div class="kpi-title">
-BALTIC AIR FREIGHT INDEX
-</div>
+      <div class="kpi-title">
+        BRENT CRUDE
+      </div>
 
-<div
-class="kpi-value"
-id="baiValue">
---
-</div>
+      <div
+        class="kpi-value"
+        id="brentValue">
+        --
+      </div>
 
-<div
-class="kpi-change"
-id="baiChange">
---
-</div>
+      <div
+        class="kpi-change neutral"
+        id="brentChange">
+        --
+      </div>
 
-</div>
-
-
-</div>
+    </div>
 
 
 
-<div class="chart-grid">
+    <!-- Jet Fuel -->
 
+    <div class="card kpi-card">
 
-<div class="card">
+      <div class="kpi-title">
+        SINGAPORE JET KEROSENE
+      </div>
 
-<div class="chart-title">
-ENERGY MARKET TREND
-</div>
+      <div
+        class="kpi-value"
+        id="jetValue">
+        --
+      </div>
 
-<div id="energyChart"></div>
+      <div
+        class="kpi-change neutral"
+        id="jetChange">
+        --
+      </div>
 
-</div>
-
-
-
-<div class="card">
-
-<div class="chart-title">
-BAI00 TREND
-</div>
-
-<div id="freightChart"></div>
-
-</div>
-
-
-</div>
+    </div>
 
 
 
-<div class="footer">
+    <!-- BAI -->
 
-Data source:
-Yahoo Finance · CME · TAC Index
+    <div class="card kpi-card">
 
-</div>
+      <div class="kpi-title">
+        BALTIC AIR FREIGHT INDEX
+      </div>
+
+      <div
+        class="kpi-value"
+        id="baiValue">
+        --
+      </div>
+
+      <div
+        class="kpi-change neutral"
+        id="baiChange">
+        --
+      </div>
+
+    </div>
+
+
+  </div>
+
+
+
+  <!-- ======================
+       CHARTS
+  ======================= -->
+
+  <div class="chart-grid">
+
+
+    <!-- Energy -->
+
+    <div class="card chart-card">
+
+      <div class="chart-title">
+        ENERGY MARKET TREND
+      </div>
+
+      <div class="chart-subtitle">
+        Brent Crude vs. Singapore Jet Kerosene
+      </div>
+
+      <div id="energyChart"></div>
+
+    </div>
+
+
+
+    <!-- BAI -->
+
+    <div class="card chart-card">
+
+      <div class="chart-title">
+        BAI00 TREND
+      </div>
+
+      <div class="chart-subtitle">
+        Baltic Air Freight Index
+      </div>
+
+      <div id="freightChart"></div>
+
+    </div>
+
+
+  </div>
+
+
+
+  <div class="footer">
+
+    Data source:
+    Yahoo Finance · CME · TAC Index
+
+  </div>
 
 
 </div>
@@ -400,23 +512,89 @@ Yahoo Finance · CME · TAC Index
 
 <script>
 
+/* =========================================================
+   INITIALISE CHARTS
+========================================================= */
 
 const energyChart =
-echarts.init(
-document.getElementById(
-"energyChart"
-)
-);
+  echarts.init(
+    document.getElementById(
+      "energyChart"
+    )
+  );
 
 
 const freightChart =
-echarts.init(
-document.getElementById(
-"freightChart"
-)
-);
+  echarts.init(
+    document.getElementById(
+      "freightChart"
+    )
+  );
 
 
+
+/* =========================================================
+   HELPER FUNCTIONS
+========================================================= */
+
+
+/*
+Convert YYYY-MM-DD into
+local timestamp.
+
+Using T00:00:00 avoids
+browser timezone shifting
+the date backwards.
+*/
+
+function dateToTimestamp(dateString) {
+
+  return new Date(
+    dateString + "T00:00:00"
+  ).getTime();
+
+}
+
+
+
+/*
+Format timestamp as YYYY-MM-DD
+*/
+
+function formatDate(timestamp) {
+
+  const d =
+    new Date(timestamp);
+
+  const year =
+    d.getFullYear();
+
+  const month =
+    String(
+      d.getMonth() + 1
+    ).padStart(2, "0");
+
+  const day =
+    String(
+      d.getDate()
+    ).padStart(2, "0");
+
+  return (
+    year +
+    "-" +
+    month +
+    "-" +
+    day
+  );
+
+}
+
+
+
+/*
+Calculate percentage change
+between latest two observations
+*/
 
 function getChange(series) {
 
@@ -429,16 +607,32 @@ function getChange(series) {
 
   }
 
+
   const latest =
-  series[
-    series.length - 1
-  ].value;
+    Number(
+      series[
+        series.length - 1
+      ].value
+    );
 
 
   const previous =
-  series[
-    series.length - 2
-  ].value;
+    Number(
+      series[
+        series.length - 2
+      ].value
+    );
+
+
+  if (
+    !Number.isFinite(latest) ||
+    !Number.isFinite(previous) ||
+    previous === 0
+  ) {
+
+    return null;
+
+  }
 
 
   return (
@@ -450,57 +644,73 @@ function getChange(series) {
 
 
 
+/*
+Update KPI percentage display
+*/
+
 function updateChange(
-elementId,
-change,
-period
+  elementId,
+  change,
+  period
 ) {
 
-  const el =
-  document.getElementById(
-    elementId
-  );
+  const element =
+    document.getElementById(
+      elementId
+    );
 
 
-  if (change === null) {
+  if (
+    change === null ||
+    !Number.isFinite(change)
+  ) {
 
-    el.textContent = "--";
+    element.className =
+      "kpi-change neutral";
+
+    element.textContent =
+      "--";
 
     return;
 
   }
 
 
-  if (change >= 0) {
+  if (change > 0) {
 
-    el.className =
-    "kpi-change up";
+    element.className =
+      "kpi-change up";
 
-    el.textContent =
-    "▲ "
-    +
-    change.toFixed(2)
-    +
-    "% "
-    +
-    period;
+    element.textContent =
+      "▲ " +
+      change.toFixed(2) +
+      "% " +
+      period;
+
+  }
+
+  else if (change < 0) {
+
+    element.className =
+      "kpi-change down";
+
+    element.textContent =
+      "▼ " +
+      Math.abs(change)
+        .toFixed(2) +
+      "% " +
+      period;
 
   }
 
   else {
 
-    el.className =
-    "kpi-change down";
+    element.className =
+      "kpi-change neutral";
 
-    el.textContent =
-    "▼ "
-    +
-    Math.abs(change)
-    .toFixed(2)
-    +
-    "% "
-    +
-    period;
+    element.textContent =
+      "— 0.00% " +
+      period;
 
   }
 
@@ -508,507 +718,985 @@ period
 
 
 
+/*
+Format ISO timestamp
+for dashboard header
+*/
+
+function formatUpdatedAt(
+  isoString
+) {
+
+  if (!isoString) {
+
+    return "--";
+
+  }
+
+  try {
+
+    const date =
+      new Date(isoString);
+
+    return date.toLocaleString(
+      "zh-CN",
+      {
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit",
+        hour: "2-digit",
+        minute: "2-digit",
+        hour12: false
+      }
+    );
+
+  }
+
+  catch {
+
+    return isoString;
+
+  }
+
+}
+
+
+
+/* =========================================================
+   LOAD JSON
+========================================================= */
+
 async function loadData() {
 
-
-try {
-
-
-const response =
-await fetch(
-"./data/market_data.json?t="
-+
-Date.now()
-);
+  try {
 
 
-if (!response.ok) {
+    /*
+    Cache-busting timestamp prevents
+    browser from showing old JSON.
+    */
 
-throw new Error(
-"Failed to load market data"
-);
+    const response =
+      await fetch(
+        "./data/market_data.json?t="
+        + Date.now()
+      );
+
+
+    if (!response.ok) {
+
+      throw new Error(
+        "Unable to load market_data.json"
+      );
+
+    }
+
+
+    const market =
+      await response.json();
+
+
+
+    /* =====================================================
+       HEADER
+    ===================================================== */
+
+    document
+      .getElementById(
+        "lastUpdate"
+      )
+      .textContent =
+        formatUpdatedAt(
+          market.updated_at
+        );
+
+
+
+    /*
+    Automatically identify which
+    datasets are LIVE vs DEMO.
+    */
+
+    const liveNames = [];
+
+    const demoNames = [];
+
+
+    if (
+      market.brent?.status === "LIVE"
+    ) {
+
+      liveNames.push("BRENT");
+
+    }
+
+    else {
+
+      demoNames.push("BRENT");
+
+    }
+
+
+    if (
+      market.jet_fuel?.status === "LIVE"
+    ) {
+
+      liveNames.push("JET FUEL");
+
+    }
+
+    else {
+
+      demoNames.push("JET FUEL");
+
+    }
+
+
+    if (
+      market.bai00?.status === "LIVE"
+    ) {
+
+      liveNames.push("BAI00");
+
+    }
+
+    else {
+
+      demoNames.push("BAI00");
+
+    }
+
+
+
+    let statusText = "";
+
+
+    if (liveNames.length > 0) {
+
+      statusText +=
+        liveNames.join(" · ")
+        + " LIVE";
+
+    }
+
+
+    if (demoNames.length > 0) {
+
+      if (statusText !== "") {
+
+        statusText += " · ";
+
+      }
+
+      statusText +=
+        demoNames.join(" & ")
+        + " DEMO";
+
+    }
+
+
+    document
+      .getElementById(
+        "statusBadge"
+      )
+      .textContent =
+        statusText;
+
+
+
+    /* =====================================================
+       DATA
+    ===================================================== */
+
+    const brent =
+      market.brent?.data || [];
+
+
+    const jet =
+      market.jet_fuel?.data || [];
+
+
+    const bai =
+      market.bai00?.data || [];
+
+
+
+    if (
+      brent.length === 0
+    ) {
+
+      throw new Error(
+        "Brent data is empty."
+      );
+
+    }
+
+
+
+    /* =====================================================
+       KPI VALUES
+    ===================================================== */
+
+    const brentLatest =
+      Number(
+        brent[
+          brent.length - 1
+        ].value
+      );
+
+
+    const jetLatest =
+      jet.length > 0
+        ?
+        Number(
+          jet[
+            jet.length - 1
+          ].value
+        )
+        :
+        null;
+
+
+    const baiLatest =
+      bai.length > 0
+        ?
+        Number(
+          bai[
+            bai.length - 1
+          ].value
+        )
+        :
+        null;
+
+
+
+    document
+      .getElementById(
+        "brentValue"
+      )
+      .textContent =
+        "$" +
+        brentLatest.toFixed(2);
+
+
+
+    document
+      .getElementById(
+        "jetValue"
+      )
+      .textContent =
+        Number.isFinite(jetLatest)
+          ?
+          "$" +
+          jetLatest.toFixed(2)
+          :
+          "--";
+
+
+
+    document
+      .getElementById(
+        "baiValue"
+      )
+      .textContent =
+        Number.isFinite(baiLatest)
+          ?
+          baiLatest.toLocaleString()
+          :
+          "--";
+
+
+
+    updateChange(
+      "brentChange",
+      getChange(brent),
+      "DoD"
+    );
+
+
+    updateChange(
+      "jetChange",
+      getChange(jet),
+      "DoD"
+    );
+
+
+    updateChange(
+      "baiChange",
+      getChange(bai),
+      "WoW"
+    );
+
+
+
+    /* =====================================================
+       ENERGY SERIES
+       
+       IMPORTANT:
+       Time axis requires
+       [timestamp, value]
+    ===================================================== */
+
+    const brentSeries =
+      brent.map(
+        item => [
+
+          dateToTimestamp(
+            item.date
+          ),
+
+          Number(
+            item.value
+          )
+
+        ]
+      );
+
+
+    const jetSeries =
+      jet.map(
+        item => [
+
+          dateToTimestamp(
+            item.date
+          ),
+
+          Number(
+            item.value
+          )
+
+        ]
+      );
+
+
+
+    /* =====================================================
+       ENERGY CHART
+    ===================================================== */
+
+    energyChart.setOption({
+
+      animation: true,
+
+
+      tooltip: {
+
+        trigger: "axis",
+
+        axisPointer: {
+          type: "cross"
+        },
+
+
+        formatter: function(
+          params
+        ) {
+
+          if (
+            !params ||
+            params.length === 0
+          ) {
+
+            return "";
+
+          }
+
+
+          const timestamp =
+            params[0]
+              .value[0];
+
+
+          let html =
+            "<strong>" +
+            formatDate(
+              timestamp
+            ) +
+            "</strong><br>";
+
+
+          params.forEach(
+            item => {
+
+              const value =
+                Number(
+                  item.value[1]
+                );
+
+
+              html +=
+                item.marker +
+                item.seriesName +
+                ": $" +
+                value.toFixed(2) +
+                "<br>";
+
+            }
+          );
+
+
+          return html;
+
+        }
+
+      },
+
+
+      legend: {
+
+        data: [
+          "Brent",
+          "Singapore Jet Fuel"
+        ],
+
+        bottom: 2,
+
+        textStyle: {
+          color: "#bfd3df"
+        }
+
+      },
+
+
+      grid: {
+
+        left: 70,
+
+        right: 28,
+
+        top: 54,
+
+        bottom: 72
+
+      },
+
+
+      xAxis: {
+
+        type: "time",
+
+        boundaryGap: false,
+
+
+        axisLine: {
+
+          lineStyle: {
+            color: "#456075"
+          }
+
+        },
+
+
+        axisTick: {
+          show: false
+        },
+
+
+        axisLabel: {
+
+          color: "#8fa7b7",
+
+          hideOverlap: true,
+
+
+          formatter: function(
+            value
+          ) {
+
+            const d =
+              new Date(value);
+
+
+            const year =
+              d.getFullYear();
+
+
+            const month =
+              String(
+                d.getMonth() + 1
+              )
+              .padStart(
+                2,
+                "0"
+              );
+
+
+            const day =
+              String(
+                d.getDate()
+              )
+              .padStart(
+                2,
+                "0"
+              );
+
+
+            return (
+              year +
+              "-" +
+              month +
+              "-" +
+              day
+            );
+
+          }
+
+        },
+
+
+        splitLine: {
+          show: false
+        }
+
+      },
+
+
+      yAxis: {
+
+        type: "value",
+
+        name: "USD/bbl",
+
+        scale: true,
+
+
+        nameTextStyle: {
+          color: "#7790a2"
+        },
+
+
+        axisLabel: {
+          color: "#8fa7b7"
+        },
+
+
+        axisLine: {
+          show: false
+        },
+
+
+        axisTick: {
+          show: false
+        },
+
+
+        splitLine: {
+
+          lineStyle: {
+
+            color:
+              "rgba(130,160,180,0.10)"
+
+          }
+
+        }
+
+      },
+
+
+      series: [
+
+        {
+
+          name: "Brent",
+
+          type: "line",
+
+          data:
+            brentSeries,
+
+          /*
+          Important:
+          no smoothing for financial
+          market prices.
+          */
+
+          smooth: false,
+
+          connectNulls: true,
+
+          showSymbol: false,
+
+          symbol: "circle",
+
+          symbolSize: 6,
+
+
+          lineStyle: {
+
+            width: 3
+
+          },
+
+
+          emphasis: {
+
+            focus: "series",
+
+            scale: true
+
+          }
+
+        },
+
+
+        {
+
+          name:
+            "Singapore Jet Fuel",
+
+          type: "line",
+
+          data:
+            jetSeries,
+
+          smooth: false,
+
+          connectNulls: true,
+
+          showSymbol: false,
+
+          symbol: "circle",
+
+          symbolSize: 6,
+
+
+          lineStyle: {
+
+            width: 3
+
+          },
+
+
+          emphasis: {
+
+            focus: "series",
+
+            scale: true
+
+          }
+
+        }
+
+      ]
+
+    });
+
+
+
+    /* =====================================================
+       BAI SERIES
+    ===================================================== */
+
+    const baiSeries =
+      bai.map(
+        item => [
+
+          dateToTimestamp(
+            item.date
+          ),
+
+          Number(
+            item.value
+          )
+
+        ]
+      );
+
+
+
+    /* =====================================================
+       BAI CHART
+    ===================================================== */
+
+    freightChart.setOption({
+
+      animation: true,
+
+
+      tooltip: {
+
+        trigger: "axis",
+
+        axisPointer: {
+          type: "line"
+        },
+
+
+        formatter: function(
+          params
+        ) {
+
+          if (
+            !params ||
+            params.length === 0
+          ) {
+
+            return "";
+
+          }
+
+
+          const item =
+            params[0];
+
+
+          return (
+            "<strong>" +
+            formatDate(
+              item.value[0]
+            ) +
+            "</strong><br>" +
+            item.marker +
+            "BAI00: " +
+            Number(
+              item.value[1]
+            ).toLocaleString()
+          );
+
+        }
+
+      },
+
+
+      grid: {
+
+        left: 70,
+
+        right: 24,
+
+        top: 52,
+
+        bottom: 58
+
+      },
+
+
+      xAxis: {
+
+        type: "time",
+
+        boundaryGap: false,
+
+
+        axisLine: {
+
+          lineStyle: {
+            color: "#456075"
+          }
+
+        },
+
+
+        axisTick: {
+          show: false
+        },
+
+
+        axisLabel: {
+
+          color: "#8fa7b7",
+
+          hideOverlap: true,
+
+
+          formatter: function(
+            value
+          ) {
+
+            const d =
+              new Date(value);
+
+
+            const year =
+              d.getFullYear();
+
+
+            const month =
+              String(
+                d.getMonth() + 1
+              )
+              .padStart(
+                2,
+                "0"
+              );
+
+
+            const day =
+              String(
+                d.getDate()
+              )
+              .padStart(
+                2,
+                "0"
+              );
+
+
+            return (
+              year +
+              "-" +
+              month +
+              "-" +
+              day
+            );
+
+          }
+
+        },
+
+
+        splitLine: {
+          show: false
+        }
+
+      },
+
+
+      yAxis: {
+
+        type: "value",
+
+        name: "Index",
+
+        scale: false,
+
+        min: 0,
+
+
+        nameTextStyle: {
+          color: "#7790a2"
+        },
+
+
+        axisLabel: {
+          color: "#8fa7b7"
+        },
+
+
+        axisTick: {
+          show: false
+        },
+
+
+        axisLine: {
+          show: false
+        },
+
+
+        splitLine: {
+
+          lineStyle: {
+
+            color:
+              "rgba(130,160,180,0.10)"
+
+          }
+
+        }
+
+      },
+
+
+      series: [
+
+        {
+
+          name: "BAI00",
+
+          type: "line",
+
+          data:
+            baiSeries,
+
+          smooth: false,
+
+          connectNulls: true,
+
+          showSymbol: true,
+
+          symbolSize: 6,
+
+
+          lineStyle: {
+
+            width: 3
+
+          },
+
+
+          areaStyle: {
+
+            opacity: 0.09
+
+          }
+
+        }
+
+      ]
+
+    });
+
+
+  }
+
+
+
+  /* =====================================================
+     ERROR HANDLING
+  ===================================================== */
+
+  catch(error) {
+
+
+    console.error(
+      "Dashboard data error:",
+      error
+    );
+
+
+    document
+      .getElementById(
+        "lastUpdate"
+      )
+      .textContent =
+        "DATA ERROR";
+
+
+    document
+      .getElementById(
+        "statusBadge"
+      )
+      .textContent =
+        "DATA ERROR";
+
+  }
 
 }
 
 
-const market =
-await response.json();
 
-
-
-/* =========================
-   HEADER
-========================= */
-
-document
-.getElementById(
-"lastUpdate"
-)
-.textContent =
-market.updated_at;
-
-
-
-/* =========================
-   KPI
-========================= */
-
-
-const brent =
-market.brent.data;
-
-
-const jet =
-market.jet_fuel.data;
-
-
-const bai =
-market.bai00.data;
-
-
-
-const brentLatest =
-brent[
-brent.length - 1
-].value;
-
-
-const jetLatest =
-jet[
-jet.length - 1
-].value;
-
-
-const baiLatest =
-bai[
-bai.length - 1
-].value;
-
-
-
-document
-.getElementById(
-"brentValue"
-)
-.textContent =
-"$"
-+
-brentLatest.toFixed(2);
-
-
-
-document
-.getElementById(
-"jetValue"
-)
-.textContent =
-"$"
-+
-jetLatest.toFixed(2);
-
-
-
-document
-.getElementById(
-"baiValue"
-)
-.textContent =
-baiLatest.toLocaleString();
-
-
-
-updateChange(
-"brentChange",
-getChange(brent),
-"DoD"
-);
-
-
-updateChange(
-"jetChange",
-getChange(jet),
-"DoD"
-);
-
-
-updateChange(
-"baiChange",
-getChange(bai),
-"WoW"
-);
-
-
-
-/* =========================
-   ENERGY CHART
-========================= */
-
-
-const energyDates =
-[
-...new Set(
-
-[
-...brent.map(
-x => x.date
-),
-
-...jet.map(
-x => x.date
-)
-
-]
-
-)
-]
-.sort();
-
-
-
-const brentMap =
-Object.fromEntries(
-brent.map(
-x => [
-x.date,
-x.value
-]
-)
-);
-
-
-
-const jetMap =
-Object.fromEntries(
-jet.map(
-x => [
-x.date,
-x.value
-]
-)
-);
-
-
-
-energyChart.setOption({
-
-tooltip: {
-
-trigger: "axis"
-
-},
-
-
-legend: {
-
-data: [
-
-"Brent",
-
-"Singapore Jet Fuel"
-
-],
-
-textStyle: {
-
-color: "#bfd3df"
-
-}
-
-},
-
-
-grid: {
-
-left: "8%",
-
-right: "4%",
-
-top: "15%",
-
-bottom: "12%"
-
-},
-
-
-xAxis: {
-
-type: "time",
-
-data:
-energyDates,
-
-
-axisLine: {
-
-lineStyle: {
-
-color: "#466277"
-
-}
-
-},
-
-
-axisLabel: {
-
-color: "#8fa7b7"
-
-}
-
-},
-
-
-yAxis: {
-
-type: "value",
-
-name: "USD/bbl",
-
-
-nameTextStyle: {
-
-color: "#7790a2"
-
-},
-
-
-splitLine: {
-
-lineStyle: {
-
-color:
-"rgba(130,160,180,0.10)"
-
-}
-
-},
-
-
-axisLabel: {
-
-color: "#8fa7b7"
-
-}
-
-},
-
-
-series: [
-
-
-{
-  name: "Brent",
-  type: "line",
-  smooth: true,
-  connectNulls: true,
-  symbolSize: 7,
-  lineStyle: {
-    width: 3
-  },
-  data:
-  energyDates.map(
-    date =>
-    brentMap[date]
-    ?? null
-  )
-},
-
-
-
-{
-  name: "Singapore Jet Fuel",
-  type: "line",
-  smooth: true,
-  connectNulls: true,
-  symbolSize: 7,
-  lineStyle: {
-    width: 3
-  },
-  data:
-  energyDates.map(
-    date =>
-    jetMap[date]
-    ?? null
-  )
-}
-
-
-]
-
-
-});
-
-
-
-/* =========================
-   BAI00
-========================= */
-
-
-freightChart.setOption({
-
-
-tooltip: {
-
-trigger: "axis"
-
-},
-
-
-grid: {
-
-left: "15%",
-
-right: "5%",
-
-top: "12%",
-
-bottom: "12%"
-
-},
-
-
-xAxis: {
-
-type: "category",
-
-data:
-bai.map(
-x => x.date
-),
-
-
-axisLine: {
-
-lineStyle: {
-
-color: "#466277"
-
-}
-
-},
-
-
-axisLabel: {
-
-color: "#8fa7b7"
-
-}
-
-},
-
-
-yAxis: {
-
-type: "value",
-
-name: "Index",
-
-
-nameTextStyle: {
-
-color: "#7790a2"
-
-},
-
-
-splitLine: {
-
-lineStyle: {
-
-color:
-"rgba(130,160,180,0.10)"
-
-}
-
-},
-
-
-axisLabel: {
-
-color: "#8fa7b7"
-
-}
-
-},
-
-
-series: [
-
-
-{
-
-name: "BAI00",
-
-type: "line",
-
-smooth: true,
-
-areaStyle: {
-
-opacity: 0.10
-
-},
-
-lineStyle: {
-
-width: 3
-
-},
-
-data:
-bai.map(
-x => x.value
-)
-
-}
-
-
-]
-
-
-});
-
-
-}
-
-
-catch(error) {
-
-
-console.error(error);
-
-
-document
-.getElementById(
-"lastUpdate"
-)
-.textContent =
-"DATA ERROR";
-
-
-}
-
-
-}
-
-
+/* =========================================================
+   LOAD
+========================================================= */
 
 loadData();
 
 
 
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
 window.addEventListener(
-"resize",
-function() {
+  "resize",
+  function() {
 
-energyChart.resize();
+    energyChart.resize();
 
-freightChart.resize();
+    freightChart.resize();
 
-}
+  }
 );
-
 
 </script>
 
