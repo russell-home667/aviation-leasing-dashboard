@@ -6,6 +6,7 @@ on:
     branches: [main]
     paths:
       - 'scripts/update_ai_top_scores.py'
+      - 'scripts/apply_ai_calibration.py'
       - '.github/workflows/update-ai-top-scores.yml'
   workflow_run:
     workflows: ['Update AI Derived Indicators']
@@ -44,6 +45,7 @@ jobs:
         run: |
           set -euo pipefail
           python scripts/update_ai_top_scores.py
+          python scripts/apply_ai_calibration.py
 
       - name: Validate top scores
         run: |
@@ -62,6 +64,8 @@ jobs:
                   raise SystemExit(f'Invalid {key}: {score}')
           if not d.get('regime'):
               raise SystemExit('Regime missing')
+          if d.get('methodology_version') != 'hybrid_v2_backtest_calibrated':
+              raise SystemExit('Calibration post-process not applied')
           print('Bubble:', d['bubble_score'])
           print('Breakdown:', d['breakdown_score'])
           print('Regime:', d['regime'])
@@ -72,11 +76,11 @@ jobs:
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/ai_bubble/top_scores/
+          git add data/ai_bubble/top_scores/ data/ai_bubble/backtest_calibration/ || true
           if git diff --cached --quiet; then
             echo 'No top-score changes to commit.'
             exit 0
           fi
-          git commit -m 'data: refresh AI top scores'
+          git commit -m 'data: refresh calibrated AI top scores'
           git pull --rebase origin main
           git push origin HEAD:main
