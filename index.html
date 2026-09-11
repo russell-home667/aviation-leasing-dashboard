@@ -1,1706 +1,389 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-
 <head>
-
-<meta charset="UTF-8">
-
-<meta
-  name="viewport"
-  content="width=device-width, initial-scale=1.0"
->
-
-<title>
-Aircraft Leasing Market Dashboard
-</title>
-
-<script
-  src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js">
-</script>
-
-
-<style>
-
-/* =========================
-   GLOBAL
-========================= */
-
-* {
-  box-sizing: border-box;
-}
-
-html,
-body {
-  margin: 0;
-  padding: 0;
-  min-height: 100%;
-}
-
-body {
-
-  background:
-    radial-gradient(
-      circle at 50% 0%,
-      #13243a 0%,
-      #08111d 38%,
-      #030811 100%
-    );
-
-  color: #eaf7ff;
-
-  font-family:
-    Arial,
-    "Microsoft YaHei",
-    sans-serif;
-
-  min-height: 100vh;
-
-}
-
-
-/* =========================
-   DASHBOARD
-========================= */
-
-.dashboard {
-
-  width: 96%;
-
-  max-width: 1700px;
-
-  margin: 0 auto;
-
-  padding: 20px 24px 28px;
-
-}
-
-
-/* =========================
-   HEADER
-========================= */
-
-.header {
-
-  text-align: center;
-
-  margin-bottom: 24px;
-
-}
-
-
-.header h1 {
-
-  margin: 0;
-
-  font-size: 32px;
-
-  letter-spacing: 3px;
-
-  font-weight: 700;
-
-}
-
-
-.subtitle {
-
-  margin-top: 8px;
-
-  color: #7797ae;
-
-  font-size: 14px;
-
-}
-
-
-.status-badge {
-
-  display: inline-block;
-
-  margin-left: 8px;
-
-  padding: 3px 8px;
-
-  border-radius: 4px;
-
-  font-size: 11px;
-
-  background: #74500b;
-
-  color: #ffd47b;
-
-}
-
-
-.last-update {
-
-  margin-top: 3px;
-
-  color: #7394aa;
-
-  font-size: 13px;
-
-}
-
-
-/* =========================
-   KPI GRID
-========================= */
-
-.kpi-grid {
-
-  display: grid;
-
-  grid-template-columns:
-    repeat(3, 1fr);
-
-  gap: 18px;
-
-  margin-bottom: 20px;
-
-}
-
-
-.card {
-
-  background:
-    rgba(9, 24, 40, 0.88);
-
-  border:
-    1px solid
-    rgba(70, 193, 255, 0.28);
-
-  border-radius: 10px;
-
-  box-shadow:
-    0 0 18px
-    rgba(0, 156, 255, 0.055);
-
-}
-
-
-.kpi-card {
-
-  padding: 20px;
-
-  min-height: 138px;
-
-}
-
-
-.kpi-title {
-
-  color: #88a9bf;
-
-  font-size: 14px;
-
-  margin-bottom: 14px;
-
-}
-
-
-.kpi-value {
-
-  font-size: 35px;
-
-  font-weight: 700;
-
-  margin-bottom: 8px;
-
-  letter-spacing: 0.3px;
-
-}
-
-
-.kpi-change {
-
-  font-size: 14px;
-
-}
-
-
-.up {
-  color: #52dcaf;
-}
-
-.down {
-  color: #ff6f8c;
-}
-
-.neutral {
-  color: #8fa7b7;
-}
-
-
-/* =========================
-   CHART GRID
-========================= */
-
-.chart-grid {
-
-  display: grid;
-
-  grid-template-columns:
-    2.05fr 1fr;
-
-  gap: 18px;
-
-}
-
-
-.chart-card {
-
-  padding: 18px 20px 10px;
-
-}
-
-
-.chart-title {
-
-  font-size: 16px;
-
-  font-weight: 700;
-
-  margin-bottom: 4px;
-
-}
-
-
-.chart-subtitle {
-
-  color: #617d91;
-
-  font-size: 12px;
-
-  margin-bottom: 2px;
-
-}
-
-
-#energyChart,
-#freightChart {
-
-  width: 100%;
-
-  height: 440px;
-
-}
-
-
-/* =========================
-   FOOTER
-========================= */
-
-.footer {
-
-  margin-top: 18px;
-
-  text-align: right;
-
-  color: #58778e;
-
-  font-size: 12px;
-
-}
-
-
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media (max-width: 1000px) {
-
-  .kpi-grid,
-  .chart-grid {
-
-    grid-template-columns: 1fr;
-
-  }
-
-  .header h1 {
-
-    font-size: 24px;
-
-  }
-
-}
-
-</style>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aircraft Leasing Market Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; min-height: 100%; }
+    body {
+      background: radial-gradient(circle at 50% 0%, #13243a 0%, #08111d 38%, #030811 100%);
+      color: #eaf7ff;
+      font-family: Arial, "Microsoft YaHei", sans-serif;
+      min-height: 100vh;
+    }
+    .dashboard { width: 96%; max-width: 1700px; margin: 0 auto; padding: 20px 24px 28px; }
+    .header { text-align: center; margin-bottom: 18px; }
+    .header h1 { margin: 0; font-size: 32px; letter-spacing: 3px; font-weight: 700; }
+    .subtitle { margin-top: 8px; color: #7797ae; font-size: 14px; }
+    .status-badge {
+      display: inline-block; margin-left: 8px; padding: 3px 8px; border-radius: 4px;
+      font-size: 11px; background: #74500b; color: #ffd47b;
+    }
+    .last-update { margin-top: 4px; color: #7394aa; font-size: 13px; }
+    .range-bar {
+      display: flex; justify-content: center; align-items: center; gap: 8px;
+      margin: 14px 0 20px; flex-wrap: wrap;
+    }
+    .range-label { color: #6f8ca1; font-size: 12px; margin-right: 4px; }
+    .range-btn {
+      border: 1px solid rgba(70, 193, 255, 0.28); background: rgba(9, 24, 40, 0.88);
+      color: #91aebe; padding: 7px 13px; border-radius: 6px; cursor: pointer;
+      font-size: 12px; transition: 0.15s ease;
+    }
+    .range-btn:hover { border-color: rgba(70, 193, 255, 0.65); color: #dff6ff; }
+    .range-btn.active { background: rgba(37, 132, 191, 0.28); border-color: #46c1ff; color: #dff6ff; }
+    .kpi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-bottom: 20px; }
+    .card {
+      background: rgba(9, 24, 40, 0.88); border: 1px solid rgba(70, 193, 255, 0.28);
+      border-radius: 10px; box-shadow: 0 0 18px rgba(0, 156, 255, 0.055);
+    }
+    .kpi-card { padding: 20px; min-height: 138px; }
+    .kpi-title { color: #88a9bf; font-size: 14px; margin-bottom: 14px; }
+    .kpi-value { font-size: 35px; font-weight: 700; margin-bottom: 8px; letter-spacing: 0.3px; }
+    .kpi-change { font-size: 14px; }
+    .up { color: #52dcaf; }
+    .down { color: #ff6f8c; }
+    .neutral { color: #8fa7b7; }
+    .chart-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+    .chart-card { padding: 18px 20px 12px; min-width: 0; }
+    .chart-card.full-width { grid-column: 1 / -1; }
+    .chart-title { font-size: 16px; font-weight: 700; margin-bottom: 4px; }
+    .chart-subtitle { color: #617d91; font-size: 12px; margin-bottom: 2px; min-height: 16px; }
+    .chart { width: 100%; height: 400px; }
+    .footer { margin-top: 18px; text-align: right; color: #58778e; font-size: 12px; }
+    @media (max-width: 1000px) {
+      .kpi-grid, .chart-grid { grid-template-columns: 1fr; }
+      .chart-card.full-width { grid-column: auto; }
+      .header h1 { font-size: 24px; }
+      .dashboard { width: 100%; padding: 16px; }
+    }
+  </style>
 </head>
-
-
 <body>
-
-
 <div class="dashboard">
-
-
-  <!-- ======================
-       HEADER
-  ======================= -->
-
   <div class="header">
-
-    <h1>
-      AIRCRAFT LEASING MARKET DASHBOARD
-    </h1>
-
+    <h1>AIRCRAFT LEASING MARKET DASHBOARD</h1>
     <div class="subtitle">
-
       航空租赁市场监测
-
-      <span
-        class="status-badge"
-        id="statusBadge">
-        LOADING
-      </span>
-
+      <span class="status-badge" id="statusBadge">LOADING</span>
     </div>
-
-    <div class="last-update">
-
-      Last Update:
-      <span id="lastUpdate">
-        Loading...
-      </span>
-
-    </div>
-
+    <div class="last-update">Last Update: <span id="lastUpdate">Loading...</span></div>
   </div>
 
-
-
-  <!-- ======================
-       KPI CARDS
-  ======================= -->
+  <div class="range-bar">
+    <span class="range-label">时间区间</span>
+    <button class="range-btn" data-range="1M">1M</button>
+    <button class="range-btn" data-range="3M">3M</button>
+    <button class="range-btn" data-range="6M">6M</button>
+    <button class="range-btn active" data-range="1Y">1Y</button>
+    <button class="range-btn" data-range="ALL">ALL</button>
+  </div>
 
   <div class="kpi-grid">
-
-
-    <!-- Brent -->
-
     <div class="card kpi-card">
-
-      <div class="kpi-title">
-        BRENT CRUDE
-      </div>
-
-      <div
-        class="kpi-value"
-        id="brentValue">
-        --
-      </div>
-
-      <div
-        class="kpi-change neutral"
-        id="brentChange">
-        --
-      </div>
-
+      <div class="kpi-title">BRENT CRUDE</div>
+      <div class="kpi-value" id="brentValue">--</div>
+      <div class="kpi-change neutral" id="brentChange">--</div>
     </div>
-
-
-
-    <!-- Jet Fuel -->
-
     <div class="card kpi-card">
-
-      <div class="kpi-title">
-        SINGAPORE JET KEROSENE
-      </div>
-
-      <div
-        class="kpi-value"
-        id="jetValue">
-        --
-      </div>
-
-      <div
-        class="kpi-change neutral"
-        id="jetChange">
-        --
-      </div>
-
+      <div class="kpi-title">SINGAPORE JET KEROSENE</div>
+      <div class="kpi-value" id="jetValue">--</div>
+      <div class="kpi-change neutral" id="jetChange">--</div>
     </div>
-
-
-
-    <!-- BAI -->
-
     <div class="card kpi-card">
-
-      <div class="kpi-title">
-        BALTIC AIR FREIGHT INDEX
-      </div>
-
-      <div
-        class="kpi-value"
-        id="baiValue">
-        --
-      </div>
-
-      <div
-        class="kpi-change neutral"
-        id="baiChange">
-        --
-      </div>
-
+      <div class="kpi-title">BALTIC AIR FREIGHT INDEX</div>
+      <div class="kpi-value" id="baiValue">--</div>
+      <div class="kpi-change neutral" id="baiChange">--</div>
     </div>
-
-
   </div>
-
-
-
-  <!-- ======================
-       CHARTS
-  ======================= -->
 
   <div class="chart-grid">
-
-
-    <!-- Energy -->
-
     <div class="card chart-card">
-
-      <div class="chart-title">
-        ENERGY MARKET TREND
-      </div>
-
-      <div class="chart-subtitle">
-        Brent Crude vs. Singapore Jet Kerosene
-      </div>
-
-      <div id="energyChart"></div>
-
+      <div class="chart-title">BRENT CRUDE TREND</div>
+      <div class="chart-subtitle" id="brentSubtitle">Daily close · USD/bbl</div>
+      <div id="brentChart" class="chart"></div>
     </div>
 
-
-
-    <!-- BAI -->
-
     <div class="card chart-card">
-
-      <div class="chart-title">
-        BAI00 TREND
-      </div>
-
-      <div class="chart-subtitle">
-        Baltic Air Freight Index
-      </div>
-
-      <div id="freightChart"></div>
-
+      <div class="chart-title">SINGAPORE JET KEROSENE TREND</div>
+      <div class="chart-subtitle" id="jetSubtitle">Jet fuel · USD/bbl</div>
+      <div id="jetChart" class="chart"></div>
     </div>
 
-
+    <div class="card chart-card full-width">
+      <div class="chart-title">BAI00 TREND</div>
+      <div class="chart-subtitle" id="baiSubtitle">Baltic Air Freight Index</div>
+      <div id="freightChart" class="chart"></div>
+    </div>
   </div>
 
-
-
-  <div class="footer">
-
-    Data source:
-    Yahoo Finance · CME · TAC Index
-
-  </div>
-
-
+  <div class="footer">Data source: Yahoo Finance · CME / alternative source pending · TAC Index</div>
 </div>
 
-
-
 <script>
+  const brentChart = echarts.init(document.getElementById("brentChart"));
+  const jetChart = echarts.init(document.getElementById("jetChart"));
+  const freightChart = echarts.init(document.getElementById("freightChart"));
+  const charts = [brentChart, jetChart, freightChart];
 
-/* =========================================================
-   INITIALISE CHARTS
-========================================================= */
+  let currentRange = "1Y";
+  let latestTimestamp = null;
 
-const energyChart =
-  echarts.init(
-    document.getElementById(
-      "energyChart"
-    )
-  );
-
-
-const freightChart =
-  echarts.init(
-    document.getElementById(
-      "freightChart"
-    )
-  );
-
-
-
-/* =========================================================
-   HELPER FUNCTIONS
-========================================================= */
-
-
-/*
-Convert YYYY-MM-DD into
-local timestamp.
-
-Using T00:00:00 avoids
-browser timezone shifting
-the date backwards.
-*/
-
-function dateToTimestamp(dateString) {
-
-  return new Date(
-    dateString + "T00:00:00"
-  ).getTime();
-
-}
-
-
-
-/*
-Format timestamp as YYYY-MM-DD
-*/
-
-function formatDate(timestamp) {
-
-  const d =
-    new Date(timestamp);
-
-  const year =
-    d.getFullYear();
-
-  const month =
-    String(
-      d.getMonth() + 1
-    ).padStart(2, "0");
-
-  const day =
-    String(
-      d.getDate()
-    ).padStart(2, "0");
-
-  return (
-    year +
-    "-" +
-    month +
-    "-" +
-    day
-  );
-
-}
-
-
-
-/*
-Calculate percentage change
-between latest two observations
-*/
-
-function getChange(series) {
-
-  if (
-    !series ||
-    series.length < 2
-  ) {
-
-    return null;
-
+  function dateToTimestamp(dateString) {
+    return new Date(dateString + "T00:00:00").getTime();
   }
 
-
-  const latest =
-    Number(
-      series[
-        series.length - 1
-      ].value
-    );
-
-
-  const previous =
-    Number(
-      series[
-        series.length - 2
-      ].value
-    );
-
-
-  if (
-    !Number.isFinite(latest) ||
-    !Number.isFinite(previous) ||
-    previous === 0
-  ) {
-
-    return null;
-
+  function formatDate(timestamp) {
+    const d = new Date(timestamp);
+    const year = d.getFullYear();
+    const month = String(d.getMonth() + 1).padStart(2, "0");
+    const day = String(d.getDate()).padStart(2, "0");
+    return `${year}-${month}-${day}`;
   }
 
-
-  return (
-    (latest / previous - 1)
-    * 100
-  );
-
-}
-
-
-
-/*
-Update KPI percentage display
-*/
-
-function updateChange(
-  elementId,
-  change,
-  period
-) {
-
-  const element =
-    document.getElementById(
-      elementId
-    );
-
-
-  if (
-    change === null ||
-    !Number.isFinite(change)
-  ) {
-
-    element.className =
-      "kpi-change neutral";
-
-    element.textContent =
-      "--";
-
-    return;
-
+  function formatUpdatedAt(isoString) {
+    if (!isoString) return "--";
+    try {
+      return new Date(isoString).toLocaleString("zh-CN", {
+        year: "numeric", month: "2-digit", day: "2-digit",
+        hour: "2-digit", minute: "2-digit", hour12: false
+      });
+    } catch {
+      return isoString;
+    }
   }
 
-
-  if (change > 0) {
-
-    element.className =
-      "kpi-change up";
-
-    element.textContent =
-      "▲ " +
-      change.toFixed(2) +
-      "% " +
-      period;
-
+  function getChange(series) {
+    if (!series || series.length < 2) return null;
+    const latest = Number(series[series.length - 1].value);
+    const previous = Number(series[series.length - 2].value);
+    if (!Number.isFinite(latest) || !Number.isFinite(previous) || previous === 0) return null;
+    return (latest / previous - 1) * 100;
   }
 
-  else if (change < 0) {
-
-    element.className =
-      "kpi-change down";
-
-    element.textContent =
-      "▼ " +
-      Math.abs(change)
-        .toFixed(2) +
-      "% " +
-      period;
-
+  function updateChange(elementId, change, period) {
+    const element = document.getElementById(elementId);
+    if (change === null || !Number.isFinite(change)) {
+      element.className = "kpi-change neutral";
+      element.textContent = "--";
+      return;
+    }
+    if (change > 0) {
+      element.className = "kpi-change up";
+      element.textContent = `▲ ${change.toFixed(2)}% ${period}`;
+    } else if (change < 0) {
+      element.className = "kpi-change down";
+      element.textContent = `▼ ${Math.abs(change).toFixed(2)}% ${period}`;
+    } else {
+      element.className = "kpi-change neutral";
+      element.textContent = `— 0.00% ${period}`;
+    }
   }
 
-  else {
-
-    element.className =
-      "kpi-change neutral";
-
-    element.textContent =
-      "— 0.00% " +
-      period;
-
+  function toSeries(data) {
+    return (data || [])
+      .filter(item => item && item.date && Number.isFinite(Number(item.value)))
+      .map(item => [dateToTimestamp(item.date), Number(item.value)]);
   }
 
-}
-
-
-
-/*
-Format ISO timestamp
-for dashboard header
-*/
-
-function formatUpdatedAt(
-  isoString
-) {
-
-  if (!isoString) {
-
-    return "--";
-
+  function rangeStart(range, endTimestamp) {
+    if (!endTimestamp || range === "ALL") return null;
+    const d = new Date(endTimestamp);
+    if (range === "1M") d.setMonth(d.getMonth() - 1);
+    if (range === "3M") d.setMonth(d.getMonth() - 3);
+    if (range === "6M") d.setMonth(d.getMonth() - 6);
+    if (range === "1Y") d.setFullYear(d.getFullYear() - 1);
+    return d.getTime();
   }
 
-  try {
+  function applyRange(range) {
+    currentRange = range;
+    document.querySelectorAll(".range-btn").forEach(btn => {
+      btn.classList.toggle("active", btn.dataset.range === range);
+    });
 
-    const date =
-      new Date(isoString);
+    charts.forEach(chart => {
+      if (range === "ALL") {
+        chart.dispatchAction({ type: "dataZoom", start: 0, end: 100 });
+      } else {
+        const startValue = rangeStart(range, latestTimestamp);
+        chart.dispatchAction({ type: "dataZoom", startValue, endValue: latestTimestamp });
+      }
+    });
+  }
 
-    return date.toLocaleString(
-      "zh-CN",
+  function commonXAxis() {
+    return {
+      type: "time",
+      boundaryGap: false,
+      axisLine: { lineStyle: { color: "#456075" } },
+      axisTick: { show: false },
+      axisLabel: {
+        color: "#8fa7b7",
+        hideOverlap: true,
+        formatter: value => formatDate(value)
+      },
+      splitLine: { show: false }
+    };
+  }
+
+  function commonDataZoom() {
+    return [
       {
-        year: "numeric",
-        month: "2-digit",
-        day: "2-digit",
-        hour: "2-digit",
-        minute: "2-digit",
-        hour12: false
+        type: "inside",
+        filterMode: "none",
+        zoomOnMouseWheel: true,
+        moveOnMouseMove: true,
+        moveOnMouseWheel: false
+      },
+      {
+        type: "slider",
+        height: 20,
+        bottom: 12,
+        borderColor: "rgba(70, 193, 255, 0.16)",
+        backgroundColor: "rgba(4, 12, 20, 0.35)",
+        fillerColor: "rgba(70, 193, 255, 0.16)",
+        handleStyle: { borderColor: "#46c1ff" },
+        textStyle: { color: "#6f8ca1" },
+        showDetail: false
       }
-    );
-
+    ];
   }
 
-  catch {
-
-    return isoString;
-
-  }
-
-}
-
-
-
-/* =========================================================
-   LOAD JSON
-========================================================= */
-
-async function loadData() {
-
-  try {
-
-
-    /*
-    Cache-busting timestamp prevents
-    browser from showing old JSON.
-    */
-
-    const response =
-      await fetch(
-        "./data/market_data.json?t="
-        + Date.now()
-      );
-
-
-    if (!response.ok) {
-
-      throw new Error(
-        "Unable to load market_data.json"
-      );
-
-    }
-
-
-    const market =
-      await response.json();
-
-
-
-    /* =====================================================
-       HEADER
-    ===================================================== */
-
-    document
-      .getElementById(
-        "lastUpdate"
-      )
-      .textContent =
-        formatUpdatedAt(
-          market.updated_at
-        );
-
-
-
-    /*
-    Automatically identify which
-    datasets are LIVE vs DEMO.
-    */
-
-    const liveNames = [];
-
-    const demoNames = [];
-
-
-    if (
-      market.brent?.status === "LIVE"
-    ) {
-
-      liveNames.push("BRENT");
-
-    }
-
-    else {
-
-      demoNames.push("BRENT");
-
-    }
-
-
-    if (
-      market.jet_fuel?.status === "LIVE"
-    ) {
-
-      liveNames.push("JET FUEL");
-
-    }
-
-    else {
-
-      demoNames.push("JET FUEL");
-
-    }
-
-
-    if (
-      market.bai00?.status === "LIVE"
-    ) {
-
-      liveNames.push("BAI00");
-
-    }
-
-    else {
-
-      demoNames.push("BAI00");
-
-    }
-
-
-
-    let statusText = "";
-
-
-    if (liveNames.length > 0) {
-
-      statusText +=
-        liveNames.join(" · ")
-        + " LIVE";
-
-    }
-
-
-    if (demoNames.length > 0) {
-
-      if (statusText !== "") {
-
-        statusText += " · ";
-
-      }
-
-      statusText +=
-        demoNames.join(" & ")
-        + " DEMO";
-
-    }
-
-
-    document
-      .getElementById(
-        "statusBadge"
-      )
-      .textContent =
-        statusText;
-
-
-
-    /* =====================================================
-       DATA
-    ===================================================== */
-
-    const brent =
-      market.brent?.data || [];
-
-
-    const jet =
-      market.jet_fuel?.data || [];
-
-
-    const bai =
-      market.bai00?.data || [];
-
-
-
-    if (
-      brent.length === 0
-    ) {
-
-      throw new Error(
-        "Brent data is empty."
-      );
-
-    }
-
-
-
-    /* =====================================================
-       KPI VALUES
-    ===================================================== */
-
-    const brentLatest =
-      Number(
-        brent[
-          brent.length - 1
-        ].value
-      );
-
-
-    const jetLatest =
-      jet.length > 0
-        ?
-        Number(
-          jet[
-            jet.length - 1
-          ].value
-        )
-        :
-        null;
-
-
-    const baiLatest =
-      bai.length > 0
-        ?
-        Number(
-          bai[
-            bai.length - 1
-          ].value
-        )
-        :
-        null;
-
-
-
-    document
-      .getElementById(
-        "brentValue"
-      )
-      .textContent =
-        "$" +
-        brentLatest.toFixed(2);
-
-
-
-    document
-      .getElementById(
-        "jetValue"
-      )
-      .textContent =
-        Number.isFinite(jetLatest)
-          ?
-          "$" +
-          jetLatest.toFixed(2)
-          :
-          "--";
-
-
-
-    document
-      .getElementById(
-        "baiValue"
-      )
-      .textContent =
-        Number.isFinite(baiLatest)
-          ?
-          baiLatest.toLocaleString()
-          :
-          "--";
-
-
-
-    updateChange(
-      "brentChange",
-      getChange(brent),
-      "DoD"
-    );
-
-
-    updateChange(
-      "jetChange",
-      getChange(jet),
-      "DoD"
-    );
-
-
-    updateChange(
-      "baiChange",
-      getChange(bai),
-      "WoW"
-    );
-
-
-
-    /* =====================================================
-       ENERGY SERIES
-       
-       IMPORTANT:
-       Time axis requires
-       [timestamp, value]
-    ===================================================== */
-
-    const brentSeries =
-      brent.map(
-        item => [
-
-          dateToTimestamp(
-            item.date
-          ),
-
-          Number(
-            item.value
-          )
-
-        ]
-      );
-
-
-    const jetSeries =
-      jet.map(
-        item => [
-
-          dateToTimestamp(
-            item.date
-          ),
-
-          Number(
-            item.value
-          )
-
-        ]
-      );
-
-
-
-    /* =====================================================
-       ENERGY CHART
-    ===================================================== */
-
-    energyChart.setOption({
-
+  function priceChartOption(seriesName, seriesData, unit) {
+    return {
       animation: true,
-
-
       tooltip: {
-
         trigger: "axis",
-
-        axisPointer: {
-          type: "cross"
-        },
-
-
-        formatter: function(
-          params
-        ) {
-
-          if (
-            !params ||
-            params.length === 0
-          ) {
-
-            return "";
-
-          }
-
-
-          const timestamp =
-            params[0]
-              .value[0];
-
-
-          let html =
-            "<strong>" +
-            formatDate(
-              timestamp
-            ) +
-            "</strong><br>";
-
-
-          params.forEach(
-            item => {
-
-              const value =
-                Number(
-                  item.value[1]
-                );
-
-
-              html +=
-                item.marker +
-                item.seriesName +
-                ": $" +
-                value.toFixed(2) +
-                "<br>";
-
-            }
-          );
-
-
-          return html;
-
+        axisPointer: { type: "cross" },
+        formatter: params => {
+          if (!params || !params.length) return "";
+          const item = params[0];
+          return `<strong>${formatDate(item.value[0])}</strong><br>${item.marker}${seriesName}: $${Number(item.value[1]).toFixed(2)}`;
         }
-
       },
-
-
-      legend: {
-
-        data: [
-          "Brent",
-          "Singapore Jet Fuel"
-        ],
-
-        bottom: 2,
-
-        textStyle: {
-          color: "#bfd3df"
-        }
-
-      },
-
-
-      grid: {
-
-        left: 70,
-
-        right: 28,
-
-        top: 54,
-
-        bottom: 72
-
-      },
-
-
-      xAxis: {
-
-        type: "time",
-
-        boundaryGap: false,
-
-
-        axisLine: {
-
-          lineStyle: {
-            color: "#456075"
-          }
-
-        },
-
-
-        axisTick: {
-          show: false
-        },
-
-
-        axisLabel: {
-
-          color: "#8fa7b7",
-
-          hideOverlap: true,
-
-
-          formatter: function(
-            value
-          ) {
-
-            const d =
-              new Date(value);
-
-
-            const year =
-              d.getFullYear();
-
-
-            const month =
-              String(
-                d.getMonth() + 1
-              )
-              .padStart(
-                2,
-                "0"
-              );
-
-
-            const day =
-              String(
-                d.getDate()
-              )
-              .padStart(
-                2,
-                "0"
-              );
-
-
-            return (
-              year +
-              "-" +
-              month +
-              "-" +
-              day
-            );
-
-          }
-
-        },
-
-
-        splitLine: {
-          show: false
-        }
-
-      },
-
-
+      grid: { left: 65, right: 24, top: 38, bottom: 66 },
+      xAxis: commonXAxis(),
       yAxis: {
-
-        type: "value",
-
-        name: "USD/bbl",
-
-        scale: true,
-
-
-        nameTextStyle: {
-          color: "#7790a2"
-        },
-
-
-        axisLabel: {
-          color: "#8fa7b7"
-        },
-
-
-        axisLine: {
-          show: false
-        },
-
-
-        axisTick: {
-          show: false
-        },
-
-
-        splitLine: {
-
-          lineStyle: {
-
-            color:
-              "rgba(130,160,180,0.10)"
-
-          }
-
-        }
-
+        type: "value", name: unit, scale: true,
+        nameTextStyle: { color: "#7790a2" },
+        axisLabel: { color: "#8fa7b7" }, axisLine: { show: false }, axisTick: { show: false },
+        splitLine: { lineStyle: { color: "rgba(130,160,180,0.10)" } }
       },
+      dataZoom: commonDataZoom(),
+      series: [{
+        name: seriesName, type: "line", data: seriesData, smooth: false,
+        connectNulls: true, showSymbol: false, symbol: "circle", symbolSize: 6,
+        lineStyle: { width: 3 }, emphasis: { focus: "series", scale: true }
+      }]
+    };
+  }
 
-
-      series: [
-
-        {
-
-          name: "Brent",
-
-          type: "line",
-
-          data:
-            brentSeries,
-
-          /*
-          Important:
-          no smoothing for financial
-          market prices.
-          */
-
-          smooth: false,
-
-          connectNulls: true,
-
-          showSymbol: false,
-
-          symbol: "circle",
-
-          symbolSize: 6,
-
-
-          lineStyle: {
-
-            width: 3
-
-          },
-
-
-          emphasis: {
-
-            focus: "series",
-
-            scale: true
-
-          }
-
-        },
-
-
-        {
-
-          name:
-            "Singapore Jet Fuel",
-
-          type: "line",
-
-          data:
-            jetSeries,
-
-          smooth: false,
-
-          connectNulls: true,
-
-          showSymbol: false,
-
-          symbol: "circle",
-
-          symbolSize: 6,
-
-
-          lineStyle: {
-
-            width: 3
-
-          },
-
-
-          emphasis: {
-
-            focus: "series",
-
-            scale: true
-
-          }
-
-        }
-
-      ]
-
-    });
-
-
-
-    /* =====================================================
-       BAI SERIES
-    ===================================================== */
-
-    const baiSeries =
-      bai.map(
-        item => [
-
-          dateToTimestamp(
-            item.date
-          ),
-
-          Number(
-            item.value
-          )
-
-        ]
-      );
-
-
-
-    /* =====================================================
-       BAI CHART
-    ===================================================== */
-
-    freightChart.setOption({
-
+  function baiChartOption(seriesData) {
+    return {
       animation: true,
-
-
       tooltip: {
-
         trigger: "axis",
-
-        axisPointer: {
-          type: "line"
-        },
-
-
-        formatter: function(
-          params
-        ) {
-
-          if (
-            !params ||
-            params.length === 0
-          ) {
-
-            return "";
-
-          }
-
-
-          const item =
-            params[0];
-
-
-          return (
-            "<strong>" +
-            formatDate(
-              item.value[0]
-            ) +
-            "</strong><br>" +
-            item.marker +
-            "BAI00: " +
-            Number(
-              item.value[1]
-            ).toLocaleString()
-          );
-
+        axisPointer: { type: "line" },
+        formatter: params => {
+          if (!params || !params.length) return "";
+          const item = params[0];
+          return `<strong>${formatDate(item.value[0])}</strong><br>${item.marker}BAI00: ${Number(item.value[1]).toLocaleString()}`;
         }
-
       },
-
-
-      grid: {
-
-        left: 70,
-
-        right: 24,
-
-        top: 52,
-
-        bottom: 58
-
-      },
-
-
-      xAxis: {
-
-        type: "time",
-
-        boundaryGap: false,
-
-
-        axisLine: {
-
-          lineStyle: {
-            color: "#456075"
-          }
-
-        },
-
-
-        axisTick: {
-          show: false
-        },
-
-
-        axisLabel: {
-
-          color: "#8fa7b7",
-
-          hideOverlap: true,
-
-
-          formatter: function(
-            value
-          ) {
-
-            const d =
-              new Date(value);
-
-
-            const year =
-              d.getFullYear();
-
-
-            const month =
-              String(
-                d.getMonth() + 1
-              )
-              .padStart(
-                2,
-                "0"
-              );
-
-
-            const day =
-              String(
-                d.getDate()
-              )
-              .padStart(
-                2,
-                "0"
-              );
-
-
-            return (
-              year +
-              "-" +
-              month +
-              "-" +
-              day
-            );
-
-          }
-
-        },
-
-
-        splitLine: {
-          show: false
-        }
-
-      },
-
-
+      grid: { left: 65, right: 24, top: 38, bottom: 66 },
+      xAxis: commonXAxis(),
       yAxis: {
-
-        type: "value",
-
-        name: "Index",
-
-        scale: false,
-
-        min: 0,
-
-
-        nameTextStyle: {
-          color: "#7790a2"
-        },
-
-
-        axisLabel: {
-          color: "#8fa7b7"
-        },
-
-
-        axisTick: {
-          show: false
-        },
-
-
-        axisLine: {
-          show: false
-        },
-
-
-        splitLine: {
-
-          lineStyle: {
-
-            color:
-              "rgba(130,160,180,0.10)"
-
-          }
-
-        }
-
+        type: "value", name: "Index", scale: true,
+        nameTextStyle: { color: "#7790a2" },
+        axisLabel: { color: "#8fa7b7" }, axisLine: { show: false }, axisTick: { show: false },
+        splitLine: { lineStyle: { color: "rgba(130,160,180,0.10)" } }
       },
-
-
-      series: [
-
-        {
-
-          name: "BAI00",
-
-          type: "line",
-
-          data:
-            baiSeries,
-
-          smooth: false,
-
-          connectNulls: true,
-
-          showSymbol: true,
-
-          symbolSize: 6,
-
-
-          lineStyle: {
-
-            width: 3
-
-          },
-
-
-          areaStyle: {
-
-            opacity: 0.09
-
-          }
-
-        }
-
-      ]
-
-    });
-
-
+      dataZoom: commonDataZoom(),
+      series: [{
+        name: "BAI00", type: "line", data: seriesData, smooth: false,
+        connectNulls: true, showSymbol: true, symbolSize: 6,
+        lineStyle: { width: 3 }, areaStyle: { opacity: 0.09 }
+      }]
+    };
   }
 
+  async function loadData() {
+    try {
+      const response = await fetch(`./data/market_data.json?t=${Date.now()}`);
+      if (!response.ok) throw new Error("Unable to load market_data.json");
+      const market = await response.json();
 
+      document.getElementById("lastUpdate").textContent = formatUpdatedAt(market.updated_at);
 
-  /* =====================================================
-     ERROR HANDLING
-  ===================================================== */
+      const liveNames = [];
+      const demoNames = [];
+      [
+        [market.brent, "BRENT"],
+        [market.jet_fuel, "JET FUEL"],
+        [market.bai00, "BAI00"]
+      ].forEach(([dataset, name]) => {
+        if (dataset?.status === "LIVE") liveNames.push(name);
+        else demoNames.push(name);
+      });
 
-  catch(error) {
+      const statusParts = [];
+      if (liveNames.length) statusParts.push(`${liveNames.join(" · ")} LIVE`);
+      if (demoNames.length) statusParts.push(`${demoNames.join(" & ")} DEMO`);
+      document.getElementById("statusBadge").textContent = statusParts.join(" · ") || "NO DATA";
 
+      const brent = market.brent?.data || [];
+      const jet = market.jet_fuel?.data || [];
+      const bai = market.bai00?.data || [];
+      if (!brent.length) throw new Error("Brent data is empty.");
 
-    console.error(
-      "Dashboard data error:",
-      error
-    );
+      const brentLatest = Number(brent[brent.length - 1].value);
+      const jetLatest = jet.length ? Number(jet[jet.length - 1].value) : null;
+      const baiLatest = bai.length ? Number(bai[bai.length - 1].value) : null;
 
+      document.getElementById("brentValue").textContent = Number.isFinite(brentLatest) ? `$${brentLatest.toFixed(2)}` : "--";
+      document.getElementById("jetValue").textContent = Number.isFinite(jetLatest) ? `$${jetLatest.toFixed(2)}` : "--";
+      document.getElementById("baiValue").textContent = Number.isFinite(baiLatest) ? baiLatest.toLocaleString() : "--";
 
-    document
-      .getElementById(
-        "lastUpdate"
-      )
-      .textContent =
-        "DATA ERROR";
+      updateChange("brentChange", getChange(brent), "DoD");
+      updateChange("jetChange", getChange(jet), "DoD");
+      updateChange("baiChange", getChange(bai), "WoW");
 
+      document.getElementById("brentSubtitle").textContent = `${market.brent?.source || "Source pending"} · ${market.brent?.price_field || "Daily close"} · ${market.brent?.unit || "USD/bbl"}`;
+      document.getElementById("jetSubtitle").textContent = `${market.jet_fuel?.source || "Source pending"} · ${market.jet_fuel?.status || "DEMO"} · ${market.jet_fuel?.unit || "USD/bbl"}`;
+      document.getElementById("baiSubtitle").textContent = `${market.bai00?.source || "Source pending"} · ${market.bai00?.status || "DEMO"}`;
 
-    document
-      .getElementById(
-        "statusBadge"
-      )
-      .textContent =
-        "DATA ERROR";
+      const brentSeries = toSeries(brent);
+      const jetSeries = toSeries(jet);
+      const baiSeries = toSeries(bai);
 
+      const timestamps = [...brentSeries, ...jetSeries, ...baiSeries].map(item => item[0]);
+      latestTimestamp = timestamps.length ? Math.max(...timestamps) : Date.now();
+
+      brentChart.setOption(priceChartOption("Brent Crude", brentSeries, market.brent?.unit || "USD/bbl"), true);
+      jetChart.setOption(priceChartOption("Singapore Jet Kerosene", jetSeries, market.jet_fuel?.unit || "USD/bbl"), true);
+      freightChart.setOption(baiChartOption(baiSeries), true);
+
+      applyRange(currentRange);
+    } catch (error) {
+      console.error("Dashboard data error:", error);
+      document.getElementById("lastUpdate").textContent = "DATA ERROR";
+      document.getElementById("statusBadge").textContent = "DATA ERROR";
+    }
   }
 
-}
+  document.querySelectorAll(".range-btn").forEach(button => {
+    button.addEventListener("click", () => applyRange(button.dataset.range));
+  });
 
+  loadData();
 
-
-/* =========================================================
-   LOAD
-========================================================= */
-
-loadData();
-
-
-
-/* =========================================================
-   RESPONSIVE
-========================================================= */
-
-window.addEventListener(
-  "resize",
-  function() {
-
-    energyChart.resize();
-
-    freightChart.resize();
-
-  }
-);
-
+  window.addEventListener("resize", () => {
+    charts.forEach(chart => chart.resize());
+  });
 </script>
-
-
 </body>
-
 </html>
