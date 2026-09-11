@@ -42,7 +42,7 @@ jobs:
 
       - name: Update standardized hyperscaler financials
         env:
-          SEC_USER_AGENT: 'AI-Bubble-Monitor/1.0 (github.com/russell-home667/aviation-leasing-dashboard; contact via GitHub)'
+          SEC_USER_AGENT: 'AI Bubble Monitor russell-home667@users.noreply.github.com'
         run: |
           set -euo pipefail
           python scripts/update_ai_hyperscaler_financials.py
