@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-11T21:28:37+08:00",
+  "updated_at": "2026-09-11T21:32:11+08:00",
   "brent": {
     "name": "Brent Crude",
     "ticker": "BZ=F",
@@ -44187,11 +44187,13 @@
       "source": "ANA Cargo official fuel-surcharge notices",
       "method": "Monthly average Singapore kerosene prices explicitly disclosed in ANA Cargo fuel-surcharge notices",
       "frequency": "Monthly observations where an ANA notice is publicly archived",
+      "target_gap": "2010-07-28 to 2026-01-25",
       "from": "2020-10-01",
-      "to": "2026-08-31",
-      "parsed_observations": 45,
-      "new_gap_fill_points_added": 42,
-      "caveat": "Official period averages, not reconstructed daily Platts assessments. Existing EIA/current daily observations are never overwritten.",
+      "to": "2025-12-31",
+      "parsed_gap_observations": 39,
+      "all_ana_observations_seen": 45,
+      "new_gap_fill_points_added_this_run": 0,
+      "caveat": "Official monthly period averages, not reconstructed daily Platts assessments. Existing EIA/current daily observations are never overwritten.",
       "observations": [
         {
           "date": "2020-10-31",
@@ -44543,60 +44545,6 @@
           "period_end": "2025-12-31",
           "source": "ANA Cargo disclosed Singapore kerosene monthly average",
           "source_url": "https://www.anacargo.jp/en/news/revision_of_fuel_surcharge_for_ex-japan_cargo_1-feb-26_onward.html"
-        },
-        {
-          "date": "2026-02-28",
-          "value": 88.91,
-          "observation_type": "monthly_average",
-          "period_start": "2026-02-01",
-          "period_end": "2026-02-28",
-          "source": "ANA Cargo disclosed Singapore kerosene monthly average",
-          "source_url": "https://www.anacargo.jp/en/news/revision_of_fuel_surcharge_for_ex-japan_cargo_1-apr-26_onward.html"
-        },
-        {
-          "date": "2026-04-30",
-          "value": 214.01,
-          "observation_type": "monthly_average",
-          "period_start": "2026-04-01",
-          "period_end": "2026-04-30",
-          "source": "ANA Cargo disclosed Singapore kerosene monthly average",
-          "source_url": "https://www.anacargo.jp/en/news/revision_of_fuel_surcharge_for_ex-japan_cargo_japan_1-may-26_onward.html"
-        },
-        {
-          "date": "2026-05-31",
-          "value": 156.02,
-          "observation_type": "monthly_average",
-          "period_start": "2026-05-01",
-          "period_end": "2026-05-31",
-          "source": "ANA Cargo disclosed Singapore kerosene monthly average",
-          "source_url": "https://www.anacargo.jp/en/news/revision_of_fuel_surcharge_for_ex-japan_cargo_japan_1-jun-26_onward.html"
-        },
-        {
-          "date": "2026-06-30",
-          "value": 138.58,
-          "observation_type": "monthly_average",
-          "period_start": "2026-06-01",
-          "period_end": "2026-06-30",
-          "source": "ANA Cargo disclosed Singapore kerosene monthly average",
-          "source_url": "https://www.anacargo.jp/en/news/revision_of_fuel_surcharge_for_ex-japan_cargo_japan_1-jul-26_onward.html"
-        },
-        {
-          "date": "2026-07-31",
-          "value": 125.36,
-          "observation_type": "monthly_average",
-          "period_start": "2026-07-01",
-          "period_end": "2026-07-31",
-          "source": "ANA Cargo disclosed Singapore kerosene monthly average",
-          "source_url": "https://www.anacargo.jp/en/news/revision_of_fuel_surcharge_for_ex-japan_cargo_japan_1-aug-26_onward.html"
-        },
-        {
-          "date": "2026-08-31",
-          "value": 146.03,
-          "observation_type": "monthly_average",
-          "period_start": "2026-08-01",
-          "period_end": "2026-08-31",
-          "source": "ANA Cargo disclosed Singapore kerosene monthly average",
-          "source_url": "https://www.anacargo.jp/en/news/revision_of_fuel_surcharge_for_ex-japan_cargo_japan_1-sep-26_onward.html"
         }
       ]
     }
