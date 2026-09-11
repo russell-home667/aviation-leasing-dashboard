@@ -128,9 +128,24 @@
     "regime": "Speculative Expansion"
   },
   "calibration_conclusion": {
-    "status": "hybrid_calibrated",
-    "live_score_bands_retained": true,
-    "note": "Long-history proxy is used to validate ordering/severity of Breakdown bands. Modern-only Bubble components remain transparent heuristic weights until a longer live history accumulates."
+    "status": "hybrid_v2_applied",
+    "live_score_bands_retained": false,
+    "old_breakdown_bands": {
+      "0-25": "stable",
+      "25-45": "watch",
+      "45-65": "deteriorating",
+      "65-80": "breakdown",
+      "80-100": "severe"
+    },
+    "calibrated_breakdown_bands": {
+      "0-45": "stable",
+      "45-55": "watch",
+      "55-65": "deteriorating",
+      "65-80": "breakdown",
+      "80-100": "severe"
+    },
+    "reason": "In the long-history proxy, 25+ occurred in 71.9% of normal/control months, while 45+ occurred in 25.5% of normal months versus 74.2% of crisis months. The calibrated bands therefore use 45 as the first alert threshold, retain 65 as confirmed Breakdown, and 80 as Severe.",
+    "bubble_score_note": "Bubble Score numeric weights/bands are not statistically re-fit to 2000 because its core CapEx/monetization/GPU inputs are modern-only."
   },
   "limitations": [
     "The proxy does not reconstruct historical AI/hyperscaler CapEx or cloud monetization.",
