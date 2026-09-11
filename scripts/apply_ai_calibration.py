@@ -3,7 +3,8 @@
 
 The long-history proxy showed that the old 25-point Watch threshold was too
 sensitive. Numeric component weights remain unchanged; only Breakdown severity
-bands and methodology metadata are calibrated.
+bands and methodology metadata are calibrated. The script also keeps the web
+Dashboard methodology label synchronized with the calibrated model.
 """
 from __future__ import annotations
 
@@ -15,6 +16,7 @@ ROOT = Path(__file__).resolve().parents[1]
 BASE = ROOT / "data" / "ai_bubble"
 TOP = BASE / "top_scores"
 BACKTEST = BASE / "backtest_calibration"
+DASHBOARD = ROOT / "ai-bubble" / "index.html"
 
 CALIBRATED_BANDS = {
     "0-45": "stable",
@@ -35,6 +37,26 @@ def label(score: float) -> str:
     if score < 80:
         return "breakdown"
     return "severe"
+
+
+def sync_dashboard() -> None:
+    if not DASHBOARD.exists():
+        return
+    html = DASHBOARD.read_text(encoding="utf-8")
+    html = html.replace(
+        '<span class="pill">Methodology · heuristic v1 / pre-backtest</span>',
+        '<span class="pill">Methodology · hybrid v2 / backtest-calibrated</span>'
+    )
+    if 'href="backtest.html"' not in html:
+        html = html.replace(
+            '<a class="navbtn" href="../">← Aviation Dashboard</a>',
+            '<a class="navbtn" href="../">← Aviation Dashboard</a><a class="navbtn" href="backtest.html">Historical Backtest</a>'
+        )
+    html = html.replace(
+        'Current weights and thresholds are heuristic v1 and will be historically calibrated in Step 12.',
+        'Breakdown severity bands are historically calibrated with a 1999-present proxy backtest; Bubble Score remains a transparent modern-era heuristic because comparable 2000-era CapEx/cloud/GPU data do not exist.'
+    )
+    DASHBOARD.write_text(html, encoding="utf-8")
 
 
 def main() -> None:
@@ -88,6 +110,7 @@ def main() -> None:
         }
         bp.write_text(json.dumps(b, ensure_ascii=False, indent=2), encoding="utf-8")
 
+    sync_dashboard()
     print(f"Applied calibrated Breakdown label: {score:.1f} -> {label(score)}")
 
 
