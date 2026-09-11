@@ -31,10 +31,10 @@
 <div class="wrap loading" id="app">
   <div class="topbar">
     <div class="brand"><h1>AI Bubble Monitor</h1><p>监控AI资本开支、商业化、算力需求、现金流、市场价格与金融条件之间是否出现不可持续背离。</p></div>
-    <div class="top-actions"><a class="navbtn" href="../">← Aviation Dashboard</a><span class="pill">Timezone · Beijing UTC+8</span><span class="pill" id="lastUpdate">Loading…</span></div>
+    <div class="top-actions"><a class="navbtn" href="../">← Aviation Dashboard</a><a class="navbtn" href="backtest.html">Historical Backtest</a><span class="pill">Timezone · Beijing UTC+8</span><span class="pill" id="lastUpdate">Loading…</span></div>
   </div>
   <div id="errorBox" class="error"></div>
-  <div class="statusbar"><span class="pill"><span class="dot"></span>Data pipeline active</span><span class="pill" id="coveragePill">Coverage —</span><span class="pill">Methodology · heuristic v1 / pre-backtest</span></div>
+  <div class="statusbar"><span class="pill"><span class="dot"></span>Data pipeline active</span><span class="pill" id="coveragePill">Coverage —</span><span class="pill">Methodology · hybrid v2 / backtest-calibrated</span></div>
 
   <section class="hero">
     <div class="score-card">
@@ -91,7 +91,7 @@
   <section class="section"><div class="section-head"><div><div class="section-title">Score Composition</div><div class="section-note">所有权重透明，不使用黑箱评分</div></div></div><div class="split2"><div class="card"><div class="chart-title">Bubble Score components</div><div class="table-wrap"><table class="table"><thead><tr><th>Component</th><th>Score</th><th>Weight</th><th>Contribution</th></tr></thead><tbody id="bubbleTable"></tbody></table></div></div><div class="card"><div class="chart-title">Breakdown Score components</div><div class="table-wrap"><table class="table"><thead><tr><th>Component</th><th>Score</th><th>Weight</th><th>Contribution</th></tr></thead><tbody id="breakdownTable"></tbody></table></div></div></div>
   </section>
 
-  <div class="footer">AI Bubble Monitor is a monitoring framework, not an investment recommendation. Bubble Score measures excess; Breakdown Score measures unwind confirmation. Current weights and thresholds are heuristic v1 and will be historically calibrated in Step 12. All displayed timestamps use Beijing Time (UTC+8).</div>
+  <div class="footer">AI Bubble Monitor is a monitoring framework, not an investment recommendation. Bubble Score measures excess; Breakdown Score measures unwind confirmation. Breakdown severity bands are historically calibrated with a 1999-present proxy backtest; Bubble Score remains a transparent modern-era heuristic because comparable 2000-era CapEx/cloud/GPU data do not exist. All displayed timestamps use Beijing Time (UTC+8).</div>
 </div>
 <script>
 const BASE='../data/ai_bubble/';

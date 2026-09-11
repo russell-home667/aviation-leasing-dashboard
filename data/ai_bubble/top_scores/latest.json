@@ -2,7 +2,7 @@
   "module": "AI Bubble Monitor - Top Scores",
   "step": 10,
   "timezone": "Asia/Shanghai",
-  "generated_at_bjt": "2026-09-11T23:46:40+08:00",
+  "generated_at_bjt": "2026-09-11T23:48:46+08:00",
   "methodology_version": "hybrid_v2_backtest_calibrated",
   "calibration_note": "Step-12 long-history proxy backtest calibrated Breakdown severity bands. Numeric score weights are unchanged; the 25-point Watch threshold was removed because it generated excessive normal-period alerts. Bubble Score remains a transparent modern-era heuristic because comparable 2000-era CapEx/cloud/GPU data do not exist.",
   "bubble_score": {
