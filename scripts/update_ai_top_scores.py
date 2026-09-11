@@ -75,20 +75,47 @@ def breakdown_label(score: float) -> str:
     return "severe"
 
 
-def determine_regime(bubble: float, breakdown: float, inv_cash_risk: float, compute_strength: float) -> str:
+def determine_regime(
+    bubble: float,
+    breakdown: float,
+    cloud_growth: float,
+    compute_strength: float,
+    nvidia_strength: float,
+) -> tuple[str, str]:
+    """Map current conditions into the four regimes locked in Step 1.
+
+    Fundamental Divergence is reserved for weakening monetization / compute
+    fundamentals while excess investment remains elevated. Strong demand with a
+    high Bubble Score is still Speculative Expansion, even if cash-flow pressure
+    is already visible.
+    """
     if breakdown >= 65:
-        return "Bubble Breakdown"
-    if breakdown >= 45:
-        return "Breakdown Warning"
-    if bubble >= 70:
-        return "Mature Bubble / No Breakdown Confirmation"
+        return (
+            "Bubble Breakdown",
+            "Market/credit/fundamental unwind has reached multi-pillar breakdown territory.",
+        )
+
+    fundamentals_weakening = (
+        cloud_growth < 30.0
+        or compute_strength < 50.0
+        or nvidia_strength < 45.0
+    )
+    if bubble >= 50 and fundamentals_weakening:
+        return (
+            "Fundamental Divergence",
+            "Investment excess remains elevated while monetization or compute fundamentals are weakening.",
+        )
+
     if bubble >= 50:
-        if inv_cash_risk >= 70 and compute_strength >= 60:
-            return "Fundamental Divergence / Strong Demand"
-        return "Speculative Expansion"
-    if bubble >= 30:
-        return "Elevated Expansion"
-    return "Healthy Expansion"
+        return (
+            "Speculative Expansion",
+            "Investment/capital-return excess is elevated, but cloud monetization and compute demand remain strong enough that breakdown is not confirmed.",
+        )
+
+    return (
+        "Healthy Expansion",
+        "Investment growth is not yet extreme relative to monetization, cash return and market conditions.",
+    )
 
 
 def market_breakdown_score(market: dict) -> tuple[float, dict]:
@@ -138,7 +165,6 @@ def append_history(payload: dict) -> None:
     if path.exists():
         with path.open("r", encoding="utf-8", newline="") as f:
             rows = list(csv.DictReader(f))
-    # One latest observation per Beijing calendar day.
     rows = [r for r in rows if r.get("date_bjt") != row["date_bjt"]]
     rows.append({k: str(v) for k, v in row.items()})
     with path.open("w", encoding="utf-8", newline="") as f:
@@ -165,7 +191,6 @@ def main() -> None:
     price_fund = float(d["price_fundamental_gap"]["risk_score_0_100"])
     market_heat = float(d["price_fundamental_gap"]["market_heat_score"])
 
-    # Structural capital burden: current CapEx intensity plus depreciation burden.
     capex_intensity = linear(float(h5["capex_revenue_pct"]), 15.0, 45.0)
     da_burden = linear(float(h5["da_revenue_pct"]), 5.0, 15.0)
     capital_burden = round(0.7 * capex_intensity + 0.3 * da_burden, 1)
@@ -190,11 +215,9 @@ def main() -> None:
     market_breakdown, market_breakdown_detail = market_breakdown_score(market)
 
     fcf_yoy = float(h5["fcf_yoy_pct"])
-    # 0% or positive FCF growth = no stress; -100% or worse = maximum stress.
     cashflow_deterioration = clamp(-fcf_yoy)
 
     cloud_growth = float(d["investment_monetization_gap"]["cloud_monetization_median_yoy_pct"])
-    # Cloud monetization above 30% gets no breakdown penalty. 0% growth = max penalty.
     monetization_deterioration = clamp((30.0 - cloud_growth) / 30.0 * 100.0)
 
     breakdown_parts = {
@@ -206,12 +229,16 @@ def main() -> None:
     }
     breakdown = weighted(breakdown_parts)
 
-    # Coverage reflects partial GPU history inside Compute Demand Score.
     compute_coverage = float(d["compute_demand_score"].get("coverage_pct", 100.0))
-    # Only 25% of Breakdown Score relies on that composite; Bubble is fully covered.
     overall_coverage = round(100.0 - (100.0 - compute_coverage) * 0.25, 1)
 
-    regime = determine_regime(bubble, breakdown, inv_cash, compute_strength)
+    regime, regime_detail = determine_regime(
+        bubble=bubble,
+        breakdown=breakdown,
+        cloud_growth=cloud_growth,
+        compute_strength=compute_strength,
+        nvidia_strength=nvidia_strength,
+    )
     generated = datetime.now(BJT).isoformat(timespec="seconds")
 
     payload = {
@@ -248,6 +275,13 @@ def main() -> None:
             "compute_demand_input_coverage_pct": compute_coverage,
         },
         "regime": regime,
+        "regime_detail": regime_detail,
+        "regime_framework": [
+            "Healthy Expansion",
+            "Speculative Expansion",
+            "Fundamental Divergence",
+            "Bubble Breakdown",
+        ],
         "coverage_pct": overall_coverage,
         "interpretation": {
             "bubble_high_breakdown_low": "Excess/overinvestment is elevated, but demand, market trend and financing have not jointly confirmed a bust.",
