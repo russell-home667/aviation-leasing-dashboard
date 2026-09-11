@@ -1,0 +1,6 @@
+period_end,fiscal_year,fiscal_quarter,data_center_revenue_usd_bn,total_revenue_usd_bn,gross_margin_pct,inventory_usd_bn,accounts_receivable_usd_bn,dso_days,source,source_url
+2025-07-27,2026,Q2,41.096,46.743,72.4,14.962,27.808,,NVIDIA Q2 FY2026 earnings release,https://investor.nvidia.com/news/press-release-details/2025/NVIDIA-Announces-Financial-Results-for-Second-Quarter-Fiscal-2026/default.aspx
+2025-10-26,2026,Q3,51.2,57.006,73.4,,,,NVIDIA Q3 FY2026 earnings release,https://investor.nvidia.com/news/press-release-details/2025/NVIDIA-Announces-Financial-Results-for-Third-Quarter-Fiscal-2026/
+2026-01-25,2026,Q4,62.3,68.1,75.0,21.403,38.466,,NVIDIA Q4 FY2026 earnings release,https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Fourth-Quarter-and-Fiscal-2026/
+2026-04-26,2027,Q1,75.246,81.615,,,,,NVIDIA Q1 FY2027 earnings release,https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-First-Quarter-Fiscal-2027/default.aspx
+2026-07-26,2027,Q2,89.023,96.221,75.0,31.575,63.059,60,NVIDIA Q2 FY2027 10-Q and earnings call,https://investor.nvidia.com/files/doc_financials/2027/NVDA-2027-Q2-10Q-Final-including-exhibits.pdf
