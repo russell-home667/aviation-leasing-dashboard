@@ -8,9 +8,10 @@ on:
 
   workflow_dispatch:
 
-  # Daily automatic update: 00:30 UTC = 08:30 Singapore time
+  # Daily safety / historical refresh at 08:30 Beijing time.
   schedule:
-    - cron: '30 0 * * *'
+    - cron: '30 8 * * *'
+      timezone: 'Asia/Shanghai'
 
 permissions:
   contents: write
@@ -18,7 +19,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages
+  group: market-data-and-pages
   cancel-in-progress: false
 
 jobs:
@@ -58,12 +59,19 @@ jobs:
           python -m pip install --upgrade pip
           pip install yfinance==1.7.0 requests beautifulsoup4
 
-      - name: Update Brent market data
+      - name: Update Brent daily history
         if: >
           github.event_name == 'schedule' ||
           github.event_name == 'workflow_dispatch'
         run: |
           python scripts/update_brent.py
+
+      - name: Update latest Brent quote
+        if: >
+          github.event_name == 'schedule' ||
+          github.event_name == 'workflow_dispatch'
+        run: |
+          python scripts/update_brent_quote.py
 
       - name: Update Singapore Jet Kerosene data
         if: >
