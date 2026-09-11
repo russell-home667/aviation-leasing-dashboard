@@ -23,6 +23,12 @@ MONTH_ABBR = {name.lower(): i for i, name in enumerate(calendar.month_abbr) if n
 MONTH_MAP = {**MONTHS, **MONTH_ABBR}
 MONTH_RE = "(?:" + "|".join(sorted((re.escape(x) for x in MONTH_MAP), key=len, reverse=True)) + ")"
 
+# Only use ANA period averages as gap-fill observations. The dashboard already has
+# higher-frequency EIA data through 2010-07-27 and current public daily data from
+# 2026-01-26 onward.
+GAP_START = date(2010, 7, 28)
+GAP_END = date(2026, 1, 25)
+
 INDEX_URLS = [
     # Legacy ANA Cargo fuel-surcharge archive. It contains links going back to 2013.
     "https://www.anacargo.jp/mt/en/news/int/fuel/",
@@ -43,7 +49,6 @@ def clean_text(html: str) -> str:
 
 
 def parse_page_date(text: str):
-    # ANA pages usually show YYYY.MM.DD near the top.
     candidates = re.findall(r"\b(20\d{2})[./-](\d{1,2})[./-](\d{1,2})\b", text)
     for y, m, d in candidates:
         try:
@@ -58,9 +63,6 @@ def parse_page_date(text: str):
 def infer_year(month: int, page_date: date | None):
     if not page_date:
         return None
-    # The benchmark month normally precedes the article by 1-2 months.
-    # If the benchmark month number is greater than the article month number,
-    # it belongs to the previous calendar year.
     return page_date.year - 1 if month > page_date.month else page_date.year
 
 
@@ -82,15 +84,22 @@ def parse_ana_release(html: str, url: str):
     # "according to the average price of jet fuel for the month of April, USD 85.10"
     legacy_patterns = [
         re.compile(
-            rf"average price of (?:jet fuel|Singapore kerosene)(?:[^.]){{0,80}}?"
+            rf"average price of (?:jet fuel|Singapore kerosene)(?:[^.]){{0,100}}?"
             rf"(?:for )?the month of\s+({MONTH_RE})(?:\s+(20\d{{2}}))?\s*[,;:]?\s*"
             rf"(?:USD|US\$|USD\$)\s*\$?\s*([0-9]+(?:\.[0-9]+)?)",
             re.I,
         ),
         re.compile(
-            rf"average (?:fuel )?price of Singapore kerosene(?:[^.]){{0,80}}?"
+            rf"average (?:fuel )?price of Singapore kerosene(?:[^.]){{0,100}}?"
             rf"(?:for )?the month of\s+({MONTH_RE})(?:\s+(20\d{{2}}))?\s+was\s+"
             rf"(?:USD|US\$|USD\$)?\s*\$?\s*([0-9]+(?:\.[0-9]+)?)",
+            re.I,
+        ),
+        # Some older ANA notices use "Singapore Kerosene price in April was USD...".
+        re.compile(
+            rf"Singapore kerosene(?:-type jet fuel)?(?:[^.]){{0,100}}?\b(?:in|of)\s+({MONTH_RE})"
+            rf"(?:\s+(20\d{{2}}))?(?:[^.]){{0,80}}?(?:USD|US\$|USD\$)\s*\$?\s*"
+            rf"([0-9]+(?:\.[0-9]+)?)",
             re.I,
         ),
     ]
@@ -114,7 +123,6 @@ def parse_ana_release(html: str, url: str):
 
     # Modern wording, e.g.
     # "average price being USD$95.58/bbl for the period of 1May-31May2024"
-    # "average price being USD$53.57/bbl for the period of December 1 ~ 31, 2020"
     modern = re.compile(
         r"average price being\s+(?:USD|US\$|USD\$)?\s*\$?\s*([0-9]+(?:\.[0-9]+)?)"
         r"\s*(?:/bbl|per barrel)?\s+for the period of\s+([^.;]{1,100})",
@@ -140,8 +148,6 @@ def parse_ana_release(html: str, url: str):
                 "source_url": url,
             })
 
-    # A few pages use "said average price being USD 58.07/bbl" without a dollar sign.
-    # The generic modern pattern above already handles this; deduplicate below.
     by_date = {}
     for row in rows:
         by_date[row["date"]] = row
@@ -153,8 +159,17 @@ def is_candidate_link(text: str, href: str):
     h = href.lower()
     if "fuel surcharge" not in t and "/fuel/" not in h and "fuel_surcharge" not in h and "fuel-surcharge" not in h:
         return False
-    # Prefer ex-Japan / international cargo notices; parser will reject irrelevant pages.
     return True
+
+
+def normalize_legacy_url(full: str):
+    # The old /mt/ archive page contains relative links that resolve under /mt/,
+    # but the surviving article pages actually live under /en/news/int/fuel/.
+    full = full.replace(
+        "https://www.anacargo.jp/mt/en/news/int/fuel/",
+        "https://www.anacargo.jp/en/news/int/fuel/",
+    )
+    return full
 
 
 def collect_links(session: requests.Session):
@@ -172,10 +187,10 @@ def collect_links(session: requests.Session):
                 text = " ".join(a.get_text(" ", strip=True).split())
                 if not is_candidate_link(text, href):
                     continue
-                full = urljoin(index_url, href)
+                full = normalize_legacy_url(urljoin(index_url, href))
                 if not full.startswith("https://www.anacargo.jp/"):
                     continue
-                if full.rstrip("/") == index_url.rstrip("/"):
+                if full.rstrip("/") == normalize_legacy_url(index_url).rstrip("/"):
                     continue
                 links[full] = text
                 found += 1
@@ -197,6 +212,7 @@ def crawl_ana():
         try:
             r = session.get(url, timeout=25, allow_redirects=True)
             if r.status_code != 200:
+                print(f"[{i}/{len(links)}] HTTP {r.status_code}: {url}")
                 continue
             parsed = parse_ana_release(r.text, url)
             if parsed:
@@ -206,8 +222,6 @@ def crawl_ana():
         except Exception as exc:
             print(f"[{i}/{len(links)}] detail warning {url}: {exc}")
 
-    # One underlying month can appear in duplicate approval/not-approval notices.
-    # Keep one identical official ANA observation for each month.
     by_date = {}
     for row in rows:
         old = by_date.get(row["date"])
@@ -224,9 +238,15 @@ def crawl_ana():
 with open(DATA_FILE, "r", encoding="utf-8") as f:
     market = json.load(f)
 
-ana_rows = crawl_ana()
-if len(ana_rows) < 40:
-    raise RuntimeError(f"ANA Singapore kerosene backfill unexpectedly short: {len(ana_rows)} monthly observations")
+all_ana_rows = crawl_ana()
+if len(all_ana_rows) < 40:
+    raise RuntimeError(f"ANA Singapore kerosene backfill unexpectedly short: {len(all_ana_rows)} monthly observations")
+
+# Only insert observations that are actually inside the historical hole.
+ana_rows = [
+    row for row in all_ana_rows
+    if GAP_START <= date.fromisoformat(row["period_end"]) <= GAP_END
+]
 
 jet = market.setdefault("jet_fuel", {})
 existing = {
@@ -247,11 +267,13 @@ jet["ana_history_backfill"] = {
     "source": "ANA Cargo official fuel-surcharge notices",
     "method": "Monthly average Singapore kerosene prices explicitly disclosed in ANA Cargo fuel-surcharge notices",
     "frequency": "Monthly observations where an ANA notice is publicly archived",
-    "from": ana_rows[0]["period_start"],
-    "to": ana_rows[-1]["period_end"],
-    "parsed_observations": len(ana_rows),
-    "new_gap_fill_points_added": len(added),
-    "caveat": "Official period averages, not reconstructed daily Platts assessments. Existing EIA/current daily observations are never overwritten.",
+    "target_gap": f"{GAP_START.isoformat()} to {GAP_END.isoformat()}",
+    "from": ana_rows[0]["period_start"] if ana_rows else None,
+    "to": ana_rows[-1]["period_end"] if ana_rows else None,
+    "parsed_gap_observations": len(ana_rows),
+    "all_ana_observations_seen": len(all_ana_rows),
+    "new_gap_fill_points_added_this_run": len(added),
+    "caveat": "Official monthly period averages, not reconstructed daily Platts assessments. Existing EIA/current daily observations are never overwritten.",
     "observations": ana_rows,
 }
 jet["source"] = "Public Singapore jet archive + U.S. EIA legacy series + ANA Cargo disclosed monthly averages"
@@ -266,8 +288,10 @@ with open(DATA_FILE, "w", encoding="utf-8") as f:
     json.dump(market, f, ensure_ascii=False, indent=2)
     f.write("\n")
 
-print("ANA Singapore kerosene backfill complete.")
-print(f"Parsed official monthly observations: {len(ana_rows)}")
-print(f"Coverage: {ana_rows[0]['period_start']} -> {ana_rows[-1]['period_end']}")
-print(f"New points added to jet_fuel.data: {len(added)}")
+print("ANA Singapore kerosene gap backfill complete.")
+print(f"All official ANA observations parsed: {len(all_ana_rows)}")
+print(f"Official ANA observations inside target gap: {len(ana_rows)}")
+if ana_rows:
+    print(f"Gap coverage: {ana_rows[0]['period_start']} -> {ana_rows[-1]['period_end']}")
+print(f"New gap points added this run: {len(added)}")
 print(f"Total jet_fuel.data rows now: {len(jet['data'])}")
