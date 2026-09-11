@@ -6,6 +6,7 @@ on:
     branches: [main]
     paths:
       - 'scripts/update_ai_compute_fundamentals.py'
+      - 'scripts/canonicalize_nvda_periods.py'
       - 'data/ai_bubble/compute_fundamentals/nvda_official_overrides.csv'
       - '.github/workflows/update-ai-compute-fundamentals.yml'
   schedule:
@@ -66,6 +67,7 @@ jobs:
         run: |
           set -euo pipefail
           python scripts/update_ai_compute_fundamentals.py --group '${{ steps.group.outputs.group }}'
+          python scripts/canonicalize_nvda_periods.py
 
       - name: Validate generated module
         run: |
@@ -84,6 +86,8 @@ jobs:
           missing = [k for k in required_nvda if n.get(k) is None]
           if missing:
               raise SystemExit(f'NVDA latest missing fields: {missing}')
+          if n.get('period_end') != '2026-07-26':
+              raise SystemExit(f"NVDA period_end not canonical: {n.get('period_end')}")
           if t.get('revenue_twd_mn') is None or t.get('yoy_pct_reported') is None or t.get('rolling_3m_yoy_pct') is None:
               raise SystemExit('TSMC latest is incomplete')
           print('NVDA latest:', n)
