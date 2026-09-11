@@ -2,7 +2,7 @@
   "module": "AI Bubble Monitor - Historical Backtest & Calibration",
   "step": 12,
   "timezone": "Asia/Shanghai",
-  "generated_at_bjt": "2026-09-11T23:47:07+08:00",
+  "generated_at_bjt": "2026-09-11T23:49:17+08:00",
   "methodology": {
     "full_bubble_score_backtestable_to_2000": false,
     "reason": "Hyperscaler AI CapEx, comparable cloud monetization and GPU rental series are modern-only; reconstructing them for 2000 would create false precision.",
