@@ -2,11 +2,12 @@
   "module": "AI Bubble Monitor - Hyperscaler Financials",
   "step": 6,
   "timezone": "Asia/Shanghai",
-  "generated_at_bjt": "2026-09-11T22:24:12+08:00",
+  "generated_at_bjt": "2026-09-11T22:27:04+08:00",
   "source_policy": {
     "automated_source": "Yahoo Finance quarterly financial statements via yfinance",
     "official_validation_source": "SEC EDGAR / company investor relations",
-    "sec_github_actions_note": "data.sec.gov currently returns HTTP 403 from GitHub-hosted Azure runners; official sources will be used for validation/backfill rather than unattended runner fetches."
+    "sec_github_actions_note": "data.sec.gov currently returns HTTP 403 from GitHub-hosted Azure runners; official sources will be used for validation/backfill rather than unattended runner fetches.",
+    "override_policy": "Confirmed company filing/IR observations replace lagging vendor rows for the same ticker and period."
   },
   "accounting_policy": {
     "cash_capex": "Absolute value of quarterly CapitalExpenditure cash-flow line; normalized as positive cash spent.",
@@ -45,16 +46,16 @@
     "AMZN": {
       "company": "Amazon",
       "fiscal_year": 2026,
-      "fiscal_quarter": "Q1",
-      "period_end": "2026-03-31",
-      "calendar_quarter": "2026Q1",
-      "revenue_usd_bn": 181.519,
-      "cfo_usd_bn": 26.032,
-      "cash_capex_usd_bn": 44.203,
-      "da_usd_bn": 18.945,
-      "fcf_usd_bn": -18.171,
-      "capex_revenue_pct": 24.352,
-      "fcf_margin_pct": -10.011
+      "fiscal_quarter": "Q2",
+      "period_end": "2026-06-30",
+      "calendar_quarter": "2026Q2",
+      "revenue_usd_bn": 200.606,
+      "cfo_usd_bn": 45.387,
+      "cash_capex_usd_bn": 54.208,
+      "da_usd_bn": 19.988,
+      "fcf_usd_bn": -8.821,
+      "capex_revenue_pct": 27.022,
+      "fcf_margin_pct": -4.397
     },
     "META": {
       "company": "Meta",
@@ -86,18 +87,21 @@
     }
   },
   "h5_latest_complete": {
-    "calendar_quarter": "2026Q1",
-    "revenue_usd_bn": 447.802,
-    "cfo_usd_bn": 157.878,
-    "cash_capex_usd_bn": 148.385,
-    "da_usd_bn": 44.159,
-    "fcf_usd_bn": 9.493,
-    "capex_revenue_pct": 33.136,
-    "fcf_margin_pct": 2.12,
-    "da_revenue_pct": 9.861,
-    "cash_capex_yoy_pct": null,
-    "revenue_yoy_pct": null,
-    "fcf_yoy_pct": null
+    "calendar_quarter": "2026Q2",
+    "revenue_usd_bn": 490.394,
+    "cfo_usd_bn": 186.379,
+    "cash_capex_usd_bn": 181.543,
+    "da_usd_bn": 47.317,
+    "fcf_usd_bn": 4.836,
+    "capex_revenue_pct": 37.02,
+    "fcf_margin_pct": 0.986,
+    "da_revenue_pct": 9.649,
+    "cash_capex_yoy_pct": 86.531,
+    "revenue_yoy_pct": 21.388,
+    "fcf_yoy_pct": -87.035
   },
-  "errors": {}
+  "errors": {},
+  "official_overrides_applied": [
+    "AMZN:2026-06-30"
+  ]
 }
