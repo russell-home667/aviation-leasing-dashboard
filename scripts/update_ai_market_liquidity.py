@@ -22,9 +22,9 @@ import json
 import os
 import sys
 import time
-from datetime import datetime, timezone
+from datetime import datetime, time as clock_time
 from pathlib import Path
-from typing import Dict, Iterable, Optional
+from typing import Dict, Optional
 from zoneinfo import ZoneInfo
 
 import numpy as np
@@ -33,6 +33,7 @@ import requests
 import yfinance as yf
 
 BJT = ZoneInfo("Asia/Shanghai")
+NY = ZoneInfo("America/New_York")
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data" / "ai_bubble" / "market_liquidity"
 OUT.mkdir(parents=True, exist_ok=True)
@@ -127,9 +128,27 @@ def merge_by_date(existing: pd.DataFrame, new: pd.DataFrame) -> pd.DataFrame:
     return combined.reset_index(drop=True)
 
 
+def remove_incomplete_us_session(df: pd.DataFrame) -> pd.DataFrame:
+    """Never persist Yahoo's still-forming current U.S. daily bar.
+
+    yfinance may expose the current session as a daily row while the market is
+    still open. This monitor intentionally uses completed daily closes only.
+    We therefore exclude today's New York date until 17:00 ET, leaving an hour
+    after the regular 16:00 close for finalization.
+    """
+    if df.empty or "date" not in df.columns:
+        return df
+    ny_now = datetime.now(NY)
+    if ny_now.time() < clock_time(17, 0):
+        today_ny = pd.Timestamp(ny_now.date())
+        df = df[pd.to_datetime(df["date"]) < today_ny]
+    return df.reset_index(drop=True)
+
+
 def yahoo_download(key: str, meta: dict) -> pd.DataFrame:
     path = OUT / f"{key}.csv"
     existing = read_csv_if_exists(path)
+    existing = remove_incomplete_us_session(existing)
     if not existing.empty:
         latest = pd.to_datetime(existing["date"]).max()
         start = (latest - pd.Timedelta(days=14)).strftime("%Y-%m-%d")
@@ -168,12 +187,16 @@ def yahoo_download(key: str, meta: dict) -> pd.DataFrame:
         if c in raw.columns:
             raw[c] = pd.to_numeric(raw[c], errors="coerce")
     raw = raw.dropna(subset=["date", "close"])
+    raw = remove_incomplete_us_session(raw)
+    if raw.empty:
+        raise RuntimeError(f"Yahoo Finance returned no completed sessions for {meta['ticker']}")
     raw["source"] = "Yahoo Finance"
     raw["source_symbol"] = meta["ticker"]
     raw["fetched_at_bjt"] = now_bjt()
     raw["status"] = "confirmed"
 
     combined = merge_by_date(existing, raw)
+    combined = remove_incomplete_us_session(combined)
     atomic_write_csv(combined, path)
     return combined
 
@@ -196,6 +219,8 @@ def build_qqq_rsp() -> pd.DataFrame:
 
 
 def update_vix() -> pd.DataFrame:
+    path = OUT / "vix.csv"
+    existing = read_csv_if_exists(path)
     r = request_with_retry(CBOE_VIX_URL)
     from io import StringIO
 
@@ -211,16 +236,22 @@ def update_vix() -> pd.DataFrame:
         if c in df.columns:
             df[c] = pd.to_numeric(df[c], errors="coerce")
     df = df.dropna(subset=["date", "close"]).sort_values("date")
+    if not existing.empty:
+        cutoff = pd.to_datetime(existing["date"]).max() - pd.Timedelta(days=14)
+        df = df[df["date"] >= cutoff]
     df["source"] = "Cboe Global Markets"
     df["source_symbol"] = "VIX"
     df["fetched_at_bjt"] = now_bjt()
     df["status"] = "confirmed"
-    atomic_write_csv(df, OUT / "vix.csv")
-    return df
+    combined = merge_by_date(existing, df)
+    atomic_write_csv(combined, path)
+    return combined
 
 
 def fred_download(key: str, meta: dict) -> pd.DataFrame:
     series = meta["series"]
+    path = OUT / f"{key}.csv"
+    existing = read_csv_if_exists(path)
     api_key = os.getenv("FRED_API_KEY", "").strip()
     if api_key:
         url = "https://api.stlouisfed.org/fred/series/observations"
@@ -253,13 +284,17 @@ def fred_download(key: str, meta: dict) -> pd.DataFrame:
     df["date"] = pd.to_datetime(df["date"], errors="coerce")
     df["value"] = pd.to_numeric(df["value"].replace(".", np.nan), errors="coerce")
     df = df.dropna(subset=["date", "value"]).sort_values("date")
+    if not existing.empty:
+        cutoff = pd.to_datetime(existing["date"]).max() - pd.Timedelta(days=35)
+        df = df[df["date"] >= cutoff]
     df["source"] = meta["source"]
     df["source_symbol"] = series
     df["endpoint"] = endpoint
     df["fetched_at_bjt"] = now_bjt()
     df["status"] = "confirmed"
-    atomic_write_csv(df, OUT / f"{key}.csv")
-    return df
+    combined = merge_by_date(existing, df)
+    atomic_write_csv(combined, path)
+    return combined
 
 
 def pct_change(close: pd.Series, periods: int) -> Optional[float]:
@@ -384,6 +419,7 @@ def write_latest(errors: Dict[str, str]) -> None:
         "indicators": indicators,
         "errors": errors,
         "notes": {
+            "market_close_policy": "Yahoo current-session daily bars are excluded until 17:00 America/New_York; stored market observations are completed sessions only.",
             "hy_ig_history": "ICE BofA FRED series may be license-limited to recent history; BAA10Y is stored as a long-history credit-stress proxy for later backtests.",
             "qqq_rsp": "Derived daily from QQQ close divided by RSP close; higher values indicate stronger mega-cap/tech concentration relative to equal-weight S&P 500.",
         },
