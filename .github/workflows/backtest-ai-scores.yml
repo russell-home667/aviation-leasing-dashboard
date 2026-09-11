@@ -6,6 +6,7 @@ on:
     branches: [main]
     paths:
       - 'scripts/backtest_ai_scores.py'
+      - 'scripts/apply_ai_calibration.py'
       - '.github/workflows/backtest-ai-scores.yml'
   schedule:
     - cron: '15 1 1 * *'
@@ -43,6 +44,7 @@ jobs:
         run: |
           set -euo pipefail
           python scripts/backtest_ai_scores.py
+          python scripts/apply_ai_calibration.py
 
       - name: Validate output
         run: |
@@ -57,8 +59,12 @@ jobs:
               raise SystemExit(f"Backtest errors: {d['errors']}")
           if len(d.get('events', [])) < 5:
               raise SystemExit('Event summary incomplete')
+          c = d.get('calibration_conclusion', {})
+          if c.get('status') != 'hybrid_v2_applied':
+              raise SystemExit('Calibrated bands were not applied')
           print('Percentiles:', d['breakdown_proxy_percentiles'])
           print('Band validation:', d['live_band_validation'])
+          print('Calibration:', c)
           print('Events:', d['events'])
           PY
 
@@ -67,11 +73,11 @@ jobs:
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/ai_bubble/backtest_calibration/
+          git add data/ai_bubble/backtest_calibration/ data/ai_bubble/top_scores/
           if git diff --cached --quiet; then
             echo 'No backtest changes to commit.'
             exit 0
           fi
-          git commit -m 'data: refresh AI score backtest calibration'
+          git commit -m 'data: refresh calibrated AI score backtest'
           git pull --rebase origin main
           git push origin HEAD:main
