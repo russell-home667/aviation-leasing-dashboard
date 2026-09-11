@@ -1,0 +1,2 @@
+ticker,company,fiscal_year,fiscal_quarter,period_end,calendar_quarter,revenue_usd,cfo_usd,cash_capex_usd,da_usd,source,source_url
+AMZN,Amazon,2026,Q2,2026-06-30,2026Q2,200606000000,45387000000,54208000000,19988000000,Amazon Q2 2026 Form 10-Q,https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm
