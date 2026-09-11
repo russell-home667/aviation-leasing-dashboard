@@ -6,6 +6,8 @@ on:
     branches: [main]
     paths:
       - 'scripts/update_ai_hyperscaler_financials.py'
+      - 'scripts/apply_ai_hyperscaler_overrides.py'
+      - 'data/ai_bubble/hyperscalers/official_overrides.csv'
       - '.github/workflows/update-ai-hyperscaler-financials.yml'
   schedule:
     # Daily check at 09:00 Beijing Time.
@@ -44,6 +46,7 @@ jobs:
         run: |
           set -euo pipefail
           python scripts/update_ai_hyperscaler_financials.py
+          python scripts/apply_ai_hyperscaler_overrides.py
 
       - name: Validate generated module
         run: |
@@ -58,12 +61,15 @@ jobs:
           errors = d.get('errors', {})
           print('Companies:', ', '.join(sorted(companies)))
           print('Errors:', errors)
+          print('Official overrides:', d.get('official_overrides_applied', []))
           if len(companies) != 5:
               raise SystemExit(f'Expected 5 companies, got {len(companies)}')
           if errors:
               raise SystemExit(f'Pipeline errors: {errors}')
-          if not d.get('h5_latest_complete'):
+          h5 = d.get('h5_latest_complete')
+          if not h5:
               raise SystemExit('No complete H5 quarter was generated')
+          print('Latest complete H5:', h5.get('calendar_quarter'))
           PY
 
       - name: Commit refreshed data
