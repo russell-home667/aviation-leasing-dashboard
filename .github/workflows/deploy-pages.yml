@@ -44,7 +44,8 @@ jobs:
           github.event_name == 'schedule' ||
           github.event_name == 'workflow_dispatch' ||
           contains(github.event.head_commit.message, '[seed-jet]') ||
-          contains(github.event.head_commit.message, '[seed-bai]')
+          contains(github.event.head_commit.message, '[seed-bai]') ||
+          contains(github.event.head_commit.message, '[quote-now]')
         uses: actions/setup-python@v6
         with:
           python-version: '3.12'
@@ -69,7 +70,8 @@ jobs:
       - name: Update latest Brent quote
         if: >
           github.event_name == 'schedule' ||
-          github.event_name == 'workflow_dispatch'
+          github.event_name == 'workflow_dispatch' ||
+          contains(github.event.head_commit.message, '[quote-now]')
         run: |
           python scripts/update_brent_quote.py
 
@@ -103,7 +105,8 @@ jobs:
           github.event_name == 'schedule' ||
           github.event_name == 'workflow_dispatch' ||
           contains(github.event.head_commit.message, '[seed-jet]') ||
-          contains(github.event.head_commit.message, '[seed-bai]')
+          contains(github.event.head_commit.message, '[seed-bai]') ||
+          contains(github.event.head_commit.message, '[quote-now]')
         run: |
           if git diff --quiet -- data/market_data.json index.html; then
             echo "No new market data or dashboard metadata."
