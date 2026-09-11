@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Aircraft Leasing Market Dashboard</title>
+
+  <!-- Apache ECharts -->
+  <script src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 50% 0%, #14253a 0%, #08111d 38%, #030811 100%);
+      color: #eaf7ff;
+      font-family: Arial, "Microsoft YaHei", sans-serif;
+      min-height: 100vh;
+    }
+
+    .dashboard {
+      width: 96%;
+      max-width: 1600px;
+      margin: auto;
+      padding: 24px;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 32px;
+      letter-spacing: 3px;
+    }
+
+    .header p {
+      margin: 8px 0 0;
+      color: #7da2bd;
+      font-size: 14px;
+    }
+
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-bottom: 20px;
+    }
+
+    .card {
+      background: rgba(9, 24, 40, 0.86);
+      border: 1px solid rgba(70, 193, 255, 0.32);
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow:
+        0 0 18px rgba(0, 156, 255, 0.08),
+        inset 0 0 20px rgba(0, 130, 200, 0.03);
+    }
+
+    .kpi-title {
+      color: #8eaabe;
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+
+    .kpi-value {
+      font-size: 34px;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .kpi-change {
+      font-size: 14px;
+    }
+
+    .up {
+      color: #47d7a3;
+    }
+
+    .down {
+      color: #ff718b;
+    }
+
+    .chart-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 18px;
+    }
+
+    .chart-title {
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    #energyChart,
+    #freightChart {
+      width: 100%;
+      height: 420px;
+    }
+
+    .demo {
+      display: inline-block;
+      margin-left: 8px;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 11px;
+      background: #784a00;
+      color: #ffd891;
+    }
+
+    .footer {
+      margin-top: 20px;
+      text-align: right;
+      color: #61798c;
+      font-size: 12px;
+    }
+
+    @media(max-width: 900px) {
+      .kpi-grid,
+      .chart-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="dashboard">
+
+  <div class="header">
+    <h1>AIRCRAFT LEASING MARKET DASHBOARD</h1>
+    <p>
+      航空租赁市场监测
+      <span class="demo">DEMO DATA</span>
+    </p>
+  </div>
+
+
+  <!-- KPI -->
+  <div class="kpi-grid">
+
+    <div class="card">
+      <div class="kpi-title">BRENT CRUDE</div>
+      <div class="kpi-value">$75.20</div>
+      <div class="kpi-change up">▲ 1.24% DoD</div>
+    </div>
+
+    <div class="card">
+      <div class="kpi-title">SINGAPORE JET KEROSENE</div>
+      <div class="kpi-value">$89.40</div>
+      <div class="kpi-change down">▼ 0.43% DoD</div>
+    </div>
+
+    <div class="card">
+      <div class="kpi-title">BALTIC AIR FREIGHT INDEX</div>
+      <div class="kpi-value">2,240</div>
+      <div class="kpi-change up">▲ 2.10% WoW</div>
+    </div>
+
+  </div>
+
+
+  <!-- Charts -->
+  <div class="chart-grid">
+
+    <div class="card">
+      <div class="chart-title">
+        ENERGY MARKET TREND
+      </div>
+      <div id="energyChart"></div>
+    </div>
+
+    <div class="card">
+      <div class="chart-title">
+        BAI00 TREND
+      </div>
+      <div id="freightChart"></div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    Demo version · Real data connection will be added later
+  </div>
+
+</div>
+
+
+<script>
+
+  // ==========================
+  // Demo Data
+  // ==========================
+
+  const dates = [
+    "09-05",
+    "09-06",
+    "09-07",
+    "09-08",
+    "09-09",
+    "09-10",
+    "09-11"
+  ];
+
+  const brent = [
+    72.1,
+    72.8,
+    73.4,
+    72.9,
+    74.0,
+    74.3,
+    75.2
+  ];
+
+  const jetFuel = [
+    87.3,
+    87.8,
+    88.4,
+    88.1,
+    89.0,
+    89.8,
+    89.4
+  ];
+
+  const bai = [
+    2140,
+    2150,
+    2175,
+    2180,
+    2200,
+    2210,
+    2240
+  ];
+
+
+  // ==========================
+  // Energy Chart
+  // ==========================
+
+  const energyChart =
+    echarts.init(document.getElementById("energyChart"));
+
+  const energyOption = {
+
+    tooltip: {
+      trigger: "axis"
+    },
+
+    legend: {
+      data: [
+        "Brent",
+        "Singapore Jet Fuel"
+      ],
+      textStyle: {
+        color: "#bfd3df"
+      }
+    },
+
+    grid: {
+      left: "8%",
+      right: "4%",
+      top: "15%",
+      bottom: "12%"
+    },
+
+    xAxis: {
+      type: "category",
+      data: dates,
+      axisLine: {
+        lineStyle: {
+          color: "#466277"
+        }
+      },
+      axisLabel: {
+        color: "#8fa7b7"
+      }
+    },
+
+    yAxis: {
+      type: "value",
+      name: "USD/bbl",
+      nameTextStyle: {
+        color: "#7790a2"
+      },
+      splitLine: {
+        lineStyle: {
+          color: "rgba(130,160,180,0.10)"
+        }
+      },
+      axisLabel: {
+        color: "#8fa7b7"
+      }
+    },
+
+    series: [
+
+      {
+        name: "Brent",
+        type: "line",
+        data: brent,
+        smooth: true,
+        symbolSize: 7,
+        lineStyle: {
+          width: 3
+        }
+      },
+
+      {
+        name: "Singapore Jet Fuel",
+        type: "line",
+        data: jetFuel,
+        smooth: true,
+        symbolSize: 7,
+        lineStyle: {
+          width: 3
+        }
+      }
+
+    ]
+  };
+
+  energyChart.setOption(energyOption);
+
+
+  // ==========================
+  // Freight Chart
+  // ==========================
+
+  const freightChart =
+    echarts.init(document.getElementById("freightChart"));
+
+  const freightOption = {
+
+    tooltip: {
+      trigger: "axis"
+    },
+
+    grid: {
+      left: "15%",
+      right: "5%",
+      top: "12%",
+      bottom: "12%"
+    },
+
+    xAxis: {
+      type: "category",
+      data: dates,
+      axisLine: {
+        lineStyle: {
+          color: "#466277"
+        }
+      },
+      axisLabel: {
+        color: "#8fa7b7"
+      }
+    },
+
+    yAxis: {
+      type: "value",
+      name: "Index",
+      nameTextStyle: {
+        color: "#7790a2"
+      },
+      splitLine: {
+        lineStyle: {
+          color: "rgba(130,160,180,0.10)"
+        }
+      },
+      axisLabel: {
+        color: "#8fa7b7"
+      }
+    },
+
+    series: [
+
+      {
+        name: "BAI00",
+        type: "line",
+        data: bai,
+        smooth: true,
+        areaStyle: {
+          opacity: 0.10
+        },
+        lineStyle: {
+          width: 3
+        }
+      }
+
+    ]
+  };
+
+  freightChart.setOption(freightOption);
+
+
+  // Responsive
+  window.addEventListener("resize", function () {
+    energyChart.resize();
+    freightChart.resize();
+  });
+
+</script>
+
+</body>
+</html>
