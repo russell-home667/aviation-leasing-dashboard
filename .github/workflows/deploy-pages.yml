@@ -43,6 +43,7 @@ jobs:
         if: >
           github.event_name == 'schedule' ||
           github.event_name == 'workflow_dispatch' ||
+          contains(github.event.head_commit.message, '[seed-brent]') ||
           contains(github.event.head_commit.message, '[seed-jet]') ||
           contains(github.event.head_commit.message, '[seed-bai]') ||
           contains(github.event.head_commit.message, '[quote-now]')
@@ -54,6 +55,7 @@ jobs:
         if: >
           github.event_name == 'schedule' ||
           github.event_name == 'workflow_dispatch' ||
+          contains(github.event.head_commit.message, '[seed-brent]') ||
           contains(github.event.head_commit.message, '[seed-jet]') ||
           contains(github.event.head_commit.message, '[seed-bai]')
         run: |
@@ -63,7 +65,8 @@ jobs:
       - name: Update Brent daily history
         if: >
           github.event_name == 'schedule' ||
-          github.event_name == 'workflow_dispatch'
+          github.event_name == 'workflow_dispatch' ||
+          contains(github.event.head_commit.message, '[seed-brent]')
         run: |
           python scripts/update_brent.py
 
@@ -104,6 +107,7 @@ jobs:
         if: >
           github.event_name == 'schedule' ||
           github.event_name == 'workflow_dispatch' ||
+          contains(github.event.head_commit.message, '[seed-brent]') ||
           contains(github.event.head_commit.message, '[seed-jet]') ||
           contains(github.event.head_commit.message, '[seed-bai]') ||
           contains(github.event.head_commit.message, '[quote-now]')
