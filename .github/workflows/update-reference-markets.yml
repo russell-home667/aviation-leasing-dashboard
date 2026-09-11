@@ -1,0 +1,107 @@
+name: Check Jet Fuel and BAI00
+
+on:
+  workflow_dispatch:
+
+  # Poll twice per hour so a newly published observation is normally
+  # captured well inside one hour. Times are Beijing time.
+  schedule:
+    - cron: '7,37 * * * *'
+      timezone: 'Asia/Shanghai'
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: market-data-and-pages
+  cancel-in-progress: false
+
+jobs:
+  check-reference-markets:
+    runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests beautifulsoup4
+
+      - name: Snapshot current market data
+        run: cp data/market_data.json /tmp/market_data_before.json
+
+      - name: Check Singapore Jet Kerosene
+        run: python scripts/update_jet_fuel.py
+
+      - name: Check BAI00
+        run: python scripts/update_bai.py
+
+      - name: Keep file only when published observations changed
+        id: detect
+        run: |
+          python - <<'PY'
+          import json
+          import shutil
+          from pathlib import Path
+
+          before_path = Path('/tmp/market_data_before.json')
+          after_path = Path('data/market_data.json')
+          before = json.loads(before_path.read_text(encoding='utf-8'))
+          after = json.loads(after_path.read_text(encoding='utf-8'))
+
+          keys = ('jet_fuel', 'bai00')
+          changed = any(
+              (before.get(k, {}).get('data') or []) != (after.get(k, {}).get('data') or [])
+              for k in keys
+          )
+
+          if not changed:
+              shutil.copyfile(before_path, after_path)
+              print('No new Jet Fuel or BAI00 observation; restored original file.')
+          else:
+              print('New published observation detected.')
+
+          with open('/tmp/changed.txt', 'w', encoding='utf-8') as f:
+              f.write('true' if changed else 'false')
+          PY
+          echo "changed=$(cat /tmp/changed.txt)" >> "$GITHUB_OUTPUT"
+
+      - name: Commit updated reference-market data
+        if: steps.detect.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/market_data.json
+          git commit -m "Update jet fuel / BAI00 market data"
+          git pull --rebase origin main
+          git push origin main
+
+      - name: Setup Pages
+        if: steps.detect.outputs.changed == 'true'
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        if: steps.detect.outputs.changed == 'true'
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: '.'
+
+      - name: Deploy to GitHub Pages
+        if: steps.detect.outputs.changed == 'true'
+        id: deployment
+        uses: actions/deploy-pages@v4
