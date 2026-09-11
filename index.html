@@ -732,7 +732,7 @@ bottom: "12%"
 
 xAxis: {
 
-type: "category",
+type: "time",
 
 data:
 energyDates,
@@ -797,62 +797,39 @@ series: [
 
 
 {
-
-name: "Brent",
-
-type: "line",
-
-smooth: true,
-
-symbolSize: 7,
-
-lineStyle: {
-
-width: 3
-
-},
-
-data:
-energyDates.map(
-
-date =>
-
-brentMap[date]
-?? null
-
-)
-
+  name: "Brent",
+  type: "line",
+  smooth: true,
+  connectNulls: true,
+  symbolSize: 7,
+  lineStyle: {
+    width: 3
+  },
+  data:
+  energyDates.map(
+    date =>
+    brentMap[date]
+    ?? null
+  )
 },
 
 
 
 {
-
-name:
-"Singapore Jet Fuel",
-
-type: "line",
-
-smooth: true,
-
-symbolSize: 7,
-
-lineStyle: {
-
-width: 3
-
-},
-
-data:
-energyDates.map(
-
-date =>
-
-jetMap[date]
-?? null
-
-)
-
+  name: "Singapore Jet Fuel",
+  type: "line",
+  smooth: true,
+  connectNulls: true,
+  symbolSize: 7,
+  lineStyle: {
+    width: 3
+  },
+  data:
+  energyDates.map(
+    date =>
+    jetMap[date]
+    ?? null
+  )
 }
 
 
