@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-12T05:13:50+08:00",
+  "updated_at": "2026-09-12T00:40:22.699842Z",
   "brent": {
     "name": "Brent Crude",
     "ticker": "BZ=F",
@@ -19038,6 +19038,10 @@
       {
         "date": "2026-09-10",
         "value": 107.63
+      },
+      {
+        "date": "2026-09-11",
+        "value": 104.42
       }
     ],
     "source_url": "https://finance.yahoo.com/quote/BZ=F/",
@@ -19060,7 +19064,7 @@
     "name": "Singapore Jet Kerosene",
     "ticker": "FOB Singapore Mid",
     "unit": "USD/bbl",
-    "source": "Public Singapore jet archive + U.S. EIA legacy series + ANA/JAL official period averages",
+    "source": "Public FOB Singapore archive + legacy U.S. EIA Singapore series",
     "frequency": "Daily / published observations",
     "data": [
       {
@@ -44315,7 +44319,7 @@
     "source_url": "https://commodityscope.com/prices/singapore-jet-kerosene",
     "price_field": "Indicative / historical FOB Singapore jet kerosene reference",
     "status": "LIVE",
-    "note": "Long history contains frequency/source breaks. Daily EIA/current data are preserved. The 2010-2026 gap is filled where possible with official ANA and JAL Singapore kerosene period averages; no synthetic interpolation is used.",
+    "note": "Long history may contain source/methodology breaks. Legacy EIA observations and current indicative archive are explicitly separated in history_segments.",
     "history_segments": [
       {
         "source": "U.S. EIA legacy Singapore Kerosene-Type Jet Fuel Spot Price FOB",
