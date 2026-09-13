@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-13T00:41:43.899061Z",
+  "updated_at": "2026-09-14T06:26:27+08:00",
   "brent": {
     "name": "Brent Crude",
     "ticker": "BZ=F",
@@ -19048,8 +19048,8 @@
     "price_field": "Daily Close",
     "status": "LIVE",
     "latest_quote": {
-      "price": 104.61,
-      "timestamp": "2026-09-12T04:59:00+08:00",
+      "price": 108.3,
+      "timestamp": "2026-09-14T06:16:22+08:00",
       "bar_interval": "1m",
       "poll_frequency": "5 minutes",
       "source": "Yahoo Finance BZ=F",
