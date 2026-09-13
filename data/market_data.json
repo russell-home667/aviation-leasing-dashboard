@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-12T09:19:25.995370Z",
+  "updated_at": "2026-09-13T00:41:43.899061Z",
   "brent": {
     "name": "Brent Crude",
     "ticker": "BZ=F",
@@ -19041,7 +19041,7 @@
       },
       {
         "date": "2026-09-11",
-        "value": 104.42
+        "value": 104.61
       }
     ],
     "source_url": "https://finance.yahoo.com/quote/BZ=F/",
