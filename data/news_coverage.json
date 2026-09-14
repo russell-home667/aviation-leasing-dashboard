@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-09-14T08:57:02Z",
+  "checked_at": "2026-09-14T08:59:21Z",
   "overall_status": "pass",
   "hard_requirements": {
     "ishka_all_direct_feeds_return_records": true,
@@ -115,7 +115,7 @@
     },
     "stored_source_counts": {
       "Ishka Airfinance": 121,
-      "Aviation News Online": 763,
+      "Aviation News Online": 983,
       "Reuters": 29,
       "Flightglobal": 20
     },
