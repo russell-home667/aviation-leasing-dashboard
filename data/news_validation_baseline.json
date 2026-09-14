@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "description": "Known Ishka headlines visible in the user's authenticated Market Intelligence page on 2026-09-10/11. Used only as a recall regression baseline; no paid article content is stored.",
+  "source": "Ishka Airfinance",
+  "expected_items": [
+    {"published_date": "2026-09-11", "title": "Red Sea Airlines signs SMBC AC lease deal"},
+    {"published_date": "2026-09-11", "title": "ACG hires director trading"},
+    {"published_date": "2026-09-11", "title": "Kang transfers to SMFL"},
+    {"published_date": "2026-09-11", "title": "Vietravel Airlines commits to A220 programme"},
+    {"published_date": "2026-09-11", "title": "Vietnam Airlines commits to more A350s"},
+    {"published_date": "2026-09-10", "title": "BOC Aviation provides Avianca delivery financing"},
+    {"published_date": "2026-09-10", "title": "Exclusive: Silverman launches Jigsaw Aviation"},
+    {"published_date": "2026-09-10", "title": "BDO Ireland launches dedicated aviation unit"},
+    {"published_date": "2026-09-10", "title": "Airlink adds E2s from lessor"},
+    {"published_date": "2026-09-10", "title": "Qantas Link begins incorporating owned E190s"}
+  ]
+}
