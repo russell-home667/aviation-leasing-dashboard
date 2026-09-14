@@ -258,7 +258,7 @@
           <div class="quote-details">
             <span class="meta-label">LATEST</span><span class="meta-value" id="goldDate">--</span>
             <span class="meta-label">FREQUENCY</span><span class="meta-value" id="goldFrequency">30m checks</span>
-            <span class="meta-label">SOURCE</span><span class="meta-value" id="goldSource">Investing.com</span>
+            <span class="meta-label">SOURCE</span><span class="meta-value" id="goldSource">XAUS Gold Data API</span>
           </div>
         </div>
       </div>
@@ -302,7 +302,7 @@
     </section>
   </div>
 
-  <div class="footer">Data source: Yahoo Finance · Public Singapore jet/kerosene sources · Investing.com XAU/USD · TAC Index / Baltic Exchange</div>
+  <div class="footer">Data source: Yahoo Finance · Public Singapore jet/kerosene sources · XAUS Gold Data API XAU/USD · TAC Index / Baltic Exchange</div>
 </div>
 
 <script>
@@ -530,7 +530,7 @@
   function setDatasetStatus(elementId, status) {
     const el = document.getElementById(elementId);
     el.textContent = status || "--";
-    const healthy = ["LIVE", "DELAYED", "INVESTING_PAGE", "LATEST_DAILY_CLOSE", "DAILY_CLOSE"].includes(status);
+    const healthy = ["LIVE", "DELAYED", "INVESTING_PAGE", "LATEST_DAILY_CLOSE", "DAILY_CLOSE", "XAUS_FRESH", "GOLD_API_REALTIME"].includes(status);
     if (!healthy) {
       el.style.color = "#ffd47b";
       el.style.borderColor = "rgba(255, 212, 123, 0.25)";
