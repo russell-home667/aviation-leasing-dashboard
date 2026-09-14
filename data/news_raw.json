@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-14T08:29:27Z",
+  "generated_at": "2026-09-14T08:32:18Z",
   "retention_days": 45,
   "metadata_only": true,
   "stats": {
-    "current_batch_unique": 252,
-    "stored_total": 99,
-    "reuters_discovered_via_bing": 10,
+    "current_batch_unique": 253,
+    "stored_total": 102,
+    "reuters_discovered_via_bing": 11,
     "by_source": {
       "AeroTime": 1,
       "Aviation Week": 1,
@@ -14,11 +14,13 @@
       "Bizcommunity on MSN": 1,
       "Bloomberg": 1,
       "Business Insider": 1,
+      "Business Line": 1,
       "Business Standard": 1,
       "Business Today on MSN": 1,
       "China Daily": 1,
       "Clyde & Co": 1,
       "Devdiscourse": 1,
+      "Financial Times": 1,
       "Finanznachrichten": 2,
       "Firstpost": 1,
       "Flightglobal": 2,
@@ -32,7 +34,7 @@
       "Moneycontrol": 2,
       "Nairametrics": 1,
       "Republic World": 1,
-      "Reuters": 10,
+      "Reuters": 11,
       "Seeking Alpha": 1,
       "The Financial Express": 1,
       "The Globe and Mail": 2,
@@ -46,14 +48,14 @@
       "ch-aviation": 1
     },
     "by_channel": {
-      "bing_news_rss": 43,
+      "bing_news_rss": 45,
       "ishka_aircraft_rss": 9,
       "ishka_airlines_rss": 6,
       "ishka_banks_capital_rss": 5,
       "ishka_latest_rss": 10,
       "ishka_law_rss": 9,
       "ishka_lessors_rss": 7,
-      "reuters_via_bing": 10
+      "reuters_via_bing": 11
     }
   },
   "items": [
@@ -1229,6 +1231,23 @@
       "title": "Aircraft lessor Azorra sees engine issues improving, strong demand for regional jets",
       "source": "Reuters",
       "source_channel": "reuters_via_bing",
+      "published_at": "2026-09-03T05:38:55Z",
+      "published_date": "2026-09-03",
+      "url": "https://www.msn.com/en-us/money/companies/aircraft-lessor-azorra-sees-engine-issues-improving-strong-demand-for-regional-jets/ar-AA2buAVo",
+      "summary": "By Gabriel Araujo SAO JOSE DOS CAMPOS, Brazil, Sept 3 (Reuters) - Aircraft lessor Azorra sees signs that Pratt & Whitney's engine troubles are easing and expects strong demand for smaller, ...",
+      "author": "",
+      "categories_raw": [],
+      "region_raw": "",
+      "discovered_via": "Bing News",
+      "discovery_query": "\"aircraft lessor\"",
+      "rights_mode": "search_result_metadata",
+      "fetched_at": "2026-09-14T08:32:20Z",
+      "id": "ca49cf0c787b43ecea26c6c8"
+    },
+    {
+      "title": "Aircraft lessor Azorra sees engine issues improving, strong demand for regional jets",
+      "source": "Reuters",
+      "source_channel": "reuters_via_bing",
       "published_at": "2026-09-03T05:37:00Z",
       "published_date": "2026-09-03",
       "url": "https://www.reuters.com/business/aircraft-lessor-azorra-sees-engine-issues-improving-strong-demand-regional-jets-2026-09-03/",
@@ -1408,6 +1427,23 @@
       "rights_mode": "search_result_metadata",
       "fetched_at": "2026-09-14T08:27:22Z",
       "id": "56cb99bf4a5750ece707e305"
+    },
+    {
+      "title": "Centre moves to de-risk aircraft leasing, financing",
+      "source": "Business Line",
+      "source_channel": "bing_news_rss",
+      "published_at": "2026-08-28T01:12:00Z",
+      "published_date": "2026-08-28",
+      "url": "https://www.thehindubusinessline.com/economy/logistics/centre-moves-to-de-risk-aircraft-leasing-financing/article71396883.ece",
+      "summary": "As India prepares to induct more than 2,000 aircraft over the next decade, the Centre has begun an exercise to de-risk aircraft leasing and financing for international lessors and financiers by ...",
+      "author": "",
+      "categories_raw": [],
+      "region_raw": "",
+      "discovered_via": "Bing News",
+      "discovery_query": "\"aircraft financing\"",
+      "rights_mode": "search_result_metadata",
+      "fetched_at": "2026-09-14T08:32:22Z",
+      "id": "56ecbe192f0eb06bf8577af2"
     },
     {
       "title": "Aircraft Engine Values And MRO Costs Shift Lessor Strategies",
@@ -1787,6 +1823,23 @@
       "rights_mode": "official_rss_metadata",
       "fetched_at": "2026-09-14T08:26:36Z",
       "id": "01db6849d9fa8e047562fddf"
+    },
+    {
+      "title": "CDB Aviation Delivers Three Airbus A321neos to Jet2",
+      "source": "Financial Times",
+      "source_channel": "bing_news_rss",
+      "published_at": "2026-08-11T17:00:00Z",
+      "published_date": "2026-08-11",
+      "url": "https://markets.ft.com/data/announce/detail?dockey=600-202608171031BIZWIRE_USPRX____20260812_BW570327-1",
+      "summary": "HAMBURG, Germany--(BUSINESS WIRE)--Aug. 17, 2026-- CDB Aviation, a wholly owned Irish subsidiary of China Development Bank Financial Leasing Co., Ltd. (“CDB Leasing”), announced today the completion ...",
+      "author": "",
+      "categories_raw": [],
+      "region_raw": "",
+      "discovered_via": "Bing News",
+      "discovery_query": "\"CDB Aviation\"",
+      "rights_mode": "search_result_metadata",
+      "fetched_at": "2026-09-14T08:32:23Z",
+      "id": "893e36f122a9615f1ab30af3"
     },
     {
       "title": "Should I Pay Cash for My Aircraft?",
