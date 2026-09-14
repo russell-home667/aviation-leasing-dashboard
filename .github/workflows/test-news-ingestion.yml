@@ -2,6 +2,11 @@ name: Test News Ingestion - Step 1
 
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - 'scripts/update_news_raw.py'
+      - 'data/news_sources.json'
+      - '.github/workflows/test-news-ingestion.yml'
 
 permissions:
   contents: write
