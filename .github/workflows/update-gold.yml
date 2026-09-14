@@ -25,8 +25,6 @@ concurrency:
 
 jobs:
   update:
-    # Investing.com intermittently blocks Azure/Linux GitHub runner IPs.
-    # The AI bubble monitor uses macOS runners for this series, so keep the same setup.
     runs-on: macos-latest
 
     steps:
@@ -39,7 +37,7 @@ jobs:
           python-version: '3.12'
 
       - name: Install dependencies
-        run: pip install --disable-pip-version-check curl-cffi beautifulsoup4
+        run: pip install --disable-pip-version-check curl-cffi beautifulsoup4 yfinance==1.7.0
 
       - name: Update XAU/USD
         run: |
