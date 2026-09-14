@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-14T08:47:17Z",
+  "generated_at": "2026-09-14T08:48:06Z",
   "retention_days": 120,
   "metadata_only": true,
   "stats": {
-    "current_batch_unique": 476,
-    "stored_total": 265,
+    "current_batch_unique": 480,
+    "stored_total": 270,
     "reuters_discovered_via_bing": 29,
     "by_source": {
       "ADS Advance": 1,
@@ -23,6 +23,7 @@
       "Business Standard": 1,
       "Business Today on MSN": 1,
       "Business Wire": 1,
+      "Centreforaviation.com": 1,
       "China Daily": 1,
       "Clyde & Co": 1,
       "Devdiscourse": 1,
@@ -40,12 +41,12 @@
       "Ishka Airfinance": 48,
       "JD Supra": 1,
       "Live Mint on MSN": 1,
-      "MSN": 5,
+      "MSN": 8,
       "Mint on MSN": 1,
       "Moneycontrol": 2,
       "Morningstar%2c Inc.": 7,
       "Nairametrics": 1,
-      "Nasdaq": 1,
+      "Nasdaq": 2,
       "PE Hub": 1,
       "Pensacola News Journal": 1,
       "Republic World": 1,
@@ -73,7 +74,7 @@
       "aviationnews_maintenance": 10,
       "aviationnews_people": 9,
       "aviationnews_regulatory": 8,
-      "bing_news_rss": 105,
+      "bing_news_rss": 110,
       "ishka_aircraft_rss": 10,
       "ishka_airlines_rss": 6,
       "ishka_banks_capital_rss": 5,
@@ -4515,6 +4516,23 @@
       "id": "271ef9e1cf7dd80c9d9c9aeb"
     },
     {
+      "title": "ORIX to acquire AerFin",
+      "source": "Centreforaviation.com",
+      "source_channel": "bing_news_rss",
+      "published_at": "2026-08-04T05:34:00Z",
+      "published_date": "2026-08-04",
+      "url": "https://centreforaviation.com/news/orix-to-acquire-aerfin-1368344",
+      "summary": "ORIX Aviation previously worked with AerFin on Turning Rock Partners’ asset backed financing of three A320neo airframes, where AerFin managed teardown, maintenance and parts distribution, while ORIX ...",
+      "author": "",
+      "categories_raw": [],
+      "region_raw": "",
+      "discovered_via": "Bing News",
+      "discovery_query": "\"ORIX Aviation\"",
+      "rights_mode": "search_result_metadata",
+      "fetched_at": "2026-09-14T08:48:25Z",
+      "id": "89088af1629126a110c12fbc"
+    },
+    {
       "title": "Japan’s Orix to buy UK aviation company AerFin",
       "source": "The Star",
       "source_channel": "bing_news_rss",
@@ -4948,6 +4966,23 @@
       "id": "972603d0ff46016fd1d97a97"
     },
     {
+      "title": "Chinese lessor moves DGCA to deregister, repossess four SpiceJet aircraft",
+      "source": "MSN",
+      "source_channel": "bing_news_rss",
+      "published_at": "2026-07-13T16:30:00Z",
+      "published_date": "2026-07-13",
+      "url": "https://www.msn.com/en-in/money/news/chinese-lessor-moves-dgca-to-deregister-repossess-four-spicejet-aircraft/ar-AA27Ql0S",
+      "summary": "New Delhi/Mumbai: A Chinese aircraft and leasing company has written to India’s aviation regulator seeking deregistration of four narrow-bodied Boeing planes of SpiceJet, as it kickstarts the process ...",
+      "author": "",
+      "categories_raw": [],
+      "region_raw": "",
+      "discovered_via": "Bing News",
+      "discovery_query": "aircraft repossession lessor",
+      "rights_mode": "search_result_metadata",
+      "fetched_at": "2026-09-14T08:48:22Z",
+      "id": "347b367cc36ffda9d09bbd81"
+    },
+    {
       "title": "Aviation Capital Group Closes $1.48 Billion Unsecured Facility",
       "source": "AOL",
       "source_channel": "bing_news_rss",
@@ -4999,6 +5034,23 @@
       "id": "47d2456a3e221ed7cb89f1cc"
     },
     {
+      "title": "Here's what happens to a commercial aircraft's market value the moment the airline operating it files for bankruptcy",
+      "source": "MSN",
+      "source_channel": "bing_news_rss",
+      "published_at": "2026-07-06T10:00:00Z",
+      "published_date": "2026-07-06",
+      "url": "https://www.msn.com/en-us/money/companies/here-s-what-happens-to-a-commercial-aircraft-s-market-value-the-moment-the-airline-operating-it-files-for-bankruptcy/ar-AA27mSDz",
+      "summary": "The exact second an airline files for bankruptcy, a fast and brutal price split happens. On paper, the long-term usefulness of an aircraft (called its Base Value) might look totally steady. But in the ...",
+      "author": "",
+      "categories_raw": [],
+      "region_raw": "",
+      "discovered_via": "Bing News",
+      "discovery_query": "airline bankruptcy aircraft leasing",
+      "rights_mode": "search_result_metadata",
+      "fetched_at": "2026-09-14T08:48:21Z",
+      "id": "fb168c1f39d0598ec5e8fefc"
+    },
+    {
       "title": "CDB Aviation Executes Sale and Leaseback for Two Boeing 787-9 Aircraft with Lufthansa Airlines",
       "source": "Yahoo Finance",
       "source_channel": "bing_news_rss",
@@ -5031,6 +5083,23 @@
       "rights_mode": "search_result_metadata",
       "fetched_at": "2026-09-14T08:47:34Z",
       "id": "48249559433b50f66be36da7"
+    },
+    {
+      "title": "AerCap Delivers First New GE-powered Boeing 787-9 Aircraft to Thai Airways",
+      "source": "Nasdaq",
+      "source_channel": "bing_news_rss",
+      "published_at": "2026-06-23T00:00:00Z",
+      "published_date": "2026-06-23",
+      "url": "https://www.nasdaq.com/press-release/aercap-delivers-first-new-ge-powered-boeing-787-9-aircraft-thai-airways-2026-06-23",
+      "summary": "First New GE-powered 787-9 to be inducted into the airline's fleet Chai Eamsiri, THAI Chief Executive Officer, stated, \"We are delighted to welcome our first new GE-powered 787-9 to the fleet, another ...",
+      "author": "",
+      "categories_raw": [],
+      "region_raw": "",
+      "discovered_via": "Bing News",
+      "discovery_query": "AerCap aviation",
+      "rights_mode": "search_result_metadata",
+      "fetched_at": "2026-09-14T08:48:22Z",
+      "id": "4ee48f23585a252d1f0cdbaa"
     },
     {
       "title": "KKR commits additional $1.4bn to aircraft leasing deals with Altavair",
@@ -5116,6 +5185,23 @@
       "rights_mode": "search_result_metadata",
       "fetched_at": "2026-09-14T08:47:30Z",
       "id": "39f79eba03f1e821aa0e5602"
+    },
+    {
+      "title": "BOC Aviation to lease three more Boeing 737-8200 aircraft to Akasa Air",
+      "source": "MSN",
+      "source_channel": "bing_news_rss",
+      "published_at": "2026-05-20T03:54:00Z",
+      "published_date": "2026-05-20",
+      "url": "https://www.msn.com/en-in/news/world/boc-aviation-to-lease-three-more-boeing-737-8200-aircraft-to-akasa-air/ar-AA23E6B1",
+      "summary": "Aircraft leasing company BOC Aviation announced on Wednesday that it has signed an agreement to purchase and lease back three additional Boeing 737-8200 aircraft to Akasa Air. The aircraft, powered by ...",
+      "author": "",
+      "categories_raw": [],
+      "region_raw": "",
+      "discovered_via": "Bing News",
+      "discovery_query": "\"BOC Aviation\"",
+      "rights_mode": "search_result_metadata",
+      "fetched_at": "2026-09-14T08:48:22Z",
+      "id": "06018822e5d401e1f979156d"
     }
   ]
 }

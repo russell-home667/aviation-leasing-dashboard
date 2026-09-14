@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-09-14T08:48:29Z",
+  "overall_status": "fail",
+  "hard_requirements": {
+    "ishka_all_direct_feeds_return_records": true,
+    "aviation_news_online_all_direct_categories_return_records": true,
+    "bing_transport_success_at_least_90pct": true,
+    "known_ishka_baseline_recall_100pct": false,
+    "reuters_discovery_present": true,
+    "flightglobal_discovery_present": true
+  },
+  "failed_requirements": [
+    "known_ishka_baseline_recall_100pct"
+  ],
+  "warnings": [],
+  "known_ishka_recall": {
+    "hits": 8,
+    "expected": 10,
+    "recall": 0.8,
+    "items": [
+      {
+        "published_date": "2026-09-11",
+        "expected_title": "Red Sea Airlines signs SMBC AC lease deal",
+        "found": true,
+        "similarity": 1.0,
+        "matched_title": "Red Sea Airlines signs SMBC AC lease deal",
+        "matched_url": "https://platform.ishkaairfinance.com/Articles/3601106"
+      },
+      {
+        "published_date": "2026-09-11",
+        "expected_title": "ACG hires director trading",
+        "found": true,
+        "similarity": 1.0,
+        "matched_title": "ACG hires director trading",
+        "matched_url": "https://platform.ishkaairfinance.com/Articles/3601107"
+      },
+      {
+        "published_date": "2026-09-11",
+        "expected_title": "Kang transfers to SMFL",
+        "found": false,
+        "similarity": 0.394,
+        "matched_title": null,
+        "matched_url": null
+      },
+      {
+        "published_date": "2026-09-11",
+        "expected_title": "Vietravel Airlines commits to A220 programme",
+        "found": true,
+        "similarity": 1.0,
+        "matched_title": "Vietravel Airlines commits to A220 programme",
+        "matched_url": "https://platform.ishkaairfinance.com/Articles/3601104"
+      },
+      {
+        "published_date": "2026-09-11",
+        "expected_title": "Vietnam Airlines commits to more A350s",
+        "found": true,
+        "similarity": 1.0,
+        "matched_title": "Vietnam Airlines commits to more A350s",
+        "matched_url": "https://platform.ishkaairfinance.com/Articles/3601103"
+      },
+      {
+        "published_date": "2026-09-10",
+        "expected_title": "BOC Aviation provides Avianca delivery financing",
+        "found": true,
+        "similarity": 1.0,
+        "matched_title": "BOC Aviation provides Avianca delivery financing",
+        "matched_url": "https://platform.ishkaairfinance.com/Articles/3601101"
+      },
+      {
+        "published_date": "2026-09-10",
+        "expected_title": "Exclusive: Silverman launches Jigsaw Aviation",
+        "found": true,
+        "similarity": 1.0,
+        "matched_title": "Exclusive: Silverman launches Jigsaw Aviation",
+        "matched_url": "https://platform.ishkaairfinance.com/Articles/3601098"
+      },
+      {
+        "published_date": "2026-09-10",
+        "expected_title": "BDO Ireland launches dedicated aviation unit",
+        "found": false,
+        "similarity": 0.591,
+        "matched_title": null,
+        "matched_url": null
+      },
+      {
+        "published_date": "2026-09-10",
+        "expected_title": "Airlink adds E2s from lessor",
+        "found": true,
+        "similarity": 1.0,
+        "matched_title": "Airlink adds E2s from lessor",
+        "matched_url": "https://platform.ishkaairfinance.com/Articles/3601099"
+      },
+      {
+        "published_date": "2026-09-10",
+        "expected_title": "Qantas Link begins incorporating owned E190s",
+        "found": true,
+        "similarity": 1.0,
+        "matched_title": "Qantas Link begins incorporating owned E190s",
+        "matched_url": "https://platform.ishkaairfinance.com/Articles/3601097"
+      }
+    ]
+  },
+  "source_layer": {
+    "ishka_direct_checks": {
+      "ok": 6,
+      "total": 6
+    },
+    "aviation_news_online_direct_checks": {
+      "ok": 8,
+      "total": 8
+    },
+    "bing_discovery_checks": {
+      "transport_ok": 50,
+      "total": 50,
+      "transport_ratio": 1.0
+    },
+    "stored_source_counts": {
+      "Ishka Airfinance": 48,
+      "Aviation News Online": 83,
+      "Reuters": 29,
+      "Flightglobal": 20
+    },
+    "newest_record_age_days": {
+      "Ishka Airfinance": 0.02,
+      "Aviation News Online": 0.37,
+      "Reuters": 3.88,
+      "Flightglobal": 6.03
+    }
+  }
+}
