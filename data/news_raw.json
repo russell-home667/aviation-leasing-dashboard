@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-14T08:33:17Z",
+  "generated_at": "2026-09-14T08:34:56Z",
   "retention_days": 45,
   "metadata_only": true,
   "stats": {
-    "current_batch_unique": 286,
-    "stored_total": 137,
+    "current_batch_unique": 284,
+    "stored_total": 145,
     "reuters_discovered_via_bing": 11,
     "by_source": {
       "AeroTime": 1,
       "Aerospace and Mechanical Insider on MSN": 1,
-      "Aviation News Online": 28,
+      "Aviation News Online": 36,
       "Aviation Week": 1,
       "Aviation Week Network": 1,
       "Bizcommunity on MSN": 2,
@@ -56,7 +56,7 @@
     "by_channel": {
       "aviationnews_bing_web_finance": 9,
       "aviationnews_bing_web_leasing": 10,
-      "aviationnews_bing_web_lessor": 9,
+      "aviationnews_bing_web_lessor": 17,
       "bing_news_rss": 52,
       "ishka_aircraft_rss": 9,
       "ishka_airlines_rss": 6,
@@ -201,6 +201,23 @@
       "id": "ad6991a8e1c3ce0a9989272d"
     },
     {
+      "title": "GICS - Gazette In Cyber Space - Government Gazettes and Provincial ...",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_bing_web_lessor",
+      "published_at": "2026-09-14T04:39:00Z",
+      "published_date": "2026-09-14",
+      "url": "https://www.gics.co.za/",
+      "summary": "Gazette In Cyber Space gives you online access to the Government gazettes and provincial gazettes of South Africa with all Regulation Gazettes, Legal Notices and Provincial Notices. All notices on the website and in the weekly index email are colour-coded and with the list of notices by departments to quickly see what was published at a glance.",
+      "author": "",
+      "categories_raw": [],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "search_result_metadata",
+      "fetched_at": "2026-09-14T08:34:59Z",
+      "id": "a32ffb2b2ee089bd47a5ca1f"
+    },
+    {
       "title": "Aviation Weather Center",
       "source": "Aviation News Online",
       "source_channel": "aviationnews_bing_web_finance",
@@ -218,6 +235,23 @@
       "id": "f8a0ef8d66fe3091bcb729d9"
     },
     {
+      "title": "FSCA forces four funeral firms to admit unlicensed insurance; millions ...",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_bing_web_lessor",
+      "published_at": "2026-09-14T02:37:00Z",
+      "published_date": "2026-09-14",
+      "url": "https://www.conviction.co.za/fsca-funeral-sector-enforceable-undertakings/",
+      "summary": "The FSCA has taken action against four funeral firms in South Africa for unlicensed insurance, exposing thousands of clients to risk and prompting urgent sector reform.",
+      "author": "",
+      "categories_raw": [],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "search_result_metadata",
+      "fetched_at": "2026-09-14T08:34:59Z",
+      "id": "79d71910c9444ef6e1d85b53"
+    },
+    {
       "title": "Aviation Week - Homepage | Aviation Week",
       "source": "Aviation News Online",
       "source_channel": "aviationnews_bing_web_finance",
@@ -233,6 +267,23 @@
       "rights_mode": "search_result_metadata",
       "fetched_at": "2026-09-14T08:33:19Z",
       "id": "b7108586c6d7c53224222d12"
+    },
+    {
+      "title": "eGazettes - GPW",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_bing_web_lessor",
+      "published_at": "2026-09-14T01:47:00Z",
+      "published_date": "2026-09-14",
+      "url": "https://www.gpwonline.co.za/egazettes/",
+      "summary": "Government Gazettes eGazette View More Provincial Gazettes eGazette View More Legal Gazettes eGazette View More Liquor License Gazettes eGazette View More ACTS ...",
+      "author": "",
+      "categories_raw": [],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "search_result_metadata",
+      "fetched_at": "2026-09-14T08:34:59Z",
+      "id": "046dec704c308b37532b755c"
     },
     {
       "title": "YouTube",
@@ -267,6 +318,40 @@
       "rights_mode": "search_result_metadata",
       "fetched_at": "2026-09-14T08:33:19Z",
       "id": "fe9aa279da804f6aa00622ec"
+    },
+    {
+      "title": "Notices - South African Government",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_bing_web_lessor",
+      "published_at": "2026-09-14T00:21:00Z",
+      "published_date": "2026-09-14",
+      "url": "https://www.gov.za/documents/notices",
+      "summary": "G =Gazette, RG =Regulation Gazette, BN =Board Notice, GeN =General Notice, GoN =Government Notice, P =Proclamation W =Warrant",
+      "author": "",
+      "categories_raw": [],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "search_result_metadata",
+      "fetched_at": "2026-09-14T08:34:59Z",
+      "id": "4e19edd6393ad76ba3d6800b"
+    },
+    {
+      "title": "City shuts down illegal funeral undertaker in Ennerdale",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_bing_web_lessor",
+      "published_at": "2026-09-13T22:27:00Z",
+      "published_date": "2026-09-13",
+      "url": "https://globepost.co.za/2026/05/15/city-shuts-down-illegal-funeral-undertaker-in-ennerdale/",
+      "summary": "The City of Johannesburg has taken decisive action against an illegal funeral undertaker operating in Ennerdale Extension 6 following an inspection on 14 May that uncovered serious public health, safety and regulatory violations. The inspection was conducted with officials from the City, accompanied by the Johannesburg Metropolitan Police Department (JMPD) and the South African Police…",
+      "author": "",
+      "categories_raw": [],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "search_result_metadata",
+      "fetched_at": "2026-09-14T08:34:59Z",
+      "id": "9314de82d80398e7ff6f2ed8"
     },
     {
       "title": "My job: Connecting Ireland's dominance in aircraft leasing with elite football",
@@ -369,6 +454,23 @@
       "rights_mode": "search_result_metadata",
       "fetched_at": "2026-09-14T08:33:19Z",
       "id": "cc27b921ac223631825d1f9e"
+    },
+    {
+      "title": "Southern African Legal Information Institute",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_bing_web_lessor",
+      "published_at": "2026-09-13T10:31:00Z",
+      "published_date": "2026-09-13",
+      "url": "https://www.saflii.org/",
+      "summary": "Please let us know if we are missing one. We are grateful to all the legal practitioners and court officials who help us source judgments every day. The Southern African Legal Information Institute publishes legal information for free public access which comprises mainly of case law from South Africa.",
+      "author": "",
+      "categories_raw": [],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "search_result_metadata",
+      "fetched_at": "2026-09-14T08:34:59Z",
+      "id": "29a06d86b32e767ca0f490ab"
     },
     {
       "title": "NASA Aircraft",
@@ -1227,6 +1329,23 @@
       "id": "83d9487ac34c37ec087a8deb"
     },
     {
+      "title": "City shuts down funeral undertaker following major compliance breaches",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_bing_web_lessor",
+      "published_at": "2026-09-09T15:50:00Z",
+      "published_date": "2026-09-09",
+      "url": "https://joburg.org.za/media_/Newsroom/Pages/2026-News-Articles/City-shuts-down-funeral-undertaker-following-major-compliance-breaches.aspx",
+      "summary": "The City of Johannesburg has shut down an illegal funeral undertaker in Ennerdale Extension 6, Region G, after a joint inspection uncovered multiple contraventions relating to public health, safety, zoning and electricity compliance. The enforcement operation was carried out by City officials, accompanied by the Johannesburg Metropolitan Police Department (JMPD) and the South African Police ...",
+      "author": "",
+      "categories_raw": [],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "search_result_metadata",
+      "fetched_at": "2026-09-14T08:34:59Z",
+      "id": "ff0828b7365724196ac0eb8f"
+    },
+    {
       "title": "AFG buys another A321neo",
       "source": "Ishka Airfinance",
       "source_channel": "ishka_lessors_rss",
@@ -1570,6 +1689,23 @@
       "rights_mode": "search_result_metadata",
       "fetched_at": "2026-09-14T08:30:18Z",
       "id": "4f6f7f23152e25100fd60f0c"
+    },
+    {
+      "title": "Hijacked buildings expose South Africa’s housing and enforcement crisis",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_bing_web_lessor",
+      "published_at": "2026-09-07T07:53:00Z",
+      "published_date": "2026-09-07",
+      "url": "https://themercury.co.za/news/2026-09-07-hijacked-buildings-expose-south-africas-housing-and-enforcement-crisis/",
+      "summary": "For years, hijacked and illegally occupied buildings have remained a stark symbol of South Africa’s housing crisis, urban decay, and weak enforcement, a problem stretching across major cities and provinces. From Johannesburg and Cape Town to eThekwini, buildings intended for residential or commercial use have been unlawfully occupied, with vulnerable residents sometimes paying rent to ...",
+      "author": "",
+      "categories_raw": [],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "search_result_metadata",
+      "fetched_at": "2026-09-14T08:34:59Z",
+      "id": "85de67a45d976653f0c145d5"
     },
     {
       "title": "Industrial and Commercial Bank of China Ltd",
