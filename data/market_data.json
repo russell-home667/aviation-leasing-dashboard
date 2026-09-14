@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-14T22:07:23+08:00",
+  "updated_at": "2026-09-14T14:23:47.400901Z",
   "brent": {
     "name": "Brent Crude",
     "ticker": "BZ=F",
@@ -46879,6 +46879,10 @@
       {
         "date": "2026-09-07",
         "value": 2438.0
+      },
+      {
+        "date": "2026-09-14",
+        "value": 2444.0
       }
     ],
     "source_url": "https://dashboard.tacindex.com/detail?route=BAI00&routeType=basket",
