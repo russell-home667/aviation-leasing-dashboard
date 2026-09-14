@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "checked_at": "2026-09-14T20:58:28Z",
+  "checked_at": "2026-09-14T21:42:12Z",
   "status": "pass",
   "deepseek_configured": true,
   "model": "deepseek-flash",
@@ -11,25 +11,23 @@
   "priority_entity_stories": 61,
   "macro_related_stories": 66,
   "critical_stories": 59,
-  "reused_ai_stories": 214,
-  "pending_before_ai": 2,
-  "ai_submitted": 2,
-  "deepseek_updated": 0,
-  "deepseek_calls": 0,
-  "deepseek_failed_batches": 1,
-  "deepseek_errors": [
-    "batch_1: RuntimeError: ConnectionError: HTTPSConnectionPool(host='api.deepseek.com', port=443): Read timed out.; ConnectionError: HTTPSConnectionPool(host='api.deepseek.com', port=443): Read timed out."
-  ],
-  "fallback_story_count": 158,
-  "deepseek_story_count": 45,
-  "backfill_candidates_remaining_before_run": 162,
+  "reused_ai_stories": 215,
+  "pending_before_ai": 1,
+  "ai_submitted": 1,
+  "deepseek_updated": 1,
+  "deepseek_calls": 1,
+  "deepseek_failed_batches": 0,
+  "deepseek_errors": [],
+  "fallback_story_count": 157,
+  "deepseek_story_count": 46,
+  "backfill_candidates_remaining_before_run": 161,
   "backfill_selected": 12,
   "backfill_updated": 0,
   "backfill_calls": 0,
   "backfill_failed_batches": 1,
   "backfill_errors": [
-    "batch_1: RuntimeError: ConnectionError: HTTPSConnectionPool(host='api.deepseek.com', port=443): Read timed out.; ConnectionError: HTTPSConnectionPool(host='api.deepseek.com', port=443): Read timed out."
+    "batch_1: RuntimeError: ValueError: empty DeepSeek content; ConnectionError: HTTPSConnectionPool(host='api.deepseek.com', port=443): Read timed out."
   ],
-  "archive_fallback_story_count": 162,
-  "archive_deepseek_story_count": 54
+  "archive_fallback_story_count": 161,
+  "archive_deepseek_story_count": 55
 }

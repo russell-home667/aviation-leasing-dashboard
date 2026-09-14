@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-14T20:27:11Z",
+  "generated_at": "2026-09-14T21:26:55Z",
   "model": "deepseek-flash",
   "analysis_mode": "deepseek",
   "categories": [
@@ -15,18 +15,16 @@
   ],
   "stats": {
     "archive_retention_days": 120,
-    "raw_pool_total": 1300,
-    "recent_raw_items": 223,
-    "already_processed_raw_items": 221,
+    "raw_pool_total": 1303,
+    "recent_raw_items": 221,
+    "already_processed_raw_items": 219,
     "new_raw_items": 2,
     "new_preclusters": 2,
-    "deepseek_calls": 0,
-    "deepseek_failed_batches": 1,
-    "deepseek_errors": [
-      "batch_1: RuntimeError: ValueError: empty DeepSeek content; ValueError: empty DeepSeek content"
-    ],
+    "deepseek_calls": 1,
+    "deepseek_failed_batches": 0,
+    "deepseek_errors": [],
     "clusters_submitted": 2,
-    "clusters_retained_or_accounted": 2,
+    "clusters_retained_or_accounted": 1,
     "stories": 216,
     "by_category": {
       "Aircraft & OEM": 37,
@@ -44,6 +42,7 @@
       "Aerospace and Mechanical Insider on MSN": 1,
       "Agence France-Presse": 1,
       "Airline Ratings": 1,
+      "Alternatives Watch": 1,
       "Aviacionline": 1,
       "Aviation News Online": 117,
       "Aviation24.be": 1,
@@ -324,6 +323,46 @@
         "1303e053dd292a47a7c57265"
       ],
       "analysis_mode": "fallback_after_ai_error"
+    },
+    {
+      "id": "f5b60d3e556d1a7046",
+      "title": "Neuberger launches New Bridge AeroFinance, led by Richard Moody",
+      "summary_zh": "",
+      "why_it_matters_zh": "",
+      "category": "Financing & Capital Markets",
+      "importance_score": 57,
+      "region": "Europe",
+      "entities": [
+        "Neuberger Specialty Finance",
+        "New Bridge AeroFinance",
+        "Richard Moody"
+      ],
+      "published_at": "2026-09-14T12:05:00Z",
+      "updated_at": "2026-09-14T10:28:35Z",
+      "primary_source": "Aviation News Online",
+      "primary_url": "https://www.aviationnews-online.com/article/richard-moody-launches-neuberger-specialty-finance",
+      "source_count": 2,
+      "sources": [
+        {
+          "name": "Aviation News Online",
+          "url": "https://www.aviationnews-online.com/article/richard-moody-launches-neuberger-specialty-finance",
+          "published_at": "2026-09-14T00:00:00Z",
+          "source_channel": "aviationnews_finance",
+          "discovered_via": "direct"
+        },
+        {
+          "name": "Alternatives Watch",
+          "url": "https://www.alternativeswatch.com/2026/09/14/neuberger-new-bridge-aerofinance-aviation-finance/",
+          "published_at": "2026-09-14T12:05:00Z",
+          "source_channel": "bing_news_rss",
+          "discovered_via": "Bing News"
+        }
+      ],
+      "raw_ids": [
+        "dce571e9505cd83de840580b",
+        "73ba887f71fc114615d735a8"
+      ],
+      "analysis_mode": "deepseek"
     },
     {
       "id": "0a88509792ab0b7ff8",
@@ -949,38 +988,6 @@
         "b9392e3764a45d6ea0883aaa"
       ],
       "analysis_mode": "fallback_after_ai_error"
-    },
-    {
-      "id": "8aa81457250527c3ea",
-      "title": "Neuberger launches New Bridge AeroFinance, led by Richard Moody",
-      "summary_zh": "",
-      "why_it_matters_zh": "",
-      "category": "Financing & Capital Markets",
-      "importance_score": 57,
-      "region": "Europe",
-      "entities": [
-        "Neuberger Specialty Finance",
-        "New Bridge AeroFinance",
-        "Richard Moody"
-      ],
-      "published_at": "2026-09-14T00:00:00Z",
-      "updated_at": "2026-09-14T10:28:35Z",
-      "primary_source": "Aviation News Online",
-      "primary_url": "https://www.aviationnews-online.com/article/richard-moody-launches-neuberger-specialty-finance",
-      "source_count": 1,
-      "sources": [
-        {
-          "name": "Aviation News Online",
-          "url": "https://www.aviationnews-online.com/article/richard-moody-launches-neuberger-specialty-finance",
-          "published_at": "2026-09-14T00:00:00Z",
-          "source_channel": "aviationnews_finance",
-          "discovered_via": "direct"
-        }
-      ],
-      "raw_ids": [
-        "dce571e9505cd83de840580b"
-      ],
-      "analysis_mode": "deepseek"
     },
     {
       "id": "d5489b9b7404e48035",
