@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 import argparse
+import csv
+import io
 import json
 import re
 import time
@@ -17,8 +19,10 @@ OUT.parent.mkdir(parents=True, exist_ok=True)
 
 PAIR_ID = "68"
 YAHOO_TICKER = "XAUUSD=X"
+STOOQ_SYMBOL = "xauusd"
 INVESTING_URL = "https://www.investing.com/currencies/xau-usd"
 INVESTING_HISTORICAL_URL = "https://www.investing.com/currencies/xau-usd-historical-data"
+STOOQ_URL = "https://stooq.com/q/?s=xauusd"
 REGIONAL_HOSTS = ["https://uk.investing.com", "https://au.investing.com", "https://ca.investing.com"]
 TZ_BJT = ZoneInfo("Asia/Shanghai")
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
@@ -42,7 +46,7 @@ def parse_date(v):
     if v is None:
         return None
     s = str(v).strip()
-    for fmt in ("%Y-%m-%d", "%b %d, %Y", "%m/%d/%Y", "%d/%m/%Y", "%b %d, %y"):
+    for fmt in ("%Y-%m-%d", "%b %d, %Y", "%m/%d/%Y", "%d/%m/%Y", "%b %d, %y", "%Y%m%d"):
         try:
             return datetime.strptime(s, fmt).date().isoformat()
         except Exception:
@@ -75,10 +79,70 @@ def extract_investing_rows(html):
     return out
 
 
+def fetch_stooq_history(full=False):
+    d1 = "19700101" if full else (date.today() - timedelta(days=800)).strftime("%Y%m%d")
+    d2 = date.today().strftime("%Y%m%d")
+    urls = [
+        f"https://stooq.com/q/d/l/?s={STOOQ_SYMBOL}&d1={d1}&d2={d2}&i=d",
+        f"https://stooq.com/q/d/l/?s={STOOQ_SYMBOL}&i=d",
+    ]
+    errors = []
+    for url in urls:
+        try:
+            resp = requests.get(url, headers={"user-agent": UA, "accept": "text/csv,*/*"}, impersonate="chrome", timeout=45)
+            text = resp.text.strip()
+            if resp.status_code != 200:
+                raise RuntimeError(f"HTTP {resp.status_code}")
+            if not text.lower().startswith("date,"):
+                raise RuntimeError(f"unexpected body: {text[:120]!r}")
+            rows = []
+            for item in csv.DictReader(io.StringIO(text)):
+                d = parse_date(item.get("Date"))
+                close = clean_number(item.get("Close"))
+                if not d or close is None or close < 100:
+                    continue
+                rec = {"date": d, "value": round(close, 2)}
+                for col, key in (("Open", "open"), ("High", "high"), ("Low", "low")):
+                    val = clean_number(item.get(col))
+                    if val is not None:
+                        rec[key] = round(val, 2)
+                rows.append(rec)
+            if len(rows) >= 20:
+                print(f"Stooq XAUUSD history rows: {len(rows)}")
+                return rows
+            raise RuntimeError(f"only {len(rows)} valid rows")
+        except Exception as exc:
+            errors.append(f"{url}: {exc}")
+    raise RuntimeError(" | ".join(errors))
+
+
+def fetch_stooq_quote():
+    url = f"https://stooq.com/q/l/?s={STOOQ_SYMBOL}&f=sd2t2ohlcv&h&e=csv"
+    try:
+        resp = requests.get(url, headers={"user-agent": UA, "accept": "text/csv,*/*"}, impersonate="chrome", timeout=20)
+        text = resp.text.strip()
+        if resp.status_code != 200 or not text.lower().startswith("symbol,"):
+            raise RuntimeError(f"HTTP {resp.status_code}; body={text[:120]!r}")
+        items = list(csv.DictReader(io.StringIO(text)))
+        if not items:
+            raise RuntimeError("empty quote CSV")
+        item = items[0]
+        price = clean_number(item.get("Close"))
+        d = parse_date(item.get("Date"))
+        tm = (item.get("Time") or "").strip()
+        if not price or price < 100:
+            raise RuntimeError("invalid price")
+        # Stooq exposes the provider timestamp; retrieval time is stored separately in updated_at_bjt.
+        stamp = f"{d}T{tm}" if d and tm else datetime.now(TZ_BJT).isoformat(timespec="seconds")
+        return round(price, 2), stamp, "STOOQ_QUOTE"
+    except Exception as exc:
+        print(f"Stooq quote warning: {exc}")
+        return None, None, None
+
+
 def fetch_yahoo_history(full=False):
     ticker = yf.Ticker(YAHOO_TICKER)
-    period = "max" if full else "2y"
-    hist = ticker.history(period=period, interval="1d", auto_adjust=False)
+    hist = ticker.history(period="max" if full else "2y", interval="1d", auto_adjust=False)
     if hist is None or hist.empty:
         raise RuntimeError(f"Yahoo {YAHOO_TICKER} returned no daily history")
     rows = []
@@ -95,25 +159,6 @@ def fetch_yahoo_history(full=False):
     if len(rows) < 20:
         raise RuntimeError(f"Yahoo {YAHOO_TICKER} history unexpectedly short: {len(rows)}")
     return rows
-
-
-def fetch_yahoo_quote():
-    ticker = yf.Ticker(YAHOO_TICKER)
-    try:
-        intraday = ticker.history(period="5d", interval="1m", auto_adjust=False, prepost=True)
-        if intraday is not None and not intraday.empty:
-            last = intraday.iloc[-1]
-            price = clean_number(last.get("Close"))
-            if price and price > 100:
-                ts = intraday.index[-1]
-                try:
-                    ts_bjt = ts.tz_convert(TZ_BJT)
-                except Exception:
-                    ts_bjt = datetime.now(TZ_BJT)
-                return round(price, 2), ts_bjt.isoformat(timespec="seconds"), "YAHOO_1M"
-    except Exception as exc:
-        print(f"Yahoo 1m quote warning: {exc}")
-    return None, None, None
 
 
 def investing_headers(host):
@@ -161,12 +206,7 @@ def fetch_investing_recent():
 def fetch_investing_page_quote():
     for host in REGIONAL_HOSTS:
         try:
-            resp = requests.get(
-                host + "/currencies/xau-usd",
-                headers={"user-agent": UA, "accept-language": "en-GB,en;q=0.9"},
-                impersonate="chrome",
-                timeout=15,
-            )
+            resp = requests.get(host + "/currencies/xau-usd", headers={"user-agent": UA}, impersonate="chrome", timeout=15)
             if resp.status_code != 200:
                 continue
             node = BeautifulSoup(resp.text, "html.parser").select_one('[data-test="instrument-price-last"]')
@@ -197,20 +237,28 @@ def main():
     old_rows = existing.get("data", []) if isinstance(existing, dict) else []
     sources = []
     fetched = []
+    want_full = args.full or not old_rows
 
-    # Prefer the same XAU/USD spot definition used by the AI-bubble monitor.
-    # Investing.com is attempted for recent observations, but GitHub-hosted IPs can be blocked.
+    # 1) Same source intended by the AI-bubble monitor.
     try:
         inv_rows, inv_host = fetch_investing_recent()
         fetched.extend(inv_rows)
         sources.append(f"Investing.com ({inv_host})")
         print(f"Investing recent rows: {len(inv_rows)}")
     except Exception as exc:
-        print(f"Investing.com unavailable, using Yahoo XAU/USD fallback: {exc}")
+        print(f"Investing.com unavailable: {exc}")
 
-    # Yahoo XAUUSD=X is the resilient same-instrument fallback and supplies long history.
+    # 2) Same XAU/USD spot instrument from Stooq; never substitute GC=F futures.
     try:
-        yh_rows = fetch_yahoo_history(full=(args.full or not old_rows))
+        stooq_rows = fetch_stooq_history(full=want_full)
+        fetched.extend(stooq_rows)
+        sources.append("Stooq XAUUSD")
+    except Exception as exc:
+        print(f"Stooq XAUUSD history warning: {exc}")
+
+    # 3) Legacy Yahoo XAUUSD=X only if Yahoo still serves it.
+    try:
+        yh_rows = fetch_yahoo_history(full=want_full)
         fetched.extend(yh_rows)
         sources.append("Yahoo Finance XAUUSD=X")
         print(f"Yahoo XAU/USD rows: {len(yh_rows)}")
@@ -223,11 +271,11 @@ def main():
             by_date[row["date"]] = row
     merged = sorted(by_date.values(), key=lambda x: x["date"])
     if not merged:
-        raise RuntimeError("No XAU/USD spot history available from Investing.com or Yahoo Finance")
+        raise RuntimeError("No XAU/USD spot history available from Investing.com, Stooq, or Yahoo Finance")
 
     now_bjt = datetime.now(TZ_BJT)
-    quote_price, quote_ts, quote_status = fetch_yahoo_quote()
-    quote_source = "Yahoo Finance XAUUSD=X"
+    quote_price, quote_ts, quote_status = fetch_stooq_quote()
+    quote_source = "Stooq XAUUSD"
     inv_live, inv_host = fetch_investing_page_quote()
     if inv_live is not None:
         quote_price = inv_live
@@ -247,18 +295,19 @@ def main():
         "instrument_id": PAIR_ID,
         "source": " + ".join(dict.fromkeys(sources)) if sources else "XAU/USD stored history",
         "source_url": INVESTING_URL,
+        "secondary_source_url": STOOQ_URL,
         "historical_source_url": INVESTING_HISTORICAL_URL,
-        "fallback_ticker": YAHOO_TICKER,
         "frequency": "Daily historical series; updater checks every 30 minutes Monday-Saturday",
         "price_field": "XAU/USD spot price",
-        "status": "LIVE" if quote_status in {"INVESTING_PAGE", "YAHOO_1M"} else "DAILY_CLOSE",
-        "history_scope": "XAU/USD spot daily history; no futures substitution and no synthetic weekend/interpolated rows",
+        "status": "LIVE" if quote_status in {"INVESTING_PAGE", "STOOQ_QUOTE"} else "DAILY_CLOSE",
+        "history_scope": "XAU/USD spot daily history; no Gold Futures substitution and no synthetic weekend/interpolated rows",
         "history_start": merged[0]["date"],
         "history_end": merged[-1]["date"],
         "observation_count": len(merged),
         "latest_quote": {
             "price": round(float(quote_price), 2),
             "timestamp": quote_ts,
+            "retrieved_at_bjt": now_bjt.isoformat(timespec="seconds"),
             "quote_status": quote_status,
             "source": quote_source,
             "observation_date": merged[-1]["date"],
