@@ -5,6 +5,7 @@ on:
   push:
     paths:
       - 'scripts/backfill_news_history.py'
+      - 'data/news_sources.json'
       - '.github/workflows/backfill-news-history.yml'
 
 permissions:
