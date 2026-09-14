@@ -6,6 +6,8 @@ on:
     paths:
       - 'scripts/update_news_raw.py'
       - 'scripts/validate_news_coverage.py'
+      - 'scripts/process_news.py'
+      - 'scripts/validate_processed_news.py'
       - 'data/news_sources.json'
       - 'data/news_validation_baseline.json'
       - '.github/workflows/update-news.yml'
@@ -24,6 +26,7 @@ concurrency:
 jobs:
   update-news:
     runs-on: ubuntu-latest
+    timeout-minutes: 35
     steps:
       - name: Checkout repository
         uses: actions/checkout@v6
@@ -51,7 +54,20 @@ jobs:
       - name: Validate source coverage
         run: python scripts/validate_news_coverage.py
 
-      - name: Print coverage summary
+      - name: Process, cluster and classify news
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          DEEPSEEK_MODEL: deepseek-flash
+          NEWS_CURRENT_DAYS: '7'
+          NEWS_ARCHIVE_DAYS: '120'
+          NEWS_MAX_AI_CANDIDATES: '360'
+          NEWS_AI_BATCH_SIZE: '45'
+        run: python scripts/process_news.py
+
+      - name: Validate processed news
+        run: python scripts/validate_processed_news.py
+
+      - name: Print news pipeline summary
         run: |
           python - <<'PY'
           import json
@@ -59,6 +75,8 @@ jobs:
           health = json.loads(Path('data/news_source_health.json').read_text(encoding='utf-8'))
           coverage = json.loads(Path('data/news_coverage.json').read_text(encoding='utf-8'))
           raw = json.loads(Path('data/news_raw.json').read_text(encoding='utf-8'))
+          processed = json.loads(Path('data/news.json').read_text(encoding='utf-8'))
+          status = json.loads(Path('data/news_processing_status.json').read_text(encoding='utf-8'))
           print('Health:', json.dumps(health['summary'], ensure_ascii=False))
           print('Coverage:', json.dumps({
               'status': coverage['overall_status'],
@@ -66,7 +84,16 @@ jobs:
               'failed': coverage['failed_requirements'],
               'warnings': coverage['warnings'],
           }, ensure_ascii=False))
-          print('Stored:', raw['stats']['stored_total'])
+          print('Raw stored:', raw['stats']['stored_total'])
+          print('Processed:', json.dumps({
+              'analysis_mode': processed.get('analysis_mode'),
+              'model': processed.get('model'),
+              'stories': processed.get('stats', {}).get('stories'),
+              'by_category': processed.get('stats', {}).get('by_category'),
+              'deepseek_configured': status.get('deepseek_configured'),
+              'deepseek_calls': status.get('deepseek_calls'),
+              'deepseek_errors': status.get('deepseek_errors'),
+          }, ensure_ascii=False))
           PY
 
       - name: Commit news snapshot
@@ -74,6 +101,9 @@ jobs:
           cp data/news_raw.json /tmp/news_raw.json
           cp data/news_source_health.json /tmp/news_source_health.json
           cp data/news_coverage.json /tmp/news_coverage.json
+          cp data/news.json /tmp/news.json
+          cp data/news_archive.json /tmp/news_archive.json
+          cp data/news_processing_status.json /tmp/news_processing_status.json
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
@@ -84,14 +114,17 @@ jobs:
             cp /tmp/news_raw.json data/news_raw.json
             cp /tmp/news_source_health.json data/news_source_health.json
             cp /tmp/news_coverage.json data/news_coverage.json
-            git add data/news_raw.json data/news_source_health.json data/news_coverage.json
+            cp /tmp/news.json data/news.json
+            cp /tmp/news_archive.json data/news_archive.json
+            cp /tmp/news_processing_status.json data/news_processing_status.json
+            git add data/news_raw.json data/news_source_health.json data/news_coverage.json data/news.json data/news_archive.json data/news_processing_status.json
 
             if git diff --cached --quiet; then
               echo "No news data changes to commit."
               exit 0
             fi
 
-            git commit -m "Update aviation leasing news metadata"
+            git commit -m "Update aviation leasing news pipeline"
             if git push origin HEAD:main; then
               exit 0
             fi
