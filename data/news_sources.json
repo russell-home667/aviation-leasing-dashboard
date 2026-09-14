@@ -50,22 +50,72 @@
       "kind": "rss",
       "url": "https://platform.ishkaairfinance.com/Rss/News?id=1&s=5987&u=0&v=2",
       "rights_mode": "official_rss_metadata"
+    },
+    {
+      "id": "aviationnews_leasing",
+      "name": "Aviation News Online",
+      "kind": "aviationnews_html",
+      "url": "https://www.aviationnews-online.com/category/leasing",
+      "rights_mode": "public_listing_metadata"
+    },
+    {
+      "id": "aviationnews_finance",
+      "name": "Aviation News Online",
+      "kind": "aviationnews_html",
+      "url": "https://www.aviationnews-online.com/category/finance",
+      "rights_mode": "public_listing_metadata"
+    },
+    {
+      "id": "aviationnews_airline",
+      "name": "Aviation News Online",
+      "kind": "aviationnews_html",
+      "url": "https://www.aviationnews-online.com/category/airline",
+      "rights_mode": "public_listing_metadata"
+    },
+    {
+      "id": "aviationnews_engine",
+      "name": "Aviation News Online",
+      "kind": "aviationnews_html",
+      "url": "https://www.aviationnews-online.com/category/engine",
+      "rights_mode": "public_listing_metadata"
+    },
+    {
+      "id": "aviationnews_maintenance",
+      "name": "Aviation News Online",
+      "kind": "aviationnews_html",
+      "url": "https://www.aviationnews-online.com/category/maintenance",
+      "rights_mode": "public_listing_metadata"
+    },
+    {
+      "id": "aviationnews_legal",
+      "name": "Aviation News Online",
+      "kind": "aviationnews_html",
+      "url": "https://www.aviationnews-online.com/category/legal",
+      "rights_mode": "public_listing_metadata"
+    },
+    {
+      "id": "aviationnews_regulatory",
+      "name": "Aviation News Online",
+      "kind": "aviationnews_html",
+      "url": "https://www.aviationnews-online.com/category/regulatory",
+      "rights_mode": "public_listing_metadata"
+    },
+    {
+      "id": "aviationnews_people",
+      "name": "Aviation News Online",
+      "kind": "aviationnews_html",
+      "url": "https://www.aviationnews-online.com/category/people",
+      "rights_mode": "public_listing_metadata"
     }
   ],
   "blocked_direct_sources": [
     {
-      "name": "Aviation News Online",
+      "name": "Aviation News Online legacy category URLs",
       "attempted_urls": [
         "https://aviationnews-online.com/public/category/leasing",
-        "https://aviationnews-online.com/public/category/finance",
-        "https://aviationnews-online.com/public/category/airline",
-        "https://aviationnews-online.com/public/category/engine",
-        "https://aviationnews-online.com/public/category/maintenance",
-        "https://aviationnews-online.com/public/category/legal",
-        "https://aviationnews-online.com/public/category/regulatory",
-        "https://aviationnews-online.com/public/category/people"
+        "https://aviationnews-online.com/public/category/finance"
       ],
-      "reason": "GitHub-hosted runner returned HTTP 403 on 2026-09-14. Do not bypass publisher controls; retain only search-discovered metadata when available."
+      "reason": "Legacy /public/category routes returned HTTP 403 on GitHub-hosted runners; current /category routes are tested separately."
     },
     {
       "name": "FlightGlobal",
@@ -105,9 +155,6 @@
       "\"aircraft values\" lessor",
       "airline bankruptcy aircraft leasing",
       "aircraft repossession lessor",
-      "\"Aviation News Online\" aircraft leasing",
-      "\"Aviation News Online\" aviation finance",
-      "\"Airline Economics\" aircraft leasing",
       "site:flightglobal.com aircraft leasing",
       "site:flightglobal.com aircraft lessor",
       "site:reuters.com aircraft leasing",
