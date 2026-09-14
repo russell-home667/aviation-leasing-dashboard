@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-14T14:42:38Z",
+  "generated_at": "2026-09-14T14:53:27Z",
   "model": "deepseek-flash",
   "analysis_mode": "deepseek",
   "categories": [
@@ -14,20 +14,20 @@
     "Macro & Geopolitics"
   ],
   "stats": {
-    "raw_pool_total": 1289,
+    "raw_pool_total": 1290,
     "recent_raw_items": 217,
-    "already_processed_raw_items": 208,
-    "new_raw_items": 9,
-    "new_preclusters": 9,
+    "already_processed_raw_items": 216,
+    "new_raw_items": 1,
+    "new_preclusters": 1,
     "deepseek_calls": 1,
     "deepseek_failed_batches": 0,
     "deepseek_errors": [],
-    "clusters_submitted": 9,
-    "clusters_retained_or_accounted": 9,
-    "stories": 202,
+    "clusters_submitted": 1,
+    "clusters_retained_or_accounted": 1,
+    "stories": 203,
     "by_category": {
       "Aircraft & OEM": 37,
-      "Airlines & Credit": 78,
+      "Airlines & Credit": 79,
       "Engines & MRO": 14,
       "Financing & Capital Markets": 19,
       "Leasing & Trading": 36,
@@ -56,7 +56,7 @@
       "Mint": 1,
       "Mint on MSN": 2,
       "NHK": 1,
-      "Reuters": 18,
+      "Reuters": 19,
       "Seeking Alpha": 1,
       "Simple Flying on MSN": 1,
       "The Daily Star": 1,
@@ -944,6 +944,34 @@
         "45e769a18428f1da6a698552"
       ],
       "analysis_mode": "fallback_after_ai_error"
+    },
+    {
+      "id": "17ee3f2ab020e19361",
+      "title": "How Anthropic says Claude was used for weapons, spying and cyber operations",
+      "summary_zh": "",
+      "why_it_matters_zh": "",
+      "category": "Airlines & Credit",
+      "importance_score": 55,
+      "region": "Global/Unspecified",
+      "entities": [],
+      "published_at": "2026-09-11T12:24:00Z",
+      "updated_at": "2026-09-14T14:53:27Z",
+      "primary_source": "Reuters",
+      "primary_url": "https://www.reuters.com/world/china/how-anthropic-says-claude-was-used-weapons-spying-cyber-operations-2026-09-11/",
+      "source_count": 1,
+      "sources": [
+        {
+          "name": "Reuters",
+          "url": "https://www.reuters.com/world/china/how-anthropic-says-claude-was-used-weapons-spying-cyber-operations-2026-09-11/",
+          "published_at": "2026-09-11T12:24:00Z",
+          "source_channel": "reuters_via_bing",
+          "discovered_via": "Bing News"
+        }
+      ],
+      "raw_ids": [
+        "e6c8e6b0354a91b2b7d0f7e9"
+      ],
+      "analysis_mode": "core_source_safety_net"
     },
     {
       "id": "99b0a8f0fa596f6a80",

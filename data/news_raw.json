@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-14T14:42:11Z",
+  "generated_at": "2026-09-14T14:53:00Z",
   "retention_days": 120,
   "metadata_only": true,
   "stats": {
-    "current_batch_unique": 561,
-    "stored_total": 1289,
-    "reuters_discovered_via_bing": 32,
+    "current_batch_unique": 562,
+    "stored_total": 1290,
+    "reuters_discovered_via_bing": 33,
     "by_source": {
       "ADS Advance": 1,
       "AFPBB News": 1,
@@ -56,7 +56,7 @@
       "PE Hub": 1,
       "Pensacola News Journal": 1,
       "Republic World": 1,
-      "Reuters": 32,
+      "Reuters": 33,
       "Seeking Alpha": 3,
       "Simple Flying on MSN": 1,
       "The Daily Star": 1,
@@ -101,7 +101,7 @@
       "ishka_oceania_rss": 9,
       "ishka_south_asia_rss": 9,
       "ishka_southeast_asia_rss": 5,
-      "reuters_via_bing": 32
+      "reuters_via_bing": 33
     }
   },
   "items": [
@@ -1315,6 +1315,23 @@
       "rights_mode": "official_rss_metadata",
       "fetched_at": "2026-09-14T08:26:37Z",
       "id": "94473a22281b7e1a79fd83d0"
+    },
+    {
+      "title": "How Anthropic says Claude was used for weapons, spying and cyber operations",
+      "source": "Reuters",
+      "source_channel": "reuters_via_bing",
+      "published_at": "2026-09-11T12:24:00Z",
+      "published_date": "2026-09-11",
+      "url": "https://www.reuters.com/world/china/how-anthropic-says-claude-was-used-weapons-spying-cyber-operations-2026-09-11/",
+      "summary": "Anthropic said in a threat intelligence report on Thursday that several actors had used its Claude AI models for activities ranging from weapons development and cyber operations to surveillance and ...",
+      "author": "",
+      "categories_raw": [],
+      "region_raw": "",
+      "discovered_via": "Bing News",
+      "discovery_query": "site:reuters.com aviation finance aircraft",
+      "rights_mode": "search_result_metadata",
+      "fetched_at": "2026-09-14T14:53:26Z",
+      "id": "e6c8e6b0354a91b2b7d0f7e9"
     },
     {
       "title": "Kang transfers to SMFL",

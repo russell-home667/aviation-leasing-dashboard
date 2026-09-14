@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "checked_at": "2026-09-14T14:42:38Z",
+  "checked_at": "2026-09-14T14:53:27Z",
   "status": "pass",
   "analysis_mode": "deepseek",
   "deepseek_configured": true,
@@ -14,17 +14,17 @@
     "Legal & Regulatory",
     "Macro & Geopolitics"
   ],
-  "raw_pool_total": 1289,
+  "raw_pool_total": 1290,
   "recent_raw_items": 217,
-  "new_raw_items": 9,
-  "new_preclusters": 9,
-  "current_stories": 202,
-  "archive_stories": 209,
+  "new_raw_items": 1,
+  "new_preclusters": 1,
+  "current_stories": 203,
+  "archive_stories": 210,
   "deepseek_calls": 1,
   "deepseek_failed_batches": 0,
   "deepseek_errors": [],
-  "clusters_submitted": 9,
-  "clusters_retained_or_accounted": 9,
-  "fallback_story_count": 177,
+  "clusters_submitted": 1,
+  "clusters_retained_or_accounted": 1,
+  "fallback_story_count": 178,
   "deepseek_story_count": 25
 }
