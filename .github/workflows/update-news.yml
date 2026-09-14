@@ -61,7 +61,7 @@ jobs:
           NEWS_CURRENT_DAYS: '7'
           NEWS_ARCHIVE_DAYS: '120'
           NEWS_MAX_AI_CANDIDATES: '360'
-          NEWS_AI_BATCH_SIZE: '45'
+          NEWS_AI_BATCH_SIZE: '30'
         run: python scripts/process_news.py
 
       - name: Validate processed news
