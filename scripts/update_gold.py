@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 import argparse
+import csv
+import io
 import json
 from datetime import datetime
 from pathlib import Path
@@ -16,6 +18,14 @@ XAUS_HISTORY_URL = "https://xaus.com/api/v1/history"
 XAUS_SPOT_URL = "https://xaus.com/api/v1/spot?compact=1"
 GOLD_API_SPOT_URL = "https://api.gold-api.com/price/XAU"
 
+# Public mirror maintained from the World Bank Commodity Markets (Pink Sheet).
+# Its README explicitly documents that 1960-present values come from the World Bank.
+WORLD_BANK_GOLD_CSV = "https://raw.githubusercontent.com/datasets/gold-prices/main/data/monthly.csv"
+WORLD_BANK_SOURCE_URL = "https://www.worldbank.org/en/research/commodity-markets"
+WORLD_BANK_MIRROR_URL = "https://github.com/datasets/gold-prices"
+WORLD_BANK_START_MONTH = "1990-01"
+WORLD_BANK_END_MONTH = "2021-09"
+
 
 def request_json(url: str, timeout: int = 30):
     headers = {
@@ -27,6 +37,16 @@ def request_json(url: str, timeout: int = 30):
     return r.json()
 
 
+def request_text(url: str, timeout: int = 45):
+    headers = {
+        "User-Agent": "Mozilla/5.0 (compatible; aviation-leasing-dashboard/1.0; personal research)",
+        "Accept": "text/csv,text/plain,*/*",
+    }
+    r = requests.get(url, headers=headers, timeout=timeout)
+    r.raise_for_status()
+    return r.text
+
+
 def load_existing():
     if not OUT.exists():
         return {}
@@ -34,6 +54,50 @@ def load_existing():
         return json.loads(OUT.read_text(encoding="utf-8"))
     except Exception:
         return {}
+
+
+def fetch_world_bank_monthly():
+    """Return World Bank Pink Sheet monthly gold averages for 1990-01 through 2021-09.
+
+    The ingestion endpoint is the datasets/gold-prices public mirror. Its documented
+    source for 1960-present is World Bank Commodity Markets (Pink Sheet). Values are
+    monthly averages in USD per troy ounce. We preserve that frequency explicitly and
+    do not interpolate the data into synthetic daily observations.
+    """
+    text = request_text(WORLD_BANK_GOLD_CSV, 60)
+    reader = csv.DictReader(io.StringIO(text))
+    rows = []
+
+    for rec in reader:
+        ym = str(rec.get("Date") or "").strip()
+        raw = rec.get("Price")
+        if not ym or raw is None:
+            continue
+        if ym < WORLD_BANK_START_MONTH or ym > WORLD_BANK_END_MONTH:
+            continue
+        try:
+            value = float(raw)
+        except (TypeError, ValueError):
+            continue
+        if value <= 100:
+            continue
+        rows.append(
+            {
+                "date": f"{ym}-01",
+                "period": ym,
+                "value": round(value, 2),
+                "frequency": "monthly_average",
+                "source": "World Bank Commodity Markets (Pink Sheet)",
+            }
+        )
+
+    rows.sort(key=lambda x: x["date"])
+    expected_min = (2021 - 1990) * 12 + 9
+    if len(rows) < expected_min:
+        raise RuntimeError(f"World Bank gold history unexpectedly short: {len(rows)} rows")
+    if rows[0]["date"] != "1990-01-01":
+        raise RuntimeError(f"World Bank gold history starts at {rows[0]['date']}, expected 1990-01-01")
+    return rows
 
 
 def fetch_xaus_history():
@@ -51,7 +115,12 @@ def fetch_xaus_history():
             continue
         if close <= 100:
             continue
-        rec = {"date": str(d)[:10], "value": round(close, 2)}
+        rec = {
+            "date": str(d)[:10],
+            "value": round(close, 2),
+            "frequency": "daily",
+            "source": "XAUS Gold Data API",
+        }
         if p.get("h") is not None:
             rec["high"] = round(float(p["h"]), 2)
         if p.get("l") is not None:
@@ -108,12 +177,32 @@ def fetch_live_quote():
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--full", action="store_true", help="Retained for workflow compatibility; XAUS returns its maximum daily history")
-    parser.parse_args()
+    parser.add_argument(
+        "--full",
+        action="store_true",
+        help="Refresh World Bank long history as well as the current XAUS daily history",
+    )
+    args = parser.parse_args()
 
     now_bjt = datetime.now(TZ_BJT)
     existing = load_existing()
     old_rows = existing.get("data", []) if isinstance(existing, dict) else []
+
+    existing_dates = [str(x.get("date"))[:10] for x in old_rows if isinstance(x, dict) and x.get("date")]
+    has_1990_history = bool(existing_dates) and min(existing_dates) <= "1990-01-01"
+
+    world_bank_rows = []
+    world_bank_error = None
+    if args.full or not has_1990_history:
+        try:
+            world_bank_rows = fetch_world_bank_monthly()
+            print(
+                f"World Bank Pink Sheet monthly gold: {len(world_bank_rows)} rows, "
+                f"{world_bank_rows[0]['date']} -> {world_bank_rows[-1]['date']}"
+            )
+        except Exception as exc:
+            world_bank_error = str(exc)
+            print(f"World Bank history warning: {exc}")
 
     history_rows = []
     history_state = {}
@@ -123,10 +212,11 @@ def main():
         print(f"XAUS daily history: {len(history_rows)} rows, {history_rows[0]['date']} -> {history_rows[-1]['date']}")
     except Exception as exc:
         history_error = str(exc)
-        print(f"History warning: {exc}")
+        print(f"XAUS history warning: {exc}")
 
     by_date = {}
-    for row in old_rows + history_rows:
+    # Ordering matters: freshly fetched authoritative segment data override older stored rows.
+    for row in old_rows + world_bank_rows + history_rows:
         if not isinstance(row, dict) or not row.get("date") or row.get("value") is None:
             continue
         try:
@@ -142,7 +232,7 @@ def main():
 
     merged = [by_date[d] for d in sorted(by_date)]
     if not merged:
-        raise RuntimeError("No XAU/USD daily history available")
+        raise RuntimeError("No XAU/USD history available")
 
     try:
         quote = fetch_live_quote()
@@ -154,24 +244,60 @@ def main():
         quote["fallback_reason"] = str(exc)
         print(f"Quote warning: {exc}; preserving prior stored quote")
 
+    coverage_has_world_bank = merged[0]["date"] <= "1990-01-01"
+    combined_source = (
+        "World Bank Pink Sheet + XAUS Gold Data API"
+        if coverage_has_world_bank
+        else "XAUS Gold Data API"
+    )
+
     payload = {
         "name": "Gold Spot / US Dollar",
         "ticker": "XAU/USD",
         "unit": "USD/oz",
         "instrument_type": "spot",
-        "source": "XAUS Gold Data API",
+        "source": combined_source,
         "source_url": "https://xaus.com/api/",
+        "historical_source": "World Bank Commodity Markets (Pink Sheet)",
+        "historical_source_url": WORLD_BANK_SOURCE_URL,
+        "historical_ingest": "datasets/gold-prices mirror of World Bank monthly Gold series",
+        "historical_ingest_url": WORLD_BANK_MIRROR_URL,
+        "current_source": "XAUS Gold Data API",
+        "current_source_url": "https://xaus.com/api/",
         "live_fallback_source": "gold-api.com",
         "live_fallback_url": GOLD_API_SPOT_URL,
-        "frequency": "Daily historical series; updater checks every 30 minutes Monday-Saturday",
-        "price_field": "XAU/USD spot price",
+        "frequency": "Monthly average 1990-01 to 2021-09; daily XAU/USD spot from 2021-09-13 onward; live updater checks every 30 minutes Monday-Saturday",
+        "price_field": "USD per troy ounce; World Bank monthly average for long history, XAUS daily/spot for recent history",
         "status": "LIVE" if quote.get("quote_status") in {"XAUS_FRESH", "GOLD_API_REALTIME"} else "STALE",
-        "history_scope": "Up to five years of XAU/USD daily closes from XAUS; no gold-futures substitution and no synthetic interpolation",
+        "history_scope": "World Bank Pink Sheet monthly gold averages from 1990-01 through 2021-09, then XAUS XAU/USD daily spot history from 2021-09-13 onward; no synthetic interpolation",
+        "history_segments": [
+            {
+                "start": "1990-01-01",
+                "end": "2021-09-01",
+                "frequency": "monthly_average",
+                "source": "World Bank Commodity Markets (Pink Sheet)",
+                "ingest": "datasets/gold-prices mirror",
+            },
+            {
+                "start": "2021-09-13",
+                "end": merged[-1]["date"],
+                "frequency": "daily",
+                "source": "XAUS Gold Data API",
+            },
+        ] if coverage_has_world_bank else [
+            {
+                "start": merged[0]["date"],
+                "end": merged[-1]["date"],
+                "frequency": "daily",
+                "source": "XAUS Gold Data API",
+            }
+        ],
         "history_start": merged[0]["date"],
         "history_end": merged[-1]["date"],
         "observation_count": len(merged),
         "history_data_state": history_state,
         "history_fetch_warning": history_error,
+        "world_bank_fetch_warning": world_bank_error,
         "latest_quote": {
             **quote,
             "retrieved_at_bjt": now_bjt.isoformat(timespec="seconds"),
