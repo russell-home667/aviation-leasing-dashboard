@@ -1,23 +1,21 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-09-14T08:50:44Z",
-  "overall_status": "fail",
+  "checked_at": "2026-09-14T08:57:02Z",
+  "overall_status": "pass",
   "hard_requirements": {
     "ishka_all_direct_feeds_return_records": true,
     "aviation_news_online_all_direct_categories_return_records": true,
     "bing_transport_success_at_least_90pct": true,
-    "known_ishka_baseline_recall_100pct": false,
+    "known_ishka_baseline_recall_100pct": true,
     "reuters_discovery_present": true,
     "flightglobal_discovery_present": true
   },
-  "failed_requirements": [
-    "known_ishka_baseline_recall_100pct"
-  ],
+  "failed_requirements": [],
   "warnings": [],
   "known_ishka_recall": {
-    "hits": 8,
+    "hits": 10,
     "expected": 10,
-    "recall": 0.8,
+    "recall": 1.0,
     "items": [
       {
         "published_date": "2026-09-11",
@@ -38,10 +36,10 @@
       {
         "published_date": "2026-09-11",
         "expected_title": "Kang transfers to SMFL",
-        "found": false,
-        "similarity": 0.394,
-        "matched_title": null,
-        "matched_url": null
+        "found": true,
+        "similarity": 1.0,
+        "matched_title": "Kang transfers to SMFL",
+        "matched_url": "https://platform.ishkaairfinance.com/Articles/3601105"
       },
       {
         "published_date": "2026-09-11",
@@ -78,10 +76,10 @@
       {
         "published_date": "2026-09-10",
         "expected_title": "BDO Ireland launches dedicated aviation unit",
-        "found": false,
-        "similarity": 0.591,
-        "matched_title": null,
-        "matched_url": null
+        "found": true,
+        "similarity": 1.0,
+        "matched_title": "BDO Ireland launches dedicated aviation unit",
+        "matched_url": "https://platform.ishkaairfinance.com/Articles/3601102"
       },
       {
         "published_date": "2026-09-10",
@@ -103,8 +101,8 @@
   },
   "source_layer": {
     "ishka_direct_checks": {
-      "ok": 6,
-      "total": 6
+      "ok": 17,
+      "total": 17
     },
     "aviation_news_online_direct_checks": {
       "ok": 8,
@@ -116,16 +114,16 @@
       "transport_ratio": 1.0
     },
     "stored_source_counts": {
-      "Ishka Airfinance": 48,
-      "Aviation News Online": 762,
+      "Ishka Airfinance": 121,
+      "Aviation News Online": 763,
       "Reuters": 29,
       "Flightglobal": 20
     },
     "newest_record_age_days": {
-      "Ishka Airfinance": 0.02,
+      "Ishka Airfinance": 0.03,
       "Aviation News Online": 0.37,
       "Reuters": 3.88,
-      "Flightglobal": 6.03
+      "Flightglobal": 6.04
     }
   }
 }

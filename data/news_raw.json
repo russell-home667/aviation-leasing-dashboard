@@ -1,18 +1,18 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-14T08:50:23Z",
+  "generated_at": "2026-09-14T08:56:37Z",
   "retention_days": 120,
   "metadata_only": true,
   "stats": {
-    "current_batch_unique": 473,
-    "stored_total": 952,
+    "current_batch_unique": 552,
+    "stored_total": 1026,
     "reuters_discovered_via_bing": 29,
     "by_source": {
       "ADS Advance": 1,
       "AOL": 2,
       "AeroTime": 3,
       "Aerospace and Mechanical Insider on MSN": 1,
-      "Aviation News Online": 762,
+      "Aviation News Online": 763,
       "Aviation Week": 2,
       "Aviation Week Network": 1,
       "Aviation24.be": 1,
@@ -38,7 +38,7 @@
       "Insider Monkey": 1,
       "Investopedia": 1,
       "Irish Examiner on MSN": 1,
-      "Ishka Airfinance": 48,
+      "Ishka Airfinance": 121,
       "JD Supra": 1,
       "Live Mint on MSN": 1,
       "MSN": 8,
@@ -68,7 +68,7 @@
       "ch-aviation": 1
     },
     "by_channel": {
-      "aviationnews_airline": 102,
+      "aviationnews_airline": 103,
       "aviationnews_engine": 78,
       "aviationnews_finance": 123,
       "aviationnews_leasing": 143,
@@ -77,12 +77,23 @@
       "aviationnews_people": 92,
       "aviationnews_regulatory": 80,
       "bing_news_rss": 113,
+      "ishka_africa_rss": 9,
       "ishka_aircraft_rss": 10,
       "ishka_airlines_rss": 6,
       "ishka_banks_capital_rss": 5,
+      "ishka_china_rss": 6,
+      "ishka_cis_rss": 7,
+      "ishka_europe_rss": 2,
       "ishka_latest_rss": 10,
+      "ishka_latin_america_rss": 8,
       "ishka_law_rss": 10,
       "ishka_lessors_rss": 7,
+      "ishka_middle_east_rss": 8,
+      "ishka_north_america_rss": 3,
+      "ishka_northeast_asia_rss": 7,
+      "ishka_oceania_rss": 9,
+      "ishka_south_asia_rss": 9,
+      "ishka_southeast_asia_rss": 5,
       "reuters_via_bing": 29
     }
   },
@@ -321,6 +332,26 @@
       "rights_mode": "public_listing_metadata",
       "fetched_at": "2026-09-14T08:40:19Z",
       "id": "52ac74c46adf9c44b8d360f5"
+    },
+    {
+      "title": "Emirates saw 8.6mn passengers in summer traffic; operates at 93% of pre-crisis capacity",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_airline",
+      "published_at": "2026-09-14T00:00:00Z",
+      "published_date": "2026-09-14",
+      "url": "https://www.aviationnews-online.com/article/emirates-saw-86mn-passengers-in-summer-traffic-operates-at-93-of-pre-crisis-capacity",
+      "summary": "Emirates carried more than 8.6 million passengers between July and August, as the airline recovers from the disruption caused by the Middle East crisis.The airline is currently operating at around 93%...",
+      "author": "Lavanya Ahire",
+      "categories_raw": [
+        "Airline",
+        "Middle East/Africa"
+      ],
+      "region_raw": "Middle East/Africa",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:56:46Z",
+      "id": "3e545c112e8dbaeb109f4c31"
     },
     {
       "title": "Bombardier Global 8000 receives UK approval to land at London City Airport",
@@ -642,6 +673,27 @@
       "rights_mode": "official_rss_metadata",
       "fetched_at": "2026-09-14T08:26:37Z",
       "id": "94473a22281b7e1a79fd83d0"
+    },
+    {
+      "title": "Kang transfers to SMFL",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_europe_rss",
+      "published_at": "2026-09-11T11:21:11Z",
+      "published_date": "2026-09-11",
+      "url": "https://platform.ishkaairfinance.com/Articles/3601105",
+      "summary": "",
+      "author": "Olivier Bonnassies",
+      "categories_raw": [
+        "Europe",
+        "People",
+        "Risk"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T08:56:40Z",
+      "id": "7d975b6435ec79fa40a444e1"
     },
     {
       "title": "Vietravel Airlines commits to A220 programme",
@@ -1416,6 +1468,27 @@
       "id": "b6570e3830b3f0845ecf4718"
     },
     {
+      "title": "BDO Ireland launches dedicated aviation unit",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_europe_rss",
+      "published_at": "2026-09-10T11:23:08Z",
+      "published_date": "2026-09-10",
+      "url": "https://platform.ishkaairfinance.com/Articles/3601102",
+      "summary": "",
+      "author": "Olivier Bonnassies",
+      "categories_raw": [
+        "Europe",
+        "Funds",
+        "Risk"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T08:56:40Z",
+      "id": "38afc50c6fdd85083a8a369a"
+    },
+    {
       "title": "Gabriel Araujo",
       "source": "Reuters",
       "source_channel": "reuters_via_bing",
@@ -2128,6 +2201,27 @@
       "id": "79b177ce42f64c3b438fd03a"
     },
     {
+      "title": "Jennings joins ACG aircraft trading team",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_north_america_rss",
+      "published_at": "2026-09-09T10:19:16Z",
+      "published_date": "2026-09-09",
+      "url": "https://platform.ishkaairfinance.com/Articles/3601091",
+      "summary": "",
+      "author": "Olivier Bonnassies",
+      "categories_raw": [
+        "Lessors",
+        "North America",
+        "People"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T08:56:42Z",
+      "id": "d727782cb59779622ee3e84f"
+    },
+    {
       "title": "Boeing 737 Max deliveries lag in August",
       "source": "Ishka Airfinance",
       "source_channel": "ishka_aircraft_rss",
@@ -2147,6 +2241,27 @@
       "rights_mode": "official_rss_metadata",
       "fetched_at": "2026-09-14T08:26:36Z",
       "id": "f08764051a8c6fed902eb36b"
+    },
+    {
+      "title": "Avianca inks engine financing",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_latin_america_rss",
+      "published_at": "2026-09-09T09:19:10Z",
+      "published_date": "2026-09-09",
+      "url": "https://platform.ishkaairfinance.com/Articles/3601088",
+      "summary": "",
+      "author": "Hugh Davies",
+      "categories_raw": [
+        "Airlines",
+        "Deals",
+        "Latin America"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T08:56:42Z",
+      "id": "4740c013eb6488a29e7251ce"
     },
     {
       "title": "easyJet faces $72 million lawsuit over six Russian-linked Airbus jets",
@@ -2717,6 +2832,27 @@
       "id": "279b7d0156367ade009a15a2"
     },
     {
+      "title": "Air Cairo places A320neo order",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_middle_east_rss",
+      "published_at": "2026-09-08T15:31:41Z",
+      "published_date": "2026-09-08",
+      "url": "https://platform.ishkaairfinance.com/Articles/3601085",
+      "summary": "",
+      "author": "Olivier Bonnassies",
+      "categories_raw": [
+        "Airlines",
+        "Market Overview",
+        "Middle East"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T08:56:40Z",
+      "id": "21cfe5fd60df98a7dc433f9c"
+    },
+    {
       "title": "Smith, Gambrell & Russell hires senior associate",
       "source": "Ishka Airfinance",
       "source_channel": "ishka_law_rss",
@@ -2755,6 +2891,48 @@
       "id": "4c5dd0dc5aeecef2b64d10cc"
     },
     {
+      "title": "Jordan carrier adds A320",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_middle_east_rss",
+      "published_at": "2026-09-08T10:02:57Z",
+      "published_date": "2026-09-08",
+      "url": "https://platform.ishkaairfinance.com/Articles/3601080",
+      "summary": "",
+      "author": "Hugh Davies",
+      "categories_raw": [
+        "Airlines",
+        "Deals",
+        "Middle East"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T08:56:40Z",
+      "id": "b2b4ad3a23e5cd21af663c5c"
+    },
+    {
+      "title": "Qantas, Airbus participate in SAF producer fundraising",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_oceania_rss",
+      "published_at": "2026-09-08T09:30:04Z",
+      "published_date": "2026-09-08",
+      "url": "https://platform.ishkaairfinance.com/Articles/3601078",
+      "summary": "",
+      "author": "Hugh Davies",
+      "categories_raw": [
+        "Airlines",
+        "Market Overview",
+        "Oceania"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T08:56:42Z",
+      "id": "075152e5cb0a1a04743da9eb"
+    },
+    {
       "title": "EasyJet faces $72 million lawsuit over stranded Airbus planes, FT reports",
       "source": "Reuters",
       "source_channel": "reuters_via_bing",
@@ -2770,6 +2948,27 @@
       "rights_mode": "search_result_metadata",
       "fetched_at": "2026-09-14T08:30:18Z",
       "id": "73df53ad1c7ed0ca171de6ff"
+    },
+    {
+      "title": "Etihad leverage to almost double through 2026",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_middle_east_rss",
+      "published_at": "2026-09-08T09:15:23Z",
+      "published_date": "2026-09-08",
+      "url": "https://platform.ishkaairfinance.com/Articles/3601076",
+      "summary": "",
+      "author": "Olivier Bonnassies",
+      "categories_raw": [
+        "Airlines",
+        "Market Overview",
+        "Middle East"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T08:56:40Z",
+      "id": "54abca6f6bbf4f9b5676d80f"
     },
     {
       "title": "Air Cairo orders 15 A320neos",
@@ -3323,6 +3522,27 @@
       "id": "31f91bee341f29cda3eb04b8"
     },
     {
+      "title": "S&P places ACG on positive watch after Itochu deal",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_north_america_rss",
+      "published_at": "2026-09-07T23:14:02Z",
+      "published_date": "2026-09-07",
+      "url": "https://platform.ishkaairfinance.com/Articles/3601074",
+      "summary": "",
+      "author": "Laura Mueller",
+      "categories_raw": [
+        "Deals",
+        "Lessors",
+        "North America"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T08:56:42Z",
+      "id": "41a904e33d30578d95ec91da"
+    },
+    {
       "title": "Willis Lease Finance eyes Asia-Pacific engine repair growth with new Malaysia centre",
       "source": "Reuters",
       "source_channel": "reuters_via_bing",
@@ -3429,6 +3649,69 @@
       "id": "cd4fa4bfe82c80c3e6e6d747"
     },
     {
+      "title": "Ex-Air Astana chief leaves Alatau Air Cargo",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_cis_rss",
+      "published_at": "2026-09-07T10:44:42Z",
+      "published_date": "2026-09-07",
+      "url": "https://platform.ishkaairfinance.com/Articles/3601070",
+      "summary": "",
+      "author": "Olivier Bonnassies",
+      "categories_raw": [
+        "Airlines",
+        "CIS",
+        "People"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T08:56:40Z",
+      "id": "a90616b1497fa12abfd56f08"
+    },
+    {
+      "title": "Analysis: Australian carriers pull ahead of local peer",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_oceania_rss",
+      "published_at": "2026-09-07T10:10:11Z",
+      "published_date": "2026-09-07",
+      "url": "https://platform.ishkaairfinance.com/Articles/3601069",
+      "summary": "",
+      "author": "Hugh Davies",
+      "categories_raw": [
+        "Airlines",
+        "Market Overview",
+        "Oceania"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T08:56:42Z",
+      "id": "92158870dcc19ceae0845d63"
+    },
+    {
+      "title": "Aerdragon places used A320neo",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_china_rss",
+      "published_at": "2026-09-07T09:55:07Z",
+      "published_date": "2026-09-07",
+      "url": "https://platform.ishkaairfinance.com/Articles/3601067",
+      "summary": "With onshore operator",
+      "author": "Dominic Lalk",
+      "categories_raw": [
+        "China",
+        "Deals",
+        "Lessors"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T08:56:41Z",
+      "id": "4be19ac46ccdc61e601e9461"
+    },
+    {
       "title": "Airbus reveals order for eight more A350Fs as maiden flight nears",
       "source": "Flightglobal",
       "source_channel": "bing_news_rss",
@@ -3444,6 +3727,27 @@
       "rights_mode": "search_result_metadata",
       "fetched_at": "2026-09-14T08:47:37Z",
       "id": "23f6a1cb281fc39aa5bced86"
+    },
+    {
+      "title": "Air Moana turns to investors for ATR72-600 financing",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_oceania_rss",
+      "published_at": "2026-09-07T09:33:39Z",
+      "published_date": "2026-09-07",
+      "url": "https://platform.ishkaairfinance.com/Articles/3601065",
+      "summary": "",
+      "author": "Olivier Bonnassies",
+      "categories_raw": [
+        "Airlines",
+        "Funds",
+        "Oceania"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T08:56:42Z",
+      "id": "e3d71977c152cea68dc708de"
     },
     {
       "title": "Air Asia needs fresh financing",
@@ -3858,6 +4162,27 @@
       "id": "1d8aa5e1409aff938e7a01a9"
     },
     {
+      "title": "Rebranded Trinity Airways takes ACG 737 Max 8",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_northeast_asia_rss",
+      "published_at": "2026-09-04T15:58:32Z",
+      "published_date": "2026-09-04",
+      "url": "https://platform.ishkaairfinance.com/Articles/3601063",
+      "summary": "",
+      "author": "Olivier Bonnassies",
+      "categories_raw": [
+        "Airlines",
+        "Deals",
+        "Northeast Asia"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T08:56:41Z",
+      "id": "a2d66f614c8d07214eb35a83"
+    },
+    {
       "title": "P&W to further expand Polish operation with fresh investment",
       "source": "Flightglobal",
       "source_channel": "bing_news_rss",
@@ -3873,6 +4198,27 @@
       "rights_mode": "search_result_metadata",
       "fetched_at": "2026-09-14T08:47:37Z",
       "id": "7535387c55b7088ff85d6d9d"
+    },
+    {
+      "title": "Air Cairo to double fleet by 2029",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_middle_east_rss",
+      "published_at": "2026-09-04T10:55:13Z",
+      "published_date": "2026-09-04",
+      "url": "https://platform.ishkaairfinance.com/Articles/3601062",
+      "summary": "",
+      "author": "Olivier Bonnassies",
+      "categories_raw": [
+        "Airlines",
+        "Market Overview",
+        "Middle East"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T08:56:40Z",
+      "id": "02d46b41bd15ea9a1e42b7e3"
     },
     {
       "title": "Matheson hires associate",
@@ -3894,6 +4240,27 @@
       "rights_mode": "official_rss_metadata",
       "fetched_at": "2026-09-14T08:26:36Z",
       "id": "42e6dee014921adbdb752fd1"
+    },
+    {
+      "title": "JSA agrees A220-300 deals in North America",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_north_america_rss",
+      "published_at": "2026-09-04T10:10:59Z",
+      "published_date": "2026-09-04",
+      "url": "https://platform.ishkaairfinance.com/Articles/3601060",
+      "summary": "Second delivery scheduled for October",
+      "author": "Dominic Lalk",
+      "categories_raw": [
+        "Deals",
+        "Lessors",
+        "North America"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T08:56:42Z",
+      "id": "353a60b64216a563cf8bff2b"
     },
     {
       "title": "IAI’s initial converted A330-300 freighter carries out maiden flight",
@@ -3928,6 +4295,27 @@
       "rights_mode": "search_result_metadata",
       "fetched_at": "2026-09-14T08:27:24Z",
       "id": "0e74847a10476bb59f50d5fb"
+    },
+    {
+      "title": "Spicejet lines up 20 wet- and damp leases",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_south_asia_rss",
+      "published_at": "2026-09-04T08:47:36Z",
+      "published_date": "2026-09-04",
+      "url": "https://platform.ishkaairfinance.com/Articles/3601057",
+      "summary": "After active fleet fell to 11 aircraft",
+      "author": "Dominic Lalk",
+      "categories_raw": [
+        "Airlines",
+        "Deals",
+        "South Asia"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T08:56:41Z",
+      "id": "73dfcc9843f1c25297ab6025"
     },
     {
       "title": "RRFP establishes Tianjin engine leasing platform",
@@ -4745,6 +5133,27 @@
       "id": "ae22585b6ab780cc3e9e2d3f"
     },
     {
+      "title": "What is investor's appetite for Fly91 ATR72-600 orderbook?",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_south_asia_rss",
+      "published_at": "2026-09-03T16:14:43Z",
+      "published_date": "2026-09-03",
+      "url": "https://platform.ishkaairfinance.com/Articles/3601052",
+      "summary": "",
+      "author": "Olivier Bonnassies",
+      "categories_raw": [
+        "Airlines",
+        "Market Overview",
+        "South Asia"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T08:56:41Z",
+      "id": "5bb399f96cb75b5fc1f89f91"
+    },
+    {
       "title": "Behind lessor Azorra’s decision to part-out four A220s",
       "source": "Flightglobal",
       "source_channel": "bing_news_rss",
@@ -4760,6 +5169,28 @@
       "rights_mode": "search_result_metadata",
       "fetched_at": "2026-09-14T08:30:18Z",
       "id": "c8ff5e54aea36cfae57b0c92"
+    },
+    {
+      "title": "CALC cuts funding costs despite fleet expansion",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_china_rss",
+      "published_at": "2026-09-03T09:38:37Z",
+      "published_date": "2026-09-03",
+      "url": "https://platform.ishkaairfinance.com/Articles/3601048",
+      "summary": "As borrowing rate falls below 5%",
+      "author": "Dominic Lalk",
+      "categories_raw": [
+        "China",
+        "Deals",
+        "Funds",
+        "Lessors"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T08:56:41Z",
+      "id": "72971cbfa4a9e6b026ca2a33"
     },
     {
       "title": "Philippine Airlines’ lease liabilities mount",
@@ -4783,6 +5214,27 @@
       "rights_mode": "official_rss_metadata",
       "fetched_at": "2026-09-14T08:26:36Z",
       "id": "564874d59782b46117e2cf03"
+    },
+    {
+      "title": "Abelo completes ATR72-600 delivery programme",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_south_asia_rss",
+      "published_at": "2026-09-03T09:30:13Z",
+      "published_date": "2026-09-03",
+      "url": "https://platform.ishkaairfinance.com/Articles/3601044",
+      "summary": "With Asian regional carrier",
+      "author": "Dominic Lalk",
+      "categories_raw": [
+        "Deals",
+        "Lessors",
+        "South Asia"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T08:56:41Z",
+      "id": "ee4de83ca14f4c33309a5c69"
     },
     {
       "title": "Aircraft lessor Azorra sees engine issues improving, strong demand for regional jets",
@@ -5501,6 +5953,90 @@
       "id": "f2a1ff463638bd7bd9c9c85a"
     },
     {
+      "title": "Kenya Airways names interim CEO",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_africa_rss",
+      "published_at": "2026-09-02T09:38:27Z",
+      "published_date": "2026-09-02",
+      "url": "https://platform.ishkaairfinance.com/Articles/3601036",
+      "summary": "",
+      "author": "Hugh Davies",
+      "categories_raw": [
+        "Africa",
+        "Airlines",
+        "People"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T08:56:40Z",
+      "id": "53ad15ae846f98d6c7bbec06"
+    },
+    {
+      "title": "Alliance raises $24m",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_oceania_rss",
+      "published_at": "2026-09-02T09:33:32Z",
+      "published_date": "2026-09-02",
+      "url": "https://platform.ishkaairfinance.com/Articles/3601035",
+      "summary": "",
+      "author": "Hugh Davies",
+      "categories_raw": [
+        "Airlines",
+        "Deals",
+        "Oceania"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T08:56:42Z",
+      "id": "d2c573c4e8f5653e519dd2b3"
+    },
+    {
+      "title": "CALC delivers new A320neos",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_china_rss",
+      "published_at": "2026-09-02T09:33:25Z",
+      "published_date": "2026-09-02",
+      "url": "https://platform.ishkaairfinance.com/Articles/3601033",
+      "summary": "",
+      "author": "Dominic Lalk",
+      "categories_raw": [
+        "China",
+        "Deals",
+        "Lessors"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T08:56:41Z",
+      "id": "547c8f216a8e17463781b419"
+    },
+    {
+      "title": "Solomon Airlines to return leased A320",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_oceania_rss",
+      "published_at": "2026-09-02T08:56:34Z",
+      "published_date": "2026-09-02",
+      "url": "https://platform.ishkaairfinance.com/Articles/3601032",
+      "summary": "As carrier pivots toward domestic fleet growth",
+      "author": "Dominic Lalk",
+      "categories_raw": [
+        "Deals",
+        "Lessors",
+        "Oceania"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T08:56:42Z",
+      "id": "6c0565ac731edc873d95d91f"
+    },
+    {
       "title": "US considers sanctions on airlines and aircraft lessors over Iran ties",
       "source": "AeroTime",
       "source_channel": "bing_news_rss",
@@ -5964,6 +6500,27 @@
       "id": "0870b7a3d1ef88d357c7d988"
     },
     {
+      "title": "Maldivian launches Dash 8-300 sales",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_south_asia_rss",
+      "published_at": "2026-09-01T10:06:20Z",
+      "published_date": "2026-09-01",
+      "url": "https://platform.ishkaairfinance.com/Articles/3601026",
+      "summary": "",
+      "author": "Hugh Davies",
+      "categories_raw": [
+        "Airlines",
+        "Deals",
+        "South Asia"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T08:56:41Z",
+      "id": "be690f1a1c414dd92a8a1500"
+    },
+    {
       "title": "Jetzero secures senior secured loan",
       "source": "Ishka Airfinance",
       "source_channel": "ishka_aircraft_rss",
@@ -5983,6 +6540,27 @@
       "rights_mode": "official_rss_metadata",
       "fetched_at": "2026-09-14T08:26:36Z",
       "id": "85abebe5fa4cc2c1ab017ed9"
+    },
+    {
+      "title": "Syrian Air adds A320 lift",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_middle_east_rss",
+      "published_at": "2026-09-01T09:35:17Z",
+      "published_date": "2026-09-01",
+      "url": "https://platform.ishkaairfinance.com/Articles/3601024",
+      "summary": "",
+      "author": "Hugh Davies",
+      "categories_raw": [
+        "Airlines",
+        "Deals",
+        "Middle East"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T08:56:40Z",
+      "id": "7cc337b5e27f1f3f0ce893f9"
     },
     {
       "title": "CDB Aviation lifts profit as lease yield jumps",
@@ -6006,6 +6584,97 @@
       "rights_mode": "official_rss_metadata",
       "fetched_at": "2026-09-14T08:26:36Z",
       "id": "ae207035bc5640dbec227876"
+    },
+    {
+      "title": "Spring Airlines remains profitable in Q2",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_china_rss",
+      "published_at": "2026-09-01T08:47:50Z",
+      "published_date": "2026-09-01",
+      "url": "https://platform.ishkaairfinance.com/Articles/3601022",
+      "summary": "Despite fuel cost pressure",
+      "author": "Dominic Lalk",
+      "categories_raw": [
+        "Airlines",
+        "Capital",
+        "China",
+        "Deals",
+        "Funds"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T08:56:41Z",
+      "id": "af787a6a88c1ca544982b70e"
+    },
+    {
+      "title": "CDB Aviation reshapes portfolio",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_china_rss",
+      "published_at": "2026-09-01T08:42:21Z",
+      "published_date": "2026-09-01",
+      "url": "https://platform.ishkaairfinance.com/Articles/3601019",
+      "summary": "Via disposals and new 737 Max deliveries",
+      "author": "Dominic Lalk",
+      "categories_raw": [
+        "China",
+        "Deals",
+        "Funds",
+        "Lessors"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T08:56:41Z",
+      "id": "89b7802c62629e795f241ccf"
+    },
+    {
+      "title": "Jeju Air deploys cash into affiliate debt",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_northeast_asia_rss",
+      "published_at": "2026-09-01T08:42:14Z",
+      "published_date": "2026-09-01",
+      "url": "https://platform.ishkaairfinance.com/Articles/3601020",
+      "summary": "As fleet renewal progresses",
+      "author": "Dominic Lalk",
+      "categories_raw": [
+        "Airlines",
+        "Capital",
+        "Deals",
+        "Funds",
+        "Northeast Asia"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T08:56:41Z",
+      "id": "2ab0f97b23e885827e3af78c"
+    },
+    {
+      "title": "Juneyao stays in the black in H1",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_china_rss",
+      "published_at": "2026-09-01T08:37:45Z",
+      "published_date": "2026-09-01",
+      "url": "https://platform.ishkaairfinance.com/Articles/3601018",
+      "summary": "But fuel costs erase strong Q1 gains",
+      "author": "Dominic Lalk",
+      "categories_raw": [
+        "Airlines",
+        "Capital",
+        "China",
+        "Deals",
+        "Funds"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T08:56:41Z",
+      "id": "9ad4a9d32858c1d9c4d54c45"
     },
     {
       "title": "FAA proposes flight restrictions near Trump Palm Beach airport",
@@ -6352,6 +7021,48 @@
       "id": "cf8c420ab516da1cbb40aed8"
     },
     {
+      "title": "Caribbean carrier leases A320",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_latin_america_rss",
+      "published_at": "2026-08-31T11:43:50Z",
+      "published_date": "2026-08-31",
+      "url": "https://platform.ishkaairfinance.com/Articles/3601016",
+      "summary": "",
+      "author": "Hugh Davies",
+      "categories_raw": [
+        "Airlines",
+        "Deals",
+        "Latin America"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T08:56:42Z",
+      "id": "d04655aecefa71c92ee9ec52"
+    },
+    {
+      "title": "Global Knafaim remarkets A330-300",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_middle_east_rss",
+      "published_at": "2026-08-31T09:47:30Z",
+      "published_date": "2026-08-31",
+      "url": "https://platform.ishkaairfinance.com/Articles/3601015",
+      "summary": "",
+      "author": "Hugh Davies",
+      "categories_raw": [
+        "Deals",
+        "Lessors",
+        "Middle East"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T08:56:40Z",
+      "id": "d03411606c3f0da0d031063d"
+    },
+    {
       "title": "KBRA Releases Research – Aviation ABS Repayment: The Role of Asset Sales",
       "source": "Yahoo Finance",
       "source_channel": "bing_news_rss",
@@ -6418,6 +7129,176 @@
       "rights_mode": "search_result_metadata",
       "fetched_at": "2026-09-14T08:27:22Z",
       "id": "56cb99bf4a5750ece707e305"
+    },
+    {
+      "title": "BNP Paribas promotes Guo",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_southeast_asia_rss",
+      "published_at": "2026-08-28T16:11:55Z",
+      "published_date": "2026-08-28",
+      "url": "https://platform.ishkaairfinance.com/Articles/3601010",
+      "summary": "",
+      "author": "Olivier Bonnassies",
+      "categories_raw": [
+        "People",
+        "Risk",
+        "Southeast Asia"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T08:56:41Z",
+      "id": "3716b2bcefefc46a84310057"
+    },
+    {
+      "title": "Ceiba Intercontinental selects ATR72-600 model",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_africa_rss",
+      "published_at": "2026-08-28T11:11:56Z",
+      "published_date": "2026-08-28",
+      "url": "https://platform.ishkaairfinance.com/Articles/3601008",
+      "summary": "",
+      "author": "Olivier Bonnassies",
+      "categories_raw": [
+        "Africa",
+        "Airlines",
+        "Market Overview"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T08:56:40Z",
+      "id": "e2323ce8ea6b5723b947a9ea"
+    },
+    {
+      "title": "Qantas eyes carbon credits for interim ESG targets",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_oceania_rss",
+      "published_at": "2026-08-28T10:09:35Z",
+      "published_date": "2026-08-28",
+      "url": "https://platform.ishkaairfinance.com/Articles/3601005",
+      "summary": "",
+      "author": "Hugh Davies",
+      "categories_raw": [
+        "Airlines",
+        "Deals",
+        "Oceania"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T08:56:42Z",
+      "id": "c808206739216ee5e574f7ce"
+    },
+    {
+      "title": "Virgin leaves room for leverage increase",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_oceania_rss",
+      "published_at": "2026-08-28T10:06:18Z",
+      "published_date": "2026-08-28",
+      "url": "https://platform.ishkaairfinance.com/Articles/3601004",
+      "summary": "",
+      "author": "Hugh Davies",
+      "categories_raw": [
+        "Airlines",
+        "Deals",
+        "Oceania"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T08:56:42Z",
+      "id": "54a6fe2622a4611018da76b6"
+    },
+    {
+      "title": "Virgin Australia EBIT rises in FY26",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_oceania_rss",
+      "published_at": "2026-08-28T09:44:53Z",
+      "published_date": "2026-08-28",
+      "url": "https://platform.ishkaairfinance.com/Articles/3601003",
+      "summary": "",
+      "author": "Hugh Davies",
+      "categories_raw": [
+        "Airlines",
+        "Market Overview",
+        "Oceania"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T08:56:42Z",
+      "id": "b5cb4004016b35200a07b927"
+    },
+    {
+      "title": "Air New Zealand swings to FY2026 loss",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_oceania_rss",
+      "published_at": "2026-08-28T08:29:16Z",
+      "published_date": "2026-08-28",
+      "url": "https://platform.ishkaairfinance.com/Articles/3601001",
+      "summary": "As fuel crisis outweighs fleet recovery",
+      "author": "Dominic Lalk",
+      "categories_raw": [
+        "Airlines",
+        "Capital",
+        "Funds",
+        "Oceania"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T08:56:42Z",
+      "id": "a61088e4a307e971747f09b3"
+    },
+    {
+      "title": "DAE appoints former Avolon executive to fleet management role",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_middle_east_rss",
+      "published_at": "2026-08-28T08:25:59Z",
+      "published_date": "2026-08-28",
+      "url": "https://platform.ishkaairfinance.com/Articles/3601000",
+      "summary": "Industry veteran joins after almost 12 years at Avolon",
+      "author": "Dominic Lalk",
+      "categories_raw": [
+        "Deals",
+        "Lessors",
+        "Middle East",
+        "People"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T08:56:40Z",
+      "id": "d8e912c56b94b35f3a22a99d"
+    },
+    {
+      "title": "SAEL completes engine SLB in Central Asia",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_cis_rss",
+      "published_at": "2026-08-28T08:23:57Z",
+      "published_date": "2026-08-28",
+      "url": "https://platform.ishkaairfinance.com/Articles/3600999",
+      "summary": "Airline addresses ongoing GTF engine challenges",
+      "author": "Dominic Lalk",
+      "categories_raw": [
+        "CIS",
+        "Deals",
+        "Lessors"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T08:56:40Z",
+      "id": "d66605448293d1d22e175318"
     },
     {
       "title": "Centre moves to de-risk aircraft leasing, financing",
@@ -6555,6 +7436,27 @@
       "id": "918251ac842063e2bf359f90"
     },
     {
+      "title": "Starflyer secures engine deal with ELFC",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_northeast_asia_rss",
+      "published_at": "2026-08-27T09:09:06Z",
+      "published_date": "2026-08-27",
+      "url": "https://platform.ishkaairfinance.com/Articles/3600992",
+      "summary": "Japanese carrier strengthens Leap overhaul cover",
+      "author": "Dominic Lalk",
+      "categories_raw": [
+        "Deals",
+        "Lessors",
+        "Northeast Asia"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T08:56:41Z",
+      "id": "a6e19ddc82417d9302d6bd2d"
+    },
+    {
       "title": "English court upholds Jolco protections",
       "source": "Ishka Airfinance",
       "source_channel": "ishka_law_rss",
@@ -6676,6 +7578,48 @@
       "id": "ff97dbceae5d98b4268b92e3"
     },
     {
+      "title": "Kenya Airways first half loss widens",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_africa_rss",
+      "published_at": "2026-08-26T15:19:24Z",
+      "published_date": "2026-08-26",
+      "url": "https://platform.ishkaairfinance.com/Articles/3600987",
+      "summary": "",
+      "author": "Laura Mueller",
+      "categories_raw": [
+        "Africa",
+        "Airlines",
+        "Funds"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T08:56:40Z",
+      "id": "ec2cf99c035ec9abd2b681b0"
+    },
+    {
+      "title": "Sirius Aviation secures Itochu as new shareholder",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_middle_east_rss",
+      "published_at": "2026-08-26T14:56:43Z",
+      "published_date": "2026-08-26",
+      "url": "https://platform.ishkaairfinance.com/Articles/3600986",
+      "summary": "",
+      "author": "Laura Mueller",
+      "categories_raw": [
+        "Funds",
+        "Lessors",
+        "Middle East"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T08:56:40Z",
+      "id": "1721f240ec18b52b1fe8d941"
+    },
+    {
       "title": "Stephenson Harwood expands in Middle East",
       "source": "Ishka Airfinance",
       "source_channel": "ishka_law_rss",
@@ -6755,6 +7699,141 @@
       "rights_mode": "public_listing_metadata",
       "fetched_at": "2026-09-14T08:48:46Z",
       "id": "9f948bcc65edf977db57dd48"
+    },
+    {
+      "title": "Fly91 raises funds",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_south_asia_rss",
+      "published_at": "2026-08-25T11:26:59Z",
+      "published_date": "2026-08-25",
+      "url": "https://platform.ishkaairfinance.com/Articles/3600971",
+      "summary": "",
+      "author": "Olivier Bonnassies",
+      "categories_raw": [
+        "Airlines",
+        "Funds",
+        "South Asia"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T08:56:41Z",
+      "id": "a4d2fb675ec9000d232ae383"
+    },
+    {
+      "title": "Trinity Airways posts wider interim loss",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_northeast_asia_rss",
+      "published_at": "2026-08-25T09:21:12Z",
+      "published_date": "2026-08-25",
+      "url": "https://platform.ishkaairfinance.com/Articles/3600966",
+      "summary": "Despite 31% revenue growth",
+      "author": "Dominic Lalk",
+      "categories_raw": [
+        "Airlines",
+        "Capital",
+        "Deals",
+        "Funds",
+        "Northeast Asia"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T08:56:41Z",
+      "id": "e5163b530381b36507cc5ef1"
+    },
+    {
+      "title": "Aeromexico to launch share buyback",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_latin_america_rss",
+      "published_at": "2026-08-25T09:15:27Z",
+      "published_date": "2026-08-25",
+      "url": "https://platform.ishkaairfinance.com/Articles/3600963",
+      "summary": "",
+      "author": "Hugh Davies",
+      "categories_raw": [
+        "Airlines",
+        "Deals",
+        "Latin America"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T08:56:42Z",
+      "id": "6d580228238219bd131fcf49"
+    },
+    {
+      "title": "Garuda accelerates fleet recovery",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_southeast_asia_rss",
+      "published_at": "2026-08-25T08:43:19Z",
+      "published_date": "2026-08-25",
+      "url": "https://platform.ishkaairfinance.com/Articles/3600962",
+      "summary": "As Danantara-backed turnaround gains momentum",
+      "author": "Dominic Lalk",
+      "categories_raw": [
+        "Airlines",
+        "Capital",
+        "Deals",
+        "Funds",
+        "Lessors",
+        "Southeast Asia"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T08:56:41Z",
+      "id": "958f712862a6ba2f77250b22"
+    },
+    {
+      "title": "Thai Air Asia swings to Q2 loss as EBITDA collapses",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_southeast_asia_rss",
+      "published_at": "2026-08-25T08:40:04Z",
+      "published_date": "2026-08-25",
+      "url": "https://platform.ishkaairfinance.com/Articles/3600961",
+      "summary": "Eyes aircraft SLBs",
+      "author": "Dominic Lalk",
+      "categories_raw": [
+        "Airlines",
+        "Capital",
+        "Deals",
+        "Funds",
+        "Southeast Asia"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T08:56:41Z",
+      "id": "60048ddbe1e353788876f9e6"
+    },
+    {
+      "title": "Thai Airways profit halves on fuel spike",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_southeast_asia_rss",
+      "published_at": "2026-08-25T08:36:54Z",
+      "published_date": "2026-08-25",
+      "url": "https://platform.ishkaairfinance.com/Articles/3600960",
+      "summary": "Buys out leased 777-300ER, A320 capacity",
+      "author": "Dominic Lalk",
+      "categories_raw": [
+        "Airlines",
+        "Capital",
+        "Deals",
+        "Funds",
+        "Southeast Asia"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T08:56:41Z",
+      "id": "e7131058897cdfeb409357d3"
     },
     {
       "title": "Willis Lease Finance Corporation Closes Transaction to Acquire Commercial Aircraft and Aircraft Engine Portfolio",
@@ -6931,6 +8010,73 @@
       "id": "5033e5b851933f3a5b6e6b4a"
     },
     {
+      "title": "MACH OE acquires 737 Max 9s",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_northeast_asia_rss",
+      "published_at": "2026-08-24T09:06:46Z",
+      "published_date": "2026-08-24",
+      "url": "https://platform.ishkaairfinance.com/Articles/3600957",
+      "summary": "With DBJ as anchor investor",
+      "author": "Dominic Lalk",
+      "categories_raw": [
+        "Capital",
+        "Deals",
+        "Funds",
+        "Northeast Asia"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T08:56:41Z",
+      "id": "83c6f60d17bf046f114e6707"
+    },
+    {
+      "title": "Philippine Airlines swings to H1 loss amid fuel cost surge",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_southeast_asia_rss",
+      "published_at": "2026-08-24T09:03:20Z",
+      "published_date": "2026-08-24",
+      "url": "https://platform.ishkaairfinance.com/Articles/3600956",
+      "summary": "But adds to fleet and leases",
+      "author": "Dominic Lalk",
+      "categories_raw": [
+        "Airlines",
+        "Capital",
+        "Deals",
+        "Funds",
+        "Southeast Asia"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T08:56:41Z",
+      "id": "e584e9c543fad5fa5bb5cbc8"
+    },
+    {
+      "title": "NCLT reignites Spicejet insolvency petitions",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_south_asia_rss",
+      "published_at": "2026-08-24T09:00:25Z",
+      "published_date": "2026-08-24",
+      "url": "https://platform.ishkaairfinance.com/Articles/3600954",
+      "summary": "Could be first case to test India's new Cape Town protections",
+      "author": "Dominic Lalk",
+      "categories_raw": [
+        "Deals",
+        "Funds",
+        "Risk",
+        "South Asia"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T08:56:41Z",
+      "id": "b02d49d24b88569618d0e914"
+    },
+    {
       "title": "Textron Aviation names Brian Rohloff CEO as current chief retires",
       "source": "Aviation News Online",
       "source_channel": "aviationnews_people",
@@ -7070,6 +8216,51 @@
       "rights_mode": "public_listing_metadata",
       "fetched_at": "2026-09-14T08:49:44Z",
       "id": "1f1b805aa3892b07f76a38ab"
+    },
+    {
+      "title": "Abra Group posts sharp EBITDA decline",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_latin_america_rss",
+      "published_at": "2026-08-21T09:38:34Z",
+      "published_date": "2026-08-21",
+      "url": "https://platform.ishkaairfinance.com/Articles/3600950",
+      "summary": "",
+      "author": "Hugh Davies",
+      "categories_raw": [
+        "Airlines",
+        "Latin America",
+        "Market Overview"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T08:56:42Z",
+      "id": "c728fcf2ae285e2d713f2433"
+    },
+    {
+      "title": "Starlux discloses gain on first A330neo SLB",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_northeast_asia_rss",
+      "published_at": "2026-08-21T09:14:53Z",
+      "published_date": "2026-08-21",
+      "url": "https://platform.ishkaairfinance.com/Articles/3600948",
+      "summary": "Takes delivery of additional A350-1000",
+      "author": "Dominic Lalk",
+      "categories_raw": [
+        "Airlines",
+        "Capital",
+        "Deals",
+        "Funds",
+        "Lessors",
+        "Northeast Asia"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T08:56:41Z",
+      "id": "0f0d97a3b3791fc91536319d"
     },
     {
       "title": "WFW flags aviation dispute developments",
@@ -7338,6 +8529,27 @@
       "rights_mode": "search_result_metadata",
       "fetched_at": "2026-09-14T08:27:21Z",
       "id": "4469168ca20a899165eee009"
+    },
+    {
+      "title": "AFG places A320 in North Africa",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_africa_rss",
+      "published_at": "2026-08-20T10:48:15Z",
+      "published_date": "2026-08-20",
+      "url": "https://platform.ishkaairfinance.com/Articles/3600943",
+      "summary": "",
+      "author": "Hugh Davies",
+      "categories_raw": [
+        "Africa",
+        "Deals",
+        "Lessors"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T08:56:40Z",
+      "id": "2f0f6d422c9b85114ff33bc8"
     },
     {
       "title": "BOC Aviation H1 Profit Rises, Passenger Traffic Growth Slows; Sees Demand Growth Ahead",
@@ -7879,6 +9091,27 @@
       "id": "6169a277aad6709ea5e6c9ff"
     },
     {
+      "title": "Japanese investors close Neo financings for BA",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_northeast_asia_rss",
+      "published_at": "2026-08-18T14:59:25Z",
+      "published_date": "2026-08-18",
+      "url": "https://platform.ishkaairfinance.com/Articles/3600929",
+      "summary": "",
+      "author": "Olivier Bonnassies",
+      "categories_raw": [
+        "Funds",
+        "Northeast Asia",
+        "Risk"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T08:56:41Z",
+      "id": "8906fe13d3b62e0722bfd7dc"
+    },
+    {
       "title": "Aviation Capital Group Delivers First of Four Airbus A321neo Aircraft to Wizz Air as part of a New SLB Mandate",
       "source": "Yahoo Finance",
       "source_channel": "bing_news_rss",
@@ -8293,6 +9526,48 @@
       "id": "18b52c18fd3456ee70c8939b"
     },
     {
+      "title": "SAA shuffles leadership",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_africa_rss",
+      "published_at": "2026-08-17T10:12:06Z",
+      "published_date": "2026-08-17",
+      "url": "https://platform.ishkaairfinance.com/Articles/3600909",
+      "summary": "",
+      "author": "Hugh Davies",
+      "categories_raw": [
+        "Africa",
+        "Airlines",
+        "People"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T08:56:40Z",
+      "id": "87688e817557ac4db208516f"
+    },
+    {
+      "title": "Debt maturity headroom gives Azul fleet flexibility",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_latin_america_rss",
+      "published_at": "2026-08-17T10:12:06Z",
+      "published_date": "2026-08-17",
+      "url": "https://platform.ishkaairfinance.com/Articles/3600910",
+      "summary": "",
+      "author": "Hugh Davies",
+      "categories_raw": [
+        "Airlines",
+        "Latin America",
+        "Market Overview"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T08:56:42Z",
+      "id": "3e3a2be9f5b74379563667cb"
+    },
+    {
       "title": "CDB Aviation Delivers Three Airbus A321neos to Jet2",
       "source": "Yahoo Finance",
       "source_channel": "bing_news_rss",
@@ -8589,6 +9864,69 @@
       "rights_mode": "search_result_metadata",
       "fetched_at": "2026-09-14T08:27:20Z",
       "id": "51b02787474b9a9e7771cec6"
+    },
+    {
+      "title": "Fehlauer becomes Gol chief after loyalty stint",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_latin_america_rss",
+      "published_at": "2026-08-14T10:54:34Z",
+      "published_date": "2026-08-14",
+      "url": "https://platform.ishkaairfinance.com/Articles/3600905",
+      "summary": "",
+      "author": "Laura Mueller",
+      "categories_raw": [
+        "Airlines",
+        "Latin America",
+        "People"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T08:56:42Z",
+      "id": "c760b76d18dc23b7bd5fef3d"
+    },
+    {
+      "title": "Gol secures MRO financing facility",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_latin_america_rss",
+      "published_at": "2026-08-14T10:28:12Z",
+      "published_date": "2026-08-14",
+      "url": "https://platform.ishkaairfinance.com/Articles/3600903",
+      "summary": "",
+      "author": "Hugh Davies",
+      "categories_raw": [
+        "Airlines",
+        "Deals",
+        "Latin America"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T08:56:42Z",
+      "id": "f4714e62b263c9361176cf42"
+    },
+    {
+      "title": "Azul EBITDA sinks in Q2",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_latin_america_rss",
+      "published_at": "2026-08-14T10:28:12Z",
+      "published_date": "2026-08-14",
+      "url": "https://platform.ishkaairfinance.com/Articles/3600904",
+      "summary": "",
+      "author": "Hugh Davies",
+      "categories_raw": [
+        "Airlines",
+        "Latin America",
+        "Market Overview"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T08:56:42Z",
+      "id": "cc677ce2969529454ef578d4"
     },
     {
       "title": "Avolon Agrees Sale and Leaseback of Seven Boeing 737-8200 Aircraft With Akasa Air",
@@ -9274,6 +10612,27 @@
       "rights_mode": "public_listing_metadata",
       "fetched_at": "2026-09-14T08:48:47Z",
       "id": "ee3868e0ac9263c5015fb691"
+    },
+    {
+      "title": "Air Astana expects no GTF groundings in 2027",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_cis_rss",
+      "published_at": "2026-08-12T09:21:00Z",
+      "published_date": "2026-08-12",
+      "url": "https://platform.ishkaairfinance.com/Articles/3600888",
+      "summary": "Also lets fuel hedges unwind",
+      "author": "Dominic Lalk",
+      "categories_raw": [
+        "Airlines",
+        "CIS",
+        "Funds"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T08:56:40Z",
+      "id": "60ee1a4b699beb2d233f3d48"
     },
     {
       "title": "Lessors account for half of Max deliveries in July",
@@ -10070,6 +11429,27 @@
       "id": "ae4777622f75b1cfafc99f73"
     },
     {
+      "title": "Air India, Indigo install veteran airline leaders",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_south_asia_rss",
+      "published_at": "2026-08-06T08:30:17Z",
+      "published_date": "2026-08-06",
+      "url": "https://platform.ishkaairfinance.com/Articles/3600830",
+      "summary": "As industry headwinds mount",
+      "author": "Dominic Lalk",
+      "categories_raw": [
+        "Airlines",
+        "Deals",
+        "South Asia"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T08:56:41Z",
+      "id": "097a3c4dd259bac7015fa0f8"
+    },
+    {
       "title": "Wizz Air swings to €198m ($229m) loss as fuel costs rise",
       "source": "Aviation News Online",
       "source_channel": "aviationnews_finance",
@@ -10339,6 +11719,27 @@
       "rights_mode": "official_rss_metadata",
       "fetched_at": "2026-09-14T08:26:36Z",
       "id": "6e836bc39560067557adddc0"
+    },
+    {
+      "title": "Air Astana expansion offsets engine-related cost pressures",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_cis_rss",
+      "published_at": "2026-08-05T09:08:27Z",
+      "published_date": "2026-08-05",
+      "url": "https://platform.ishkaairfinance.com/Articles/3600815",
+      "summary": "Interim EBITDAR drops 10%, though",
+      "author": "Dominic Lalk",
+      "categories_raw": [
+        "Airlines",
+        "CIS",
+        "Funds"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T08:56:40Z",
+      "id": "415b99a48cd5823f049c00ab"
     },
     {
       "title": "Short sellers turn more bearish on European airlines, Citi says",
@@ -11075,6 +12476,27 @@
       "id": "22c6226d6e77438066a103e1"
     },
     {
+      "title": "Indigo parks older aircraft as fuel bites",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_south_asia_rss",
+      "published_at": "2026-07-31T08:21:22Z",
+      "published_date": "2026-07-31",
+      "url": "https://platform.ishkaairfinance.com/Articles/3600778",
+      "summary": "Has also returned most of its damp leases",
+      "author": "Dominic Lalk",
+      "categories_raw": [
+        "Airlines",
+        "Funds",
+        "South Asia"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T08:56:41Z",
+      "id": "4cc16dde3ac4d1475335bd52"
+    },
+    {
       "title": "NTSB says Bering Air Cessna 208B crash was due to excess weight and improper airspeed management",
       "source": "Aviation News Online",
       "source_channel": "aviationnews_regulatory",
@@ -11175,6 +12597,27 @@
       "rights_mode": "public_listing_metadata",
       "fetched_at": "2026-09-14T08:49:13Z",
       "id": "c7eb5502e74226ffc5230051"
+    },
+    {
+      "title": "US-Bangla to lease Max aircraft from BOC Aviation",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_south_asia_rss",
+      "published_at": "2026-07-30T15:25:52Z",
+      "published_date": "2026-07-30",
+      "url": "https://platform.ishkaairfinance.com/Articles/3600776",
+      "summary": "",
+      "author": "Olivier Bonnassies",
+      "categories_raw": [
+        "Airlines",
+        "Deals",
+        "South Asia"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T08:56:41Z",
+      "id": "58a7df34bbd1aca0f783282c"
     },
     {
       "title": "Restructuring outcomes remain uneven for creditors",
@@ -11502,6 +12945,27 @@
       "rights_mode": "official_rss_metadata",
       "fetched_at": "2026-09-14T08:47:18Z",
       "id": "795f1a3fd1c177d82ab3691f"
+    },
+    {
+      "title": "Air Algerie takes ex-Gol Max 8s",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_africa_rss",
+      "published_at": "2026-07-29T14:31:14Z",
+      "published_date": "2026-07-29",
+      "url": "https://platform.ishkaairfinance.com/Articles/3600755",
+      "summary": "",
+      "author": "Olivier Bonnassies",
+      "categories_raw": [
+        "Africa",
+        "Airlines",
+        "Deals"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T08:56:40Z",
+      "id": "41de100b35a2ed6b0e146754"
     },
     {
       "title": "AerCap Holdings N.V. Announces Filing of Interim Financial Report for the Second Quarter of 2026",
@@ -12046,6 +13510,50 @@
       "id": "eaf7017f05d840bf9b75401a"
     },
     {
+      "title": "AIP Capital agrees new 737 Max leases in Central Asia",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_cis_rss",
+      "published_at": "2026-07-27T09:07:42Z",
+      "published_date": "2026-07-27",
+      "url": "https://platform.ishkaairfinance.com/Articles/3600723",
+      "summary": "For deliveries in 2027",
+      "author": "Dominic Lalk",
+      "categories_raw": [
+        "CIS",
+        "Capital",
+        "Deals",
+        "Funds",
+        "Lessors"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T08:56:40Z",
+      "id": "cbd3559ddcaaca48b1f54ff6"
+    },
+    {
+      "title": "DAE starts new 737 Max mandate in Central Asia",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_cis_rss",
+      "published_at": "2026-07-27T09:05:19Z",
+      "published_date": "2026-07-27",
+      "url": "https://platform.ishkaairfinance.com/Articles/3600720",
+      "summary": "Lease with flag carrier",
+      "author": "Dominic Lalk",
+      "categories_raw": [
+        "CIS",
+        "Deals",
+        "Lessors"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T08:56:40Z",
+      "id": "e5715c2b6c3b6eefa0d18f0e"
+    },
+    {
       "title": "Rostec plans airline consolidation as Russia’s aviation pressures mount",
       "source": "Aviation News Online",
       "source_channel": "aviationnews_leasing",
@@ -12087,6 +13595,27 @@
       "rights_mode": "public_listing_metadata",
       "fetched_at": "2026-09-14T08:50:03Z",
       "id": "3ca0820729d347b371f63b7d"
+    },
+    {
+      "title": "Rwandair leases A330-200",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_africa_rss",
+      "published_at": "2026-07-24T09:58:00Z",
+      "published_date": "2026-07-24",
+      "url": "https://platform.ishkaairfinance.com/Articles/3600707",
+      "summary": "",
+      "author": "Olivier Bonnassies",
+      "categories_raw": [
+        "Africa",
+        "Airlines",
+        "Deals"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T08:56:40Z",
+      "id": "35fd48b140565e188fa7a12f"
     },
     {
       "title": "SIA Engineering Q1 profit slips on JV investment costs",
@@ -12423,6 +13952,27 @@
       "rights_mode": "public_listing_metadata",
       "fetched_at": "2026-09-14T08:48:51Z",
       "id": "b3fc906a7b120cb31b778308"
+    },
+    {
+      "title": "SMBC AC places A321XLRs",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_africa_rss",
+      "published_at": "2026-07-22T09:01:33Z",
+      "published_date": "2026-07-22",
+      "url": "https://platform.ishkaairfinance.com/Articles/3600684",
+      "summary": "With Indian Ocean carrier",
+      "author": "Dominic Lalk",
+      "categories_raw": [
+        "Africa",
+        "Deals",
+        "Lessors"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T08:56:40Z",
+      "id": "af2704deed33934911d54e00"
     },
     {
       "title": "Pratt & Whitney remains committed to geared architecture for GTF Gen 2 with 2040 timeframe",
@@ -13845,6 +15395,27 @@
       "rights_mode": "public_listing_metadata",
       "fetched_at": "2026-09-14T08:50:17Z",
       "id": "9c004fa2b175e654b9e81882"
+    },
+    {
+      "title": "CDB Aviation completes Ethiopian mandate",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_africa_rss",
+      "published_at": "2026-07-15T08:31:49Z",
+      "published_date": "2026-07-15",
+      "url": "https://platform.ishkaairfinance.com/Articles/3600622",
+      "summary": "",
+      "author": "Hugh Davies",
+      "categories_raw": [
+        "Africa",
+        "Airlines",
+        "Deals"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T08:56:40Z",
+      "id": "241a8a22ad12960ce2b123b7"
     },
     {
       "title": "Willis Lease to acquire portfolio of 12 aircraft and 13 engines",
@@ -15991,6 +17562,27 @@
       "rights_mode": "public_listing_metadata",
       "fetched_at": "2026-09-14T08:48:56Z",
       "id": "f9b1d56c273b5e93f4fd79ad"
+    },
+    {
+      "title": "Aercap begins new A321neo mandate",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_cis_rss",
+      "published_at": "2026-06-26T10:56:58Z",
+      "published_date": "2026-06-26",
+      "url": "https://platform.ishkaairfinance.com/Articles/3600468",
+      "summary": "",
+      "author": "Hugh Davies",
+      "categories_raw": [
+        "Airlines",
+        "CIS",
+        "Deals"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T08:56:40Z",
+      "id": "145645b05c742ee514fc2381"
     },
     {
       "title": "Star Alliance: Heathrow expansion must be affordable",
