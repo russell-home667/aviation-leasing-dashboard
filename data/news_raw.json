@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "generated_at": null,
+  "retention_days": 45,
+  "metadata_only": true,
+  "stats": {
+    "current_batch_unique": 0,
+    "stored_total": 0,
+    "reuters_discovered_via_bing": 0,
+    "by_source": {},
+    "by_channel": {}
+  },
+  "items": []
+}
