@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "step": 4,
+  "status": "installed",
+  "homepage_sections": ["Aircraft Leasing News Feed", "Critical Leasing News"],
+  "full_page": "news.html"
+}
