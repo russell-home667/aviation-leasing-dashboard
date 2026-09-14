@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-09-14T16:28:32Z",
+  "checked_at": "2026-09-14T17:26:25Z",
   "overall_status": "pass",
   "hard_requirements": {
     "ishka_all_direct_feeds_return_records": true,
@@ -114,16 +114,16 @@
       "transport_ratio": 1.0
     },
     "stored_source_counts": {
-      "Ishka Airfinance": 127,
+      "Ishka Airfinance": 128,
       "Aviation News Online": 999,
-      "Reuters": 33,
+      "Reuters": 35,
       "Flightglobal": 20
     },
     "newest_record_age_days": {
-      "Ishka Airfinance": 0.04,
-      "Aviation News Online": 0.69,
-      "Reuters": 0.53,
-      "Flightglobal": 6.35
+      "Ishka Airfinance": 0.01,
+      "Aviation News Online": 0.73,
+      "Reuters": 0.3,
+      "Flightglobal": 6.39
     }
   }
 }

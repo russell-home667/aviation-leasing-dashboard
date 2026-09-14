@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-14T16:28:33Z",
+  "generated_at": "2026-09-14T17:26:25Z",
   "model": "deepseek-flash",
-  "analysis_mode": "incremental_no_new_items",
+  "analysis_mode": "deepseek",
   "categories": [
     "Leasing & Trading",
     "Aircraft & OEM",
@@ -15,20 +15,20 @@
   ],
   "stats": {
     "archive_retention_days": 120,
-    "raw_pool_total": 1291,
-    "recent_raw_items": 218,
-    "already_processed_raw_items": 218,
-    "new_raw_items": 0,
-    "new_preclusters": 0,
-    "deepseek_calls": 0,
+    "raw_pool_total": 1295,
+    "recent_raw_items": 220,
+    "already_processed_raw_items": 217,
+    "new_raw_items": 3,
+    "new_preclusters": 3,
+    "deepseek_calls": 1,
     "deepseek_failed_batches": 0,
     "deepseek_errors": [],
-    "clusters_submitted": 0,
-    "clusters_retained_or_accounted": 0,
-    "stories": 211,
+    "clusters_submitted": 3,
+    "clusters_retained_or_accounted": 3,
+    "stories": 213,
     "by_category": {
       "Aircraft & OEM": 37,
-      "Airlines & Credit": 81,
+      "Airlines & Credit": 83,
       "Engines & MRO": 15,
       "Financing & Capital Markets": 21,
       "Leasing & Trading": 39,
@@ -53,11 +53,11 @@
       "Flightglobal": 5,
       "Global Legal Chronicle": 1,
       "Irish Examiner on MSN": 1,
-      "Ishka Airfinance": 48,
+      "Ishka Airfinance": 49,
       "Mint": 1,
       "Mint on MSN": 2,
       "NHK": 1,
-      "Reuters": 19,
+      "Reuters": 21,
       "Seeking Alpha": 1,
       "Simple Flying on MSN": 1,
       "The Daily Star": 1,
@@ -71,6 +71,46 @@
     }
   },
   "stories": [
+    {
+      "id": "96badf760dc336b486",
+      "title": "ACG names Crowley as CFO",
+      "summary_zh": "",
+      "why_it_matters_zh": "",
+      "category": "Leasing & Trading",
+      "importance_score": 54,
+      "region": "North America",
+      "entities": [
+        "ACG",
+        "Aviation Capital Group",
+        "Jilinda Crowley"
+      ],
+      "published_at": "2026-09-14T17:17:57Z",
+      "updated_at": "2026-09-14T17:26:25Z",
+      "primary_source": "Ishka Airfinance",
+      "primary_url": "https://platform.ishkaairfinance.com/Articles/3601125",
+      "source_count": 2,
+      "sources": [
+        {
+          "name": "Ishka Airfinance",
+          "url": "https://platform.ishkaairfinance.com/Articles/3601125",
+          "published_at": "2026-09-14T17:17:57Z",
+          "source_channel": "ishka_latest_rss",
+          "discovered_via": "direct"
+        },
+        {
+          "name": "Aviation News Online",
+          "url": "https://www.aviationnews-online.com/article/acg-appoints-jilinda-crowley-as-chief-financial-officer",
+          "published_at": "2026-09-14T00:00:00Z",
+          "source_channel": "aviationnews_leasing",
+          "discovered_via": "direct"
+        }
+      ],
+      "raw_ids": [
+        "99b3b67e468bf6f5aed644b7",
+        "1f6659afb66b5cb166a9769c"
+      ],
+      "analysis_mode": "deepseek"
+    },
     {
       "id": "eea85e90ae66e6f2ec",
       "title": "Wizz Air to shift to ownership financing structures",
@@ -250,6 +290,67 @@
       ],
       "raw_ids": [
         "ae98847c584042cf7f0bdd33"
+      ],
+      "analysis_mode": "deepseek"
+    },
+    {
+      "id": "4b31d2fee3f5be46c4",
+      "title": "Wizz Air CEO says it has no interest in airBaltic, other carriers at risk",
+      "summary_zh": "",
+      "why_it_matters_zh": "",
+      "category": "Airlines & Credit",
+      "importance_score": 59,
+      "region": "Europe",
+      "entities": [
+        "Wizz Air",
+        "airBaltic"
+      ],
+      "published_at": "2026-09-14T10:08:00Z",
+      "updated_at": "2026-09-14T17:26:25Z",
+      "primary_source": "Reuters",
+      "primary_url": "https://www.reuters.com/business/aerospace-defense/wizz-air-ceo-says-it-has-no-interest-airbaltic-other-carriers-risk-2026-09-14/",
+      "source_count": 1,
+      "sources": [
+        {
+          "name": "Reuters",
+          "url": "https://www.reuters.com/business/aerospace-defense/wizz-air-ceo-says-it-has-no-interest-airbaltic-other-carriers-risk-2026-09-14/",
+          "published_at": "2026-09-14T10:08:00Z",
+          "source_channel": "reuters_via_bing",
+          "discovered_via": "Bing News"
+        }
+      ],
+      "raw_ids": [
+        "80096615d237984f7df7a1fe"
+      ],
+      "analysis_mode": "deepseek"
+    },
+    {
+      "id": "adfc92c126a40a89a5",
+      "title": "airBaltic debt woes herald tough season for smaller airlines",
+      "summary_zh": "",
+      "why_it_matters_zh": "",
+      "category": "Airlines & Credit",
+      "importance_score": 55,
+      "region": "Europe",
+      "entities": [
+        "airBaltic"
+      ],
+      "published_at": "2026-09-14T09:42:00Z",
+      "updated_at": "2026-09-14T17:26:25Z",
+      "primary_source": "Reuters",
+      "primary_url": "https://www.reuters.com/world/europe/winter-is-coming-airbaltic-debt-woes-herald-tough-season-ahead-smaller-airlines-2026-09-14/",
+      "source_count": 1,
+      "sources": [
+        {
+          "name": "Reuters",
+          "url": "https://www.reuters.com/world/europe/winter-is-coming-airbaltic-debt-woes-herald-tough-season-ahead-smaller-airlines-2026-09-14/",
+          "published_at": "2026-09-14T09:42:00Z",
+          "source_channel": "reuters_via_bing",
+          "discovered_via": "Bing News"
+        }
+      ],
+      "raw_ids": [
+        "42b52e11551122b475532707"
       ],
       "analysis_mode": "deepseek"
     },
@@ -1197,38 +1298,6 @@
       ],
       "raw_ids": [
         "a03ce88ee1ac5b06fb4ff6b9"
-      ],
-      "analysis_mode": "deepseek"
-    },
-    {
-      "id": "a386de77a995777a7d",
-      "title": "ACG appoints Jilinda Crowley as CFO",
-      "summary_zh": "",
-      "why_it_matters_zh": "",
-      "category": "Leasing & Trading",
-      "importance_score": 53,
-      "region": "Americas",
-      "entities": [
-        "ACG",
-        "Aviation Capital Group",
-        "Jilinda Crowley"
-      ],
-      "published_at": "2026-09-14T00:00:00Z",
-      "updated_at": "2026-09-14T12:34:36Z",
-      "primary_source": "Aviation News Online",
-      "primary_url": "https://www.aviationnews-online.com/article/acg-appoints-jilinda-crowley-as-chief-financial-officer",
-      "source_count": 1,
-      "sources": [
-        {
-          "name": "Aviation News Online",
-          "url": "https://www.aviationnews-online.com/article/acg-appoints-jilinda-crowley-as-chief-financial-officer",
-          "published_at": "2026-09-14T00:00:00Z",
-          "source_channel": "aviationnews_leasing",
-          "discovered_via": "direct"
-        }
-      ],
-      "raw_ids": [
-        "1f6659afb66b5cb166a9769c"
       ],
       "analysis_mode": "deepseek"
     },

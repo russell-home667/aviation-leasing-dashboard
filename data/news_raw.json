@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-14T16:28:08Z",
+  "generated_at": "2026-09-14T17:25:57Z",
   "retention_days": 120,
   "metadata_only": true,
   "stats": {
-    "current_batch_unique": 558,
-    "stored_total": 1291,
-    "reuters_discovered_via_bing": 33,
+    "current_batch_unique": 563,
+    "stored_total": 1295,
+    "reuters_discovered_via_bing": 35,
     "by_source": {
       "ADS Advance": 1,
       "AFPBB News": 1,
@@ -42,7 +42,7 @@
       "Insider Monkey": 1,
       "Investopedia": 1,
       "Irish Examiner on MSN": 1,
-      "Ishka Airfinance": 127,
+      "Ishka Airfinance": 128,
       "JD Supra": 1,
       "Live Mint on MSN": 1,
       "MSN": 10,
@@ -56,7 +56,7 @@
       "PE Hub": 1,
       "Pensacola News Journal": 1,
       "Republic World": 1,
-      "Reuters": 33,
+      "Reuters": 35,
       "Seeking Alpha": 3,
       "Simple Flying on MSN": 1,
       "The Daily Star": 1,
@@ -69,7 +69,7 @@
       "TravelBiz Monitor": 1,
       "Xinhua": 1,
       "Yahoo Finance": 16,
-      "Yahoo Finance UK": 1,
+      "Yahoo Finance UK": 2,
       "ZAWYA": 2,
       "ch-aviation": 1,
       "القاهرة 24": 1
@@ -83,7 +83,7 @@
       "aviationnews_maintenance": 116,
       "aviationnews_people": 92,
       "aviationnews_regulatory": 80,
-      "bing_news_rss": 132,
+      "bing_news_rss": 133,
       "ishka_africa_rss": 9,
       "ishka_aircraft_rss": 10,
       "ishka_airlines_rss": 6,
@@ -91,7 +91,7 @@
       "ishka_china_rss": 6,
       "ishka_cis_rss": 7,
       "ishka_europe_rss": 2,
-      "ishka_latest_rss": 16,
+      "ishka_latest_rss": 17,
       "ishka_latin_america_rss": 8,
       "ishka_law_rss": 10,
       "ishka_lessors_rss": 7,
@@ -101,10 +101,31 @@
       "ishka_oceania_rss": 9,
       "ishka_south_asia_rss": 9,
       "ishka_southeast_asia_rss": 5,
-      "reuters_via_bing": 33
+      "reuters_via_bing": 35
     }
   },
   "items": [
+    {
+      "title": "ACG names Crowley as CFO",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_latest_rss",
+      "published_at": "2026-09-14T17:17:57Z",
+      "published_date": "2026-09-14",
+      "url": "https://platform.ishkaairfinance.com/Articles/3601125",
+      "summary": "",
+      "author": "Laura Mueller",
+      "categories_raw": [
+        "Funds",
+        "Lessors",
+        "North America"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T17:25:58Z",
+      "id": "99b3b67e468bf6f5aed644b7"
+    },
     {
       "title": "Wizz Air to shift to ownership financing structures: ISTAT EMEA 2026",
       "source": "Ishka Airfinance",
@@ -230,6 +251,40 @@
       "rights_mode": "official_rss_metadata",
       "fetched_at": "2026-09-14T12:34:02Z",
       "id": "ae98847c584042cf7f0bdd33"
+    },
+    {
+      "title": "Wizz Air CEO says it has no interest in airBaltic, other carriers at risk",
+      "source": "Reuters",
+      "source_channel": "reuters_via_bing",
+      "published_at": "2026-09-14T10:08:00Z",
+      "published_date": "2026-09-14",
+      "url": "https://www.reuters.com/business/aerospace-defense/wizz-air-ceo-says-it-has-no-interest-airbaltic-other-carriers-risk-2026-09-14/",
+      "summary": "Wizz Air sees few if any opportunities from airBaltic's bankruptcy and expects a wider shakeout of other European airlines ​that were unable to hedge against high fuel prices, the budget carrier's ...",
+      "author": "",
+      "categories_raw": [],
+      "region_raw": "",
+      "discovered_via": "Bing News",
+      "discovery_query": "site:reuters.com airline bankruptcy aircraft",
+      "rights_mode": "search_result_metadata",
+      "fetched_at": "2026-09-14T17:26:25Z",
+      "id": "80096615d237984f7df7a1fe"
+    },
+    {
+      "title": "Winter is coming: airBaltic debt woes herald tough season ahead for smaller airlines",
+      "source": "Reuters",
+      "source_channel": "reuters_via_bing",
+      "published_at": "2026-09-14T09:42:00Z",
+      "published_date": "2026-09-14",
+      "url": "https://www.reuters.com/world/europe/winter-is-coming-airbaltic-debt-woes-herald-tough-season-ahead-smaller-airlines-2026-09-14/",
+      "summary": "After Latvian airline airBaltic filed Chapter 11 proceedings on Monday, the aviation sector is bracing for a tough winter as the Iran war ​continues to push up jet fuel costs.",
+      "author": "",
+      "categories_raw": [],
+      "region_raw": "",
+      "discovered_via": "Bing News",
+      "discovery_query": "site:reuters.com airline bankruptcy aircraft",
+      "rights_mode": "search_result_metadata",
+      "fetched_at": "2026-09-14T17:26:25Z",
+      "id": "42b52e11551122b475532707"
     },
     {
       "title": "Air Transat swings to EBITDA loss",
@@ -8283,6 +8338,23 @@
       "rights_mode": "search_result_metadata",
       "fetched_at": "2026-09-14T08:27:24Z",
       "id": "30b74554af49d963386ff042"
+    },
+    {
+      "title": "KBRA Releases Research – Aviation ABS Repayment: The Role of Asset Sales",
+      "source": "Yahoo Finance UK",
+      "source_channel": "bing_news_rss",
+      "published_at": "2026-08-31T09:18:00Z",
+      "published_date": "2026-08-31",
+      "url": "https://uk.finance.yahoo.com/news/kbra-releases-research-aviation-abs-161800693.html",
+      "summary": "KBRA releases research examining aviation ABS repayment trends, and highlights recent aircraft sale activity, credit considerations, and broader market implications.",
+      "author": "",
+      "categories_raw": [],
+      "region_raw": "",
+      "discovered_via": "Bing News",
+      "discovery_query": "\"aviation ABS\"",
+      "rights_mode": "search_result_metadata",
+      "fetched_at": "2026-09-14T17:26:15Z",
+      "id": "b60ba3688cd33feaa01850ed"
     },
     {
       "title": "India's Fly91 close to ordering at least 20 ATR turboprops, sources say",

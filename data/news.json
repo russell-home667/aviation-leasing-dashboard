@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-14T16:28:33Z",
+  "generated_at": "2026-09-14T17:26:25Z",
   "model": "deepseek-flash",
-  "analysis_mode": "incremental_no_new_items",
+  "analysis_mode": "deepseek",
   "categories": [
     "Leasing & Trading",
     "Aircraft & OEM",
@@ -14,24 +14,24 @@
     "Macro & Geopolitics"
   ],
   "stats": {
-    "raw_pool_total": 1291,
-    "recent_raw_items": 218,
-    "already_processed_raw_items": 218,
-    "new_raw_items": 0,
-    "new_preclusters": 0,
-    "deepseek_calls": 0,
+    "raw_pool_total": 1295,
+    "recent_raw_items": 220,
+    "already_processed_raw_items": 217,
+    "new_raw_items": 3,
+    "new_preclusters": 3,
+    "deepseek_calls": 1,
     "deepseek_failed_batches": 0,
     "deepseek_errors": [],
-    "clusters_submitted": 0,
-    "clusters_retained_or_accounted": 0,
-    "stories": 203,
+    "clusters_submitted": 3,
+    "clusters_retained_or_accounted": 3,
+    "stories": 201,
     "by_category": {
       "Aircraft & OEM": 36,
       "Airlines & Credit": 79,
       "Engines & MRO": 14,
       "Financing & Capital Markets": 20,
-      "Leasing & Trading": 36,
-      "Legal & Regulatory": 9,
+      "Leasing & Trading": 35,
+      "Legal & Regulatory": 8,
       "Macro & Geopolitics": 8,
       "Values & Lease Rates": 1
     },
@@ -39,7 +39,6 @@
       "ADS Advance": 1,
       "AeroTime": 2,
       "Aerospace and Mechanical Insider on MSN": 1,
-      "Airline Ratings": 1,
       "Aviacionline": 1,
       "Aviation News Online": 117,
       "Aviation24.be": 1,
@@ -50,9 +49,8 @@
       "Devdiscourse": 1,
       "FLYING Magazine": 1,
       "Flightglobal": 2,
-      "Global Legal Chronicle": 1,
       "Irish Examiner on MSN": 1,
-      "Ishka Airfinance": 42,
+      "Ishka Airfinance": 43,
       "Mint": 1,
       "Mint on MSN": 2,
       "NHK": 1,
@@ -128,6 +126,37 @@
         "7bc3125b89ab62c06efa9ff1"
       ],
       "analysis_mode": "fallback_after_ai_error"
+    },
+    {
+      "id": "4b31d2fee3f5be46c4",
+      "title": "Wizz Air CEO says it has no interest in airBaltic, other carriers at risk",
+      "summary_zh": "",
+      "why_it_matters_zh": "",
+      "category": "Airlines & Credit",
+      "importance_score": 59,
+      "region": "Europe",
+      "entities": [
+        "Wizz Air",
+        "airBaltic"
+      ],
+      "published_at": "2026-09-14T10:08:00Z",
+      "updated_at": "2026-09-14T17:26:25Z",
+      "primary_source": "Reuters",
+      "primary_url": "https://www.reuters.com/business/aerospace-defense/wizz-air-ceo-says-it-has-no-interest-airbaltic-other-carriers-risk-2026-09-14/",
+      "source_count": 1,
+      "sources": [
+        {
+          "name": "Reuters",
+          "url": "https://www.reuters.com/business/aerospace-defense/wizz-air-ceo-says-it-has-no-interest-airbaltic-other-carriers-risk-2026-09-14/",
+          "published_at": "2026-09-14T10:08:00Z",
+          "source_channel": "reuters_via_bing",
+          "discovered_via": "Bing News"
+        }
+      ],
+      "raw_ids": [
+        "80096615d237984f7df7a1fe"
+      ],
+      "analysis_mode": "deepseek"
     },
     {
       "id": "f27b73102bb823017d",
@@ -976,6 +1005,36 @@
       "analysis_mode": "fallback_after_ai_error"
     },
     {
+      "id": "adfc92c126a40a89a5",
+      "title": "airBaltic debt woes herald tough season for smaller airlines",
+      "summary_zh": "",
+      "why_it_matters_zh": "",
+      "category": "Airlines & Credit",
+      "importance_score": 55,
+      "region": "Europe",
+      "entities": [
+        "airBaltic"
+      ],
+      "published_at": "2026-09-14T09:42:00Z",
+      "updated_at": "2026-09-14T17:26:25Z",
+      "primary_source": "Reuters",
+      "primary_url": "https://www.reuters.com/world/europe/winter-is-coming-airbaltic-debt-woes-herald-tough-season-ahead-smaller-airlines-2026-09-14/",
+      "source_count": 1,
+      "sources": [
+        {
+          "name": "Reuters",
+          "url": "https://www.reuters.com/world/europe/winter-is-coming-airbaltic-debt-woes-herald-tough-season-ahead-smaller-airlines-2026-09-14/",
+          "published_at": "2026-09-14T09:42:00Z",
+          "source_channel": "reuters_via_bing",
+          "discovered_via": "Bing News"
+        }
+      ],
+      "raw_ids": [
+        "42b52e11551122b475532707"
+      ],
+      "analysis_mode": "deepseek"
+    },
+    {
       "id": "17ee3f2ab020e19361",
       "title": "How Anthropic says Claude was used for weapons, spying and cyber operations",
       "summary_zh": "",
@@ -1341,60 +1400,44 @@
       "analysis_mode": "fallback_after_ai_error"
     },
     {
-      "id": "e297bef1ccdb19b564",
-      "title": "Easyjet PLC",
+      "id": "96badf760dc336b486",
+      "title": "ACG names Crowley as CFO",
       "summary_zh": "",
       "why_it_matters_zh": "",
-      "category": "Airlines & Credit",
-      "importance_score": 55,
-      "region": "Global/Unspecified",
-      "entities": [],
-      "published_at": "2026-09-07T17:00:00Z",
-      "updated_at": "2026-09-14T09:38:27Z",
-      "primary_source": "Reuters",
-      "primary_url": "https://www.reuters.com/company/easyjet-plc/",
-      "source_count": 1,
+      "category": "Leasing & Trading",
+      "importance_score": 54,
+      "region": "North America",
+      "entities": [
+        "ACG",
+        "Aviation Capital Group",
+        "Jilinda Crowley"
+      ],
+      "published_at": "2026-09-14T17:17:57Z",
+      "updated_at": "2026-09-14T17:26:25Z",
+      "primary_source": "Ishka Airfinance",
+      "primary_url": "https://platform.ishkaairfinance.com/Articles/3601125",
+      "source_count": 2,
       "sources": [
         {
-          "name": "Reuters",
-          "url": "https://www.reuters.com/company/easyjet-plc/",
-          "published_at": "2026-09-07T17:00:00Z",
-          "source_channel": "reuters_via_bing",
-          "discovered_via": "Bing News"
+          "name": "Ishka Airfinance",
+          "url": "https://platform.ishkaairfinance.com/Articles/3601125",
+          "published_at": "2026-09-14T17:17:57Z",
+          "source_channel": "ishka_latest_rss",
+          "discovered_via": "direct"
+        },
+        {
+          "name": "Aviation News Online",
+          "url": "https://www.aviationnews-online.com/article/acg-appoints-jilinda-crowley-as-chief-financial-officer",
+          "published_at": "2026-09-14T00:00:00Z",
+          "source_channel": "aviationnews_leasing",
+          "discovered_via": "direct"
         }
       ],
       "raw_ids": [
-        "24e94934fa3eca05d0acfdc7"
+        "99b3b67e468bf6f5aed644b7",
+        "1f6659afb66b5cb166a9769c"
       ],
-      "analysis_mode": "core_source_safety_net"
-    },
-    {
-      "id": "7bfe03676c2775cbf1",
-      "title": "Bombardier Inc.",
-      "summary_zh": "",
-      "why_it_matters_zh": "",
-      "category": "Airlines & Credit",
-      "importance_score": 55,
-      "region": "Global/Unspecified",
-      "entities": [],
-      "published_at": "2026-09-07T17:00:00Z",
-      "updated_at": "2026-09-14T09:38:27Z",
-      "primary_source": "Reuters",
-      "primary_url": "https://www.reuters.com/company/bombardier-inc/",
-      "source_count": 1,
-      "sources": [
-        {
-          "name": "Reuters",
-          "url": "https://www.reuters.com/company/bombardier-inc/",
-          "published_at": "2026-09-07T17:00:00Z",
-          "source_channel": "reuters_via_bing",
-          "discovered_via": "Bing News"
-        }
-      ],
-      "raw_ids": [
-        "f804a86b41104ed169af5736"
-      ],
-      "analysis_mode": "core_source_safety_net"
+      "analysis_mode": "deepseek"
     },
     {
       "id": "3285473012748289d4",
@@ -2876,38 +2919,6 @@
       ],
       "raw_ids": [
         "a03ce88ee1ac5b06fb4ff6b9"
-      ],
-      "analysis_mode": "deepseek"
-    },
-    {
-      "id": "a386de77a995777a7d",
-      "title": "ACG appoints Jilinda Crowley as CFO",
-      "summary_zh": "",
-      "why_it_matters_zh": "",
-      "category": "Leasing & Trading",
-      "importance_score": 53,
-      "region": "Americas",
-      "entities": [
-        "ACG",
-        "Aviation Capital Group",
-        "Jilinda Crowley"
-      ],
-      "published_at": "2026-09-14T00:00:00Z",
-      "updated_at": "2026-09-14T12:34:36Z",
-      "primary_source": "Aviation News Online",
-      "primary_url": "https://www.aviationnews-online.com/article/acg-appoints-jilinda-crowley-as-chief-financial-officer",
-      "source_count": 1,
-      "sources": [
-        {
-          "name": "Aviation News Online",
-          "url": "https://www.aviationnews-online.com/article/acg-appoints-jilinda-crowley-as-chief-financial-officer",
-          "published_at": "2026-09-14T00:00:00Z",
-          "source_channel": "aviationnews_leasing",
-          "discovered_via": "direct"
-        }
-      ],
-      "raw_ids": [
-        "1f6659afb66b5cb166a9769c"
       ],
       "analysis_mode": "deepseek"
     },
@@ -6015,71 +6026,6 @@
         "b78ec490f7e1c4d4a8fccf66"
       ],
       "analysis_mode": "fallback_after_ai_error"
-    },
-    {
-      "id": "25413eef45f3165b5b",
-      "title": "CALC delivers two Airbus A320neo aircraft to Air Cairo under operating lease",
-      "summary_zh": "",
-      "why_it_matters_zh": "",
-      "category": "Leasing & Trading",
-      "importance_score": 45,
-      "region": "Egypt",
-      "entities": [
-        "CALC",
-        "Air Cairo",
-        "Airbus",
-        "A320neo"
-      ],
-      "published_at": "2026-09-07T17:00:00Z",
-      "updated_at": "2026-09-14T09:38:27Z",
-      "primary_source": "Global Legal Chronicle",
-      "primary_url": "https://globallegalchronicle.com/post-239398/",
-      "source_count": 1,
-      "sources": [
-        {
-          "name": "Global Legal Chronicle",
-          "url": "https://globallegalchronicle.com/post-239398/",
-          "published_at": "2026-09-07T17:00:00Z",
-          "source_channel": "bing_news_rss",
-          "discovered_via": "Bing News"
-        }
-      ],
-      "raw_ids": [
-        "fcee3634fae671ff2a04df3e"
-      ],
-      "analysis_mode": "deepseek"
-    },
-    {
-      "id": "b99ec50957a2e86e4f",
-      "title": "Prime Air 767 overruns runway in Miami, killing five; NTSB examines service history",
-      "summary_zh": "",
-      "why_it_matters_zh": "",
-      "category": "Legal & Regulatory",
-      "importance_score": 45,
-      "region": "Miami, US",
-      "entities": [
-        "Prime Air",
-        "NTSB",
-        "767"
-      ],
-      "published_at": "2026-09-07T17:00:00Z",
-      "updated_at": "2026-09-14T13:30:42Z",
-      "primary_source": "Airline Ratings",
-      "primary_url": "https://www.airlineratings.com/articles/miami-prime-air-crash-its-service-history-spans-three-continents-and-seven-operators-could-this-be-a-factor",
-      "source_count": 1,
-      "sources": [
-        {
-          "name": "Airline Ratings",
-          "url": "https://www.airlineratings.com/articles/miami-prime-air-crash-its-service-history-spans-three-continents-and-seven-operators-could-this-be-a-factor",
-          "published_at": "2026-09-07T17:00:00Z",
-          "source_channel": "bing_news_rss",
-          "discovered_via": "Bing News"
-        }
-      ],
-      "raw_ids": [
-        "9460ac833b9cf65329bfb07d"
-      ],
-      "analysis_mode": "deepseek"
     }
   ]
 }
