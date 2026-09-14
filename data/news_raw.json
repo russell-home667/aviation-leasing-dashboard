@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-14T17:25:57Z",
+  "generated_at": "2026-09-14T18:31:11Z",
   "retention_days": 120,
   "metadata_only": true,
   "stats": {
-    "current_batch_unique": 563,
-    "stored_total": 1295,
+    "current_batch_unique": 557,
+    "stored_total": 1297,
     "reuters_discovered_via_bing": 35,
     "by_source": {
       "ADS Advance": 1,
@@ -13,6 +13,7 @@
       "AOL": 2,
       "AeroTime": 3,
       "Aerospace and Mechanical Insider on MSN": 1,
+      "Agence France-Presse": 1,
       "Airline Ratings": 1,
       "Airways": 1,
       "Aviacionline": 1,
@@ -38,6 +39,7 @@
       "Flightglobal": 20,
       "Flying": 1,
       "Global Legal Chronicle": 1,
+      "GlobalAir.com": 1,
       "Gulf News": 1,
       "Insider Monkey": 1,
       "Investopedia": 1,
@@ -83,7 +85,7 @@
       "aviationnews_maintenance": 116,
       "aviationnews_people": 92,
       "aviationnews_regulatory": 80,
-      "bing_news_rss": 133,
+      "bing_news_rss": 135,
       "ishka_africa_rss": 9,
       "ishka_aircraft_rss": 10,
       "ishka_airlines_rss": 6,
@@ -434,6 +436,23 @@
       "rights_mode": "search_result_metadata",
       "fetched_at": "2026-09-14T14:42:31Z",
       "id": "19174761b989b48cf7b01288"
+    },
+    {
+      "title": "Textron Aviation and Merlin Introduce Cessna SkyCourier UX Concept Aircraft",
+      "source": "Agence France-Presse",
+      "source_channel": "bing_news_rss",
+      "published_at": "2026-09-14T05:15:00Z",
+      "published_date": "2026-09-14",
+      "url": "https://www.afp.com/en/infos/textron-aviation-and-merlin-introduce-cessna-skycourier-ux-concept-aircraft",
+      "summary": "Textron Aviation Inc., a Textron Inc. (NYSE: TXT) company, and Merlin, Inc. today introduced a concept Cessna SkyCourier UX™ aircraft that combines Textron Aviation’s proven Cessna SkyCourier platform ...",
+      "author": "",
+      "categories_raw": [],
+      "region_raw": "",
+      "discovered_via": "Bing News",
+      "discovery_query": "\"aviation finance\" aircraft",
+      "rights_mode": "search_result_metadata",
+      "fetched_at": "2026-09-14T18:31:27Z",
+      "id": "e088488846c64a63fcf91eaf"
     },
     {
       "title": "Textron Aviation and Merlin Introduce Cessna SkyCourier UX Concept Aircraft",
@@ -1044,6 +1063,23 @@
       "rights_mode": "public_listing_metadata",
       "fetched_at": "2026-09-14T12:34:07Z",
       "id": "1f6659afb66b5cb166a9769c"
+    },
+    {
+      "title": "New Bridge AeroFinance launch makes it three new jet lenders in 2026",
+      "source": "GlobalAir.com",
+      "source_channel": "bing_news_rss",
+      "published_at": "2026-09-13T21:51:00Z",
+      "published_date": "2026-09-13",
+      "url": "https://www.globalair.com/articles/new-bridge-aerofinance-launch-makes-it-three-new-jet-lenders-in-2026/12664",
+      "summary": "New Bridge AeroFinance is the third business-aviation-dedicated lender to launch in 2026, following Elevex Capital and Bain Capital's JB Aircraft Finance.",
+      "author": "",
+      "categories_raw": [],
+      "region_raw": "",
+      "discovered_via": "Bing News",
+      "discovery_query": "\"aircraft financing\"",
+      "rights_mode": "search_result_metadata",
+      "fetched_at": "2026-09-14T18:31:27Z",
+      "id": "2af63b276f51f0556d481441"
     },
     {
       "title": "My job: Connecting Ireland's dominance in aircraft leasing with elite football",

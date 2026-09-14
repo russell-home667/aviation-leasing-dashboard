@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-14T17:26:25Z",
+  "generated_at": "2026-09-14T18:31:36Z",
   "model": "deepseek-flash",
   "analysis_mode": "deepseek",
   "categories": [
@@ -14,22 +14,24 @@
     "Macro & Geopolitics"
   ],
   "stats": {
-    "raw_pool_total": 1295,
-    "recent_raw_items": 220,
-    "already_processed_raw_items": 217,
-    "new_raw_items": 3,
-    "new_preclusters": 3,
-    "deepseek_calls": 1,
-    "deepseek_failed_batches": 0,
-    "deepseek_errors": [],
-    "clusters_submitted": 3,
-    "clusters_retained_or_accounted": 3,
-    "stories": 201,
+    "raw_pool_total": 1297,
+    "recent_raw_items": 222,
+    "already_processed_raw_items": 220,
+    "new_raw_items": 2,
+    "new_preclusters": 2,
+    "deepseek_calls": 0,
+    "deepseek_failed_batches": 1,
+    "deepseek_errors": [
+      "batch_1: RuntimeError: ValueError: empty DeepSeek content; ValueError: empty DeepSeek content"
+    ],
+    "clusters_submitted": 2,
+    "clusters_retained_or_accounted": 2,
+    "stories": 202,
     "by_category": {
       "Aircraft & OEM": 36,
       "Airlines & Credit": 79,
       "Engines & MRO": 14,
-      "Financing & Capital Markets": 20,
+      "Financing & Capital Markets": 21,
       "Leasing & Trading": 35,
       "Legal & Regulatory": 8,
       "Macro & Geopolitics": 8,
@@ -39,6 +41,7 @@
       "ADS Advance": 1,
       "AeroTime": 2,
       "Aerospace and Mechanical Insider on MSN": 1,
+      "Agence France-Presse": 1,
       "Aviacionline": 1,
       "Aviation News Online": 117,
       "Aviation24.be": 1,
@@ -49,6 +52,7 @@
       "Devdiscourse": 1,
       "FLYING Magazine": 1,
       "Flightglobal": 2,
+      "GlobalAir.com": 1,
       "Irish Examiner on MSN": 1,
       "Ishka Airfinance": 43,
       "Mint": 1,
@@ -5510,7 +5514,7 @@
       "analysis_mode": "fallback_after_ai_error"
     },
     {
-      "id": "ab545c7393750899dc",
+      "id": "c265314671218fce24",
       "title": "Textron Aviation and Merlin unveil Cessna SkyCourier UX concept aircraft",
       "summary_zh": "",
       "why_it_matters_zh": "",
@@ -5522,11 +5526,11 @@
         "Merlin",
         "Cessna SkyCourier"
       ],
-      "published_at": "2026-09-14T05:00:00Z",
+      "published_at": "2026-09-14T05:15:00Z",
       "updated_at": "2026-09-14T12:34:36Z",
       "primary_source": "Yahoo Finance",
       "primary_url": "https://finance.yahoo.com/technology/articles/textron-aviation-merlin-introduce-cessna-120000788.html",
-      "source_count": 1,
+      "source_count": 2,
       "sources": [
         {
           "name": "Yahoo Finance",
@@ -5534,10 +5538,18 @@
           "published_at": "2026-09-14T05:00:00Z",
           "source_channel": "bing_news_rss",
           "discovered_via": "Bing News"
+        },
+        {
+          "name": "Agence France-Presse",
+          "url": "https://www.afp.com/en/infos/textron-aviation-and-merlin-introduce-cessna-skycourier-ux-concept-aircraft",
+          "published_at": "2026-09-14T05:15:00Z",
+          "source_channel": "bing_news_rss",
+          "discovered_via": "Bing News"
         }
       ],
       "raw_ids": [
-        "3999122ada3869bd749e48b9"
+        "3999122ada3869bd749e48b9",
+        "e088488846c64a63fcf91eaf"
       ],
       "analysis_mode": "deepseek"
     },
@@ -5599,6 +5611,34 @@
       ],
       "raw_ids": [
         "a1b798cd47c308580fd3f4be"
+      ],
+      "analysis_mode": "fallback_after_ai_error"
+    },
+    {
+      "id": "69e88d9ba35636544f",
+      "title": "New Bridge AeroFinance launch makes it three new jet lenders in 2026",
+      "summary_zh": "",
+      "why_it_matters_zh": "",
+      "category": "Financing & Capital Markets",
+      "importance_score": 45,
+      "region": "Global/Unspecified",
+      "entities": [],
+      "published_at": "2026-09-13T21:51:00Z",
+      "updated_at": "2026-09-14T18:31:36Z",
+      "primary_source": "GlobalAir.com",
+      "primary_url": "https://www.globalair.com/articles/new-bridge-aerofinance-launch-makes-it-three-new-jet-lenders-in-2026/12664",
+      "source_count": 1,
+      "sources": [
+        {
+          "name": "GlobalAir.com",
+          "url": "https://www.globalair.com/articles/new-bridge-aerofinance-launch-makes-it-three-new-jet-lenders-in-2026/12664",
+          "published_at": "2026-09-13T21:51:00Z",
+          "source_channel": "bing_news_rss",
+          "discovered_via": "Bing News"
+        }
+      ],
+      "raw_ids": [
+        "2af63b276f51f0556d481441"
       ],
       "analysis_mode": "fallback_after_ai_error"
     },
