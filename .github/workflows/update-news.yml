@@ -9,6 +9,7 @@ on:
       - 'scripts/process_news.py'
       - 'scripts/validate_processed_news.py'
       - 'scripts/analyze_news.py'
+      - 'scripts/run_analyze_news_resilient.py'
       - 'scripts/validate_enriched_news.py'
       - 'scripts/install_news_ui.py'
       - 'scripts/install_news_page_filters.py'
@@ -78,9 +79,9 @@ jobs:
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           DEEPSEEK_MODEL: deepseek-flash
-          NEWS_STEP3_BATCH_SIZE: '28'
+          NEWS_STEP3_BATCH_SIZE: '45'
           NEWS_STEP3_MAX_AI_STORIES: '260'
-        run: python scripts/analyze_news.py
+        run: python scripts/run_analyze_news_resilient.py
 
       - name: Validate Step 3 enriched news
         run: python scripts/validate_enriched_news.py
