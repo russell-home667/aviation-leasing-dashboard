@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-14T13:30:13Z",
+  "generated_at": "2026-09-14T14:42:11Z",
   "retention_days": 120,
   "metadata_only": true,
   "stats": {
-    "current_batch_unique": 555,
-    "stored_total": 1279,
+    "current_batch_unique": 561,
+    "stored_total": 1289,
     "reuters_discovered_via_bing": 32,
     "by_source": {
       "ADS Advance": 1,
@@ -15,7 +15,8 @@
       "Aerospace and Mechanical Insider on MSN": 1,
       "Airline Ratings": 1,
       "Airways": 1,
-      "Aviation News Online": 995,
+      "Aviacionline": 1,
+      "Aviation News Online": 999,
       "Aviation Week": 2,
       "Aviation Week Network": 1,
       "Aviation24.be": 1,
@@ -41,10 +42,10 @@
       "Insider Monkey": 1,
       "Investopedia": 1,
       "Irish Examiner on MSN": 1,
-      "Ishka Airfinance": 122,
+      "Ishka Airfinance": 126,
       "JD Supra": 1,
       "Live Mint on MSN": 1,
-      "MSN": 9,
+      "MSN": 10,
       "Mint": 1,
       "Mint on MSN": 2,
       "Moneycontrol": 2,
@@ -74,7 +75,7 @@
       "القاهرة 24": 1
     },
     "by_channel": {
-      "aviationnews_airline": 331,
+      "aviationnews_airline": 335,
       "aviationnews_engine": 78,
       "aviationnews_finance": 124,
       "aviationnews_leasing": 145,
@@ -82,7 +83,7 @@
       "aviationnews_maintenance": 116,
       "aviationnews_people": 92,
       "aviationnews_regulatory": 80,
-      "bing_news_rss": 130,
+      "bing_news_rss": 132,
       "ishka_africa_rss": 9,
       "ishka_aircraft_rss": 10,
       "ishka_airlines_rss": 6,
@@ -90,7 +91,7 @@
       "ishka_china_rss": 6,
       "ishka_cis_rss": 7,
       "ishka_europe_rss": 2,
-      "ishka_latest_rss": 11,
+      "ishka_latest_rss": 15,
       "ishka_latin_america_rss": 8,
       "ishka_law_rss": 10,
       "ishka_lessors_rss": 7,
@@ -104,6 +105,90 @@
     }
   },
   "items": [
+    {
+      "title": "Air Baltic files for Chapter 11",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_latest_rss",
+      "published_at": "2026-09-14T14:32:01Z",
+      "published_date": "2026-09-14",
+      "url": "https://platform.ishkaairfinance.com/Articles/3601123",
+      "summary": "",
+      "author": "Hugh Davies",
+      "categories_raw": [
+        "Airlines",
+        "Europe",
+        "Funds"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T14:42:12Z",
+      "id": "4434519e78707157747ec153"
+    },
+    {
+      "title": "SAS ready for financing RFP: ISTAT EMEA 2026",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_latest_rss",
+      "published_at": "2026-09-14T14:10:54Z",
+      "published_date": "2026-09-14",
+      "url": "https://platform.ishkaairfinance.com/Articles/3601122",
+      "summary": "",
+      "author": "Olivier Bonnassies",
+      "categories_raw": [
+        "Airlines",
+        "Europe",
+        "Market Overview"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T14:42:12Z",
+      "id": "cbcf276bdaa593b35dc080a0"
+    },
+    {
+      "title": "Pegasus reaps benefits of fleet renewal",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_latest_rss",
+      "published_at": "2026-09-14T13:42:43Z",
+      "published_date": "2026-09-14",
+      "url": "https://platform.ishkaairfinance.com/Articles/3601119",
+      "summary": "",
+      "author": "Hugh Davies",
+      "categories_raw": [
+        "Airlines",
+        "Europe",
+        "Market Overview"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T14:42:12Z",
+      "id": "b9f06974e039657960a40fa6"
+    },
+    {
+      "title": "Exclusive: Azorra tests sales market after rapid expansion",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_latest_rss",
+      "published_at": "2026-09-14T13:42:43Z",
+      "published_date": "2026-09-14",
+      "url": "https://platform.ishkaairfinance.com/Articles/3601121",
+      "summary": "",
+      "author": "Laura Mueller",
+      "categories_raw": [
+        "Lessors",
+        "MA",
+        "North America"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T14:42:12Z",
+      "id": "172312981d37d921888db5b1"
+    },
     {
       "title": "Neuberger launches $2bn New Bridge finance platform",
       "source": "Ishka Airfinance",
@@ -256,6 +341,23 @@
       "rights_mode": "official_rss_metadata",
       "fetched_at": "2026-09-14T08:26:35Z",
       "id": "ad6991a8e1c3ce0a9989272d"
+    },
+    {
+      "title": "easyJet faces US$72 million lawsuit over six A319s abandoned after sanctions on Russian lessor",
+      "source": "Aviacionline",
+      "source_channel": "bing_news_rss",
+      "published_at": "2026-09-14T06:13:00Z",
+      "published_date": "2026-09-14",
+      "url": "https://www.aviacionline.com/english/commercial-aviation/europe/easyjet-faces-us-72-million-lawsuit-over-six-a319s-abandoned-after-sanctions-on-russian-lessor_a6aa7f30325e8bea1ea573f4d",
+      "summary": "The liquidators of an Irish subsidiary of Russia's state-owned lessor are claiming unpaid rents, loss of value and airport fees. The British low-cost carrier says EU sanctions prevented it from ...",
+      "author": "",
+      "categories_raw": [],
+      "region_raw": "",
+      "discovered_via": "Bing News",
+      "discovery_query": "aircraft sanctions lessor",
+      "rights_mode": "search_result_metadata",
+      "fetched_at": "2026-09-14T14:42:31Z",
+      "id": "19174761b989b48cf7b01288"
     },
     {
       "title": "Textron Aviation and Merlin Introduce Cessna SkyCourier UX Concept Aircraft",
@@ -460,6 +562,26 @@
       "id": "a8af6fc7b45e6ef8f811c8f7"
     },
     {
+      "title": "Surf Air's Mokulele wins $19.4 million contract to serve Lana'i",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_airline",
+      "published_at": "2026-09-14T00:00:00Z",
+      "published_date": "2026-09-14",
+      "url": "https://www.aviationnews-online.com/article/surf-airs-mokulele-wins-194-million-contract-to-serve-lanai",
+      "summary": "Surf Air Mobility's Mokulele Airlines has secured a four-year, $19.4 million US government contract to continue providing subsidised air service to Lana'i in Hawaii, extending contracted revenue throu...",
+      "author": "Lavanya Ahire",
+      "categories_raw": [
+        "Airline",
+        "Americas"
+      ],
+      "region_raw": "Americas",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T14:42:21Z",
+      "id": "79d6944f4cecfa4f3fc1c528"
+    },
+    {
       "title": "Sophia Space and SLI set terms for $300m satellite financing",
       "source": "Aviation News Online",
       "source_channel": "aviationnews_finance",
@@ -642,6 +764,26 @@
       "id": "229783945f6370c7f42d94dd"
     },
     {
+      "title": "Etihad CEO warns high fuel costs could affect 2027 airfares",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_airline",
+      "published_at": "2026-09-14T00:00:00Z",
+      "published_date": "2026-09-14",
+      "url": "https://www.aviationnews-online.com/article/etihad-ceo-warns-high-fuel-costs-could-affect-2027-airfares",
+      "summary": "Etihad Airways chief executive Antonoaldo Neves has warned that persistently high jet fuel prices could affect airfares next year, even as the Abu Dhabi carrier reports strong demand and continues exp...",
+      "author": "Justin Pugsley",
+      "categories_raw": [
+        "Airline",
+        "Middle East/Africa"
+      ],
+      "region_raw": "Middle East/Africa",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T14:42:21Z",
+      "id": "9150ac231ea5a1a79f80580c"
+    },
+    {
       "title": "Emirates saw 8.6mn passengers in summer traffic; operates at 93% of pre-crisis capacity",
       "source": "Aviation News Online",
       "source_channel": "aviationnews_airline",
@@ -742,6 +884,47 @@
       "rights_mode": "public_listing_metadata",
       "fetched_at": "2026-09-14T08:40:24Z",
       "id": "8ca3b3af957033e1b09fa19b"
+    },
+    {
+      "title": "Boeing completes first 737 MAX landing gear exchange with American Airlines",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_airline",
+      "published_at": "2026-09-14T00:00:00Z",
+      "published_date": "2026-09-14",
+      "url": "https://www.aviationnews-online.com/article/boeing-completes-first-737-max-landing-gear-exchange-with-american-airlines",
+      "summary": "Boeing has completed the first landing gear exchange on a 737 MAX with American Airlines.Boeing Global Services supplied American with overhauled and certified main and nose landing gear assemblies, t...",
+      "author": "Lavanya Ahire",
+      "categories_raw": [
+        "Airline",
+        "Americas"
+      ],
+      "region_raw": "Americas",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T14:42:21Z",
+      "id": "b71de15ba03a63ed3617ca53"
+    },
+    {
+      "title": "Air Arabia-led consortium gets AOC for new Saudi low-cost airline",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_airline",
+      "published_at": "2026-09-14T00:00:00Z",
+      "published_date": "2026-09-14",
+      "url": "https://www.aviationnews-online.com/article/air-arabia-led-consortium-gets-aoc-for-new-saudi-low-cost-airline",
+      "summary": "Saudi Arabia's General Authority of Civil Aviation (GACA) has issued an Air Operator Certificate (AOC) to an Air Arabia-led consortium, clearing the way for the launch of a new low-cost national airli...",
+      "author": "Lavanya Ahire",
+      "categories_raw": [
+        "Airline",
+        "Middle East/Africa",
+        "Regulatory"
+      ],
+      "region_raw": "Middle East/Africa",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T14:42:21Z",
+      "id": "85a93b0ef42edd63158ae65f"
     },
     {
       "title": "ANA to merge cargo businesses into Nippon Cargo Airlines",
@@ -12676,6 +12859,23 @@
       "rights_mode": "search_result_metadata",
       "fetched_at": "2026-09-14T08:27:20Z",
       "id": "51b02787474b9a9e7771cec6"
+    },
+    {
+      "title": "The 4 aircraft leasing companies quietly dominating the world's widebody fleet",
+      "source": "MSN",
+      "source_channel": "bing_news_rss",
+      "published_at": "2026-08-16T17:00:00Z",
+      "published_date": "2026-08-16",
+      "url": "https://www.msn.com/en-us/money/companies/the-4-aircraft-leasing-companies-quietly-dominating-the-world-s-widebody-fleet/ar-AA2aitia",
+      "summary": "Approximately half of all commercial aircraft in service worldwide are operated on lease rather than owned outright by the airline flying them. When a passenger boards a Delta Air Lines Airbus ...",
+      "author": "",
+      "categories_raw": [],
+      "region_raw": "",
+      "discovered_via": "Bing News",
+      "discovery_query": "\"aircraft lessor\"",
+      "rights_mode": "search_result_metadata",
+      "fetched_at": "2026-09-14T14:42:28Z",
+      "id": "37df3ed01635cb2371449cb9"
     },
     {
       "title": "Fehlauer becomes Gol chief after loyalty stint",

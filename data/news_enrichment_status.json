@@ -1,0 +1,31 @@
+{
+  "schema_version": 3,
+  "checked_at": "2026-09-14T14:43:03Z",
+  "status": "pass",
+  "deepseek_configured": true,
+  "model": "deepseek-flash",
+  "step2_current_stories": 202,
+  "step2_archive_stories": 209,
+  "current_enriched_stories": 202,
+  "archive_enriched_stories": 209,
+  "priority_entity_stories": 62,
+  "macro_related_stories": 65,
+  "critical_stories": 80,
+  "reused_ai_stories": 0,
+  "pending_before_ai": 209,
+  "ai_submitted": 209,
+  "deepseek_updated": 13,
+  "deepseek_calls": 1,
+  "deepseek_failed_batches": 7,
+  "deepseek_errors": [
+    "batch_1: RuntimeError: ValueError: empty DeepSeek content; ValueError: empty DeepSeek content",
+    "batch_2: RuntimeError: JSONDecodeError: Expecting ',' delimiter: line 1 column 7896 (char 7895); ValueError: empty DeepSeek content",
+    "batch_3: RuntimeError: ValueError: empty DeepSeek content; ValueError: empty DeepSeek content",
+    "batch_4: RuntimeError: JSONDecodeError: Expecting ',' delimiter: line 1 column 766 (char 765); ValueError: empty DeepSeek content",
+    "batch_5: RuntimeError: ValueError: empty DeepSeek content; ValueError: empty DeepSeek content",
+    "batch_6: RuntimeError: ValueError: empty DeepSeek content; ValueError: empty DeepSeek content",
+    "batch_7: RuntimeError: ValueError: empty DeepSeek content; ValueError: empty DeepSeek content"
+  ],
+  "fallback_story_count": 196,
+  "deepseek_story_count": 6
+}
