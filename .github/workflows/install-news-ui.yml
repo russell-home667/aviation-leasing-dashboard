@@ -1,0 +1,56 @@
+name: Install News UI
+
+on:
+  push:
+    paths:
+      - 'scripts/install_news_ui.py'
+      - 'scripts/install_news_page_filters.py'
+      - '.github/workflows/install-news-ui.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  install-news-ui:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Install homepage and full-page news UI
+        run: |
+          python scripts/install_news_ui.py
+          python scripts/install_news_page_filters.py
+
+      - name: Static UI checks
+        run: |
+          grep -q 'STEP3_NEWS_HTML' index.html
+          grep -q 'homeNewsFeed' index.html
+          grep -q 'homeCriticalNews' index.html
+          grep -q 'news.html?critical=1' index.html
+          grep -q 'STEP4_URL_FILTERS' news.html
+          grep -q 'news_feed_archive.json' news.html
+
+      - name: Commit installed UI
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html news.html
+          if git diff --cached --quiet; then
+            echo 'News UI already installed.'
+            exit 0
+          fi
+          git commit -m 'Install aviation leasing news UI'
+          for attempt in 1 2 3; do
+            git pull --rebase origin main
+            if git push origin HEAD:main; then exit 0; fi
+            sleep $((attempt * 2))
+          done
+          exit 1
