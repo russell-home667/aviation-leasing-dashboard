@@ -58,10 +58,13 @@ jobs:
           rows = d.get('data', [])
           assert d.get('ticker') == 'XAU/USD'
           assert d.get('instrument_type') == 'spot'
-          assert len(rows) >= 20
+          assert len(rows) >= 1500
+          assert rows[0]['date'] <= '1990-01-01'
           assert rows[-1]['value'] > 100
           assert float(d['latest_quote']['price']) > 100
           assert rows == sorted(rows, key=lambda x: x['date'])
+          assert d.get('historical_source') == 'World Bank Commodity Markets (Pink Sheet)'
+          assert any(x.get('frequency') == 'monthly_average' for x in rows[:500])
           print('rows', len(rows), 'coverage', rows[0]['date'], 'to', rows[-1]['date'], 'latest', d['latest_quote']['price'], 'status', d.get('status'))
           PY
 
