@@ -1,18 +1,18 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-14T08:59:36Z",
+  "generated_at": "2026-09-14T09:38:05Z",
   "retention_days": 120,
   "metadata_only": true,
   "stats": {
-    "current_batch_unique": 554,
-    "stored_total": 1249,
-    "reuters_discovered_via_bing": 29,
+    "current_batch_unique": 558,
+    "stored_total": 1259,
+    "reuters_discovered_via_bing": 30,
     "by_source": {
       "ADS Advance": 1,
       "AOL": 2,
       "AeroTime": 3,
       "Aerospace and Mechanical Insider on MSN": 1,
-      "Aviation News Online": 984,
+      "Aviation News Online": 989,
       "Aviation Week": 2,
       "Aviation Week Network": 1,
       "Aviation24.be": 1,
@@ -22,7 +22,7 @@
       "Business Line": 1,
       "Business Standard": 1,
       "Business Today on MSN": 2,
-      "Business Wire": 1,
+      "Business Wire": 2,
       "Centreforaviation.com": 1,
       "China Daily": 1,
       "Clyde & Co": 1,
@@ -41,7 +41,7 @@
       "Ishka Airfinance": 121,
       "JD Supra": 1,
       "Live Mint on MSN": 1,
-      "MSN": 8,
+      "MSN": 9,
       "Mint": 1,
       "Mint on MSN": 1,
       "Moneycontrol": 2,
@@ -51,7 +51,7 @@
       "PE Hub": 1,
       "Pensacola News Journal": 1,
       "Republic World": 1,
-      "Reuters": 29,
+      "Reuters": 30,
       "Seeking Alpha": 3,
       "Simple Flying on MSN": 1,
       "The Daily Star": 1,
@@ -63,20 +63,20 @@
       "The Star": 1,
       "TravelBiz Monitor": 1,
       "Xinhua": 1,
-      "Yahoo Finance": 13,
-      "ZAWYA": 1,
+      "Yahoo Finance": 14,
+      "ZAWYA": 2,
       "ch-aviation": 1
     },
     "by_channel": {
-      "aviationnews_airline": 324,
+      "aviationnews_airline": 328,
       "aviationnews_engine": 78,
       "aviationnews_finance": 123,
-      "aviationnews_leasing": 143,
+      "aviationnews_leasing": 144,
       "aviationnews_legal": 29,
       "aviationnews_maintenance": 115,
       "aviationnews_people": 92,
       "aviationnews_regulatory": 80,
-      "bing_news_rss": 115,
+      "bing_news_rss": 119,
       "ishka_africa_rss": 9,
       "ishka_aircraft_rss": 10,
       "ishka_airlines_rss": 6,
@@ -94,7 +94,7 @@
       "ishka_oceania_rss": 9,
       "ishka_south_asia_rss": 9,
       "ishka_southeast_asia_rss": 5,
-      "reuters_via_bing": 29
+      "reuters_via_bing": 30
     }
   },
   "items": [
@@ -231,6 +231,60 @@
       "id": "ad6991a8e1c3ce0a9989272d"
     },
     {
+      "title": "Insurance emerges as a key enabler of aircraft financing in Africa",
+      "source": "ZAWYA",
+      "source_channel": "bing_news_rss",
+      "published_at": "2026-09-14T02:10:00Z",
+      "published_date": "2026-09-14",
+      "url": "https://www.zawya.com/en/economy/insurance-emerges-as-a-key-enabler-of-aircraft-financing-in-africa-560404",
+      "summary": "Against this backdrop, aviation insurance could play a broader role in supporting the sector’s long-term growth and resilience ...",
+      "author": "",
+      "categories_raw": [],
+      "region_raw": "",
+      "discovered_via": "Bing News",
+      "discovery_query": "\"aviation finance\" aircraft",
+      "rights_mode": "search_result_metadata",
+      "fetched_at": "2026-09-14T09:38:22Z",
+      "id": "d7695bf7d1f4f3784764a78b"
+    },
+    {
+      "title": "Tilt-Rotor Aircraft Market Outlook 2026-2035 - Featuring Profiles of Bell Textron, Boeing, and Leonardo",
+      "source": "Yahoo Finance",
+      "source_channel": "bing_news_rss",
+      "published_at": "2026-09-14T01:42:00Z",
+      "published_date": "2026-09-14",
+      "url": "https://finance.yahoo.com/technology/articles/tilt-rotor-aircraft-market-outlook-084200650.html",
+      "summary": "Tilt-Rotor Aircraft Market Gains Momentum on Defense Modernization, Autonomous Flight and Expanding Commercial Mobility ApplicationsDublin, Sept. (GLOBE NEWSWIRE) -- \"Tilt-Rotor Aircraft Market ...",
+      "author": "",
+      "categories_raw": [],
+      "region_raw": "",
+      "discovered_via": "Bing News",
+      "discovery_query": "\"aviation finance\" aircraft",
+      "rights_mode": "search_result_metadata",
+      "fetched_at": "2026-09-14T09:38:22Z",
+      "id": "a1b798cd47c308580fd3f4be"
+    },
+    {
+      "title": "flydubai restores 85% of its network",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_airline",
+      "published_at": "2026-09-14T00:00:00Z",
+      "published_date": "2026-09-14",
+      "url": "https://www.aviationnews-online.com/article/flydubai-restores-85-of-its-network",
+      "summary": "Dubai low-cost airline flydubai has restored operations to 85% of its network, growing its network to more than 125 destinations across its network in 56 countries.flydubai has continued to expand its...",
+      "author": "Lavanya Ahire",
+      "categories_raw": [
+        "Airline",
+        "Middle East/Africa"
+      ],
+      "region_raw": "Middle East/Africa",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T09:38:14Z",
+      "id": "8d4256a6cb25a8ae88c0493d"
+    },
+    {
       "title": "airBaltic files for Chapter 11 with €350m ($405m) DIP financing",
       "source": "Aviation News Online",
       "source_channel": "aviationnews_finance",
@@ -274,6 +328,26 @@
       "id": "50dcebad247459f82406f670"
     },
     {
+      "title": "Uzbekistan Airways inks long-term support agreement",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_airline",
+      "published_at": "2026-09-14T00:00:00Z",
+      "published_date": "2026-09-14",
+      "url": "https://www.aviationnews-online.com/article/uzbekistan-airways-inks-long-term-support-agreement",
+      "summary": "Uzbekistan Airways and Lufthansa Technik have signed a long-term agreement for comprehensive component support services covering the carrier’s Boeing 787 Dreamliner and Airbus A320ceo/neo fleets throu...",
+      "author": "Calum Wilson",
+      "categories_raw": [
+        "Airline",
+        "Asia/Pacific"
+      ],
+      "region_raw": "Asia/Pacific",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T09:38:14Z",
+      "id": "a8af6fc7b45e6ef8f811c8f7"
+    },
+    {
       "title": "Sophia Space and SLI set terms for $300m satellite financing",
       "source": "Aviation News Online",
       "source_channel": "aviationnews_finance",
@@ -312,6 +386,26 @@
       "rights_mode": "public_listing_metadata",
       "fetched_at": "2026-09-14T08:59:45Z",
       "id": "b9392e3764a45d6ea0883aaa"
+    },
+    {
+      "title": "Jeju Air extends Incheon-Jeju service through March, adds flights",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_airline",
+      "published_at": "2026-09-14T00:00:00Z",
+      "published_date": "2026-09-14",
+      "url": "https://www.aviationnews-online.com/article/jeju-air-extends-incheon-jeju-service-through-march-adds-flights",
+      "summary": "Jeju Air will extend its Incheon-Jeju service through March 27 next year and increase the route's frequency from two to three weekly flights, according to local media reports.The route, launched on Ma...",
+      "author": "Lavanya Ahire",
+      "categories_raw": [
+        "Airline",
+        "Asia/Pacific"
+      ],
+      "region_raw": "Asia/Pacific",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T09:38:14Z",
+      "id": "8528496fbc73cb50380b299d"
     },
     {
       "title": "Gol connects Europe to El Calafate and Ushuaia through its network in Brazil",
@@ -372,6 +466,47 @@
       "rights_mode": "public_listing_metadata",
       "fetched_at": "2026-09-14T08:56:46Z",
       "id": "3e545c112e8dbaeb109f4c31"
+    },
+    {
+      "title": "China tightens airline overbooking rules across 10 carriers and five platforms",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_airline",
+      "published_at": "2026-09-14T00:00:00Z",
+      "published_date": "2026-09-14",
+      "url": "https://www.aviationnews-online.com/article/china-tightens-airline-overbooking-rules-across-10-carriers-and-five-platforms",
+      "summary": "Ten Chinese airlines and five online booking platforms have completed an overhaul of flight overbooking practices covering ticket disclosures, airport handling, compensation and complaints, according ...",
+      "author": "Justin Pugsley",
+      "categories_raw": [
+        "Airline",
+        "Asia/Pacific"
+      ],
+      "region_raw": "Asia/Pacific",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T09:38:14Z",
+      "id": "8ebe72f8824ef4172a1e60fa"
+    },
+    {
+      "title": "CBD Aviation delivers TAROM’s first Boeing 737 MAX",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_leasing",
+      "published_at": "2026-09-14T00:00:00Z",
+      "published_date": "2026-09-14",
+      "url": "https://www.aviationnews-online.com/article/cbd-aviation-delivers-taroms-first-boeing-737-max",
+      "summary": "Romanian national carrier TAROM has taken delivery of its first 737-8 from CDB Aviation, marking the first Boeing 737 MAX in Romania.This is the first of two airplanes leased from CDB Aviation to rene...",
+      "author": "Lavanya Ahire",
+      "categories_raw": [
+        "Airline",
+        "Europe",
+        "Leasing"
+      ],
+      "region_raw": "Europe",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T09:38:11Z",
+      "id": "ee267c4d5f7cf2914a7f1f7f"
     },
     {
       "title": "Bombardier Global 8000 receives UK approval to land at London City Airport",
@@ -3091,6 +3226,23 @@
       "rights_mode": "search_result_metadata",
       "fetched_at": "2026-09-14T08:30:18Z",
       "id": "120beb19c1eb2e8f71a43f67"
+    },
+    {
+      "title": "Hawker Operators Gain Access to High-Speed Starlink Connectivity Through Textron Aviation Customer Support Network",
+      "source": "Business Wire",
+      "source_channel": "bing_news_rss",
+      "published_at": "2026-09-08T03:00:00Z",
+      "published_date": "2026-09-08",
+      "url": "https://www.businesswire.com/news/home/20260908170569/en/Hawker-Operators-Gain-Access-to-High-Speed-Starlink-Connectivity-Through-Textron-Aviation-Customer-Support-Network",
+      "summary": "WICHITA, Kan.--(BUSINESS WIRE)--Textron Aviation Inc., a Textron Inc. (NYSE: TXT) company, today announced Starlink’s high-speed internet is now available for the Hawker 700, 800 and 900 series ...",
+      "author": "",
+      "categories_raw": [],
+      "region_raw": "",
+      "discovered_via": "Bing News",
+      "discovery_query": "\"aviation finance\" aircraft",
+      "rights_mode": "search_result_metadata",
+      "fetched_at": "2026-09-14T09:38:22Z",
+      "id": "c471b20af088548e4dd33422"
     },
     {
       "title": "Air New Zealand improves punctuality as engine shortages help drive NZ$336 million loss",
@@ -7589,6 +7741,23 @@
       "rights_mode": "search_result_metadata",
       "fetched_at": "2026-09-14T08:27:23Z",
       "id": "7626be0b0f542abfd9e9463a"
+    },
+    {
+      "title": "Maria Rugamer",
+      "source": "Reuters",
+      "source_channel": "reuters_via_bing",
+      "published_at": "2026-08-30T17:00:00Z",
+      "published_date": "2026-08-30",
+      "url": "https://www.reuters.com/authors/maria-rugamer/",
+      "summary": "Poland pivots to home-grown defence production as it builds Europe's biggest army As Poland builds Europe's biggest army, it is pivoting toward domestic and other central European defence companies to ...",
+      "author": "",
+      "categories_raw": [],
+      "region_raw": "",
+      "discovered_via": "Bing News",
+      "discovery_query": "site:reuters.com Boeing Airbus deliveries",
+      "rights_mode": "search_result_metadata",
+      "fetched_at": "2026-09-14T09:38:27Z",
+      "id": "03827962a66a44d36d4a480a"
     },
     {
       "title": "BOC Aviation (BCVVF) Gets a Buy from Citic Securities",
@@ -14080,6 +14249,23 @@
       "rights_mode": "public_listing_metadata",
       "fetched_at": "2026-09-14T08:49:09Z",
       "id": "7806cf74b9782c26456725cb"
+    },
+    {
+      "title": "Should I pay cash for my aircraft?",
+      "source": "MSN",
+      "source_channel": "bing_news_rss",
+      "published_at": "2026-08-10T11:34:00Z",
+      "published_date": "2026-08-10",
+      "url": "https://www.msn.com/en-us/money/personalfinance/should-i-pay-cash-for-my-aircraft/ar-AA29N82u",
+      "summary": "I stood with the Diamond Aircraft team at EAA AirVenture Oshkosh 2026 watching a ceremonious signing for a new twin engine DA62. The gentleman could not have beamed brighter as he shook hands with the ...",
+      "author": "",
+      "categories_raw": [],
+      "region_raw": "",
+      "discovered_via": "Bing News",
+      "discovery_query": "\"aviation finance\" aircraft",
+      "rights_mode": "search_result_metadata",
+      "fetched_at": "2026-09-14T09:38:22Z",
+      "id": "7400eeb36f41fb88e4cfe9f7"
     },
     {
       "title": "Should I Pay Cash for My Aircraft?",

@@ -1,0 +1,37 @@
+{
+  "schema_version": 2,
+  "checked_at": "2026-09-14T09:38:27Z",
+  "status": "pass",
+  "analysis_mode": "deepseek",
+  "deepseek_configured": true,
+  "categories": [
+    "Leasing & Trading",
+    "Aircraft & OEM",
+    "Airlines & Credit",
+    "Financing & Capital Markets",
+    "Engines & MRO",
+    "Values & Lease Rates",
+    "Legal & Regulatory",
+    "Macro & Geopolitics"
+  ],
+  "raw_pool_total": 1259,
+  "recent_raw_items": 196,
+  "new_raw_items": 196,
+  "new_preclusters": 192,
+  "current_stories": 183,
+  "archive_stories": 186,
+  "deepseek_calls": 1,
+  "deepseek_failed_batches": 6,
+  "deepseek_errors": [
+    "batch_1: RuntimeError: ValueError: empty DeepSeek content; ValueError: empty DeepSeek content",
+    "batch_2: RuntimeError: ValueError: empty DeepSeek content; ValueError: empty DeepSeek content",
+    "batch_3: RuntimeError: ValueError: empty DeepSeek content; ValueError: empty DeepSeek content",
+    "batch_4: RuntimeError: ValueError: empty DeepSeek content; ValueError: empty DeepSeek content",
+    "batch_5: RuntimeError: ValueError: empty DeepSeek content; ValueError: empty DeepSeek content",
+    "batch_6: RuntimeError: ValueError: empty DeepSeek content; ValueError: empty DeepSeek content"
+  ],
+  "clusters_submitted": 192,
+  "clusters_retained_or_accounted": 192,
+  "fallback_story_count": 180,
+  "deepseek_story_count": 3
+}
