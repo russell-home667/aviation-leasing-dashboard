@@ -45,6 +45,27 @@
       "kind": "rss",
       "url": "https://platform.ishkaairfinance.com/Rss/News?id=1&s=5987&u=0&v=2",
       "rights_mode": "official_rss_metadata"
+    },
+    {
+      "id": "aviationnews_bing_web_leasing",
+      "name": "Aviation News Online",
+      "kind": "rss",
+      "url": "https://www.bing.com/search?format=rss&q=site%3Aaviationnews-online.com%2Fpublic%2Farticle%2F+%22aircraft+leasing%22",
+      "rights_mode": "search_result_metadata"
+    },
+    {
+      "id": "aviationnews_bing_web_finance",
+      "name": "Aviation News Online",
+      "kind": "rss",
+      "url": "https://www.bing.com/search?format=rss&q=site%3Aaviationnews-online.com%2Fpublic%2Farticle%2F+%22aviation+finance%22",
+      "rights_mode": "search_result_metadata"
+    },
+    {
+      "id": "aviationnews_bing_web_lessor",
+      "name": "Aviation News Online",
+      "kind": "rss",
+      "url": "https://www.bing.com/search?format=rss&q=site%3Aaviationnews-online.com%2Fpublic%2Farticle%2F+lessor+aircraft",
+      "rights_mode": "search_result_metadata"
     }
   ],
   "blocked_direct_sources": [
@@ -60,7 +81,7 @@
         "https://aviationnews-online.com/public/category/regulatory",
         "https://aviationnews-online.com/public/category/people"
       ],
-      "reason": "GitHub-hosted runner returned HTTP 403 on 2026-09-14. Use dedicated Bing News RSS discovery queries for this publisher."
+      "reason": "GitHub-hosted runner returned HTTP 403 on 2026-09-14. Metadata fallback is tested through Bing web/news RSS instead of bypassing publisher controls."
     },
     {
       "name": "FlightGlobal",
