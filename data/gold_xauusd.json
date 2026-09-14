@@ -39,14 +39,14 @@
   "history_fetch_warning": "503 Server Error: Service Unavailable for url: https://xaus.com/api/v1/history",
   "world_bank_fetch_warning": null,
   "latest_quote": {
-    "price": 4313.7,
-    "timestamp": "2026-09-14T18:39:08Z",
+    "price": 4307.0,
+    "timestamp": "2026-09-14T19:02:38Z",
     "quote_status": "GOLD_API_REALTIME",
     "source": "gold-api.com",
     "source_state": {
       "status": "fresh"
     },
-    "retrieved_at_bjt": "2026-09-15T02:39:25+08:00",
+    "retrieved_at_bjt": "2026-09-15T03:02:44+08:00",
     "observation_date": "2026-09-14"
   },
   "data": [
@@ -12782,5 +12782,5 @@
       "low": 4357.9
     }
   ],
-  "updated_at_bjt": "2026-09-15T02:39:25+08:00"
+  "updated_at_bjt": "2026-09-15T03:02:44+08:00"
 }
