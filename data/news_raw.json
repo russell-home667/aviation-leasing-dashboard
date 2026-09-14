@@ -1,15 +1,16 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-14T08:37:59Z",
+  "generated_at": "2026-09-14T08:40:12Z",
   "retention_days": 45,
   "metadata_only": true,
   "stats": {
-    "current_batch_unique": 251,
-    "stored_total": 110,
-    "reuters_discovered_via_bing": 11,
+    "current_batch_unique": 336,
+    "stored_total": 194,
+    "reuters_discovered_via_bing": 12,
     "by_source": {
       "AeroTime": 1,
       "Aerospace and Mechanical Insider on MSN": 1,
+      "Aviation News Online": 83,
       "Aviation Week": 1,
       "Aviation Week Network": 1,
       "Bizcommunity on MSN": 2,
@@ -39,7 +40,7 @@
       "Nairametrics": 1,
       "Pensacola News Journal": 1,
       "Republic World": 1,
-      "Reuters": 11,
+      "Reuters": 12,
       "Seeking Alpha": 1,
       "The Daily Star": 1,
       "The Financial Express": 1,
@@ -54,6 +55,14 @@
       "ch-aviation": 1
     },
     "by_channel": {
+      "aviationnews_airline": 9,
+      "aviationnews_engine": 12,
+      "aviationnews_finance": 11,
+      "aviationnews_leasing": 12,
+      "aviationnews_legal": 12,
+      "aviationnews_maintenance": 10,
+      "aviationnews_people": 9,
+      "aviationnews_regulatory": 8,
       "bing_news_rss": 53,
       "ishka_aircraft_rss": 9,
       "ishka_airlines_rss": 6,
@@ -61,7 +70,7 @@
       "ishka_latest_rss": 10,
       "ishka_law_rss": 9,
       "ishka_lessors_rss": 7,
-      "reuters_via_bing": 11
+      "reuters_via_bing": 12
     }
   },
   "items": [
@@ -196,6 +205,151 @@
       "rights_mode": "official_rss_metadata",
       "fetched_at": "2026-09-14T08:26:35Z",
       "id": "ad6991a8e1c3ce0a9989272d"
+    },
+    {
+      "title": "airBaltic files for Chapter 11 with €350m ($405m) DIP financing",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_finance",
+      "published_at": "2026-09-14T00:00:00Z",
+      "published_date": "2026-09-14",
+      "url": "https://www.aviationnews-online.com/article/airbaltic-files-for-chapter-11-with-eur350m-405m-dip-financing",
+      "summary": "Latvia’s airBaltic has filed for protection under Chapter 11 of the US Bankruptcy Code in New York as part of a financial restructuring aimed at reducing its obligations while maintaining scheduled se...",
+      "author": "Justin Pugsley",
+      "categories_raw": [
+        "Airline",
+        "Editorial Comment",
+        "Europe",
+        "Featured",
+        "Finance"
+      ],
+      "region_raw": "Europe",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:18Z",
+      "id": "7bc3125b89ab62c06efa9ff1"
+    },
+    {
+      "title": "WFW’s Jim Bell contributes to Bloomsbury’s Aircraft Financing book",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_legal",
+      "published_at": "2026-09-14T00:00:00Z",
+      "published_date": "2026-09-14",
+      "url": "https://www.aviationnews-online.com/article/wfws-jim-bell-contributes-to-bloomsburys-aircraft-financing-book",
+      "summary": "Watson Farley & Williams' (WFW) global aviation, aerospace and defence sector head Jim Bell has authored a chapter in Bloomsbury's Aircraft Financing on environmental matters and the aviation industry...",
+      "author": "Calum Wilson",
+      "categories_raw": [
+        "Europe",
+        "Legal"
+      ],
+      "region_raw": "Europe",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:23Z",
+      "id": "50dcebad247459f82406f670"
+    },
+    {
+      "title": "Sophia Space and SLI set terms for $300m satellite financing",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_finance",
+      "published_at": "2026-09-14T00:00:00Z",
+      "published_date": "2026-09-14",
+      "url": "https://www.aviationnews-online.com/article/sophia-space-and-sli-set-terms-for-300m-satellite-financing",
+      "summary": "Sophia Space and aerospace leasing specialist SLI have agreed terms for a $300 million financing framework to support the deployment of a planned 10-satellite high-performance edge computing constella...",
+      "author": "Justin Pugsley",
+      "categories_raw": [
+        "Finance",
+        "Space"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:18Z",
+      "id": "95c7cb0cc99109ebf9f8a8ba"
+    },
+    {
+      "title": "Gol connects Europe to El Calafate and Ushuaia through its network in Brazil",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_airline",
+      "published_at": "2026-09-14T00:00:00Z",
+      "published_date": "2026-09-14",
+      "url": "https://www.aviationnews-online.com/article/gol-c",
+      "summary": "GOL Linhas Aéreas is using its Brazilian hubs to funnel European traffic into Southern Patagonia, introducing intercontinental connections and seasonal regional routes.From September 16, 2026, the air...",
+      "author": "Calum Wilson",
+      "categories_raw": [
+        "Airline",
+        "Americas"
+      ],
+      "region_raw": "Americas",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:19Z",
+      "id": "4f51729b2eb208834122005b"
+    },
+    {
+      "title": "Global air cargo volumes slip 1% as Middle East tensions weigh",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_airline",
+      "published_at": "2026-09-14T00:00:00Z",
+      "published_date": "2026-09-14",
+      "url": "https://www.aviationnews-online.com/article/global-air-cargo-volumes-slip-1-as-middle-east-tensions-weigh",
+      "summary": "Global air cargo volumes slipped 1% week on week in the seven days to September 6 as renewed Middle East hostilities and national holidays in Southeast Asia weighed on traffic, according to WorldACD. ...",
+      "author": "Justin Pugsley",
+      "categories_raw": [
+        "Airline",
+        "Cargo"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:19Z",
+      "id": "52ac74c46adf9c44b8d360f5"
+    },
+    {
+      "title": "Bombardier Global 8000 receives UK approval to land at London City Airport",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_regulatory",
+      "published_at": "2026-09-14T00:00:00Z",
+      "published_date": "2026-09-14",
+      "url": "https://www.aviationnews-online.com/article/bombardier-global-8000-receives-uk-approval-to-land-at-london-city-airport",
+      "summary": "Bombardier’s Global 8000 business jet has received UK Civil Aviation Authority (CAA) approval to land at London City Airport, giving the jet faster access to one of the major financial hubs in the wor...",
+      "author": "Lavanya Ahire",
+      "categories_raw": [
+        "Corporate Jets",
+        "Europe",
+        "Regulatory"
+      ],
+      "region_raw": "Europe",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:24Z",
+      "id": "8ca3b3af957033e1b09fa19b"
+    },
+    {
+      "title": "ANA to merge cargo businesses into Nippon Cargo Airlines",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_airline",
+      "published_at": "2026-09-14T00:00:00Z",
+      "published_date": "2026-09-14",
+      "url": "https://www.aviationnews-online.com/article/ana-to-merge-cargo-businesses-into-nippon-cargo-airlines",
+      "summary": "ANA Holdings will merge Nippon Cargo Airlines, NCA Japan and ANA Cargo into a single entity as part of a wider reorganisation of its global air freight business.The integration will take effect on Apr...",
+      "author": "Justin Pugsley",
+      "categories_raw": [
+        "Airline",
+        "Asia/Pacific",
+        "Cargo"
+      ],
+      "region_raw": "Asia/Pacific",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:19Z",
+      "id": "8ffa78e5aecf468450301eae"
     },
     {
       "title": "My job: Connecting Ireland's dominance in aircraft leasing with elite football",
@@ -485,6 +639,361 @@
       "id": "484f3750b78e0c77c56ff36a"
     },
     {
+      "title": "Saudia adds Riyadh-Muscat to winter network",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_airline",
+      "published_at": "2026-09-11T00:00:00Z",
+      "published_date": "2026-09-11",
+      "url": "https://www.aviationnews-online.com/article/saudia-adds-riyadh-muscat-to-winter-network",
+      "summary": "Saudia is set to launch seasonal flights between Riyadh and Muscat on October 27.The route will operate three times a week from Riyadh, providing a direct link between Saudi Arabia and Oman.The Riyadh...",
+      "author": "Lavanya Ahire",
+      "categories_raw": [
+        "Airline",
+        "Middle East/Africa"
+      ],
+      "region_raw": "Middle East/Africa",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:19Z",
+      "id": "9b1b7c278ad0b1e9a3bfcfb3"
+    },
+    {
+      "title": "SATA receives eight expressions of interest for Azores Airlines privatisation",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_finance",
+      "published_at": "2026-09-11T00:00:00Z",
+      "published_date": "2026-09-11",
+      "url": "https://www.aviationnews-online.com/article/sata-receives-eight-expressions-of-interest-for-azores-airlines-privatisation",
+      "summary": "SATA Holding has received eight expressions of interest in the privatisation of SATA Internacional – Azores Airlines, as it seeks to sell at least 75% of the carrier’s share capital.Interested parties...",
+      "author": "Justin Pugsley",
+      "categories_raw": [
+        "Airline",
+        "Europe",
+        "Finance"
+      ],
+      "region_raw": "Europe",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:18Z",
+      "id": "d77f1e57b2728494b5c10924"
+    },
+    {
+      "title": "QantasLink brings first E190 to Perth to replace F100 fleet",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_airline",
+      "published_at": "2026-09-11T00:00:00Z",
+      "published_date": "2026-09-11",
+      "url": "https://www.aviationnews-online.com/article/qantaslink-brings-first-e190-to-perth-to-replace-f100-fleet",
+      "summary": "QantasLink has received its first Embraer E190 in Perth as the regional carrier progressively replace its ageing Fokker 100 fleet.The 100-seat aircraft arrived in Perth after completing a 20-hour deli...",
+      "author": "Lavanya Ahire",
+      "categories_raw": [
+        "Airline",
+        "Asia/Pacific",
+        "Corporate Jets"
+      ],
+      "region_raw": "Asia/Pacific",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:19Z",
+      "id": "8eed5edb0d97dd8e461f47ce"
+    },
+    {
+      "title": "Porter and PAL pilots seek conciliation as contract talks stall",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_people",
+      "published_at": "2026-09-11T00:00:00Z",
+      "published_date": "2026-09-11",
+      "url": "https://www.aviationnews-online.com/article/porter-and-pal-pilots-seek-conciliation-as-contract-talks-stall",
+      "summary": "Pilots at Porter Airlines and PAL Airlines have asked for federal conciliation assistance after contract negotiations with both Canadian carriers stalled.Porter pilots, represented by the Air Line Pil...",
+      "author": "Justin Pugsley",
+      "categories_raw": [
+        "Airline",
+        "People"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:25Z",
+      "id": "0bf9b6f234d6b61f78b1d508"
+    },
+    {
+      "title": "Pegasus wins Czech approval for €154m ($179m) Smartwings acquisition",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_finance",
+      "published_at": "2026-09-11T00:00:00Z",
+      "published_date": "2026-09-11",
+      "url": "https://www.aviationnews-online.com/article/pegasus-wins-czech-approval-for-eur154m-179m-smartwings-acquisition",
+      "summary": "Pegasus Airlines has received approval from the Czech antitrust regulator for its €154 million ($179 million) acquisition of Smartwings, clearing another major regulatory hurdle in the Turkish carrier...",
+      "author": "Super Admin",
+      "categories_raw": [
+        "Airline",
+        "Europe",
+        "Finance"
+      ],
+      "region_raw": "Europe",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:18Z",
+      "id": "c70845a3b4db0fefb44977b9"
+    },
+    {
+      "title": "Panmure Liberum names IAG and Ryanair as top European airline picks",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_finance",
+      "published_at": "2026-09-11T00:00:00Z",
+      "published_date": "2026-09-11",
+      "url": "https://www.aviationnews-online.com/article/panmure-liberum-names-iag-and-ryanair-as-top-european-airline-picks",
+      "summary": "Panmure Liberum has named IAG and Ryanair as its top European airline picks, as the broker warned that the sector has yet to fully adjust capacity to persistently high jet fuel prices.The broker ranke...",
+      "author": "Justin Pugsley",
+      "categories_raw": [
+        "Airline",
+        "Europe",
+        "Finance"
+      ],
+      "region_raw": "Europe",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:18Z",
+      "id": "a29fddb70232622ec14f03f2"
+    },
+    {
+      "title": "Iberia Maintenance wins approval for A350 heavy maintenance",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_maintenance",
+      "published_at": "2026-09-11T00:00:00Z",
+      "published_date": "2026-09-11",
+      "url": "https://www.aviationnews-online.com/article/iberia-maintenance-wins-approval-for-a350-heavy-maintenance",
+      "summary": "Iberia has received approval from Spain's aviation safety regulator to carry out comprehensive heavy maintenance on Airbus A350 aircraft.The Spanish Aviation Safety and Security Agency (AESA) granted ...",
+      "author": "Lavanya Ahire",
+      "categories_raw": [
+        "Airline",
+        "Europe",
+        "Maintenance"
+      ],
+      "region_raw": "Europe",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:22Z",
+      "id": "5f921c84584f9f460a3de830"
+    },
+    {
+      "title": "ICAO calls for stronger aviation security as it marks 9/11 anniversary",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_airline",
+      "published_at": "2026-09-11T00:00:00Z",
+      "published_date": "2026-09-11",
+      "url": "https://www.aviationnews-online.com/article/icao-calls-for-stronger-aviation-security-as-it-marks-911-anniversary",
+      "summary": "The International Civil Aviation Organization has called for continued international cooperation and investment in aviation security as it marked the anniversary of the September 11, 2001 attacks.ICAO...",
+      "author": "Justin Pugsley",
+      "categories_raw": [
+        "Airline",
+        "Regulatory"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:19Z",
+      "id": "2c49648d6be0098b6ff7808b"
+    },
+    {
+      "title": "Hyatt announces Delta loyalty partnership and ends American Airlines tie-up",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_finance",
+      "published_at": "2026-09-11T00:00:00Z",
+      "published_date": "2026-09-11",
+      "url": "https://www.aviationnews-online.com/article/hyatt-announces-delta-loyalty-partnership-and-ends-american-airlines-tie-up",
+      "summary": "Hyatt Hotels Corporation has agreed a new long-term loyalty partnership with Delta Air Lines, while separately ending its enhanced relationship with American Airlines.Under the Delta collaboration, el...",
+      "author": "Justin Pugsley",
+      "categories_raw": [
+        "Airline",
+        "Americas",
+        "Finance"
+      ],
+      "region_raw": "Americas",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:18Z",
+      "id": "fb2983cc2de7b1564bb7affb"
+    },
+    {
+      "title": "Groupe Dubreuil appoints Laurent Perrier as MD of its aero services",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_airline",
+      "published_at": "2026-09-11T00:00:00Z",
+      "published_date": "2026-09-11",
+      "url": "https://www.aviationnews-online.com/article/groupe-dubreuil-appoints-laurent-perrier-as-md-of-its-aero-services",
+      "summary": "Owner of Air Caraibes and French bee, Groupe Dubreuil appointed Laurent Perrier as Managing Director of Groupe Dubreuil Aéro Services.Perrier will join Groupe Dubreuil’s aviation division on September...",
+      "author": "Lavanya Ahire",
+      "categories_raw": [
+        "Airline",
+        "Europe",
+        "People"
+      ],
+      "region_raw": "Europe",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:19Z",
+      "id": "9ca28133ebb61b438b47a1f6"
+    },
+    {
+      "title": "Etihad to launch year-round Abu Dhabi-Red Sea service",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_airline",
+      "published_at": "2026-09-11T00:00:00Z",
+      "published_date": "2026-09-11",
+      "url": "https://www.aviationnews-online.com/article/etihad-to-launch-year-round-abu-dhabi-red-sea-service",
+      "summary": "Etihad Airways will launch a year-round service between Abu Dhabi and Saudi Arabia's Red Sea International Airport on October 4.The route will initially operate once a week before increasing to two we...",
+      "author": "Lavanya Ahire",
+      "categories_raw": [
+        "Airline",
+        "Middle East/Africa"
+      ],
+      "region_raw": "Middle East/Africa",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:19Z",
+      "id": "ab319fc4c1c7ef0b990d3872"
+    },
+    {
+      "title": "CDB Aviation completes delivery of five A321neos to LATAM",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_leasing",
+      "published_at": "2026-09-11T00:00:00Z",
+      "published_date": "2026-09-11",
+      "url": "https://www.aviationnews-online.com/article/cdb-aviation-completes-delivery-of-five-a321neos-to-latam",
+      "summary": "CDB Aviation has completed the delivery of five Airbus A321neo aircraft to LATAM Airlines Group.The five A321-271NX aircraft, powered by Pratt & Whitney GTF engines, were delivered under leasing agree...",
+      "author": "Lavanya Ahire",
+      "categories_raw": [
+        "Airline",
+        "Americas",
+        "Leasing"
+      ],
+      "region_raw": "Americas",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:16Z",
+      "id": "d853b1a340e4fe52396a1084"
+    },
+    {
+      "title": "Boeing sees aircraft financing shifts toward bank debt; expects 43,625 commercial aircraft delivered between 2026 and 2045",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_finance",
+      "published_at": "2026-09-11T00:00:00Z",
+      "published_date": "2026-09-11",
+      "url": "https://www.aviationnews-online.com/article/boeing-sees-aircraft-financing-shifts-toward-bank-debt-expects-43625-commercial-aircraft-delivered-between-2026-and-2045",
+      "summary": "Financing for commercial aircraft deliveries is becoming increasingly reliant on bank debt and leasing companies as manufacturers work through elevated delivery volumes, according to Boeing's latest a...",
+      "author": "Lavanya Ahire",
+      "categories_raw": [
+        "Americas",
+        "Finance"
+      ],
+      "region_raw": "Americas",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:18Z",
+      "id": "3470979ac9f15ece04cbc889"
+    },
+    {
+      "title": "Algeria closes airspace to UAE aircraft after cutting diplomatic ties",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_airline",
+      "published_at": "2026-09-11T00:00:00Z",
+      "published_date": "2026-09-11",
+      "url": "https://www.aviationnews-online.com/article/algeria-closes-airspace-to-uae-aircraft-after-cutting-diplomatic-ties",
+      "summary": "Algeria has closed its airspace to UAE-registered civilian and military aircraft after cutting diplomatic ties with Abu Dhabi amid a sharp deterioration in relations between the two countries.The Alge...",
+      "author": "Justin Pugsley",
+      "categories_raw": [
+        "Airline",
+        "Middle East/Africa",
+        "Regulatory"
+      ],
+      "region_raw": "Middle East/Africa",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:19Z",
+      "id": "96377cd207dd012aee543440"
+    },
+    {
+      "title": "Aircraft lessors face rising financial risks from carbon costs, AE+ Aircraft Lessor Sustainability Index warns",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_leasing",
+      "published_at": "2026-09-11T00:00:00Z",
+      "published_date": "2026-09-11",
+      "url": "https://www.aviationnews-online.com/article/airline-economics-aircraft-lessor-sustainability-index-aircraft-lessors-face-rising-financial-risks-from-carbon-costs",
+      "summary": "Aircraft lessors face growing financial risks from rising carbon costs and tighter emissions rules as older aircraft become increasingly expensive for airlines to operate, according to the 2026 Airlin...",
+      "author": "Lavanya Ahire",
+      "categories_raw": [
+        "Airline",
+        "Editorial Comment",
+        "Environmental",
+        "Featured",
+        "Finance",
+        "Leasing"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:16Z",
+      "id": "4c9f2564e2e2568d4ffd3641"
+    },
+    {
+      "title": "Airbus launches share buyback for employee compensation plans",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_finance",
+      "published_at": "2026-09-11T00:00:00Z",
+      "published_date": "2026-09-11",
+      "url": "https://www.aviationnews-online.com/article/airbus-launches-share-buyback-for-employee-compensation-plans",
+      "summary": "Airbus has launched a share buyback programme for up to 4.1 million shares to support future employee share ownership and equity-based compensation plans.The programme will run from September 11 until...",
+      "author": "Justin Pugsley",
+      "categories_raw": [
+        "Finance",
+        "Technology"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:18Z",
+      "id": "6a5918dfd26c7d1710fceb8a"
+    },
+    {
+      "title": "39% of Ryanair shareholders oppose O’Leary pay deal",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_finance",
+      "published_at": "2026-09-11T00:00:00Z",
+      "published_date": "2026-09-11",
+      "url": "https://www.aviationnews-online.com/article/39-of-ryanair-shareholders-oppose-oleary-pay-deal",
+      "summary": "Ryanair has faced a sizeable shareholder revolt over chief executive Michael O’Leary’s remuneration, with 39% of investors voting against a pay plan that could net him at least €150 million ($174 mill...",
+      "author": "Justin Pugsley",
+      "categories_raw": [
+        "Airline",
+        "Europe",
+        "Finance",
+        "People"
+      ],
+      "region_raw": "Europe",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:18Z",
+      "id": "f296ee708310f51e05693cb1"
+    },
+    {
       "title": "Exclusive: Silverman launches Jigsaw Aviation",
       "source": "Ishka Airfinance",
       "source_channel": "ishka_lessors_rss",
@@ -731,6 +1240,170 @@
       "id": "eb165ee757062fc7fea94dbc"
     },
     {
+      "title": "Ryanair expects fare advantage as O’Leary renews criticism of UK air traffic control",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_people",
+      "published_at": "2026-09-10T00:00:00Z",
+      "published_date": "2026-09-10",
+      "url": "https://www.aviationnews-online.com/article/ryanair-expects-fare-advantage-as-oleary-renews-criticism-of-uk-air-traffic-control",
+      "summary": "Ryanair chief executive Michael O’Leary said higher fares at rival European airlines could push more passengers towards the low-cost carrier, as he also renewed criticism of UK air traffic control ope...",
+      "author": "Justin Pugsley",
+      "categories_raw": [
+        "Airline",
+        "Europe",
+        "People"
+      ],
+      "region_raw": "Europe",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:25Z",
+      "id": "09691ba289b1ee5aa8343d50"
+    },
+    {
+      "title": "Qatar Airways highlights $4bn maintenance hub supporting global operations",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_maintenance",
+      "published_at": "2026-09-10T00:00:00Z",
+      "published_date": "2026-09-10",
+      "url": "https://www.aviationnews-online.com/article/qatar-airways-highlights-4bn-maintenance-hub-supporting-global-operations",
+      "summary": "Qatar Airways has highlighted the scale of its maintenance and operational infrastructure, with its Maintenance, Repair and Overhaul centre holding around $4 billion in assets and inventory.Chief tech...",
+      "author": "Justin Pugsley",
+      "categories_raw": [
+        "Airline",
+        "Maintenance",
+        "Middle East/Africa",
+        "Parts"
+      ],
+      "region_raw": "Middle East/Africa",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:22Z",
+      "id": "ddee35a67d76ff14ce253beb"
+    },
+    {
+      "title": "Growth Frontiers London: aircraft ABS market eyes E-note revival as capital competition intensifies",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_finance",
+      "published_at": "2026-09-10T00:00:00Z",
+      "published_date": "2026-09-10",
+      "url": "https://www.aviationnews-online.com/article/growth-frontiers-london-aircraft-abs-market-eyes-e-note-revival-as-capital-competition-intensifies",
+      "summary": "Aircraft ABS markets are heading towards a more segmented structure, with seasoned issuers expected to lean increasingly on master trusts and repeat issuance while new entrants use more tailored deals...",
+      "author": "Justin Pugsley",
+      "categories_raw": [
+        "Finance"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:18Z",
+      "id": "febe656e6c50c6351c351b3b"
+    },
+    {
+      "title": "Growth Frontiers London: UKEF and DBT highlight strategic support, liquidity dynamics, and technological shift",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_finance",
+      "published_at": "2026-09-10T00:00:00Z",
+      "published_date": "2026-09-10",
+      "url": "https://www.aviationnews-online.com/article/ukef-and-dbt-highlight-strategic-support-liquidity-dynamics-and-technological-shift",
+      "summary": "Commercial liquidity for civil aviation financing remains remarkably robust, leading UK Export Finance (UKEF) to pivot towards targeted asset classes, supply chain support, and backstop protection whi...",
+      "author": "Calum Wilson",
+      "categories_raw": [
+        "Europe",
+        "Finance",
+        "Regulatory"
+      ],
+      "region_raw": "Europe",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:18Z",
+      "id": "b143a26bf85e13d96560959b"
+    },
+    {
+      "title": "Growth Frontiers London: High fuel prices may drive uptick in aircraft repossessions",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_regulatory",
+      "published_at": "2026-09-10T00:00:00Z",
+      "published_date": "2026-09-10",
+      "url": "https://www.aviationnews-online.com/article/growth-frontiers-london-high-fuel-prices-may-drive-uptick-in-aircraft-repossessions",
+      "summary": "Elevated fuel prices remain are forcing airlines into a challenging winter, driving an uptick in both consensual and contentious aircraft repossessions, according to industry experts during a aircraft...",
+      "author": "Calum Wilson",
+      "categories_raw": [
+        "Europe",
+        "Regulatory",
+        "Technology"
+      ],
+      "region_raw": "Europe",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:24Z",
+      "id": "b36909ae85832ead831286a3"
+    },
+    {
+      "title": "Growth Frontiers London: Aircraft values surge and capital flows as lessors face tight market",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_leasing",
+      "published_at": "2026-09-10T00:00:00Z",
+      "published_date": "2026-09-10",
+      "url": "https://www.aviationnews-online.com/article/growth-frontiers-london-aircraft-values-surge-and-capital-flows-as-lessors-face-tight-market",
+      "summary": "Tight market conditions, elevated aircraft values, and extreme supply-chain constraints are forcing aircraft lessors and asset managers to remain disciplined as they struggle to deploy capital in an o...",
+      "author": "Calum Wilson",
+      "categories_raw": [
+        "Europe",
+        "Leasing"
+      ],
+      "region_raw": "Europe",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:16Z",
+      "id": "821f63c89d7ca12f470b8177"
+    },
+    {
+      "title": "Black box recorders reveal excessive speed, belated go-around preceded Amazon Air crash",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_regulatory",
+      "published_at": "2026-09-10T00:00:00Z",
+      "published_date": "2026-09-10",
+      "url": "https://www.aviationnews-online.com/article/excessive-speed-belated-go-around-preceded-21-air-b-767-miami-excursion",
+      "summary": "Preliminary cockpit voice and flight data recorder logs reveal that excessive speed and repeated terrain warnings preceded a Sept. 6 runway excursion involving a 21 Air Boeing 767-33A freighter at Mia...",
+      "author": "Calum Wilson",
+      "categories_raw": [
+        "Americas",
+        "Regulatory"
+      ],
+      "region_raw": "Americas",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:24Z",
+      "id": "589fc9eb147d451b6a4ec00e"
+    },
+    {
+      "title": "BOC Aviation inks purchase and lease agreements with Avianca for 12 A320neo aircraft",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_leasing",
+      "published_at": "2026-09-10T00:00:00Z",
+      "published_date": "2026-09-10",
+      "url": "https://www.aviationnews-online.com/article/boc-aviation-inks-purchase-and-lease-agreements-with-avianca-for-12-a320neo-aircraft",
+      "summary": "BOC Aviation has agreed to purchase 12 Airbus A320neo aircraft from the OEM for long-term lease to its existing customer Avianca. The aircraft are scheduled for delivery in 2029 and will all be powere...",
+      "author": "Calum Wilson",
+      "categories_raw": [
+        "Asia/Pacific",
+        "Leasing"
+      ],
+      "region_raw": "Asia/Pacific",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:16Z",
+      "id": "5d0da70984556b8134a5417e"
+    },
+    {
       "title": "Pratt & Whitney Changes Open Door to Fairer Aircraft Engine Repairs",
       "source": "Devdiscourse",
       "source_channel": "bing_news_rss",
@@ -884,6 +1557,254 @@
       "id": "d91001f7a50e304c34712b32"
     },
     {
+      "title": "easyJet sued for $72m over six former Russian-leased aircraft",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_legal",
+      "published_at": "2026-09-09T00:00:00Z",
+      "published_date": "2026-09-09",
+      "url": "https://www.aviationnews-online.com/article/easyjet-sued-for-72m-over-six-former-russian-leased-aircraft",
+      "summary": "easyJet is facing a lawsuit seeking at least $72 million over six Airbus aircraft it stopped leasing in 2022 following the imposition of sanctions on Russia. STLC Europe Eight, an Irish subsidiary of ...",
+      "author": "Justin Pugsley",
+      "categories_raw": [
+        "Airline",
+        "Europe",
+        "Legal"
+      ],
+      "region_raw": "Europe",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:23Z",
+      "id": "1d367a79a1e6580b55d6bb62"
+    },
+    {
+      "title": "US sanctions all remaining Iranian airlines in aviation crackdown",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_regulatory",
+      "published_at": "2026-09-09T00:00:00Z",
+      "published_date": "2026-09-09",
+      "url": "https://www.aviationnews-online.com/article/us-sanctions-all-remaining-iranian-airlines-in-aviation-crackdown",
+      "summary": "The US Treasury has imposed sanctions on all 27 remaining Iranian airlines as Washington intensifies pressure on Iran’s aviation sector and companies supporting sanctioned carrier Mahan Air.The Office...",
+      "author": "Justin Pugsley",
+      "categories_raw": [
+        "Airline",
+        "Regulatory"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:24Z",
+      "id": "9d2395686ef0fb4a9330ccf2"
+    },
+    {
+      "title": "Stratos hires Christopher Luhrs to lead US investor coverage",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_leasing",
+      "published_at": "2026-09-09T00:00:00Z",
+      "published_date": "2026-09-09",
+      "url": "https://www.aviationnews-online.com/article/stratos-hires-christopher-luhrs-to-lead-us-investor-coverage",
+      "summary": "Aircraft asset manager Stratos has appointed Christopher Luhrs as senior vice president and head of US investor coverage, as the company prepares to open its first US office in New York.Luhrs brings m...",
+      "author": "Justin Pugsley",
+      "categories_raw": [
+        "Finance",
+        "Leasing",
+        "People"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:16Z",
+      "id": "b5c1a6baed0940998736472b"
+    },
+    {
+      "title": "Martin Rolfe has not resigned amid building pressure post ATS airport disruption",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_people",
+      "published_at": "2026-09-09T00:00:00Z",
+      "published_date": "2026-09-09",
+      "url": "https://www.aviationnews-online.com/article/nats-chief-mark-rolfe-resigns-over-ats-technical-issue",
+      "summary": "UK Air traffic control company, NATS' CEO Martin Rolfe has not resigned despite increasing pressure on him after a third major stoppage to flights in just over three years, the company told Airline Ec...",
+      "author": "Lavanya Ahire",
+      "categories_raw": [
+        "Airports",
+        "People",
+        "Technology"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:25Z",
+      "id": "378c8c7a4d8d68748128a1a2"
+    },
+    {
+      "title": "MTU Maintenance signs first North African LEAP-1A contracts",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_engine",
+      "published_at": "2026-09-09T00:00:00Z",
+      "published_date": "2026-09-09",
+      "url": "https://www.aviationnews-online.com/article/mtu-maintenance-signs-first-north-african-leap-1a-contracts",
+      "summary": "MTU Maintenance has signed its first LEAP-1A maintenance contracts in North Africa with key airlines in the region, including AIRCAIRO.The contract with AIRCAIRO covers a total of 42 LEAP-1A engines c...",
+      "author": "Lavanya Ahire",
+      "categories_raw": [
+        "Airline",
+        "Engine",
+        "Maintenance",
+        "Middle East/Africa"
+      ],
+      "region_raw": "Middle East/Africa",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:20Z",
+      "id": "6be681e5254e1f2508874570"
+    },
+    {
+      "title": "London Growth Frontier: Narrowbody engine risk rises as widebody scarcity underpins aircraft values",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_leasing",
+      "published_at": "2026-09-09T00:00:00Z",
+      "published_date": "2026-09-09",
+      "url": "https://www.aviationnews-online.com/article/aircraft-valuation-experts-flag-engine-exposure-and-tight-widebody-supply",
+      "summary": "Aircraft appraisers and leasing executives speaking at Airline Economics' Growth Frontiers conference in London highlighted a growing divergence between the narrowbody and widebody markets, warning t...",
+      "author": "Lavanya Ahire",
+      "categories_raw": [
+        "Finance",
+        "Leasing"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:16Z",
+      "id": "cc727a5c73fbbb7ab611c47b"
+    },
+    {
+      "title": "Jeff Silverman partners with Odeon to launch Jigsaw Aviation Ventures, joins AFG as capital markets head",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_people",
+      "published_at": "2026-09-09T00:00:00Z",
+      "published_date": "2026-09-09",
+      "url": "https://www.aviationnews-online.com/article/jeff-silverman-partners-with-odeon-securities-to-launch-jigsaw-aviation-ventures-joins-afg-as-capital-markets-head",
+      "summary": "Jeff Silverman has partnered with Odeon Securities to launch Jigsaw Aviation Ventures, a specialised aviation finance and strategic advisory platform. In addition, Silverman has been appointed global ...",
+      "author": "Calum Wilson",
+      "categories_raw": [
+        "Americas",
+        "Finance",
+        "People"
+      ],
+      "region_raw": "Americas",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:25Z",
+      "id": "89c42aee65309c31880e9dcf"
+    },
+    {
+      "title": "IATA welcomes Pratt & Whitney Canada aftermarket contract changes",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_engine",
+      "published_at": "2026-09-09T00:00:00Z",
+      "published_date": "2026-09-09",
+      "url": "https://www.aviationnews-online.com/article/iata-welcomes-pratt-whitney-canada-aftermarket-contract-changes",
+      "summary": "The International Air Transport Association (IATA) has welcomed changes by Pratt & Whitney Canada to contractual terms that had raised competition concerns in the used engine parts market. The changes...",
+      "author": "Justin Pugsley",
+      "categories_raw": [
+        "Engine",
+        "Regulatory",
+        "Technology"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:20Z",
+      "id": "cd15aa01fd6eb8342a8fe722"
+    },
+    {
+      "title": "Growth Frontiers London: Lessors Warn Aircraft Demand Is Softening as Fuel Costs Rise and OEM Deliveries Recover",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_leasing",
+      "published_at": "2026-09-09T00:00:00Z",
+      "published_date": "2026-09-09",
+      "url": "https://www.aviationnews-online.com/article/growth-frontiers-london-lessors-warn-aircraft-demand-is-softening-as-fuel-costs-rise-and-oem-deliveries-recover",
+      "summary": "Aircraft leasing executives are increasingly cautious about the outlook for aircraft values, warning that demand is beginning to soften after several years of exceptionally tight supply and elevated l...",
+      "author": "Lavanya Ahire",
+      "categories_raw": [
+        "Finance",
+        "Leasing"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:16Z",
+      "id": "2e042437d50718dd0e806992"
+    },
+    {
+      "title": "Global Aerospace names Eric Donofrio president as Jeffrey Bruno retires",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_people",
+      "published_at": "2026-09-09T00:00:00Z",
+      "published_date": "2026-09-09",
+      "url": "https://www.aviationnews-online.com/article/global-aerospace-names-eric-donofrio-president-as-jeffrey-bruno-retires",
+      "summary": "Global Aerospace has named Eric Donofrio as president, effective January 1, 2027, following the retirement of Jeffrey Bruno at the end of this year.Bruno, currently president of Global Aerospace Inc. ...",
+      "author": "Justin Pugsley",
+      "categories_raw": [
+        "Insurance",
+        "People"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:25Z",
+      "id": "ab88ac3169764bcd8454fec3"
+    },
+    {
+      "title": "Aruba and San Marino agree aircraft oversight framework",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_legal",
+      "published_at": "2026-09-09T00:00:00Z",
+      "published_date": "2026-09-09",
+      "url": "https://www.aviationnews-online.com/article/aruba-and-san-marino-agree-aircraft-oversight-framework",
+      "summary": "The civil aviation authorities of Aruba and San Marino have signed a new regulatory oversight agreement covering San Marino-registered aircraft operating commercially under Air Operator Certificates i...",
+      "author": "Justin Pugsley",
+      "categories_raw": [
+        "Airline",
+        "Legal"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:23Z",
+      "id": "297ba3ddf3d9de28564d8c42"
+    },
+    {
+      "title": "AFG places third Airbus A321neo with IndiGo",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_leasing",
+      "published_at": "2026-09-09T00:00:00Z",
+      "published_date": "2026-09-09",
+      "url": "https://www.aviationnews-online.com/article/afg-places-third-airbus-a321neo-with-indigo",
+      "summary": "AFG has acquired and delivered a new Airbus A321neo to IndiGo, marking its third placement of the aircraft type with the Indian carrier.The aircraft, manufacturer serial number 13374, was delivered on...",
+      "author": "Justin Pugsley",
+      "categories_raw": [
+        "Airline",
+        "Asia/Pacific",
+        "Leasing"
+      ],
+      "region_raw": "Asia/Pacific",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:16Z",
+      "id": "48853861fc228f4bae5e185a"
+    },
+    {
       "title": "Supply chain strains complicate Airbus production push",
       "source": "Ishka Airfinance",
       "source_channel": "ishka_aircraft_rss",
@@ -999,6 +1920,89 @@
       "id": "aac0dc4872475cef8c6c677f"
     },
     {
+      "title": "Trump says Bombardier should no longer sell aircraft in US",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_regulatory",
+      "published_at": "2026-09-08T00:00:00Z",
+      "published_date": "2026-09-08",
+      "url": "https://www.aviationnews-online.com/article/trump-says-bombardier-should-no-longer-sell-aircraft-in-us",
+      "summary": "US President Donald Trump said Bombardier should no longer be allowed to sell its products in the United States, escalating pressure on the Canadian aircraft manufacturer.In a Truth Social post, Trump...",
+      "author": "Justin Pugsley",
+      "categories_raw": [
+        "Americas",
+        "Corporate Jets",
+        "Regulatory"
+      ],
+      "region_raw": "Americas",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:24Z",
+      "id": "3250f03275a146e76b6e7479"
+    },
+    {
+      "title": "Serbian airlines granted rights to operate flights to Kaliningrad",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_regulatory",
+      "published_at": "2026-09-08T00:00:00Z",
+      "published_date": "2026-09-08",
+      "url": "https://www.aviationnews-online.com/article/serbian-airlines-granted-rights-to-operate-flights-to-kaliningrad",
+      "summary": "Serbian airlines have been granted the right to operate scheduled flights to Russia’s Kaliningrad region following an agreement between Russian and Serbian aviation authorities, according to media rep...",
+      "author": "Justin Pugsley",
+      "categories_raw": [
+        "Airline",
+        "Europe",
+        "Regulatory"
+      ],
+      "region_raw": "Europe",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:24Z",
+      "id": "9e774ae7fbdee12a057a945e"
+    },
+    {
+      "title": "Rolls-Royce & Partners Finance delivers one finance-leased XWB-97 engine to Philippine Airlines",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_engine",
+      "published_at": "2026-09-08T00:00:00Z",
+      "published_date": "2026-09-08",
+      "url": "https://www.aviationnews-online.com/article/rolls-royce-delivers-one-xwb-97-engine-to-philippine-airlines-on-finance-lease",
+      "summary": "Rolls-Royce & Partners Finance has delivered one finance lease for one XWB-97 engine to Philippine Airlines.“This latest Trent XWB-97 engine transaction reflects the strength of our longstanding partn...",
+      "author": "Calum Wilson",
+      "categories_raw": [
+        "Engine",
+        "Europe",
+        "Finance"
+      ],
+      "region_raw": "Europe",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:20Z",
+      "id": "acf02095413b548803e1bc35"
+    },
+    {
+      "title": "Muzinich completes $320m aircraft portfolio refinancing with Goldman Sachs",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_leasing",
+      "published_at": "2026-09-08T00:00:00Z",
+      "published_date": "2026-09-08",
+      "url": "https://www.aviationnews-online.com/article/muzinich-completes-us320m-aircraft-portfolio-refinancing-with-goldman-sachs",
+      "summary": "Muzinich & Co has completed the refinancing of a six-aircraft leasing portfolio through a facility of up to $320 million structured and financed by Goldman Sachs Alternatives. The portfolio comprises ...",
+      "author": "Justin Pugsley",
+      "categories_raw": [
+        "Finance",
+        "Leasing"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:16Z",
+      "id": "45e769a18428f1da6a698552"
+    },
+    {
       "title": "Willis Lease Finance eyes Asia-Pacific engine repair growth with new Malaysia centre",
       "source": "Reuters",
       "source_channel": "reuters_via_bing",
@@ -1048,6 +2052,23 @@
       "rights_mode": "search_result_metadata",
       "fetched_at": "2026-09-14T08:27:23Z",
       "id": "fcee3634fae671ff2a04df3e"
+    },
+    {
+      "title": "Bombardier Inc.",
+      "source": "Reuters",
+      "source_channel": "reuters_via_bing",
+      "published_at": "2026-09-07T17:00:00Z",
+      "published_date": "2026-09-07",
+      "url": "https://www.reuters.com/company/bombardier-inc/",
+      "summary": "Bombardier says it wants to fill 500 open US jobs despite Trump's threats Bombardier is continuing to recruit American workers to fill 500 open jobs in the U.S., the ‌Canadian private jet maker told ...",
+      "author": "",
+      "categories_raw": [],
+      "region_raw": "",
+      "discovered_via": "Bing News",
+      "discovery_query": "site:reuters.com aircraft leasing",
+      "rights_mode": "search_result_metadata",
+      "fetched_at": "2026-09-14T08:40:31Z",
+      "id": "f804a86b41104ed169af5736"
     },
     {
       "title": "Airbus books A350F order",
@@ -1108,6 +2129,109 @@
       "rights_mode": "search_result_metadata",
       "fetched_at": "2026-09-14T08:30:18Z",
       "id": "4f6f7f23152e25100fd60f0c"
+    },
+    {
+      "title": "flynas to buy 10% stake in Swissport Saudi Arabia",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_maintenance",
+      "published_at": "2026-09-07T00:00:00Z",
+      "published_date": "2026-09-07",
+      "url": "https://www.aviationnews-online.com/article/flynas-to-buy-10-stake-in-swissport-saudi-arabia",
+      "summary": "flynas is set to buy 10% equity stake in Swissport Saudi Arabia and make the company its exclusive ground handling partner for five years across its entire network in Saudi Arabia.The LCC will have an...",
+      "author": "Lavanya Ahire",
+      "categories_raw": [
+        "Airline",
+        "Maintenance",
+        "Middle East/Africa"
+      ],
+      "region_raw": "Middle East/Africa",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:22Z",
+      "id": "dbdc04dbe1fe924756c70ca9"
+    },
+    {
+      "title": "PIA privatisation faces legal challenge",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_people",
+      "published_at": "2026-09-07T00:00:00Z",
+      "published_date": "2026-09-07",
+      "url": "https://www.aviationnews-online.com/article/pia-privatisation-faces-legal-challenge",
+      "summary": "Pakistan International Airlines’ privatisation is facing a legal challenge after the Islamabad High Court issued notices to the federal government and other respondents, according to local media repor...",
+      "author": "Justin Pugsley",
+      "categories_raw": [
+        "Airline",
+        "Asia/Pacific",
+        "People"
+      ],
+      "region_raw": "Asia/Pacific",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:25Z",
+      "id": "0f8d23372dfab1686ab571f2"
+    },
+    {
+      "title": "EU entry-exit flexibility rules expire",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_regulatory",
+      "published_at": "2026-09-07T00:00:00Z",
+      "published_date": "2026-09-07",
+      "url": "https://www.aviationnews-online.com/article/ryanair-8",
+      "summary": "The EU's flexibility rules for its entry-exit system (EES) has expired on September 6. The system is an automated system for registering non-EU travellers, which is used each time they cross the exter...",
+      "author": "Calum Wilson",
+      "categories_raw": [
+        "Airports",
+        "Europe",
+        "Regulatory"
+      ],
+      "region_raw": "Europe",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:24Z",
+      "id": "ce1627e4f7181d5bf6b1ca73"
+    },
+    {
+      "title": "BCT Aviation secures CAA approval to extend C Check capability to 84 months",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_maintenance",
+      "published_at": "2026-09-07T00:00:00Z",
+      "published_date": "2026-09-07",
+      "url": "https://www.aviationnews-online.com/article/bct-aviation-secures-caa-approval-to-extend-c-check-capability-to-84-months",
+      "summary": "BCT Aviation Maintenance (BCT) has secured approval from the UK Civil Aviation Authority (CAA) to extend its Part-145 base maintenance C Check capability to 84 months for Airbus A320 family and Boeing...",
+      "author": "Lavanya Ahire",
+      "categories_raw": [
+        "Europe",
+        "Maintenance"
+      ],
+      "region_raw": "Europe",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:22Z",
+      "id": "b46548508890d8f2fcdcaf79"
+    },
+    {
+      "title": "AerDragon delivers one A320neo aircraft to West Air",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_leasing",
+      "published_at": "2026-09-07T00:00:00Z",
+      "published_date": "2026-09-07",
+      "url": "https://www.aviationnews-online.com/article/aerdragon-delivers-one-a320neo-aircraft-to-west-air",
+      "summary": "AerDragon Aviation Leasing Company has delivered one A320neo aircraft to West Air, a member airline of HNA Aviation Group.“West Air is a very well run airline with a solid base in Chongqing, a promine...",
+      "author": "Calum Wilson",
+      "categories_raw": [
+        "Asia/Pacific",
+        "Leasing"
+      ],
+      "region_raw": "Asia/Pacific",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:16Z",
+      "id": "f301f9827d91d8970029358a"
     },
     {
       "title": "Industrial and Commercial Bank of China Ltd",
@@ -1226,6 +2350,170 @@
       "rights_mode": "official_rss_metadata",
       "fetched_at": "2026-09-14T08:26:36Z",
       "id": "908a2daa5379645aaceb15b8"
+    },
+    {
+      "title": "Turkish Airlines targets place among world’s 100 most valuable brands",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_people",
+      "published_at": "2026-09-04T00:00:00Z",
+      "published_date": "2026-09-04",
+      "url": "https://www.aviationnews-online.com/article/turkish-airlines-targets-place-among-worlds-100-most-valuable-brands",
+      "summary": "Turkish Airlines aims to become one of the world’s 100 most valuable brands, which would make it the first Turkish company and potentially the first airline to reach the ranking, according to Anadolu ...",
+      "author": "Justin Pugsley",
+      "categories_raw": [
+        "Airline",
+        "People"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:25Z",
+      "id": "2426985293bee1da2a5d5cc3"
+    },
+    {
+      "title": "Russia briefs foreign airlines on airspace safety measures",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_regulatory",
+      "published_at": "2026-09-04T00:00:00Z",
+      "published_date": "2026-09-04",
+      "url": "https://www.aviationnews-online.com/article/russia-briefs-foreign-airlines-on-airspace-safety-measures",
+      "summary": "Russia’s Transport Ministry has provided foreign airlines with clarifications on safety procedures at Russian airports and in the country’s airspace after renewed concerns over operating risks, accord...",
+      "author": "Justin Pugsley",
+      "categories_raw": [
+        "Airline",
+        "Regulatory"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:24Z",
+      "id": "e739ae42c7e6fc0bb20323c3"
+    },
+    {
+      "title": "Rolls-Royce engine leasing venture to invest $339 million in China expansion",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_engine",
+      "published_at": "2026-09-04T00:00:00Z",
+      "published_date": "2026-09-04",
+      "url": "https://www.aviationnews-online.com/article/rolls-royce-engine-leasing-venture-to-invest-339-million-in-china-expansion",
+      "summary": "Rolls-Royce & Partners Finance (RRPF), the aircraft engine leasing joint venture between Rolls-Royce and GATX, will invest more than 2.3 billion yuan ($339 million) to establish a direct engine leasin...",
+      "author": "Lavanya Ahire",
+      "categories_raw": [
+        "Asia/Pacific",
+        "Engine"
+      ],
+      "region_raw": "Asia/Pacific",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:20Z",
+      "id": "fa3830ff743cd41e951e45e8"
+    },
+    {
+      "title": "Nayak Aircraft Services acquires controlling stake in Portugal’s LAS Group",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_maintenance",
+      "published_at": "2026-09-04T00:00:00Z",
+      "published_date": "2026-09-04",
+      "url": "https://www.aviationnews-online.com/article/nayak-aircraft-services-acquires-controlling-stake-in-portugals-las-group",
+      "summary": "Nayak Aircraft Services has acquired a controlling stake in Portuguese maintenance company LAS Group.LAS founder João Louro will remain a shareholder and continue as CEO of LAS Maintenance, while the ...",
+      "author": "Lavanya Ahire",
+      "categories_raw": [
+        "Europe",
+        "Maintenance",
+        "Parts"
+      ],
+      "region_raw": "Europe",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:22Z",
+      "id": "ad2ec9a0a8f3745c0e96b401"
+    },
+    {
+      "title": "Horizon Aircraft appoints Tom Hearne to board",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_people",
+      "published_at": "2026-09-04T00:00:00Z",
+      "published_date": "2026-09-04",
+      "url": "https://www.aviationnews-online.com/article/horizon-aircraft-appoints-tom-hearne-to-board",
+      "summary": "Horizon Aircraft has appointed technology executive Tom Hearne to its board of directors and as chair of its audit committee, replacing Trisha Nomura, who resigned from both positions effective immedi...",
+      "author": "Lavanya Ahire",
+      "categories_raw": [
+        "Americas",
+        "Corporate Jets",
+        "People"
+      ],
+      "region_raw": "Americas",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:25Z",
+      "id": "46c37c8ab074b885b7b02105"
+    },
+    {
+      "title": "China Eastern commissions new Shanghai widebody MRO hangar",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_maintenance",
+      "published_at": "2026-09-04T00:00:00Z",
+      "published_date": "2026-09-04",
+      "url": "https://www.aviationnews-online.com/article/china-eastern-commissions-new-shanghai-widebody-mro-hangar",
+      "summary": "China Eastern Airlines’ restructured MRO unit has commissioned what it says is Asia’s largest widebody maintenance hangar in Shanghai as it expands its aftermarket capabilities.The 46,000 sq m facilit...",
+      "author": "Justin Pugsley",
+      "categories_raw": [
+        "Airline",
+        "Asia/Pacific",
+        "Maintenance"
+      ],
+      "region_raw": "Asia/Pacific",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:22Z",
+      "id": "6a4f601786bafc061180251c"
+    },
+    {
+      "title": "Aviation Capital Group delivers third Boeing 737-8 to Trinity Airways",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_leasing",
+      "published_at": "2026-09-04T00:00:00Z",
+      "published_date": "2026-09-04",
+      "url": "https://www.aviationnews-online.com/article/aviation-capital-group-delivers-third-boeing-737-8-to-trinity-airways",
+      "summary": "Aviation Capital Group has delivered a Boeing 737-8 to South Korean carrier Trinity Airways, formerly T'way Air.The aircraft comes from ACG's Boeing orderbook and will support Trinity's expansion from...",
+      "author": "Lavanya Ahire",
+      "categories_raw": [
+        "Airline",
+        "Asia/Pacific",
+        "Leasing"
+      ],
+      "region_raw": "Asia/Pacific",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:16Z",
+      "id": "22841c7588c0a96a19dfe563"
+    },
+    {
+      "title": "AFI KLM E&M appoints Sylvain Fagot as SVP components",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_people",
+      "published_at": "2026-09-04T00:00:00Z",
+      "published_date": "2026-09-04",
+      "url": "https://www.aviationnews-online.com/article/afi-klm-em-appoints-sylvain-fagot-as-svp-components-at-air-france-industries",
+      "summary": "Air France Industries KLM Engineering & Maintenance (AFI KLM E&M) has appointed Sylvain Fagot as senior vice president components at Air France Industries, effective October 1, 2026. He succeeds Franc...",
+      "author": "Calum Wilson",
+      "categories_raw": [
+        "Europe",
+        "People"
+      ],
+      "region_raw": "Europe",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:25Z",
+      "id": "d6efaa65fa3ca6e790aab3ed"
     },
     {
       "title": "India’s aviation finance push: Government explores measures to boost aircraft leasing",
@@ -1387,6 +2675,107 @@
       "id": "c22f08785d066ea6f73487bf"
     },
     {
+      "title": "Universal Aviation begins operations at new Dammam general aviation terminal",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_maintenance",
+      "published_at": "2026-09-03T00:00:00Z",
+      "published_date": "2026-09-03",
+      "url": "https://www.aviationnews-online.com/article/universal-aviation-begins-operations-at-new-dammam-general-aviation-terminal",
+      "summary": "Universal Aviation has begun operations at a new general aviation terminal and dedicated hangar at King Fahd International Airport in Dammam.The facility, developed with MATARAT Holding and Dammam Air...",
+      "author": "Lavanya Ahire",
+      "categories_raw": [
+        "Airports",
+        "Maintenance",
+        "Middle East/Africa"
+      ],
+      "region_raw": "Middle East/Africa",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:22Z",
+      "id": "bd64c49b96d84bc935862232"
+    },
+    {
+      "title": "StandardAero opens an expansion in Winnipeg",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_maintenance",
+      "published_at": "2026-09-03T00:00:00Z",
+      "published_date": "2026-09-03",
+      "url": "https://www.aviationnews-online.com/article/standardaero-opens-an-expansion-in-winnipeg",
+      "summary": "StandardAero has opened a 70,000-square-foot expansion at its Winnipeg facility which will allow the company to increase its capacity to provide engine maintenance, repair and overhaul services.The ex...",
+      "author": "Lavanya Ahire",
+      "categories_raw": [
+        "Americas",
+        "Maintenance"
+      ],
+      "region_raw": "Americas",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:22Z",
+      "id": "708100dcac11b94e7ba09937"
+    },
+    {
+      "title": "Jackson Square Aviation delivers an Airbus A220-300 aircraft to Breeze Airways",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_leasing",
+      "published_at": "2026-09-03T00:00:00Z",
+      "published_date": "2026-09-03",
+      "url": "https://www.aviationnews-online.com/article/jackson-square-aviation-delivers-of-two",
+      "summary": "Jackson Square Aviation (JSA) has delivered for the first of two Airbus A220-300 aircraft to Breeze Airways, with the second aircraft scheduled for delivery in October. “The A220 has established a str...",
+      "author": "Calum Wilson",
+      "categories_raw": [
+        "Americas",
+        "Leasing"
+      ],
+      "region_raw": "Americas",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:16Z",
+      "id": "6ff0d514021e4662d468a103"
+    },
+    {
+      "title": "ExecuJet completes Legacy 650 cabin refurbishment in Dubai",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_maintenance",
+      "published_at": "2026-09-03T00:00:00Z",
+      "published_date": "2026-09-03",
+      "url": "https://www.aviationnews-online.com/article/execujet-completes-legacy-650-cabin-refurbishment-in-dubai",
+      "summary": "ExecuJet MRO Services Middle East has completed a full cabin interior refurbishment and livery paintwork on an Embraer Legacy 650 at its Dubai facility.The work included refinishing the aircraft’s cab...",
+      "author": "Justin Pugsley",
+      "categories_raw": [
+        "Corporate Jets",
+        "Maintenance"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:22Z",
+      "id": "3a3f7316b45e8a1028609367"
+    },
+    {
+      "title": "Airbus selects Indamer for South Asia radome repair facility",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_maintenance",
+      "published_at": "2026-09-03T00:00:00Z",
+      "published_date": "2026-09-03",
+      "url": "https://www.aviationnews-online.com/article/airbus-selects-indamer-for-south-asia-radome-repair-facility",
+      "summary": "Airbus has selected Indamer Technics to establish what it says will be South Asia’s first comprehensive radome repair facility in Nagpur, India, expanding its regional aftermarket support.Under the ag...",
+      "author": "Justin Pugsley",
+      "categories_raw": [
+        "Maintenance",
+        "Parts"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:22Z",
+      "id": "768cc78e446847d31a862caf"
+    },
+    {
       "title": "MoCA moves to ease aircraft shortage with more bank credit for leasing, faster NOCs",
       "source": "Business Today on MSN",
       "source_channel": "bing_news_rss",
@@ -1402,6 +2791,69 @@
       "rights_mode": "search_result_metadata",
       "fetched_at": "2026-09-14T08:27:19Z",
       "id": "bf9f79d5980088f88440137f"
+    },
+    {
+      "title": "VSE acquires Atech Turbine Components to expand engine repair capabilities",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_engine",
+      "published_at": "2026-09-02T00:00:00Z",
+      "published_date": "2026-09-02",
+      "url": "https://www.aviationnews-online.com/article/vse-acquires-atech-turbine-components-to-expand-engine-repair-capabilities",
+      "summary": "VSE Corporation has acquired Atech Turbine Components, expanding its aviation aftermarket business into a broader range of proprietary engine component repairs. The acquisition price was not stated.Fo...",
+      "author": "Justin Pugsley",
+      "categories_raw": [
+        "Engine",
+        "Maintenance",
+        "Parts"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:20Z",
+      "id": "7246f8b1b86f2f55a9e5b078"
+    },
+    {
+      "title": "Turning Rock and AerFin complete second A220-backed financing",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_engine",
+      "published_at": "2026-09-02T00:00:00Z",
+      "published_date": "2026-09-02",
+      "url": "https://www.aviationnews-online.com/article/turning-rock-and-aerfin-complete-second-a220-backed-financing",
+      "summary": "Turning Rock Partners has completed its second asset-backed financing with AerFin, expanding the partnership through a transaction backed by three Airbus A220 aircraft.Under the agreement, the aircraf...",
+      "author": "Justin Pugsley",
+      "categories_raw": [
+        "Engine",
+        "Finance",
+        "Parts"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:20Z",
+      "id": "ed0d0d1743eeffb01bdadc12"
+    },
+    {
+      "title": "Transense and Unison advance torque sensing for hybrid-electric flight",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_engine",
+      "published_at": "2026-09-02T00:00:00Z",
+      "published_date": "2026-09-02",
+      "url": "https://www.aviationnews-online.com/article/transense-and-unison-advance-torque-sensing-for-hybrid-electric-flight",
+      "summary": "Transense Technologies and Unison, a GE Aerospace company, have highlighted a collaboration that advanced torque-sensing technology for next-generation hybrid-electric propulsion.The application combi...",
+      "author": "Justin Pugsley",
+      "categories_raw": [
+        "Engine",
+        "Environmental",
+        "Technology"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:20Z",
+      "id": "c1b830828f75e933996c307a"
     },
     {
       "title": "Clyde & Co promotes air finance lawyer",
@@ -1484,6 +2936,91 @@
       "rights_mode": "search_result_metadata",
       "fetched_at": "2026-09-14T08:27:20Z",
       "id": "d378640647eb10b79debbfe1"
+    },
+    {
+      "title": "WFW advises Natixis CIB-led syndicate on Aircalin A350 financing and A330neo refinancing",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_legal",
+      "published_at": "2026-09-01T00:00:00Z",
+      "published_date": "2026-09-01",
+      "url": "https://www.aviationnews-online.com/article/wfw-advises-natixis-cib-led-syndicate-on-aircalin-a350-financing-and-a330neo-refinancing",
+      "summary": "Watson Farley & Williams (WFW) advised a Natixis CIB-led syndicate on the finance lease of one Airbus A350-900 and the refinancing of two Airbus A330neos through a conditional sale agreement structure...",
+      "author": "Lavanya Ahire",
+      "categories_raw": [
+        "Airline",
+        "Europe",
+        "Finance",
+        "Legal"
+      ],
+      "region_raw": "Europe",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:23Z",
+      "id": "8488bf84b85eb6d4369009e7"
+    },
+    {
+      "title": "Law firm Clyde & Co promotes Cecily Scutt to Partner",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_legal",
+      "published_at": "2026-09-01T00:00:00Z",
+      "published_date": "2026-09-01",
+      "url": "https://www.aviationnews-online.com/article/law-firm-clyde-co-promotes-cecily-scutt-to-partner",
+      "summary": "Law Firm Clyde & Co has promoted Cecily Scutt to Partner in its Aviation Finance practice in London, starting September 1.Scutt joined the firm in 2021 and specialises in aviation finance and leasing,...",
+      "author": "Lavanya Ahire",
+      "categories_raw": [
+        "Europe",
+        "Legal",
+        "People"
+      ],
+      "region_raw": "Europe",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:23Z",
+      "id": "d80ae165883122c6edd249e7"
+    },
+    {
+      "title": "JFL Credit to provide capital to support Powerhouse Engines’ program",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_engine",
+      "published_at": "2026-09-01T00:00:00Z",
+      "published_date": "2026-09-01",
+      "url": "https://www.aviationnews-online.com/article/jfl-credit-to-provide-capital-to-support-powerhouse-engines-program",
+      "summary": "JFL Credit said that it partnered with Powerhouse Engines to establish an engine investment program.The credit manager’s investment affiliates will provide capital to support Powerhouse's acquisition ...",
+      "author": "Lavanya Ahire",
+      "categories_raw": [
+        "Americas",
+        "Engine",
+        "Finance"
+      ],
+      "region_raw": "Americas",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:20Z",
+      "id": "8b86a643bc13cfd4bbb0c64f"
+    },
+    {
+      "title": "AFI KLM E&M, Air Corsica expand LEAP-1A engine agreement",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_engine",
+      "published_at": "2026-09-01T00:00:00Z",
+      "published_date": "2026-09-01",
+      "url": "https://www.aviationnews-online.com/article/afi-klm-em-air-corsica-expand-leap-1a-engine-agreement",
+      "summary": "Air France Industries KLM Engineering & Maintenance (AFI KLM E&M) and Air Corsica have signed a new multi-year agreement for the support of the airline's LEAP-1A engine fleet.The agreement covers nine...",
+      "author": "Lavanya Ahire",
+      "categories_raw": [
+        "Airline",
+        "Engine",
+        "Europe"
+      ],
+      "region_raw": "Europe",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:20Z",
+      "id": "85576cbdc816b7a67846d63f"
     },
     {
       "title": "KBRA Releases Research – Aviation ABS Repayment: The Role of Asset Sales",
@@ -1571,6 +3108,26 @@
       "id": "61738787baa84c734d2076c8"
     },
     {
+      "title": "Rolls-Royce completes $1bn engine facility investment in Indiana",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_engine",
+      "published_at": "2026-08-28T00:00:00Z",
+      "published_date": "2026-08-28",
+      "url": "https://www.aviationnews-online.com/article/rolls-royce-completes-1bn-engine-facility-investment-in-indiana",
+      "summary": "Rolls-Royce completed an investment of $1 billion in their engine manufacturing unit in Indiana to modernise their advanced manufacturing across the Indianapolis campus and add a full engine-test capa...",
+      "author": "Lavanya Ahire",
+      "categories_raw": [
+        "Americas",
+        "Engine"
+      ],
+      "region_raw": "Americas",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:20Z",
+      "id": "87a83b94d7f9f6b9c1cadde0"
+    },
+    {
       "title": "English court upholds Jolco protections",
       "source": "Ishka Airfinance",
       "source_channel": "ishka_law_rss",
@@ -1608,6 +3165,27 @@
       "rights_mode": "search_result_metadata",
       "fetched_at": "2026-09-14T08:27:25Z",
       "id": "b2090a2cf8d0212a16e3238a"
+    },
+    {
+      "title": "WLFC buys land for new engine repair facility in Malaysia",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_engine",
+      "published_at": "2026-08-27T00:00:00Z",
+      "published_date": "2026-08-27",
+      "url": "https://www.aviationnews-online.com/article/wlfc-buys-land-for-new-engine-repair-facility-in-malasia",
+      "summary": "Willis Lease Finance Corporation (WLFC) announced the purchase of land to construct a new engine repair facility in Johor, Malaysia.The facility will be the Company’s third ‘Willis Engine Repair Cente...",
+      "author": "Lavanya Ahire",
+      "categories_raw": [
+        "Asia/Pacific",
+        "Engine",
+        "Maintenance"
+      ],
+      "region_raw": "Asia/Pacific",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:20Z",
+      "id": "9e0fac680a0fff27deebc8fd"
     },
     {
       "title": "Stephenson Harwood expands in Middle East",
@@ -1665,6 +3243,27 @@
       "id": "3983c81908d91d396127a436"
     },
     {
+      "title": "Willis Lease closes acquisition of aircraft and engine portfolio",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_engine",
+      "published_at": "2026-08-25T00:00:00Z",
+      "published_date": "2026-08-25",
+      "url": "https://www.aviationnews-online.com/article/willis-lease-closes-transaction-to-acquire-commercial-aircraft-and-aircraft-engine-portfolio",
+      "summary": "Willis Lease Finance Corporation (WLFC) has closed the transaction to acquire 12 commercial aircraft and 13 aircraft engines.“We believe this acquisition represents an attractive opportunity to put ca...",
+      "author": "Calum Wilson",
+      "categories_raw": [
+        "Americas",
+        "Engine",
+        "Leasing"
+      ],
+      "region_raw": "Americas",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:20Z",
+      "id": "e6111b6b9a84364ef49891cf"
+    },
+    {
       "title": "Willis Lease Finance Corporation Closes Transaction to Acquire Commercial Aircraft and Aircraft Engine Portfolio",
       "source": "Business Insider",
       "source_channel": "bing_news_rss",
@@ -1719,6 +3318,50 @@
       "rights_mode": "search_result_metadata",
       "fetched_at": "2026-09-14T08:33:21Z",
       "id": "41c124831948a6aee60abc0b"
+    },
+    {
+      "title": "Former Libyan Airlines chairman detained in corruption probe",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_legal",
+      "published_at": "2026-08-21T00:00:00Z",
+      "published_date": "2026-08-21",
+      "url": "https://www.aviationnews-online.com/article/former-libyan-airlines-chairman-detained-in-corruption-probe",
+      "summary": "A former chairman of Libyan Airlines has been ordered into pretrial detention as prosecutors investigate allegations of corruption and embezzlement, according to the Libyan Herald, which did not name ...",
+      "author": "Justin Pugsley",
+      "categories_raw": [
+        "Airline",
+        "Legal",
+        "Middle East/Africa",
+        "People"
+      ],
+      "region_raw": "Middle East/Africa",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:23Z",
+      "id": "0fafb45b7c2c4a5186251ebd"
+    },
+    {
+      "title": "Court overturns US order to unwind Delta-Aeromexico joint venture",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_legal",
+      "published_at": "2026-08-21T00:00:00Z",
+      "published_date": "2026-08-21",
+      "url": "https://www.aviationnews-online.com/article/court-overturns-us-order-to-unwind-delta-aeromexico-joint-venture",
+      "summary": "A US appeals court has overturned the Trump administration’s order requiring Delta Air Lines and Aeromexico to unwind their nearly decade-old joint venture, ruling that the US Department of Transporta...",
+      "author": "Lavanya Ahire",
+      "categories_raw": [
+        "Airline",
+        "Americas",
+        "Legal",
+        "Regulatory"
+      ],
+      "region_raw": "Americas",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:23Z",
+      "id": "05076a8c48208d435923435f"
     },
     {
       "title": "Is AerCap Holdings N.V. (AER) a Better Aviation Investment Than The Boeing Company (BA)?",
@@ -1806,6 +3449,48 @@
       "id": "a706f4a6dfe361a6f7d21460"
     },
     {
+      "title": "WFW advises Apollo-backed funds on £5.7 billion easyJet takeover",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_legal",
+      "published_at": "2026-08-19T00:00:00Z",
+      "published_date": "2026-08-19",
+      "url": "https://www.aviationnews-online.com/article/wfw-advises-apollo-backed-funds-on-ps57-billion-easyjet-takeover",
+      "summary": "Watson Farley & Williams (WFW) is advising Apollo-managed funds on their recommended cash acquisition of easyJet which is valued at about £5.7 billion ($7.7 billion).WFW is acting as aviation counsel ...",
+      "author": "Lavanya Ahire",
+      "categories_raw": [
+        "Airline",
+        "Europe",
+        "Legal"
+      ],
+      "region_raw": "Europe",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:23Z",
+      "id": "00627015e1368ab12c13705a"
+    },
+    {
+      "title": "Canadian court rejects Volga-Dnepr sanctions appeal",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_legal",
+      "published_at": "2026-08-19T00:00:00Z",
+      "published_date": "2026-08-19",
+      "url": "https://www.aviationnews-online.com/article/canadian-court-rejects-volga-dnepr-sanctions-appeal",
+      "summary": "Canada’s Federal Court has dismissed an appeal by Russian cargo carrier Volga-Dnepr Airlines against sanctions imposed by Ottawa, leaving the measures in place and its Antonov An-124 grounded at Toron...",
+      "author": "Justin Pugsley",
+      "categories_raw": [
+        "Airline",
+        "Cargo",
+        "Legal"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:23Z",
+      "id": "5577dff580617b8878e257e6"
+    },
+    {
       "title": "NCLT Set to Rule on SpiceJet's Rs 500-Crore Insolvency Battle Today After Lessor Fury",
       "source": "Republic World",
       "source_channel": "bing_news_rss",
@@ -1838,6 +3523,28 @@
       "rights_mode": "search_result_metadata",
       "fetched_at": "2026-09-14T08:27:23Z",
       "id": "2d911174db000b1eab0a8a5e"
+    },
+    {
+      "title": "CemAir challenges Harith’s proposed FlySafair acquisition",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_legal",
+      "published_at": "2026-08-18T00:00:00Z",
+      "published_date": "2026-08-18",
+      "url": "https://www.aviationnews-online.com/article/cemair-challenges-hariths-proposed-flysafair-acquisition",
+      "summary": "South African airline CemAir has asked the Competition Tribunal to block Harith Aviation’s proposed acquisition of Safair Holdings, arguing that the deal could create competition concerns because of H...",
+      "author": "Lavanya Ahire",
+      "categories_raw": [
+        "Airline",
+        "Legal",
+        "Middle East/Africa",
+        "Regulatory"
+      ],
+      "region_raw": "Middle East/Africa",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:23Z",
+      "id": "0f05396b40e2006a40422e2d"
     },
     {
       "title": "CDB Aviation Delivers Three Airbus A321neos to Jet2",
@@ -1906,6 +3613,50 @@
       "rights_mode": "search_result_metadata",
       "fetched_at": "2026-09-14T08:27:20Z",
       "id": "3d4af198ea73df89d9686f35"
+    },
+    {
+      "title": "WFW advises MSC Air Cargo on five Boeing 777-8F order",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_legal",
+      "published_at": "2026-08-14T00:00:00Z",
+      "published_date": "2026-08-14",
+      "url": "https://www.aviationnews-online.com/article/wfw-advises-msc-air-cargo-on-five-boeing-777-8f-order",
+      "summary": "Watson Farley & Williams has advised MSC Air Cargo on its order for five Boeing 777-8 Freighters, marking the carrier’s first purchase of the aircraft type.The order was announced at the Farnborough A...",
+      "author": "Justin Pugsley",
+      "categories_raw": [
+        "Airline",
+        "Cargo",
+        "Finance",
+        "Legal",
+        "People"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:23Z",
+      "id": "c221f19d40d14c178dbeb62b"
+    },
+    {
+      "title": "US jury grants Ethiopian Airline 737 MAX victim’s family $29mn",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_legal",
+      "published_at": "2026-08-14T00:00:00Z",
+      "published_date": "2026-08-14",
+      "url": "https://www.aviationnews-online.com/article/us-jury-grants-ethiopian-airline-737-max-victims-family-29mn",
+      "summary": "A Chicago jury has awarded $29 million in damages to the family of Michael “Mick” Ryan, a United Nations World Food Programme engineer who was killed in the 2019 Ethiopian Airlines Boeing 737 MAX cras...",
+      "author": "Lavanya Ahire",
+      "categories_raw": [
+        "Airline",
+        "Americas",
+        "Legal"
+      ],
+      "region_raw": "Americas",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:40:23Z",
+      "id": "5aa026a6ef77fbcc65027e99"
     },
     {
       "title": "Rolls-Royce cash machine closer to upgrade",
