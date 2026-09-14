@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-14T21:26:55Z",
+  "generated_at": "2026-09-14T22:28:07Z",
   "model": "deepseek-flash",
   "analysis_mode": "deepseek",
   "categories": [
@@ -15,23 +15,23 @@
   ],
   "stats": {
     "archive_retention_days": 120,
-    "raw_pool_total": 1303,
-    "recent_raw_items": 221,
-    "already_processed_raw_items": 219,
-    "new_raw_items": 2,
-    "new_preclusters": 2,
+    "raw_pool_total": 1306,
+    "recent_raw_items": 224,
+    "already_processed_raw_items": 220,
+    "new_raw_items": 4,
+    "new_preclusters": 4,
     "deepseek_calls": 1,
     "deepseek_failed_batches": 0,
     "deepseek_errors": [],
-    "clusters_submitted": 2,
-    "clusters_retained_or_accounted": 1,
-    "stories": 216,
+    "clusters_submitted": 4,
+    "clusters_retained_or_accounted": 3,
+    "stories": 218,
     "by_category": {
       "Aircraft & OEM": 37,
       "Airlines & Credit": 84,
       "Engines & MRO": 15,
       "Financing & Capital Markets": 22,
-      "Leasing & Trading": 40,
+      "Leasing & Trading": 42,
       "Legal & Regulatory": 9,
       "Macro & Geopolitics": 8,
       "Values & Lease Rates": 1
@@ -56,7 +56,7 @@
       "Global Legal Chronicle": 1,
       "GlobalAir.com": 1,
       "Irish Examiner on MSN": 1,
-      "Ishka Airfinance": 50,
+      "Ishka Airfinance": 52,
       "Mint": 1,
       "Mint on MSN": 2,
       "NHK": 1,
@@ -66,7 +66,7 @@
       "Tech Times on MSN": 1,
       "The Daily Star": 1,
       "The New Indian Express on MSN": 2,
-      "The New Voice of Ukraine on MSN": 2,
+      "The New Voice of Ukraine on MSN": 3,
       "Yahoo Finance": 3,
       "Yahoo Finance UK": 1,
       "ZAWYA": 2,
@@ -75,6 +75,67 @@
     }
   },
   "stories": [
+    {
+      "id": "a2936c45f14208abeb",
+      "title": "Turkish Airlines explores leasing platform at ISTAT EMEA 2026",
+      "summary_zh": "",
+      "why_it_matters_zh": "",
+      "category": "Leasing & Trading",
+      "importance_score": 54,
+      "region": "Turkey / Europe",
+      "entities": [
+        "Turkish Airlines"
+      ],
+      "published_at": "2026-09-14T22:13:03Z",
+      "updated_at": "2026-09-14T22:28:07Z",
+      "primary_source": "Ishka Airfinance",
+      "primary_url": "https://platform.ishkaairfinance.com/Articles/3601128",
+      "source_count": 1,
+      "sources": [
+        {
+          "name": "Ishka Airfinance",
+          "url": "https://platform.ishkaairfinance.com/Articles/3601128",
+          "published_at": "2026-09-14T22:13:03Z",
+          "source_channel": "ishka_latest_rss",
+          "discovered_via": "direct"
+        }
+      ],
+      "raw_ids": [
+        "e26b1274e42ad495ec659fc2"
+      ],
+      "analysis_mode": "deepseek"
+    },
+    {
+      "id": "c0045254ddbcf6a2a9",
+      "title": "Courpon to restart Plane View Partners",
+      "summary_zh": "",
+      "why_it_matters_zh": "",
+      "category": "Leasing & Trading",
+      "importance_score": 54,
+      "region": "North America",
+      "entities": [
+        "Courpon",
+        "Plane View Partners"
+      ],
+      "published_at": "2026-09-14T22:08:30Z",
+      "updated_at": "2026-09-14T22:28:07Z",
+      "primary_source": "Ishka Airfinance",
+      "primary_url": "https://platform.ishkaairfinance.com/Articles/3601127",
+      "source_count": 1,
+      "sources": [
+        {
+          "name": "Ishka Airfinance",
+          "url": "https://platform.ishkaairfinance.com/Articles/3601127",
+          "published_at": "2026-09-14T22:08:30Z",
+          "source_channel": "ishka_latest_rss",
+          "discovered_via": "direct"
+        }
+      ],
+      "raw_ids": [
+        "9240d4c9d04558e2476a7420"
+      ],
+      "analysis_mode": "deepseek"
+    },
     {
       "id": "fb340ae48dfbef18bf",
       "title": "Pratt & Whitney tops Air Baltic's unsecured creditor list",
@@ -3375,7 +3436,7 @@
       "updated_at": "2026-09-14T10:28:35Z",
       "primary_source": "The New Voice of Ukraine on MSN",
       "primary_url": "https://www.msn.com/en-us/money/general/russia-seeks-to-lease-aircraft-from-vietnam-after-ethiopia-refused/ar-AA2bWy8F",
-      "source_count": 2,
+      "source_count": 3,
       "sources": [
         {
           "name": "The New Voice of Ukraine on MSN",
@@ -3390,11 +3451,19 @@
           "published_at": "2026-09-10T04:50:00Z",
           "source_channel": "bing_news_rss",
           "discovered_via": "Bing News"
+        },
+        {
+          "name": "The New Voice of Ukraine on MSN",
+          "url": "https://www.msn.com/en-us/money/investment/russia-seeks-to-lease-aircraft-from-vietnam-after-ethiopia-refused/ar-AA2bWy8F",
+          "published_at": "2026-09-10T04:50:00Z",
+          "source_channel": "bing_news_rss",
+          "discovered_via": "Bing News"
         }
       ],
       "raw_ids": [
         "82d8b6e07fcb1f3254990895",
-        "9d95795033e6eabad3184516"
+        "9d95795033e6eabad3184516",
+        "1567d02ccb20e3d6341d0d72"
       ],
       "analysis_mode": "deepseek"
     },

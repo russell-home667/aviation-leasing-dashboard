@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-14T21:26:30Z",
+  "generated_at": "2026-09-14T22:27:42Z",
   "retention_days": 120,
   "metadata_only": true,
   "stats": {
-    "current_batch_unique": 564,
-    "stored_total": 1303,
+    "current_batch_unique": 570,
+    "stored_total": 1306,
     "reuters_discovered_via_bing": 36,
     "by_source": {
       "ADS Advance": 1,
@@ -45,7 +45,7 @@
       "Insider Monkey": 1,
       "Investopedia": 1,
       "Irish Examiner on MSN": 1,
-      "Ishka Airfinance": 129,
+      "Ishka Airfinance": 131,
       "JD Supra": 1,
       "Live Mint on MSN": 1,
       "MSN": 11,
@@ -68,7 +68,7 @@
       "The Globe and Mail": 3,
       "The Hindu BusinessLine": 1,
       "The New Indian Express on MSN": 2,
-      "The New Voice of Ukraine on MSN": 2,
+      "The New Voice of Ukraine on MSN": 3,
       "The Star": 1,
       "TravelBiz Monitor": 1,
       "Xinhua": 1,
@@ -87,7 +87,7 @@
       "aviationnews_maintenance": 116,
       "aviationnews_people": 92,
       "aviationnews_regulatory": 80,
-      "bing_news_rss": 139,
+      "bing_news_rss": 140,
       "ishka_africa_rss": 9,
       "ishka_aircraft_rss": 10,
       "ishka_airlines_rss": 6,
@@ -95,7 +95,7 @@
       "ishka_china_rss": 6,
       "ishka_cis_rss": 7,
       "ishka_europe_rss": 2,
-      "ishka_latest_rss": 18,
+      "ishka_latest_rss": 20,
       "ishka_latin_america_rss": 8,
       "ishka_law_rss": 10,
       "ishka_lessors_rss": 7,
@@ -109,6 +109,48 @@
     }
   },
   "items": [
+    {
+      "title": "Turkish Airlines explores leasing platform: ISTAT EMEA 2026",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_latest_rss",
+      "published_at": "2026-09-14T22:13:03Z",
+      "published_date": "2026-09-14",
+      "url": "https://platform.ishkaairfinance.com/Articles/3601128",
+      "summary": "",
+      "author": "Olivier Bonnassies",
+      "categories_raw": [
+        "Airlines",
+        "Deals",
+        "Europe"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T22:27:43Z",
+      "id": "e26b1274e42ad495ec659fc2"
+    },
+    {
+      "title": "Courpon to restart Plane View Partners",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_latest_rss",
+      "published_at": "2026-09-14T22:08:30Z",
+      "published_date": "2026-09-14",
+      "url": "https://platform.ishkaairfinance.com/Articles/3601127",
+      "summary": "",
+      "author": "Olivier Bonnassies",
+      "categories_raw": [
+        "North America",
+        "People",
+        "Risk"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T22:27:43Z",
+      "id": "9240d4c9d04558e2476a7420"
+    },
     {
       "title": "Pratt & Whitney tops Air Baltic's unsecured creditor list",
       "source": "Ishka Airfinance",
@@ -2515,6 +2557,23 @@
       "rights_mode": "search_result_metadata",
       "fetched_at": "2026-09-14T10:28:26Z",
       "id": "82d8b6e07fcb1f3254990895"
+    },
+    {
+      "title": "Russia seeks to lease aircraft from Vietnam after Ethiopia refused",
+      "source": "The New Voice of Ukraine on MSN",
+      "source_channel": "bing_news_rss",
+      "published_at": "2026-09-10T04:50:00Z",
+      "published_date": "2026-09-10",
+      "url": "https://www.msn.com/en-us/money/investment/russia-seeks-to-lease-aircraft-from-vietnam-after-ethiopia-refused/ar-AA2bWy8F",
+      "summary": "Andrei Nikitin, head of Russia's Ministry of Transport, disclosed the leasing proposal Russia made to Vietnam, according to the Interfax news agency. \"We have sent our colleagues the relevant ...",
+      "author": "",
+      "categories_raw": [],
+      "region_raw": "",
+      "discovered_via": "Bing News",
+      "discovery_query": "\"aircraft leasing\"",
+      "rights_mode": "search_result_metadata",
+      "fetched_at": "2026-09-14T22:27:58Z",
+      "id": "1567d02ccb20e3d6341d0d72"
     },
     {
       "title": "Aerospace dealmaking gathers pace as jet production ramps up",
