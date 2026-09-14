@@ -1,0 +1,38 @@
+name: Apply Market Axis Autoscale
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/patch_market_axis_autoscale.py'
+      - '.github/workflows/apply-market-axis-autoscale.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Patch dashboard
+        run: python scripts/patch_market_axis_autoscale.py
+
+      - name: Commit dashboard change
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Fix Reference Market Prices Y-axis autoscaling'
+          git pull --rebase origin main
+          git push origin HEAD:main
