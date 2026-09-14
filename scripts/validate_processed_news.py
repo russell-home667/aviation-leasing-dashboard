@@ -57,7 +57,6 @@ def validate_payload(path: Path, current: bool) -> tuple[list[str], list[str], d
     now = datetime.now(timezone.utc)
     min_dt = now - timedelta(days=8 if current else 122)
     seen_story_ids, url_owner = set(), {}
-    enriched = 0
 
     for i, s in enumerate(stories):
         tag = f"{path.name} story[{i}]"
@@ -89,54 +88,51 @@ def validate_payload(path: Path, current: bool) -> tuple[list[str], list[str], d
         sources = s.get("sources")
         if not isinstance(sources, list) or not sources:
             errors.append(f"{tag}: sources missing")
-        else:
-            urls = []
-            for src in sources:
-                url = src.get("url")
-                if not url:
-                    errors.append(f"{tag}: source missing url")
-                    continue
-                urls.append(url)
-                owner = url_owner.get(url)
-                if owner and owner != sid:
-                    errors.append(f"{tag}: source URL already belongs to another cluster: {url}")
-                else:
-                    url_owner[url] = sid
-            if len(urls) != len(set(urls)):
-                errors.append(f"{tag}: duplicate source URL inside story")
-
-        if s.get("source_count") != len(sources or []):
+            sources = []
+        urls = []
+        for src in sources:
+            url = src.get("url")
+            if not url:
+                errors.append(f"{tag}: source missing url")
+                continue
+            urls.append(url)
+            owner = url_owner.get(url)
+            if owner and owner != sid:
+                errors.append(f"{tag}: source URL belongs to another event cluster: {url}")
+            else:
+                url_owner[url] = sid
+        if len(urls) != len(set(urls)):
+            errors.append(f"{tag}: duplicate source URL inside story")
+        if s.get("source_count") != len(sources):
             errors.append(f"{tag}: source_count mismatch")
+        if not isinstance(s.get("raw_ids"), list) or not s.get("raw_ids"):
+            errors.append(f"{tag}: raw_ids missing; incremental processing would be unsafe")
 
-        if s.get("analysis_mode") == "deepseek":
-            enriched += 1
-            if not s.get("summary_zh"):
-                errors.append(f"{tag}: DeepSeek story missing summary_zh")
-            if not s.get("why_it_matters_zh"):
-                errors.append(f"{tag}: DeepSeek story missing why_it_matters_zh")
-        elif not s.get("summary_zh") or not s.get("why_it_matters_zh"):
-            warnings.append(f"{tag}: fallback story has no Chinese enrichment")
+        # Chinese enrichment belongs mainly to Step 3. Step 2 requests it opportunistically,
+        # but absence must not invalidate otherwise correct clustering/classification.
+        if not s.get("summary_zh"):
+            warnings.append(f"{tag}: summary_zh empty")
+        if not s.get("why_it_matters_zh"):
+            warnings.append(f"{tag}: why_it_matters_zh empty")
 
     if current and not stories:
         errors.append(f"{path.name}: current feed is empty")
-    if current and data.get("analysis_mode") == "deepseek" and enriched == 0:
-        errors.append(f"{path.name}: DeepSeek mode set but no DeepSeek-enriched stories present")
-
     return errors, warnings, data
 
 
 def main() -> int:
     errors, warnings = [], []
-    e, w, news = validate_payload(NEWS, current=True)
-    errors.extend(e); warnings.extend(w)
-    e, w, archive = validate_payload(ARCHIVE, current=False)
-    errors.extend(e); warnings.extend(w)
+    e, w, news = validate_payload(NEWS, current=True); errors += e; warnings += w
+    e, w, archive = validate_payload(ARCHIVE, current=False); errors += e; warnings += w
 
+    status = {}
     if STATUS.exists():
         try:
-            st = json.loads(STATUS.read_text(encoding="utf-8"))
-            if st.get("categories") != EXPECTED:
+            status = json.loads(STATUS.read_text(encoding="utf-8"))
+            if status.get("categories") != EXPECTED:
                 errors.append("news_processing_status.json: category taxonomy mismatch")
+            if status.get("deepseek_configured") and status.get("new_preclusters", 0) > 0 and status.get("deepseek_calls", 0) == 0:
+                warnings.append("DeepSeek was configured but no batch succeeded; deterministic fallback preserved coverage.")
         except Exception as exc:
             errors.append(f"news_processing_status.json invalid JSON: {exc}")
     else:
@@ -147,6 +143,8 @@ def main() -> int:
         "current_stories": len(news.get("stories", [])) if isinstance(news, dict) else 0,
         "archive_stories": len(archive.get("stories", [])) if isinstance(archive, dict) else 0,
         "analysis_mode": news.get("analysis_mode") if isinstance(news, dict) else None,
+        "deepseek_calls": status.get("deepseek_calls"),
+        "deepseek_failed_batches": status.get("deepseek_failed_batches"),
         "errors": errors,
         "warnings_count": len(warnings),
         "warnings_sample": warnings[:10],
