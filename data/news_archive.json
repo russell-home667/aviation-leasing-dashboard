@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-14T09:38:27Z",
+  "generated_at": "2026-09-14T10:28:35Z",
   "model": "deepseek-flash",
   "analysis_mode": "deepseek",
   "categories": [
@@ -15,39 +15,32 @@
   ],
   "stats": {
     "archive_retention_days": 120,
-    "raw_pool_total": 1259,
-    "recent_raw_items": 196,
-    "already_processed_raw_items": 0,
-    "new_raw_items": 196,
-    "new_preclusters": 192,
+    "raw_pool_total": 1267,
+    "recent_raw_items": 203,
+    "already_processed_raw_items": 196,
+    "new_raw_items": 7,
+    "new_preclusters": 7,
     "deepseek_calls": 1,
-    "deepseek_failed_batches": 6,
-    "deepseek_errors": [
-      "batch_1: RuntimeError: ValueError: empty DeepSeek content; ValueError: empty DeepSeek content",
-      "batch_2: RuntimeError: ValueError: empty DeepSeek content; ValueError: empty DeepSeek content",
-      "batch_3: RuntimeError: ValueError: empty DeepSeek content; ValueError: empty DeepSeek content",
-      "batch_4: RuntimeError: ValueError: empty DeepSeek content; ValueError: empty DeepSeek content",
-      "batch_5: RuntimeError: ValueError: empty DeepSeek content; ValueError: empty DeepSeek content",
-      "batch_6: RuntimeError: ValueError: empty DeepSeek content; ValueError: empty DeepSeek content"
-    ],
-    "clusters_submitted": 192,
-    "clusters_retained_or_accounted": 192,
-    "stories": 186,
+    "deepseek_failed_batches": 0,
+    "deepseek_errors": [],
+    "clusters_submitted": 7,
+    "clusters_retained_or_accounted": 7,
+    "stories": 192,
     "by_category": {
       "Aircraft & OEM": 35,
-      "Airlines & Credit": 76,
-      "Engines & MRO": 12,
-      "Financing & Capital Markets": 15,
+      "Airlines & Credit": 77,
+      "Engines & MRO": 13,
+      "Financing & Capital Markets": 17,
       "Leasing & Trading": 36,
-      "Legal & Regulatory": 5,
-      "Macro & Geopolitics": 6,
+      "Legal & Regulatory": 6,
+      "Macro & Geopolitics": 7,
       "Values & Lease Rates": 1
     },
     "source_mentions": {
       "ADS Advance": 1,
       "AeroTime": 2,
       "Aerospace and Mechanical Insider on MSN": 1,
-      "Aviation News Online": 107,
+      "Aviation News Online": 110,
       "Aviation24.be": 1,
       "Bizcommunity on MSN": 2,
       "Bloomberg": 1,
@@ -61,15 +54,17 @@
       "Ishka Airfinance": 42,
       "Mint": 1,
       "Mint on MSN": 1,
-      "Reuters": 16,
+      "NHK": 1,
+      "Reuters": 17,
       "Seeking Alpha": 1,
       "Simple Flying on MSN": 1,
       "The Daily Star": 1,
       "The New Indian Express on MSN": 2,
-      "The New Voice of Ukraine on MSN": 1,
+      "The New Voice of Ukraine on MSN": 2,
       "Yahoo Finance": 1,
       "ZAWYA": 2,
-      "ch-aviation": 1
+      "ch-aviation": 1,
+      "القاهرة 24": 1
     }
   },
   "stories": [
@@ -242,6 +237,36 @@
         "ad6991a8e1c3ce0a9989272d"
       ],
       "analysis_mode": "fallback_after_ai_error"
+    },
+    {
+      "id": "dd1596517fcfd76c83",
+      "title": "AirBaltic files for Chapter 11 bankruptcy as Iran war costs bite",
+      "summary_zh": "",
+      "why_it_matters_zh": "",
+      "category": "Airlines & Credit",
+      "importance_score": 59,
+      "region": "Latvia",
+      "entities": [
+        "airBaltic"
+      ],
+      "published_at": "2026-09-14T03:09:00Z",
+      "updated_at": "2026-09-14T10:28:35Z",
+      "primary_source": "Reuters",
+      "primary_url": "https://www.reuters.com/world/airbaltic-files-chapter-11-bankruptcy-new-york-2026-09-14/",
+      "source_count": 1,
+      "sources": [
+        {
+          "name": "Reuters",
+          "url": "https://www.reuters.com/world/airbaltic-files-chapter-11-bankruptcy-new-york-2026-09-14/",
+          "published_at": "2026-09-14T03:09:00Z",
+          "source_channel": "reuters_via_bing",
+          "discovered_via": "Bing News"
+        }
+      ],
+      "raw_ids": [
+        "65a1bbc31a3198249b9d7df9"
+      ],
+      "analysis_mode": "deepseek"
     },
     {
       "id": "b491d46039b46f687b",
@@ -428,6 +453,38 @@
         "b9392e3764a45d6ea0883aaa"
       ],
       "analysis_mode": "fallback_after_ai_error"
+    },
+    {
+      "id": "8aa81457250527c3ea",
+      "title": "Neuberger launches New Bridge AeroFinance, led by Richard Moody",
+      "summary_zh": "",
+      "why_it_matters_zh": "",
+      "category": "Financing & Capital Markets",
+      "importance_score": 57,
+      "region": "Europe",
+      "entities": [
+        "Neuberger Specialty Finance",
+        "New Bridge AeroFinance",
+        "Richard Moody"
+      ],
+      "published_at": "2026-09-14T00:00:00Z",
+      "updated_at": "2026-09-14T10:28:35Z",
+      "primary_source": "Aviation News Online",
+      "primary_url": "https://www.aviationnews-online.com/article/richard-moody-launches-neuberger-specialty-finance",
+      "source_count": 1,
+      "sources": [
+        {
+          "name": "Aviation News Online",
+          "url": "https://www.aviationnews-online.com/article/richard-moody-launches-neuberger-specialty-finance",
+          "published_at": "2026-09-14T00:00:00Z",
+          "source_channel": "aviationnews_finance",
+          "discovered_via": "direct"
+        }
+      ],
+      "raw_ids": [
+        "dce571e9505cd83de840580b"
+      ],
+      "analysis_mode": "deepseek"
     },
     {
       "id": "d5489b9b7404e48035",
@@ -718,6 +775,72 @@
       "analysis_mode": "fallback_after_ai_error"
     },
     {
+      "id": "14bf53993de1d6def2",
+      "title": "IER MRO appoints Group AMANA for Dubai engine maintenance facility",
+      "summary_zh": "",
+      "why_it_matters_zh": "",
+      "category": "Engines & MRO",
+      "importance_score": 53,
+      "region": "Middle East/Africa",
+      "entities": [
+        "IER MRO Industries",
+        "Group AMANA",
+        "Mohammed Bin Rashid Aerospace Hub"
+      ],
+      "published_at": "2026-09-14T00:00:00Z",
+      "updated_at": "2026-09-14T10:28:35Z",
+      "primary_source": "Aviation News Online",
+      "primary_url": "https://www.aviationnews-online.com/article/ier-mro-appoints-group-amana-for-dubai-engine-maintenance-facility",
+      "source_count": 1,
+      "sources": [
+        {
+          "name": "Aviation News Online",
+          "url": "https://www.aviationnews-online.com/article/ier-mro-appoints-group-amana-for-dubai-engine-maintenance-facility",
+          "published_at": "2026-09-14T00:00:00Z",
+          "source_channel": "aviationnews_maintenance",
+          "discovered_via": "direct"
+        }
+      ],
+      "raw_ids": [
+        "61426d693208f3c6f5dba318"
+      ],
+      "analysis_mode": "deepseek"
+    },
+    {
+      "id": "d4aa19fac8fb3954b4",
+      "title": "FAA proposes expanded A220 fuel-line inspections over fire risk",
+      "summary_zh": "",
+      "why_it_matters_zh": "",
+      "category": "Legal & Regulatory",
+      "importance_score": 53,
+      "region": "United States",
+      "entities": [
+        "FAA",
+        "Airbus",
+        "A220",
+        "A220-100",
+        "A220-300"
+      ],
+      "published_at": "2026-09-14T00:00:00Z",
+      "updated_at": "2026-09-14T10:28:35Z",
+      "primary_source": "Aviation News Online",
+      "primary_url": "https://www.aviationnews-online.com/article/faa-proposes-expanded-a220-fuel-line-inspections-over-fire-risk",
+      "source_count": 1,
+      "sources": [
+        {
+          "name": "Aviation News Online",
+          "url": "https://www.aviationnews-online.com/article/faa-proposes-expanded-a220-fuel-line-inspections-over-fire-risk",
+          "published_at": "2026-09-14T00:00:00Z",
+          "source_channel": "aviationnews_airline",
+          "discovered_via": "direct"
+        }
+      ],
+      "raw_ids": [
+        "229783945f6370c7f42d94dd"
+      ],
+      "analysis_mode": "deepseek"
+    },
+    {
       "id": "6c8398f914cc3b7cc4",
       "title": "My job: Connecting Ireland's dominance in aircraft leasing with elite football",
       "summary_zh": "",
@@ -958,6 +1081,39 @@
         "189d5533a88eb380fe1077ee"
       ],
       "analysis_mode": "fallback_after_ai_error"
+    },
+    {
+      "id": "f9c778522e269d330d",
+      "title": "Air Cairo and CALC sign agreement to lease two additional A320neo aircraft",
+      "summary_zh": "",
+      "why_it_matters_zh": "",
+      "category": "Leasing & Trading",
+      "importance_score": 45,
+      "region": "Egypt",
+      "entities": [
+        "Air Cairo",
+        "CALC",
+        "Airbus",
+        "A320neo"
+      ],
+      "published_at": "2026-09-11T16:59:00Z",
+      "updated_at": "2026-09-14T10:28:35Z",
+      "primary_source": "القاهرة 24",
+      "primary_url": "https://www.cairo24.com/2492963",
+      "source_count": 1,
+      "sources": [
+        {
+          "name": "القاهرة 24",
+          "url": "https://www.cairo24.com/2492963",
+          "published_at": "2026-09-11T16:59:00Z",
+          "source_channel": "bing_news_rss",
+          "discovered_via": "Bing News"
+        }
+      ],
+      "raw_ids": [
+        "335bb972d54ebeca30402041"
+      ],
+      "analysis_mode": "deepseek"
     },
     {
       "id": "a99d53a6e1b12cb797",
@@ -2451,16 +2607,29 @@
       "title": "Russia seeks to lease aircraft from Vietnam after Ethiopia refused",
       "summary_zh": "",
       "why_it_matters_zh": "",
-      "category": "Leasing & Trading",
+      "category": "Macro & Geopolitics",
       "importance_score": 45,
-      "region": "Global/Unspecified",
-      "entities": [],
+      "region": "Russia/Vietnam",
+      "entities": [
+        "Russia",
+        "Vietnam",
+        "Ethiopia",
+        "Andrei Nikitin",
+        "Interfax"
+      ],
       "published_at": "2026-09-10T04:50:00Z",
-      "updated_at": "2026-09-14T09:38:27Z",
+      "updated_at": "2026-09-14T10:28:35Z",
       "primary_source": "The New Voice of Ukraine on MSN",
-      "primary_url": "https://www.msn.com/en-us/news/other/russia-seeks-to-lease-aircraft-from-vietnam-after-ethiopia-refused/ar-AA2bWy8F",
-      "source_count": 1,
+      "primary_url": "https://www.msn.com/en-us/money/general/russia-seeks-to-lease-aircraft-from-vietnam-after-ethiopia-refused/ar-AA2bWy8F",
+      "source_count": 2,
       "sources": [
+        {
+          "name": "The New Voice of Ukraine on MSN",
+          "url": "https://www.msn.com/en-us/money/general/russia-seeks-to-lease-aircraft-from-vietnam-after-ethiopia-refused/ar-AA2bWy8F",
+          "published_at": "2026-09-10T04:50:00Z",
+          "source_channel": "bing_news_rss",
+          "discovered_via": "Bing News"
+        },
         {
           "name": "The New Voice of Ukraine on MSN",
           "url": "https://www.msn.com/en-us/news/other/russia-seeks-to-lease-aircraft-from-vietnam-after-ethiopia-refused/ar-AA2bWy8F",
@@ -2470,9 +2639,10 @@
         }
       ],
       "raw_ids": [
+        "82d8b6e07fcb1f3254990895",
         "9d95795033e6eabad3184516"
       ],
-      "analysis_mode": "fallback_after_ai_error"
+      "analysis_mode": "deepseek"
     },
     {
       "id": "61e1c4c21b5deb035c",
@@ -4186,6 +4356,34 @@
         "279b7d0156367ade009a15a2"
       ],
       "analysis_mode": "fallback_after_ai_error"
+    },
+    {
+      "id": "7b0ae7de71a3f81562",
+      "title": "Japan firms investing in aircraft leasing businesses",
+      "summary_zh": "",
+      "why_it_matters_zh": "",
+      "category": "Financing & Capital Markets",
+      "importance_score": 45,
+      "region": "Japan",
+      "entities": [],
+      "published_at": "2026-09-08T17:01:00Z",
+      "updated_at": "2026-09-14T10:28:35Z",
+      "primary_source": "NHK",
+      "primary_url": "https://www3.nhk.or.jp/nhkworld/news/20260909de49343/",
+      "source_count": 1,
+      "sources": [
+        {
+          "name": "NHK",
+          "url": "https://www3.nhk.or.jp/nhkworld/news/20260909de49343/",
+          "published_at": "2026-09-08T17:01:00Z",
+          "source_channel": "bing_news_rss",
+          "discovered_via": "Bing News"
+        }
+      ],
+      "raw_ids": [
+        "b6f424f6c3e4f04f75b48f72"
+      ],
+      "analysis_mode": "deepseek"
     },
     {
       "id": "77e6593c2753c8dfa0",

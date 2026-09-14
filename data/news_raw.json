@@ -1,18 +1,19 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-14T09:38:05Z",
+  "generated_at": "2026-09-14T10:28:13Z",
   "retention_days": 120,
   "metadata_only": true,
   "stats": {
     "current_batch_unique": 558,
-    "stored_total": 1259,
-    "reuters_discovered_via_bing": 30,
+    "stored_total": 1267,
+    "reuters_discovered_via_bing": 31,
     "by_source": {
       "ADS Advance": 1,
+      "AFPBB News": 1,
       "AOL": 2,
       "AeroTime": 3,
       "Aerospace and Mechanical Insider on MSN": 1,
-      "Aviation News Online": 989,
+      "Aviation News Online": 992,
       "Aviation Week": 2,
       "Aviation Week Network": 1,
       "Aviation24.be": 1,
@@ -46,12 +47,13 @@
       "Mint on MSN": 1,
       "Moneycontrol": 2,
       "Morningstar%2c Inc.": 8,
+      "NHK": 1,
       "Nairametrics": 1,
       "Nasdaq": 2,
       "PE Hub": 1,
       "Pensacola News Journal": 1,
       "Republic World": 1,
-      "Reuters": 30,
+      "Reuters": 31,
       "Seeking Alpha": 3,
       "Simple Flying on MSN": 1,
       "The Daily Star": 1,
@@ -59,24 +61,25 @@
       "The Globe and Mail": 3,
       "The Hindu BusinessLine": 1,
       "The New Indian Express on MSN": 2,
-      "The New Voice of Ukraine on MSN": 1,
+      "The New Voice of Ukraine on MSN": 2,
       "The Star": 1,
       "TravelBiz Monitor": 1,
       "Xinhua": 1,
       "Yahoo Finance": 14,
       "ZAWYA": 2,
-      "ch-aviation": 1
+      "ch-aviation": 1,
+      "القاهرة 24": 1
     },
     "by_channel": {
-      "aviationnews_airline": 328,
+      "aviationnews_airline": 329,
       "aviationnews_engine": 78,
-      "aviationnews_finance": 123,
+      "aviationnews_finance": 124,
       "aviationnews_leasing": 144,
       "aviationnews_legal": 29,
-      "aviationnews_maintenance": 115,
+      "aviationnews_maintenance": 116,
       "aviationnews_people": 92,
       "aviationnews_regulatory": 80,
-      "bing_news_rss": 119,
+      "bing_news_rss": 123,
       "ishka_africa_rss": 9,
       "ishka_aircraft_rss": 10,
       "ishka_airlines_rss": 6,
@@ -94,7 +97,7 @@
       "ishka_oceania_rss": 9,
       "ishka_south_asia_rss": 9,
       "ishka_southeast_asia_rss": 5,
-      "reuters_via_bing": 30
+      "reuters_via_bing": 31
     }
   },
   "items": [
@@ -229,6 +232,23 @@
       "rights_mode": "official_rss_metadata",
       "fetched_at": "2026-09-14T08:26:35Z",
       "id": "ad6991a8e1c3ce0a9989272d"
+    },
+    {
+      "title": "AirBaltic files for Chapter 11 bankruptcy as Iran war costs bite",
+      "source": "Reuters",
+      "source_channel": "reuters_via_bing",
+      "published_at": "2026-09-14T03:09:00Z",
+      "published_date": "2026-09-14",
+      "url": "https://www.reuters.com/world/airbaltic-files-chapter-11-bankruptcy-new-york-2026-09-14/",
+      "summary": "Latvia's airBaltic said on Monday ‌it had filed for protection under Chapter 11 of the U.S. ​Bankruptcy Code in New ​York as part of a financial ⁠restructuring aimed at reducing ​its debt.",
+      "author": "",
+      "categories_raw": [],
+      "region_raw": "",
+      "discovered_via": "Bing News",
+      "discovery_query": "site:reuters.com airline bankruptcy aircraft",
+      "rights_mode": "search_result_metadata",
+      "fetched_at": "2026-09-14T10:28:34Z",
+      "id": "65a1bbc31a3198249b9d7df9"
     },
     {
       "title": "Insurance emerges as a key enabler of aircraft financing in Africa",
@@ -368,6 +388,27 @@
       "id": "95c7cb0cc99109ebf9f8a8ba"
     },
     {
+      "title": "Neuberger launches New Bridge AeroFinance, led by Richard Moody",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_finance",
+      "published_at": "2026-09-14T00:00:00Z",
+      "published_date": "2026-09-14",
+      "url": "https://www.aviationnews-online.com/article/richard-moody-launches-neuberger-specialty-finance",
+      "summary": "Neuberger Specialty Finance along with several aerospace finance professionals have jointly established and launched a new aerospace financing platform, New Bridge AeroFinance. The platform will enabl...",
+      "author": "Calum Wilson",
+      "categories_raw": [
+        "Editorial Comment",
+        "Europe",
+        "Finance"
+      ],
+      "region_raw": "Europe",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T10:28:19Z",
+      "id": "dce571e9505cd83de840580b"
+    },
+    {
       "title": "Korean Air to migrate Asiana bookings ahead of December merger",
       "source": "Aviation News Online",
       "source_channel": "aviationnews_airline",
@@ -408,6 +449,26 @@
       "id": "8528496fbc73cb50380b299d"
     },
     {
+      "title": "IER MRO appoints Group AMANA for Dubai engine maintenance facility",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_maintenance",
+      "published_at": "2026-09-14T00:00:00Z",
+      "published_date": "2026-09-14",
+      "url": "https://www.aviationnews-online.com/article/ier-mro-appoints-group-amana-for-dubai-engine-maintenance-facility",
+      "summary": "IER MRO Industries has appointed Group AMANA as general contractor for the first operational phase of a major narrowbody engine and module maintenance facility at Mohammed Bin Rashid Aerospace Hub in ...",
+      "author": "Justin Pugsley",
+      "categories_raw": [
+        "Maintenance",
+        "Middle East/Africa"
+      ],
+      "region_raw": "Middle East/Africa",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T10:28:23Z",
+      "id": "61426d693208f3c6f5dba318"
+    },
+    {
       "title": "Gol connects Europe to El Calafate and Ushuaia through its network in Brazil",
       "source": "Aviation News Online",
       "source_channel": "aviationnews_airline",
@@ -446,6 +507,27 @@
       "rights_mode": "public_listing_metadata",
       "fetched_at": "2026-09-14T08:40:19Z",
       "id": "52ac74c46adf9c44b8d360f5"
+    },
+    {
+      "title": "FAA proposes expanded A220 fuel-line inspections over fire risk",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_airline",
+      "published_at": "2026-09-14T00:00:00Z",
+      "published_date": "2026-09-14",
+      "url": "https://www.aviationnews-online.com/article/faa-proposes-expanded-a220-fuel-line-inspections-over-fire-risk",
+      "summary": "The US Federal Aviation Administration has proposed a new airworthiness directive covering certain Airbus A220-100 and A220-300 aircraft after identifying a fuel-line installation issue that could cre...",
+      "author": "Justin Pugsley",
+      "categories_raw": [
+        "Airline",
+        "Americas",
+        "Maintenance"
+      ],
+      "region_raw": "Americas",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T10:28:21Z",
+      "id": "229783945f6370c7f42d94dd"
     },
     {
       "title": "Emirates saw 8.6mn passengers in summer traffic; operates at 93% of pre-crisis capacity",
@@ -710,6 +792,23 @@
       "rights_mode": "search_result_metadata",
       "fetched_at": "2026-09-14T08:50:36Z",
       "id": "4446582c5bc16f984f597521"
+    },
+    {
+      "title": "إير كايرو وCALC تعززان شراكتهما بالتزام جديد لتوفير طائرتين إضافيتين من طراز A320neo",
+      "source": "القاهرة 24",
+      "source_channel": "bing_news_rss",
+      "published_at": "2026-09-11T16:59:00Z",
+      "published_date": "2026-09-11",
+      "url": "https://www.cairo24.com/2492963",
+      "summary": "أعلنت مجموعة China Aircraft Leasing Group Holdings Limited (CALC)، إلى جانب شركاتها التابعة والمتخصصة في تقديم حلول متكاملة للطائرات ، عن اتفاق جديد مع إيركايرو لتأجير طائرتين إضافيتين من طراز Airbus ...",
+      "author": "",
+      "categories_raw": [],
+      "region_raw": "",
+      "discovered_via": "Bing News",
+      "discovery_query": "\"CALC\" aircraft leasing",
+      "rights_mode": "search_result_metadata",
+      "fetched_at": "2026-09-14T10:28:30Z",
+      "id": "335bb972d54ebeca30402041"
     },
     {
       "title": "Govt to overhaul civil aviation rules after 42 years: Minister",
@@ -1825,6 +1924,23 @@
       "rights_mode": "search_result_metadata",
       "fetched_at": "2026-09-14T08:27:23Z",
       "id": "9d95795033e6eabad3184516"
+    },
+    {
+      "title": "Russia seeks to lease aircraft from Vietnam after Ethiopia refused",
+      "source": "The New Voice of Ukraine on MSN",
+      "source_channel": "bing_news_rss",
+      "published_at": "2026-09-10T04:50:00Z",
+      "published_date": "2026-09-10",
+      "url": "https://www.msn.com/en-us/money/general/russia-seeks-to-lease-aircraft-from-vietnam-after-ethiopia-refused/ar-AA2bWy8F",
+      "summary": "Andrei Nikitin, head of Russia's Ministry of Transport, disclosed the leasing proposal Russia made to Vietnam, according to the Interfax news agency. \"We have sent our colleagues the relevant ...",
+      "author": "",
+      "categories_raw": [],
+      "region_raw": "",
+      "discovered_via": "Bing News",
+      "discovery_query": "\"aircraft leasing\"",
+      "rights_mode": "search_result_metadata",
+      "fetched_at": "2026-09-14T10:28:26Z",
+      "id": "82d8b6e07fcb1f3254990895"
     },
     {
       "title": "Aerospace dealmaking gathers pace as jet production ramps up",
@@ -2985,6 +3101,23 @@
       "rights_mode": "official_rss_metadata",
       "fetched_at": "2026-09-14T08:26:36Z",
       "id": "be2c141c143ae575851a17ef"
+    },
+    {
+      "title": "Japan firms investing in aircraft leasing businesses",
+      "source": "NHK",
+      "source_channel": "bing_news_rss",
+      "published_at": "2026-09-08T17:01:00Z",
+      "published_date": "2026-09-08",
+      "url": "https://www3.nhk.or.jp/nhkworld/news/20260909de49343/",
+      "summary": "Japanese companies are taking bigger stakes in aircraft leasing operators as the surge in travel demand means airlines need more planes.",
+      "author": "",
+      "categories_raw": [],
+      "region_raw": "",
+      "discovered_via": "Bing News",
+      "discovery_query": "\"Air Lease\" aircraft",
+      "rights_mode": "search_result_metadata",
+      "fetched_at": "2026-09-14T10:28:30Z",
+      "id": "b6f424f6c3e4f04f75b48f72"
     },
     {
       "title": "Dan Catchpole",
@@ -16450,6 +16583,23 @@
       "rights_mode": "search_result_metadata",
       "fetched_at": "2026-09-14T08:47:35Z",
       "id": "1a984d282e59edf7a497e95e"
+    },
+    {
+      "title": "【オリックス】英国の航空機パーツアウト企業AerFinを買収",
+      "source": "AFPBB News",
+      "source_channel": "bing_news_rss",
+      "published_at": "2026-08-03T00:15:00Z",
+      "published_date": "2026-08-03",
+      "url": "https://www.afpbb.com/articles/-/3646925",
+      "summary": "航空機アフターマーケット事業に参入、アセットマネジメントを高度化 オリックス株式会社（本社：東京都港区、社長：髙橋 英丈）は、このたび、航空機リース事業を手掛ける連結子会社 ...",
+      "author": "",
+      "categories_raw": [],
+      "region_raw": "",
+      "discovered_via": "Bing News",
+      "discovery_query": "\"ORIX Aviation\"",
+      "rights_mode": "search_result_metadata",
+      "fetched_at": "2026-09-14T10:28:32Z",
+      "id": "c11f42cf260db3bd0a6b0402"
     },
     {
       "title": "easyJet extends Castlelake bid deadline to August 7",
