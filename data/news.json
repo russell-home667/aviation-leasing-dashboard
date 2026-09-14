@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-14T22:28:07Z",
+  "generated_at": "2026-09-14T23:24:55Z",
   "model": "deepseek-flash",
   "analysis_mode": "deepseek",
   "categories": [
@@ -15,22 +15,22 @@
   ],
   "stats": {
     "raw_pool_total": 1306,
-    "recent_raw_items": 224,
-    "already_processed_raw_items": 220,
-    "new_raw_items": 4,
-    "new_preclusters": 4,
+    "recent_raw_items": 223,
+    "already_processed_raw_items": 222,
+    "new_raw_items": 1,
+    "new_preclusters": 1,
     "deepseek_calls": 1,
     "deepseek_failed_batches": 0,
     "deepseek_errors": [],
-    "clusters_submitted": 4,
-    "clusters_retained_or_accounted": 3,
-    "stories": 205,
+    "clusters_submitted": 1,
+    "clusters_retained_or_accounted": 0,
+    "stories": 204,
     "by_category": {
       "Aircraft & OEM": 36,
       "Airlines & Credit": 80,
       "Engines & MRO": 13,
       "Financing & Capital Markets": 21,
-      "Leasing & Trading": 38,
+      "Leasing & Trading": 37,
       "Legal & Regulatory": 8,
       "Macro & Geopolitics": 8,
       "Values & Lease Rates": 1
@@ -53,7 +53,7 @@
       "Flightglobal": 2,
       "GlobalAir.com": 1,
       "Irish Examiner on MSN": 1,
-      "Ishka Airfinance": 46,
+      "Ishka Airfinance": 45,
       "Mint": 1,
       "Mint on MSN": 2,
       "NHK": 1,
@@ -2574,36 +2574,6 @@
       ],
       "raw_ids": [
         "165c797a36aeba55649da800"
-      ],
-      "analysis_mode": "fallback_after_ai_error"
-    },
-    {
-      "id": "7998a78de08fe00723",
-      "title": "S&P places ACG on positive watch after Itochu deal",
-      "summary_zh": "",
-      "why_it_matters_zh": "",
-      "category": "Leasing & Trading",
-      "importance_score": 54,
-      "region": "Global/Unspecified",
-      "entities": [
-        "ACG"
-      ],
-      "published_at": "2026-09-07T23:14:02Z",
-      "updated_at": "2026-09-14T09:38:27Z",
-      "primary_source": "Ishka Airfinance",
-      "primary_url": "https://platform.ishkaairfinance.com/Articles/3601074",
-      "source_count": 1,
-      "sources": [
-        {
-          "name": "Ishka Airfinance",
-          "url": "https://platform.ishkaairfinance.com/Articles/3601074",
-          "published_at": "2026-09-07T23:14:02Z",
-          "source_channel": "ishka_north_america_rss",
-          "discovered_via": "direct"
-        }
-      ],
-      "raw_ids": [
-        "41a904e33d30578d95ec91da"
       ],
       "analysis_mode": "fallback_after_ai_error"
     },

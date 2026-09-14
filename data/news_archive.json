@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-14T22:28:07Z",
+  "generated_at": "2026-09-14T23:24:55Z",
   "model": "deepseek-flash",
   "analysis_mode": "deepseek",
   "categories": [
@@ -16,15 +16,15 @@
   "stats": {
     "archive_retention_days": 120,
     "raw_pool_total": 1306,
-    "recent_raw_items": 224,
-    "already_processed_raw_items": 220,
-    "new_raw_items": 4,
-    "new_preclusters": 4,
+    "recent_raw_items": 223,
+    "already_processed_raw_items": 222,
+    "new_raw_items": 1,
+    "new_preclusters": 1,
     "deepseek_calls": 1,
     "deepseek_failed_batches": 0,
     "deepseek_errors": [],
-    "clusters_submitted": 4,
-    "clusters_retained_or_accounted": 3,
+    "clusters_submitted": 1,
+    "clusters_retained_or_accounted": 0,
     "stories": 218,
     "by_category": {
       "Aircraft & OEM": 37,
