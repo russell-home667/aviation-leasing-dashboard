@@ -1,18 +1,18 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-14T08:59:00Z",
+  "generated_at": "2026-09-14T08:59:36Z",
   "retention_days": 120,
   "metadata_only": true,
   "stats": {
-    "current_batch_unique": 555,
-    "stored_total": 1247,
+    "current_batch_unique": 554,
+    "stored_total": 1249,
     "reuters_discovered_via_bing": 29,
     "by_source": {
       "ADS Advance": 1,
       "AOL": 2,
       "AeroTime": 3,
       "Aerospace and Mechanical Insider on MSN": 1,
-      "Aviation News Online": 983,
+      "Aviation News Online": 984,
       "Aviation Week": 2,
       "Aviation Week Network": 1,
       "Aviation24.be": 1,
@@ -58,7 +58,7 @@
       "The Financial Express": 1,
       "The Globe and Mail": 3,
       "The Hindu BusinessLine": 1,
-      "The New Indian Express on MSN": 1,
+      "The New Indian Express on MSN": 2,
       "The New Voice of Ukraine on MSN": 1,
       "The Star": 1,
       "TravelBiz Monitor": 1,
@@ -68,7 +68,7 @@
       "ch-aviation": 1
     },
     "by_channel": {
-      "aviationnews_airline": 323,
+      "aviationnews_airline": 324,
       "aviationnews_engine": 78,
       "aviationnews_finance": 123,
       "aviationnews_leasing": 143,
@@ -76,7 +76,7 @@
       "aviationnews_maintenance": 115,
       "aviationnews_people": 92,
       "aviationnews_regulatory": 80,
-      "bing_news_rss": 114,
+      "bing_news_rss": 115,
       "ishka_africa_rss": 9,
       "ishka_aircraft_rss": 10,
       "ishka_airlines_rss": 6,
@@ -294,6 +294,26 @@
       "id": "95c7cb0cc99109ebf9f8a8ba"
     },
     {
+      "title": "Korean Air to migrate Asiana bookings ahead of December merger",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_airline",
+      "published_at": "2026-09-14T00:00:00Z",
+      "published_date": "2026-09-14",
+      "url": "https://www.aviationnews-online.com/article/korean-air-to-migrate-asiana-bookings-ahead-of-december-merger",
+      "summary": "Korean Air will begin moving Asiana Airlines bookings and flight numbers to its reservation system in November, as the two South Korean carriers move towards completing their integration in December.T...",
+      "author": "Lavanya Ahire",
+      "categories_raw": [
+        "Airline",
+        "Asia/Pacific"
+      ],
+      "region_raw": "Asia/Pacific",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T08:59:45Z",
+      "id": "b9392e3764a45d6ea0883aaa"
+    },
+    {
       "title": "Gol connects Europe to El Calafate and Ushuaia through its network in Brazil",
       "source": "Aviation News Online",
       "source_channel": "aviationnews_airline",
@@ -483,6 +503,23 @@
       "rights_mode": "search_result_metadata",
       "fetched_at": "2026-09-14T08:27:23Z",
       "id": "4e12e5d48f3d1c9ee3d21b47"
+    },
+    {
+      "title": "Taxiing for takeoff, Air Kerala weighs Russian-made aircraft",
+      "source": "The New Indian Express on MSN",
+      "source_channel": "bing_news_rss",
+      "published_at": "2026-09-11T19:15:41Z",
+      "published_date": "2026-09-11",
+      "url": "https://www.msn.com/en-in/money/general/taxiing-for-takeoff-air-kerala-weighs-russian-made-aircraft/ar-AA2c3A8C",
+      "summary": "KOCHI: Keralam-based low-cost carrier Air Kerala is in preliminary discussions with Russia’s United Aircraft Corporation (UAC) for a potential deal to acquire up to 20 Il-114-300 regional turboprop ...",
+      "author": "",
+      "categories_raw": [],
+      "region_raw": "",
+      "discovered_via": "Bing News",
+      "discovery_query": "\"Air Lease\" aircraft",
+      "rights_mode": "search_result_metadata",
+      "fetched_at": "2026-09-14T08:59:56Z",
+      "id": "825b9a063cd21a4aa5e8f4d1"
     },
     {
       "title": "New financing platform set to launch: sources",
