@@ -10,7 +10,9 @@ on:
       - 'scripts/validate_processed_news.py'
       - 'scripts/analyze_news.py'
       - 'scripts/run_analyze_news_resilient.py'
+      - 'scripts/backfill_news_enrichment.py'
       - 'scripts/validate_enriched_news.py'
+      - 'scripts/check_news_pipeline_health.py'
       - 'scripts/install_news_ui.py'
       - 'scripts/install_news_page_filters.py'
       - 'scripts/validate_news_ui.py'
@@ -20,21 +22,25 @@ on:
       - 'news.html'
       - '.github/workflows/update-news.yml'
   schedule:
+    # Poll hourly. Several source feeds expose only their latest items, so frequent
+    # archiving is required to avoid silent headline loss.
     - cron: '17 * * * *'
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 concurrency:
   group: news-data-writer
-  # A code/config push should supersede stale code currently running. Ordinary hourly
-  # schedules queue instead of cancelling an active production run.
+  # Code/config pushes supersede stale code; ordinary hourly runs queue so a live
+  # production update is never cancelled halfway through enrichment or deployment.
   cancel-in-progress: ${{ github.event_name == 'push' }}
 
 jobs:
   update-news:
     runs-on: ubuntu-latest
-    timeout-minutes: 50
+    timeout-minutes: 55
     steps:
       - name: Checkout repository
         uses: actions/checkout@v6
@@ -75,7 +81,7 @@ jobs:
       - name: Validate processed news
         run: python scripts/validate_processed_news.py
 
-      - name: Step 3 analyze, score and rank news
+      - name: Step 3 analyze, score and rank new/changed stories
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           DEEPSEEK_MODEL: deepseek-flash
@@ -83,7 +89,15 @@ jobs:
           NEWS_STEP3_MAX_AI_STORIES: '260'
         run: python scripts/run_analyze_news_resilient.py
 
-      - name: Validate Step 3 enriched news
+      - name: Step 5 backfill historical AI enrichment
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          DEEPSEEK_MODEL: deepseek-flash
+          NEWS_BACKFILL_BATCH_SIZE: '6'
+          NEWS_BACKFILL_MAX_STORIES: '240'
+        run: python scripts/backfill_news_enrichment.py
+
+      - name: Validate enriched news
         run: python scripts/validate_enriched_news.py
 
       - name: Install homepage news module
@@ -92,52 +106,37 @@ jobs:
       - name: Install full news page deep links
         run: python scripts/install_news_page_filters.py
 
-      - name: Validate Step 4 dashboard news UI
+      - name: Validate dashboard news UI
         run: python scripts/validate_news_ui.py
 
-      - name: Print news pipeline summary
+      - name: Step 5 operational health gate
+        run: python scripts/check_news_pipeline_health.py
+
+      - name: Publish pipeline summary to Actions
         run: |
-          python - <<'PY'
+          python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
           import json
           from pathlib import Path
-          health = json.loads(Path('data/news_source_health.json').read_text(encoding='utf-8'))
-          coverage = json.loads(Path('data/news_coverage.json').read_text(encoding='utf-8'))
-          raw = json.loads(Path('data/news_raw.json').read_text(encoding='utf-8'))
-          processed = json.loads(Path('data/news.json').read_text(encoding='utf-8'))
-          status = json.loads(Path('data/news_processing_status.json').read_text(encoding='utf-8'))
-          enriched = json.loads(Path('data/news_feed.json').read_text(encoding='utf-8'))
-          step3 = json.loads(Path('data/news_enrichment_status.json').read_text(encoding='utf-8'))
-          print('Health:', json.dumps(health['summary'], ensure_ascii=False))
-          print('Coverage:', json.dumps({
-              'status': coverage['overall_status'],
-              'ishka_recall': coverage['known_ishka_recall']['recall'],
-              'failed': coverage['failed_requirements'],
-              'warnings': coverage['warnings'],
-          }, ensure_ascii=False))
-          print('Raw stored:', raw['stats']['stored_total'])
-          print('Step 2:', json.dumps({
-              'analysis_mode': processed.get('analysis_mode'),
-              'model': processed.get('model'),
-              'stories': processed.get('stats', {}).get('stories'),
-              'by_category': processed.get('stats', {}).get('by_category'),
-              'deepseek_configured': status.get('deepseek_configured'),
-              'deepseek_calls': status.get('deepseek_calls'),
-              'deepseek_errors': status.get('deepseek_errors'),
-          }, ensure_ascii=False))
-          print('Step 3/4:', json.dumps({
-              'analysis_mode': enriched.get('analysis_mode'),
-              'stories': enriched.get('stats', {}).get('stories'),
-              'critical': enriched.get('stats', {}).get('critical_stories'),
-              'priority_entity_stories': enriched.get('stats', {}).get('priority_entity_stories'),
-              'macro_related_stories': enriched.get('stats', {}).get('macro_related_stories'),
-              'homepage_feed': len(enriched.get('homepage', {}).get('feed_story_ids', [])),
-              'homepage_critical': len(enriched.get('homepage', {}).get('critical_story_ids', [])),
-              'deepseek_calls': step3.get('deepseek_calls'),
-              'deepseek_failed_batches': step3.get('deepseek_failed_batches'),
-          }, ensure_ascii=False))
+          h = json.loads(Path('data/news_pipeline_health.json').read_text(encoding='utf-8'))
+          e = json.loads(Path('data/news_enrichment_status.json').read_text(encoding='utf-8'))
+          f = json.loads(Path('data/news_feed.json').read_text(encoding='utf-8'))
+          print('## Aviation Leasing News Pipeline')
+          print(f"- Operational status: **{h.get('status')}**")
+          print(f"- Source checks: **{h.get('source_checks', {}).get('ok')}/{h.get('source_checks', {}).get('total')}**")
+          print(f"- Ishka baseline recall: **{h.get('coverage', {}).get('ishka_baseline_recall')}**")
+          print(f"- Current clustered stories: **{len(f.get('stories', []))}**")
+          print(f"- Critical: **{f.get('stats', {}).get('critical_stories')}**")
+          print(f"- Priority customer/prospect stories: **{f.get('stats', {}).get('priority_entity_stories')}**")
+          print(f"- Macro-related stories: **{f.get('stats', {}).get('macro_related_stories')}**")
+          print(f"- DeepSeek current / fallback current: **{e.get('deepseek_story_count')} / {e.get('fallback_story_count')}**")
+          warnings = h.get('warnings') or []
+          if warnings:
+              print('- Warnings:')
+              for w in warnings:
+                  print(f"  - {w}")
           PY
 
-      - name: Commit news snapshot
+      - name: Commit last-known-good news snapshot
         run: |
           cp data/news_raw.json /tmp/news_raw.json
           cp data/news_source_health.json /tmp/news_source_health.json
@@ -148,6 +147,7 @@ jobs:
           cp data/news_feed.json /tmp/news_feed.json
           cp data/news_feed_archive.json /tmp/news_feed_archive.json
           cp data/news_enrichment_status.json /tmp/news_enrichment_status.json
+          cp data/news_pipeline_health.json /tmp/news_pipeline_health.json
           cp index.html /tmp/index.html
           cp news.html /tmp/news.html
           git config user.name "github-actions[bot]"
@@ -166,9 +166,10 @@ jobs:
             cp /tmp/news_feed.json data/news_feed.json
             cp /tmp/news_feed_archive.json data/news_feed_archive.json
             cp /tmp/news_enrichment_status.json data/news_enrichment_status.json
+            cp /tmp/news_pipeline_health.json data/news_pipeline_health.json
             cp /tmp/index.html index.html
             cp /tmp/news.html news.html
-            git add data/news_raw.json data/news_source_health.json data/news_coverage.json data/news.json data/news_archive.json data/news_processing_status.json data/news_feed.json data/news_feed_archive.json data/news_enrichment_status.json index.html news.html
+            git add data/news_raw.json data/news_source_health.json data/news_coverage.json data/news.json data/news_archive.json data/news_processing_status.json data/news_feed.json data/news_feed_archive.json data/news_enrichment_status.json data/news_pipeline_health.json index.html news.html
 
             if git diff --cached --quiet; then
               echo "No news data changes to commit."
@@ -184,3 +185,29 @@ jobs:
 
           echo "Failed to push news snapshot after 3 attempts."
           exit 1
+
+  deploy-news-pages:
+    needs: update-news
+    if: ${{ needs.update-news.result == 'success' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout committed main snapshot
+        uses: actions/checkout@v6
+        with:
+          ref: main
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: '.'
+
+      - name: Deploy current news snapshot to Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
