@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-14T08:26:35Z",
+  "generated_at": "2026-09-14T08:29:27Z",
   "retention_days": 45,
   "metadata_only": true,
   "stats": {
-    "current_batch_unique": 216,
-    "stored_total": 88,
-    "reuters_discovered_via_bing": 1,
+    "current_batch_unique": 252,
+    "stored_total": 99,
+    "reuters_discovered_via_bing": 10,
     "by_source": {
       "AeroTime": 1,
       "Aviation Week": 1,
@@ -21,6 +21,7 @@
       "Devdiscourse": 1,
       "Finanznachrichten": 2,
       "Firstpost": 1,
+      "Flightglobal": 2,
       "Flying": 1,
       "Global Legal Chronicle": 1,
       "Insider Monkey": 1,
@@ -31,7 +32,7 @@
       "Moneycontrol": 2,
       "Nairametrics": 1,
       "Republic World": 1,
-      "Reuters": 1,
+      "Reuters": 10,
       "Seeking Alpha": 1,
       "The Financial Express": 1,
       "The Globe and Mail": 2,
@@ -45,14 +46,14 @@
       "ch-aviation": 1
     },
     "by_channel": {
-      "bing_news_rss": 41,
+      "bing_news_rss": 43,
       "ishka_aircraft_rss": 9,
       "ishka_airlines_rss": 6,
       "ishka_banks_capital_rss": 5,
       "ishka_latest_rss": 10,
       "ishka_law_rss": 9,
       "ishka_lessors_rss": 7,
-      "reuters_via_bing": 1
+      "reuters_via_bing": 10
     }
   },
   "items": [
@@ -484,6 +485,23 @@
       "id": "9fbdfd622043c7bcb556f7e6"
     },
     {
+      "title": "Gabriel Araujo",
+      "source": "Reuters",
+      "source_channel": "reuters_via_bing",
+      "published_at": "2026-09-10T10:52:00Z",
+      "published_date": "2026-09-10",
+      "url": "https://www.reuters.com/authors/gabriel-araujo/",
+      "summary": "Gabriel is a Sao Paulo, Brazil-based reporter covering Latin America's financial and breaking news from the region's largest economy. A graduate of the University of Sao Paulo, joined Reuters while in ...",
+      "author": "",
+      "categories_raw": [],
+      "region_raw": "",
+      "discovered_via": "Bing News",
+      "discovery_query": "site:reuters.com aircraft lessor",
+      "rights_mode": "search_result_metadata",
+      "fetched_at": "2026-09-14T08:30:18Z",
+      "id": "b01634ec58065da111d0535e"
+    },
+    {
       "title": "Airlink adds E2s from lessor",
       "source": "Ishka Airfinance",
       "source_channel": "ishka_airlines_rss",
@@ -546,6 +564,23 @@
       "rights_mode": "official_rss_metadata",
       "fetched_at": "2026-09-14T08:26:36Z",
       "id": "79c58e88a08721f341940281"
+    },
+    {
+      "title": "Sabrina Valle",
+      "source": "Reuters",
+      "source_channel": "reuters_via_bing",
+      "published_at": "2026-09-10T07:56:00Z",
+      "published_date": "2026-09-10",
+      "url": "https://www.reuters.com/authors/sabrina-valle/",
+      "summary": "NY-based correspondent reporting on some of the largest deals in Healthcare and Industrials. Previously based in Houston, covering global operations of U.S. oil majors. Sabrina has a two-decade career ...",
+      "author": "",
+      "categories_raw": [],
+      "region_raw": "",
+      "discovered_via": "Bing News",
+      "discovery_query": "site:reuters.com aircraft leasing",
+      "rights_mode": "search_result_metadata",
+      "fetched_at": "2026-09-14T08:30:18Z",
+      "id": "95bf788ae9e04fbe26120f88"
     },
     {
       "title": "Avianca signs sale and leaseback deal for 12 Airbus A320neos with BOC Aviation",
@@ -669,6 +704,23 @@
       "rights_mode": "search_result_metadata",
       "fetched_at": "2026-09-14T08:27:19Z",
       "id": "c5b060c167418eb27d1504c5"
+    },
+    {
+      "title": "Airbus SE",
+      "source": "Reuters",
+      "source_channel": "reuters_via_bing",
+      "published_at": "2026-09-09T17:00:00Z",
+      "published_date": "2026-09-09",
+      "url": "https://www.reuters.com/company/airbus-se/",
+      "summary": "Vietnam Airlines places provisional order with Airbus for five Airbus A350-900s Vietnam Airlines has signed a memorandum of understanding with Airbus to buy five A350-900 jets, the carrier said on ...",
+      "author": "",
+      "categories_raw": [],
+      "region_raw": "",
+      "discovered_via": "Bing News",
+      "discovery_query": "site:reuters.com aircraft lessor",
+      "rights_mode": "search_result_metadata",
+      "fetched_at": "2026-09-14T08:30:18Z",
+      "id": "83d9487ac34c37ec087a8deb"
     },
     {
       "title": "AFG buys another A321neo",
@@ -816,6 +868,40 @@
       "id": "96ddb3e4b194bf670171c240"
     },
     {
+      "title": "EasyJet faces $72 million lawsuit over stranded Airbus planes, FT reports",
+      "source": "Reuters",
+      "source_channel": "reuters_via_bing",
+      "published_at": "2026-09-08T09:17:00Z",
+      "published_date": "2026-09-08",
+      "url": "https://www.reuters.com/business/aerospace-defense/easyjet-faces-72-million-lawsuit-tied-stranded-airbus-planes-ft-reports-2026-09-08/",
+      "summary": "British budget airline ​easyJet is ‌being sued for at ​least $72 million ​by an Irish ⁠unit of ​Russian state-owned ​aircraft lessor GTLK for unlawfully ​abandoning six ​Airbus planes after ...",
+      "author": "",
+      "categories_raw": [],
+      "region_raw": "",
+      "discovered_via": "Bing News",
+      "discovery_query": "site:reuters.com aircraft leasing",
+      "rights_mode": "search_result_metadata",
+      "fetched_at": "2026-09-14T08:30:18Z",
+      "id": "73df53ad1c7ed0ca171de6ff"
+    },
+    {
+      "title": "GE Aerospace to buy castings supplier for nearly $12 billion to tackle engine bottleneck",
+      "source": "Reuters",
+      "source_channel": "reuters_via_bing",
+      "published_at": "2026-09-08T04:38:00Z",
+      "published_date": "2026-09-08",
+      "url": "https://www.reuters.com/legal/transactional/ge-aerospace-buy-castings-maker-cpp-nearly-12-billion-2026-09-08/",
+      "summary": "GE Aerospace ​said on Tuesday it ‌would buy castings maker Consolidated Precision Products from ​investment firms Warburg ​Pincus and Berkshire Partners ⁠for $11.75 billion, in a ​bid to expand ​its ...",
+      "author": "",
+      "categories_raw": [],
+      "region_raw": "",
+      "discovered_via": "Bing News",
+      "discovery_query": "site:reuters.com aircraft leasing",
+      "rights_mode": "search_result_metadata",
+      "fetched_at": "2026-09-14T08:30:18Z",
+      "id": "120beb19c1eb2e8f71a43f67"
+    },
+    {
       "title": "Aircraft sales accelerate ABS repayments",
       "source": "Ishka Airfinance",
       "source_channel": "ishka_aircraft_rss",
@@ -835,6 +921,40 @@
       "rights_mode": "official_rss_metadata",
       "fetched_at": "2026-09-14T08:26:36Z",
       "id": "aac0dc4872475cef8c6c677f"
+    },
+    {
+      "title": "Willis Lease Finance eyes Asia-Pacific engine repair growth with new Malaysia centre",
+      "source": "Reuters",
+      "source_channel": "reuters_via_bing",
+      "published_at": "2026-09-07T19:01:00Z",
+      "published_date": "2026-09-07",
+      "url": "https://www.reuters.com/world/asia-pacific/willis-lease-finance-eyes-asia-pacific-engine-repair-growth-with-new-malaysia-2026-09-08/",
+      "summary": "U.S. ​aircraft engine lessor Willis Lease Finance Corp is targeting surging engine maintenance demand across Asia-Pacific, ‌with its new Malaysian repair facility the first step in a broader regional ...",
+      "author": "",
+      "categories_raw": [],
+      "region_raw": "",
+      "discovered_via": "Bing News",
+      "discovery_query": "site:reuters.com aircraft leasing",
+      "rights_mode": "search_result_metadata",
+      "fetched_at": "2026-09-14T08:30:18Z",
+      "id": "edbe4f6a52c55e10e24f49ef"
+    },
+    {
+      "title": "Easyjet PLC",
+      "source": "Reuters",
+      "source_channel": "reuters_via_bing",
+      "published_at": "2026-09-07T17:00:00Z",
+      "published_date": "2026-09-07",
+      "url": "https://www.reuters.com/company/easyjet-plc/",
+      "summary": "UK gives air traffic provider a week to probe outage that halted flights Britain's NATS air traffic control provider has a week to investigate the systems failure that halted flights and stranded ...",
+      "author": "",
+      "categories_raw": [],
+      "region_raw": "",
+      "discovered_via": "Bing News",
+      "discovery_query": "site:reuters.com aircraft lessor",
+      "rights_mode": "search_result_metadata",
+      "fetched_at": "2026-09-14T08:30:18Z",
+      "id": "24e94934fa3eca05d0acfdc7"
     },
     {
       "title": "CALC Delivers Two Airbus A320neo Aircraft to Air Cairo Under Operating Lease",
@@ -895,6 +1015,40 @@
       "rights_mode": "official_rss_metadata",
       "fetched_at": "2026-09-14T08:26:36Z",
       "id": "207017876de5dd772ce23bf0"
+    },
+    {
+      "title": "IAI AVIATION GROUP Builds for the Next Generation of Engine MRO",
+      "source": "Flightglobal",
+      "source_channel": "bing_news_rss",
+      "published_at": "2026-09-07T08:27:00Z",
+      "published_date": "2026-09-07",
+      "url": "https://www.flightglobal.com/paid-content/2026/09/iai-aviation-group-builds-for-the-next-generation-of-engine-mro/",
+      "summary": "IAI (Israel Aerospace Industries) Aviation Group is expanding its engine MRO capabilities to meet rising global demand -increasing LEAP capacity, expanding repairs in-house, and giving operators ...",
+      "author": "",
+      "categories_raw": [],
+      "region_raw": "",
+      "discovered_via": "Bing News",
+      "discovery_query": "site:flightglobal.com aircraft leasing",
+      "rights_mode": "search_result_metadata",
+      "fetched_at": "2026-09-14T08:30:18Z",
+      "id": "4f6f7f23152e25100fd60f0c"
+    },
+    {
+      "title": "Industrial and Commercial Bank of China Ltd",
+      "source": "Reuters",
+      "source_channel": "reuters_via_bing",
+      "published_at": "2026-09-05T17:00:00Z",
+      "published_date": "2026-09-05",
+      "url": "https://www.reuters.com/company/industrial-and-commercial-bank-of-china-ltd/",
+      "summary": "Beijing is injecting another $54 bln into the financial sector. It wants to boost the economy but forcing banks to lend when demand ⁠is weak is hard. Credit growth has slowed since last year’s larger ...",
+      "author": "",
+      "categories_raw": [],
+      "region_raw": "",
+      "discovered_via": "Bing News",
+      "discovery_query": "site:reuters.com aircraft leasing",
+      "rights_mode": "search_result_metadata",
+      "fetched_at": "2026-09-14T08:30:18Z",
+      "id": "bbca8f51edda42fdbeadfd9c"
     },
     {
       "title": "Matheson hires associate",
@@ -1015,6 +1169,23 @@
       "id": "ae22585b6ab780cc3e9e2d3f"
     },
     {
+      "title": "Behind lessor Azorra’s decision to part-out four A220s",
+      "source": "Flightglobal",
+      "source_channel": "bing_news_rss",
+      "published_at": "2026-09-03T13:17:00Z",
+      "published_date": "2026-09-03",
+      "url": "https://www.flightglobal.com/airframers/2026/09/behind-lessor-azorras-decision-to-part-out-four-a220s/",
+      "summary": "i The price is displayed as a monthly rate (VAT excl.), but payment is made annually. Please refer to our subscription terms for more details.",
+      "author": "",
+      "categories_raw": [],
+      "region_raw": "",
+      "discovered_via": "Bing News",
+      "discovery_query": "site:flightglobal.com aircraft lessor",
+      "rights_mode": "search_result_metadata",
+      "fetched_at": "2026-09-14T08:30:18Z",
+      "id": "c8ff5e54aea36cfae57b0c92"
+    },
+    {
       "title": "Philippine Airlines’ lease liabilities mount",
       "source": "Ishka Airfinance",
       "source_channel": "ishka_banks_capital_rss",
@@ -1053,6 +1224,23 @@
       "rights_mode": "search_result_metadata",
       "fetched_at": "2026-09-14T08:27:20Z",
       "id": "6e0b0068f5c6ba626dd4a995"
+    },
+    {
+      "title": "Aircraft lessor Azorra sees engine issues improving, strong demand for regional jets",
+      "source": "Reuters",
+      "source_channel": "reuters_via_bing",
+      "published_at": "2026-09-03T05:37:00Z",
+      "published_date": "2026-09-03",
+      "url": "https://www.reuters.com/business/aircraft-lessor-azorra-sees-engine-issues-improving-strong-demand-regional-jets-2026-09-03/",
+      "summary": "Aircraft lessor Azorra sees signs that Pratt & Whitney's engine troubles are easing and expects strong demand for smaller, fuel-efficient jets to continue despite ​industry disruptions and higher fuel ...",
+      "author": "",
+      "categories_raw": [],
+      "region_raw": "",
+      "discovered_via": "Bing News",
+      "discovery_query": "site:reuters.com aircraft leasing",
+      "rights_mode": "search_result_metadata",
+      "fetched_at": "2026-09-14T08:30:18Z",
+      "id": "4b79945fab3878f47d11cc46"
     },
     {
       "title": "Union Civil Aviation Minister stresses on strengthening aircraft leasing eco-system",

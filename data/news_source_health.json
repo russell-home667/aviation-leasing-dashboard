@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-09-14T08:26:35Z",
+  "checked_at": "2026-09-14T08:29:27Z",
   "summary": {
-    "checks_total": 37,
-    "checks_ok": 28,
-    "checks_failed": 9,
-    "records_before_cross_source_dedupe": 254,
-    "current_batch_unique": 216
+    "checks_total": 43,
+    "checks_ok": 32,
+    "checks_failed": 11,
+    "records_before_cross_source_dedupe": 294,
+    "current_batch_unique": 252
   },
   "checks": [
     {
@@ -18,8 +18,8 @@
       "http_status": 200,
       "records": 10,
       "error": null,
-      "elapsed_seconds": 0.66,
-      "checked_at": "2026-09-14T08:26:35Z"
+      "elapsed_seconds": 0.71,
+      "checked_at": "2026-09-14T08:29:28Z"
     },
     {
       "source_id": "ishka_aircraft_rss",
@@ -30,8 +30,8 @@
       "http_status": 200,
       "records": 10,
       "error": null,
-      "elapsed_seconds": 0.53,
-      "checked_at": "2026-09-14T08:26:36Z"
+      "elapsed_seconds": 0.19,
+      "checked_at": "2026-09-14T08:29:28Z"
     },
     {
       "source_id": "ishka_airlines_rss",
@@ -42,8 +42,8 @@
       "http_status": 200,
       "records": 10,
       "error": null,
-      "elapsed_seconds": 0.19,
-      "checked_at": "2026-09-14T08:26:36Z"
+      "elapsed_seconds": 0.21,
+      "checked_at": "2026-09-14T08:29:29Z"
     },
     {
       "source_id": "ishka_banks_capital_rss",
@@ -54,8 +54,8 @@
       "http_status": 200,
       "records": 10,
       "error": null,
-      "elapsed_seconds": 0.2,
-      "checked_at": "2026-09-14T08:26:36Z"
+      "elapsed_seconds": 0.22,
+      "checked_at": "2026-09-14T08:29:29Z"
     },
     {
       "source_id": "ishka_law_rss",
@@ -66,8 +66,8 @@
       "http_status": 200,
       "records": 10,
       "error": null,
-      "elapsed_seconds": 0.19,
-      "checked_at": "2026-09-14T08:26:36Z"
+      "elapsed_seconds": 0.2,
+      "checked_at": "2026-09-14T08:29:29Z"
     },
     {
       "source_id": "ishka_lessors_rss",
@@ -78,8 +78,8 @@
       "http_status": 200,
       "records": 10,
       "error": null,
-      "elapsed_seconds": 0.21,
-      "checked_at": "2026-09-14T08:26:37Z"
+      "elapsed_seconds": 0.52,
+      "checked_at": "2026-09-14T08:29:29Z"
     },
     {
       "source_id": "aviationnews_leasing",
@@ -90,8 +90,8 @@
       "http_status": null,
       "records": 0,
       "error": "HTTPError: 403 Client Error: Forbidden for url: https://aviationnews-online.com/public/category/leasing",
-      "elapsed_seconds": 4.81,
-      "checked_at": "2026-09-14T08:26:41Z"
+      "elapsed_seconds": 4.84,
+      "checked_at": "2026-09-14T08:29:34Z"
     },
     {
       "source_id": "aviationnews_finance",
@@ -102,8 +102,8 @@
       "http_status": null,
       "records": 0,
       "error": "HTTPError: 403 Client Error: Forbidden for url: https://aviationnews-online.com/public/category/finance",
-      "elapsed_seconds": 4.68,
-      "checked_at": "2026-09-14T08:26:46Z"
+      "elapsed_seconds": 4.69,
+      "checked_at": "2026-09-14T08:29:39Z"
     },
     {
       "source_id": "aviationnews_airline",
@@ -114,8 +114,8 @@
       "http_status": null,
       "records": 0,
       "error": "HTTPError: 403 Client Error: Forbidden for url: https://aviationnews-online.com/public/category/airline",
-      "elapsed_seconds": 4.69,
-      "checked_at": "2026-09-14T08:26:51Z"
+      "elapsed_seconds": 4.7,
+      "checked_at": "2026-09-14T08:29:44Z"
     },
     {
       "source_id": "aviationnews_engine",
@@ -126,8 +126,8 @@
       "http_status": null,
       "records": 0,
       "error": "HTTPError: 403 Client Error: Forbidden for url: https://aviationnews-online.com/public/category/engine",
-      "elapsed_seconds": 4.7,
-      "checked_at": "2026-09-14T08:26:56Z"
+      "elapsed_seconds": 4.69,
+      "checked_at": "2026-09-14T08:29:48Z"
     },
     {
       "source_id": "aviationnews_maintenance",
@@ -138,8 +138,8 @@
       "http_status": null,
       "records": 0,
       "error": "HTTPError: 403 Client Error: Forbidden for url: https://aviationnews-online.com/public/category/maintenance",
-      "elapsed_seconds": 4.66,
-      "checked_at": "2026-09-14T08:27:00Z"
+      "elapsed_seconds": 4.7,
+      "checked_at": "2026-09-14T08:29:53Z"
     },
     {
       "source_id": "aviationnews_legal",
@@ -150,8 +150,8 @@
       "http_status": null,
       "records": 0,
       "error": "HTTPError: 403 Client Error: Forbidden for url: https://aviationnews-online.com/public/category/legal",
-      "elapsed_seconds": 4.69,
-      "checked_at": "2026-09-14T08:27:05Z"
+      "elapsed_seconds": 4.7,
+      "checked_at": "2026-09-14T08:29:58Z"
     },
     {
       "source_id": "aviationnews_regulatory",
@@ -162,8 +162,8 @@
       "http_status": null,
       "records": 0,
       "error": "HTTPError: 403 Client Error: Forbidden for url: https://aviationnews-online.com/public/category/regulatory",
-      "elapsed_seconds": 4.69,
-      "checked_at": "2026-09-14T08:27:10Z"
+      "elapsed_seconds": 4.71,
+      "checked_at": "2026-09-14T08:30:02Z"
     },
     {
       "source_id": "aviationnews_people",
@@ -175,7 +175,7 @@
       "records": 0,
       "error": "HTTPError: 403 Client Error: Forbidden for url: https://aviationnews-online.com/public/category/people",
       "elapsed_seconds": 4.69,
-      "checked_at": "2026-09-14T08:27:14Z"
+      "checked_at": "2026-09-14T08:30:07Z"
     },
     {
       "source_id": "flightglobal_rss",
@@ -186,8 +186,8 @@
       "http_status": null,
       "records": 0,
       "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.flightglobal.com/rss",
-      "elapsed_seconds": 4.69,
-      "checked_at": "2026-09-14T08:27:19Z"
+      "elapsed_seconds": 4.82,
+      "checked_at": "2026-09-14T08:30:12Z"
     },
     {
       "source_id": "bing:\"aircraft leasing\"",
@@ -198,8 +198,8 @@
       "http_status": 200,
       "records": 12,
       "error": null,
-      "elapsed_seconds": 0.37,
-      "checked_at": "2026-09-14T08:27:19Z"
+      "elapsed_seconds": 0.35,
+      "checked_at": "2026-09-14T08:30:12Z"
     },
     {
       "source_id": "bing:\"aircraft lessor\"",
@@ -210,8 +210,8 @@
       "http_status": 200,
       "records": 12,
       "error": null,
-      "elapsed_seconds": 0.26,
-      "checked_at": "2026-09-14T08:27:20Z"
+      "elapsed_seconds": 0.19,
+      "checked_at": "2026-09-14T08:30:13Z"
     },
     {
       "source_id": "bing:\"sale and leaseback\" aircraft",
@@ -222,8 +222,8 @@
       "http_status": 200,
       "records": 8,
       "error": null,
-      "elapsed_seconds": 0.28,
-      "checked_at": "2026-09-14T08:27:20Z"
+      "elapsed_seconds": 0.25,
+      "checked_at": "2026-09-14T08:30:13Z"
     },
     {
       "source_id": "bing:\"sale-leaseback\" aircraft",
@@ -234,8 +234,8 @@
       "http_status": 200,
       "records": 8,
       "error": null,
-      "elapsed_seconds": 0.27,
-      "checked_at": "2026-09-14T08:27:20Z"
+      "elapsed_seconds": 0.19,
+      "checked_at": "2026-09-14T08:30:13Z"
     },
     {
       "source_id": "bing:\"aviation finance\" aircraft",
@@ -246,8 +246,8 @@
       "http_status": 200,
       "records": 9,
       "error": null,
-      "elapsed_seconds": 0.29,
-      "checked_at": "2026-09-14T08:27:20Z"
+      "elapsed_seconds": 0.22,
+      "checked_at": "2026-09-14T08:30:13Z"
     },
     {
       "source_id": "bing:\"aircraft financing\"",
@@ -258,8 +258,8 @@
       "http_status": 200,
       "records": 10,
       "error": null,
-      "elapsed_seconds": 0.34,
-      "checked_at": "2026-09-14T08:27:21Z"
+      "elapsed_seconds": 0.21,
+      "checked_at": "2026-09-14T08:30:13Z"
     },
     {
       "source_id": "bing:AerCap aviation",
@@ -270,8 +270,8 @@
       "http_status": 200,
       "records": 10,
       "error": null,
-      "elapsed_seconds": 0.34,
-      "checked_at": "2026-09-14T08:27:21Z"
+      "elapsed_seconds": 0.2,
+      "checked_at": "2026-09-14T08:30:14Z"
     },
     {
       "source_id": "bing:Avolon aviation",
@@ -282,8 +282,8 @@
       "http_status": 200,
       "records": 12,
       "error": null,
-      "elapsed_seconds": 0.25,
-      "checked_at": "2026-09-14T08:27:21Z"
+      "elapsed_seconds": 0.29,
+      "checked_at": "2026-09-14T08:30:14Z"
     },
     {
       "source_id": "bing:\"BOC Aviation\"",
@@ -294,8 +294,8 @@
       "http_status": 200,
       "records": 12,
       "error": null,
-      "elapsed_seconds": 0.27,
-      "checked_at": "2026-09-14T08:27:22Z"
+      "elapsed_seconds": 0.29,
+      "checked_at": "2026-09-14T08:30:14Z"
     },
     {
       "source_id": "bing:\"SMBC Aviation Capital\"",
@@ -306,8 +306,8 @@
       "http_status": 200,
       "records": 6,
       "error": null,
-      "elapsed_seconds": 0.29,
-      "checked_at": "2026-09-14T08:27:22Z"
+      "elapsed_seconds": 0.2,
+      "checked_at": "2026-09-14T08:30:14Z"
     },
     {
       "source_id": "bing:\"Dubai Aerospace Enterprise\" aircraft",
@@ -318,8 +318,8 @@
       "http_status": 200,
       "records": 8,
       "error": null,
-      "elapsed_seconds": 0.28,
-      "checked_at": "2026-09-14T08:27:22Z"
+      "elapsed_seconds": 0.2,
+      "checked_at": "2026-09-14T08:30:15Z"
     },
     {
       "source_id": "bing:\"CDB Aviation\"",
@@ -330,8 +330,8 @@
       "http_status": 200,
       "records": 11,
       "error": null,
-      "elapsed_seconds": 0.24,
-      "checked_at": "2026-09-14T08:27:22Z"
+      "elapsed_seconds": 0.2,
+      "checked_at": "2026-09-14T08:30:15Z"
     },
     {
       "source_id": "bing:\"CALC\" aircraft leasing",
@@ -342,8 +342,8 @@
       "http_status": 200,
       "records": 10,
       "error": null,
-      "elapsed_seconds": 0.32,
-      "checked_at": "2026-09-14T08:27:23Z"
+      "elapsed_seconds": 0.26,
+      "checked_at": "2026-09-14T08:30:15Z"
     },
     {
       "source_id": "bing:\"Air Lease\" aircraft",
@@ -354,8 +354,8 @@
       "http_status": 200,
       "records": 10,
       "error": null,
-      "elapsed_seconds": 0.3,
-      "checked_at": "2026-09-14T08:27:23Z"
+      "elapsed_seconds": 0.29,
+      "checked_at": "2026-09-14T08:30:15Z"
     },
     {
       "source_id": "bing:\"Aviation Capital Group\" aircraft",
@@ -366,8 +366,8 @@
       "http_status": 200,
       "records": 10,
       "error": null,
-      "elapsed_seconds": 0.3,
-      "checked_at": "2026-09-14T08:27:23Z"
+      "elapsed_seconds": 0.2,
+      "checked_at": "2026-09-14T08:30:16Z"
     },
     {
       "source_id": "bing:\"aircraft engine leasing\"",
@@ -378,8 +378,8 @@
       "http_status": 200,
       "records": 12,
       "error": null,
-      "elapsed_seconds": 0.29,
-      "checked_at": "2026-09-14T08:27:24Z"
+      "elapsed_seconds": 0.21,
+      "checked_at": "2026-09-14T08:30:16Z"
     },
     {
       "source_id": "bing:\"aviation ABS\"",
@@ -390,8 +390,8 @@
       "http_status": 200,
       "records": 11,
       "error": null,
-      "elapsed_seconds": 0.26,
-      "checked_at": "2026-09-14T08:27:24Z"
+      "elapsed_seconds": 0.2,
+      "checked_at": "2026-09-14T08:30:16Z"
     },
     {
       "source_id": "bing:JOLCO aircraft",
@@ -402,8 +402,8 @@
       "http_status": 200,
       "records": 1,
       "error": null,
-      "elapsed_seconds": 0.23,
-      "checked_at": "2026-09-14T08:27:24Z"
+      "elapsed_seconds": 0.19,
+      "checked_at": "2026-09-14T08:30:16Z"
     },
     {
       "source_id": "bing:\"aircraft lease rates\"",
@@ -414,8 +414,8 @@
       "http_status": 200,
       "records": 9,
       "error": null,
-      "elapsed_seconds": 0.27,
-      "checked_at": "2026-09-14T08:27:24Z"
+      "elapsed_seconds": 0.21,
+      "checked_at": "2026-09-14T08:30:16Z"
     },
     {
       "source_id": "bing:\"aircraft values\" lessor",
@@ -426,8 +426,8 @@
       "http_status": 200,
       "records": 6,
       "error": null,
-      "elapsed_seconds": 0.24,
-      "checked_at": "2026-09-14T08:27:25Z"
+      "elapsed_seconds": 0.19,
+      "checked_at": "2026-09-14T08:30:17Z"
     },
     {
       "source_id": "bing:airline bankruptcy aircraft leasing",
@@ -438,8 +438,8 @@
       "http_status": 200,
       "records": 4,
       "error": null,
-      "elapsed_seconds": 0.26,
-      "checked_at": "2026-09-14T08:27:25Z"
+      "elapsed_seconds": 0.25,
+      "checked_at": "2026-09-14T08:30:17Z"
     },
     {
       "source_id": "bing:aircraft repossession lessor",
@@ -450,8 +450,80 @@
       "http_status": 200,
       "records": 3,
       "error": null,
-      "elapsed_seconds": 0.25,
-      "checked_at": "2026-09-14T08:27:25Z"
+      "elapsed_seconds": 0.22,
+      "checked_at": "2026-09-14T08:30:17Z"
+    },
+    {
+      "source_id": "bing:site:aviationnews-online.com aircraft leasing",
+      "name": "Bing News",
+      "kind": "rss_search",
+      "url": "https://www.bing.com/news/search?q=site%3Aaviationnews-online.com+aircraft+leasing&format=rss&mkt=en-US",
+      "ok": false,
+      "http_status": 200,
+      "records": 0,
+      "error": null,
+      "elapsed_seconds": 0.23,
+      "checked_at": "2026-09-14T08:30:17Z"
+    },
+    {
+      "source_id": "bing:site:aviationnews-online.com aviation finance",
+      "name": "Bing News",
+      "kind": "rss_search",
+      "url": "https://www.bing.com/news/search?q=site%3Aaviationnews-online.com+aviation+finance&format=rss&mkt=en-US",
+      "ok": false,
+      "http_status": 200,
+      "records": 0,
+      "error": null,
+      "elapsed_seconds": 0.23,
+      "checked_at": "2026-09-14T08:30:17Z"
+    },
+    {
+      "source_id": "bing:site:flightglobal.com aircraft leasing",
+      "name": "Bing News",
+      "kind": "rss_search",
+      "url": "https://www.bing.com/news/search?q=site%3Aflightglobal.com+aircraft+leasing&format=rss&mkt=en-US",
+      "ok": true,
+      "http_status": 200,
+      "records": 12,
+      "error": null,
+      "elapsed_seconds": 0.24,
+      "checked_at": "2026-09-14T08:30:18Z"
+    },
+    {
+      "source_id": "bing:site:flightglobal.com aircraft lessor",
+      "name": "Bing News",
+      "kind": "rss_search",
+      "url": "https://www.bing.com/news/search?q=site%3Aflightglobal.com+aircraft+lessor&format=rss&mkt=en-US",
+      "ok": true,
+      "http_status": 200,
+      "records": 12,
+      "error": null,
+      "elapsed_seconds": 0.22,
+      "checked_at": "2026-09-14T08:30:18Z"
+    },
+    {
+      "source_id": "bing:site:reuters.com aircraft leasing",
+      "name": "Bing News",
+      "kind": "rss_search",
+      "url": "https://www.bing.com/news/search?q=site%3Areuters.com+aircraft+leasing&format=rss&mkt=en-US",
+      "ok": true,
+      "http_status": 200,
+      "records": 9,
+      "error": null,
+      "elapsed_seconds": 0.26,
+      "checked_at": "2026-09-14T08:30:18Z"
+    },
+    {
+      "source_id": "bing:site:reuters.com aircraft lessor",
+      "name": "Bing News",
+      "kind": "rss_search",
+      "url": "https://www.bing.com/news/search?q=site%3Areuters.com+aircraft+lessor&format=rss&mkt=en-US",
+      "ok": true,
+      "http_status": 200,
+      "records": 7,
+      "error": null,
+      "elapsed_seconds": 0.32,
+      "checked_at": "2026-09-14T08:30:18Z"
     }
   ]
 }
