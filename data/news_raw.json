@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-14T19:27:55Z",
+  "generated_at": "2026-09-14T20:26:46Z",
   "retention_days": 120,
   "metadata_only": true,
   "stats": {
-    "current_batch_unique": 560,
-    "stored_total": 1297,
-    "reuters_discovered_via_bing": 35,
+    "current_batch_unique": 557,
+    "stored_total": 1300,
+    "reuters_discovered_via_bing": 36,
     "by_source": {
       "ADS Advance": 1,
       "AFPBB News": 1,
@@ -44,7 +44,7 @@
       "Insider Monkey": 1,
       "Investopedia": 1,
       "Irish Examiner on MSN": 1,
-      "Ishka Airfinance": 128,
+      "Ishka Airfinance": 129,
       "JD Supra": 1,
       "Live Mint on MSN": 1,
       "MSN": 10,
@@ -58,9 +58,10 @@
       "PE Hub": 1,
       "Pensacola News Journal": 1,
       "Republic World": 1,
-      "Reuters": 35,
+      "Reuters": 36,
       "Seeking Alpha": 3,
       "Simple Flying on MSN": 1,
+      "Tech Times on MSN": 1,
       "The Daily Star": 1,
       "The Financial Express": 1,
       "The Globe and Mail": 3,
@@ -85,7 +86,7 @@
       "aviationnews_maintenance": 116,
       "aviationnews_people": 92,
       "aviationnews_regulatory": 80,
-      "bing_news_rss": 135,
+      "bing_news_rss": 136,
       "ishka_africa_rss": 9,
       "ishka_aircraft_rss": 10,
       "ishka_airlines_rss": 6,
@@ -93,7 +94,7 @@
       "ishka_china_rss": 6,
       "ishka_cis_rss": 7,
       "ishka_europe_rss": 2,
-      "ishka_latest_rss": 17,
+      "ishka_latest_rss": 18,
       "ishka_latin_america_rss": 8,
       "ishka_law_rss": 10,
       "ishka_lessors_rss": 7,
@@ -103,10 +104,31 @@
       "ishka_oceania_rss": 9,
       "ishka_south_asia_rss": 9,
       "ishka_southeast_asia_rss": 5,
-      "reuters_via_bing": 35
+      "reuters_via_bing": 36
     }
   },
   "items": [
+    {
+      "title": "Pratt & Whitney tops Air Baltic's unsecured creditor list",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_latest_rss",
+      "published_at": "2026-09-14T19:51:13Z",
+      "published_date": "2026-09-14",
+      "url": "https://platform.ishkaairfinance.com/Articles/3601126",
+      "summary": "",
+      "author": "Laura Mueller",
+      "categories_raw": [
+        "Airlines",
+        "Europe",
+        "Funds"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T20:26:47Z",
+      "id": "cd7057533ffa82acd7b0dbef"
+    },
     {
       "title": "ACG names Crowley as CFO",
       "source": "Ishka Airfinance",
@@ -232,6 +254,23 @@
       "rights_mode": "official_rss_metadata",
       "fetched_at": "2026-09-14T14:42:12Z",
       "id": "172312981d37d921888db5b1"
+    },
+    {
+      "title": "Sophia Space lands $300M leasing deal to fund first orbital computing constellation",
+      "source": "Tech Times on MSN",
+      "source_channel": "bing_news_rss",
+      "published_at": "2026-09-14T13:01:08Z",
+      "published_date": "2026-09-14",
+      "url": "https://www.msn.com/en-us/news/other/sophia-space-lands-300m-leasing-deal-to-fund-first-orbital-computing-constellation/ar-AA2ccHkL",
+      "summary": "Orbital edge computing startup Sophia Space has secured a $300 million asset-financing framework with aerospace lessor SLI, the first time aviation-style satellite leasing has funded a computing ...",
+      "author": "",
+      "categories_raw": [],
+      "region_raw": "",
+      "discovered_via": "Bing News",
+      "discovery_query": "\"sale and leaseback\" aircraft",
+      "rights_mode": "search_result_metadata",
+      "fetched_at": "2026-09-14T20:27:02Z",
+      "id": "1303e053dd292a47a7c57265"
     },
     {
       "title": "Neuberger launches $2bn New Bridge finance platform",
@@ -19348,6 +19387,23 @@
       "rights_mode": "public_listing_metadata",
       "fetched_at": "2026-09-14T08:48:51Z",
       "id": "b3fc906a7b120cb31b778308"
+    },
+    {
+      "title": "Angeli Mehta",
+      "source": "Reuters",
+      "source_channel": "reuters_via_bing",
+      "published_at": "2026-07-22T16:59:00Z",
+      "published_date": "2026-07-22",
+      "url": "https://www.reuters.com/authors/angeli-mehta/",
+      "summary": "Angeli Mehta writes the Policy Watch column for Ethical Corporation, Thomson Reuters' sustainable business magazine. She is a science writer with a particular interest in the environment and ...",
+      "author": "",
+      "categories_raw": [],
+      "region_raw": "",
+      "discovered_via": "Bing News",
+      "discovery_query": "site:reuters.com aviation finance aircraft",
+      "rights_mode": "search_result_metadata",
+      "fetched_at": "2026-09-14T20:27:10Z",
+      "id": "68b7077e9b54a16e2989a4f3"
     },
     {
       "title": "SMBC AC places A321XLRs",

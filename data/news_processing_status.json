@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "checked_at": "2026-09-14T19:28:19Z",
+  "checked_at": "2026-09-14T20:27:11Z",
   "status": "pass",
-  "analysis_mode": "incremental_no_new_items",
+  "analysis_mode": "deepseek",
   "deepseek_configured": true,
   "categories": [
     "Leasing & Trading",
@@ -14,17 +14,19 @@
     "Legal & Regulatory",
     "Macro & Geopolitics"
   ],
-  "raw_pool_total": 1297,
-  "recent_raw_items": 222,
-  "new_raw_items": 0,
-  "new_preclusters": 0,
-  "current_stories": 201,
-  "archive_stories": 214,
+  "raw_pool_total": 1300,
+  "recent_raw_items": 223,
+  "new_raw_items": 2,
+  "new_preclusters": 2,
+  "current_stories": 203,
+  "archive_stories": 216,
   "deepseek_calls": 0,
-  "deepseek_failed_batches": 0,
-  "deepseek_errors": [],
-  "clusters_submitted": 0,
-  "clusters_retained_or_accounted": 0,
-  "fallback_story_count": 176,
+  "deepseek_failed_batches": 1,
+  "deepseek_errors": [
+    "batch_1: RuntimeError: ValueError: empty DeepSeek content; ValueError: empty DeepSeek content"
+  ],
+  "clusters_submitted": 2,
+  "clusters_retained_or_accounted": 2,
+  "fallback_story_count": 178,
   "deepseek_story_count": 25
 }
