@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-09-14T15:32:10Z",
+  "checked_at": "2026-09-14T15:35:50Z",
   "status": "degraded",
   "publish_allowed": true,
   "source_checks": {
@@ -27,9 +27,9 @@
   },
   "freshness": {
     "feed_generated_age_hours": 0.01,
-    "newest_story_age_hours": 0.12,
+    "newest_story_age_hours": 0.18,
     "source_newest_record_age_days": {
-      "Ishka Airfinance": 0.0,
+      "Ishka Airfinance": 0.01,
       "Aviation News Online": 0.65,
       "Reuters": 0.49,
       "Flightglobal": 6.31
@@ -38,22 +38,21 @@
   "enrichment": {
     "deepseek_configured": true,
     "current_stories": 204,
-    "deepseek_stories": 20,
-    "fallback_stories": 184,
-    "fallback_ratio": 0.902,
-    "archive_deepseek_stories": 27,
-    "archive_fallback_stories": 184
+    "deepseek_stories": 32,
+    "fallback_stories": 172,
+    "fallback_ratio": 0.8431,
+    "archive_deepseek_stories": 39,
+    "archive_fallback_stories": 172
   },
   "feed": {
     "current_stories": 204,
     "archive_stories": 211,
-    "critical_stories": 75,
+    "critical_stories": 68,
     "priority_entity_stories": 63,
-    "macro_related_stories": 67
+    "macro_related_stories": 68
   },
   "errors": [],
   "warnings": [
-    "DeepSeek backlog high: 184/204 current stories (90.2%) still use fallback enrichment",
-    "Ishka newest stored record is 0.0 days old"
+    "DeepSeek backlog high: 172/204 current stories (84.3%) still use fallback enrichment"
   ]
 }

@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "checked_at": "2026-09-14T15:31:24Z",
+  "checked_at": "2026-09-14T15:34:56Z",
   "status": "pass",
-  "analysis_mode": "deepseek",
+  "analysis_mode": "incremental_no_new_items",
   "deepseek_configured": true,
   "categories": [
     "Leasing & Trading",
@@ -16,15 +16,15 @@
   ],
   "raw_pool_total": 1291,
   "recent_raw_items": 218,
-  "new_raw_items": 1,
-  "new_preclusters": 1,
+  "new_raw_items": 0,
+  "new_preclusters": 0,
   "current_stories": 204,
   "archive_stories": 211,
-  "deepseek_calls": 1,
+  "deepseek_calls": 0,
   "deepseek_failed_batches": 0,
   "deepseek_errors": [],
-  "clusters_submitted": 1,
-  "clusters_retained_or_accounted": 1,
+  "clusters_submitted": 0,
+  "clusters_retained_or_accounted": 0,
   "fallback_story_count": 178,
   "deepseek_story_count": 26
 }
