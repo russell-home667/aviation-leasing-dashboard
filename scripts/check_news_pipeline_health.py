@@ -45,6 +45,15 @@ def age_hours(value, now):
     return max(0.0, (now - d).total_seconds() / 3600)
 
 
+def number(value, default=999.0):
+    try:
+        if value is None:
+            return default
+        return float(value)
+    except Exception:
+        return default
+
+
 def main() -> int:
     now = datetime.now(timezone.utc)
     required = [SOURCE_HEALTH, COVERAGE, PROCESSING, ENRICHMENT, FEED, ARCHIVE]
@@ -84,11 +93,11 @@ def main() -> int:
         errors.append(f"Ishka direct feeds unhealthy: {ishka.get('ok')}/{ishka.get('total')}")
     if ano.get("ok") != ano.get("total"):
         errors.append(f"Aviation News Online categories unhealthy: {ano.get('ok')}/{ano.get('total')}")
-    if float(bing.get("transport_ratio") or 0) < 0.90:
+    if number(bing.get("transport_ratio"), 0.0) < 0.90:
         errors.append(f"Bing discovery transport ratio below 90%: {bing.get('transport_ratio')}")
 
     recall = ((coverage.get("known_ishka_recall") or {}).get("recall"))
-    if recall is not None and float(recall) < 1.0:
+    if recall is not None and number(recall, 0.0) < 1.0:
         errors.append(f"known Ishka baseline recall below 100%: {recall}")
 
     feed_stories = feed.get("stories") or []
@@ -130,13 +139,17 @@ def main() -> int:
         warnings.append(f"latest Step 5 backfill had {enrichment.get('backfill_failed_batches')} failed DeepSeek batches")
 
     source_ages = layer.get("newest_record_age_days") or {}
-    if float(source_ages.get("Ishka Airfinance") or 999) > 2:
+    ishka_age = number(source_ages.get("Ishka Airfinance"))
+    ano_age = number(source_ages.get("Aviation News Online"))
+    reuters_age = number(source_ages.get("Reuters"))
+    flightglobal_age = number(source_ages.get("Flightglobal"))
+    if ishka_age > 2:
         warnings.append(f"Ishka newest stored record is {source_ages.get('Ishka Airfinance')} days old")
-    if float(source_ages.get("Aviation News Online") or 999) > 3:
+    if ano_age > 3:
         warnings.append(f"Aviation News Online newest stored record is {source_ages.get('Aviation News Online')} days old")
-    if float(source_ages.get("Reuters") or 999) > 10:
+    if reuters_age > 10:
         warnings.append(f"Reuters discovery newest record is {source_ages.get('Reuters')} days old")
-    if float(source_ages.get("Flightglobal") or 999) > 14:
+    if flightglobal_age > 14:
         warnings.append(f"FlightGlobal discovery newest record is {source_ages.get('Flightglobal')} days old")
 
     status = "fail" if errors else ("degraded" if warnings else "healthy")
