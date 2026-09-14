@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-14T15:34:56Z",
+  "generated_at": "2026-09-14T16:28:33Z",
   "model": "deepseek-flash",
   "analysis_mode": "incremental_no_new_items",
   "categories": [
@@ -24,9 +24,9 @@
     "deepseek_errors": [],
     "clusters_submitted": 0,
     "clusters_retained_or_accounted": 0,
-    "stories": 204,
+    "stories": 203,
     "by_category": {
-      "Aircraft & OEM": 37,
+      "Aircraft & OEM": 36,
       "Airlines & Credit": 79,
       "Engines & MRO": 14,
       "Financing & Capital Markets": 20,
@@ -49,10 +49,10 @@
       "China Daily": 1,
       "Devdiscourse": 1,
       "FLYING Magazine": 1,
-      "Flightglobal": 3,
+      "Flightglobal": 2,
       "Global Legal Chronicle": 1,
       "Irish Examiner on MSN": 1,
-      "Ishka Airfinance": 43,
+      "Ishka Airfinance": 42,
       "Mint": 1,
       "Mint on MSN": 2,
       "NHK": 1,
@@ -2488,45 +2488,6 @@
         "41a904e33d30578d95ec91da"
       ],
       "analysis_mode": "fallback_after_ai_error"
-    },
-    {
-      "id": "200a5e7e0c8159b750",
-      "title": "Airbus reveals order for eight more A350Fs as maiden flight nears",
-      "summary_zh": "",
-      "why_it_matters_zh": "",
-      "category": "Aircraft & OEM",
-      "importance_score": 54,
-      "region": "Europe",
-      "entities": [
-        "Airbus",
-        "A350F"
-      ],
-      "published_at": "2026-09-07T16:11:52Z",
-      "updated_at": "2026-09-14T09:38:27Z",
-      "primary_source": "Ishka Airfinance",
-      "primary_url": "https://platform.ishkaairfinance.com/Articles/3601072",
-      "source_count": 2,
-      "sources": [
-        {
-          "name": "Ishka Airfinance",
-          "url": "https://platform.ishkaairfinance.com/Articles/3601072",
-          "published_at": "2026-09-07T16:11:52Z",
-          "source_channel": "ishka_aircraft_rss",
-          "discovered_via": "direct"
-        },
-        {
-          "name": "Flightglobal",
-          "url": "https://www.flightglobal.com/orders-deliveries/2026/09/airbus-reveals-order-for-eight-more-a350fs-as-maiden-flight-nears/",
-          "published_at": "2026-09-07T09:41:00Z",
-          "source_channel": "bing_news_rss",
-          "discovered_via": "Bing News"
-        }
-      ],
-      "raw_ids": [
-        "435917659111bab92f9cece9",
-        "23f6a1cb281fc39aa5bced86"
-      ],
-      "analysis_mode": "deepseek"
     },
     {
       "id": "d5489b9b7404e48035",

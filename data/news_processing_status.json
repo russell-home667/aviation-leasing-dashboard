@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "checked_at": "2026-09-14T15:34:56Z",
+  "checked_at": "2026-09-14T16:28:33Z",
   "status": "pass",
   "analysis_mode": "incremental_no_new_items",
   "deepseek_configured": true,
@@ -18,7 +18,7 @@
   "recent_raw_items": 218,
   "new_raw_items": 0,
   "new_preclusters": 0,
-  "current_stories": 204,
+  "current_stories": 203,
   "archive_stories": 211,
   "deepseek_calls": 0,
   "deepseek_failed_batches": 0,
@@ -26,5 +26,5 @@
   "clusters_submitted": 0,
   "clusters_retained_or_accounted": 0,
   "fallback_story_count": 178,
-  "deepseek_story_count": 26
+  "deepseek_story_count": 25
 }

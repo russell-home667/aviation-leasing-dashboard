@@ -17,16 +17,16 @@
     "systemic_macro_floor": 88,
     "critical_score_threshold": 92
   },
-  "generated_at": "2026-09-14T15:34:59Z",
+  "generated_at": "2026-09-14T16:28:36Z",
   "model": "deepseek-flash",
   "analysis_mode": "deepseek+deterministic_priority",
   "stats": {
-    "stories": 204,
-    "critical_stories": 68,
-    "priority_entity_stories": 63,
-    "macro_related_stories": 68,
+    "stories": 203,
+    "critical_stories": 59,
+    "priority_entity_stories": 62,
+    "macro_related_stories": 64,
     "by_category": {
-      "Aircraft & OEM": 37,
+      "Aircraft & OEM": 36,
       "Airlines & Credit": 79,
       "Engines & MRO": 14,
       "Financing & Capital Markets": 20,
@@ -36,7 +36,7 @@
       "Values & Lease Rates": 1
     },
     "priority_mentions": {
-      "Airbus": 26,
+      "Airbus": 25,
       "Boeing": 14,
       "easyJet": 4,
       "LATAM Airlines Group": 4,
@@ -64,13 +64,13 @@
     "step3_deepseek_updated": 0,
     "step3_deepseek_calls": 0,
     "step3_failed_batches": 0,
-    "step5_backfill_candidates": 184,
+    "step5_backfill_candidates": 172,
     "step5_backfill_selected": 12,
     "step5_backfill_updated": 12,
     "step5_backfill_calls": 1,
     "step5_backfill_failed_batches": 0,
-    "step5_deepseek_current": 32,
-    "step5_fallback_current": 172
+    "step5_deepseek_current": 44,
+    "step5_fallback_current": 159
   },
   "homepage": {
     "feed_story_ids": [
@@ -161,7 +161,7 @@
       },
       "step3_ai_mode": "deepseek",
       "analysis_fingerprint": "55cc830b957a48fae385",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "f5f555f1c3b53d6c00",
@@ -210,7 +210,7 @@
         "lessor_relevance": 75,
         "macro_relevance": 55,
         "source_quality": 98,
-        "recency": 100,
+        "recency": 99,
         "multi_source": 55,
         "weighted_base": 74,
         "bonuses": 41,
@@ -224,7 +224,7 @@
       },
       "step3_ai_mode": "deepseek",
       "analysis_fingerprint": "60240e5b0925e8591ee1",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "dd48b482a623cd5e7d",
@@ -270,7 +270,7 @@
         "lessor_relevance": 75,
         "macro_relevance": 60,
         "source_quality": 98,
-        "recency": 98,
+        "recency": 97,
         "multi_source": 55,
         "weighted_base": 75,
         "bonuses": 41,
@@ -284,7 +284,7 @@
       },
       "step3_ai_mode": "deepseek",
       "analysis_fingerprint": "3b293041db7ce10a2d27",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "9417be548102ba05b5",
@@ -349,7 +349,7 @@
       },
       "step3_ai_mode": "deepseek",
       "analysis_fingerprint": "7b3dfc554a8be02ae96d",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "f27b73102bb823017d",
@@ -415,7 +415,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "19ac52b1a2b8a48235a0",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "824465edc4487c709c",
@@ -468,7 +468,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "c0a3265548f6809405d1",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "15df63a4cdcba8d144",
@@ -532,7 +532,7 @@
       },
       "step3_ai_mode": "deepseek",
       "analysis_fingerprint": "1626ea8c52ffb01ed5de",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "737d80e168603f7313",
@@ -600,7 +600,7 @@
       },
       "step3_ai_mode": "deepseek",
       "analysis_fingerprint": "124259c65663dbfb380c",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "d4aa19fac8fb3954b4",
@@ -670,7 +670,7 @@
       },
       "step3_ai_mode": "deepseek",
       "analysis_fingerprint": "e1ef84062da2687b5611",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "d7586e9c7521c0338e",
@@ -731,7 +731,7 @@
       },
       "step3_ai_mode": "deepseek",
       "analysis_fingerprint": "cd2ed3f929c6938a8538",
-      "step3_updated_at": "2026-09-14T15:34:59Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "f9c778522e269d330d",
@@ -798,7 +798,7 @@
       },
       "step3_ai_mode": "deepseek",
       "analysis_fingerprint": "43f5798231b2ce5624a6",
-      "step3_updated_at": "2026-09-14T15:34:59Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "0096732aacaeffe70c",
@@ -847,7 +847,7 @@
         "lessor_relevance": 70,
         "macro_relevance": 65,
         "source_quality": 92,
-        "recency": 73,
+        "recency": 72,
         "multi_source": 55,
         "weighted_base": 73,
         "bonuses": 55,
@@ -861,13 +861,13 @@
       },
       "step3_ai_mode": "deepseek",
       "analysis_fingerprint": "eb6adad935e9bfceab45",
-      "step3_updated_at": "2026-09-14T15:34:59Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "97bdccdef50f684b8f",
       "title": "Panmure Liberum names IAG and Ryanair as top European airline picks",
-      "summary_zh": "根据公开标题与元数据：Panmure Liberum names IAG and Ryanair as top European airline picks",
-      "why_it_matters_zh": "需要关注承租人信用、现金流、机队调整及潜在租约风险。",
+      "summary_zh": "Panmure Liberum将IAG和Ryanair列为欧洲航空首选股，并警告行业尚未完全按持续高企的航空燃油价格调整运力。",
+      "why_it_matters_zh": "券商观点反映高油价下欧洲航司盈利与运力纪律分化，直接关系相关承租人信用与租赁残值预期。",
       "category": "Airlines & Credit",
       "importance_score": 100,
       "region": "Europe",
@@ -902,388 +902,27 @@
       ],
       "aircraft_tags": [],
       "critical": true,
-      "critical_reason_zh": "涉及信用、资产回收、停飞、制裁或重大供给冲击。",
+      "critical_reason_zh": "涉及破产/违约、停飞、制裁、回收或其他可能需要及时关注的重大风险。",
       "score_components": {
-        "market_materiality": 88,
-        "lessor_relevance": 88,
-        "macro_relevance": 72,
+        "market_materiality": 50,
+        "lessor_relevance": 45,
+        "macro_relevance": 60,
         "source_quality": 92,
-        "recency": 73,
+        "recency": 72,
         "multi_source": 55,
-        "weighted_base": 85,
-        "bonuses": 48,
+        "weighted_base": 58,
+        "bonuses": 44,
         "applied_floor": 92,
         "priority_entity": true,
         "priority_material_event": true,
         "macro_related": true,
-        "systemic_macro": true,
+        "systemic_macro": false,
         "severe_event": true,
         "direct_lessor_event": false
       },
-      "step3_ai_mode": "fallback_rules",
+      "step3_ai_mode": "deepseek",
       "analysis_fingerprint": "b11ea8336dc4afd2a1f5",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
-    },
-    {
-      "id": "e6963b5ddbde7d7e09",
-      "title": "LATAM Airlines Group appoints Sebastian Acuto as VP of operations and maintenance",
-      "summary_zh": "根据公开标题与元数据：LATAM Airlines Group appoints Sebastian Acuto as VP of operations and maintenance",
-      "why_it_matters_zh": "需要关注承租人信用、现金流、机队调整及潜在租约风险。",
-      "category": "Airlines & Credit",
-      "importance_score": 100,
-      "region": "Americas",
-      "entities": [],
-      "published_at": "2026-09-11T00:00:00Z",
-      "updated_at": "2026-09-14T09:38:27Z",
-      "primary_source": "Aviation News Online",
-      "primary_url": "https://www.aviationnews-online.com/article/latam-airlines-group-appoints-sebastian-acuto-as-vp-of-operations-and-maintenance",
-      "source_count": 1,
-      "sources": [
-        {
-          "name": "Aviation News Online",
-          "url": "https://www.aviationnews-online.com/article/latam-airlines-group-appoints-sebastian-acuto-as-vp-of-operations-and-maintenance",
-          "published_at": "2026-09-11T00:00:00Z",
-          "source_channel": "aviationnews_airline",
-          "discovered_via": "direct"
-        }
-      ],
-      "raw_ids": [
-        "fb33440bed66f916488a17e3"
-      ],
-      "analysis_mode": "fallback_after_ai_error",
-      "priority_matches": [
-        {
-          "name": "LATAM Airlines Group",
-          "type": "Airline Group"
-        }
-      ],
-      "macro_tags": [],
-      "aircraft_tags": [],
-      "critical": true,
-      "critical_reason_zh": "对航空租赁市场具有较高即时重要性。",
-      "score_components": {
-        "market_materiality": 78,
-        "lessor_relevance": 78,
-        "macro_relevance": 30,
-        "source_quality": 92,
-        "recency": 73,
-        "multi_source": 55,
-        "weighted_base": 78,
-        "bonuses": 22,
-        "applied_floor": 86,
-        "priority_entity": true,
-        "priority_material_event": false,
-        "macro_related": false,
-        "systemic_macro": false,
-        "severe_event": false,
-        "direct_lessor_event": false
-      },
-      "step3_ai_mode": "fallback_rules",
-      "analysis_fingerprint": "4f9736d0bce92ea30b62",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
-    },
-    {
-      "id": "dd1ef5973b1708a48c",
-      "title": "Korean Air to resume Oita service for winter 2026; rolling out Starlink in September",
-      "summary_zh": "根据公开标题与元数据：Korean Air to resume Oita service for winter 2026; rolling out Starlink in September",
-      "why_it_matters_zh": "需要关注承租人信用、现金流、机队调整及潜在租约风险。",
-      "category": "Airlines & Credit",
-      "importance_score": 100,
-      "region": "Asia/Pacific",
-      "entities": [],
-      "published_at": "2026-09-11T00:00:00Z",
-      "updated_at": "2026-09-14T09:38:27Z",
-      "primary_source": "Aviation News Online",
-      "primary_url": "https://www.aviationnews-online.com/article/korean-air-to-resume-oita-service-for-winter-2026",
-      "source_count": 1,
-      "sources": [
-        {
-          "name": "Aviation News Online",
-          "url": "https://www.aviationnews-online.com/article/korean-air-to-resume-oita-service-for-winter-2026",
-          "published_at": "2026-09-11T00:00:00Z",
-          "source_channel": "aviationnews_airline",
-          "discovered_via": "direct"
-        }
-      ],
-      "raw_ids": [
-        "8cbdbe4c2d80699b2f8f74f2"
-      ],
-      "analysis_mode": "fallback_after_ai_error",
-      "priority_matches": [
-        {
-          "name": "Korean Air",
-          "type": "Airline"
-        }
-      ],
-      "macro_tags": [],
-      "aircraft_tags": [],
-      "critical": true,
-      "critical_reason_zh": "对航空租赁市场具有较高即时重要性。",
-      "score_components": {
-        "market_materiality": 78,
-        "lessor_relevance": 78,
-        "macro_relevance": 30,
-        "source_quality": 92,
-        "recency": 73,
-        "multi_source": 55,
-        "weighted_base": 78,
-        "bonuses": 22,
-        "applied_floor": 86,
-        "priority_entity": true,
-        "priority_material_event": false,
-        "macro_related": false,
-        "systemic_macro": false,
-        "severe_event": false,
-        "direct_lessor_event": false
-      },
-      "step3_ai_mode": "fallback_rules",
-      "analysis_fingerprint": "f0b27405e77cfdb369a3",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
-    },
-    {
-      "id": "6902aa6f96053a0933",
-      "title": "Iberia Maintenance wins approval for A350 heavy maintenance",
-      "summary_zh": "根据公开标题与元数据：Iberia Maintenance wins approval for A350 heavy maintenance",
-      "why_it_matters_zh": "可能改变新机供给、交付节奏、存量飞机稀缺性与资产价值。",
-      "category": "Aircraft & OEM",
-      "importance_score": 100,
-      "region": "Europe",
-      "entities": [
-        "Airbus",
-        "A350"
-      ],
-      "published_at": "2026-09-11T00:00:00Z",
-      "updated_at": "2026-09-14T09:38:27Z",
-      "primary_source": "Aviation News Online",
-      "primary_url": "https://www.aviationnews-online.com/article/iberia-maintenance-wins-approval-for-a350-heavy-maintenance",
-      "source_count": 1,
-      "sources": [
-        {
-          "name": "Aviation News Online",
-          "url": "https://www.aviationnews-online.com/article/iberia-maintenance-wins-approval-for-a350-heavy-maintenance",
-          "published_at": "2026-09-11T00:00:00Z",
-          "source_channel": "aviationnews_maintenance",
-          "discovered_via": "direct"
-        }
-      ],
-      "raw_ids": [
-        "5f921c84584f9f460a3de830"
-      ],
-      "analysis_mode": "fallback_after_ai_error",
-      "priority_matches": [
-        {
-          "name": "Airbus",
-          "type": "OEM"
-        }
-      ],
-      "macro_tags": [],
-      "aircraft_tags": [
-        "A350"
-      ],
-      "critical": true,
-      "critical_reason_zh": "对航空租赁市场具有较高即时重要性。",
-      "score_components": {
-        "market_materiality": 78,
-        "lessor_relevance": 82,
-        "macro_relevance": 30,
-        "source_quality": 92,
-        "recency": 73,
-        "multi_source": 55,
-        "weighted_base": 80,
-        "bonuses": 22,
-        "applied_floor": 86,
-        "priority_entity": true,
-        "priority_material_event": false,
-        "macro_related": false,
-        "systemic_macro": false,
-        "severe_event": false,
-        "direct_lessor_event": false
-      },
-      "step3_ai_mode": "fallback_rules",
-      "analysis_fingerprint": "ee59063c498d5cf58783",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
-    },
-    {
-      "id": "c6f0f16dfd04c7271d",
-      "title": "Hyatt announces Delta loyalty partnership and ends American Airlines tie-up",
-      "summary_zh": "根据公开标题与元数据：Hyatt announces Delta loyalty partnership and ends American Airlines tie-up",
-      "why_it_matters_zh": "需要关注承租人信用、现金流、机队调整及潜在租约风险。",
-      "category": "Airlines & Credit",
-      "importance_score": 100,
-      "region": "Americas",
-      "entities": [],
-      "published_at": "2026-09-11T00:00:00Z",
-      "updated_at": "2026-09-14T09:38:27Z",
-      "primary_source": "Aviation News Online",
-      "primary_url": "https://www.aviationnews-online.com/article/hyatt-announces-delta-loyalty-partnership-and-ends-american-airlines-tie-up",
-      "source_count": 1,
-      "sources": [
-        {
-          "name": "Aviation News Online",
-          "url": "https://www.aviationnews-online.com/article/hyatt-announces-delta-loyalty-partnership-and-ends-american-airlines-tie-up",
-          "published_at": "2026-09-11T00:00:00Z",
-          "source_channel": "aviationnews_finance",
-          "discovered_via": "direct"
-        }
-      ],
-      "raw_ids": [
-        "fb2983cc2de7b1564bb7affb"
-      ],
-      "analysis_mode": "fallback_after_ai_error",
-      "priority_matches": [
-        {
-          "name": "American Airlines",
-          "type": "Airline"
-        }
-      ],
-      "macro_tags": [],
-      "aircraft_tags": [],
-      "critical": true,
-      "critical_reason_zh": "对航空租赁市场具有较高即时重要性。",
-      "score_components": {
-        "market_materiality": 78,
-        "lessor_relevance": 78,
-        "macro_relevance": 30,
-        "source_quality": 92,
-        "recency": 73,
-        "multi_source": 55,
-        "weighted_base": 78,
-        "bonuses": 22,
-        "applied_floor": 86,
-        "priority_entity": true,
-        "priority_material_event": false,
-        "macro_related": false,
-        "systemic_macro": false,
-        "severe_event": false,
-        "direct_lessor_event": false
-      },
-      "step3_ai_mode": "fallback_rules",
-      "analysis_fingerprint": "a53ce43fc29b9b171939",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
-    },
-    {
-      "id": "afed299f4d10697248",
-      "title": "Flair Airlines partners with Lufthansa Technik for comprehensive engine and digital services",
-      "summary_zh": "根据公开标题与元数据：Flair Airlines partners with Lufthansa Technik for comprehensive engine and digital services",
-      "why_it_matters_zh": "可能改变新机供给、交付节奏、存量飞机稀缺性与资产价值。",
-      "category": "Aircraft & OEM",
-      "importance_score": 100,
-      "region": "Americas",
-      "entities": [
-        "Boeing",
-        "737 MAX 8",
-        "LEAP-1B"
-      ],
-      "published_at": "2026-09-11T00:00:00Z",
-      "updated_at": "2026-09-14T09:38:27Z",
-      "primary_source": "Aviation News Online",
-      "primary_url": "https://www.aviationnews-online.com/article/flair-airlines-partners-with-lufthansa-technik-for-comprehensive-engine-and-digital-services",
-      "source_count": 1,
-      "sources": [
-        {
-          "name": "Aviation News Online",
-          "url": "https://www.aviationnews-online.com/article/flair-airlines-partners-with-lufthansa-technik-for-comprehensive-engine-and-digital-services",
-          "published_at": "2026-09-11T00:00:00Z",
-          "source_channel": "aviationnews_airline",
-          "discovered_via": "direct"
-        }
-      ],
-      "raw_ids": [
-        "55ef4dad4e3949e81f6f0550"
-      ],
-      "analysis_mode": "fallback_after_ai_error",
-      "priority_matches": [
-        {
-          "name": "Boeing",
-          "type": "OEM"
-        }
-      ],
-      "macro_tags": [],
-      "aircraft_tags": [
-        "737MAX8"
-      ],
-      "critical": true,
-      "critical_reason_zh": "对航空租赁市场具有较高即时重要性。",
-      "score_components": {
-        "market_materiality": 78,
-        "lessor_relevance": 82,
-        "macro_relevance": 30,
-        "source_quality": 92,
-        "recency": 73,
-        "multi_source": 55,
-        "weighted_base": 80,
-        "bonuses": 22,
-        "applied_floor": 86,
-        "priority_entity": true,
-        "priority_material_event": false,
-        "macro_related": false,
-        "systemic_macro": false,
-        "severe_event": false,
-        "direct_lessor_event": false
-      },
-      "step3_ai_mode": "fallback_rules",
-      "analysis_fingerprint": "4066fc35b3e1e99322c3",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
-    },
-    {
-      "id": "35fed0313d20b7e318",
-      "title": "Etihad to launch year-round Abu Dhabi-Red Sea service",
-      "summary_zh": "根据公开标题与元数据：Etihad to launch year-round Abu Dhabi-Red Sea service",
-      "why_it_matters_zh": "需要关注承租人信用、现金流、机队调整及潜在租约风险。",
-      "category": "Airlines & Credit",
-      "importance_score": 100,
-      "region": "Middle East/Africa",
-      "entities": [],
-      "published_at": "2026-09-11T00:00:00Z",
-      "updated_at": "2026-09-14T09:38:27Z",
-      "primary_source": "Aviation News Online",
-      "primary_url": "https://www.aviationnews-online.com/article/etihad-to-launch-year-round-abu-dhabi-red-sea-service",
-      "source_count": 1,
-      "sources": [
-        {
-          "name": "Aviation News Online",
-          "url": "https://www.aviationnews-online.com/article/etihad-to-launch-year-round-abu-dhabi-red-sea-service",
-          "published_at": "2026-09-11T00:00:00Z",
-          "source_channel": "aviationnews_airline",
-          "discovered_via": "direct"
-        }
-      ],
-      "raw_ids": [
-        "ab319fc4c1c7ef0b990d3872"
-      ],
-      "analysis_mode": "fallback_after_ai_error",
-      "priority_matches": [
-        {
-          "name": "Etihad Airways",
-          "type": "Airline"
-        }
-      ],
-      "macro_tags": [
-        "Geopolitics & Airspace"
-      ],
-      "aircraft_tags": [],
-      "critical": true,
-      "critical_reason_zh": "对航空租赁市场具有较高即时重要性。",
-      "score_components": {
-        "market_materiality": 78,
-        "lessor_relevance": 78,
-        "macro_relevance": 72,
-        "source_quality": 92,
-        "recency": 73,
-        "multi_source": 55,
-        "weighted_base": 78,
-        "bonuses": 34,
-        "applied_floor": 86,
-        "priority_entity": true,
-        "priority_material_event": false,
-        "macro_related": true,
-        "systemic_macro": false,
-        "severe_event": false,
-        "direct_lessor_event": false
-      },
-      "step3_ai_mode": "fallback_rules",
-      "analysis_fingerprint": "58d54046ebce8374334b",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "43fd55c0b81ef96226",
@@ -1324,7 +963,7 @@
         "lessor_relevance": 92,
         "macro_relevance": 72,
         "source_quality": 92,
-        "recency": 73,
+        "recency": 72,
         "multi_source": 55,
         "weighted_base": 86,
         "bonuses": 29,
@@ -1338,73 +977,13 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "32c41f7b16e6124dd889",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
-    },
-    {
-      "id": "d76d8f0a50b706032e",
-      "title": "Airbus launches share buyback for employee compensation plans",
-      "summary_zh": "根据公开标题与元数据：Airbus launches share buyback for employee compensation plans",
-      "why_it_matters_zh": "可能改变新机供给、交付节奏、存量飞机稀缺性与资产价值。",
-      "category": "Aircraft & OEM",
-      "importance_score": 100,
-      "region": "Global/Unspecified",
-      "entities": [
-        "Airbus"
-      ],
-      "published_at": "2026-09-11T00:00:00Z",
-      "updated_at": "2026-09-14T09:38:27Z",
-      "primary_source": "Aviation News Online",
-      "primary_url": "https://www.aviationnews-online.com/article/airbus-launches-share-buyback-for-employee-compensation-plans",
-      "source_count": 1,
-      "sources": [
-        {
-          "name": "Aviation News Online",
-          "url": "https://www.aviationnews-online.com/article/airbus-launches-share-buyback-for-employee-compensation-plans",
-          "published_at": "2026-09-11T00:00:00Z",
-          "source_channel": "aviationnews_finance",
-          "discovered_via": "direct"
-        }
-      ],
-      "raw_ids": [
-        "6a5918dfd26c7d1710fceb8a"
-      ],
-      "analysis_mode": "fallback_after_ai_error",
-      "priority_matches": [
-        {
-          "name": "Airbus",
-          "type": "OEM"
-        }
-      ],
-      "macro_tags": [],
-      "aircraft_tags": [],
-      "critical": true,
-      "critical_reason_zh": "对航空租赁市场具有较高即时重要性。",
-      "score_components": {
-        "market_materiality": 78,
-        "lessor_relevance": 82,
-        "macro_relevance": 30,
-        "source_quality": 92,
-        "recency": 73,
-        "multi_source": 55,
-        "weighted_base": 80,
-        "bonuses": 22,
-        "applied_floor": 86,
-        "priority_entity": true,
-        "priority_material_event": false,
-        "macro_related": false,
-        "systemic_macro": false,
-        "severe_event": false,
-        "direct_lessor_event": false
-      },
-      "step3_ai_mode": "fallback_rules",
-      "analysis_fingerprint": "b5c86239534529a6ec6a",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "a4416b1bff322a7b0b",
       "title": "Avianca signs sale and leaseback deal for 12 Airbus A320neos with BOC Aviation",
-      "summary_zh": "根据公开标题与元数据：Avianca signs sale and leaseback deal for 12 Airbus A320neos with BOC Aviation",
-      "why_it_matters_zh": "直接影响飞机交易、再营销、租金或出租人竞争格局。",
+      "summary_zh": "哥伦比亚航空Avianca与BOC Aviation签署12架空客A320neo的售后回租协议，预计2029年开始交付。",
+      "why_it_matters_zh": "该重大售后回租交易为Avianca提供融资并锁定未来运力，同时为租赁商增加A320neo资产组合，影响同机型租赁定价与供给。",
       "category": "Leasing & Trading",
       "importance_score": 100,
       "region": "Global/Unspecified",
@@ -1452,11 +1031,11 @@
         "A320NEO"
       ],
       "critical": true,
-      "critical_reason_zh": "重点客户/潜在客户 Airbus 出现重大经营、机队、融资或交易事件。",
+      "critical_reason_zh": "重大售后回租交易，涉及12架A320neo和2029年交付，可能影响租赁市场定价与供给。",
       "score_components": {
-        "market_materiality": 78,
-        "lessor_relevance": 92,
-        "macro_relevance": 72,
+        "market_materiality": 80,
+        "lessor_relevance": 90,
+        "macro_relevance": 45,
         "source_quality": 65,
         "recency": 69,
         "multi_source": 70,
@@ -1470,77 +1049,9 @@
         "severe_event": false,
         "direct_lessor_event": true
       },
-      "step3_ai_mode": "fallback_rules",
+      "step3_ai_mode": "deepseek",
       "analysis_fingerprint": "e79a754f1c6b89479bf7",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
-    },
-    {
-      "id": "61e1c4c21b5deb035c",
-      "title": "Aerospace dealmaking gathers pace as jet production ramps up",
-      "summary_zh": "根据公开标题与元数据：Aerospace dealmaking gathers pace as jet production ramps up",
-      "why_it_matters_zh": "可能改变新机供给、交付节奏、存量飞机稀缺性与资产价值。",
-      "category": "Aircraft & OEM",
-      "importance_score": 100,
-      "region": "Global/Unspecified",
-      "entities": [
-        "Boeing",
-        "Airbus"
-      ],
-      "published_at": "2026-09-10T02:03:00Z",
-      "updated_at": "2026-09-14T09:38:27Z",
-      "primary_source": "Reuters",
-      "primary_url": "https://www.reuters.com/legal/transactional/aerospace-dealmaking-gathers-pace-jet-production-ramps-up-2026-09-10/",
-      "source_count": 1,
-      "sources": [
-        {
-          "name": "Reuters",
-          "url": "https://www.reuters.com/legal/transactional/aerospace-dealmaking-gathers-pace-jet-production-ramps-up-2026-09-10/",
-          "published_at": "2026-09-10T02:03:00Z",
-          "source_channel": "reuters_via_bing",
-          "discovered_via": "Bing News"
-        }
-      ],
-      "raw_ids": [
-        "cf6ba3a0caa6f646ddf0b048"
-      ],
-      "analysis_mode": "fallback_after_ai_error",
-      "priority_matches": [
-        {
-          "name": "Airbus",
-          "type": "OEM"
-        },
-        {
-          "name": "Boeing",
-          "type": "OEM"
-        }
-      ],
-      "macro_tags": [
-        "Trade & Supply Chain",
-        "OEM Supply"
-      ],
-      "aircraft_tags": [],
-      "critical": true,
-      "critical_reason_zh": "重点客户/潜在客户 Airbus 出现重大经营、机队、融资或交易事件。",
-      "score_components": {
-        "market_materiality": 78,
-        "lessor_relevance": 82,
-        "macro_relevance": 72,
-        "source_quality": 100,
-        "recency": 66,
-        "multi_source": 55,
-        "weighted_base": 80,
-        "bonuses": 42,
-        "applied_floor": 92,
-        "priority_entity": true,
-        "priority_material_event": true,
-        "macro_related": true,
-        "systemic_macro": true,
-        "severe_event": false,
-        "direct_lessor_event": false
-      },
-      "step3_ai_mode": "fallback_rules",
-      "analysis_fingerprint": "ba156b2e0ae9d1fa5111",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "157f2c04f6ec0ad35c",
@@ -1595,7 +1106,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "2a13d9052d9203861a2c",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "8a2e3ed256da25df59",
@@ -1652,7 +1163,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "3b835f73bf050f1b621c",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "996fbb213a605f0752",
@@ -1708,7 +1219,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "a5e91d07732ce843a390",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "d2bcb7614966ee68fc",
@@ -1764,7 +1275,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "d39887feb14f9e02ebda",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "2a9b35255240fc3abb",
@@ -1819,132 +1330,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "6f19277df43c4c33302c",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
-    },
-    {
-      "id": "86cd22fedd45b86076",
-      "title": "LATAM capacity rises 7% in August as passenger traffic grows",
-      "summary_zh": "根据公开标题与元数据：LATAM capacity rises 7% in August as passenger traffic grows",
-      "why_it_matters_zh": "需要关注承租人信用、现金流、机队调整及潜在租约风险。",
-      "category": "Airlines & Credit",
-      "importance_score": 100,
-      "region": "Americas",
-      "entities": [],
-      "published_at": "2026-09-10T00:00:00Z",
-      "updated_at": "2026-09-14T09:38:27Z",
-      "primary_source": "Aviation News Online",
-      "primary_url": "https://www.aviationnews-online.com/article/latam-capacity-rises-7-in-august-as-passenger-traffic-grows",
-      "source_count": 1,
-      "sources": [
-        {
-          "name": "Aviation News Online",
-          "url": "https://www.aviationnews-online.com/article/latam-capacity-rises-7-in-august-as-passenger-traffic-grows",
-          "published_at": "2026-09-10T00:00:00Z",
-          "source_channel": "aviationnews_airline",
-          "discovered_via": "direct"
-        }
-      ],
-      "raw_ids": [
-        "35b1286089af1ad97789c984"
-      ],
-      "analysis_mode": "fallback_after_ai_error",
-      "priority_matches": [
-        {
-          "name": "LATAM Airlines Group",
-          "type": "Airline Group"
-        }
-      ],
-      "macro_tags": [
-        "Macro Demand"
-      ],
-      "aircraft_tags": [],
-      "critical": true,
-      "critical_reason_zh": "对航空租赁市场具有较高即时重要性。",
-      "score_components": {
-        "market_materiality": 78,
-        "lessor_relevance": 78,
-        "macro_relevance": 72,
-        "source_quality": 92,
-        "recency": 65,
-        "multi_source": 55,
-        "weighted_base": 77,
-        "bonuses": 34,
-        "applied_floor": 86,
-        "priority_entity": true,
-        "priority_material_event": false,
-        "macro_related": true,
-        "systemic_macro": false,
-        "severe_event": false,
-        "direct_lessor_event": false
-      },
-      "step3_ai_mode": "fallback_rules",
-      "analysis_fingerprint": "e275d807b571243dbe91",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
-    },
-    {
-      "id": "deb3ab03dccd95d807",
-      "title": "Black box recorders reveal excessive speed, belated go-around preceded Amazon Air crash",
-      "summary_zh": "根据公开标题与元数据：Black box recorders reveal excessive speed, belated go-around preceded Amazon Air crash",
-      "why_it_matters_zh": "可能改变新机供给、交付节奏、存量飞机稀缺性与资产价值。",
-      "category": "Aircraft & OEM",
-      "importance_score": 100,
-      "region": "Americas",
-      "entities": [
-        "Boeing",
-        "767"
-      ],
-      "published_at": "2026-09-10T00:00:00Z",
-      "updated_at": "2026-09-14T09:38:27Z",
-      "primary_source": "Aviation News Online",
-      "primary_url": "https://www.aviationnews-online.com/article/excessive-speed-belated-go-around-preceded-21-air-b-767-miami-excursion",
-      "source_count": 1,
-      "sources": [
-        {
-          "name": "Aviation News Online",
-          "url": "https://www.aviationnews-online.com/article/excessive-speed-belated-go-around-preceded-21-air-b-767-miami-excursion",
-          "published_at": "2026-09-10T00:00:00Z",
-          "source_channel": "aviationnews_regulatory",
-          "discovered_via": "direct"
-        }
-      ],
-      "raw_ids": [
-        "589fc9eb147d451b6a4ec00e"
-      ],
-      "analysis_mode": "fallback_after_ai_error",
-      "priority_matches": [
-        {
-          "name": "Boeing",
-          "type": "OEM"
-        }
-      ],
-      "macro_tags": [
-        "Geopolitics & Airspace"
-      ],
-      "aircraft_tags": [
-        "767"
-      ],
-      "critical": true,
-      "critical_reason_zh": "涉及信用、资产回收、停飞、制裁或重大供给冲击。",
-      "score_components": {
-        "market_materiality": 88,
-        "lessor_relevance": 88,
-        "macro_relevance": 72,
-        "source_quality": 92,
-        "recency": 65,
-        "multi_source": 55,
-        "weighted_base": 84,
-        "bonuses": 44,
-        "applied_floor": 92,
-        "priority_entity": true,
-        "priority_material_event": true,
-        "macro_related": true,
-        "systemic_macro": false,
-        "severe_event": true,
-        "direct_lessor_event": false
-      },
-      "step3_ai_mode": "fallback_rules",
-      "analysis_fingerprint": "dccbd918a01181f3d2be",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "71dc5ce1b674663118",
@@ -2008,7 +1394,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "c0cb43e02b7e8932ee05",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "cc6b99532be76ac83f",
@@ -2050,7 +1436,7 @@
         "lessor_relevance": 88,
         "macro_relevance": 72,
         "source_quality": 100,
-        "recency": 65,
+        "recency": 64,
         "multi_source": 55,
         "weighted_base": 85,
         "bonuses": 26,
@@ -2064,7 +1450,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "ff639d135d1f63e8bde9",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "ba4bddbd90d7f1f994",
@@ -2133,7 +1519,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "75a0779ed3a37576e60c",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "ef7017993e1d22412c",
@@ -2179,7 +1565,7 @@
         "lessor_relevance": 92,
         "macro_relevance": 30,
         "source_quality": 98,
-        "recency": 62,
+        "recency": 61,
         "multi_source": 55,
         "weighted_base": 83,
         "bonuses": 29,
@@ -2193,7 +1579,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "e69fa363fd8d5c857152",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "5d6d1f4b928b24cd0f",
@@ -2244,7 +1630,7 @@
         "lessor_relevance": 82,
         "macro_relevance": 72,
         "source_quality": 98,
-        "recency": 61,
+        "recency": 60,
         "multi_source": 55,
         "weighted_base": 79,
         "bonuses": 34,
@@ -2258,7 +1644,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "f694ec0f9769154d34fe",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "8208231646467b5cd2",
@@ -2340,7 +1726,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "eea7474feb8a59679f2a",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "281196d17224abfafe",
@@ -2392,7 +1778,7 @@
         "lessor_relevance": 92,
         "macro_relevance": 72,
         "source_quality": 92,
-        "recency": 58,
+        "recency": 57,
         "multi_source": 55,
         "weighted_base": 84,
         "bonuses": 55,
@@ -2406,7 +1792,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "1edc90c5d211be761281",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "30a292c9459e8b348e",
@@ -2447,7 +1833,7 @@
         "lessor_relevance": 88,
         "macro_relevance": 72,
         "source_quality": 92,
-        "recency": 58,
+        "recency": 57,
         "multi_source": 55,
         "weighted_base": 83,
         "bonuses": 22,
@@ -2461,7 +1847,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "7c64f84712fa4f3053c5",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "f99c2d124f42a4c465",
@@ -2508,7 +1894,7 @@
         "lessor_relevance": 94,
         "macro_relevance": 72,
         "source_quality": 92,
-        "recency": 58,
+        "recency": 57,
         "multi_source": 55,
         "weighted_base": 85,
         "bonuses": 55,
@@ -2522,7 +1908,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "5b9fabfcb2a17e6c9584",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "0cbb037ed0e3eb0b39",
@@ -2564,7 +1950,7 @@
         "lessor_relevance": 92,
         "macro_relevance": 72,
         "source_quality": 92,
-        "recency": 58,
+        "recency": 57,
         "multi_source": 55,
         "weighted_base": 84,
         "bonuses": 33,
@@ -2578,7 +1964,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "c9411f9c26344e072cb1",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "02a586724218a347b0",
@@ -2627,7 +2013,7 @@
         "lessor_relevance": 82,
         "macro_relevance": 30,
         "source_quality": 92,
-        "recency": 58,
+        "recency": 57,
         "multi_source": 55,
         "weighted_base": 78,
         "bonuses": 22,
@@ -2641,7 +2027,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "eef172807e68ac7a2473",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "2db565ca4d26932a4e",
@@ -2703,7 +2089,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "8f6d49918bf861b274c5",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "e26f12de47e60a355e",
@@ -2763,7 +2149,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "392e4c6ea4c882e37cce",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "77e6593c2753c8dfa0",
@@ -2842,7 +2228,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "5f4e9502c5c6b1b82504",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "c753c43aecbe04dc3b",
@@ -2902,7 +2288,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "f46cfddebe7b71300f64",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "b559b291ce87cfd76c",
@@ -2960,7 +2346,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "d91a4c460197beb22e82",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "01eedf558ee89781fd",
@@ -3011,7 +2397,7 @@
         "lessor_relevance": 82,
         "macro_relevance": 72,
         "source_quality": 100,
-        "recency": 53,
+        "recency": 52,
         "multi_source": 55,
         "weighted_base": 78,
         "bonuses": 34,
@@ -3025,7 +2411,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "028f26648435fa27f139",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "904c3561a8c92b1c60",
@@ -3066,7 +2452,7 @@
         "lessor_relevance": 88,
         "macro_relevance": 82,
         "source_quality": 100,
-        "recency": 53,
+        "recency": 52,
         "multi_source": 55,
         "weighted_base": 84,
         "bonuses": 26,
@@ -3080,7 +2466,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "3a5d294cf4c7824ec859",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "f8bdc94f3fbda5acf6",
@@ -3142,7 +2528,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "8723a7d56666f4fbd7c3",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "cebac7db1dd21bb7d1",
@@ -3186,7 +2572,7 @@
         "lessor_relevance": 88,
         "macro_relevance": 72,
         "source_quality": 100,
-        "recency": 52,
+        "recency": 51,
         "multi_source": 55,
         "weighted_base": 84,
         "bonuses": 26,
@@ -3200,7 +2586,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "cc8df828a1d27ead8c42",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "363a64cd3d0b03f81f",
@@ -3264,7 +2650,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "35b80fb8fdf22c816f52",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "cc5cd8435fdf216328",
@@ -3329,7 +2715,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "dc1c2150291705184d2a",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "e68713ce700cf452f2",
@@ -3385,7 +2771,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "060090ae0de91f6e5a07",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "74e39949d615875db0",
@@ -3445,76 +2831,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "ccc28e6fcbcd82559fe2",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
-    },
-    {
-      "id": "200a5e7e0c8159b750",
-      "title": "Airbus reveals order for eight more A350Fs as maiden flight nears",
-      "summary_zh": "根据公开标题与元数据：Airbus reveals order for eight more A350Fs as maiden flight nears",
-      "why_it_matters_zh": "可能改变新机供给、交付节奏、存量飞机稀缺性与资产价值。",
-      "category": "Aircraft & OEM",
-      "importance_score": 100,
-      "region": "Europe",
-      "entities": [
-        "Airbus",
-        "A350F"
-      ],
-      "published_at": "2026-09-07T16:11:52Z",
-      "updated_at": "2026-09-14T09:38:27Z",
-      "primary_source": "Ishka Airfinance",
-      "primary_url": "https://platform.ishkaairfinance.com/Articles/3601072",
-      "source_count": 2,
-      "sources": [
-        {
-          "name": "Ishka Airfinance",
-          "url": "https://platform.ishkaairfinance.com/Articles/3601072",
-          "published_at": "2026-09-07T16:11:52Z",
-          "source_channel": "ishka_aircraft_rss",
-          "discovered_via": "direct"
-        },
-        {
-          "name": "Flightglobal",
-          "url": "https://www.flightglobal.com/orders-deliveries/2026/09/airbus-reveals-order-for-eight-more-a350fs-as-maiden-flight-nears/",
-          "published_at": "2026-09-07T09:41:00Z",
-          "source_channel": "bing_news_rss",
-          "discovered_via": "Bing News"
-        }
-      ],
-      "raw_ids": [
-        "435917659111bab92f9cece9",
-        "23f6a1cb281fc39aa5bced86"
-      ],
-      "analysis_mode": "deepseek",
-      "priority_matches": [
-        {
-          "name": "Airbus",
-          "type": "OEM"
-        }
-      ],
-      "macro_tags": [],
-      "aircraft_tags": [],
-      "critical": true,
-      "critical_reason_zh": "重点客户/潜在客户 Airbus 出现重大经营、机队、融资或交易事件。",
-      "score_components": {
-        "market_materiality": 78,
-        "lessor_relevance": 91,
-        "macro_relevance": 30,
-        "source_quality": 98,
-        "recency": 48,
-        "multi_source": 70,
-        "weighted_base": 82,
-        "bonuses": 29,
-        "applied_floor": 92,
-        "priority_entity": true,
-        "priority_material_event": true,
-        "macro_related": false,
-        "systemic_macro": false,
-        "severe_event": false,
-        "direct_lessor_event": true
-      },
-      "step3_ai_mode": "fallback_rules",
-      "analysis_fingerprint": "e1a8075752cc2dc8715e",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "3285473012748289d4",
@@ -3555,7 +2872,7 @@
         "lessor_relevance": 88,
         "macro_relevance": 30,
         "source_quality": 98,
-        "recency": 100,
+        "recency": 99,
         "multi_source": 55,
         "weighted_base": 89,
         "bonuses": 10,
@@ -3569,7 +2886,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "dcc1916b09496e836061",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "62cb3d8592aa1c125d",
@@ -3611,7 +2928,7 @@
         "lessor_relevance": 91,
         "macro_relevance": 72,
         "source_quality": 92,
-        "recency": 73,
+        "recency": 72,
         "multi_source": 55,
         "weighted_base": 76,
         "bonuses": 23,
@@ -3625,7 +2942,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "3d064e338e25d2c445b2",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "1e949e6008585baf5e",
@@ -3691,7 +3008,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "599bbda0a3770371595d",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "e297bef1ccdb19b564",
@@ -3749,7 +3066,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "f3e8346e93e5702b3760",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "6be71e78a0494f5cc2",
@@ -3806,7 +3123,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "edebe03b19a378a5fe98",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "50e0b9301cb1345b3b",
@@ -3850,7 +3167,7 @@
         "lessor_relevance": 78,
         "macro_relevance": 30,
         "source_quality": 92,
-        "recency": 58,
+        "recency": 57,
         "multi_source": 55,
         "weighted_base": 76,
         "bonuses": 22,
@@ -3864,7 +3181,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "f915ae130464dced7223",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "6afbc79164e90b6203",
@@ -3922,7 +3239,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "234f0c7d934817781e28",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "a97c3074789033a0d4",
@@ -3980,7 +3297,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "25fc4d7db2092bf78c3a",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "394bfe849bf7d0ddd7",
@@ -4038,7 +3355,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "e396ad18ee6f85af27fb",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "c92a8c7517809d1e91",
@@ -4093,7 +3410,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "55b6a866af9491b1795f",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "92c328c6e84bde1d6c",
@@ -4152,7 +3469,7 @@
         "lessor_relevance": 65,
         "macro_relevance": 20,
         "source_quality": 92,
-        "recency": 73,
+        "recency": 72,
         "multi_source": 55,
         "weighted_base": 63,
         "bonuses": 33,
@@ -4166,7 +3483,7 @@
       },
       "step3_ai_mode": "deepseek",
       "analysis_fingerprint": "9ec1dbb97f63b6a29187",
-      "step3_updated_at": "2026-09-14T15:34:59Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "589820940463a2f5bf",
@@ -4219,7 +3536,75 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "5851f97305aadbb61ffb",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
+    },
+    {
+      "id": "61e1c4c21b5deb035c",
+      "title": "Aerospace dealmaking gathers pace as jet production ramps up",
+      "summary_zh": "随着波音和空客生产计划更明确，航空航天供应链并购活动加快，买家对长期需求信心增强。",
+      "why_it_matters_zh": "供应链整合与产能恢复影响新机交付和机队规划，进而关系租赁商订单、交付延迟与资产稀缺性。",
+      "category": "Aircraft & OEM",
+      "importance_score": 94,
+      "region": "Global/Unspecified",
+      "entities": [
+        "Boeing",
+        "Airbus"
+      ],
+      "published_at": "2026-09-10T02:03:00Z",
+      "updated_at": "2026-09-14T09:38:27Z",
+      "primary_source": "Reuters",
+      "primary_url": "https://www.reuters.com/legal/transactional/aerospace-dealmaking-gathers-pace-jet-production-ramps-up-2026-09-10/",
+      "source_count": 1,
+      "sources": [
+        {
+          "name": "Reuters",
+          "url": "https://www.reuters.com/legal/transactional/aerospace-dealmaking-gathers-pace-jet-production-ramps-up-2026-09-10/",
+          "published_at": "2026-09-10T02:03:00Z",
+          "source_channel": "reuters_via_bing",
+          "discovered_via": "Bing News"
+        }
+      ],
+      "raw_ids": [
+        "cf6ba3a0caa6f646ddf0b048"
+      ],
+      "analysis_mode": "fallback_after_ai_error",
+      "priority_matches": [
+        {
+          "name": "Airbus",
+          "type": "OEM"
+        },
+        {
+          "name": "Boeing",
+          "type": "OEM"
+        }
+      ],
+      "macro_tags": [
+        "Trade & Supply Chain",
+        "OEM Supply"
+      ],
+      "aircraft_tags": [],
+      "critical": true,
+      "critical_reason_zh": "重点客户/潜在客户 Airbus 出现重大经营、机队、融资或交易事件。",
+      "score_components": {
+        "market_materiality": 65,
+        "lessor_relevance": 60,
+        "macro_relevance": 50,
+        "source_quality": 100,
+        "recency": 65,
+        "multi_source": 55,
+        "weighted_base": 68,
+        "bonuses": 26,
+        "applied_floor": 92,
+        "priority_entity": true,
+        "priority_material_event": true,
+        "macro_related": false,
+        "systemic_macro": false,
+        "severe_event": false,
+        "direct_lessor_event": false
+      },
+      "step3_ai_mode": "deepseek",
+      "analysis_fingerprint": "ba156b2e0ae9d1fa5111",
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "4466433ac6cb0f501a",
@@ -4276,7 +3661,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "3de0700de29de2fb91cd",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "7db61a800190945b06",
@@ -4317,7 +3702,7 @@
         "lessor_relevance": 91,
         "macro_relevance": 72,
         "source_quality": 92,
-        "recency": 58,
+        "recency": 57,
         "multi_source": 55,
         "weighted_base": 74,
         "bonuses": 19,
@@ -4331,7 +3716,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "c130fcee57902a117bef",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "aade5404ab252eacf6",
@@ -4386,7 +3771,7 @@
         "lessor_relevance": 40,
         "macro_relevance": 25,
         "source_quality": 92,
-        "recency": 73,
+        "recency": 72,
         "multi_source": 55,
         "weighted_base": 53,
         "bonuses": 26,
@@ -4400,7 +3785,72 @@
       },
       "step3_ai_mode": "deepseek",
       "analysis_fingerprint": "f6f3595380a7ffcf25ad",
-      "step3_updated_at": "2026-09-14T15:34:59Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
+    },
+    {
+      "id": "deb3ab03dccd95d807",
+      "title": "Black box recorders reveal excessive speed, belated go-around preceded Amazon Air crash",
+      "summary_zh": "初步驾驶舱语音和飞行数据记录显示，9月6日21 Air波音767-33A货机在迈阿密发生跑道冲出前存在超速和重复地形警告，复飞不及时。",
+      "why_it_matters_zh": "事故调查涉及767货机运行安全，可能影响货机保险、运营审查和资产声誉，但尚未指向租赁违约或机型停飞。",
+      "category": "Aircraft & OEM",
+      "importance_score": 92,
+      "region": "Americas",
+      "entities": [
+        "Boeing",
+        "767"
+      ],
+      "published_at": "2026-09-10T00:00:00Z",
+      "updated_at": "2026-09-14T09:38:27Z",
+      "primary_source": "Aviation News Online",
+      "primary_url": "https://www.aviationnews-online.com/article/excessive-speed-belated-go-around-preceded-21-air-b-767-miami-excursion",
+      "source_count": 1,
+      "sources": [
+        {
+          "name": "Aviation News Online",
+          "url": "https://www.aviationnews-online.com/article/excessive-speed-belated-go-around-preceded-21-air-b-767-miami-excursion",
+          "published_at": "2026-09-10T00:00:00Z",
+          "source_channel": "aviationnews_regulatory",
+          "discovered_via": "direct"
+        }
+      ],
+      "raw_ids": [
+        "589fc9eb147d451b6a4ec00e"
+      ],
+      "analysis_mode": "fallback_after_ai_error",
+      "priority_matches": [
+        {
+          "name": "Boeing",
+          "type": "OEM"
+        }
+      ],
+      "macro_tags": [
+        "Geopolitics & Airspace"
+      ],
+      "aircraft_tags": [
+        "767"
+      ],
+      "critical": true,
+      "critical_reason_zh": "涉及破产/违约、停飞、制裁、回收或其他可能需要及时关注的重大风险。",
+      "score_components": {
+        "market_materiality": 40,
+        "lessor_relevance": 35,
+        "macro_relevance": 15,
+        "source_quality": 92,
+        "recency": 65,
+        "multi_source": 55,
+        "weighted_base": 51,
+        "bonuses": 32,
+        "applied_floor": 92,
+        "priority_entity": true,
+        "priority_material_event": true,
+        "macro_related": false,
+        "systemic_macro": false,
+        "severe_event": true,
+        "direct_lessor_event": false
+      },
+      "step3_ai_mode": "deepseek",
+      "analysis_fingerprint": "dccbd918a01181f3d2be",
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "1f816b7a6e64529440",
@@ -4455,7 +3905,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "1ec8da290da8c5393c99",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "25413eef45f3165b5b",
@@ -4520,7 +3970,7 @@
       },
       "step3_ai_mode": "deepseek",
       "analysis_fingerprint": "1ed58b11e96068d2a4e4",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "49100c9975e27c94b6",
@@ -4575,7 +4025,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "02e323620569761d1685",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "ac1ad027afd0a45ec7",
@@ -4630,7 +4080,7 @@
         "lessor_relevance": 91,
         "macro_relevance": 82,
         "source_quality": 65,
-        "recency": 67,
+        "recency": 66,
         "multi_source": 70,
         "weighted_base": 68,
         "bonuses": 23,
@@ -4644,7 +4094,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "8c4d6ef7ded62f3afb2b",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "bdfcceba594e40aac5",
@@ -4700,7 +4150,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "74b28d2fefc5b71cb6b1",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "14bf53993de1d6def2",
@@ -4759,7 +4209,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "a781b68636b6dead5e6b",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "5ccbb60cfe83a2e2ee",
@@ -4800,7 +4250,7 @@
         "lessor_relevance": 82,
         "macro_relevance": 82,
         "source_quality": 92,
-        "recency": 73,
+        "recency": 72,
         "multi_source": 55,
         "weighted_base": 72,
         "bonuses": 16,
@@ -4814,7 +4264,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "b038805133b2d1b3fdd2",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "666f32ab21bbd0ece0",
@@ -4869,7 +4319,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "062c2824376eef31c3de",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "f1836159b1945d0c0b",
@@ -4925,7 +4375,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "58cfe3d3173aa11e866b",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "a5ad7a880fa007d1e4",
@@ -4995,7 +4445,7 @@
       },
       "step3_ai_mode": "deepseek",
       "analysis_fingerprint": "757de111f50a8083ed09",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "d34f9b80a750789089",
@@ -5052,7 +4502,7 @@
       },
       "step3_ai_mode": "deepseek",
       "analysis_fingerprint": "45131e51e9cabbce3eba",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "8f4690778c6f5fb0ec",
@@ -5107,7 +4557,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "03f17c5c28d400bb18d6",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "0a88509792ab0b7ff8",
@@ -5163,7 +4613,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "17df077a1dfc74bace78",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "fac42c0c57cafb0d5b",
@@ -5202,7 +4652,7 @@
         "lessor_relevance": 92,
         "macro_relevance": 30,
         "source_quality": 98,
-        "recency": 98,
+        "recency": 97,
         "multi_source": 55,
         "weighted_base": 79,
         "bonuses": 7,
@@ -5216,7 +4666,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "3f82a026a81ea15e5ef1",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "482bf4271871febdcf",
@@ -5255,7 +4705,7 @@
         "lessor_relevance": 91,
         "macro_relevance": 30,
         "source_quality": 98,
-        "recency": 98,
+        "recency": 97,
         "multi_source": 55,
         "weighted_base": 79,
         "bonuses": 7,
@@ -5269,7 +4719,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "dbf7f052acec8933f9b4",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "ecb2462e138cb10196",
@@ -5312,7 +4762,7 @@
         "lessor_relevance": 92,
         "macro_relevance": 30,
         "source_quality": 98,
-        "recency": 98,
+        "recency": 97,
         "multi_source": 55,
         "weighted_base": 79,
         "bonuses": 7,
@@ -5326,7 +4776,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "af1151762ae0161c075d",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "dc739b7a9c43c67fdc",
@@ -5374,7 +4824,7 @@
         "lessor_relevance": 20,
         "macro_relevance": 20,
         "source_quality": 65,
-        "recency": 96,
+        "recency": 95,
         "multi_source": 55,
         "weighted_base": 40,
         "bonuses": 22,
@@ -5388,7 +4838,7 @@
       },
       "step3_ai_mode": "deepseek",
       "analysis_fingerprint": "6892346c3bebd9864063",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "44f5fd13e76ceaf95c",
@@ -5441,7 +4891,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "b6fae2be95ceeefbf737",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "591c35ecf07b11c0de",
@@ -5494,7 +4944,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "d4b81710360f3d195636",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "8aa81457250527c3ea",
@@ -5551,7 +5001,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "f36b076602e1f7bdfaeb",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "d5489b9b7404e48035",
@@ -5611,7 +5061,7 @@
       },
       "step3_ai_mode": "deepseek",
       "analysis_fingerprint": "c358d95076cb97575ae9",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "b5393e29e28860232a",
@@ -5669,7 +5119,7 @@
       },
       "step3_ai_mode": "deepseek",
       "analysis_fingerprint": "5487e2097c9d9a7e0df5",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "2c69b8a33d56376a6e",
@@ -5740,7 +5190,7 @@
       },
       "step3_ai_mode": "deepseek",
       "analysis_fingerprint": "b2b189f2636863e143e1",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "aa3e73e917369731a6",
@@ -5810,7 +5260,7 @@
       },
       "step3_ai_mode": "deepseek",
       "analysis_fingerprint": "f6bcc975b9e512cf97c0",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "fd050578085ca478ce",
@@ -5872,7 +5322,7 @@
       },
       "step3_ai_mode": "deepseek",
       "analysis_fingerprint": "1cd511bdc0b0876f9010",
-      "step3_updated_at": "2026-09-14T15:34:59Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "56af1cdfa42942e955",
@@ -5920,7 +5370,7 @@
         "lessor_relevance": 30,
         "macro_relevance": 25,
         "source_quality": 92,
-        "recency": 73,
+        "recency": 72,
         "multi_source": 55,
         "weighted_base": 48,
         "bonuses": 22,
@@ -5934,7 +5384,7 @@
       },
       "step3_ai_mode": "deepseek",
       "analysis_fingerprint": "51ffbdf38986564ee71d",
-      "step3_updated_at": "2026-09-14T15:34:59Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "fffb7f9afe2925c1cc",
@@ -5986,7 +5436,7 @@
         "lessor_relevance": 50,
         "macro_relevance": 30,
         "source_quality": 92,
-        "recency": 73,
+        "recency": 72,
         "multi_source": 55,
         "weighted_base": 61,
         "bonuses": 22,
@@ -6000,7 +5450,7 @@
       },
       "step3_ai_mode": "deepseek",
       "analysis_fingerprint": "e885fb9d8b93dac51d48",
-      "step3_updated_at": "2026-09-14T15:34:59Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "d81767a8a1b3759cf1",
@@ -6049,7 +5499,7 @@
         "lessor_relevance": 45,
         "macro_relevance": 35,
         "source_quality": 92,
-        "recency": 73,
+        "recency": 72,
         "multi_source": 55,
         "weighted_base": 58,
         "bonuses": 22,
@@ -6063,7 +5513,7 @@
       },
       "step3_ai_mode": "deepseek",
       "analysis_fingerprint": "f7047ff3d8b53de1cf33",
-      "step3_updated_at": "2026-09-14T15:34:59Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "9ed8f7cf27d8f5920d",
@@ -6111,9 +5561,9 @@
         "lessor_relevance": 60,
         "macro_relevance": 30,
         "source_quality": 92,
-        "recency": 73,
+        "recency": 72,
         "multi_source": 55,
-        "weighted_base": 62,
+        "weighted_base": 61,
         "bonuses": 22,
         "applied_floor": 86,
         "priority_entity": true,
@@ -6125,7 +5575,7 @@
       },
       "step3_ai_mode": "deepseek",
       "analysis_fingerprint": "4d352c06a9fa603990a8",
-      "step3_updated_at": "2026-09-14T15:34:59Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "3d4fb43e6e7994e225",
@@ -6180,7 +5630,7 @@
         "lessor_relevance": 25,
         "macro_relevance": 20,
         "source_quality": 92,
-        "recency": 73,
+        "recency": 72,
         "multi_source": 55,
         "weighted_base": 45,
         "bonuses": 26,
@@ -6194,7 +5644,7 @@
       },
       "step3_ai_mode": "deepseek",
       "analysis_fingerprint": "2052987c3259437fb5a4",
-      "step3_updated_at": "2026-09-14T15:34:59Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "6b08745bfd5195fb35",
@@ -6245,9 +5695,9 @@
         "lessor_relevance": 30,
         "macro_relevance": 25,
         "source_quality": 92,
-        "recency": 73,
+        "recency": 72,
         "multi_source": 55,
-        "weighted_base": 47,
+        "weighted_base": 46,
         "bonuses": 22,
         "applied_floor": 86,
         "priority_entity": true,
@@ -6259,7 +5709,490 @@
       },
       "step3_ai_mode": "deepseek",
       "analysis_fingerprint": "e30ec640d1b6d34c5aac",
-      "step3_updated_at": "2026-09-14T15:34:59Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
+    },
+    {
+      "id": "e6963b5ddbde7d7e09",
+      "title": "LATAM Airlines Group appoints Sebastian Acuto as VP of operations and maintenance",
+      "summary_zh": "LATAM Airlines Group任命Sebastian Acuto为运营与维护副总裁，负责提升安全、准点和运营效率。",
+      "why_it_matters_zh": "高管任命本身中性，但运营与维护负责人更替可能影响机队可靠性、维修执行和承租人信用。",
+      "category": "Airlines & Credit",
+      "importance_score": 86,
+      "region": "Americas",
+      "entities": [],
+      "published_at": "2026-09-11T00:00:00Z",
+      "updated_at": "2026-09-14T09:38:27Z",
+      "primary_source": "Aviation News Online",
+      "primary_url": "https://www.aviationnews-online.com/article/latam-airlines-group-appoints-sebastian-acuto-as-vp-of-operations-and-maintenance",
+      "source_count": 1,
+      "sources": [
+        {
+          "name": "Aviation News Online",
+          "url": "https://www.aviationnews-online.com/article/latam-airlines-group-appoints-sebastian-acuto-as-vp-of-operations-and-maintenance",
+          "published_at": "2026-09-11T00:00:00Z",
+          "source_channel": "aviationnews_airline",
+          "discovered_via": "direct"
+        }
+      ],
+      "raw_ids": [
+        "fb33440bed66f916488a17e3"
+      ],
+      "analysis_mode": "fallback_after_ai_error",
+      "priority_matches": [
+        {
+          "name": "LATAM Airlines Group",
+          "type": "Airline Group"
+        }
+      ],
+      "macro_tags": [],
+      "aircraft_tags": [],
+      "critical": false,
+      "critical_reason_zh": "",
+      "score_components": {
+        "market_materiality": 10,
+        "lessor_relevance": 15,
+        "macro_relevance": 5,
+        "source_quality": 92,
+        "recency": 72,
+        "multi_source": 55,
+        "weighted_base": 35,
+        "bonuses": 22,
+        "applied_floor": 86,
+        "priority_entity": true,
+        "priority_material_event": false,
+        "macro_related": false,
+        "systemic_macro": false,
+        "severe_event": false,
+        "direct_lessor_event": false
+      },
+      "step3_ai_mode": "deepseek",
+      "analysis_fingerprint": "4f9736d0bce92ea30b62",
+      "step3_updated_at": "2026-09-14T16:28:36Z"
+    },
+    {
+      "id": "dd1ef5973b1708a48c",
+      "title": "Korean Air to resume Oita service for winter 2026; rolling out Starlink in September",
+      "summary_zh": "大韩航空将于2026年冬季恢复日本大分航线，运营期为2026年10月25日至2027年3月26日，并于9月起推出星链机上互联网。",
+      "why_it_matters_zh": "航线恢复和客舱互联升级有助其网络与收入，但短期对租赁信用与资产价值影响有限。",
+      "category": "Airlines & Credit",
+      "importance_score": 86,
+      "region": "Asia/Pacific",
+      "entities": [],
+      "published_at": "2026-09-11T00:00:00Z",
+      "updated_at": "2026-09-14T09:38:27Z",
+      "primary_source": "Aviation News Online",
+      "primary_url": "https://www.aviationnews-online.com/article/korean-air-to-resume-oita-service-for-winter-2026",
+      "source_count": 1,
+      "sources": [
+        {
+          "name": "Aviation News Online",
+          "url": "https://www.aviationnews-online.com/article/korean-air-to-resume-oita-service-for-winter-2026",
+          "published_at": "2026-09-11T00:00:00Z",
+          "source_channel": "aviationnews_airline",
+          "discovered_via": "direct"
+        }
+      ],
+      "raw_ids": [
+        "8cbdbe4c2d80699b2f8f74f2"
+      ],
+      "analysis_mode": "fallback_after_ai_error",
+      "priority_matches": [
+        {
+          "name": "Korean Air",
+          "type": "Airline"
+        }
+      ],
+      "macro_tags": [],
+      "aircraft_tags": [],
+      "critical": false,
+      "critical_reason_zh": "",
+      "score_components": {
+        "market_materiality": 20,
+        "lessor_relevance": 15,
+        "macro_relevance": 10,
+        "source_quality": 92,
+        "recency": 72,
+        "multi_source": 55,
+        "weighted_base": 38,
+        "bonuses": 22,
+        "applied_floor": 86,
+        "priority_entity": true,
+        "priority_material_event": false,
+        "macro_related": false,
+        "systemic_macro": false,
+        "severe_event": false,
+        "direct_lessor_event": false
+      },
+      "step3_ai_mode": "deepseek",
+      "analysis_fingerprint": "f0b27405e77cfdb369a3",
+      "step3_updated_at": "2026-09-14T16:28:36Z"
+    },
+    {
+      "id": "6902aa6f96053a0933",
+      "title": "Iberia Maintenance wins approval for A350 heavy maintenance",
+      "summary_zh": "伊比利亚航空维修获得西班牙航空安全局批准，可为空客A350执行全面重维修工作。",
+      "why_it_matters_zh": "A350重维修能力获批提升欧洲MRO供给和资产可维护性，有利于该机型残值管理与维修周转。",
+      "category": "Aircraft & OEM",
+      "importance_score": 86,
+      "region": "Europe",
+      "entities": [
+        "Airbus",
+        "A350"
+      ],
+      "published_at": "2026-09-11T00:00:00Z",
+      "updated_at": "2026-09-14T09:38:27Z",
+      "primary_source": "Aviation News Online",
+      "primary_url": "https://www.aviationnews-online.com/article/iberia-maintenance-wins-approval-for-a350-heavy-maintenance",
+      "source_count": 1,
+      "sources": [
+        {
+          "name": "Aviation News Online",
+          "url": "https://www.aviationnews-online.com/article/iberia-maintenance-wins-approval-for-a350-heavy-maintenance",
+          "published_at": "2026-09-11T00:00:00Z",
+          "source_channel": "aviationnews_maintenance",
+          "discovered_via": "direct"
+        }
+      ],
+      "raw_ids": [
+        "5f921c84584f9f460a3de830"
+      ],
+      "analysis_mode": "fallback_after_ai_error",
+      "priority_matches": [
+        {
+          "name": "Airbus",
+          "type": "OEM"
+        }
+      ],
+      "macro_tags": [],
+      "aircraft_tags": [
+        "A350"
+      ],
+      "critical": false,
+      "critical_reason_zh": "",
+      "score_components": {
+        "market_materiality": 35,
+        "lessor_relevance": 55,
+        "macro_relevance": 20,
+        "source_quality": 92,
+        "recency": 72,
+        "multi_source": 55,
+        "weighted_base": 57,
+        "bonuses": 22,
+        "applied_floor": 86,
+        "priority_entity": true,
+        "priority_material_event": false,
+        "macro_related": false,
+        "systemic_macro": false,
+        "severe_event": false,
+        "direct_lessor_event": false
+      },
+      "step3_ai_mode": "deepseek",
+      "analysis_fingerprint": "ee59063c498d5cf58783",
+      "step3_updated_at": "2026-09-14T16:28:36Z"
+    },
+    {
+      "id": "c6f0f16dfd04c7271d",
+      "title": "Hyatt announces Delta loyalty partnership and ends American Airlines tie-up",
+      "summary_zh": "凯悦酒店集团与达美航空达成新的长期忠诚度合作，同时结束与美国航空的强化合作关系。",
+      "why_it_matters_zh": "常旅客合作变动影响航司辅营收入和客户粘性，进而间接关系美航与达美信用画像，但影响有限。",
+      "category": "Airlines & Credit",
+      "importance_score": 86,
+      "region": "Americas",
+      "entities": [],
+      "published_at": "2026-09-11T00:00:00Z",
+      "updated_at": "2026-09-14T09:38:27Z",
+      "primary_source": "Aviation News Online",
+      "primary_url": "https://www.aviationnews-online.com/article/hyatt-announces-delta-loyalty-partnership-and-ends-american-airlines-tie-up",
+      "source_count": 1,
+      "sources": [
+        {
+          "name": "Aviation News Online",
+          "url": "https://www.aviationnews-online.com/article/hyatt-announces-delta-loyalty-partnership-and-ends-american-airlines-tie-up",
+          "published_at": "2026-09-11T00:00:00Z",
+          "source_channel": "aviationnews_finance",
+          "discovered_via": "direct"
+        }
+      ],
+      "raw_ids": [
+        "fb2983cc2de7b1564bb7affb"
+      ],
+      "analysis_mode": "fallback_after_ai_error",
+      "priority_matches": [
+        {
+          "name": "American Airlines",
+          "type": "Airline"
+        }
+      ],
+      "macro_tags": [],
+      "aircraft_tags": [],
+      "critical": false,
+      "critical_reason_zh": "",
+      "score_components": {
+        "market_materiality": 35,
+        "lessor_relevance": 25,
+        "macro_relevance": 15,
+        "source_quality": 92,
+        "recency": 72,
+        "multi_source": 55,
+        "weighted_base": 46,
+        "bonuses": 22,
+        "applied_floor": 86,
+        "priority_entity": true,
+        "priority_material_event": false,
+        "macro_related": false,
+        "systemic_macro": false,
+        "severe_event": false,
+        "direct_lessor_event": false
+      },
+      "step3_ai_mode": "deepseek",
+      "analysis_fingerprint": "a53ce43fc29b9b171939",
+      "step3_updated_at": "2026-09-14T16:28:36Z"
+    },
+    {
+      "id": "afed299f4d10697248",
+      "title": "Flair Airlines partners with Lufthansa Technik for comprehensive engine and digital services",
+      "summary_zh": "Flair Airlines与汉莎技术签署15年独家协议，为其18架配备LEAP-1B发动机的波音737 MAX 8提供发动机和数字化服务。",
+      "why_it_matters_zh": "长期发动机维护协议可降低停场与维修成本并支撑737 MAX 8机队可用性，对租赁资产运行状态有正面意义。",
+      "category": "Aircraft & OEM",
+      "importance_score": 86,
+      "region": "Americas",
+      "entities": [
+        "Boeing",
+        "737 MAX 8",
+        "LEAP-1B"
+      ],
+      "published_at": "2026-09-11T00:00:00Z",
+      "updated_at": "2026-09-14T09:38:27Z",
+      "primary_source": "Aviation News Online",
+      "primary_url": "https://www.aviationnews-online.com/article/flair-airlines-partners-with-lufthansa-technik-for-comprehensive-engine-and-digital-services",
+      "source_count": 1,
+      "sources": [
+        {
+          "name": "Aviation News Online",
+          "url": "https://www.aviationnews-online.com/article/flair-airlines-partners-with-lufthansa-technik-for-comprehensive-engine-and-digital-services",
+          "published_at": "2026-09-11T00:00:00Z",
+          "source_channel": "aviationnews_airline",
+          "discovered_via": "direct"
+        }
+      ],
+      "raw_ids": [
+        "55ef4dad4e3949e81f6f0550"
+      ],
+      "analysis_mode": "fallback_after_ai_error",
+      "priority_matches": [
+        {
+          "name": "Boeing",
+          "type": "OEM"
+        }
+      ],
+      "macro_tags": [
+        "Trade & Supply Chain"
+      ],
+      "aircraft_tags": [
+        "737MAX8"
+      ],
+      "critical": false,
+      "critical_reason_zh": "",
+      "score_components": {
+        "market_materiality": 45,
+        "lessor_relevance": 65,
+        "macro_relevance": 30,
+        "source_quality": 92,
+        "recency": 72,
+        "multi_source": 55,
+        "weighted_base": 63,
+        "bonuses": 22,
+        "applied_floor": 86,
+        "priority_entity": true,
+        "priority_material_event": false,
+        "macro_related": false,
+        "systemic_macro": false,
+        "severe_event": false,
+        "direct_lessor_event": false
+      },
+      "step3_ai_mode": "deepseek",
+      "analysis_fingerprint": "4066fc35b3e1e99322c3",
+      "step3_updated_at": "2026-09-14T16:28:36Z"
+    },
+    {
+      "id": "35fed0313d20b7e318",
+      "title": "Etihad to launch year-round Abu Dhabi-Red Sea service",
+      "summary_zh": "阿提哈德航空将于10月4日开通阿布扎比至沙特红海国际机场的全年航线，初期每周一班，后增至两班。",
+      "why_it_matters_zh": "新增航线反映中东需求与网络扩张，对阿提哈德收入有轻微正面影响，但租赁信用影响有限。",
+      "category": "Airlines & Credit",
+      "importance_score": 86,
+      "region": "Middle East/Africa",
+      "entities": [],
+      "published_at": "2026-09-11T00:00:00Z",
+      "updated_at": "2026-09-14T09:38:27Z",
+      "primary_source": "Aviation News Online",
+      "primary_url": "https://www.aviationnews-online.com/article/etihad-to-launch-year-round-abu-dhabi-red-sea-service",
+      "source_count": 1,
+      "sources": [
+        {
+          "name": "Aviation News Online",
+          "url": "https://www.aviationnews-online.com/article/etihad-to-launch-year-round-abu-dhabi-red-sea-service",
+          "published_at": "2026-09-11T00:00:00Z",
+          "source_channel": "aviationnews_airline",
+          "discovered_via": "direct"
+        }
+      ],
+      "raw_ids": [
+        "ab319fc4c1c7ef0b990d3872"
+      ],
+      "analysis_mode": "fallback_after_ai_error",
+      "priority_matches": [
+        {
+          "name": "Etihad Airways",
+          "type": "Airline"
+        }
+      ],
+      "macro_tags": [
+        "Geopolitics & Airspace"
+      ],
+      "aircraft_tags": [],
+      "critical": false,
+      "critical_reason_zh": "",
+      "score_components": {
+        "market_materiality": 20,
+        "lessor_relevance": 15,
+        "macro_relevance": 15,
+        "source_quality": 92,
+        "recency": 72,
+        "multi_source": 55,
+        "weighted_base": 38,
+        "bonuses": 22,
+        "applied_floor": 86,
+        "priority_entity": true,
+        "priority_material_event": false,
+        "macro_related": false,
+        "systemic_macro": false,
+        "severe_event": false,
+        "direct_lessor_event": false
+      },
+      "step3_ai_mode": "deepseek",
+      "analysis_fingerprint": "58d54046ebce8374334b",
+      "step3_updated_at": "2026-09-14T16:28:36Z"
+    },
+    {
+      "id": "d76d8f0a50b706032e",
+      "title": "Airbus launches share buyback for employee compensation plans",
+      "summary_zh": "空客启动最多410万股股票回购计划，用于支持未来员工持股和股权激励计划，期限自9月11日起。",
+      "why_it_matters_zh": "回购用于员工激励而非资本返还，对空客现金流与信用影响有限，但体现OEM资本管理动态。",
+      "category": "Aircraft & OEM",
+      "importance_score": 86,
+      "region": "Global/Unspecified",
+      "entities": [
+        "Airbus"
+      ],
+      "published_at": "2026-09-11T00:00:00Z",
+      "updated_at": "2026-09-14T09:38:27Z",
+      "primary_source": "Aviation News Online",
+      "primary_url": "https://www.aviationnews-online.com/article/airbus-launches-share-buyback-for-employee-compensation-plans",
+      "source_count": 1,
+      "sources": [
+        {
+          "name": "Aviation News Online",
+          "url": "https://www.aviationnews-online.com/article/airbus-launches-share-buyback-for-employee-compensation-plans",
+          "published_at": "2026-09-11T00:00:00Z",
+          "source_channel": "aviationnews_finance",
+          "discovered_via": "direct"
+        }
+      ],
+      "raw_ids": [
+        "6a5918dfd26c7d1710fceb8a"
+      ],
+      "analysis_mode": "fallback_after_ai_error",
+      "priority_matches": [
+        {
+          "name": "Airbus",
+          "type": "OEM"
+        }
+      ],
+      "macro_tags": [],
+      "aircraft_tags": [],
+      "critical": false,
+      "critical_reason_zh": "",
+      "score_components": {
+        "market_materiality": 30,
+        "lessor_relevance": 20,
+        "macro_relevance": 20,
+        "source_quality": 92,
+        "recency": 72,
+        "multi_source": 55,
+        "weighted_base": 43,
+        "bonuses": 22,
+        "applied_floor": 86,
+        "priority_entity": true,
+        "priority_material_event": false,
+        "macro_related": false,
+        "systemic_macro": false,
+        "severe_event": false,
+        "direct_lessor_event": false
+      },
+      "step3_ai_mode": "deepseek",
+      "analysis_fingerprint": "b5c86239534529a6ec6a",
+      "step3_updated_at": "2026-09-14T16:28:36Z"
+    },
+    {
+      "id": "86cd22fedd45b86076",
+      "title": "LATAM capacity rises 7% in August as passenger traffic grows",
+      "summary_zh": "LATAM Airlines Group 2026年8月合并运力同比增长7%，受国际和国内业务增长推动，客运量上升。",
+      "why_it_matters_zh": "运力与客流增长有利于LATAM收入和现金流，对其租赁信用和机队需求构成正面信号。",
+      "category": "Airlines & Credit",
+      "importance_score": 86,
+      "region": "Americas",
+      "entities": [],
+      "published_at": "2026-09-10T00:00:00Z",
+      "updated_at": "2026-09-14T09:38:27Z",
+      "primary_source": "Aviation News Online",
+      "primary_url": "https://www.aviationnews-online.com/article/latam-capacity-rises-7-in-august-as-passenger-traffic-grows",
+      "source_count": 1,
+      "sources": [
+        {
+          "name": "Aviation News Online",
+          "url": "https://www.aviationnews-online.com/article/latam-capacity-rises-7-in-august-as-passenger-traffic-grows",
+          "published_at": "2026-09-10T00:00:00Z",
+          "source_channel": "aviationnews_airline",
+          "discovered_via": "direct"
+        }
+      ],
+      "raw_ids": [
+        "35b1286089af1ad97789c984"
+      ],
+      "analysis_mode": "fallback_after_ai_error",
+      "priority_matches": [
+        {
+          "name": "LATAM Airlines Group",
+          "type": "Airline Group"
+        }
+      ],
+      "macro_tags": [
+        "Macro Demand"
+      ],
+      "aircraft_tags": [],
+      "critical": false,
+      "critical_reason_zh": "",
+      "score_components": {
+        "market_materiality": 45,
+        "lessor_relevance": 55,
+        "macro_relevance": 45,
+        "source_quality": 92,
+        "recency": 65,
+        "multi_source": 55,
+        "weighted_base": 59,
+        "bonuses": 22,
+        "applied_floor": 86,
+        "priority_entity": true,
+        "priority_material_event": false,
+        "macro_related": false,
+        "systemic_macro": false,
+        "severe_event": false,
+        "direct_lessor_event": false
+      },
+      "step3_ai_mode": "deepseek",
+      "analysis_fingerprint": "e275d807b571243dbe91",
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "1a6c9b96c71c656854",
@@ -6314,7 +6247,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "d91a8cfed039d9fdd64e",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "a386de77a995777a7d",
@@ -6371,7 +6304,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "459913d2222a12cd78a9",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "f742c3c6acad1e1206",
@@ -6410,7 +6343,7 @@
         "lessor_relevance": 91,
         "macro_relevance": 30,
         "source_quality": 98,
-        "recency": 79,
+        "recency": 78,
         "multi_source": 55,
         "weighted_base": 78,
         "bonuses": 7,
@@ -6424,7 +6357,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "222110ed09d612ed3b60",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "7f1d4a4feed9bec3ef",
@@ -6463,7 +6396,7 @@
         "lessor_relevance": 92,
         "macro_relevance": 30,
         "source_quality": 98,
-        "recency": 79,
+        "recency": 78,
         "multi_source": 55,
         "weighted_base": 77,
         "bonuses": 7,
@@ -6477,7 +6410,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "70de27ab3d3151371a68",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "a99d53a6e1b12cb797",
@@ -6530,7 +6463,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "4f76ac46eea9563e0d9e",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "c7797f66bed2b84490",
@@ -6583,7 +6516,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "2206c87d1b153736d808",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "099c08bd85486db5ac",
@@ -6638,7 +6571,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "4ddd515a7b66cc82bae3",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "a3bd81c173a2644541",
@@ -6691,7 +6624,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "0e8e21b65e471c28768e",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "151fd8e5e87be889ba",
@@ -6746,7 +6679,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "16e24dd34ba304166d75",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "99b0a8f0fa596f6a80",
@@ -6801,7 +6734,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "364e7cf346e3a2ca8ed9",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "123044ad950ff700d5",
@@ -6856,7 +6789,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "a26f164c4b894aca42f8",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "ab545c7393750899dc",
@@ -6901,7 +6834,7 @@
         "lessor_relevance": 82,
         "macro_relevance": 72,
         "source_quality": 65,
-        "recency": 97,
+        "recency": 96,
         "multi_source": 55,
         "weighted_base": 68,
         "bonuses": 12,
@@ -6915,7 +6848,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "5bcce3ed09fb1f417ab2",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "5183327d564da75e13",
@@ -6970,7 +6903,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "2112d59bf25d3c887fb0",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "2f416511b71c99c3c5",
@@ -7019,7 +6952,7 @@
         "lessor_relevance": 78,
         "macro_relevance": 72,
         "source_quality": 65,
-        "recency": 79,
+        "recency": 78,
         "multi_source": 70,
         "weighted_base": 65,
         "bonuses": 12,
@@ -7033,7 +6966,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "64985c5cefa7f6c57099",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "bc8a710977fe0fd49a",
@@ -7074,7 +7007,7 @@
         "lessor_relevance": 78,
         "macro_relevance": 72,
         "source_quality": 92,
-        "recency": 73,
+        "recency": 72,
         "multi_source": 55,
         "weighted_base": 70,
         "bonuses": 12,
@@ -7088,7 +7021,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "8d1496ea87d954cae13d",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "99cea14e1a7f41bed7",
@@ -7129,7 +7062,7 @@
         "lessor_relevance": 78,
         "macro_relevance": 72,
         "source_quality": 92,
-        "recency": 73,
+        "recency": 72,
         "multi_source": 55,
         "weighted_base": 70,
         "bonuses": 12,
@@ -7143,7 +7076,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "7d5f0fef27be3fdf814b",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "1473f01cf255195493",
@@ -7184,7 +7117,7 @@
         "lessor_relevance": 78,
         "macro_relevance": 72,
         "source_quality": 92,
-        "recency": 73,
+        "recency": 72,
         "multi_source": 55,
         "weighted_base": 70,
         "bonuses": 12,
@@ -7198,7 +7131,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "77be1076d0f23e5ca424",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "c790c5e346a8b29212",
@@ -7251,7 +7184,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "0221addb3e9c883da0e6",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "6ec58d44f455123fa8",
@@ -7290,7 +7223,7 @@
         "lessor_relevance": 92,
         "macro_relevance": 30,
         "source_quality": 98,
-        "recency": 69,
+        "recency": 68,
         "multi_source": 55,
         "weighted_base": 76,
         "bonuses": 7,
@@ -7304,7 +7237,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "a6c66da2c226a3de1b92",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "618a115ac35ad16695",
@@ -7357,7 +7290,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "e17fe52639d913e90f8d",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "f83fbb883899362f04",
@@ -7410,7 +7343,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "b34ba3b46e2c7c8ff070",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "902e6cc2ec2b294d6e",
@@ -7465,7 +7398,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "4ccabafa9ccabe6bc884",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "b9efe87907357f225f",
@@ -7520,7 +7453,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "37469a25f32d4528da1e",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "ec884866be2da311e0",
@@ -7559,7 +7492,7 @@
         "lessor_relevance": 91,
         "macro_relevance": 30,
         "source_quality": 98,
-        "recency": 61,
+        "recency": 60,
         "multi_source": 55,
         "weighted_base": 76,
         "bonuses": 7,
@@ -7573,7 +7506,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "92abeef04bc8c21a16cb",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "43527532344d5027c0",
@@ -7617,7 +7550,7 @@
         "lessor_relevance": 86,
         "macro_relevance": 72,
         "source_quality": 92,
-        "recency": 58,
+        "recency": 57,
         "multi_source": 55,
         "weighted_base": 71,
         "bonuses": 12,
@@ -7631,7 +7564,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "0f3f5f0e7e52342921a8",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "ad1d14255a820d7f64",
@@ -7672,7 +7605,7 @@
         "lessor_relevance": 78,
         "macro_relevance": 72,
         "source_quality": 92,
-        "recency": 58,
+        "recency": 57,
         "multi_source": 55,
         "weighted_base": 68,
         "bonuses": 12,
@@ -7686,7 +7619,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "088f632c1bba3c05e2bf",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "f98879ae23ec318816",
@@ -7741,7 +7674,7 @@
       },
       "step3_ai_mode": "deepseek",
       "analysis_fingerprint": "833d4c624b86bc34ee70",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "aa7f360b6effa356ea",
@@ -7796,7 +7729,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "d939c7866be4eb9f78c7",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "061e0c297db4268b14",
@@ -7851,7 +7784,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "41bd5635fffcac1af584",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "accff62b42687e8957",
@@ -7906,7 +7839,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "4dcc1fee1d404932efaa",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "b491d46039b46f687b",
@@ -7983,7 +7916,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "f8e34da3f5637a342b01",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "fff90e676675b782c9",
@@ -8022,7 +7955,7 @@
         "lessor_relevance": 91,
         "macro_relevance": 30,
         "source_quality": 92,
-        "recency": 73,
+        "recency": 72,
         "multi_source": 55,
         "weighted_base": 75,
         "bonuses": 7,
@@ -8036,7 +7969,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "20d2e0e0b94c5ac9b79c",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "47dd67c911c0de4c89",
@@ -8089,7 +8022,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "720d9b86c044c1cc734f",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "df3ec772a5034dbfac",
@@ -8142,7 +8075,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "84b45075727ee1796b90",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "7ab2187e7198e06c77",
@@ -8197,7 +8130,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "a9df8bab4ef43c539f98",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "3ba4af1251eba2b794",
@@ -8238,7 +8171,7 @@
         "lessor_relevance": 91,
         "macro_relevance": 30,
         "source_quality": 92,
-        "recency": 58,
+        "recency": 57,
         "multi_source": 55,
         "weighted_base": 74,
         "bonuses": 7,
@@ -8252,7 +8185,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "67e29f6ff77f9dd7eacf",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "9346699f62eacaf516",
@@ -8305,7 +8238,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "5dd266f68299a3768cc9",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "914bb2b2741fb22805",
@@ -8358,7 +8291,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "0a80d20ebed238a14566",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "7998a78de08fe00723",
@@ -8413,7 +8346,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "ee26f529846b89a83a41",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "9667a767573eabd8fa",
@@ -8452,7 +8385,7 @@
         "lessor_relevance": 91,
         "macro_relevance": 30,
         "source_quality": 100,
-        "recency": 49,
+        "recency": 48,
         "multi_source": 55,
         "weighted_base": 74,
         "bonuses": 7,
@@ -8466,7 +8399,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "ce235c57d2d6463b2e93",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "14b3a9bb15e5089f53",
@@ -8519,7 +8452,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "1a1d51ea5b07a02f81a0",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "4b7b392df3d1a0aa83",
@@ -8558,7 +8491,7 @@
         "lessor_relevance": 91,
         "macro_relevance": 30,
         "source_quality": 92,
-        "recency": 58,
+        "recency": 57,
         "multi_source": 55,
         "weighted_base": 73,
         "bonuses": 7,
@@ -8572,7 +8505,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "80e42eab588c342f6afc",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "c9cb3c5e72bbc2bb48",
@@ -8611,7 +8544,7 @@
         "lessor_relevance": 91,
         "macro_relevance": 30,
         "source_quality": 92,
-        "recency": 58,
+        "recency": 57,
         "multi_source": 55,
         "weighted_base": 73,
         "bonuses": 7,
@@ -8625,7 +8558,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "b606dd57a8381dba7219",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "d6f315880554834bfa",
@@ -8697,7 +8630,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "0bea559f80b6f0f7bb08",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "ac7b186ae774857ed2",
@@ -8753,7 +8686,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "d4043e927d9ca0e2ad78",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "6c8398f914cc3b7cc4",
@@ -8806,7 +8739,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "558a65e07eb92bfed23a",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "2e4477c33062069b9e",
@@ -8861,113 +8794,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "a58e0e18a3e6121e17ef",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
-    },
-    {
-      "id": "7e3951aac3cd5d9e7a",
-      "title": "Air Transat swings to EBITDA loss",
-      "summary_zh": "根据公开标题与元数据：Air Transat swings to EBITDA loss",
-      "why_it_matters_zh": "需要关注承租人信用、现金流、机队调整及潜在租约风险。",
-      "category": "Airlines & Credit",
-      "importance_score": 75,
-      "region": "Global/Unspecified",
-      "entities": [],
-      "published_at": "2026-09-14T08:19:55Z",
-      "updated_at": "2026-09-14T09:38:27Z",
-      "primary_source": "Ishka Airfinance",
-      "primary_url": "https://platform.ishkaairfinance.com/Articles/3601117",
-      "source_count": 1,
-      "sources": [
-        {
-          "name": "Ishka Airfinance",
-          "url": "https://platform.ishkaairfinance.com/Articles/3601117",
-          "published_at": "2026-09-14T08:19:55Z",
-          "source_channel": "ishka_latest_rss",
-          "discovered_via": "direct"
-        }
-      ],
-      "raw_ids": [
-        "224aa63037f8941403bc912e"
-      ],
-      "analysis_mode": "fallback_after_ai_error",
-      "priority_matches": [],
-      "macro_tags": [],
-      "aircraft_tags": [],
-      "critical": false,
-      "critical_reason_zh": "",
-      "score_components": {
-        "market_materiality": 54,
-        "lessor_relevance": 78,
-        "macro_relevance": 30,
-        "source_quality": 98,
-        "recency": 98,
-        "multi_source": 55,
-        "weighted_base": 75,
-        "bonuses": 0,
-        "applied_floor": null,
-        "priority_entity": false,
-        "priority_material_event": false,
-        "macro_related": false,
-        "systemic_macro": false,
-        "severe_event": false,
-        "direct_lessor_event": false
-      },
-      "step3_ai_mode": "fallback_rules",
-      "analysis_fingerprint": "cdf883978b4696aa73a6",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
-    },
-    {
-      "id": "d7789ab746cb00eabd",
-      "title": "Hainan seeks major guarantee increases",
-      "summary_zh": "根据公开标题与元数据：Hainan seeks major guarantee increases",
-      "why_it_matters_zh": "需要关注承租人信用、现金流、机队调整及潜在租约风险。",
-      "category": "Airlines & Credit",
-      "importance_score": 75,
-      "region": "Global/Unspecified",
-      "entities": [],
-      "published_at": "2026-09-14T08:10:55Z",
-      "updated_at": "2026-09-14T09:38:27Z",
-      "primary_source": "Ishka Airfinance",
-      "primary_url": "https://platform.ishkaairfinance.com/Articles/3601113",
-      "source_count": 1,
-      "sources": [
-        {
-          "name": "Ishka Airfinance",
-          "url": "https://platform.ishkaairfinance.com/Articles/3601113",
-          "published_at": "2026-09-14T08:10:55Z",
-          "source_channel": "ishka_latest_rss",
-          "discovered_via": "direct"
-        }
-      ],
-      "raw_ids": [
-        "ffdf051343ffabb07687bfc1"
-      ],
-      "analysis_mode": "fallback_after_ai_error",
-      "priority_matches": [],
-      "macro_tags": [],
-      "aircraft_tags": [],
-      "critical": false,
-      "critical_reason_zh": "",
-      "score_components": {
-        "market_materiality": 54,
-        "lessor_relevance": 78,
-        "macro_relevance": 30,
-        "source_quality": 98,
-        "recency": 98,
-        "multi_source": 55,
-        "weighted_base": 75,
-        "bonuses": 0,
-        "applied_floor": null,
-        "priority_entity": false,
-        "priority_material_event": false,
-        "macro_related": false,
-        "systemic_macro": false,
-        "severe_event": false,
-        "direct_lessor_event": false
-      },
-      "step3_ai_mode": "fallback_rules",
-      "analysis_fingerprint": "b08f9fc7be1e710db3dc",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "141d043f0c1ab5a3fc",
@@ -9020,7 +8847,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "9e2d900c7dd58d30dd89",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "13453addae2792c12d",
@@ -9076,7 +8903,113 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "7be8eadca14c6cc50f8b",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
+    },
+    {
+      "id": "7e3951aac3cd5d9e7a",
+      "title": "Air Transat swings to EBITDA loss",
+      "summary_zh": "根据公开标题与元数据：Air Transat swings to EBITDA loss",
+      "why_it_matters_zh": "需要关注承租人信用、现金流、机队调整及潜在租约风险。",
+      "category": "Airlines & Credit",
+      "importance_score": 74,
+      "region": "Global/Unspecified",
+      "entities": [],
+      "published_at": "2026-09-14T08:19:55Z",
+      "updated_at": "2026-09-14T09:38:27Z",
+      "primary_source": "Ishka Airfinance",
+      "primary_url": "https://platform.ishkaairfinance.com/Articles/3601117",
+      "source_count": 1,
+      "sources": [
+        {
+          "name": "Ishka Airfinance",
+          "url": "https://platform.ishkaairfinance.com/Articles/3601117",
+          "published_at": "2026-09-14T08:19:55Z",
+          "source_channel": "ishka_latest_rss",
+          "discovered_via": "direct"
+        }
+      ],
+      "raw_ids": [
+        "224aa63037f8941403bc912e"
+      ],
+      "analysis_mode": "fallback_after_ai_error",
+      "priority_matches": [],
+      "macro_tags": [],
+      "aircraft_tags": [],
+      "critical": false,
+      "critical_reason_zh": "",
+      "score_components": {
+        "market_materiality": 54,
+        "lessor_relevance": 78,
+        "macro_relevance": 30,
+        "source_quality": 98,
+        "recency": 97,
+        "multi_source": 55,
+        "weighted_base": 74,
+        "bonuses": 0,
+        "applied_floor": null,
+        "priority_entity": false,
+        "priority_material_event": false,
+        "macro_related": false,
+        "systemic_macro": false,
+        "severe_event": false,
+        "direct_lessor_event": false
+      },
+      "step3_ai_mode": "fallback_rules",
+      "analysis_fingerprint": "cdf883978b4696aa73a6",
+      "step3_updated_at": "2026-09-14T16:28:36Z"
+    },
+    {
+      "id": "d7789ab746cb00eabd",
+      "title": "Hainan seeks major guarantee increases",
+      "summary_zh": "根据公开标题与元数据：Hainan seeks major guarantee increases",
+      "why_it_matters_zh": "需要关注承租人信用、现金流、机队调整及潜在租约风险。",
+      "category": "Airlines & Credit",
+      "importance_score": 74,
+      "region": "Global/Unspecified",
+      "entities": [],
+      "published_at": "2026-09-14T08:10:55Z",
+      "updated_at": "2026-09-14T09:38:27Z",
+      "primary_source": "Ishka Airfinance",
+      "primary_url": "https://platform.ishkaairfinance.com/Articles/3601113",
+      "source_count": 1,
+      "sources": [
+        {
+          "name": "Ishka Airfinance",
+          "url": "https://platform.ishkaairfinance.com/Articles/3601113",
+          "published_at": "2026-09-14T08:10:55Z",
+          "source_channel": "ishka_latest_rss",
+          "discovered_via": "direct"
+        }
+      ],
+      "raw_ids": [
+        "ffdf051343ffabb07687bfc1"
+      ],
+      "analysis_mode": "fallback_after_ai_error",
+      "priority_matches": [],
+      "macro_tags": [],
+      "aircraft_tags": [],
+      "critical": false,
+      "critical_reason_zh": "",
+      "score_components": {
+        "market_materiality": 54,
+        "lessor_relevance": 78,
+        "macro_relevance": 30,
+        "source_quality": 98,
+        "recency": 97,
+        "multi_source": 55,
+        "weighted_base": 74,
+        "bonuses": 0,
+        "applied_floor": null,
+        "priority_entity": false,
+        "priority_material_event": false,
+        "macro_related": false,
+        "systemic_macro": false,
+        "severe_event": false,
+        "direct_lessor_event": false
+      },
+      "step3_ai_mode": "fallback_rules",
+      "analysis_fingerprint": "b08f9fc7be1e710db3dc",
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "c537f8228834e0dd0e",
@@ -9117,7 +9050,7 @@
         "lessor_relevance": 91,
         "macro_relevance": 30,
         "source_quality": 65,
-        "recency": 70,
+        "recency": 69,
         "multi_source": 55,
         "weighted_base": 67,
         "bonuses": 7,
@@ -9131,7 +9064,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "7206861b7f1f34fc048a",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "f3bd16c479b983c2ca",
@@ -9184,7 +9117,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "59563335c2de721fa07b",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "851f315cb961f1411c",
@@ -9223,7 +9156,7 @@
         "lessor_relevance": 91,
         "macro_relevance": 30,
         "source_quality": 65,
-        "recency": 58,
+        "recency": 57,
         "multi_source": 55,
         "weighted_base": 67,
         "bonuses": 7,
@@ -9237,7 +9170,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "1d47212bbde47cf6bbc3",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "1c42dcf9c1c6c904b6",
@@ -9290,7 +9223,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "8516ff8f8f02b4a5c481",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "7fb22ad58dc8fb896a",
@@ -9343,7 +9276,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "f96b7cb8f84a9d3ed42b",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "94386c5abc85090b2f",
@@ -9396,7 +9329,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "4a741001a6f0d0f79e81",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "7d4e7fc02fb7f0f323",
@@ -9449,7 +9382,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "e4ec2468064d44cf965a",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "11c95125e4da3f4d79",
@@ -9502,7 +9435,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "5a49879d42a717ed1d13",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "e9bf2649d7814203c7",
@@ -9559,60 +9492,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "6b1f44ed0bf28d9792f2",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
-    },
-    {
-      "id": "8bcb6374172f3ab66c",
-      "title": "Pegasus wins Czech approval for €154m ($179m) Smartwings acquisition",
-      "summary_zh": "根据公开标题与元数据：Pegasus wins Czech approval for €154m ($179m) Smartwings acquisition",
-      "why_it_matters_zh": "需要关注承租人信用、现金流、机队调整及潜在租约风险。",
-      "category": "Airlines & Credit",
-      "importance_score": 72,
-      "region": "Europe",
-      "entities": [],
-      "published_at": "2026-09-11T00:00:00Z",
-      "updated_at": "2026-09-14T09:38:27Z",
-      "primary_source": "Aviation News Online",
-      "primary_url": "https://www.aviationnews-online.com/article/pegasus-wins-czech-approval-for-eur154m-179m-smartwings-acquisition",
-      "source_count": 1,
-      "sources": [
-        {
-          "name": "Aviation News Online",
-          "url": "https://www.aviationnews-online.com/article/pegasus-wins-czech-approval-for-eur154m-179m-smartwings-acquisition",
-          "published_at": "2026-09-11T00:00:00Z",
-          "source_channel": "aviationnews_finance",
-          "discovered_via": "direct"
-        }
-      ],
-      "raw_ids": [
-        "c70845a3b4db0fefb44977b9"
-      ],
-      "analysis_mode": "fallback_after_ai_error",
-      "priority_matches": [],
-      "macro_tags": [],
-      "aircraft_tags": [],
-      "critical": false,
-      "critical_reason_zh": "",
-      "score_components": {
-        "market_materiality": 57,
-        "lessor_relevance": 78,
-        "macro_relevance": 30,
-        "source_quality": 92,
-        "recency": 73,
-        "multi_source": 55,
-        "weighted_base": 72,
-        "bonuses": 0,
-        "applied_floor": null,
-        "priority_entity": false,
-        "priority_material_event": false,
-        "macro_related": false,
-        "systemic_macro": false,
-        "severe_event": false,
-        "direct_lessor_event": false
-      },
-      "step3_ai_mode": "fallback_rules",
-      "analysis_fingerprint": "318f81d6c4bd5265b863",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "686cba6616a7c16cd7",
@@ -9651,7 +9531,7 @@
         "lessor_relevance": 78,
         "macro_relevance": 30,
         "source_quality": 100,
-        "recency": 69,
+        "recency": 68,
         "multi_source": 55,
         "weighted_base": 72,
         "bonuses": 0,
@@ -9665,7 +9545,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "57e9c3c534b56b385bd0",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "85783d22f064f7fbcf",
@@ -9722,7 +9602,60 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "3fc1d966f4a3c2f4275f",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
+    },
+    {
+      "id": "8bcb6374172f3ab66c",
+      "title": "Pegasus wins Czech approval for €154m ($179m) Smartwings acquisition",
+      "summary_zh": "根据公开标题与元数据：Pegasus wins Czech approval for €154m ($179m) Smartwings acquisition",
+      "why_it_matters_zh": "需要关注承租人信用、现金流、机队调整及潜在租约风险。",
+      "category": "Airlines & Credit",
+      "importance_score": 71,
+      "region": "Europe",
+      "entities": [],
+      "published_at": "2026-09-11T00:00:00Z",
+      "updated_at": "2026-09-14T09:38:27Z",
+      "primary_source": "Aviation News Online",
+      "primary_url": "https://www.aviationnews-online.com/article/pegasus-wins-czech-approval-for-eur154m-179m-smartwings-acquisition",
+      "source_count": 1,
+      "sources": [
+        {
+          "name": "Aviation News Online",
+          "url": "https://www.aviationnews-online.com/article/pegasus-wins-czech-approval-for-eur154m-179m-smartwings-acquisition",
+          "published_at": "2026-09-11T00:00:00Z",
+          "source_channel": "aviationnews_finance",
+          "discovered_via": "direct"
+        }
+      ],
+      "raw_ids": [
+        "c70845a3b4db0fefb44977b9"
+      ],
+      "analysis_mode": "fallback_after_ai_error",
+      "priority_matches": [],
+      "macro_tags": [],
+      "aircraft_tags": [],
+      "critical": false,
+      "critical_reason_zh": "",
+      "score_components": {
+        "market_materiality": 57,
+        "lessor_relevance": 78,
+        "macro_relevance": 30,
+        "source_quality": 92,
+        "recency": 72,
+        "multi_source": 55,
+        "weighted_base": 71,
+        "bonuses": 0,
+        "applied_floor": null,
+        "priority_entity": false,
+        "priority_material_event": false,
+        "macro_related": false,
+        "systemic_macro": false,
+        "severe_event": false,
+        "direct_lessor_event": false
+      },
+      "step3_ai_mode": "fallback_rules",
+      "analysis_fingerprint": "318f81d6c4bd5265b863",
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "71951ee0f195c43cb9",
@@ -9730,7 +9663,7 @@
       "summary_zh": "根据公开标题与元数据：Sabrina Valle",
       "why_it_matters_zh": "需要关注承租人信用、现金流、机队调整及潜在租约风险。",
       "category": "Airlines & Credit",
-      "importance_score": 72,
+      "importance_score": 71,
       "region": "Global/Unspecified",
       "entities": [],
       "published_at": "2026-09-10T07:56:00Z",
@@ -9761,9 +9694,9 @@
         "lessor_relevance": 78,
         "macro_relevance": 30,
         "source_quality": 100,
-        "recency": 68,
+        "recency": 67,
         "multi_source": 55,
-        "weighted_base": 72,
+        "weighted_base": 71,
         "bonuses": 0,
         "applied_floor": null,
         "priority_entity": false,
@@ -9775,64 +9708,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "cb18ab1368df8ce6c4c0",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
-    },
-    {
-      "id": "c633c9f05fa65dec83",
-      "title": "AFG buys another A321neo",
-      "summary_zh": "根据公开标题与元数据：AFG buys another A321neo",
-      "why_it_matters_zh": "可能改变新机供给、交付节奏、存量飞机稀缺性与资产价值。",
-      "category": "Aircraft & OEM",
-      "importance_score": 72,
-      "region": "Global/Unspecified",
-      "entities": [
-        "A321neo"
-      ],
-      "published_at": "2026-09-09T13:02:51Z",
-      "updated_at": "2026-09-14T09:38:27Z",
-      "primary_source": "Ishka Airfinance",
-      "primary_url": "https://platform.ishkaairfinance.com/Articles/3601093",
-      "source_count": 1,
-      "sources": [
-        {
-          "name": "Ishka Airfinance",
-          "url": "https://platform.ishkaairfinance.com/Articles/3601093",
-          "published_at": "2026-09-09T13:02:51Z",
-          "source_channel": "ishka_lessors_rss",
-          "discovered_via": "direct"
-        }
-      ],
-      "raw_ids": [
-        "24602e5c07a6de1e84f1c42e"
-      ],
-      "analysis_mode": "fallback_after_ai_error",
-      "priority_matches": [],
-      "macro_tags": [],
-      "aircraft_tags": [
-        "A321NEO"
-      ],
-      "critical": false,
-      "critical_reason_zh": "",
-      "score_components": {
-        "market_materiality": 54,
-        "lessor_relevance": 82,
-        "macro_relevance": 30,
-        "source_quality": 98,
-        "recency": 62,
-        "multi_source": 55,
-        "weighted_base": 72,
-        "bonuses": 0,
-        "applied_floor": null,
-        "priority_entity": false,
-        "priority_material_event": false,
-        "macro_related": false,
-        "systemic_macro": false,
-        "severe_event": false,
-        "direct_lessor_event": false
-      },
-      "step3_ai_mode": "fallback_rules",
-      "analysis_fingerprint": "6be9a45d2afb8784c27f",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "bc571c03657a177eb4",
@@ -9885,7 +9761,64 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "9aced83963f7a36a1c5a",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
+    },
+    {
+      "id": "c633c9f05fa65dec83",
+      "title": "AFG buys another A321neo",
+      "summary_zh": "根据公开标题与元数据：AFG buys another A321neo",
+      "why_it_matters_zh": "可能改变新机供给、交付节奏、存量飞机稀缺性与资产价值。",
+      "category": "Aircraft & OEM",
+      "importance_score": 71,
+      "region": "Global/Unspecified",
+      "entities": [
+        "A321neo"
+      ],
+      "published_at": "2026-09-09T13:02:51Z",
+      "updated_at": "2026-09-14T09:38:27Z",
+      "primary_source": "Ishka Airfinance",
+      "primary_url": "https://platform.ishkaairfinance.com/Articles/3601093",
+      "source_count": 1,
+      "sources": [
+        {
+          "name": "Ishka Airfinance",
+          "url": "https://platform.ishkaairfinance.com/Articles/3601093",
+          "published_at": "2026-09-09T13:02:51Z",
+          "source_channel": "ishka_lessors_rss",
+          "discovered_via": "direct"
+        }
+      ],
+      "raw_ids": [
+        "24602e5c07a6de1e84f1c42e"
+      ],
+      "analysis_mode": "fallback_after_ai_error",
+      "priority_matches": [],
+      "macro_tags": [],
+      "aircraft_tags": [
+        "A321NEO"
+      ],
+      "critical": false,
+      "critical_reason_zh": "",
+      "score_components": {
+        "market_materiality": 54,
+        "lessor_relevance": 82,
+        "macro_relevance": 30,
+        "source_quality": 98,
+        "recency": 61,
+        "multi_source": 55,
+        "weighted_base": 71,
+        "bonuses": 0,
+        "applied_floor": null,
+        "priority_entity": false,
+        "priority_material_event": false,
+        "macro_related": false,
+        "systemic_macro": false,
+        "severe_event": false,
+        "direct_lessor_event": false
+      },
+      "step3_ai_mode": "fallback_rules",
+      "analysis_fingerprint": "6be9a45d2afb8784c27f",
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "8a057d3bb6ea84a743",
@@ -9926,7 +9859,7 @@
         "lessor_relevance": 86,
         "macro_relevance": 30,
         "source_quality": 92,
-        "recency": 58,
+        "recency": 57,
         "multi_source": 55,
         "weighted_base": 71,
         "bonuses": 0,
@@ -9940,7 +9873,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "75174fcbc3da02b897a0",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "f4bb4105c392afa60f",
@@ -9979,7 +9912,7 @@
         "lessor_relevance": 78,
         "macro_relevance": 30,
         "source_quality": 92,
-        "recency": 73,
+        "recency": 72,
         "multi_source": 55,
         "weighted_base": 70,
         "bonuses": 0,
@@ -9993,7 +9926,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "41df7b5a4a18c63ec46d",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "09d2ac87aac31f49f8",
@@ -10032,7 +9965,7 @@
         "lessor_relevance": 78,
         "macro_relevance": 30,
         "source_quality": 92,
-        "recency": 73,
+        "recency": 72,
         "multi_source": 55,
         "weighted_base": 70,
         "bonuses": 0,
@@ -10046,7 +9979,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "df6e6aa80068e8014cf3",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "43f146b861e37c8d8f",
@@ -10090,7 +10023,7 @@
         "lessor_relevance": 78,
         "macro_relevance": 30,
         "source_quality": 92,
-        "recency": 73,
+        "recency": 72,
         "multi_source": 55,
         "weighted_base": 70,
         "bonuses": 0,
@@ -10104,7 +10037,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "a2a0fe65622e55e89d35",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "f353a2526e5c29ef18",
@@ -10143,7 +10076,7 @@
         "lessor_relevance": 78,
         "macro_relevance": 30,
         "source_quality": 92,
-        "recency": 73,
+        "recency": 72,
         "multi_source": 55,
         "weighted_base": 70,
         "bonuses": 0,
@@ -10157,7 +10090,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "d20a770091271f279944",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "ece2b3b95989e40b03",
@@ -10196,7 +10129,7 @@
         "lessor_relevance": 78,
         "macro_relevance": 30,
         "source_quality": 92,
-        "recency": 73,
+        "recency": 72,
         "multi_source": 55,
         "weighted_base": 70,
         "bonuses": 0,
@@ -10210,7 +10143,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "8820073553bcc0292590",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "ad786acf4d57cec715",
@@ -10249,7 +10182,7 @@
         "lessor_relevance": 78,
         "macro_relevance": 30,
         "source_quality": 92,
-        "recency": 73,
+        "recency": 72,
         "multi_source": 55,
         "weighted_base": 70,
         "bonuses": 0,
@@ -10263,7 +10196,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "4aaf3094403f9f5c0100",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "cefbc3edfe0ba47290",
@@ -10302,7 +10235,7 @@
         "lessor_relevance": 84,
         "macro_relevance": 30,
         "source_quality": 92,
-        "recency": 58,
+        "recency": 57,
         "multi_source": 55,
         "weighted_base": 70,
         "bonuses": 0,
@@ -10316,7 +10249,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "8740afe80867344b46eb",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "07784ea0dd7c4af190",
@@ -10373,7 +10306,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "48e612923552a5750bd1",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "2a6b3e32b56c1814d8",
@@ -10426,7 +10359,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "dfbef71a68d9f38c18ac",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "9e850a9243ff88b362",
@@ -10479,7 +10412,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "81fec99ceec7cda649d4",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "0318ccf5b7a0691ce4",
@@ -10532,7 +10465,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "dc5d70d6199ea3170c7e",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "7bfe03676c2775cbf1",
@@ -10585,7 +10518,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "d14409714dbbc898de7b",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "a9e83021f5e5505c5b",
@@ -10627,7 +10560,7 @@
         "lessor_relevance": 82,
         "macro_relevance": 30,
         "source_quality": 65,
-        "recency": 97,
+        "recency": 96,
         "multi_source": 55,
         "weighted_base": 68,
         "bonuses": 0,
@@ -10641,7 +10574,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "e2b882da4d575223ff1a",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "6a8299cd9f0530fe01",
@@ -10696,7 +10629,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "9e65fcfe50bfd1ba43cb",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "02e1c7a7c72b94deb0",
@@ -10735,7 +10668,7 @@
         "lessor_relevance": 78,
         "macro_relevance": 30,
         "source_quality": 92,
-        "recency": 58,
+        "recency": 57,
         "multi_source": 55,
         "weighted_base": 68,
         "bonuses": 0,
@@ -10749,7 +10682,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "e36fd849cb17f2c93bd0",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "1faed0e2ed472014b6",
@@ -10788,7 +10721,7 @@
         "lessor_relevance": 78,
         "macro_relevance": 30,
         "source_quality": 92,
-        "recency": 58,
+        "recency": 57,
         "multi_source": 55,
         "weighted_base": 68,
         "bonuses": 0,
@@ -10802,7 +10735,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "c017ec4df81cbcab8a8c",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "f139d72a95ed5ce066",
@@ -10841,7 +10774,7 @@
         "lessor_relevance": 78,
         "macro_relevance": 30,
         "source_quality": 92,
-        "recency": 58,
+        "recency": 57,
         "multi_source": 55,
         "weighted_base": 68,
         "bonuses": 0,
@@ -10855,7 +10788,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "fa4f1ea010bd7d26f1c5",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "895604743466da6576",
@@ -10894,7 +10827,7 @@
         "lessor_relevance": 78,
         "macro_relevance": 30,
         "source_quality": 92,
-        "recency": 58,
+        "recency": 57,
         "multi_source": 55,
         "weighted_base": 68,
         "bonuses": 0,
@@ -10908,7 +10841,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "c91dca54d7148c44cada",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "db7c09b7db7077f803",
@@ -10947,7 +10880,7 @@
         "lessor_relevance": 78,
         "macro_relevance": 30,
         "source_quality": 92,
-        "recency": 58,
+        "recency": 57,
         "multi_source": 55,
         "weighted_base": 68,
         "bonuses": 0,
@@ -10961,7 +10894,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "a50e782c12755cfbeab0",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "2bbef34fa69c1dceed",
@@ -11000,7 +10933,7 @@
         "lessor_relevance": 78,
         "macro_relevance": 30,
         "source_quality": 92,
-        "recency": 58,
+        "recency": 57,
         "multi_source": 55,
         "weighted_base": 68,
         "bonuses": 0,
@@ -11014,7 +10947,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "d6cac256b6ecd7af3e34",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "9a13569ba09cf8c30c",
@@ -11053,7 +10986,7 @@
         "lessor_relevance": 78,
         "macro_relevance": 30,
         "source_quality": 92,
-        "recency": 58,
+        "recency": 57,
         "multi_source": 55,
         "weighted_base": 68,
         "bonuses": 0,
@@ -11067,7 +11000,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "e1e5e6fb5b385843d839",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "6ba752738d3d84cbd1",
@@ -11106,7 +11039,7 @@
         "lessor_relevance": 78,
         "macro_relevance": 30,
         "source_quality": 92,
-        "recency": 58,
+        "recency": 57,
         "multi_source": 55,
         "weighted_base": 68,
         "bonuses": 0,
@@ -11120,7 +11053,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "58361a7dcc0097b4245f",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "ccd4596744d38e4561",
@@ -11159,7 +11092,7 @@
         "lessor_relevance": 78,
         "macro_relevance": 30,
         "source_quality": 92,
-        "recency": 58,
+        "recency": 57,
         "multi_source": 55,
         "weighted_base": 68,
         "bonuses": 0,
@@ -11173,7 +11106,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "2064c456496c4c3b083d",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "fb68106020fa9a1e90",
@@ -11212,7 +11145,7 @@
         "lessor_relevance": 78,
         "macro_relevance": 30,
         "source_quality": 92,
-        "recency": 58,
+        "recency": 57,
         "multi_source": 55,
         "weighted_base": 68,
         "bonuses": 0,
@@ -11226,7 +11159,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "b10f00a90daeb40070cc",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "7c786b3840e91e0157",
@@ -11279,7 +11212,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "2c01abe8d7ba71e41c47",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "9918ce3fd5cf79dcfc",
@@ -11332,7 +11265,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "2b8e9b9fd5ef84ca0a84",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "72da579ca45dbb48ed",
@@ -11385,7 +11318,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "1dd5d6a69169d012234f",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "174433dd638ca32024",
@@ -11438,7 +11371,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "25b8167b8df37ea3ad6b",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "fbe147bd1a8411c3d7",
@@ -11491,7 +11424,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "e632ed08fcc3bc8af0ff",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "7625f4685c2d36beba",
@@ -11544,7 +11477,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "eb743c47a5f1269f0865",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "301b420d31dc8660ab",
@@ -11597,7 +11530,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "0f9978976ce165857b5d",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "7b0ae7de71a3f81562",
@@ -11652,7 +11585,7 @@
       },
       "step3_ai_mode": "deepseek",
       "analysis_fingerprint": "95b77e0accd5ecb1cb14",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "a2bed7389bad212910",
@@ -11705,7 +11638,7 @@
       },
       "step3_ai_mode": "fallback_rules",
       "analysis_fingerprint": "692af00f3f3565a0ee37",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "b99ec50957a2e86e4f",
@@ -11766,7 +11699,7 @@
       },
       "step3_ai_mode": "deepseek",
       "analysis_fingerprint": "f09e8566c7dc79a5aca1",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "17ee3f2ab020e19361",
@@ -11807,7 +11740,7 @@
         "lessor_relevance": 5,
         "macro_relevance": 20,
         "source_quality": 100,
-        "recency": 77,
+        "recency": 76,
         "multi_source": 55,
         "weighted_base": 35,
         "bonuses": 0,
@@ -11821,7 +11754,7 @@
       },
       "step3_ai_mode": "deepseek",
       "analysis_fingerprint": "699f7a0662f0d827d778",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     },
     {
       "id": "fdee33781258d3b007",
@@ -11878,7 +11811,7 @@
       },
       "step3_ai_mode": "deepseek",
       "analysis_fingerprint": "59c45108936711e49538",
-      "step3_updated_at": "2026-09-14T15:34:58Z"
+      "step3_updated_at": "2026-09-14T16:28:36Z"
     }
   ]
 }
