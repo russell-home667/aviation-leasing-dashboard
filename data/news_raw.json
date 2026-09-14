@@ -1,19 +1,21 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-14T10:28:13Z",
+  "generated_at": "2026-09-14T11:28:29Z",
   "retention_days": 120,
   "metadata_only": true,
   "stats": {
-    "current_batch_unique": 558,
-    "stored_total": 1267,
-    "reuters_discovered_via_bing": 31,
+    "current_batch_unique": 540,
+    "stored_total": 1272,
+    "reuters_discovered_via_bing": 32,
     "by_source": {
       "ADS Advance": 1,
       "AFPBB News": 1,
       "AOL": 2,
       "AeroTime": 3,
       "Aerospace and Mechanical Insider on MSN": 1,
-      "Aviation News Online": 992,
+      "Airline Ratings": 1,
+      "Airways": 1,
+      "Aviation News Online": 993,
       "Aviation Week": 2,
       "Aviation Week Network": 1,
       "Aviation24.be": 1,
@@ -44,7 +46,7 @@
       "Live Mint on MSN": 1,
       "MSN": 9,
       "Mint": 1,
-      "Mint on MSN": 1,
+      "Mint on MSN": 2,
       "Moneycontrol": 2,
       "Morningstar%2c Inc.": 8,
       "NHK": 1,
@@ -53,7 +55,7 @@
       "PE Hub": 1,
       "Pensacola News Journal": 1,
       "Republic World": 1,
-      "Reuters": 31,
+      "Reuters": 32,
       "Seeking Alpha": 3,
       "Simple Flying on MSN": 1,
       "The Daily Star": 1,
@@ -71,7 +73,7 @@
       "القاهرة 24": 1
     },
     "by_channel": {
-      "aviationnews_airline": 329,
+      "aviationnews_airline": 330,
       "aviationnews_engine": 78,
       "aviationnews_finance": 124,
       "aviationnews_leasing": 144,
@@ -79,7 +81,7 @@
       "aviationnews_maintenance": 116,
       "aviationnews_people": 92,
       "aviationnews_regulatory": 80,
-      "bing_news_rss": 123,
+      "bing_news_rss": 126,
       "ishka_africa_rss": 9,
       "ishka_aircraft_rss": 10,
       "ishka_airlines_rss": 6,
@@ -97,7 +99,7 @@
       "ishka_oceania_rss": 9,
       "ishka_south_asia_rss": 9,
       "ishka_southeast_asia_rss": 5,
-      "reuters_via_bing": 31
+      "reuters_via_bing": 32
     }
   },
   "items": [
@@ -232,6 +234,23 @@
       "rights_mode": "official_rss_metadata",
       "fetched_at": "2026-09-14T08:26:35Z",
       "id": "ad6991a8e1c3ce0a9989272d"
+    },
+    {
+      "title": "What to know about airBaltic as Latvia's flag carrier files for Chapter 11",
+      "source": "Reuters",
+      "source_channel": "reuters_via_bing",
+      "published_at": "2026-09-14T03:48:00Z",
+      "published_date": "2026-09-14",
+      "url": "https://www.reuters.com/business/what-know-about-airbaltic-latvias-flag-carrier-files-chapter-11-2026-09-14/",
+      "summary": "Latvia's airBaltic said on Monday it had voluntarily filed for Chapter 11 bankruptcy in the U.S. as it seeks to cut its mounting debt and survive a sector-wide crisis brought on by the Iran war.",
+      "author": "",
+      "categories_raw": [],
+      "region_raw": "",
+      "discovered_via": "Bing News",
+      "discovery_query": "site:reuters.com airline bankruptcy aircraft",
+      "rights_mode": "search_result_metadata",
+      "fetched_at": "2026-09-14T11:31:30Z",
+      "id": "3d851b641c850ae83dac64ff"
     },
     {
       "title": "AirBaltic files for Chapter 11 bankruptcy as Iran war costs bite",
@@ -550,6 +569,26 @@
       "id": "3e545c112e8dbaeb109f4c31"
     },
     {
+      "title": "Drukair selects LEAP-1A engines for five Airbus aircraft",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_airline",
+      "published_at": "2026-09-14T00:00:00Z",
+      "published_date": "2026-09-14",
+      "url": "https://www.aviationnews-online.com/article/drukair-selects-leap-1a-engines-for-five-airbus-aircraft",
+      "summary": "Drukair, Royal Bhutan Airlines, has selected CFM International’s LEAP-1A engines to power five Airbus A320neo family aircraft comprising three A320neos and two A321XLRs.The aircraft were originally an...",
+      "author": "Justin Pugsley",
+      "categories_raw": [
+        "Airline",
+        "Engine"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T11:31:13Z",
+      "id": "a03ce88ee1ac5b06fb4ff6b9"
+    },
+    {
       "title": "China tightens airline overbooking rules across 10 carriers and five platforms",
       "source": "Aviation News Online",
       "source_channel": "aviationnews_airline",
@@ -775,6 +814,23 @@
       "rights_mode": "search_result_metadata",
       "fetched_at": "2026-09-14T08:27:19Z",
       "id": "1bf167360bc2af042c64f68f"
+    },
+    {
+      "title": "GIFT City eyes bigger slice of aircraft leasing business",
+      "source": "Mint on MSN",
+      "source_channel": "bing_news_rss",
+      "published_at": "2026-09-11T18:31:13Z",
+      "published_date": "2026-09-11",
+      "url": "https://www.msn.com/en-in/money/investment/gift-city-eyes-bigger-slice-of-aircraft-leasing-business/ar-AA2c3q6q",
+      "summary": "India has a large aircraft-leasing opportunity, but much of the financing and leasing sits offshore. GIFT City wants to capture that value, says CEO Sanjay Kaul ...",
+      "author": "",
+      "categories_raw": [],
+      "region_raw": "",
+      "discovered_via": "Bing News",
+      "discovery_query": "\"aircraft leasing\"",
+      "rights_mode": "search_result_metadata",
+      "fetched_at": "2026-09-14T11:31:22Z",
+      "id": "eb2ec973ff59acebdaea6971"
     },
     {
       "title": "GIFT City eyes bigger slice of aircraft leasing business",
@@ -3882,6 +3938,23 @@
       "id": "edbe4f6a52c55e10e24f49ef"
     },
     {
+      "title": "Miami Prime Air crash: Its service history spans three continents and seven operators, could this be a factor?",
+      "source": "Airline Ratings",
+      "source_channel": "bing_news_rss",
+      "published_at": "2026-09-07T17:00:00Z",
+      "published_date": "2026-09-07",
+      "url": "https://www.airlineratings.com/articles/miami-prime-air-crash-its-service-history-spans-three-continents-and-seven-operators-could-this-be-a-factor",
+      "summary": "Five dead after a Prime Air 767 overran the runway at Miami. We trace the 1994 airframe through seven operators and lay out what the NTSB is examining.",
+      "author": "",
+      "categories_raw": [],
+      "region_raw": "",
+      "discovered_via": "Bing News",
+      "discovery_query": "\"Air Lease\" aircraft",
+      "rights_mode": "search_result_metadata",
+      "fetched_at": "2026-09-14T11:31:26Z",
+      "id": "9460ac833b9cf65329bfb07d"
+    },
+    {
       "title": "Easyjet PLC",
       "source": "Reuters",
       "source_channel": "reuters_via_bing",
@@ -4482,6 +4555,23 @@
       "rights_mode": "search_result_metadata",
       "fetched_at": "2026-09-14T08:33:21Z",
       "id": "1d8aa5e1409aff938e7a01a9"
+    },
+    {
+      "title": "Northern Air Cargo Adds Second Boeing 737-800SF in Retro Livery",
+      "source": "Airways",
+      "source_channel": "bing_news_rss",
+      "published_at": "2026-09-05T08:30:00Z",
+      "published_date": "2026-09-05",
+      "url": "https://www.airwaysmag.com/new-post/northern-air-cargo-second-boeing-737-800sf-retro-livery",
+      "summary": "NAC's September 4 announcement calls the paint retro without tying it to a specific historic scheme. Northern Air Cargo says it began in 1956 with two Fairchild C-82 Flying Boxcars, added its first ...",
+      "author": "",
+      "categories_raw": [],
+      "region_raw": "",
+      "discovered_via": "Bing News",
+      "discovery_query": "\"Air Lease\" aircraft",
+      "rights_mode": "search_result_metadata",
+      "fetched_at": "2026-09-14T11:31:26Z",
+      "id": "903cc5fad151671cc9e5db95"
     },
     {
       "title": "Rebranded Trinity Airways takes ACG 737 Max 8",

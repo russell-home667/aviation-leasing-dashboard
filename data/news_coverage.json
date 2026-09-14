@@ -1,16 +1,18 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-09-14T10:28:35Z",
-  "overall_status": "pass",
+  "checked_at": "2026-09-14T11:31:31Z",
+  "overall_status": "fail",
   "hard_requirements": {
     "ishka_all_direct_feeds_return_records": true,
-    "aviation_news_online_all_direct_categories_return_records": true,
+    "aviation_news_online_all_direct_categories_return_records": false,
     "bing_transport_success_at_least_90pct": true,
     "known_ishka_baseline_recall_100pct": true,
     "reuters_discovery_present": true,
     "flightglobal_discovery_present": true
   },
-  "failed_requirements": [],
+  "failed_requirements": [
+    "aviation_news_online_all_direct_categories_return_records"
+  ],
   "warnings": [],
   "known_ishka_recall": {
     "hits": 10,
@@ -105,7 +107,7 @@
       "total": 17
     },
     "aviation_news_online_direct_checks": {
-      "ok": 8,
+      "ok": 6,
       "total": 8
     },
     "bing_discovery_checks": {
@@ -115,15 +117,15 @@
     },
     "stored_source_counts": {
       "Ishka Airfinance": 121,
-      "Aviation News Online": 992,
-      "Reuters": 31,
+      "Aviation News Online": 993,
+      "Reuters": 32,
       "Flightglobal": 20
     },
     "newest_record_age_days": {
-      "Ishka Airfinance": 0.09,
-      "Aviation News Online": 0.44,
-      "Reuters": 0.31,
-      "Flightglobal": 6.1
+      "Ishka Airfinance": 0.13,
+      "Aviation News Online": 0.48,
+      "Reuters": 0.32,
+      "Flightglobal": 6.14
     }
   }
 }

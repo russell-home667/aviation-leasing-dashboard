@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-14T10:28:35Z",
+  "generated_at": "2026-09-14T11:31:31Z",
   "model": "deepseek-flash",
   "analysis_mode": "deepseek",
   "categories": [
@@ -15,21 +15,21 @@
   ],
   "stats": {
     "archive_retention_days": 120,
-    "raw_pool_total": 1267,
-    "recent_raw_items": 203,
-    "already_processed_raw_items": 196,
-    "new_raw_items": 7,
-    "new_preclusters": 7,
+    "raw_pool_total": 1272,
+    "recent_raw_items": 207,
+    "already_processed_raw_items": 203,
+    "new_raw_items": 4,
+    "new_preclusters": 4,
     "deepseek_calls": 1,
     "deepseek_failed_batches": 0,
     "deepseek_errors": [],
-    "clusters_submitted": 7,
-    "clusters_retained_or_accounted": 7,
-    "stories": 192,
+    "clusters_submitted": 4,
+    "clusters_retained_or_accounted": 3,
+    "stories": 193,
     "by_category": {
       "Aircraft & OEM": 35,
       "Airlines & Credit": 77,
-      "Engines & MRO": 13,
+      "Engines & MRO": 14,
       "Financing & Capital Markets": 17,
       "Leasing & Trading": 36,
       "Legal & Regulatory": 6,
@@ -40,7 +40,7 @@
       "ADS Advance": 1,
       "AeroTime": 2,
       "Aerospace and Mechanical Insider on MSN": 1,
-      "Aviation News Online": 110,
+      "Aviation News Online": 111,
       "Aviation24.be": 1,
       "Bizcommunity on MSN": 2,
       "Bloomberg": 1,
@@ -53,9 +53,9 @@
       "Irish Examiner on MSN": 1,
       "Ishka Airfinance": 42,
       "Mint": 1,
-      "Mint on MSN": 1,
+      "Mint on MSN": 2,
       "NHK": 1,
-      "Reuters": 17,
+      "Reuters": 18,
       "Seeking Alpha": 1,
       "Simple Flying on MSN": 1,
       "The Daily Star": 1,
@@ -239,22 +239,30 @@
       "analysis_mode": "fallback_after_ai_error"
     },
     {
-      "id": "dd1596517fcfd76c83",
-      "title": "AirBaltic files for Chapter 11 bankruptcy as Iran war costs bite",
+      "id": "f27b73102bb823017d",
+      "title": "airBaltic files for Chapter 11 bankruptcy in U.S.",
       "summary_zh": "",
       "why_it_matters_zh": "",
       "category": "Airlines & Credit",
       "importance_score": 59,
       "region": "Latvia",
       "entities": [
-        "airBaltic"
+        "airBaltic",
+        "Latvia"
       ],
-      "published_at": "2026-09-14T03:09:00Z",
-      "updated_at": "2026-09-14T10:28:35Z",
+      "published_at": "2026-09-14T03:48:00Z",
+      "updated_at": "2026-09-14T11:31:31Z",
       "primary_source": "Reuters",
-      "primary_url": "https://www.reuters.com/world/airbaltic-files-chapter-11-bankruptcy-new-york-2026-09-14/",
-      "source_count": 1,
+      "primary_url": "https://www.reuters.com/business/what-know-about-airbaltic-latvias-flag-carrier-files-chapter-11-2026-09-14/",
+      "source_count": 2,
       "sources": [
+        {
+          "name": "Reuters",
+          "url": "https://www.reuters.com/business/what-know-about-airbaltic-latvias-flag-carrier-files-chapter-11-2026-09-14/",
+          "published_at": "2026-09-14T03:48:00Z",
+          "source_channel": "reuters_via_bing",
+          "discovered_via": "Bing News"
+        },
         {
           "name": "Reuters",
           "url": "https://www.reuters.com/world/airbaltic-files-chapter-11-bankruptcy-new-york-2026-09-14/",
@@ -264,6 +272,7 @@
         }
       ],
       "raw_ids": [
+        "3d851b641c850ae83dac64ff",
         "65a1bbc31a3198249b9d7df9"
       ],
       "analysis_mode": "deepseek"
@@ -841,6 +850,42 @@
       "analysis_mode": "deepseek"
     },
     {
+      "id": "2c69b8a33d56376a6e",
+      "title": "Drukair selects CFM LEAP-1A engines for five Airbus aircraft",
+      "summary_zh": "",
+      "why_it_matters_zh": "",
+      "category": "Engines & MRO",
+      "importance_score": 53,
+      "region": "Bhutan",
+      "entities": [
+        "Drukair",
+        "Royal Bhutan Airlines",
+        "CFM International",
+        "LEAP-1A",
+        "Airbus",
+        "A320neo",
+        "A321XLR"
+      ],
+      "published_at": "2026-09-14T00:00:00Z",
+      "updated_at": "2026-09-14T11:31:31Z",
+      "primary_source": "Aviation News Online",
+      "primary_url": "https://www.aviationnews-online.com/article/drukair-selects-leap-1a-engines-for-five-airbus-aircraft",
+      "source_count": 1,
+      "sources": [
+        {
+          "name": "Aviation News Online",
+          "url": "https://www.aviationnews-online.com/article/drukair-selects-leap-1a-engines-for-five-airbus-aircraft",
+          "published_at": "2026-09-14T00:00:00Z",
+          "source_channel": "aviationnews_airline",
+          "discovered_via": "direct"
+        }
+      ],
+      "raw_ids": [
+        "a03ce88ee1ac5b06fb4ff6b9"
+      ],
+      "analysis_mode": "deepseek"
+    },
+    {
       "id": "6c8398f914cc3b7cc4",
       "title": "My job: Connecting Ireland's dominance in aircraft leasing with elite football",
       "summary_zh": "",
@@ -1020,19 +1065,29 @@
     },
     {
       "id": "d6f315880554834bfa",
-      "title": "GIFT City eyes bigger slice of aircraft leasing business",
+      "title": "GIFT City seeks larger share of aircraft leasing business",
       "summary_zh": "",
       "why_it_matters_zh": "",
       "category": "Leasing & Trading",
       "importance_score": 49,
-      "region": "Global/Unspecified",
-      "entities": [],
+      "region": "India",
+      "entities": [
+        "GIFT City",
+        "Sanjay Kaul"
+      ],
       "published_at": "2026-09-11T18:31:13Z",
-      "updated_at": "2026-09-14T09:38:27Z",
+      "updated_at": "2026-09-14T11:31:31Z",
       "primary_source": "Mint on MSN",
-      "primary_url": "https://www.msn.com/en-in/news/other/gift-city-eyes-bigger-slice-of-aircraft-leasing-business/ar-AA2c3q6q",
-      "source_count": 2,
+      "primary_url": "https://www.msn.com/en-in/money/investment/gift-city-eyes-bigger-slice-of-aircraft-leasing-business/ar-AA2c3q6q",
+      "source_count": 3,
       "sources": [
+        {
+          "name": "Mint on MSN",
+          "url": "https://www.msn.com/en-in/money/investment/gift-city-eyes-bigger-slice-of-aircraft-leasing-business/ar-AA2c3q6q",
+          "published_at": "2026-09-11T18:31:13Z",
+          "source_channel": "bing_news_rss",
+          "discovered_via": "Bing News"
+        },
         {
           "name": "Mint on MSN",
           "url": "https://www.msn.com/en-in/news/other/gift-city-eyes-bigger-slice-of-aircraft-leasing-business/ar-AA2c3q6q",
@@ -1049,10 +1104,11 @@
         }
       ],
       "raw_ids": [
+        "eb2ec973ff59acebdaea6971",
         "1bf167360bc2af042c64f68f",
         "4446582c5bc16f984f597521"
       ],
-      "analysis_mode": "fallback_after_ai_error"
+      "analysis_mode": "deepseek"
     },
     {
       "id": "301b420d31dc8660ab",
