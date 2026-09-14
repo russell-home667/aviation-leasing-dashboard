@@ -1,8 +1,10 @@
 {
   "schema_version": 1,
-  "retention_days": 45,
+  "retention_days": 120,
+  "history_backfill_days": 120,
+  "aviationnews_backfill_max_pages": 12,
   "request_timeout_seconds": 20,
-  "user_agent": "AviationLeasingDashboardNewsBot/1.0 (+https://github.com/russell-home667/aviation-leasing-dashboard; metadata-only)",
+  "user_agent": "AviationLeasingDashboardNewsBot/1.1 (+https://github.com/russell-home667/aviation-leasing-dashboard; metadata-only)",
   "retired_source_channels": [
     "aviationnews_bing_web_leasing",
     "aviationnews_bing_web_finance",
@@ -115,19 +117,19 @@
         "https://aviationnews-online.com/public/category/leasing",
         "https://aviationnews-online.com/public/category/finance"
       ],
-      "reason": "Legacy /public/category routes returned HTTP 403 on GitHub-hosted runners; current /category routes are tested separately."
+      "reason": "Legacy /public/category routes returned HTTP 403 on GitHub-hosted runners; current /category routes are used instead."
     },
     {
       "name": "FlightGlobal",
       "attempted_urls": [
         "https://www.flightglobal.com/rss"
       ],
-      "reason": "GitHub-hosted runner returned HTTP 403 on 2026-09-14. Use dedicated Bing News RSS discovery queries for this publisher."
+      "reason": "GitHub-hosted runner returned HTTP 403 on 2026-09-14. FlightGlobal is discovered through Bing News RSS instead of bypassing publisher controls."
     },
     {
       "name": "Reuters",
       "attempted_urls": [],
-      "reason": "Do not scrape Reuters directly; discover Reuters headlines and original URLs through Bing News RSS."
+      "reason": "Reuters is not scraped directly; headlines and original URLs are discovered through Bing News RSS."
     }
   ],
   "bing_news": {
@@ -139,6 +141,16 @@
       "\"sale-leaseback\" aircraft",
       "\"aviation finance\" aircraft",
       "\"aircraft financing\"",
+      "\"PDP financing\" aircraft",
+      "JOLCO aircraft",
+      "JOL aircraft leasing",
+      "\"aviation ABS\"",
+      "\"aircraft lease rates\"",
+      "\"aircraft values\" lessor",
+      "airline bankruptcy aircraft leasing",
+      "airline restructuring aircraft lessor",
+      "aircraft repossession lessor",
+      "aircraft sanctions lessor",
       "AerCap aviation",
       "Avolon aviation",
       "\"BOC Aviation\"",
@@ -148,17 +160,31 @@
       "\"CALC\" aircraft leasing",
       "\"Air Lease\" aircraft",
       "\"Aviation Capital Group\" aircraft",
+      "Aircastle aircraft leasing",
+      "Castlelake aviation aircraft",
+      "Azorra aircraft leasing",
+      "TrueNoord aircraft leasing",
+      "\"Nordic Aviation Capital\"",
+      "\"Macquarie AirFinance\"",
+      "\"ORIX Aviation\"",
+      "\"Jackson Square Aviation\"",
+      "\"Griffin Global Asset Management\" aircraft",
+      "\"SKY Leasing\" aircraft",
       "\"aircraft engine leasing\"",
-      "\"aviation ABS\"",
-      "JOLCO aircraft",
-      "\"aircraft lease rates\"",
-      "\"aircraft values\" lessor",
-      "airline bankruptcy aircraft leasing",
-      "aircraft repossession lessor",
+      "GTF aircraft leasing",
+      "CFM LEAP aircraft leasing",
       "site:flightglobal.com aircraft leasing",
       "site:flightglobal.com aircraft lessor",
+      "site:flightglobal.com GTF engine airline",
+      "site:flightglobal.com Airbus deliveries airline",
+      "site:flightglobal.com Boeing deliveries airline",
+      "site:flightglobal.com airline bankruptcy aircraft",
       "site:reuters.com aircraft leasing",
-      "site:reuters.com aircraft lessor"
+      "site:reuters.com aircraft lessor",
+      "site:reuters.com aviation finance aircraft",
+      "site:reuters.com Boeing Airbus deliveries",
+      "site:reuters.com airline bankruptcy aircraft",
+      "site:reuters.com Pratt Whitney GTF airline"
     ]
   }
 }
