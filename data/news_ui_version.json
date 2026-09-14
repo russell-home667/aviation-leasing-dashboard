@@ -1,9 +1,10 @@
 {
   "schema_version": 1,
   "step": 4,
-  "status": "data-live",
+  "status": "validated-live",
   "homepage_sections": ["Aircraft Leasing News Feed", "Critical Leasing News"],
   "homepage_limit": 10,
+  "current_payload_stories": 203,
   "full_page": "news.html",
   "full_page_features": ["search", "date", "source", "category", "region", "company", "aircraft", "critical", "priority", "macro", "sort"]
 }
