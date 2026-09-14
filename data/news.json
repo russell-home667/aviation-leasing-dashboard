@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-14T18:31:36Z",
+  "generated_at": "2026-09-14T19:28:19Z",
   "model": "deepseek-flash",
-  "analysis_mode": "deepseek",
+  "analysis_mode": "incremental_no_new_items",
   "categories": [
     "Leasing & Trading",
     "Aircraft & OEM",
@@ -16,21 +16,19 @@
   "stats": {
     "raw_pool_total": 1297,
     "recent_raw_items": 222,
-    "already_processed_raw_items": 220,
-    "new_raw_items": 2,
-    "new_preclusters": 2,
+    "already_processed_raw_items": 222,
+    "new_raw_items": 0,
+    "new_preclusters": 0,
     "deepseek_calls": 0,
-    "deepseek_failed_batches": 1,
-    "deepseek_errors": [
-      "batch_1: RuntimeError: ValueError: empty DeepSeek content; ValueError: empty DeepSeek content"
-    ],
-    "clusters_submitted": 2,
-    "clusters_retained_or_accounted": 2,
-    "stories": 202,
+    "deepseek_failed_batches": 0,
+    "deepseek_errors": [],
+    "clusters_submitted": 0,
+    "clusters_retained_or_accounted": 0,
+    "stories": 201,
     "by_category": {
       "Aircraft & OEM": 36,
       "Airlines & Credit": 79,
-      "Engines & MRO": 14,
+      "Engines & MRO": 13,
       "Financing & Capital Markets": 21,
       "Leasing & Trading": 35,
       "Legal & Regulatory": 8,
@@ -58,7 +56,7 @@
       "Mint": 1,
       "Mint on MSN": 2,
       "NHK": 1,
-      "Reuters": 19,
+      "Reuters": 18,
       "Seeking Alpha": 1,
       "Simple Flying on MSN": 1,
       "The Daily Star": 1,
@@ -1372,34 +1370,6 @@
       ],
       "raw_ids": [
         "120beb19c1eb2e8f71a43f67"
-      ],
-      "analysis_mode": "fallback_after_ai_error"
-    },
-    {
-      "id": "9667a767573eabd8fa",
-      "title": "Willis Lease Finance eyes Asia-Pacific engine repair growth with new Malaysia centre",
-      "summary_zh": "",
-      "why_it_matters_zh": "",
-      "category": "Engines & MRO",
-      "importance_score": 55,
-      "region": "Global/Unspecified",
-      "entities": [],
-      "published_at": "2026-09-07T19:01:00Z",
-      "updated_at": "2026-09-14T09:38:27Z",
-      "primary_source": "Reuters",
-      "primary_url": "https://www.reuters.com/world/asia-pacific/willis-lease-finance-eyes-asia-pacific-engine-repair-growth-with-new-malaysia-2026-09-08/",
-      "source_count": 1,
-      "sources": [
-        {
-          "name": "Reuters",
-          "url": "https://www.reuters.com/world/asia-pacific/willis-lease-finance-eyes-asia-pacific-engine-repair-growth-with-new-malaysia-2026-09-08/",
-          "published_at": "2026-09-07T19:01:00Z",
-          "source_channel": "reuters_via_bing",
-          "discovered_via": "Bing News"
-        }
-      ],
-      "raw_ids": [
-        "edbe4f6a52c55e10e24f49ef"
       ],
       "analysis_mode": "fallback_after_ai_error"
     },
