@@ -12,6 +12,12 @@ replacements = {
         '<div class="chart-subtitle" id="baiSubtitle">Weekly headline index · TAC Index / Baltic Exchange</div>',
     'Data source: Yahoo Finance · CME / alternative source pending · TAC Index':
         'Data source: Yahoo Finance · Public FOB Singapore jet/kerosene archive · TAC Index',
+    'Data source: Yahoo Finance · Public Singapore jet/kerosene sources · Investing.com XAU/USD · TAC Index / Baltic Exchange':
+        'Data source: Yahoo Finance · Public Singapore jet/kerosene sources · XAUS Gold Data API XAU/USD · TAC Index / Baltic Exchange',
+    '<span class="meta-label">SOURCE</span><span class="meta-value" id="goldSource">Investing.com</span>':
+        '<span class="meta-label">SOURCE</span><span class="meta-value" id="goldSource">XAUS Gold Data API</span>',
+    'const healthy = ["LIVE", "DELAYED", "INVESTING_PAGE", "LATEST_DAILY_CLOSE", "DAILY_CLOSE"].includes(status);':
+        'const healthy = ["LIVE", "DELAYED", "INVESTING_PAGE", "LATEST_DAILY_CLOSE", "DAILY_CLOSE", "XAUS_FRESH", "GOLD_API_REALTIME"].includes(status);',
     '全球原油基准 · ICE Brent front-month reference':
         'Brent Crude Oil Last Day Financial Futures · Yahoo Finance BZ=F',
     '''return new Date(isoString).toLocaleString("zh-CN", {
@@ -54,7 +60,6 @@ replacements = {
       setDatasetStatus(config.statusId, latestQuote?.quote_status || "DELAYED");
     } else {
       updateChange(config.changeId, getChange(data), config.changePeriod);
-      document.getElementById(config.dateId).textContent = latestItem.date || "--";
       document.getElementById(config.frequencyId).textContent = dataset?.frequency || config.defaultFrequency;
       document.getElementById(config.sourceId).textContent = dataset?.source || "--";
       setDatasetStatus(config.statusId, dataset?.status || "--");
