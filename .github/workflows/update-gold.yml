@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       full_backfill:
-        description: 'Force full XAU/USD history backfill'
+        description: 'Force full XAU/USD history refresh'
         required: false
         default: 'false'
   push:
@@ -25,8 +25,6 @@ concurrency:
 
 jobs:
   update:
-    # Investing.com may block hosted runners; the script automatically falls back
-    # to the same XAU/USD spot instrument on Yahoo Finance rather than substituting futures.
     runs-on: ubuntu-latest
 
     steps:
@@ -39,9 +37,9 @@ jobs:
           python-version: '3.12'
 
       - name: Install dependencies
-        run: pip install --disable-pip-version-check curl-cffi beautifulsoup4 yfinance==1.7.0
+        run: pip install --disable-pip-version-check requests
 
-      - name: Update XAU/USD
+      - name: Update XAU/USD spot gold
         run: |
           set -euo pipefail
           if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.full_backfill }}" = "true" ]; then
@@ -59,11 +57,12 @@ jobs:
           d = json.loads(p.read_text())
           rows = d.get('data', [])
           assert d.get('ticker') == 'XAU/USD'
-          assert d.get('instrument_id') == '68'
+          assert d.get('instrument_type') == 'spot'
           assert len(rows) >= 20
           assert rows[-1]['value'] > 100
+          assert float(d['latest_quote']['price']) > 100
           assert rows == sorted(rows, key=lambda x: x['date'])
-          print('rows', len(rows), 'coverage', rows[0]['date'], 'to', rows[-1]['date'], 'latest', d['latest_quote']['price'])
+          print('rows', len(rows), 'coverage', rows[0]['date'], 'to', rows[-1]['date'], 'latest', d['latest_quote']['price'], 'status', d.get('status'))
           PY
 
       - name: Commit gold data
