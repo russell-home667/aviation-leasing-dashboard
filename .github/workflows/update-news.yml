@@ -11,14 +11,14 @@ on:
       - 'scripts/analyze_news.py'
       - 'scripts/validate_enriched_news.py'
       - 'scripts/install_news_ui.py'
+      - 'scripts/install_news_page_filters.py'
+      - 'scripts/validate_news_ui.py'
       - 'data/news_sources.json'
       - 'data/news_validation_baseline.json'
       - 'data/news_priority_entities.json'
       - 'news.html'
       - '.github/workflows/update-news.yml'
   schedule:
-    # Hourly ingestion. Frequent polling is important because some feeds expose only
-    # the latest 10 items per category; archiving each run reduces headline loss.
     - cron: '17 * * * *'
 
 permissions:
@@ -26,8 +26,6 @@ permissions:
 
 concurrency:
   group: news-data-writer
-  # Never cancel a live AI enrichment job just because GitHub delivers the next
-  # scheduled run late. New runs queue behind the active writer instead.
   cancel-in-progress: false
 
 jobs:
@@ -88,6 +86,12 @@ jobs:
       - name: Install homepage news module
         run: python scripts/install_news_ui.py
 
+      - name: Install full news page deep links
+        run: python scripts/install_news_page_filters.py
+
+      - name: Validate Step 4 dashboard news UI
+        run: python scripts/validate_news_ui.py
+
       - name: Print news pipeline summary
         run: |
           python - <<'PY'
@@ -117,12 +121,14 @@ jobs:
               'deepseek_calls': status.get('deepseek_calls'),
               'deepseek_errors': status.get('deepseek_errors'),
           }, ensure_ascii=False))
-          print('Step 3:', json.dumps({
+          print('Step 3/4:', json.dumps({
               'analysis_mode': enriched.get('analysis_mode'),
               'stories': enriched.get('stats', {}).get('stories'),
               'critical': enriched.get('stats', {}).get('critical_stories'),
               'priority_entity_stories': enriched.get('stats', {}).get('priority_entity_stories'),
               'macro_related_stories': enriched.get('stats', {}).get('macro_related_stories'),
+              'homepage_feed': len(enriched.get('homepage', {}).get('feed_story_ids', [])),
+              'homepage_critical': len(enriched.get('homepage', {}).get('critical_story_ids', [])),
               'deepseek_calls': step3.get('deepseek_calls'),
               'deepseek_failed_batches': step3.get('deepseek_failed_batches'),
           }, ensure_ascii=False))
@@ -140,6 +146,7 @@ jobs:
           cp data/news_feed_archive.json /tmp/news_feed_archive.json
           cp data/news_enrichment_status.json /tmp/news_enrichment_status.json
           cp index.html /tmp/index.html
+          cp news.html /tmp/news.html
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
@@ -157,7 +164,8 @@ jobs:
             cp /tmp/news_feed_archive.json data/news_feed_archive.json
             cp /tmp/news_enrichment_status.json data/news_enrichment_status.json
             cp /tmp/index.html index.html
-            git add data/news_raw.json data/news_source_health.json data/news_coverage.json data/news.json data/news_archive.json data/news_processing_status.json data/news_feed.json data/news_feed_archive.json data/news_enrichment_status.json index.html
+            cp /tmp/news.html news.html
+            git add data/news_raw.json data/news_source_health.json data/news_coverage.json data/news.json data/news_archive.json data/news_processing_status.json data/news_feed.json data/news_feed_archive.json data/news_enrichment_status.json index.html news.html
 
             if git diff --cached --quiet; then
               echo "No news data changes to commit."
