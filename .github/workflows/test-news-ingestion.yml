@@ -56,13 +56,30 @@ jobs:
 
       - name: Commit ingestion snapshot
         run: |
-          if git diff --quiet -- data/news_raw.json data/news_source_health.json; then
-            echo "No news data changes to commit."
-            exit 0
-          fi
+          cp data/news_raw.json /tmp/news_raw.json
+          cp data/news_source_health.json /tmp/news_source_health.json
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/news_raw.json data/news_source_health.json
-          git commit -m "Test news ingestion sources"
-          git pull --rebase origin main
-          git push origin main
+
+          for attempt in 1 2 3; do
+            echo "Snapshot push attempt ${attempt}/3"
+            git fetch origin main
+            git reset --hard origin/main
+            cp /tmp/news_raw.json data/news_raw.json
+            cp /tmp/news_source_health.json data/news_source_health.json
+            git add data/news_raw.json data/news_source_health.json
+
+            if git diff --cached --quiet; then
+              echo "No news data changes to commit."
+              exit 0
+            fi
+
+            git commit -m "Test news ingestion sources"
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            sleep $((attempt * 2))
+          done
+
+          echo "Failed to push news snapshot after 3 attempts."
+          exit 1
