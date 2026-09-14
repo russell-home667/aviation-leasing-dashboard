@@ -1,0 +1,102 @@
+name: Update Aviation Leasing News
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'scripts/update_news_raw.py'
+      - 'scripts/validate_news_coverage.py'
+      - 'data/news_sources.json'
+      - 'data/news_validation_baseline.json'
+      - '.github/workflows/update-news.yml'
+  schedule:
+    # Hourly ingestion. Frequent polling is important because some feeds expose only
+    # the latest 10 items per category; archiving each run reduces headline loss.
+    - cron: '17 * * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: news-data-writer
+  cancel-in-progress: false
+
+jobs:
+  update-news:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Sync latest main
+        run: |
+          git fetch origin main
+          git reset --hard origin/main
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests beautifulsoup4
+
+      - name: Fetch news metadata
+        run: python scripts/update_news_raw.py
+
+      - name: Validate source coverage
+        run: python scripts/validate_news_coverage.py
+
+      - name: Print coverage summary
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          health = json.loads(Path('data/news_source_health.json').read_text(encoding='utf-8'))
+          coverage = json.loads(Path('data/news_coverage.json').read_text(encoding='utf-8'))
+          raw = json.loads(Path('data/news_raw.json').read_text(encoding='utf-8'))
+          print('Health:', json.dumps(health['summary'], ensure_ascii=False))
+          print('Coverage:', json.dumps({
+              'status': coverage['overall_status'],
+              'ishka_recall': coverage['known_ishka_recall']['recall'],
+              'failed': coverage['failed_requirements'],
+              'warnings': coverage['warnings'],
+          }, ensure_ascii=False))
+          print('Stored:', raw['stats']['stored_total'])
+          PY
+
+      - name: Commit news snapshot
+        run: |
+          cp data/news_raw.json /tmp/news_raw.json
+          cp data/news_source_health.json /tmp/news_source_health.json
+          cp data/news_coverage.json /tmp/news_coverage.json
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          for attempt in 1 2 3; do
+            echo "News snapshot push attempt ${attempt}/3"
+            git fetch origin main
+            git reset --hard origin/main
+            cp /tmp/news_raw.json data/news_raw.json
+            cp /tmp/news_source_health.json data/news_source_health.json
+            cp /tmp/news_coverage.json data/news_coverage.json
+            git add data/news_raw.json data/news_source_health.json data/news_coverage.json
+
+            if git diff --cached --quiet; then
+              echo "No news data changes to commit."
+              exit 0
+            fi
+
+            git commit -m "Update aviation leasing news metadata"
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            sleep $((attempt * 2))
+          done
+
+          echo "Failed to push news snapshot after 3 attempts."
+          exit 1
