@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-14T12:34:36Z",
+  "generated_at": "2026-09-14T13:30:42Z",
   "model": "deepseek-flash",
   "analysis_mode": "deepseek",
   "categories": [
@@ -15,24 +15,24 @@
   ],
   "stats": {
     "archive_retention_days": 120,
-    "raw_pool_total": 1278,
+    "raw_pool_total": 1279,
     "recent_raw_items": 212,
-    "already_processed_raw_items": 205,
-    "new_raw_items": 7,
-    "new_preclusters": 7,
+    "already_processed_raw_items": 210,
+    "new_raw_items": 2,
+    "new_preclusters": 2,
     "deepseek_calls": 1,
     "deepseek_failed_batches": 0,
     "deepseek_errors": [],
-    "clusters_submitted": 7,
-    "clusters_retained_or_accounted": 6,
-    "stories": 198,
+    "clusters_submitted": 2,
+    "clusters_retained_or_accounted": 2,
+    "stories": 200,
     "by_category": {
       "Aircraft & OEM": 37,
-      "Airlines & Credit": 76,
+      "Airlines & Credit": 77,
       "Engines & MRO": 14,
       "Financing & Capital Markets": 19,
       "Leasing & Trading": 38,
-      "Legal & Regulatory": 6,
+      "Legal & Regulatory": 7,
       "Macro & Geopolitics": 7,
       "Values & Lease Rates": 1
     },
@@ -40,7 +40,8 @@
       "ADS Advance": 1,
       "AeroTime": 2,
       "Aerospace and Mechanical Insider on MSN": 1,
-      "Aviation News Online": 112,
+      "Airline Ratings": 1,
+      "Aviation News Online": 113,
       "Aviation24.be": 1,
       "Bizcommunity on MSN": 3,
       "Bloomberg": 1,
@@ -1047,6 +1048,34 @@
         "1f6659afb66b5cb166a9769c"
       ],
       "analysis_mode": "deepseek"
+    },
+    {
+      "id": "7d4e7fc02fb7f0f323",
+      "title": "IndiGo launches connecting-flight sale with fares from INR 3,999 ($42)",
+      "summary_zh": "",
+      "why_it_matters_zh": "",
+      "category": "Airlines & Credit",
+      "importance_score": 53,
+      "region": "Asia/Pacific",
+      "entities": [],
+      "published_at": "2026-09-14T00:00:00Z",
+      "updated_at": "2026-09-14T13:30:42Z",
+      "primary_source": "Aviation News Online",
+      "primary_url": "https://www.aviationnews-online.com/article/indigo-launches-connecting-flight-sale-with-fares-from-inr-3999-42",
+      "source_count": 1,
+      "sources": [
+        {
+          "name": "Aviation News Online",
+          "url": "https://www.aviationnews-online.com/article/indigo-launches-connecting-flight-sale-with-fares-from-inr-3999-42",
+          "published_at": "2026-09-14T00:00:00Z",
+          "source_channel": "aviationnews_airline",
+          "discovered_via": "direct"
+        }
+      ],
+      "raw_ids": [
+        "8177815d509263a1e120e633"
+      ],
+      "analysis_mode": "core_source_safety_net"
     },
     {
       "id": "6c8398f914cc3b7cc4",
@@ -5687,6 +5716,38 @@
       ],
       "raw_ids": [
         "fcee3634fae671ff2a04df3e"
+      ],
+      "analysis_mode": "deepseek"
+    },
+    {
+      "id": "b99ec50957a2e86e4f",
+      "title": "Prime Air 767 overruns runway in Miami, killing five; NTSB examines service history",
+      "summary_zh": "",
+      "why_it_matters_zh": "",
+      "category": "Legal & Regulatory",
+      "importance_score": 45,
+      "region": "Miami, US",
+      "entities": [
+        "Prime Air",
+        "NTSB",
+        "767"
+      ],
+      "published_at": "2026-09-07T17:00:00Z",
+      "updated_at": "2026-09-14T13:30:42Z",
+      "primary_source": "Airline Ratings",
+      "primary_url": "https://www.airlineratings.com/articles/miami-prime-air-crash-its-service-history-spans-three-continents-and-seven-operators-could-this-be-a-factor",
+      "source_count": 1,
+      "sources": [
+        {
+          "name": "Airline Ratings",
+          "url": "https://www.airlineratings.com/articles/miami-prime-air-crash-its-service-history-spans-three-continents-and-seven-operators-could-this-be-a-factor",
+          "published_at": "2026-09-07T17:00:00Z",
+          "source_channel": "bing_news_rss",
+          "discovered_via": "Bing News"
+        }
+      ],
+      "raw_ids": [
+        "9460ac833b9cf65329bfb07d"
       ],
       "analysis_mode": "deepseek"
     },

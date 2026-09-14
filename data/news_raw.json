@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-14T12:34:02Z",
+  "generated_at": "2026-09-14T13:30:13Z",
   "retention_days": 120,
   "metadata_only": true,
   "stats": {
-    "current_batch_unique": 552,
-    "stored_total": 1278,
+    "current_batch_unique": 555,
+    "stored_total": 1279,
     "reuters_discovered_via_bing": 32,
     "by_source": {
       "ADS Advance": 1,
@@ -15,7 +15,7 @@
       "Aerospace and Mechanical Insider on MSN": 1,
       "Airline Ratings": 1,
       "Airways": 1,
-      "Aviation News Online": 994,
+      "Aviation News Online": 995,
       "Aviation Week": 2,
       "Aviation Week Network": 1,
       "Aviation24.be": 1,
@@ -74,7 +74,7 @@
       "القاهرة 24": 1
     },
     "by_channel": {
-      "aviationnews_airline": 330,
+      "aviationnews_airline": 331,
       "aviationnews_engine": 78,
       "aviationnews_finance": 124,
       "aviationnews_leasing": 145,
@@ -539,6 +539,26 @@
       "rights_mode": "public_listing_metadata",
       "fetched_at": "2026-09-14T09:38:14Z",
       "id": "8528496fbc73cb50380b299d"
+    },
+    {
+      "title": "IndiGo launches connecting-flight sale with fares from INR 3,999 ($42)",
+      "source": "Aviation News Online",
+      "source_channel": "aviationnews_airline",
+      "published_at": "2026-09-14T00:00:00Z",
+      "published_date": "2026-09-14",
+      "url": "https://www.aviationnews-online.com/article/indigo-launches-connecting-flight-sale-with-fares-from-inr-3999-42",
+      "summary": "IndiGo has launched a “Great Connections Sale” offering discounted fares on connecting flights across its network, alongside reduced prices on selected ancillary services.The sale runs until September...",
+      "author": "Justin Pugsley",
+      "categories_raw": [
+        "Airline",
+        "Asia/Pacific"
+      ],
+      "region_raw": "Asia/Pacific",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "public_listing_metadata",
+      "fetched_at": "2026-09-14T13:30:23Z",
+      "id": "8177815d509263a1e120e633"
     },
     {
       "title": "IER MRO appoints Group AMANA for Dubai engine maintenance facility",
