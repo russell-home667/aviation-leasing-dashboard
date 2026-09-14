@@ -1,0 +1,61 @@
+name: Bootstrap News Feed
+
+on:
+  push:
+    paths:
+      - '.github/workflows/bootstrap-news-feed.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  bootstrap-news-feed:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Build deterministic Step 3 payload for Step 4
+        env:
+          DEEPSEEK_MODEL: deepseek-flash
+          NEWS_STEP3_BATCH_SIZE: '45'
+          NEWS_STEP3_MAX_AI_STORIES: '260'
+        run: python scripts/analyze_news.py
+
+      - name: Validate enriched payload
+        run: python scripts/validate_enriched_news.py
+
+      - name: Install Step 4 UI
+        run: |
+          python scripts/install_news_ui.py
+          python scripts/install_news_page_filters.py
+
+      - name: Validate Step 4 UI contract
+        run: python scripts/validate_news_ui.py
+
+      - name: Commit bootstrap snapshot
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/news_feed.json data/news_feed_archive.json data/news_enrichment_status.json index.html news.html
+          if git diff --cached --quiet; then
+            echo 'Bootstrap snapshot already current.'
+            exit 0
+          fi
+          git commit -m 'Bootstrap aviation leasing news feed'
+          for attempt in 1 2 3; do
+            git pull --rebase origin main
+            if git push origin HEAD:main; then exit 0; fi
+            sleep $((attempt * 2))
+          done
+          exit 1
