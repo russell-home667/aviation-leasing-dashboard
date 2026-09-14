@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "retention_days": 45,
+  "request_timeout_seconds": 20,
+  "user_agent": "AviationLeasingDashboardNewsBot/1.0 (+https://github.com/russell-home667/aviation-leasing-dashboard; metadata-only)",
+  "sources": [
+    {
+      "id": "ishka_latest_rss",
+      "name": "Ishka Airfinance",
+      "kind": "rss",
+      "url": "https://platform.ishkaairfinance.com/Rss/News?id=1&u=0&v=2",
+      "rights_mode": "official_rss_metadata"
+    },
+    {
+      "id": "ishka_aircraft_rss",
+      "name": "Ishka Airfinance",
+      "kind": "rss",
+      "url": "https://platform.ishkaairfinance.com/Rss/News?id=1&s=5981&u=0&v=2",
+      "rights_mode": "official_rss_metadata"
+    },
+    {
+      "id": "ishka_airlines_rss",
+      "name": "Ishka Airfinance",
+      "kind": "rss",
+      "url": "https://platform.ishkaairfinance.com/Rss/News?id=1&s=5982&u=0&v=2",
+      "rights_mode": "official_rss_metadata"
+    },
+    {
+      "id": "ishka_banks_capital_rss",
+      "name": "Ishka Airfinance",
+      "kind": "rss",
+      "url": "https://platform.ishkaairfinance.com/Rss/News?id=1&s=5984&u=0&v=2",
+      "rights_mode": "official_rss_metadata"
+    },
+    {
+      "id": "ishka_law_rss",
+      "name": "Ishka Airfinance",
+      "kind": "rss",
+      "url": "https://platform.ishkaairfinance.com/Rss/News?id=1&s=5986&u=0&v=2",
+      "rights_mode": "official_rss_metadata"
+    },
+    {
+      "id": "ishka_lessors_rss",
+      "name": "Ishka Airfinance",
+      "kind": "rss",
+      "url": "https://platform.ishkaairfinance.com/Rss/News?id=1&s=5987&u=0&v=2",
+      "rights_mode": "official_rss_metadata"
+    },
+    {
+      "id": "aviationnews_leasing",
+      "name": "Aviation News Online",
+      "kind": "aviationnews_html",
+      "url": "https://aviationnews-online.com/public/category/leasing",
+      "rights_mode": "public_listing_metadata"
+    },
+    {
+      "id": "aviationnews_finance",
+      "name": "Aviation News Online",
+      "kind": "aviationnews_html",
+      "url": "https://aviationnews-online.com/public/category/finance",
+      "rights_mode": "public_listing_metadata"
+    },
+    {
+      "id": "aviationnews_airline",
+      "name": "Aviation News Online",
+      "kind": "aviationnews_html",
+      "url": "https://aviationnews-online.com/public/category/airline",
+      "rights_mode": "public_listing_metadata"
+    },
+    {
+      "id": "aviationnews_engine",
+      "name": "Aviation News Online",
+      "kind": "aviationnews_html",
+      "url": "https://aviationnews-online.com/public/category/engine",
+      "rights_mode": "public_listing_metadata"
+    },
+    {
+      "id": "aviationnews_maintenance",
+      "name": "Aviation News Online",
+      "kind": "aviationnews_html",
+      "url": "https://aviationnews-online.com/public/category/maintenance",
+      "rights_mode": "public_listing_metadata"
+    },
+    {
+      "id": "aviationnews_legal",
+      "name": "Aviation News Online",
+      "kind": "aviationnews_html",
+      "url": "https://aviationnews-online.com/public/category/legal",
+      "rights_mode": "public_listing_metadata"
+    },
+    {
+      "id": "aviationnews_regulatory",
+      "name": "Aviation News Online",
+      "kind": "aviationnews_html",
+      "url": "https://aviationnews-online.com/public/category/regulatory",
+      "rights_mode": "public_listing_metadata"
+    },
+    {
+      "id": "aviationnews_people",
+      "name": "Aviation News Online",
+      "kind": "aviationnews_html",
+      "url": "https://aviationnews-online.com/public/category/people",
+      "rights_mode": "public_listing_metadata"
+    },
+    {
+      "id": "flightglobal_rss",
+      "name": "FlightGlobal",
+      "kind": "rss",
+      "url": "https://www.flightglobal.com/rss",
+      "rights_mode": "rss_metadata"
+    }
+  ],
+  "bing_news": {
+    "base_url": "https://www.bing.com/news/search",
+    "queries": [
+      "\"aircraft leasing\"",
+      "\"aircraft lessor\"",
+      "\"sale and leaseback\" aircraft",
+      "\"sale-leaseback\" aircraft",
+      "\"aviation finance\" aircraft",
+      "\"aircraft financing\"",
+      "AerCap aviation",
+      "Avolon aviation",
+      "\"BOC Aviation\"",
+      "\"SMBC Aviation Capital\"",
+      "\"Dubai Aerospace Enterprise\" aircraft",
+      "\"CDB Aviation\"",
+      "\"CALC\" aircraft leasing",
+      "\"Air Lease\" aircraft",
+      "\"Aviation Capital Group\" aircraft",
+      "\"aircraft engine leasing\"",
+      "\"aviation ABS\"",
+      "JOLCO aircraft",
+      "\"aircraft lease rates\"",
+      "\"aircraft values\" lessor",
+      "airline bankruptcy aircraft leasing",
+      "aircraft repossession lessor"
+    ]
+  }
+}
