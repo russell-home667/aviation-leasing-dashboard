@@ -1,0 +1,80 @@
+name: Backfill News History
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'scripts/backfill_news_history.py'
+      - '.github/workflows/backfill-news-history.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: news-data-writer
+  cancel-in-progress: false
+
+jobs:
+  backfill-news:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Sync latest main
+        run: |
+          git fetch origin main
+          git reset --hard origin/main
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests beautifulsoup4
+
+      - name: Backfill public Aviation News Online metadata
+        run: python scripts/backfill_news_history.py
+
+      - name: Re-run current ingestion and coverage validation
+        run: |
+          python scripts/update_news_raw.py
+          python scripts/validate_news_coverage.py
+
+      - name: Commit backfilled news snapshot
+        run: |
+          cp data/news_raw.json /tmp/news_raw.json
+          cp data/news_source_health.json /tmp/news_source_health.json
+          cp data/news_coverage.json /tmp/news_coverage.json
+          cp data/news_backfill_report.json /tmp/news_backfill_report.json
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git reset --hard origin/main
+            cp /tmp/news_raw.json data/news_raw.json
+            cp /tmp/news_source_health.json data/news_source_health.json
+            cp /tmp/news_coverage.json data/news_coverage.json
+            cp /tmp/news_backfill_report.json data/news_backfill_report.json
+            git add data/news_raw.json data/news_source_health.json data/news_coverage.json data/news_backfill_report.json
+
+            if git diff --cached --quiet; then
+              echo "No backfill changes to commit."
+              exit 0
+            fi
+
+            git commit -m "Backfill recent aviation news metadata"
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            sleep $((attempt * 2))
+          done
+
+          echo "Failed to push backfill snapshot after 3 attempts."
+          exit 1
