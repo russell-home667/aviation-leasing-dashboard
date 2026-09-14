@@ -26,7 +26,9 @@ permissions:
 
 concurrency:
   group: news-data-writer
-  cancel-in-progress: false
+  # A code/config push should supersede stale code currently running. Ordinary hourly
+  # schedules queue instead of cancelling an active production run.
+  cancel-in-progress: ${{ github.event_name == 'push' }}
 
 jobs:
   update-news:
