@@ -25,7 +25,9 @@ concurrency:
 
 jobs:
   update:
-    runs-on: macos-latest
+    # Investing.com may block hosted runners; the script automatically falls back
+    # to the same XAU/USD spot instrument on Yahoo Finance rather than substituting futures.
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4
