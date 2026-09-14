@@ -525,7 +525,7 @@
         axisLine: { show: false }, axisTick: { show: false },
         splitLine: { lineStyle: { color: "rgba(130,160,180,0.08)" } }
       },
-      dataZoom: commonDataZoom(),
+      dataZoom: commonDataZoom("filter"),
       series: [{
         name: "BAI00", type: "line", data: seriesData, smooth: false,
         connectNulls: true, showSymbol: false, lineStyle: { width: 2.5 }, areaStyle: { opacity: 0.055 }
