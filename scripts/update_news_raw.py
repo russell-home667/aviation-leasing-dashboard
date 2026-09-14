@@ -230,7 +230,7 @@ def parse_aviation_news_online(html_text: str, base_url: str, source_channel: st
     output, seen_urls = [], set()
     for anchor in soup.find_all("a", href=True):
         href = anchor.get("href", "")
-        if "/public/article/" not in href:
+        if "/article/" not in href:
             continue
         url = urllib.parse.urljoin(base_url, href)
         key = canonical_url(url)
