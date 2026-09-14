@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "checked_at": null,
+  "summary": {
+    "checks_total": 0,
+    "checks_ok": 0,
+    "checks_failed": 0,
+    "records_before_cross_source_dedupe": 0,
+    "current_batch_unique": 0
+  },
+  "checks": []
+}
