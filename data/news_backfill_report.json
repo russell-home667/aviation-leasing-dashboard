@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-14T08:50:23Z",
+  "backfill_days": 120,
+  "cutoff_date": "2026-05-17",
+  "source": "Aviation News Online public category listings",
+  "records_collected_unique": 762,
+  "stored_total_after_merge": 949,
+  "sources": [
+    {
+      "source_id": "aviationnews_leasing",
+      "pages_fetched": 12,
+      "records_parsed": 144,
+      "records_within_window": 144,
+      "earliest_date": "2026-05-28",
+      "latest_date": "2026-09-11",
+      "stop_reason": "max_pages",
+      "errors": []
+    },
+    {
+      "source_id": "aviationnews_finance",
+      "pages_fetched": 12,
+      "records_parsed": 144,
+      "records_within_window": 144,
+      "earliest_date": "2026-07-28",
+      "latest_date": "2026-09-14",
+      "stop_reason": "max_pages",
+      "errors": []
+    },
+    {
+      "source_id": "aviationnews_airline",
+      "pages_fetched": 12,
+      "records_parsed": 144,
+      "records_within_window": 144,
+      "earliest_date": "2026-09-02",
+      "latest_date": "2026-09-14",
+      "stop_reason": "max_pages",
+      "errors": []
+    },
+    {
+      "source_id": "aviationnews_engine",
+      "pages_fetched": 8,
+      "records_parsed": 96,
+      "records_within_window": 86,
+      "earliest_date": "2026-05-18",
+      "latest_date": "2026-09-09",
+      "stop_reason": "cutoff_reached",
+      "errors": []
+    },
+    {
+      "source_id": "aviationnews_maintenance",
+      "pages_fetched": 11,
+      "records_parsed": 132,
+      "records_within_window": 129,
+      "earliest_date": "2026-05-18",
+      "latest_date": "2026-09-11",
+      "stop_reason": "cutoff_reached",
+      "errors": []
+    },
+    {
+      "source_id": "aviationnews_legal",
+      "pages_fetched": 3,
+      "records_parsed": 36,
+      "records_within_window": 35,
+      "earliest_date": "2026-05-26",
+      "latest_date": "2026-09-14",
+      "stop_reason": "cutoff_reached",
+      "errors": []
+    },
+    {
+      "source_id": "aviationnews_regulatory",
+      "pages_fetched": 9,
+      "records_parsed": 108,
+      "records_within_window": 103,
+      "earliest_date": "2026-05-19",
+      "latest_date": "2026-09-14",
+      "stop_reason": "cutoff_reached",
+      "errors": []
+    },
+    {
+      "source_id": "aviationnews_people",
+      "pages_fetched": 10,
+      "records_parsed": 120,
+      "records_within_window": 117,
+      "earliest_date": "2026-05-19",
+      "latest_date": "2026-09-11",
+      "stop_reason": "cutoff_reached",
+      "errors": []
+    }
+  ]
+}
