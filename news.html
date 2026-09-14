@@ -255,6 +255,20 @@
     filterStories();
   });
 
+
+  // STEP4_URL_FILTERS
+  function applyUrlFilters() {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("critical") === "1") $("critical").value = "critical";
+    else if (params.get("priority") === "1") $("critical").value = "priority";
+    else if (params.get("macro") === "1") $("critical").value = "macro";
+    if (params.get("q")) $("search").value = params.get("q");
+    if (params.get("from")) $("dateFrom").value = params.get("from");
+    if (params.get("to")) $("dateTo").value = params.get("to");
+  }
+
+  applyUrlFilters();
+
   load();
 </script>
 </body>
