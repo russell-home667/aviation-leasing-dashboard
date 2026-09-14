@@ -14,29 +14,15 @@
       font-family: Arial, "Microsoft YaHei", sans-serif;
       min-height: 100vh;
     }
-
     .dashboard {
       width: 96%;
       max-width: 1700px;
       margin: 0 auto;
       padding: 22px 24px 30px;
     }
-
-    .header {
-      text-align: center;
-      margin-bottom: 22px;
-    }
-    .header h1 {
-      margin: 0;
-      font-size: 31px;
-      letter-spacing: 3px;
-      font-weight: 700;
-    }
-    .subtitle {
-      margin-top: 8px;
-      color: #7797ae;
-      font-size: 14px;
-    }
+    .header { text-align: center; margin-bottom: 22px; }
+    .header h1 { margin: 0; font-size: 31px; letter-spacing: 3px; font-weight: 700; }
+    .subtitle { margin-top: 8px; color: #7797ae; font-size: 14px; }
     .status-badge {
       display: inline-block;
       margin-left: 8px;
@@ -47,18 +33,8 @@
       border: 1px solid rgba(82, 220, 175, 0.36);
       color: #78e8bd;
     }
-    .last-update {
-      margin-top: 5px;
-      color: #7394aa;
-      font-size: 13px;
-    }
-
-    .market-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
-    }
-
+    .last-update { margin-top: 5px; color: #7394aa; font-size: 13px; }
+    .market-grid { display: grid; grid-template-columns: 1fr; gap: 18px; }
     .market-card {
       min-width: 0;
       overflow: hidden;
@@ -67,8 +43,6 @@
       border-radius: 14px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.16), inset 0 1px 0 rgba(255,255,255,0.015);
     }
-    .market-card.full-width { grid-column: 1 / -1; }
-
     .card-head {
       padding: 20px 22px 0;
       display: flex;
@@ -76,21 +50,9 @@
       gap: 20px;
       align-items: flex-start;
     }
-
     .identity { min-width: 0; }
-    .identity-top {
-      display: flex;
-      align-items: center;
-      gap: 9px;
-      flex-wrap: wrap;
-      margin-bottom: 7px;
-    }
-    .ticker {
-      color: #66c8ff;
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 1.1px;
-    }
+    .identity-top { display: flex; align-items: center; gap: 9px; flex-wrap: wrap; margin-bottom: 7px; }
+    .ticker { color: #66c8ff; font-size: 13px; font-weight: 700; letter-spacing: 1.1px; }
     .asset-tag {
       padding: 3px 8px;
       border: 1px solid rgba(105, 174, 215, 0.25);
@@ -110,20 +72,8 @@
       font-size: 10px;
       font-weight: 700;
     }
-    .metric-title {
-      margin: 0;
-      font-size: 23px;
-      line-height: 1.22;
-      font-weight: 700;
-      color: #ecf7ff;
-    }
-    .metric-description {
-      margin-top: 6px;
-      color: #66859b;
-      font-size: 12px;
-      line-height: 1.5;
-    }
-
+    .metric-title { margin: 0; font-size: 23px; line-height: 1.22; font-weight: 700; color: #ecf7ff; }
+    .metric-description { margin-top: 6px; color: #66859b; font-size: 12px; line-height: 1.5; }
     .range-buttons {
       display: flex;
       justify-content: flex-end;
@@ -143,17 +93,50 @@
       font-size: 12px;
       transition: 0.15s ease;
     }
-    .range-btn:hover {
-      color: #c9eaff;
-      background: rgba(70, 193, 255, 0.07);
-    }
+    .range-btn:hover { color: #c9eaff; background: rgba(70, 193, 255, 0.07); }
     .range-btn.active {
       color: #dff5ff;
       border-color: rgba(91, 194, 255, 0.52);
       background: rgba(49, 130, 183, 0.24);
     }
-
-    .quote-row {
+    .quote-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0;
+      margin: 16px 22px 4px;
+      border: 1px solid rgba(89, 151, 190, 0.15);
+      border-radius: 10px;
+      overflow: hidden;
+      background: rgba(3, 14, 25, 0.22);
+    }
+    .quote-tile {
+      min-width: 0;
+      padding: 15px 17px 14px;
+      border-right: 1px solid rgba(89, 151, 190, 0.13);
+    }
+    .quote-tile:last-child { border-right: 0; }
+    .quote-name-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 8px; }
+    .quote-name { font-size: 13px; font-weight: 700; color: #d7edf9; }
+    .quote-code { font-size: 10px; color: #67899f; letter-spacing: 0.7px; }
+    .price-line { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+    .metric-value { font-size: 35px; line-height: 1; font-weight: 700; color: #f0f8ff; letter-spacing: 0.2px; }
+    .metric-unit { color: #7895aa; font-size: 11px; font-weight: 600; }
+    .metric-change { margin-top: 7px; font-size: 12px; font-weight: 600; }
+    .up { color: #52dcaf; }
+    .down { color: #ff718d; }
+    .neutral { color: #8fa7b7; }
+    .quote-details {
+      margin-top: 9px;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      column-gap: 8px;
+      row-gap: 3px;
+      font-size: 10px;
+      line-height: 1.45;
+    }
+    .meta-label { color: #57758b; }
+    .meta-value { color: #8ba7b9; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .single-quote-row {
       padding: 16px 22px 3px;
       display: flex;
       justify-content: space-between;
@@ -161,34 +144,8 @@
       gap: 20px;
       flex-wrap: wrap;
     }
-    .quote-main { min-width: 230px; }
-    .price-line {
-      display: flex;
-      align-items: baseline;
-      gap: 9px;
-      flex-wrap: wrap;
-    }
-    .metric-value {
-      font-size: 46px;
-      line-height: 1;
-      font-weight: 700;
-      letter-spacing: 0.4px;
-      color: #f0f8ff;
-    }
-    .metric-unit {
-      color: #7895aa;
-      font-size: 13px;
-      font-weight: 600;
-    }
-    .metric-change {
-      margin-top: 8px;
-      font-size: 14px;
-      font-weight: 600;
-    }
-    .up { color: #52dcaf; }
-    .down { color: #ff718d; }
-    .neutral { color: #8fa7b7; }
-
+    .single-quote-main { min-width: 230px; }
+    .single-quote-main .metric-value { font-size: 46px; }
     .quote-meta {
       display: grid;
       grid-template-columns: auto auto;
@@ -198,44 +155,32 @@
       line-height: 1.45;
       text-align: right;
     }
-    .meta-label { color: #57758b; }
-    .meta-value { color: #8ba7b9; }
-
     .chart-divider {
       height: 1px;
       margin: 12px 22px 0;
       background: linear-gradient(90deg, transparent, rgba(94, 158, 197, 0.18), transparent);
     }
-    .chart {
-      width: 100%;
-      height: 350px;
-    }
-    .full-width .chart { height: 390px; }
-
-    .footer {
-      margin-top: 18px;
-      text-align: right;
-      color: #58778e;
-      font-size: 11px;
-    }
-
+    .chart { width: 100%; height: 430px; }
+    #baiChart { height: 390px; }
+    .footer { margin-top: 18px; text-align: right; color: #58778e; font-size: 11px; }
     @media (max-width: 1050px) {
-      .market-grid { grid-template-columns: 1fr; }
-      .market-card.full-width { grid-column: auto; }
       .card-head { flex-direction: column; }
       .range-buttons { justify-content: flex-start; }
-      .quote-row { align-items: flex-start; }
+      .quote-grid { grid-template-columns: 1fr; }
+      .quote-tile { border-right: 0; border-bottom: 1px solid rgba(89, 151, 190, 0.13); }
+      .quote-tile:last-child { border-bottom: 0; }
       .quote-meta { text-align: left; }
-      .chart, .full-width .chart { height: 340px; }
+      .chart, #baiChart { height: 360px; }
     }
-
     @media (max-width: 620px) {
       .dashboard { width: 100%; padding: 15px; }
       .header h1 { font-size: 22px; letter-spacing: 1.5px; }
-      .card-head, .quote-row { padding-left: 16px; padding-right: 16px; }
+      .card-head, .single-quote-row { padding-left: 16px; padding-right: 16px; }
+      .quote-grid { margin-left: 16px; margin-right: 16px; }
       .chart-divider { margin-left: 16px; margin-right: 16px; }
       .metric-title { font-size: 20px; }
-      .metric-value { font-size: 39px; }
+      .metric-value { font-size: 32px; }
+      .single-quote-main .metric-value { font-size: 39px; }
       .quote-meta { grid-template-columns: auto 1fr; width: 100%; }
     }
   </style>
@@ -248,88 +193,81 @@
       航空租赁市场监测
       <span class="status-badge" id="statusBadge">LOADING</span>
     </div>
-    <div class="last-update">Last Update: <span id="lastUpdate">Loading...</span></div>
+    <div class="last-update">Last Update: <span id="lastUpdate">Loading...</span> · 北京时间</div>
   </div>
 
   <div class="market-grid">
-    <!-- Brent -->
     <section class="market-card">
       <div class="card-head">
         <div class="identity">
           <div class="identity-top">
-            <span class="ticker">BZ=F</span>
-            <span class="asset-tag">ENERGY · CRUDE OIL</span>
-            <span class="data-status" id="brentStatus">LIVE</span>
+            <span class="ticker">MARKET PRICES</span>
+            <span class="asset-tag">ENERGY · AVIATION FUEL · PRECIOUS METALS</span>
           </div>
-          <h2 class="metric-title">Brent Crude</h2>
-          <div class="metric-description">Brent Crude Oil Last Day Financial Futures · Yahoo Finance BZ=F</div>
+          <h2 class="metric-title">Reference Market Prices</h2>
+          <div class="metric-description">Brent Crude · Singapore Jet Kerosene · Gold Spot XAU/USD</div>
         </div>
         <div class="range-buttons">
-          <button class="range-btn" data-chart="brent" data-range="1M">1M</button>
-          <button class="range-btn" data-chart="brent" data-range="3M">3M</button>
-          <button class="range-btn" data-chart="brent" data-range="6M">6M</button>
-          <button class="range-btn active" data-chart="brent" data-range="1Y">1Y</button>
-          <button class="range-btn" data-chart="brent" data-range="ALL">ALL</button>
+          <button class="range-btn" data-chart="market" data-range="1M">1M</button>
+          <button class="range-btn" data-chart="market" data-range="3M">3M</button>
+          <button class="range-btn" data-chart="market" data-range="6M">6M</button>
+          <button class="range-btn active" data-chart="market" data-range="1Y">1Y</button>
+          <button class="range-btn" data-chart="market" data-range="ALL">ALL</button>
         </div>
       </div>
-      <div class="quote-row">
-        <div class="quote-main">
-          <div class="price-line">
-            <span class="metric-value" id="brentValue">--</span>
-            <span class="metric-unit">USD/bbl</span>
+
+      <div class="quote-grid">
+        <div class="quote-tile">
+          <div class="quote-name-row">
+            <span class="quote-name">Brent Crude</span>
+            <span class="quote-code">BZ=F</span>
+            <span class="data-status" id="brentStatus">--</span>
           </div>
+          <div class="price-line"><span class="metric-value" id="brentValue">--</span><span class="metric-unit">USD/bbl</span></div>
           <div class="metric-change neutral" id="brentChange">--</div>
+          <div class="quote-details">
+            <span class="meta-label">LATEST</span><span class="meta-value" id="brentDate">--</span>
+            <span class="meta-label">FREQUENCY</span><span class="meta-value" id="brentFrequency">--</span>
+            <span class="meta-label">SOURCE</span><span class="meta-value" id="brentSource">--</span>
+          </div>
         </div>
-        <div class="quote-meta">
-          <span class="meta-label">LATEST</span><span class="meta-value" id="brentDate">--</span>
-          <span class="meta-label">FREQUENCY</span><span class="meta-value" id="brentFrequency">Daily</span>
-          <span class="meta-label">SOURCE</span><span class="meta-value" id="brentSource">--</span>
-        </div>
-      </div>
-      <div class="chart-divider"></div>
-      <div id="brentChart" class="chart"></div>
-    </section>
 
-    <!-- Singapore Jet Kerosene -->
-    <section class="market-card">
-      <div class="card-head">
-        <div class="identity">
-          <div class="identity-top">
-            <span class="ticker">FOB SINGAPORE</span>
-            <span class="asset-tag">AVIATION FUEL</span>
-            <span class="data-status" id="jetStatus">LIVE</span>
+        <div class="quote-tile">
+          <div class="quote-name-row">
+            <span class="quote-name">Singapore Jet Kerosene</span>
+            <span class="quote-code">FOB SINGAPORE</span>
+            <span class="data-status" id="jetStatus">--</span>
           </div>
-          <h2 class="metric-title">Singapore Jet Kerosene</h2>
-          <div class="metric-description">新加坡航煤公开市场参考价 · Indicative FOB Singapore mid</div>
-        </div>
-        <div class="range-buttons">
-          <button class="range-btn" data-chart="jet" data-range="1M">1M</button>
-          <button class="range-btn" data-chart="jet" data-range="3M">3M</button>
-          <button class="range-btn" data-chart="jet" data-range="6M">6M</button>
-          <button class="range-btn active" data-chart="jet" data-range="1Y">1Y</button>
-          <button class="range-btn" data-chart="jet" data-range="ALL">ALL</button>
-        </div>
-      </div>
-      <div class="quote-row">
-        <div class="quote-main">
-          <div class="price-line">
-            <span class="metric-value" id="jetValue">--</span>
-            <span class="metric-unit">USD/bbl</span>
-          </div>
+          <div class="price-line"><span class="metric-value" id="jetValue">--</span><span class="metric-unit">USD/bbl</span></div>
           <div class="metric-change neutral" id="jetChange">--</div>
+          <div class="quote-details">
+            <span class="meta-label">LATEST</span><span class="meta-value" id="jetDate">--</span>
+            <span class="meta-label">FREQUENCY</span><span class="meta-value" id="jetFrequency">--</span>
+            <span class="meta-label">SOURCE</span><span class="meta-value" id="jetSource">--</span>
+          </div>
         </div>
-        <div class="quote-meta">
-          <span class="meta-label">LATEST</span><span class="meta-value" id="jetDate">--</span>
-          <span class="meta-label">FREQUENCY</span><span class="meta-value" id="jetFrequency">Daily</span>
-          <span class="meta-label">SOURCE</span><span class="meta-value" id="jetSource">--</span>
+
+        <div class="quote-tile">
+          <div class="quote-name-row">
+            <span class="quote-name">Gold Spot</span>
+            <span class="quote-code">XAU/USD</span>
+            <span class="data-status" id="goldStatus">--</span>
+          </div>
+          <div class="price-line"><span class="metric-value" id="goldValue">--</span><span class="metric-unit">USD/oz</span></div>
+          <div class="metric-change neutral" id="goldChange">--</div>
+          <div class="quote-details">
+            <span class="meta-label">LATEST</span><span class="meta-value" id="goldDate">--</span>
+            <span class="meta-label">FREQUENCY</span><span class="meta-value" id="goldFrequency">30m checks</span>
+            <span class="meta-label">SOURCE</span><span class="meta-value" id="goldSource">Investing.com</span>
+          </div>
         </div>
       </div>
+
       <div class="chart-divider"></div>
-      <div id="jetChart" class="chart"></div>
+      <div id="marketChart" class="chart"></div>
     </section>
 
-    <!-- BAI00 -->
-    <section class="market-card full-width">
+    <section class="market-card">
       <div class="card-head">
         <div class="identity">
           <div class="identity-top">
@@ -348,12 +286,9 @@
           <button class="range-btn" data-chart="bai" data-range="ALL">ALL</button>
         </div>
       </div>
-      <div class="quote-row">
-        <div class="quote-main">
-          <div class="price-line">
-            <span class="metric-value" id="baiValue">--</span>
-            <span class="metric-unit">INDEX</span>
-          </div>
+      <div class="single-quote-row">
+        <div class="single-quote-main">
+          <div class="price-line"><span class="metric-value" id="baiValue">--</span><span class="metric-unit">INDEX</span></div>
           <div class="metric-change neutral" id="baiChange">--</div>
         </div>
         <div class="quote-meta">
@@ -367,19 +302,17 @@
     </section>
   </div>
 
-  <div class="footer">Data source: Yahoo Finance · Public FOB Singapore jet/kerosene archive · TAC Index / Baltic Exchange</div>
+  <div class="footer">Data source: Yahoo Finance · Public Singapore jet/kerosene sources · Investing.com XAU/USD · TAC Index / Baltic Exchange</div>
 </div>
 
 <script>
   const charts = {
-    brent: echarts.init(document.getElementById("brentChart")),
-    jet: echarts.init(document.getElementById("jetChart")),
+    market: echarts.init(document.getElementById("marketChart")),
     bai: echarts.init(document.getElementById("baiChart"))
   };
 
   const states = {
-    brent: { range: "1Y", latest: null },
-    jet: { range: "1Y", latest: null },
+    market: { range: "1Y", latest: null },
     bai: { range: "1Y", latest: null }
   };
 
@@ -403,9 +336,16 @@
         hour: "2-digit", minute: "2-digit", hour12: false,
         timeZone: "Asia/Shanghai"
       });
-    } catch {
-      return isoString;
-    }
+    } catch { return isoString; }
+  }
+
+  function latestTimestampString(...values) {
+    const valid = values
+      .filter(Boolean)
+      .map(v => ({ raw: v, ts: new Date(v).getTime() }))
+      .filter(x => Number.isFinite(x.ts))
+      .sort((a, b) => b.ts - a.ts);
+    return valid.length ? valid[0].raw : null;
   }
 
   function toSeries(data) {
@@ -455,20 +395,14 @@
     const chart = charts[chartKey];
     const latest = states[chartKey].latest;
     states[chartKey].range = range;
-
     document.querySelectorAll(`.range-btn[data-chart="${chartKey}"]`).forEach(btn => {
       btn.classList.toggle("active", btn.dataset.range === range);
     });
-
     if (!latest) return;
     if (range === "ALL") {
       chart.dispatchAction({ type: "dataZoom", start: 0, end: 100 });
     } else {
-      chart.dispatchAction({
-        type: "dataZoom",
-        startValue: rangeStart(range, latest),
-        endValue: latest
-      });
+      chart.dispatchAction({ type: "dataZoom", startValue: rangeStart(range, latest), endValue: latest });
     }
   }
 
@@ -478,28 +412,16 @@
       boundaryGap: false,
       axisLine: { lineStyle: { color: "#334e63" } },
       axisTick: { show: false },
-      axisLabel: {
-        color: "#718da1",
-        hideOverlap: true,
-        formatter: value => formatDate(value)
-      },
+      axisLabel: { color: "#718da1", hideOverlap: true, formatter: value => formatDate(value) },
       splitLine: { show: false }
     };
   }
 
   function commonDataZoom() {
     return [
+      { type: "inside", filterMode: "none", zoomOnMouseWheel: true, moveOnMouseMove: true, moveOnMouseWheel: false },
       {
-        type: "inside",
-        filterMode: "none",
-        zoomOnMouseWheel: true,
-        moveOnMouseMove: true,
-        moveOnMouseWheel: false
-      },
-      {
-        type: "slider",
-        height: 18,
-        bottom: 9,
+        type: "slider", height: 18, bottom: 9,
         borderColor: "rgba(70, 193, 255, 0.10)",
         backgroundColor: "rgba(4, 12, 20, 0.30)",
         fillerColor: "rgba(70, 193, 255, 0.13)",
@@ -510,45 +432,67 @@
     ];
   }
 
-  function priceChartOption(seriesName, seriesData, unit) {
+  function marketChartOption(brentSeries, jetSeries, goldSeries) {
     return {
       animation: true,
+      color: ["#4fc3ff", "#ff9f43", "#ffd166"],
+      legend: {
+        top: 12,
+        left: "center",
+        textStyle: { color: "#9eb7c8", fontSize: 11 },
+        itemWidth: 24,
+        itemHeight: 3,
+        data: ["Brent Crude", "Singapore Jet Kerosene", "Gold XAU/USD"]
+      },
       tooltip: {
         trigger: "axis",
         axisPointer: { type: "cross" },
-        backgroundColor: "rgba(6, 17, 29, 0.95)",
+        backgroundColor: "rgba(6, 17, 29, 0.96)",
         borderColor: "rgba(70, 193, 255, 0.30)",
         textStyle: { color: "#dceef8" },
         formatter: params => {
           if (!params || !params.length) return "";
-          const item = params[0];
-          return `<strong>${formatDate(item.value[0])}</strong><br>${item.marker}${seriesName}: $${Number(item.value[1]).toFixed(2)}`;
+          const date = formatDate(params[0].value[0]);
+          const rows = params.map(item => {
+            const unit = item.seriesName === "Gold XAU/USD" ? "USD/oz" : "USD/bbl";
+            return `${item.marker}${item.seriesName}: $${Number(item.value[1]).toFixed(2)} ${unit}`;
+          });
+          return `<strong>${date}</strong><br>${rows.join("<br>")}`;
         }
       },
-      grid: { left: 62, right: 22, top: 23, bottom: 57 },
+      grid: { left: 68, right: 78, top: 58, bottom: 58 },
       xAxis: commonXAxis(),
-      yAxis: {
-        type: "value",
-        name: unit,
-        scale: true,
-        nameTextStyle: { color: "#617e92" },
-        axisLabel: { color: "#718da1" },
-        axisLine: { show: false },
-        axisTick: { show: false },
-        splitLine: { lineStyle: { color: "rgba(130,160,180,0.08)" } }
-      },
+      yAxis: [
+        {
+          type: "value", name: "Energy · USD/bbl", scale: true, position: "left",
+          nameTextStyle: { color: "#617e92" }, axisLabel: { color: "#718da1" },
+          axisLine: { show: false }, axisTick: { show: false },
+          splitLine: { lineStyle: { color: "rgba(130,160,180,0.08)" } }
+        },
+        {
+          type: "value", name: "Gold · USD/oz", scale: true, position: "right",
+          nameTextStyle: { color: "#8d8158" }, axisLabel: { color: "#9c9168" },
+          axisLine: { show: false }, axisTick: { show: false }, splitLine: { show: false }
+        }
+      ],
       dataZoom: commonDataZoom(),
-      series: [{
-        name: seriesName,
-        type: "line",
-        data: seriesData,
-        smooth: false,
-        connectNulls: true,
-        showSymbol: false,
-        lineStyle: { width: 2.5 },
-        areaStyle: { opacity: 0.045 },
-        emphasis: { focus: "series" }
-      }]
+      series: [
+        {
+          name: "Brent Crude", type: "line", yAxisIndex: 0, data: brentSeries,
+          smooth: false, connectNulls: true, showSymbol: false,
+          lineStyle: { width: 2.5 }, emphasis: { focus: "series" }
+        },
+        {
+          name: "Singapore Jet Kerosene", type: "line", yAxisIndex: 0, data: jetSeries,
+          smooth: false, connectNulls: true, showSymbol: false,
+          lineStyle: { width: 2.5 }, emphasis: { focus: "series" }
+        },
+        {
+          name: "Gold XAU/USD", type: "line", yAxisIndex: 1, data: goldSeries,
+          smooth: false, connectNulls: true, showSymbol: false,
+          lineStyle: { width: 2.3 }, emphasis: { focus: "series" }
+        }
+      ]
     };
   }
 
@@ -570,25 +514,15 @@
       grid: { left: 62, right: 22, top: 23, bottom: 57 },
       xAxis: commonXAxis(),
       yAxis: {
-        type: "value",
-        name: "Index",
-        scale: true,
-        nameTextStyle: { color: "#617e92" },
-        axisLabel: { color: "#718da1" },
-        axisLine: { show: false },
-        axisTick: { show: false },
+        type: "value", name: "Index", scale: true,
+        nameTextStyle: { color: "#617e92" }, axisLabel: { color: "#718da1" },
+        axisLine: { show: false }, axisTick: { show: false },
         splitLine: { lineStyle: { color: "rgba(130,160,180,0.08)" } }
       },
       dataZoom: commonDataZoom(),
       series: [{
-        name: "BAI00",
-        type: "line",
-        data: seriesData,
-        smooth: false,
-        connectNulls: true,
-        showSymbol: false,
-        lineStyle: { width: 2.5 },
-        areaStyle: { opacity: 0.055 }
+        name: "BAI00", type: "line", data: seriesData, smooth: false,
+        connectNulls: true, showSymbol: false, lineStyle: { width: 2.5 }, areaStyle: { opacity: 0.055 }
       }]
     };
   }
@@ -596,117 +530,118 @@
   function setDatasetStatus(elementId, status) {
     const el = document.getElementById(elementId);
     el.textContent = status || "--";
-    if (status !== "LIVE") {
+    const healthy = ["LIVE", "DELAYED", "INVESTING_PAGE", "LATEST_DAILY_CLOSE", "DAILY_CLOSE"].includes(status);
+    if (!healthy) {
       el.style.color = "#ffd47b";
       el.style.borderColor = "rgba(255, 212, 123, 0.25)";
       el.style.background = "rgba(116, 80, 11, 0.10)";
     }
   }
 
-  function setPriceValue(id, value, isCurrency) {
+  function setPriceValue(id, value, decimals = 2) {
     const el = document.getElementById(id);
-    if (!Number.isFinite(value)) {
-      el.textContent = "--";
-      return;
-    }
-    el.textContent = isCurrency ? `$${value.toFixed(2)}` : value.toLocaleString();
+    el.textContent = Number.isFinite(value) ? `$${value.toFixed(decimals)}` : "--";
   }
 
-  function loadInstrument(key, dataset, config) {
+  function fillPriceTile(prefix, dataset, options = {}) {
+    if (!dataset) return;
+    const data = dataset.data || [];
+    if (!data.length) return;
+    const latestItem = data[data.length - 1];
+    const quote = dataset.latest_quote || null;
+    const quotePrice = Number(quote?.price);
+    const hasQuote = Number.isFinite(quotePrice) && quote?.timestamp;
+    const latestValue = hasQuote ? quotePrice : Number(latestItem.value);
+    setPriceValue(`${prefix}Value`, latestValue);
+
+    if (hasQuote) {
+      const base = Number(latestItem.value);
+      const change = Number.isFinite(base) && base !== 0 ? (quotePrice / base - 1) * 100 : null;
+      updateChange(`${prefix}Change`, change, options.changePeriod || "DoD");
+      document.getElementById(`${prefix}Date`).textContent = `${formatUpdatedAt(quote.timestamp)} BJT`;
+      document.getElementById(`${prefix}Frequency`).textContent = options.quoteFrequency || dataset.quote_frequency || dataset.frequency || "--";
+      document.getElementById(`${prefix}Source`).textContent = dataset.source || "--";
+      setDatasetStatus(`${prefix}Status`, quote.quote_status || dataset.status || "LIVE");
+    } else {
+      updateChange(`${prefix}Change`, getChange(data), options.changePeriod || "DoD");
+      document.getElementById(`${prefix}Date`).textContent = latestItem.date || "--";
+      document.getElementById(`${prefix}Frequency`).textContent = options.frequency || dataset.frequency || "--";
+      document.getElementById(`${prefix}Source`).textContent = dataset.source || "--";
+      setDatasetStatus(`${prefix}Status`, dataset.status || "--");
+    }
+  }
+
+  function loadBai(dataset) {
     const data = dataset?.data || [];
     const series = toSeries(data);
     if (!series.length) return;
+    const latest = data[data.length - 1];
+    states.bai.latest = series[series.length - 1][0];
+    document.getElementById("baiValue").textContent = Number(latest.value).toLocaleString();
+    updateChange("baiChange", getChange(data), "WoW");
+    document.getElementById("baiDate").textContent = latest.date || "--";
+    document.getElementById("baiFrequency").textContent = dataset.frequency || "Weekly";
+    document.getElementById("baiSource").textContent = dataset.source || "--";
+    setDatasetStatus("baiStatus", dataset.status || "--");
+    charts.bai.setOption(baiChartOption(series), true);
+    applyRange("bai", states.bai.range);
+  }
 
-    const latestItem = data[data.length - 1];
-    const latestQuote = key === "brent" ? dataset?.latest_quote : null;
-    const quotePrice = Number(latestQuote?.price);
-    const hasQuote = Number.isFinite(quotePrice) && latestQuote?.timestamp;
-    const latestValue = hasQuote ? quotePrice : Number(latestItem.value);
-    states[key].latest = series[series.length - 1][0];
-
-    setPriceValue(config.valueId, latestValue, config.currency);
-
-    if (hasQuote) {
-      const previousClose = Number(latestItem.value);
-      const quoteChange = Number.isFinite(previousClose) && previousClose !== 0
-        ? (quotePrice / previousClose - 1) * 100
-        : null;
-      updateChange(config.changeId, quoteChange, config.changePeriod);
-      document.getElementById(config.dateId).textContent = `${formatUpdatedAt(latestQuote.timestamp)} 北京时间`;
-      document.getElementById(config.frequencyId).textContent = dataset?.quote_frequency || "1m source bars / 5m polling";
-      document.getElementById(config.sourceId).textContent = `${dataset?.source || "Yahoo Finance"} · delayed quote`;
-      setDatasetStatus(config.statusId, latestQuote?.quote_status || "DELAYED");
-    } else {
-      updateChange(config.changeId, getChange(data), config.changePeriod);
-      document.getElementById(config.dateId).textContent = latestItem.date || "--";
-      document.getElementById(config.frequencyId).textContent = dataset?.frequency || config.defaultFrequency;
-      document.getElementById(config.sourceId).textContent = dataset?.source || "--";
-      setDatasetStatus(config.statusId, dataset?.status || "--");
-    }
-
-    if (config.type === "price") {
-      charts[key].setOption(priceChartOption(config.seriesName, series, dataset?.unit || "USD/bbl"), true);
-    } else {
-      charts[key].setOption(baiChartOption(series), true);
-    }
-
-    applyRange(key, states[key].range);
+  async function fetchOptional(url) {
+    try {
+      const response = await fetch(`${url}?t=${Date.now()}`);
+      if (!response.ok) return null;
+      return await response.json();
+    } catch { return null; }
   }
 
   async function loadData() {
     try {
-      const response = await fetch(`./data/market_data.json?t=${Date.now()}`);
-      if (!response.ok) throw new Error("Unable to load market_data.json");
-      const market = await response.json();
+      const [market, gold] = await Promise.all([
+        fetchOptional("./data/market_data.json"),
+        fetchOptional("./data/gold_xauusd.json")
+      ]);
+      if (!market) throw new Error("Unable to load market_data.json");
 
-      document.getElementById("lastUpdate").textContent = formatUpdatedAt(market.updated_at);
+      const latestUpdate = latestTimestampString(market.updated_at, gold?.updated_at_bjt);
+      document.getElementById("lastUpdate").textContent = formatUpdatedAt(latestUpdate);
 
-      const datasets = [market.brent, market.jet_fuel, market.bai00];
-      const liveCount = datasets.filter(item => item?.status === "LIVE").length;
+      fillPriceTile("brent", market.brent, {
+        changePeriod: "DoD",
+        quoteFrequency: market.brent?.quote_frequency || "1m source / 5m polling"
+      });
+      fillPriceTile("jet", market.jet_fuel, {
+        changePeriod: "DoD",
+        frequency: market.jet_fuel?.frequency || "Published observations"
+      });
+      if (gold) {
+        fillPriceTile("gold", gold, {
+          changePeriod: "DoD",
+          quoteFrequency: "30m checks · daily history"
+        });
+      }
+
+      const brentSeries = toSeries(market.brent?.data || []);
+      const jetSeries = toSeries(market.jet_fuel?.data || []);
+      const goldSeries = toSeries(gold?.data || []);
+      const latestCandidates = [brentSeries, jetSeries, goldSeries]
+        .filter(s => s.length)
+        .map(s => s[s.length - 1][0]);
+      states.market.latest = latestCandidates.length ? Math.max(...latestCandidates) : null;
+      charts.market.setOption(marketChartOption(brentSeries, jetSeries, goldSeries), true);
+      applyRange("market", states.market.range);
+
+      loadBai(market.bai00);
+
+      const health = [
+        !!market.brent?.data?.length,
+        !!market.jet_fuel?.data?.length,
+        !!gold?.data?.length,
+        !!market.bai00?.data?.length
+      ];
+      const online = health.filter(Boolean).length;
       const badge = document.getElementById("statusBadge");
-      badge.textContent = liveCount === 3 ? "ALL LIVE" : `${liveCount}/3 LIVE`;
-
-      loadInstrument("brent", market.brent, {
-        type: "price",
-        seriesName: "Brent Crude",
-        valueId: "brentValue",
-        changeId: "brentChange",
-        dateId: "brentDate",
-        frequencyId: "brentFrequency",
-        sourceId: "brentSource",
-        statusId: "brentStatus",
-        currency: true,
-        changePeriod: "DoD",
-        defaultFrequency: "Daily"
-      });
-
-      loadInstrument("jet", market.jet_fuel, {
-        type: "price",
-        seriesName: "Singapore Jet Kerosene",
-        valueId: "jetValue",
-        changeId: "jetChange",
-        dateId: "jetDate",
-        frequencyId: "jetFrequency",
-        sourceId: "jetSource",
-        statusId: "jetStatus",
-        currency: true,
-        changePeriod: "DoD",
-        defaultFrequency: "Daily"
-      });
-
-      loadInstrument("bai", market.bai00, {
-        type: "index",
-        seriesName: "BAI00",
-        valueId: "baiValue",
-        changeId: "baiChange",
-        dateId: "baiDate",
-        frequencyId: "baiFrequency",
-        sourceId: "baiSource",
-        statusId: "baiStatus",
-        currency: false,
-        changePeriod: "WoW",
-        defaultFrequency: "Weekly"
-      });
+      badge.textContent = online === 4 ? "4/4 ONLINE" : `${online}/4 ONLINE`;
     } catch (error) {
       console.error("Dashboard data error:", error);
       document.getElementById("lastUpdate").textContent = "DATA ERROR";
@@ -719,18 +654,12 @@
   }
 
   document.querySelectorAll(".range-btn").forEach(button => {
-    button.addEventListener("click", () => {
-      applyRange(button.dataset.chart, button.dataset.range);
-    });
+    button.addEventListener("click", () => applyRange(button.dataset.chart, button.dataset.range));
   });
 
   loadData();
-  // Keep an open dashboard fresh without requiring a manual browser refresh.
   setInterval(loadData, 60000);
-
-  window.addEventListener("resize", () => {
-    Object.values(charts).forEach(chart => chart.resize());
-  });
+  window.addEventListener("resize", () => Object.values(charts).forEach(chart => chart.resize()));
 </script>
 </body>
 </html>
