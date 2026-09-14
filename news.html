@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aircraft Leasing News Intelligence</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; }
+    body {
+      background: radial-gradient(circle at 50% 0%, #13243a 0%, #08111d 38%, #030811 100%);
+      color: #eaf7ff;
+      font-family: Arial, "Microsoft YaHei", sans-serif;
+    }
+    a { color: inherit; }
+    .page { width: 96%; max-width: 1700px; margin: 0 auto; padding: 22px 24px 40px; }
+    .topbar { display: flex; justify-content: space-between; gap: 20px; align-items: flex-start; margin-bottom: 18px; }
+    .eyebrow { color: #66c8ff; font-size: 12px; font-weight: 800; letter-spacing: 1.5px; }
+    h1 { margin: 6px 0 5px; font-size: 29px; letter-spacing: 1.2px; }
+    .sub { color: #7192a8; font-size: 13px; line-height: 1.55; }
+    .back {
+      text-decoration: none; border: 1px solid rgba(70,193,255,.28); border-radius: 8px;
+      padding: 9px 13px; color: #bfe9ff; background: rgba(50,130,183,.12); font-size: 12px;
+    }
+    .stats { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 10px; margin: 16px 0; }
+    .stat { background: rgba(9,25,43,.9); border: 1px solid rgba(70,193,255,.18); border-radius: 10px; padding: 13px 15px; }
+    .stat-label { color: #66879d; font-size: 10px; letter-spacing: .7px; }
+    .stat-value { margin-top: 4px; font-size: 23px; font-weight: 800; }
+    .filters {
+      display: grid; grid-template-columns: 1.6fr repeat(6,minmax(130px,1fr)); gap: 8px;
+      padding: 13px; background: rgba(8,23,39,.94); border: 1px solid rgba(70,193,255,.2); border-radius: 12px;
+      position: sticky; top: 8px; z-index: 5; box-shadow: 0 10px 24px rgba(0,0,0,.18);
+    }
+    input, select, button {
+      width: 100%; border: 1px solid rgba(94,158,197,.22); background: #071525; color: #dceef8;
+      border-radius: 7px; padding: 9px 10px; font-size: 12px; outline: none;
+    }
+    input:focus, select:focus { border-color: rgba(70,193,255,.65); }
+    button { cursor: pointer; color: #8fcff0; }
+    .toolbar { display:flex; justify-content:space-between; align-items:center; gap:12px; margin:14px 2px 9px; color:#708fa5; font-size:12px; }
+    .toolbar-right { display:flex; gap:8px; align-items:center; }
+    .toolbar-right select { width: 150px; }
+    .list { display: grid; gap: 10px; }
+    .story {
+      background: linear-gradient(180deg, rgba(11,28,47,.96), rgba(7,20,35,.95));
+      border: 1px solid rgba(70,193,255,.18); border-radius: 12px; padding: 15px 17px;
+    }
+    .story.critical { border-color: rgba(255,113,141,.38); box-shadow: inset 3px 0 0 rgba(255,113,141,.72); }
+    .story-head { display: grid; grid-template-columns: 66px 1fr; gap: 13px; align-items: start; }
+    .score {
+      width: 58px; height: 58px; border-radius: 11px; display:flex; flex-direction:column; align-items:center; justify-content:center;
+      background: rgba(70,193,255,.08); border: 1px solid rgba(70,193,255,.25);
+    }
+    .score strong { font-size: 23px; line-height: 1; }
+    .score span { color:#66879d; font-size:9px; margin-top:4px; }
+    .meta { display:flex; gap:6px; flex-wrap:wrap; align-items:center; margin-bottom:6px; }
+    .tag { padding:3px 7px; border-radius:999px; border:1px solid rgba(103,158,192,.24); color:#87aabd; font-size:10px; }
+    .tag.category { color:#7ed8ff; border-color:rgba(70,193,255,.3); }
+    .tag.priority { color:#ffd77c; border-color:rgba(255,210,100,.28); background:rgba(128,91,12,.09); }
+    .tag.macro { color:#b4a5ff; border-color:rgba(168,143,255,.27); }
+    .tag.critical { color:#ff9db0; border-color:rgba(255,113,141,.35); background:rgba(130,31,50,.14); }
+    .title { margin:0; font-size:17px; line-height:1.4; }
+    .title a { text-decoration:none; }
+    .title a:hover { color:#73d0ff; }
+    .summary { margin:9px 0 0; color:#c2d8e5; line-height:1.6; font-size:13px; }
+    .why { margin:8px 0 0; padding:8px 10px; border-left:2px solid rgba(70,193,255,.45); color:#8db3c8; background:rgba(26,84,118,.08); font-size:12px; line-height:1.55; }
+    .critical-reason { margin-top:7px; color:#ffb4c2; font-size:12px; }
+    .foot { display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; margin-top:10px; color:#617f93; font-size:10px; }
+    .source-links a { color:#84c9ee; text-decoration:none; margin-right:8px; }
+    .empty { padding:50px 15px; text-align:center; color:#6e8ba0; border:1px dashed rgba(94,158,197,.22); border-radius:12px; }
+    .notice { margin-top:18px; color:#58778e; font-size:10px; text-align:right; }
+    @media (max-width: 1250px) { .filters { grid-template-columns: repeat(4,minmax(0,1fr)); } .filters .search { grid-column: span 2; } }
+    @media (max-width: 760px) {
+      .page { width:100%; padding:15px; } .topbar { flex-direction:column; } h1 { font-size:22px; }
+      .stats { grid-template-columns: repeat(2,1fr); } .filters { position:static; grid-template-columns:1fr 1fr; }
+      .filters .search { grid-column: span 2; } .story-head { grid-template-columns:54px 1fr; } .score { width:48px; height:48px; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+  <div class="topbar">
+    <div>
+      <div class="eyebrow">AVIATION LEASING INTELLIGENCE</div>
+      <h1>Aircraft Leasing News Feed</h1>
+      <div class="sub">120日新闻档案 · DeepSeek语义摘要 + 航空租赁重要性评分 · 重点客户/潜在客户及宏观传导优先</div>
+    </div>
+    <a class="back" href="./">← 返回市场看板</a>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><div class="stat-label">FILTERED STORIES</div><div class="stat-value" id="statTotal">--</div></div>
+    <div class="stat"><div class="stat-label">CRITICAL</div><div class="stat-value" id="statCritical">--</div></div>
+    <div class="stat"><div class="stat-label">PRIORITY CLIENT / PROSPECT</div><div class="stat-value" id="statPriority">--</div></div>
+    <div class="stat"><div class="stat-label">MACRO-RELATED</div><div class="stat-value" id="statMacro">--</div></div>
+  </div>
+
+  <div class="filters">
+    <input class="search" id="search" placeholder="搜索标题、摘要、公司、机型…">
+    <input id="dateFrom" type="date" title="起始日期">
+    <input id="dateTo" type="date" title="结束日期">
+    <select id="source"><option value="">全部来源</option></select>
+    <select id="category"><option value="">全部类别</option></select>
+    <select id="region"><option value="">全部地区</option></select>
+    <select id="company"><option value="">全部公司/实体</option></select>
+    <select id="aircraft"><option value="">全部机型</option></select>
+    <select id="critical"><option value="">全部重要性</option><option value="critical">仅 Critical</option><option value="priority">仅重点客户/潜在客户</option><option value="macro">仅宏观相关</option></select>
+    <button id="reset">重置筛选</button>
+  </div>
+
+  <div class="toolbar">
+    <div id="generated">Loading…</div>
+    <div class="toolbar-right"><span>排序</span><select id="sort"><option value="importance">重要性优先</option><option value="newest">最新优先</option></select></div>
+  </div>
+
+  <div class="list" id="list"><div class="empty">正在加载新闻数据…</div></div>
+  <div class="notice">仅使用公开标题、公开摘要/元数据与来源链接；不抓取或转载付费新闻正文。</div>
+</div>
+
+<script>
+  const DATA_URL = "data/news_feed_archive.json";
+  let allStories = [];
+  let generatedAt = null;
+
+  const $ = id => document.getElementById(id);
+  const esc = value => String(value ?? "").replace(/[&<>\"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',"'":'&#39;'}[c]));
+  const dateOnly = value => value ? new Date(value).toISOString().slice(0,10) : "";
+  const fmtTime = value => {
+    if (!value) return "--";
+    try { return new Date(value).toLocaleString("zh-CN", {timeZone:"Asia/Shanghai", year:"numeric", month:"2-digit", day:"2-digit", hour:"2-digit", minute:"2-digit", hour12:false}); }
+    catch { return value; }
+  };
+
+  function uniqueSorted(values) {
+    return [...new Set(values.filter(Boolean))].sort((a,b) => String(a).localeCompare(String(b), "zh-CN"));
+  }
+
+  function fillSelect(id, values) {
+    const select = $(id);
+    const first = select.options[0].outerHTML;
+    select.innerHTML = first + uniqueSorted(values).map(v => `<option value="${esc(v)}">${esc(v)}</option>`).join("");
+  }
+
+  function storyCompanies(story) {
+    const p = (story.priority_matches || []).map(x => x.name);
+    return uniqueSorted([...(story.entities || []), ...p]);
+  }
+
+  function hydrateFilters() {
+    fillSelect("source", allStories.flatMap(s => (s.sources || []).map(x => x.name)));
+    fillSelect("category", allStories.map(s => s.category));
+    fillSelect("region", allStories.map(s => s.region));
+    fillSelect("company", allStories.flatMap(storyCompanies));
+    fillSelect("aircraft", allStories.flatMap(s => s.aircraft_tags || []));
+  }
+
+  function filterStories() {
+    const q = $("search").value.trim().toLowerCase();
+    const from = $("dateFrom").value;
+    const to = $("dateTo").value;
+    const source = $("source").value;
+    const category = $("category").value;
+    const region = $("region").value;
+    const company = $("company").value;
+    const aircraft = $("aircraft").value;
+    const criticalMode = $("critical").value;
+
+    let rows = allStories.filter(story => {
+      const text = [story.title, story.summary_zh, story.why_it_matters_zh, ...(story.entities || []), ...storyCompanies(story), ...(story.aircraft_tags || []), ...(story.macro_tags || [])].join(" ").toLowerCase();
+      const d = dateOnly(story.published_at);
+      if (q && !text.includes(q)) return false;
+      if (from && d < from) return false;
+      if (to && d > to) return false;
+      if (source && !(story.sources || []).some(x => x.name === source)) return false;
+      if (category && story.category !== category) return false;
+      if (region && story.region !== region) return false;
+      if (company && !storyCompanies(story).includes(company)) return false;
+      if (aircraft && !(story.aircraft_tags || []).includes(aircraft)) return false;
+      if (criticalMode === "critical" && !story.critical) return false;
+      if (criticalMode === "priority" && !(story.priority_matches || []).length) return false;
+      if (criticalMode === "macro" && !story.score_components?.macro_related) return false;
+      return true;
+    });
+
+    const sort = $("sort").value;
+    rows.sort((a,b) => sort === "newest"
+      ? new Date(b.published_at) - new Date(a.published_at) || (b.importance_score || 0) - (a.importance_score || 0)
+      : (b.importance_score || 0) - (a.importance_score || 0) || new Date(b.published_at) - new Date(a.published_at));
+    render(rows);
+  }
+
+  function badge(text, cls="") { return `<span class="tag ${cls}">${esc(text)}</span>`; }
+
+  function render(rows) {
+    $("statTotal").textContent = rows.length;
+    $("statCritical").textContent = rows.filter(x => x.critical).length;
+    $("statPriority").textContent = rows.filter(x => (x.priority_matches || []).length).length;
+    $("statMacro").textContent = rows.filter(x => x.score_components?.macro_related).length;
+
+    if (!rows.length) {
+      $("list").innerHTML = `<div class="empty">没有符合当前筛选条件的新闻。</div>`;
+      return;
+    }
+
+    $("list").innerHTML = rows.map(story => {
+      const tags = [badge(story.category, "category")];
+      if (story.critical) tags.push(badge("CRITICAL", "critical"));
+      for (const p of (story.priority_matches || []).slice(0,4)) tags.push(badge(`重点 · ${p.name}`, "priority"));
+      for (const m of (story.macro_tags || []).slice(0,3)) tags.push(badge(m, "macro"));
+      for (const a of (story.aircraft_tags || []).slice(0,3)) tags.push(badge(a));
+      const sourceLinks = (story.sources || []).slice(0,6).map(src => `<a href="${esc(src.url)}" target="_blank" rel="noopener">${esc(src.name)}</a>`).join("");
+      const titleUrl = story.primary_url || story.sources?.[0]?.url || "#";
+      return `<article class="story ${story.critical ? "critical" : ""}">
+        <div class="story-head">
+          <div class="score"><strong>${esc(story.importance_score)}</strong><span>IMPORTANCE</span></div>
+          <div>
+            <div class="meta">${tags.join("")}</div>
+            <h2 class="title"><a href="${esc(titleUrl)}" target="_blank" rel="noopener">${esc(story.title)}</a></h2>
+            <div class="summary">${esc(story.summary_zh || story.title)}</div>
+            <div class="why"><strong>Why it matters for lessors：</strong>${esc(story.why_it_matters_zh || "--")}</div>
+            ${story.critical && story.critical_reason_zh ? `<div class="critical-reason">Critical：${esc(story.critical_reason_zh)}</div>` : ""}
+            <div class="foot">
+              <div>${esc(story.region || "Global/Unspecified")} · ${fmtTime(story.published_at)} · ${esc(story.source_count || 1)} source(s)</div>
+              <div class="source-links">${sourceLinks}</div>
+            </div>
+          </div>
+        </div>
+      </article>`;
+    }).join("");
+  }
+
+  async function load() {
+    try {
+      const response = await fetch(`${DATA_URL}?t=${Date.now()}`, {cache:"no-store"});
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      const data = await response.json();
+      allStories = data.stories || [];
+      generatedAt = data.generated_at;
+      $("generated").textContent = `数据生成：${fmtTime(generatedAt)}（北京时间） · ${allStories.length}条归档新闻`;
+      hydrateFilters();
+      filterStories();
+    } catch (error) {
+      console.error(error);
+      $("generated").textContent = "新闻数据加载失败";
+      $("list").innerHTML = `<div class="empty">暂时无法加载 data/news_feed_archive.json。请稍后刷新。</div>`;
+    }
+  }
+
+  ["search","dateFrom","dateTo","source","category","region","company","aircraft","critical","sort"].forEach(id => {
+    $(id).addEventListener(id === "search" ? "input" : "change", filterStories);
+  });
+  $("reset").addEventListener("click", () => {
+    ["search","dateFrom","dateTo","source","category","region","company","aircraft","critical"].forEach(id => $(id).value = "");
+    $("sort").value = "importance";
+    filterStories();
+  });
+
+  load();
+</script>
+</body>
+</html>
