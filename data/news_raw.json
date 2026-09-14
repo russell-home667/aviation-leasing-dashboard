@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-14T08:36:19Z",
+  "generated_at": "2026-09-14T08:37:59Z",
   "retention_days": 45,
   "metadata_only": true,
   "stats": {
-    "current_batch_unique": 258,
+    "current_batch_unique": 251,
     "stored_total": 110,
     "reuters_discovered_via_bing": 11,
     "by_source": {
