@@ -282,12 +282,14 @@ def dedupe(items: list[dict[str, Any]]) -> list[dict[str, Any]]:
     return list(by_key.values())
 
 
-def merge_existing(new_items: list[dict[str, Any]], retention_days: int) -> list[dict[str, Any]]:
+def merge_existing(new_items: list[dict[str, Any]], retention_days: int, retired_source_channels: set[str] | None = None) -> list[dict[str, Any]]:
+    retired_source_channels = retired_source_channels or set()
     existing = []
     if OUTPUT_PATH.exists():
         try:
             payload = json.loads(OUTPUT_PATH.read_text(encoding="utf-8"))
             existing = payload.get("items", []) if isinstance(payload, dict) else []
+            existing = [item for item in existing if item.get("source_channel") not in retired_source_channels]
         except Exception:
             pass
     all_items = dedupe(existing + new_items)
@@ -344,7 +346,8 @@ def main() -> int:
         health.append({"source_id": "bing:" + query, "name": "Bing News", "kind": "rss_search", "url": url, "ok": response is not None and error is None and len(records) > 0, "http_status": response.status_code if response is not None else None, "records": len(records), "error": error, "elapsed_seconds": round(time.time() - started, 2), "checked_at": iso(utcnow())})
 
     current_batch = dedupe(collected)
-    merged = merge_existing(current_batch, int(config.get("retention_days", 45)))
+    retired = set(config.get("retired_source_channels", []))
+    merged = merge_existing(current_batch, int(config.get("retention_days", 45)), retired)
     by_source = Counter(item.get("source", "Unknown") for item in merged)
     by_channel = Counter(item.get("source_channel", "Unknown") for item in merged)
     reuters_count = sum(1 for item in merged if item.get("source") == "Reuters")
