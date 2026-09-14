@@ -45,87 +45,34 @@
       "kind": "rss",
       "url": "https://platform.ishkaairfinance.com/Rss/News?id=1&s=5987&u=0&v=2",
       "rights_mode": "official_rss_metadata"
-    },
+    }
+  ],
+  "blocked_direct_sources": [
     {
-      "id": "aviationnews_leasing",
       "name": "Aviation News Online",
-      "kind": "aviationnews_html",
-      "url": "https://aviationnews-online.com/public/category/leasing",
-      "rights_mode": "public_listing_metadata",
-      "enabled": false,
-      "note": "GitHub-hosted runners returned HTTP 403 on 2026-09-14; use dedicated Bing News discovery queries instead."
+      "attempted_urls": [
+        "https://aviationnews-online.com/public/category/leasing",
+        "https://aviationnews-online.com/public/category/finance",
+        "https://aviationnews-online.com/public/category/airline",
+        "https://aviationnews-online.com/public/category/engine",
+        "https://aviationnews-online.com/public/category/maintenance",
+        "https://aviationnews-online.com/public/category/legal",
+        "https://aviationnews-online.com/public/category/regulatory",
+        "https://aviationnews-online.com/public/category/people"
+      ],
+      "reason": "GitHub-hosted runner returned HTTP 403 on 2026-09-14. Use dedicated Bing News RSS discovery queries for this publisher."
     },
     {
-      "id": "aviationnews_finance",
-      "name": "Aviation News Online",
-      "kind": "aviationnews_html",
-      "url": "https://aviationnews-online.com/public/category/finance",
-      "rights_mode": "public_listing_metadata",
-      "enabled": false,
-      "note": "GitHub-hosted runners returned HTTP 403 on 2026-09-14; use dedicated Bing News discovery queries instead."
-    },
-    {
-      "id": "aviationnews_airline",
-      "name": "Aviation News Online",
-      "kind": "aviationnews_html",
-      "url": "https://aviationnews-online.com/public/category/airline",
-      "rights_mode": "public_listing_metadata",
-      "enabled": false,
-      "note": "GitHub-hosted runners returned HTTP 403 on 2026-09-14; use dedicated Bing News discovery queries instead."
-    },
-    {
-      "id": "aviationnews_engine",
-      "name": "Aviation News Online",
-      "kind": "aviationnews_html",
-      "url": "https://aviationnews-online.com/public/category/engine",
-      "rights_mode": "public_listing_metadata",
-      "enabled": false,
-      "note": "GitHub-hosted runners returned HTTP 403 on 2026-09-14; use dedicated Bing News discovery queries instead."
-    },
-    {
-      "id": "aviationnews_maintenance",
-      "name": "Aviation News Online",
-      "kind": "aviationnews_html",
-      "url": "https://aviationnews-online.com/public/category/maintenance",
-      "rights_mode": "public_listing_metadata",
-      "enabled": false,
-      "note": "GitHub-hosted runners returned HTTP 403 on 2026-09-14; use dedicated Bing News discovery queries instead."
-    },
-    {
-      "id": "aviationnews_legal",
-      "name": "Aviation News Online",
-      "kind": "aviationnews_html",
-      "url": "https://aviationnews-online.com/public/category/legal",
-      "rights_mode": "public_listing_metadata",
-      "enabled": false,
-      "note": "GitHub-hosted runners returned HTTP 403 on 2026-09-14; use dedicated Bing News discovery queries instead."
-    },
-    {
-      "id": "aviationnews_regulatory",
-      "name": "Aviation News Online",
-      "kind": "aviationnews_html",
-      "url": "https://aviationnews-online.com/public/category/regulatory",
-      "rights_mode": "public_listing_metadata",
-      "enabled": false,
-      "note": "GitHub-hosted runners returned HTTP 403 on 2026-09-14; use dedicated Bing News discovery queries instead."
-    },
-    {
-      "id": "aviationnews_people",
-      "name": "Aviation News Online",
-      "kind": "aviationnews_html",
-      "url": "https://aviationnews-online.com/public/category/people",
-      "rights_mode": "public_listing_metadata",
-      "enabled": false,
-      "note": "GitHub-hosted runners returned HTTP 403 on 2026-09-14; use dedicated Bing News discovery queries instead."
-    },
-    {
-      "id": "flightglobal_rss",
       "name": "FlightGlobal",
-      "kind": "rss",
-      "url": "https://www.flightglobal.com/rss",
-      "rights_mode": "rss_metadata",
-      "enabled": false,
-      "note": "GitHub-hosted runners returned HTTP 403 on 2026-09-14; use dedicated Bing News discovery queries instead."
+      "attempted_urls": [
+        "https://www.flightglobal.com/rss"
+      ],
+      "reason": "GitHub-hosted runner returned HTTP 403 on 2026-09-14. Use dedicated Bing News RSS discovery queries for this publisher."
+    },
+    {
+      "name": "Reuters",
+      "attempted_urls": [],
+      "reason": "Do not scrape Reuters directly; discover Reuters headlines and original URLs through Bing News RSS."
     }
   ],
   "bing_news": {
