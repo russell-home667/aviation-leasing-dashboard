@@ -1,0 +1,63 @@
+name: Test News Ingestion - Step 1
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: news-ingestion-step1
+  cancel-in-progress: false
+
+jobs:
+  ingest-news:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests beautifulsoup4
+
+      - name: Fetch news metadata
+        run: python scripts/update_news_raw.py
+
+      - name: Print ingestion health summary
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          health = json.loads(Path('data/news_source_health.json').read_text(encoding='utf-8'))
+          raw = json.loads(Path('data/news_raw.json').read_text(encoding='utf-8'))
+          print(json.dumps(health['summary'], indent=2, ensure_ascii=False))
+          print(json.dumps(raw['stats'], indent=2, ensure_ascii=False))
+          print('\nFailed checks:')
+          for row in health['checks']:
+              if not row['ok']:
+                  print(f"- {row['source_id']}: {row.get('error') or '0 records'}")
+          PY
+
+      - name: Commit ingestion snapshot
+        run: |
+          if git diff --quiet -- data/news_raw.json data/news_source_health.json; then
+            echo "No news data changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/news_raw.json data/news_source_health.json
+          git commit -m "Test news ingestion sources"
+          git pull --rebase origin main
+          git push origin main
