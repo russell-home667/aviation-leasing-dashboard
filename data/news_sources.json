@@ -1,190 +1,51 @@
 {
   "schema_version": 1,
   "retention_days": 120,
-  "history_backfill_days": 120,
-  "aviationnews_backfill_max_pages": 12,
+  "history_backfill_days": 45,
+  "aviationnews_backfill_max_pages": 48,
   "request_timeout_seconds": 20,
-  "user_agent": "AviationLeasingDashboardNewsBot/1.1 (+https://github.com/russell-home667/aviation-leasing-dashboard; metadata-only)",
+  "user_agent": "AviationLeasingDashboardNewsBot/1.2 (+https://github.com/russell-home667/aviation-leasing-dashboard; metadata-only)",
   "retired_source_channels": [
     "aviationnews_bing_web_leasing",
     "aviationnews_bing_web_finance",
     "aviationnews_bing_web_lessor"
   ],
   "sources": [
-    {
-      "id": "ishka_latest_rss",
-      "name": "Ishka Airfinance",
-      "kind": "rss",
-      "url": "https://platform.ishkaairfinance.com/Rss/News?id=1&u=0&v=2",
-      "rights_mode": "official_rss_metadata"
-    },
-    {
-      "id": "ishka_aircraft_rss",
-      "name": "Ishka Airfinance",
-      "kind": "rss",
-      "url": "https://platform.ishkaairfinance.com/Rss/News?id=1&s=5981&u=0&v=2",
-      "rights_mode": "official_rss_metadata"
-    },
-    {
-      "id": "ishka_airlines_rss",
-      "name": "Ishka Airfinance",
-      "kind": "rss",
-      "url": "https://platform.ishkaairfinance.com/Rss/News?id=1&s=5982&u=0&v=2",
-      "rights_mode": "official_rss_metadata"
-    },
-    {
-      "id": "ishka_banks_capital_rss",
-      "name": "Ishka Airfinance",
-      "kind": "rss",
-      "url": "https://platform.ishkaairfinance.com/Rss/News?id=1&s=5984&u=0&v=2",
-      "rights_mode": "official_rss_metadata"
-    },
-    {
-      "id": "ishka_law_rss",
-      "name": "Ishka Airfinance",
-      "kind": "rss",
-      "url": "https://platform.ishkaairfinance.com/Rss/News?id=1&s=5986&u=0&v=2",
-      "rights_mode": "official_rss_metadata"
-    },
-    {
-      "id": "ishka_lessors_rss",
-      "name": "Ishka Airfinance",
-      "kind": "rss",
-      "url": "https://platform.ishkaairfinance.com/Rss/News?id=1&s=5987&u=0&v=2",
-      "rights_mode": "official_rss_metadata"
-    },
-    {
-      "id": "aviationnews_leasing",
-      "name": "Aviation News Online",
-      "kind": "aviationnews_html",
-      "url": "https://www.aviationnews-online.com/category/leasing",
-      "rights_mode": "public_listing_metadata"
-    },
-    {
-      "id": "aviationnews_finance",
-      "name": "Aviation News Online",
-      "kind": "aviationnews_html",
-      "url": "https://www.aviationnews-online.com/category/finance",
-      "rights_mode": "public_listing_metadata"
-    },
-    {
-      "id": "aviationnews_airline",
-      "name": "Aviation News Online",
-      "kind": "aviationnews_html",
-      "url": "https://www.aviationnews-online.com/category/airline",
-      "rights_mode": "public_listing_metadata"
-    },
-    {
-      "id": "aviationnews_engine",
-      "name": "Aviation News Online",
-      "kind": "aviationnews_html",
-      "url": "https://www.aviationnews-online.com/category/engine",
-      "rights_mode": "public_listing_metadata"
-    },
-    {
-      "id": "aviationnews_maintenance",
-      "name": "Aviation News Online",
-      "kind": "aviationnews_html",
-      "url": "https://www.aviationnews-online.com/category/maintenance",
-      "rights_mode": "public_listing_metadata"
-    },
-    {
-      "id": "aviationnews_legal",
-      "name": "Aviation News Online",
-      "kind": "aviationnews_html",
-      "url": "https://www.aviationnews-online.com/category/legal",
-      "rights_mode": "public_listing_metadata"
-    },
-    {
-      "id": "aviationnews_regulatory",
-      "name": "Aviation News Online",
-      "kind": "aviationnews_html",
-      "url": "https://www.aviationnews-online.com/category/regulatory",
-      "rights_mode": "public_listing_metadata"
-    },
-    {
-      "id": "aviationnews_people",
-      "name": "Aviation News Online",
-      "kind": "aviationnews_html",
-      "url": "https://www.aviationnews-online.com/category/people",
-      "rights_mode": "public_listing_metadata"
-    }
+    {"id":"ishka_latest_rss","name":"Ishka Airfinance","kind":"rss","url":"https://platform.ishkaairfinance.com/Rss/News?id=1&u=0&v=2","rights_mode":"official_rss_metadata"},
+    {"id":"ishka_aircraft_rss","name":"Ishka Airfinance","kind":"rss","url":"https://platform.ishkaairfinance.com/Rss/News?id=1&s=5981&u=0&v=2","rights_mode":"official_rss_metadata"},
+    {"id":"ishka_airlines_rss","name":"Ishka Airfinance","kind":"rss","url":"https://platform.ishkaairfinance.com/Rss/News?id=1&s=5982&u=0&v=2","rights_mode":"official_rss_metadata"},
+    {"id":"ishka_banks_capital_rss","name":"Ishka Airfinance","kind":"rss","url":"https://platform.ishkaairfinance.com/Rss/News?id=1&s=5984&u=0&v=2","rights_mode":"official_rss_metadata"},
+    {"id":"ishka_law_rss","name":"Ishka Airfinance","kind":"rss","url":"https://platform.ishkaairfinance.com/Rss/News?id=1&s=5986&u=0&v=2","rights_mode":"official_rss_metadata"},
+    {"id":"ishka_lessors_rss","name":"Ishka Airfinance","kind":"rss","url":"https://platform.ishkaairfinance.com/Rss/News?id=1&s=5987&u=0&v=2","rights_mode":"official_rss_metadata"},
+    {"id":"ishka_europe_rss","name":"Ishka Airfinance","kind":"rss","url":"https://platform.ishkaairfinance.com/Rss/News?id=1&r=4&u=0&v=2","rights_mode":"official_rss_metadata"},
+    {"id":"ishka_cis_rss","name":"Ishka Airfinance","kind":"rss","url":"https://platform.ishkaairfinance.com/Rss/News?id=1&r=13&u=0&v=2","rights_mode":"official_rss_metadata"},
+    {"id":"ishka_middle_east_rss","name":"Ishka Airfinance","kind":"rss","url":"https://platform.ishkaairfinance.com/Rss/News?id=1&r=14&u=0&v=2","rights_mode":"official_rss_metadata"},
+    {"id":"ishka_africa_rss","name":"Ishka Airfinance","kind":"rss","url":"https://platform.ishkaairfinance.com/Rss/News?id=1&r=11&u=0&v=2","rights_mode":"official_rss_metadata"},
+    {"id":"ishka_china_rss","name":"Ishka Airfinance","kind":"rss","url":"https://platform.ishkaairfinance.com/Rss/News?id=1&r=16&u=0&v=2","rights_mode":"official_rss_metadata"},
+    {"id":"ishka_south_asia_rss","name":"Ishka Airfinance","kind":"rss","url":"https://platform.ishkaairfinance.com/Rss/News?id=1&r=10&u=0&v=2","rights_mode":"official_rss_metadata"},
+    {"id":"ishka_southeast_asia_rss","name":"Ishka Airfinance","kind":"rss","url":"https://platform.ishkaairfinance.com/Rss/News?id=1&r=15&u=0&v=2","rights_mode":"official_rss_metadata"},
+    {"id":"ishka_northeast_asia_rss","name":"Ishka Airfinance","kind":"rss","url":"https://platform.ishkaairfinance.com/Rss/News?id=1&r=17&u=0&v=2","rights_mode":"official_rss_metadata"},
+    {"id":"ishka_oceania_rss","name":"Ishka Airfinance","kind":"rss","url":"https://platform.ishkaairfinance.com/Rss/News?id=1&r=12&u=0&v=2","rights_mode":"official_rss_metadata"},
+    {"id":"ishka_north_america_rss","name":"Ishka Airfinance","kind":"rss","url":"https://platform.ishkaairfinance.com/Rss/News?id=1&r=6&u=0&v=2","rights_mode":"official_rss_metadata"},
+    {"id":"ishka_latin_america_rss","name":"Ishka Airfinance","kind":"rss","url":"https://platform.ishkaairfinance.com/Rss/News?id=1&r=7&u=0&v=2","rights_mode":"official_rss_metadata"},
+    {"id":"aviationnews_leasing","name":"Aviation News Online","kind":"aviationnews_html","url":"https://www.aviationnews-online.com/category/leasing","rights_mode":"public_listing_metadata"},
+    {"id":"aviationnews_finance","name":"Aviation News Online","kind":"aviationnews_html","url":"https://www.aviationnews-online.com/category/finance","rights_mode":"public_listing_metadata"},
+    {"id":"aviationnews_airline","name":"Aviation News Online","kind":"aviationnews_html","url":"https://www.aviationnews-online.com/category/airline","rights_mode":"public_listing_metadata"},
+    {"id":"aviationnews_engine","name":"Aviation News Online","kind":"aviationnews_html","url":"https://www.aviationnews-online.com/category/engine","rights_mode":"public_listing_metadata"},
+    {"id":"aviationnews_maintenance","name":"Aviation News Online","kind":"aviationnews_html","url":"https://www.aviationnews-online.com/category/maintenance","rights_mode":"public_listing_metadata"},
+    {"id":"aviationnews_legal","name":"Aviation News Online","kind":"aviationnews_html","url":"https://www.aviationnews-online.com/category/legal","rights_mode":"public_listing_metadata"},
+    {"id":"aviationnews_regulatory","name":"Aviation News Online","kind":"aviationnews_html","url":"https://www.aviationnews-online.com/category/regulatory","rights_mode":"public_listing_metadata"},
+    {"id":"aviationnews_people","name":"Aviation News Online","kind":"aviationnews_html","url":"https://www.aviationnews-online.com/category/people","rights_mode":"public_listing_metadata"}
   ],
   "blocked_direct_sources": [
-    {
-      "name": "Aviation News Online legacy category URLs",
-      "attempted_urls": [
-        "https://aviationnews-online.com/public/category/leasing",
-        "https://aviationnews-online.com/public/category/finance"
-      ],
-      "reason": "Legacy /public/category routes returned HTTP 403 on GitHub-hosted runners; current /category routes are used instead."
-    },
-    {
-      "name": "FlightGlobal",
-      "attempted_urls": [
-        "https://www.flightglobal.com/rss"
-      ],
-      "reason": "GitHub-hosted runner returned HTTP 403 on 2026-09-14. FlightGlobal is discovered through Bing News RSS instead of bypassing publisher controls."
-    },
-    {
-      "name": "Reuters",
-      "attempted_urls": [],
-      "reason": "Reuters is not scraped directly; headlines and original URLs are discovered through Bing News RSS."
-    }
+    {"name":"Aviation News Online legacy category URLs","attempted_urls":["https://aviationnews-online.com/public/category/leasing","https://aviationnews-online.com/public/category/finance"],"reason":"Legacy /public/category routes returned HTTP 403 on GitHub-hosted runners; current /category routes are used instead."},
+    {"name":"FlightGlobal","attempted_urls":["https://www.flightglobal.com/rss"],"reason":"GitHub-hosted runner returned HTTP 403 on 2026-09-14. FlightGlobal is discovered through Bing News RSS instead of bypassing publisher controls."},
+    {"name":"Reuters","attempted_urls":[],"reason":"Reuters is not scraped directly; headlines and original URLs are discovered through Bing News RSS."}
   ],
   "bing_news": {
     "base_url": "https://www.bing.com/news/search",
     "queries": [
-      "\"aircraft leasing\"",
-      "\"aircraft lessor\"",
-      "\"sale and leaseback\" aircraft",
-      "\"sale-leaseback\" aircraft",
-      "\"aviation finance\" aircraft",
-      "\"aircraft financing\"",
-      "\"PDP financing\" aircraft",
-      "JOLCO aircraft",
-      "JOL aircraft leasing",
-      "\"aviation ABS\"",
-      "\"aircraft lease rates\"",
-      "\"aircraft values\" lessor",
-      "airline bankruptcy aircraft leasing",
-      "airline restructuring aircraft lessor",
-      "aircraft repossession lessor",
-      "aircraft sanctions lessor",
-      "AerCap aviation",
-      "Avolon aviation",
-      "\"BOC Aviation\"",
-      "\"SMBC Aviation Capital\"",
-      "\"Dubai Aerospace Enterprise\" aircraft",
-      "\"CDB Aviation\"",
-      "\"CALC\" aircraft leasing",
-      "\"Air Lease\" aircraft",
-      "\"Aviation Capital Group\" aircraft",
-      "Aircastle aircraft leasing",
-      "Castlelake aviation aircraft",
-      "Azorra aircraft leasing",
-      "TrueNoord aircraft leasing",
-      "\"Nordic Aviation Capital\"",
-      "\"Macquarie AirFinance\"",
-      "\"ORIX Aviation\"",
-      "\"Jackson Square Aviation\"",
-      "\"Griffin Global Asset Management\" aircraft",
-      "\"SKY Leasing\" aircraft",
-      "\"aircraft engine leasing\"",
-      "GTF aircraft leasing",
-      "CFM LEAP aircraft leasing",
-      "site:flightglobal.com aircraft leasing",
-      "site:flightglobal.com aircraft lessor",
-      "site:flightglobal.com GTF engine airline",
-      "site:flightglobal.com Airbus deliveries airline",
-      "site:flightglobal.com Boeing deliveries airline",
-      "site:flightglobal.com airline bankruptcy aircraft",
-      "site:reuters.com aircraft leasing",
-      "site:reuters.com aircraft lessor",
-      "site:reuters.com aviation finance aircraft",
-      "site:reuters.com Boeing Airbus deliveries",
-      "site:reuters.com airline bankruptcy aircraft",
-      "site:reuters.com Pratt Whitney GTF airline"
+      "\"aircraft leasing\"","\"aircraft lessor\"","\"sale and leaseback\" aircraft","\"sale-leaseback\" aircraft","\"aviation finance\" aircraft","\"aircraft financing\"","\"PDP financing\" aircraft","JOLCO aircraft","JOL aircraft leasing","\"aviation ABS\"","\"aircraft lease rates\"","\"aircraft values\" lessor","airline bankruptcy aircraft leasing","airline restructuring aircraft lessor","aircraft repossession lessor","aircraft sanctions lessor","AerCap aviation","Avolon aviation","\"BOC Aviation\"","\"SMBC Aviation Capital\"","\"Dubai Aerospace Enterprise\" aircraft","\"CDB Aviation\"","\"CALC\" aircraft leasing","\"Air Lease\" aircraft","\"Aviation Capital Group\" aircraft","Aircastle aircraft leasing","Castlelake aviation aircraft","Azorra aircraft leasing","TrueNoord aircraft leasing","\"Nordic Aviation Capital\"","\"Macquarie AirFinance\"","\"ORIX Aviation\"","\"Jackson Square Aviation\"","\"Griffin Global Asset Management\" aircraft","\"SKY Leasing\" aircraft","\"aircraft engine leasing\"","GTF aircraft leasing","CFM LEAP aircraft leasing","site:flightglobal.com aircraft leasing","site:flightglobal.com aircraft lessor","site:flightglobal.com GTF engine airline","site:flightglobal.com Airbus deliveries airline","site:flightglobal.com Boeing deliveries airline","site:flightglobal.com airline bankruptcy aircraft","site:reuters.com aircraft leasing","site:reuters.com aircraft lessor","site:reuters.com aviation finance aircraft","site:reuters.com Boeing Airbus deliveries","site:reuters.com airline bankruptcy aircraft","site:reuters.com Pratt Whitney GTF airline"
     ]
   }
 }
