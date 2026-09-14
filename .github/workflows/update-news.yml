@@ -26,9 +26,9 @@ permissions:
 
 concurrency:
   group: news-data-writer
-  # New code/data runs supersede older queued/running news jobs. This prevents a slow
-  # AI bootstrap from blocking corrected pipeline versions behind it.
-  cancel-in-progress: true
+  # Never cancel a live AI enrichment job just because GitHub delivers the next
+  # scheduled run late. New runs queue behind the active writer instead.
+  cancel-in-progress: false
 
 jobs:
   update-news:
@@ -78,7 +78,7 @@ jobs:
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           DEEPSEEK_MODEL: deepseek-flash
-          NEWS_STEP3_BATCH_SIZE: '16'
+          NEWS_STEP3_BATCH_SIZE: '28'
           NEWS_STEP3_MAX_AI_STORIES: '260'
         run: python scripts/analyze_news.py
 
