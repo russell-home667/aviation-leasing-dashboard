@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-09-14T08:40:12Z",
+  "checked_at": "2026-09-14T08:47:17Z",
   "summary": {
-    "checks_total": 40,
-    "checks_ok": 40,
-    "checks_failed": 0,
-    "records_before_cross_source_dedupe": 391,
-    "current_batch_unique": 336
+    "checks_total": 64,
+    "checks_ok": 63,
+    "checks_failed": 1,
+    "records_before_cross_source_dedupe": 550,
+    "current_batch_unique": 476
   },
   "checks": [
     {
@@ -19,7 +19,7 @@
       "records": 10,
       "error": null,
       "elapsed_seconds": 0.65,
-      "checked_at": "2026-09-14T08:40:13Z"
+      "checked_at": "2026-09-14T08:47:18Z"
     },
     {
       "source_id": "ishka_aircraft_rss",
@@ -30,8 +30,8 @@
       "http_status": 200,
       "records": 10,
       "error": null,
-      "elapsed_seconds": 0.72,
-      "checked_at": "2026-09-14T08:40:14Z"
+      "elapsed_seconds": 0.22,
+      "checked_at": "2026-09-14T08:47:18Z"
     },
     {
       "source_id": "ishka_airlines_rss",
@@ -42,8 +42,8 @@
       "http_status": 200,
       "records": 10,
       "error": null,
-      "elapsed_seconds": 0.21,
-      "checked_at": "2026-09-14T08:40:14Z"
+      "elapsed_seconds": 0.57,
+      "checked_at": "2026-09-14T08:47:19Z"
     },
     {
       "source_id": "ishka_banks_capital_rss",
@@ -55,7 +55,7 @@
       "records": 10,
       "error": null,
       "elapsed_seconds": 0.23,
-      "checked_at": "2026-09-14T08:40:14Z"
+      "checked_at": "2026-09-14T08:47:19Z"
     },
     {
       "source_id": "ishka_law_rss",
@@ -67,7 +67,7 @@
       "records": 10,
       "error": null,
       "elapsed_seconds": 0.22,
-      "checked_at": "2026-09-14T08:40:15Z"
+      "checked_at": "2026-09-14T08:47:19Z"
     },
     {
       "source_id": "ishka_lessors_rss",
@@ -78,8 +78,8 @@
       "http_status": 200,
       "records": 10,
       "error": null,
-      "elapsed_seconds": 0.21,
-      "checked_at": "2026-09-14T08:40:15Z"
+      "elapsed_seconds": 0.22,
+      "checked_at": "2026-09-14T08:47:19Z"
     },
     {
       "source_id": "aviationnews_leasing",
@@ -90,8 +90,8 @@
       "http_status": 200,
       "records": 12,
       "error": null,
-      "elapsed_seconds": 1.54,
-      "checked_at": "2026-09-14T08:40:16Z"
+      "elapsed_seconds": 1.39,
+      "checked_at": "2026-09-14T08:47:21Z"
     },
     {
       "source_id": "aviationnews_finance",
@@ -102,8 +102,8 @@
       "http_status": 200,
       "records": 12,
       "error": null,
-      "elapsed_seconds": 1.35,
-      "checked_at": "2026-09-14T08:40:18Z"
+      "elapsed_seconds": 1.17,
+      "checked_at": "2026-09-14T08:47:22Z"
     },
     {
       "source_id": "aviationnews_airline",
@@ -114,8 +114,8 @@
       "http_status": 200,
       "records": 12,
       "error": null,
-      "elapsed_seconds": 1.83,
-      "checked_at": "2026-09-14T08:40:19Z"
+      "elapsed_seconds": 1.68,
+      "checked_at": "2026-09-14T08:47:24Z"
     },
     {
       "source_id": "aviationnews_engine",
@@ -126,8 +126,8 @@
       "http_status": 200,
       "records": 12,
       "error": null,
-      "elapsed_seconds": 0.95,
-      "checked_at": "2026-09-14T08:40:20Z"
+      "elapsed_seconds": 0.86,
+      "checked_at": "2026-09-14T08:47:25Z"
     },
     {
       "source_id": "aviationnews_maintenance",
@@ -138,8 +138,8 @@
       "http_status": 200,
       "records": 12,
       "error": null,
-      "elapsed_seconds": 1.21,
-      "checked_at": "2026-09-14T08:40:22Z"
+      "elapsed_seconds": 1.33,
+      "checked_at": "2026-09-14T08:47:26Z"
     },
     {
       "source_id": "aviationnews_legal",
@@ -150,8 +150,8 @@
       "http_status": 200,
       "records": 12,
       "error": null,
-      "elapsed_seconds": 1.02,
-      "checked_at": "2026-09-14T08:40:23Z"
+      "elapsed_seconds": 0.81,
+      "checked_at": "2026-09-14T08:47:27Z"
     },
     {
       "source_id": "aviationnews_regulatory",
@@ -162,8 +162,8 @@
       "http_status": 200,
       "records": 12,
       "error": null,
-      "elapsed_seconds": 1.26,
-      "checked_at": "2026-09-14T08:40:24Z"
+      "elapsed_seconds": 1.18,
+      "checked_at": "2026-09-14T08:47:28Z"
     },
     {
       "source_id": "aviationnews_people",
@@ -174,8 +174,8 @@
       "http_status": 200,
       "records": 12,
       "error": null,
-      "elapsed_seconds": 1.6,
-      "checked_at": "2026-09-14T08:40:25Z"
+      "elapsed_seconds": 1.15,
+      "checked_at": "2026-09-14T08:47:29Z"
     },
     {
       "source_id": "bing:\"aircraft leasing\"",
@@ -186,8 +186,8 @@
       "http_status": 200,
       "records": 12,
       "error": null,
-      "elapsed_seconds": 0.34,
-      "checked_at": "2026-09-14T08:40:26Z"
+      "elapsed_seconds": 0.24,
+      "checked_at": "2026-09-14T08:47:29Z"
     },
     {
       "source_id": "bing:\"aircraft lessor\"",
@@ -198,8 +198,8 @@
       "http_status": 200,
       "records": 12,
       "error": null,
-      "elapsed_seconds": 0.22,
-      "checked_at": "2026-09-14T08:40:26Z"
+      "elapsed_seconds": 0.18,
+      "checked_at": "2026-09-14T08:47:29Z"
     },
     {
       "source_id": "bing:\"sale and leaseback\" aircraft",
@@ -210,8 +210,8 @@
       "http_status": 200,
       "records": 8,
       "error": null,
-      "elapsed_seconds": 0.22,
-      "checked_at": "2026-09-14T08:40:26Z"
+      "elapsed_seconds": 0.2,
+      "checked_at": "2026-09-14T08:47:30Z"
     },
     {
       "source_id": "bing:\"sale-leaseback\" aircraft",
@@ -222,8 +222,8 @@
       "http_status": 200,
       "records": 8,
       "error": null,
-      "elapsed_seconds": 0.2,
-      "checked_at": "2026-09-14T08:40:26Z"
+      "elapsed_seconds": 0.19,
+      "checked_at": "2026-09-14T08:47:30Z"
     },
     {
       "source_id": "bing:\"aviation finance\" aircraft",
@@ -232,10 +232,10 @@
       "url": "https://www.bing.com/news/search?q=%22aviation+finance%22+aircraft&format=rss&mkt=en-US",
       "ok": true,
       "http_status": 200,
-      "records": 11,
+      "records": 9,
       "error": null,
-      "elapsed_seconds": 0.24,
-      "checked_at": "2026-09-14T08:40:27Z"
+      "elapsed_seconds": 0.19,
+      "checked_at": "2026-09-14T08:47:30Z"
     },
     {
       "source_id": "bing:\"aircraft financing\"",
@@ -246,140 +246,20 @@
       "http_status": 200,
       "records": 11,
       "error": null,
-      "elapsed_seconds": 0.22,
-      "checked_at": "2026-09-14T08:40:27Z"
-    },
-    {
-      "source_id": "bing:AerCap aviation",
-      "name": "Bing News",
-      "kind": "rss_search",
-      "url": "https://www.bing.com/news/search?q=AerCap+aviation&format=rss&mkt=en-US",
-      "ok": true,
-      "http_status": 200,
-      "records": 10,
-      "error": null,
-      "elapsed_seconds": 0.23,
-      "checked_at": "2026-09-14T08:40:27Z"
-    },
-    {
-      "source_id": "bing:Avolon aviation",
-      "name": "Bing News",
-      "kind": "rss_search",
-      "url": "https://www.bing.com/news/search?q=Avolon+aviation&format=rss&mkt=en-US",
-      "ok": true,
-      "http_status": 200,
-      "records": 12,
-      "error": null,
-      "elapsed_seconds": 0.21,
-      "checked_at": "2026-09-14T08:40:27Z"
-    },
-    {
-      "source_id": "bing:\"BOC Aviation\"",
-      "name": "Bing News",
-      "kind": "rss_search",
-      "url": "https://www.bing.com/news/search?q=%22BOC+Aviation%22&format=rss&mkt=en-US",
-      "ok": true,
-      "http_status": 200,
-      "records": 12,
-      "error": null,
-      "elapsed_seconds": 0.23,
-      "checked_at": "2026-09-14T08:40:28Z"
-    },
-    {
-      "source_id": "bing:\"SMBC Aviation Capital\"",
-      "name": "Bing News",
-      "kind": "rss_search",
-      "url": "https://www.bing.com/news/search?q=%22SMBC+Aviation+Capital%22&format=rss&mkt=en-US",
-      "ok": true,
-      "http_status": 200,
-      "records": 6,
-      "error": null,
-      "elapsed_seconds": 0.22,
-      "checked_at": "2026-09-14T08:40:28Z"
-    },
-    {
-      "source_id": "bing:\"Dubai Aerospace Enterprise\" aircraft",
-      "name": "Bing News",
-      "kind": "rss_search",
-      "url": "https://www.bing.com/news/search?q=%22Dubai+Aerospace+Enterprise%22+aircraft&format=rss&mkt=en-US",
-      "ok": true,
-      "http_status": 200,
-      "records": 8,
-      "error": null,
-      "elapsed_seconds": 0.19,
-      "checked_at": "2026-09-14T08:40:28Z"
-    },
-    {
-      "source_id": "bing:\"CDB Aviation\"",
-      "name": "Bing News",
-      "kind": "rss_search",
-      "url": "https://www.bing.com/news/search?q=%22CDB+Aviation%22&format=rss&mkt=en-US",
-      "ok": true,
-      "http_status": 200,
-      "records": 12,
-      "error": null,
-      "elapsed_seconds": 0.22,
-      "checked_at": "2026-09-14T08:40:28Z"
-    },
-    {
-      "source_id": "bing:\"CALC\" aircraft leasing",
-      "name": "Bing News",
-      "kind": "rss_search",
-      "url": "https://www.bing.com/news/search?q=%22CALC%22+aircraft+leasing&format=rss&mkt=en-US",
-      "ok": true,
-      "http_status": 200,
-      "records": 10,
-      "error": null,
-      "elapsed_seconds": 0.21,
-      "checked_at": "2026-09-14T08:40:28Z"
-    },
-    {
-      "source_id": "bing:\"Air Lease\" aircraft",
-      "name": "Bing News",
-      "kind": "rss_search",
-      "url": "https://www.bing.com/news/search?q=%22Air+Lease%22+aircraft&format=rss&mkt=en-US",
-      "ok": true,
-      "http_status": 200,
-      "records": 10,
-      "error": null,
-      "elapsed_seconds": 0.22,
-      "checked_at": "2026-09-14T08:40:29Z"
-    },
-    {
-      "source_id": "bing:\"Aviation Capital Group\" aircraft",
-      "name": "Bing News",
-      "kind": "rss_search",
-      "url": "https://www.bing.com/news/search?q=%22Aviation+Capital+Group%22+aircraft&format=rss&mkt=en-US",
-      "ok": true,
-      "http_status": 200,
-      "records": 9,
-      "error": null,
-      "elapsed_seconds": 0.28,
-      "checked_at": "2026-09-14T08:40:29Z"
-    },
-    {
-      "source_id": "bing:\"aircraft engine leasing\"",
-      "name": "Bing News",
-      "kind": "rss_search",
-      "url": "https://www.bing.com/news/search?q=%22aircraft+engine+leasing%22&format=rss&mkt=en-US",
-      "ok": true,
-      "http_status": 200,
-      "records": 12,
-      "error": null,
-      "elapsed_seconds": 0.3,
-      "checked_at": "2026-09-14T08:40:29Z"
-    },
-    {
-      "source_id": "bing:\"aviation ABS\"",
-      "name": "Bing News",
-      "kind": "rss_search",
-      "url": "https://www.bing.com/news/search?q=%22aviation+ABS%22&format=rss&mkt=en-US",
-      "ok": true,
-      "http_status": 200,
-      "records": 10,
-      "error": null,
       "elapsed_seconds": 0.2,
-      "checked_at": "2026-09-14T08:40:29Z"
+      "checked_at": "2026-09-14T08:47:30Z"
+    },
+    {
+      "source_id": "bing:\"PDP financing\" aircraft",
+      "name": "Bing News",
+      "kind": "rss_search",
+      "url": "https://www.bing.com/news/search?q=%22PDP+financing%22+aircraft&format=rss&mkt=en-US",
+      "ok": false,
+      "http_status": 200,
+      "records": 0,
+      "error": null,
+      "elapsed_seconds": 0.17,
+      "checked_at": "2026-09-14T08:47:30Z"
     },
     {
       "source_id": "bing:JOLCO aircraft",
@@ -390,8 +270,32 @@
       "http_status": 200,
       "records": 1,
       "error": null,
-      "elapsed_seconds": 0.25,
-      "checked_at": "2026-09-14T08:40:30Z"
+      "elapsed_seconds": 0.16,
+      "checked_at": "2026-09-14T08:47:30Z"
+    },
+    {
+      "source_id": "bing:JOL aircraft leasing",
+      "name": "Bing News",
+      "kind": "rss_search",
+      "url": "https://www.bing.com/news/search?q=JOL+aircraft+leasing&format=rss&mkt=en-US",
+      "ok": true,
+      "http_status": 200,
+      "records": 1,
+      "error": null,
+      "elapsed_seconds": 0.2,
+      "checked_at": "2026-09-14T08:47:31Z"
+    },
+    {
+      "source_id": "bing:\"aviation ABS\"",
+      "name": "Bing News",
+      "kind": "rss_search",
+      "url": "https://www.bing.com/news/search?q=%22aviation+ABS%22&format=rss&mkt=en-US",
+      "ok": true,
+      "http_status": 200,
+      "records": 11,
+      "error": null,
+      "elapsed_seconds": 0.21,
+      "checked_at": "2026-09-14T08:47:31Z"
     },
     {
       "source_id": "bing:\"aircraft lease rates\"",
@@ -400,10 +304,10 @@
       "url": "https://www.bing.com/news/search?q=%22aircraft+lease+rates%22&format=rss&mkt=en-US",
       "ok": true,
       "http_status": 200,
-      "records": 10,
+      "records": 9,
       "error": null,
-      "elapsed_seconds": 0.2,
-      "checked_at": "2026-09-14T08:40:30Z"
+      "elapsed_seconds": 0.18,
+      "checked_at": "2026-09-14T08:47:31Z"
     },
     {
       "source_id": "bing:\"aircraft values\" lessor",
@@ -414,8 +318,8 @@
       "http_status": 200,
       "records": 5,
       "error": null,
-      "elapsed_seconds": 0.2,
-      "checked_at": "2026-09-14T08:40:30Z"
+      "elapsed_seconds": 0.16,
+      "checked_at": "2026-09-14T08:47:31Z"
     },
     {
       "source_id": "bing:airline bankruptcy aircraft leasing",
@@ -426,8 +330,20 @@
       "http_status": 200,
       "records": 4,
       "error": null,
-      "elapsed_seconds": 0.2,
-      "checked_at": "2026-09-14T08:40:30Z"
+      "elapsed_seconds": 0.15,
+      "checked_at": "2026-09-14T08:47:31Z"
+    },
+    {
+      "source_id": "bing:airline restructuring aircraft lessor",
+      "name": "Bing News",
+      "kind": "rss_search",
+      "url": "https://www.bing.com/news/search?q=airline+restructuring+aircraft+lessor&format=rss&mkt=en-US",
+      "ok": true,
+      "http_status": 200,
+      "records": 1,
+      "error": null,
+      "elapsed_seconds": 0.21,
+      "checked_at": "2026-09-14T08:47:32Z"
     },
     {
       "source_id": "bing:aircraft repossession lessor",
@@ -438,8 +354,284 @@
       "http_status": 200,
       "records": 3,
       "error": null,
+      "elapsed_seconds": 0.2,
+      "checked_at": "2026-09-14T08:47:32Z"
+    },
+    {
+      "source_id": "bing:aircraft sanctions lessor",
+      "name": "Bing News",
+      "kind": "rss_search",
+      "url": "https://www.bing.com/news/search?q=aircraft+sanctions+lessor&format=rss&mkt=en-US",
+      "ok": true,
+      "http_status": 200,
+      "records": 3,
+      "error": null,
+      "elapsed_seconds": 0.21,
+      "checked_at": "2026-09-14T08:47:32Z"
+    },
+    {
+      "source_id": "bing:AerCap aviation",
+      "name": "Bing News",
+      "kind": "rss_search",
+      "url": "https://www.bing.com/news/search?q=AerCap+aviation&format=rss&mkt=en-US",
+      "ok": true,
+      "http_status": 200,
+      "records": 10,
+      "error": null,
+      "elapsed_seconds": 0.18,
+      "checked_at": "2026-09-14T08:47:32Z"
+    },
+    {
+      "source_id": "bing:Avolon aviation",
+      "name": "Bing News",
+      "kind": "rss_search",
+      "url": "https://www.bing.com/news/search?q=Avolon+aviation&format=rss&mkt=en-US",
+      "ok": true,
+      "http_status": 200,
+      "records": 12,
+      "error": null,
+      "elapsed_seconds": 0.18,
+      "checked_at": "2026-09-14T08:47:32Z"
+    },
+    {
+      "source_id": "bing:\"BOC Aviation\"",
+      "name": "Bing News",
+      "kind": "rss_search",
+      "url": "https://www.bing.com/news/search?q=%22BOC+Aviation%22&format=rss&mkt=en-US",
+      "ok": true,
+      "http_status": 200,
+      "records": 12,
+      "error": null,
+      "elapsed_seconds": 0.2,
+      "checked_at": "2026-09-14T08:47:33Z"
+    },
+    {
+      "source_id": "bing:\"SMBC Aviation Capital\"",
+      "name": "Bing News",
+      "kind": "rss_search",
+      "url": "https://www.bing.com/news/search?q=%22SMBC+Aviation+Capital%22&format=rss&mkt=en-US",
+      "ok": true,
+      "http_status": 200,
+      "records": 6,
+      "error": null,
+      "elapsed_seconds": 0.2,
+      "checked_at": "2026-09-14T08:47:33Z"
+    },
+    {
+      "source_id": "bing:\"Dubai Aerospace Enterprise\" aircraft",
+      "name": "Bing News",
+      "kind": "rss_search",
+      "url": "https://www.bing.com/news/search?q=%22Dubai+Aerospace+Enterprise%22+aircraft&format=rss&mkt=en-US",
+      "ok": true,
+      "http_status": 200,
+      "records": 8,
+      "error": null,
+      "elapsed_seconds": 0.3,
+      "checked_at": "2026-09-14T08:47:33Z"
+    },
+    {
+      "source_id": "bing:\"CDB Aviation\"",
+      "name": "Bing News",
+      "kind": "rss_search",
+      "url": "https://www.bing.com/news/search?q=%22CDB+Aviation%22&format=rss&mkt=en-US",
+      "ok": true,
+      "http_status": 200,
+      "records": 11,
+      "error": null,
+      "elapsed_seconds": 0.18,
+      "checked_at": "2026-09-14T08:47:33Z"
+    },
+    {
+      "source_id": "bing:\"CALC\" aircraft leasing",
+      "name": "Bing News",
+      "kind": "rss_search",
+      "url": "https://www.bing.com/news/search?q=%22CALC%22+aircraft+leasing&format=rss&mkt=en-US",
+      "ok": true,
+      "http_status": 200,
+      "records": 10,
+      "error": null,
+      "elapsed_seconds": 0.16,
+      "checked_at": "2026-09-14T08:47:33Z"
+    },
+    {
+      "source_id": "bing:\"Air Lease\" aircraft",
+      "name": "Bing News",
+      "kind": "rss_search",
+      "url": "https://www.bing.com/news/search?q=%22Air+Lease%22+aircraft&format=rss&mkt=en-US",
+      "ok": true,
+      "http_status": 200,
+      "records": 10,
+      "error": null,
       "elapsed_seconds": 0.19,
-      "checked_at": "2026-09-14T08:40:30Z"
+      "checked_at": "2026-09-14T08:47:34Z"
+    },
+    {
+      "source_id": "bing:\"Aviation Capital Group\" aircraft",
+      "name": "Bing News",
+      "kind": "rss_search",
+      "url": "https://www.bing.com/news/search?q=%22Aviation+Capital+Group%22+aircraft&format=rss&mkt=en-US",
+      "ok": true,
+      "http_status": 200,
+      "records": 10,
+      "error": null,
+      "elapsed_seconds": 0.17,
+      "checked_at": "2026-09-14T08:47:34Z"
+    },
+    {
+      "source_id": "bing:Aircastle aircraft leasing",
+      "name": "Bing News",
+      "kind": "rss_search",
+      "url": "https://www.bing.com/news/search?q=Aircastle+aircraft+leasing&format=rss&mkt=en-US",
+      "ok": true,
+      "http_status": 200,
+      "records": 4,
+      "error": null,
+      "elapsed_seconds": 0.2,
+      "checked_at": "2026-09-14T08:47:34Z"
+    },
+    {
+      "source_id": "bing:Castlelake aviation aircraft",
+      "name": "Bing News",
+      "kind": "rss_search",
+      "url": "https://www.bing.com/news/search?q=Castlelake+aviation+aircraft&format=rss&mkt=en-US",
+      "ok": true,
+      "http_status": 200,
+      "records": 1,
+      "error": null,
+      "elapsed_seconds": 0.19,
+      "checked_at": "2026-09-14T08:47:34Z"
+    },
+    {
+      "source_id": "bing:Azorra aircraft leasing",
+      "name": "Bing News",
+      "kind": "rss_search",
+      "url": "https://www.bing.com/news/search?q=Azorra+aircraft+leasing&format=rss&mkt=en-US",
+      "ok": true,
+      "http_status": 200,
+      "records": 4,
+      "error": null,
+      "elapsed_seconds": 0.19,
+      "checked_at": "2026-09-14T08:47:34Z"
+    },
+    {
+      "source_id": "bing:TrueNoord aircraft leasing",
+      "name": "Bing News",
+      "kind": "rss_search",
+      "url": "https://www.bing.com/news/search?q=TrueNoord+aircraft+leasing&format=rss&mkt=en-US",
+      "ok": true,
+      "http_status": 200,
+      "records": 4,
+      "error": null,
+      "elapsed_seconds": 0.2,
+      "checked_at": "2026-09-14T08:47:35Z"
+    },
+    {
+      "source_id": "bing:\"Nordic Aviation Capital\"",
+      "name": "Bing News",
+      "kind": "rss_search",
+      "url": "https://www.bing.com/news/search?q=%22Nordic+Aviation+Capital%22&format=rss&mkt=en-US",
+      "ok": true,
+      "http_status": 200,
+      "records": 3,
+      "error": null,
+      "elapsed_seconds": 0.22,
+      "checked_at": "2026-09-14T08:47:35Z"
+    },
+    {
+      "source_id": "bing:\"Macquarie AirFinance\"",
+      "name": "Bing News",
+      "kind": "rss_search",
+      "url": "https://www.bing.com/news/search?q=%22Macquarie+AirFinance%22&format=rss&mkt=en-US",
+      "ok": true,
+      "http_status": 200,
+      "records": 9,
+      "error": null,
+      "elapsed_seconds": 0.24,
+      "checked_at": "2026-09-14T08:47:35Z"
+    },
+    {
+      "source_id": "bing:\"ORIX Aviation\"",
+      "name": "Bing News",
+      "kind": "rss_search",
+      "url": "https://www.bing.com/news/search?q=%22ORIX+Aviation%22&format=rss&mkt=en-US",
+      "ok": true,
+      "http_status": 200,
+      "records": 8,
+      "error": null,
+      "elapsed_seconds": 0.23,
+      "checked_at": "2026-09-14T08:47:35Z"
+    },
+    {
+      "source_id": "bing:\"Jackson Square Aviation\"",
+      "name": "Bing News",
+      "kind": "rss_search",
+      "url": "https://www.bing.com/news/search?q=%22Jackson+Square+Aviation%22&format=rss&mkt=en-US",
+      "ok": true,
+      "http_status": 200,
+      "records": 10,
+      "error": null,
+      "elapsed_seconds": 0.24,
+      "checked_at": "2026-09-14T08:47:35Z"
+    },
+    {
+      "source_id": "bing:\"Griffin Global Asset Management\" aircraft",
+      "name": "Bing News",
+      "kind": "rss_search",
+      "url": "https://www.bing.com/news/search?q=%22Griffin+Global+Asset+Management%22+aircraft&format=rss&mkt=en-US",
+      "ok": true,
+      "http_status": 200,
+      "records": 8,
+      "error": null,
+      "elapsed_seconds": 0.25,
+      "checked_at": "2026-09-14T08:47:36Z"
+    },
+    {
+      "source_id": "bing:\"SKY Leasing\" aircraft",
+      "name": "Bing News",
+      "kind": "rss_search",
+      "url": "https://www.bing.com/news/search?q=%22SKY+Leasing%22+aircraft&format=rss&mkt=en-US",
+      "ok": true,
+      "http_status": 200,
+      "records": 2,
+      "error": null,
+      "elapsed_seconds": 0.21,
+      "checked_at": "2026-09-14T08:47:36Z"
+    },
+    {
+      "source_id": "bing:\"aircraft engine leasing\"",
+      "name": "Bing News",
+      "kind": "rss_search",
+      "url": "https://www.bing.com/news/search?q=%22aircraft+engine+leasing%22&format=rss&mkt=en-US",
+      "ok": true,
+      "http_status": 200,
+      "records": 12,
+      "error": null,
+      "elapsed_seconds": 0.2,
+      "checked_at": "2026-09-14T08:47:36Z"
+    },
+    {
+      "source_id": "bing:GTF aircraft leasing",
+      "name": "Bing News",
+      "kind": "rss_search",
+      "url": "https://www.bing.com/news/search?q=GTF+aircraft+leasing&format=rss&mkt=en-US",
+      "ok": true,
+      "http_status": 200,
+      "records": 2,
+      "error": null,
+      "elapsed_seconds": 0.2,
+      "checked_at": "2026-09-14T08:47:36Z"
+    },
+    {
+      "source_id": "bing:CFM LEAP aircraft leasing",
+      "name": "Bing News",
+      "kind": "rss_search",
+      "url": "https://www.bing.com/news/search?q=CFM+LEAP+aircraft+leasing&format=rss&mkt=en-US",
+      "ok": true,
+      "http_status": 200,
+      "records": 10,
+      "error": null,
+      "elapsed_seconds": 0.22,
+      "checked_at": "2026-09-14T08:47:37Z"
     },
     {
       "source_id": "bing:site:flightglobal.com aircraft leasing",
@@ -450,8 +642,8 @@
       "http_status": 200,
       "records": 12,
       "error": null,
-      "elapsed_seconds": 0.19,
-      "checked_at": "2026-09-14T08:40:31Z"
+      "elapsed_seconds": 0.12,
+      "checked_at": "2026-09-14T08:47:37Z"
     },
     {
       "source_id": "bing:site:flightglobal.com aircraft lessor",
@@ -462,8 +654,56 @@
       "http_status": 200,
       "records": 12,
       "error": null,
-      "elapsed_seconds": 0.22,
-      "checked_at": "2026-09-14T08:40:31Z"
+      "elapsed_seconds": 0.13,
+      "checked_at": "2026-09-14T08:47:37Z"
+    },
+    {
+      "source_id": "bing:site:flightglobal.com GTF engine airline",
+      "name": "Bing News",
+      "kind": "rss_search",
+      "url": "https://www.bing.com/news/search?q=site%3Aflightglobal.com+GTF+engine+airline&format=rss&mkt=en-US",
+      "ok": true,
+      "http_status": 200,
+      "records": 12,
+      "error": null,
+      "elapsed_seconds": 0.2,
+      "checked_at": "2026-09-14T08:47:37Z"
+    },
+    {
+      "source_id": "bing:site:flightglobal.com Airbus deliveries airline",
+      "name": "Bing News",
+      "kind": "rss_search",
+      "url": "https://www.bing.com/news/search?q=site%3Aflightglobal.com+Airbus+deliveries+airline&format=rss&mkt=en-US",
+      "ok": true,
+      "http_status": 200,
+      "records": 12,
+      "error": null,
+      "elapsed_seconds": 0.19,
+      "checked_at": "2026-09-14T08:47:37Z"
+    },
+    {
+      "source_id": "bing:site:flightglobal.com Boeing deliveries airline",
+      "name": "Bing News",
+      "kind": "rss_search",
+      "url": "https://www.bing.com/news/search?q=site%3Aflightglobal.com+Boeing+deliveries+airline&format=rss&mkt=en-US",
+      "ok": true,
+      "http_status": 200,
+      "records": 12,
+      "error": null,
+      "elapsed_seconds": 0.2,
+      "checked_at": "2026-09-14T08:47:37Z"
+    },
+    {
+      "source_id": "bing:site:flightglobal.com airline bankruptcy aircraft",
+      "name": "Bing News",
+      "kind": "rss_search",
+      "url": "https://www.bing.com/news/search?q=site%3Aflightglobal.com+airline+bankruptcy+aircraft&format=rss&mkt=en-US",
+      "ok": true,
+      "http_status": 200,
+      "records": 12,
+      "error": null,
+      "elapsed_seconds": 0.18,
+      "checked_at": "2026-09-14T08:47:38Z"
     },
     {
       "source_id": "bing:site:reuters.com aircraft leasing",
@@ -474,8 +714,8 @@
       "http_status": 200,
       "records": 9,
       "error": null,
-      "elapsed_seconds": 0.17,
-      "checked_at": "2026-09-14T08:40:31Z"
+      "elapsed_seconds": 0.19,
+      "checked_at": "2026-09-14T08:47:38Z"
     },
     {
       "source_id": "bing:site:reuters.com aircraft lessor",
@@ -486,8 +726,56 @@
       "http_status": 200,
       "records": 6,
       "error": null,
-      "elapsed_seconds": 0.16,
-      "checked_at": "2026-09-14T08:40:31Z"
+      "elapsed_seconds": 0.14,
+      "checked_at": "2026-09-14T08:47:38Z"
+    },
+    {
+      "source_id": "bing:site:reuters.com aviation finance aircraft",
+      "name": "Bing News",
+      "kind": "rss_search",
+      "url": "https://www.bing.com/news/search?q=site%3Areuters.com+aviation+finance+aircraft&format=rss&mkt=en-US",
+      "ok": true,
+      "http_status": 200,
+      "records": 9,
+      "error": null,
+      "elapsed_seconds": 0.23,
+      "checked_at": "2026-09-14T08:47:38Z"
+    },
+    {
+      "source_id": "bing:site:reuters.com Boeing Airbus deliveries",
+      "name": "Bing News",
+      "kind": "rss_search",
+      "url": "https://www.bing.com/news/search?q=site%3Areuters.com+Boeing+Airbus+deliveries&format=rss&mkt=en-US",
+      "ok": true,
+      "http_status": 200,
+      "records": 11,
+      "error": null,
+      "elapsed_seconds": 0.21,
+      "checked_at": "2026-09-14T08:47:38Z"
+    },
+    {
+      "source_id": "bing:site:reuters.com airline bankruptcy aircraft",
+      "name": "Bing News",
+      "kind": "rss_search",
+      "url": "https://www.bing.com/news/search?q=site%3Areuters.com+airline+bankruptcy+aircraft&format=rss&mkt=en-US",
+      "ok": true,
+      "http_status": 200,
+      "records": 12,
+      "error": null,
+      "elapsed_seconds": 0.21,
+      "checked_at": "2026-09-14T08:47:39Z"
+    },
+    {
+      "source_id": "bing:site:reuters.com Pratt Whitney GTF airline",
+      "name": "Bing News",
+      "kind": "rss_search",
+      "url": "https://www.bing.com/news/search?q=site%3Areuters.com+Pratt+Whitney+GTF+airline&format=rss&mkt=en-US",
+      "ok": true,
+      "http_status": 200,
+      "records": 11,
+      "error": null,
+      "elapsed_seconds": 0.21,
+      "checked_at": "2026-09-14T08:47:39Z"
     }
   ]
 }
