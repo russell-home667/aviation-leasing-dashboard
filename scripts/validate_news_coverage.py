@@ -46,9 +46,36 @@ def newest_age_days(items: list[dict], source_name: str) -> float | None:
     return round((datetime.now(timezone.utc) - max(dates)).total_seconds() / 86400, 2)
 
 
+def normalize_health_semantics(health: dict) -> None:
+    """A Bing query with zero hits is healthy if transport/parsing worked.
+
+    Direct feeds/categories are different: zero records is a content-health failure.
+    This corrects the original Step-1 health metric, which incorrectly counted an
+    empty but successful Bing query as a failed source check.
+    """
+    checks = health.get("checks", [])
+    for row in checks:
+        transport_ok = row.get("http_status") == 200 and not row.get("error")
+        has_records = int(row.get("records") or 0) > 0
+        row["transport_ok"] = transport_ok
+        row["has_records"] = has_records
+        if row.get("kind") == "rss_search":
+            row["ok"] = transport_ok
+        else:
+            row["ok"] = transport_ok and has_records
+    ok_count = sum(1 for row in checks if row.get("ok"))
+    summary = health.setdefault("summary", {})
+    summary["checks_total"] = len(checks)
+    summary["checks_ok"] = ok_count
+    summary["checks_failed"] = len(checks) - ok_count
+    summary["semantic_note"] = "For rss_search, HTTP/parse success is healthy even when a query currently returns zero results; has_records is tracked separately."
+
+
 def main() -> int:
     raw = json.loads(RAW_PATH.read_text(encoding="utf-8"))
     health = json.loads(HEALTH_PATH.read_text(encoding="utf-8"))
+    normalize_health_semantics(health)
+    HEALTH_PATH.write_text(json.dumps(health, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     baseline = json.loads(BASELINE_PATH.read_text(encoding="utf-8"))
     items = raw.get("items", [])
     checks = health.get("checks", [])
