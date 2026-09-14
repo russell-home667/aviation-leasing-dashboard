@@ -8,8 +8,13 @@ on:
       - 'scripts/validate_news_coverage.py'
       - 'scripts/process_news.py'
       - 'scripts/validate_processed_news.py'
+      - 'scripts/analyze_news.py'
+      - 'scripts/validate_enriched_news.py'
+      - 'scripts/install_news_ui.py'
       - 'data/news_sources.json'
       - 'data/news_validation_baseline.json'
+      - 'data/news_priority_entities.json'
+      - 'news.html'
       - '.github/workflows/update-news.yml'
   schedule:
     # Hourly ingestion. Frequent polling is important because some feeds expose only
@@ -28,7 +33,7 @@ concurrency:
 jobs:
   update-news:
     runs-on: ubuntu-latest
-    timeout-minutes: 35
+    timeout-minutes: 50
     steps:
       - name: Checkout repository
         uses: actions/checkout@v6
@@ -69,6 +74,20 @@ jobs:
       - name: Validate processed news
         run: python scripts/validate_processed_news.py
 
+      - name: Step 3 analyze, score and rank news
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          DEEPSEEK_MODEL: deepseek-flash
+          NEWS_STEP3_BATCH_SIZE: '16'
+          NEWS_STEP3_MAX_AI_STORIES: '260'
+        run: python scripts/analyze_news.py
+
+      - name: Validate Step 3 enriched news
+        run: python scripts/validate_enriched_news.py
+
+      - name: Install homepage news module
+        run: python scripts/install_news_ui.py
+
       - name: Print news pipeline summary
         run: |
           python - <<'PY'
@@ -79,6 +98,8 @@ jobs:
           raw = json.loads(Path('data/news_raw.json').read_text(encoding='utf-8'))
           processed = json.loads(Path('data/news.json').read_text(encoding='utf-8'))
           status = json.loads(Path('data/news_processing_status.json').read_text(encoding='utf-8'))
+          enriched = json.loads(Path('data/news_feed.json').read_text(encoding='utf-8'))
+          step3 = json.loads(Path('data/news_enrichment_status.json').read_text(encoding='utf-8'))
           print('Health:', json.dumps(health['summary'], ensure_ascii=False))
           print('Coverage:', json.dumps({
               'status': coverage['overall_status'],
@@ -87,7 +108,7 @@ jobs:
               'warnings': coverage['warnings'],
           }, ensure_ascii=False))
           print('Raw stored:', raw['stats']['stored_total'])
-          print('Processed:', json.dumps({
+          print('Step 2:', json.dumps({
               'analysis_mode': processed.get('analysis_mode'),
               'model': processed.get('model'),
               'stories': processed.get('stats', {}).get('stories'),
@@ -95,6 +116,15 @@ jobs:
               'deepseek_configured': status.get('deepseek_configured'),
               'deepseek_calls': status.get('deepseek_calls'),
               'deepseek_errors': status.get('deepseek_errors'),
+          }, ensure_ascii=False))
+          print('Step 3:', json.dumps({
+              'analysis_mode': enriched.get('analysis_mode'),
+              'stories': enriched.get('stats', {}).get('stories'),
+              'critical': enriched.get('stats', {}).get('critical_stories'),
+              'priority_entity_stories': enriched.get('stats', {}).get('priority_entity_stories'),
+              'macro_related_stories': enriched.get('stats', {}).get('macro_related_stories'),
+              'deepseek_calls': step3.get('deepseek_calls'),
+              'deepseek_failed_batches': step3.get('deepseek_failed_batches'),
           }, ensure_ascii=False))
           PY
 
@@ -106,6 +136,10 @@ jobs:
           cp data/news.json /tmp/news.json
           cp data/news_archive.json /tmp/news_archive.json
           cp data/news_processing_status.json /tmp/news_processing_status.json
+          cp data/news_feed.json /tmp/news_feed.json
+          cp data/news_feed_archive.json /tmp/news_feed_archive.json
+          cp data/news_enrichment_status.json /tmp/news_enrichment_status.json
+          cp index.html /tmp/index.html
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
@@ -119,7 +153,11 @@ jobs:
             cp /tmp/news.json data/news.json
             cp /tmp/news_archive.json data/news_archive.json
             cp /tmp/news_processing_status.json data/news_processing_status.json
-            git add data/news_raw.json data/news_source_health.json data/news_coverage.json data/news.json data/news_archive.json data/news_processing_status.json
+            cp /tmp/news_feed.json data/news_feed.json
+            cp /tmp/news_feed_archive.json data/news_feed_archive.json
+            cp /tmp/news_enrichment_status.json data/news_enrichment_status.json
+            cp /tmp/index.html index.html
+            git add data/news_raw.json data/news_source_health.json data/news_coverage.json data/news.json data/news_archive.json data/news_processing_status.json data/news_feed.json data/news_feed_archive.json data/news_enrichment_status.json index.html
 
             if git diff --cached --quiet; then
               echo "No news data changes to commit."
