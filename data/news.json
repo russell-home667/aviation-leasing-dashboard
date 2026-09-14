@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-14T11:31:31Z",
+  "generated_at": "2026-09-14T12:34:36Z",
   "model": "deepseek-flash",
   "analysis_mode": "deepseek",
   "categories": [
@@ -14,23 +14,23 @@
     "Macro & Geopolitics"
   ],
   "stats": {
-    "raw_pool_total": 1272,
-    "recent_raw_items": 207,
-    "already_processed_raw_items": 203,
-    "new_raw_items": 4,
-    "new_preclusters": 4,
+    "raw_pool_total": 1278,
+    "recent_raw_items": 212,
+    "already_processed_raw_items": 205,
+    "new_raw_items": 7,
+    "new_preclusters": 7,
     "deepseek_calls": 1,
     "deepseek_failed_batches": 0,
     "deepseek_errors": [],
-    "clusters_submitted": 4,
-    "clusters_retained_or_accounted": 3,
-    "stories": 187,
+    "clusters_submitted": 7,
+    "clusters_retained_or_accounted": 6,
+    "stories": 192,
     "by_category": {
-      "Aircraft & OEM": 35,
-      "Airlines & Credit": 75,
+      "Aircraft & OEM": 37,
+      "Airlines & Credit": 74,
       "Engines & MRO": 13,
-      "Financing & Capital Markets": 16,
-      "Leasing & Trading": 34,
+      "Financing & Capital Markets": 18,
+      "Leasing & Trading": 36,
       "Legal & Regulatory": 6,
       "Macro & Geopolitics": 7,
       "Values & Lease Rates": 1
@@ -39,9 +39,9 @@
       "ADS Advance": 1,
       "AeroTime": 2,
       "Aerospace and Mechanical Insider on MSN": 1,
-      "Aviation News Online": 111,
+      "Aviation News Online": 112,
       "Aviation24.be": 1,
-      "Bizcommunity on MSN": 2,
+      "Bizcommunity on MSN": 3,
       "Bloomberg": 1,
       "Business Wire": 1,
       "China Daily": 1,
@@ -50,7 +50,7 @@
       "Flightglobal": 4,
       "Global Legal Chronicle": 1,
       "Irish Examiner on MSN": 1,
-      "Ishka Airfinance": 37,
+      "Ishka Airfinance": 38,
       "Mint": 1,
       "Mint on MSN": 2,
       "NHK": 1,
@@ -60,7 +60,8 @@
       "The Daily Star": 1,
       "The New Indian Express on MSN": 2,
       "The New Voice of Ukraine on MSN": 2,
-      "Yahoo Finance": 1,
+      "Yahoo Finance": 3,
+      "Yahoo Finance UK": 1,
       "ZAWYA": 2,
       "ch-aviation": 1,
       "القاهرة 24": 1
@@ -1303,6 +1304,37 @@
         "f804a86b41104ed169af5736"
       ],
       "analysis_mode": "core_source_safety_net"
+    },
+    {
+      "id": "0a88509792ab0b7ff8",
+      "title": "Neuberger launches $2bn New Bridge finance platform",
+      "summary_zh": "",
+      "why_it_matters_zh": "",
+      "category": "Financing & Capital Markets",
+      "importance_score": 54,
+      "region": "Europe",
+      "entities": [
+        "Neuberger",
+        "New Bridge"
+      ],
+      "published_at": "2026-09-14T11:53:40Z",
+      "updated_at": "2026-09-14T12:34:36Z",
+      "primary_source": "Ishka Airfinance",
+      "primary_url": "https://platform.ishkaairfinance.com/Articles/3601120",
+      "source_count": 1,
+      "sources": [
+        {
+          "name": "Ishka Airfinance",
+          "url": "https://platform.ishkaairfinance.com/Articles/3601120",
+          "published_at": "2026-09-14T11:53:40Z",
+          "source_channel": "ishka_latest_rss",
+          "discovered_via": "direct"
+        }
+      ],
+      "raw_ids": [
+        "ae98847c584042cf7f0bdd33"
+      ],
+      "analysis_mode": "deepseek"
     },
     {
       "id": "7e3951aac3cd5d9e7a",
@@ -2732,6 +2764,38 @@
       ],
       "raw_ids": [
         "a03ce88ee1ac5b06fb4ff6b9"
+      ],
+      "analysis_mode": "deepseek"
+    },
+    {
+      "id": "a386de77a995777a7d",
+      "title": "ACG appoints Jilinda Crowley as CFO",
+      "summary_zh": "",
+      "why_it_matters_zh": "",
+      "category": "Leasing & Trading",
+      "importance_score": 53,
+      "region": "Americas",
+      "entities": [
+        "ACG",
+        "Aviation Capital Group",
+        "Jilinda Crowley"
+      ],
+      "published_at": "2026-09-14T00:00:00Z",
+      "updated_at": "2026-09-14T12:34:36Z",
+      "primary_source": "Aviation News Online",
+      "primary_url": "https://www.aviationnews-online.com/article/acg-appoints-jilinda-crowley-as-chief-financial-officer",
+      "source_count": 1,
+      "sources": [
+        {
+          "name": "Aviation News Online",
+          "url": "https://www.aviationnews-online.com/article/acg-appoints-jilinda-crowley-as-chief-financial-officer",
+          "published_at": "2026-09-14T00:00:00Z",
+          "source_channel": "aviationnews_leasing",
+          "discovered_via": "direct"
+        }
+      ],
+      "raw_ids": [
+        "1f6659afb66b5cb166a9769c"
       ],
       "analysis_mode": "deepseek"
     },
@@ -4950,19 +5014,26 @@
     },
     {
       "id": "b491d46039b46f687b",
-      "title": "Insurance emerges as a key enabler of aircraft financing in Africa",
+      "title": "Insurance seen as key enabler of aircraft financing in Africa",
       "summary_zh": "",
       "why_it_matters_zh": "",
-      "category": "Airlines & Credit",
+      "category": "Financing & Capital Markets",
       "importance_score": 49,
-      "region": "Global/Unspecified",
+      "region": "Africa",
       "entities": [],
       "published_at": "2026-09-14T02:10:00Z",
-      "updated_at": "2026-09-14T09:38:27Z",
-      "primary_source": "ZAWYA",
-      "primary_url": "https://www.zawya.com/en/economy/insurance-emerges-as-a-key-enabler-of-aircraft-financing-in-africa-560404",
-      "source_count": 3,
+      "updated_at": "2026-09-14T12:34:36Z",
+      "primary_source": "Bizcommunity on MSN",
+      "primary_url": "https://www.msn.com/en-za/money/general/insurance-emerges-as-a-key-enabler-of-aircraft-financing-in-africa/ar-AA2c3d2x",
+      "source_count": 4,
       "sources": [
+        {
+          "name": "Bizcommunity on MSN",
+          "url": "https://www.msn.com/en-za/money/general/insurance-emerges-as-a-key-enabler-of-aircraft-financing-in-africa/ar-AA2c3d2x",
+          "published_at": "2026-09-11T16:10:05Z",
+          "source_channel": "bing_news_rss",
+          "discovered_via": "Bing News"
+        },
         {
           "name": "ZAWYA",
           "url": "https://www.zawya.com/en/economy/insurance-emerges-as-a-key-enabler-of-aircraft-financing-in-africa-560404",
@@ -4986,11 +5057,40 @@
         }
       ],
       "raw_ids": [
+        "71d28b8654a40131a57cd244",
         "d7695bf7d1f4f3784764a78b",
         "c40b749d6aff46da5f861b87",
         "e4c1b656f4437aa9327bc6a1"
       ],
-      "analysis_mode": "fallback_after_ai_error"
+      "analysis_mode": "deepseek"
+    },
+    {
+      "id": "49100c9975e27c94b6",
+      "title": "Aircraft leasing market forecast to grow through 2034 on travel demand, fleet modernization, and flexible financing",
+      "summary_zh": "",
+      "why_it_matters_zh": "",
+      "category": "Leasing & Trading",
+      "importance_score": 49,
+      "region": "Global",
+      "entities": [],
+      "published_at": "2026-09-14T00:40:00Z",
+      "updated_at": "2026-09-14T12:34:36Z",
+      "primary_source": "Yahoo Finance UK",
+      "primary_url": "https://uk.finance.yahoo.com/news/aircraft-leasing-market-poised-growth-114100022.html",
+      "source_count": 1,
+      "sources": [
+        {
+          "name": "Yahoo Finance UK",
+          "url": "https://uk.finance.yahoo.com/news/aircraft-leasing-market-poised-growth-114100022.html",
+          "published_at": "2026-09-14T00:40:00Z",
+          "source_channel": "bing_news_rss",
+          "discovered_via": "Bing News"
+        }
+      ],
+      "raw_ids": [
+        "d52d3d82f2766113d7e21085"
+      ],
+      "analysis_mode": "deepseek"
     },
     {
       "id": "d6f315880554834bfa",
@@ -5106,6 +5206,69 @@
         "d91001f7a50e304c34712b32"
       ],
       "analysis_mode": "fallback_after_ai_error"
+    },
+    {
+      "id": "ab545c7393750899dc",
+      "title": "Textron Aviation and Merlin unveil Cessna SkyCourier UX concept aircraft",
+      "summary_zh": "",
+      "why_it_matters_zh": "",
+      "category": "Aircraft & OEM",
+      "importance_score": 45,
+      "region": "Global/Unspecified",
+      "entities": [
+        "Textron Aviation",
+        "Merlin",
+        "Cessna SkyCourier"
+      ],
+      "published_at": "2026-09-14T05:00:00Z",
+      "updated_at": "2026-09-14T12:34:36Z",
+      "primary_source": "Yahoo Finance",
+      "primary_url": "https://finance.yahoo.com/technology/articles/textron-aviation-merlin-introduce-cessna-120000788.html",
+      "source_count": 1,
+      "sources": [
+        {
+          "name": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/technology/articles/textron-aviation-merlin-introduce-cessna-120000788.html",
+          "published_at": "2026-09-14T05:00:00Z",
+          "source_channel": "bing_news_rss",
+          "discovered_via": "Bing News"
+        }
+      ],
+      "raw_ids": [
+        "3999122ada3869bd749e48b9"
+      ],
+      "analysis_mode": "deepseek"
+    },
+    {
+      "id": "a9e83021f5e5505c5b",
+      "title": "TAT Technologies and Beyond Aero partner on thermal management for hydrogen-electric business aircraft",
+      "summary_zh": "",
+      "why_it_matters_zh": "",
+      "category": "Aircraft & OEM",
+      "importance_score": 45,
+      "region": "Global/Unspecified",
+      "entities": [
+        "TAT Technologies",
+        "Beyond Aero"
+      ],
+      "published_at": "2026-09-14T05:00:00Z",
+      "updated_at": "2026-09-14T12:34:36Z",
+      "primary_source": "Yahoo Finance",
+      "primary_url": "https://finance.yahoo.com/technology/articles/tat-technologies-beyond-aero-partner-120000064.html",
+      "source_count": 1,
+      "sources": [
+        {
+          "name": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/technology/articles/tat-technologies-beyond-aero-partner-120000064.html",
+          "published_at": "2026-09-14T05:00:00Z",
+          "source_channel": "bing_news_rss",
+          "discovered_via": "Bing News"
+        }
+      ],
+      "raw_ids": [
+        "f39d909d26c99f9601d3e818"
+      ],
+      "analysis_mode": "deepseek"
     },
     {
       "id": "dc739b7a9c43c67fdc",
