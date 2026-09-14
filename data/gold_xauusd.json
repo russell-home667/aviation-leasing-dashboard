@@ -22,17 +22,17 @@
   },
   "history_fetch_warning": null,
   "latest_quote": {
-    "price": 4328.4,
-    "timestamp": "2026-09-14T05:25:59.002Z",
+    "price": 4337.3,
+    "timestamp": "2026-09-14T05:34:29.127Z",
     "quote_status": "XAUS_FRESH",
     "source": "XAUS Gold Data API",
     "source_state": {
       "status": "fresh",
-      "as_of": "2026-09-14T05:25:59.002Z",
+      "as_of": "2026-09-14T05:34:29.127Z",
       "source": "upstream",
       "age_seconds": 0
     },
-    "retrieved_at_bjt": "2026-09-14T13:26:12+08:00",
+    "retrieved_at_bjt": "2026-09-14T13:34:33+08:00",
     "observation_date": "2026-09-14"
   },
   "data": [
@@ -7585,5 +7585,5 @@
       "low": 4360.5
     }
   ],
-  "updated_at_bjt": "2026-09-14T13:26:12+08:00"
+  "updated_at_bjt": "2026-09-14T13:34:33+08:00"
 }
