@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-14T14:53:27Z",
+  "generated_at": "2026-09-14T15:31:24Z",
   "model": "deepseek-flash",
   "analysis_mode": "deepseek",
   "categories": [
@@ -14,9 +14,9 @@
     "Macro & Geopolitics"
   ],
   "stats": {
-    "raw_pool_total": 1290,
-    "recent_raw_items": 217,
-    "already_processed_raw_items": 216,
+    "raw_pool_total": 1291,
+    "recent_raw_items": 218,
+    "already_processed_raw_items": 217,
     "new_raw_items": 1,
     "new_preclusters": 1,
     "deepseek_calls": 1,
@@ -24,12 +24,12 @@
     "deepseek_errors": [],
     "clusters_submitted": 1,
     "clusters_retained_or_accounted": 1,
-    "stories": 203,
+    "stories": 204,
     "by_category": {
       "Aircraft & OEM": 37,
       "Airlines & Credit": 79,
       "Engines & MRO": 14,
-      "Financing & Capital Markets": 19,
+      "Financing & Capital Markets": 20,
       "Leasing & Trading": 36,
       "Legal & Regulatory": 9,
       "Macro & Geopolitics": 8,
@@ -52,7 +52,7 @@
       "Flightglobal": 3,
       "Global Legal Chronicle": 1,
       "Irish Examiner on MSN": 1,
-      "Ishka Airfinance": 42,
+      "Ishka Airfinance": 43,
       "Mint": 1,
       "Mint on MSN": 2,
       "NHK": 1,
@@ -223,6 +223,36 @@
         "f14011a8428e1c8185361e55"
       ],
       "analysis_mode": "fallback_after_ai_error"
+    },
+    {
+      "id": "eea85e90ae66e6f2ec",
+      "title": "Wizz Air to shift to ownership financing structures",
+      "summary_zh": "",
+      "why_it_matters_zh": "",
+      "category": "Financing & Capital Markets",
+      "importance_score": 58,
+      "region": "Europe",
+      "entities": [
+        "Wizz Air"
+      ],
+      "published_at": "2026-09-14T15:25:00Z",
+      "updated_at": "2026-09-14T15:31:24Z",
+      "primary_source": "Ishka Airfinance",
+      "primary_url": "https://platform.ishkaairfinance.com/Articles/3601124",
+      "source_count": 1,
+      "sources": [
+        {
+          "name": "Ishka Airfinance",
+          "url": "https://platform.ishkaairfinance.com/Articles/3601124",
+          "published_at": "2026-09-14T15:25:00Z",
+          "source_channel": "ishka_latest_rss",
+          "discovered_via": "direct"
+        }
+      ],
+      "raw_ids": [
+        "09353129a8ceebb4e3d15505"
+      ],
+      "analysis_mode": "deepseek"
     },
     {
       "id": "f5f555f1c3b53d6c00",

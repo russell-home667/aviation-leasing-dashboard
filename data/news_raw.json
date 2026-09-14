@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-14T14:53:00Z",
+  "generated_at": "2026-09-14T15:30:59Z",
   "retention_days": 120,
   "metadata_only": true,
   "stats": {
-    "current_batch_unique": 562,
-    "stored_total": 1290,
+    "current_batch_unique": 558,
+    "stored_total": 1291,
     "reuters_discovered_via_bing": 33,
     "by_source": {
       "ADS Advance": 1,
@@ -42,7 +42,7 @@
       "Insider Monkey": 1,
       "Investopedia": 1,
       "Irish Examiner on MSN": 1,
-      "Ishka Airfinance": 126,
+      "Ishka Airfinance": 127,
       "JD Supra": 1,
       "Live Mint on MSN": 1,
       "MSN": 10,
@@ -91,7 +91,7 @@
       "ishka_china_rss": 6,
       "ishka_cis_rss": 7,
       "ishka_europe_rss": 2,
-      "ishka_latest_rss": 15,
+      "ishka_latest_rss": 16,
       "ishka_latin_america_rss": 8,
       "ishka_law_rss": 10,
       "ishka_lessors_rss": 7,
@@ -105,6 +105,27 @@
     }
   },
   "items": [
+    {
+      "title": "Wizz Air to shift to ownership financing structures: ISTAT EMEA 2026",
+      "source": "Ishka Airfinance",
+      "source_channel": "ishka_latest_rss",
+      "published_at": "2026-09-14T15:25:00Z",
+      "published_date": "2026-09-14",
+      "url": "https://platform.ishkaairfinance.com/Articles/3601124",
+      "summary": "",
+      "author": "Olivier Bonnassies",
+      "categories_raw": [
+        "Airlines",
+        "Europe",
+        "Market Overview"
+      ],
+      "region_raw": "",
+      "discovered_via": "direct",
+      "discovery_query": "",
+      "rights_mode": "official_rss_metadata",
+      "fetched_at": "2026-09-14T15:30:59Z",
+      "id": "09353129a8ceebb4e3d15505"
+    },
     {
       "title": "Air Baltic files for Chapter 11",
       "source": "Ishka Airfinance",
