@@ -21,7 +21,9 @@ permissions:
 
 concurrency:
   group: news-data-writer
-  cancel-in-progress: false
+  # New code/data runs supersede older queued/running news jobs. This prevents a slow
+  # AI bootstrap from blocking corrected pipeline versions behind it.
+  cancel-in-progress: true
 
 jobs:
   update-news:
