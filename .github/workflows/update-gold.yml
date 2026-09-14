@@ -1,0 +1,78 @@
+name: Update Gold XAUUSD
+
+on:
+  workflow_dispatch:
+    inputs:
+      full_backfill:
+        description: 'Force full XAU/USD history backfill'
+        required: false
+        default: 'false'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/update_gold.py'
+      - '.github/workflows/update-gold.yml'
+  schedule:
+    # Same cadence as the AI bubble monitor: every 30 minutes, Monday-Saturday.
+    - cron: '*/30 * * * 1-6'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: aviation-gold-xauusd
+  cancel-in-progress: true
+
+jobs:
+  update:
+    # Investing.com intermittently blocks Azure/Linux GitHub runner IPs.
+    # The AI bubble monitor uses macOS runners for this series, so keep the same setup.
+    runs-on: macos-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install --disable-pip-version-check curl-cffi beautifulsoup4
+
+      - name: Update XAU/USD
+        run: |
+          set -euo pipefail
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.full_backfill }}" = "true" ]; then
+            python scripts/update_gold.py --full
+          else
+            python scripts/update_gold.py
+          fi
+
+      - name: Validate gold data
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p = Path('data/gold_xauusd.json')
+          d = json.loads(p.read_text())
+          rows = d.get('data', [])
+          assert d.get('ticker') == 'XAU/USD'
+          assert d.get('instrument_id') == '68'
+          assert len(rows) >= 20
+          assert rows[-1]['value'] > 100
+          assert rows == sorted(rows, key=lambda x: x['date'])
+          print('rows', len(rows), 'coverage', rows[0]['date'], 'to', rows[-1]['date'], 'latest', d['latest_quote']['price'])
+          PY
+
+      - name: Commit gold data
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/gold_xauusd.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Update XAU/USD gold data'
+          git pull --rebase origin main
+          git push origin HEAD:main
