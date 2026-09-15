@@ -3,7 +3,7 @@ name: Backfill Aviation Leasing News AI Enrichment
 on:
   workflow_dispatch:
   schedule:
-    - cron: '15 10 * * 2,5'
+    - cron: '15 10 * * 0'
       timezone: 'Asia/Shanghai'
 
 permissions:
