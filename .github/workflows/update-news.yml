@@ -2,27 +2,9 @@ name: Update Aviation Leasing News
 
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - 'scripts/update_news_raw.py'
-      - 'scripts/validate_news_coverage.py'
-      - 'scripts/process_news.py'
-      - 'scripts/validate_processed_news.py'
-      - 'scripts/analyze_news.py'
-      - 'scripts/run_analyze_news_resilient.py'
-      - 'scripts/backfill_news_enrichment.py'
-      - 'scripts/validate_enriched_news.py'
-      - 'scripts/check_news_pipeline_health.py'
-      - 'scripts/install_news_ui.py'
-      - 'scripts/install_news_page_filters.py'
-      - 'scripts/validate_news_ui.py'
-      - 'data/news_sources.json'
-      - 'data/news_validation_baseline.json'
-      - 'data/news_priority_entities.json'
-      - 'news.html'
-      - '.github/workflows/update-news.yml'
   schedule:
-    - cron: '17 * * * *'
+    - cron: '45 8 * * 1-5'
+      timezone: 'Asia/Shanghai'
 
 permissions:
   contents: write
@@ -31,7 +13,7 @@ permissions:
 
 concurrency:
   group: news-data-writer
-  cancel-in-progress: ${{ github.event_name == 'push' }}
+  cancel-in-progress: false
 
 jobs:
   update-news:
