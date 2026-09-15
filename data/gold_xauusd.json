@@ -21,7 +21,7 @@
   "live_fallback_url": "https://api.gold-api.com/price/XAU",
   "frequency": "Monthly average 1990-01 to 2021-09; completed daily XAU/USD spot bars thereafter; live quote checks every 30 minutes Monday-Saturday",
   "price_field": "USD per troy ounce; World Bank monthly average for long history; Yahoo Finance XAUUSD=X completed daily close for ongoing daily refresh",
-  "status": "STALE",
+  "status": "LIVE",
   "history_scope": "World Bank Pink Sheet monthly gold averages from 1990-01 through 2021-09; stored daily spot history thereafter, with recent dates refreshed from Yahoo Finance XAUUSD=X and goldprice.dev used only as a fallback; no synthetic interpolation",
   "history_segments": [
     {
@@ -48,16 +48,15 @@
   "history_fetch_warning": "Yahoo Finance: 404 Client Error: Not Found for url: https://query1.finance.yahoo.com/v8/finance/chart/XAUUSD%3DX?range=1y&interval=1d&events=history",
   "world_bank_fetch_warning": null,
   "latest_quote": {
-    "price": 4296.1,
-    "timestamp": "2026-09-15T20:33:11Z",
-    "quote_status": "STALE_STORED_QUOTE",
+    "price": 4294.9,
+    "timestamp": "2026-09-15T21:32:41Z",
+    "quote_status": "GOLD_API_REALTIME",
     "source": "gold-api.com",
     "source_state": {
       "status": "fresh"
     },
-    "retrieved_at_bjt": "2026-09-16T05:01:18+08:00",
-    "observation_date": "2026-09-14",
-    "fallback_reason": "No XAU/USD spot quote available: XAUS: 503 Server Error: Service Unavailable for url: https://xaus.com/api/v1/spot?compact=1 | gold-api.com: HTTPSConnectionPool(host='api.gold-api.com', port=443): Max retries exceeded with url: /price/XAU (Caused by NameResolutionError(\"HTTPSConnection(host='api.gold-api.com', port=443): Failed to resolve 'api.gold-api.com' ([Errno -2] Name or service not known)\"))"
+    "retrieved_at_bjt": "2026-09-16T05:32:53+08:00",
+    "observation_date": "2026-09-14"
   },
   "data": [
     {
@@ -12830,5 +12829,5 @@
       "low": 4357.9
     }
   ],
-  "updated_at_bjt": "2026-09-16T05:01:18+08:00"
+  "updated_at_bjt": "2026-09-16T05:32:53+08:00"
 }
