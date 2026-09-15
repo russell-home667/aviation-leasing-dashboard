@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-09-14T23:26:10Z",
+  "checked_at": "2026-09-15T00:37:17Z",
   "status": "degraded",
   "publish_allowed": true,
   "source_checks": {
@@ -27,33 +27,33 @@
   },
   "freshness": {
     "feed_generated_age_hours": 0.02,
-    "newest_story_age_hours": 1.22,
+    "newest_story_age_hours": 2.4,
     "source_newest_record_age_days": {
-      "Ishka Airfinance": 0.05,
-      "Aviation News Online": 0.98,
-      "Reuters": 0.55,
-      "Flightglobal": 6.64
+      "Ishka Airfinance": 0.1,
+      "Aviation News Online": 1.03,
+      "Reuters": 0.6,
+      "Flightglobal": 6.69
     }
   },
   "enrichment": {
     "deepseek_configured": true,
-    "current_stories": 204,
+    "current_stories": 183,
     "deepseek_stories": 49,
-    "fallback_stories": 155,
-    "fallback_ratio": 0.7598,
+    "fallback_stories": 134,
+    "fallback_ratio": 0.7322,
     "archive_deepseek_stories": 58,
     "archive_fallback_stories": 160
   },
   "feed": {
-    "current_stories": 204,
+    "current_stories": 183,
     "archive_stories": 218,
-    "critical_stories": 61,
-    "priority_entity_stories": 62,
-    "macro_related_stories": 66
+    "critical_stories": 53,
+    "priority_entity_stories": 55,
+    "macro_related_stories": 59
   },
   "errors": [],
   "warnings": [
-    "DeepSeek backlog high: 155/204 current stories (76.0%) still use fallback enrichment",
+    "DeepSeek backlog high: 134/183 current stories (73.2%) still use fallback enrichment",
     "latest Step 5 backfill had 1 failed DeepSeek batches"
   ]
 }
