@@ -1,0 +1,68 @@
+name: Backfill Aviation Leasing News AI Enrichment
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '15 10 * * 2,5'
+      timezone: 'Asia/Shanghai'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: news-data-writer
+  cancel-in-progress: false
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Sync latest main
+        run: |
+          git fetch origin main
+          git reset --hard origin/main
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
+
+      - name: Backfill historical fallback stories
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          DEEPSEEK_MODEL: deepseek-flash
+          NEWS_BACKFILL_BATCH_SIZE: '12'
+          NEWS_BACKFILL_MAX_STORIES: '12'
+        run: python scripts/run_backfill_news_enrichment_resilient.py
+
+      - name: Validate enriched news
+        run: python scripts/validate_enriched_news.py
+
+      - name: Refresh operational health report
+        run: python scripts/check_news_pipeline_health.py
+
+      - name: Commit backfilled enrichment
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/news_feed.json data/news_feed_archive.json data/news_enrichment_status.json data/news_pipeline_health.json
+
+          if git diff --cached --quiet; then
+            echo "No backfill changes to commit."
+            exit 0
+          fi
+
+          git commit -m "Backfill aviation news AI enrichment"
+          git pull --rebase origin main
+          git push origin HEAD:main
