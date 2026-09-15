@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "checked_at": "2026-09-15T00:36:04Z",
+  "checked_at": "2026-09-15T01:30:10Z",
   "status": "pass",
   "analysis_mode": "deepseek",
   "deepseek_configured": true,
@@ -14,7 +14,7 @@
     "Legal & Regulatory",
     "Macro & Geopolitics"
   ],
-  "raw_pool_total": 1306,
+  "raw_pool_total": 1310,
   "recent_raw_items": 223,
   "new_raw_items": 1,
   "new_preclusters": 1,

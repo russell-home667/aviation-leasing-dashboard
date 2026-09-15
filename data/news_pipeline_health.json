@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-09-15T00:37:17Z",
+  "checked_at": "2026-09-15T01:31:25Z",
   "status": "degraded",
   "publish_allowed": true,
   "source_checks": {
@@ -27,12 +27,12 @@
   },
   "freshness": {
     "feed_generated_age_hours": 0.02,
-    "newest_story_age_hours": 2.4,
+    "newest_story_age_hours": 3.31,
     "source_newest_record_age_days": {
-      "Ishka Airfinance": 0.1,
-      "Aviation News Online": 1.03,
-      "Reuters": 0.6,
-      "Flightglobal": 6.69
+      "Ishka Airfinance": 0.14,
+      "Aviation News Online": 1.06,
+      "Reuters": 0.64,
+      "Flightglobal": 6.73
     }
   },
   "enrichment": {

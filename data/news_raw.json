@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-15T00:35:39Z",
+  "generated_at": "2026-09-15T01:29:43Z",
   "retention_days": 120,
   "metadata_only": true,
   "stats": {
-    "current_batch_unique": 566,
-    "stored_total": 1306,
-    "reuters_discovered_via_bing": 36,
+    "current_batch_unique": 570,
+    "stored_total": 1310,
+    "reuters_discovered_via_bing": 37,
     "by_source": {
       "ADS Advance": 1,
       "AFPBB News": 1,
@@ -37,7 +37,7 @@
       "Financial Times": 1,
       "Finanznachrichten": 2,
       "Firstpost": 1,
-      "Flightglobal": 20,
+      "Flightglobal": 21,
       "Flying": 1,
       "Global Legal Chronicle": 1,
       "GlobalAir.com": 1,
@@ -59,7 +59,7 @@
       "PE Hub": 1,
       "Pensacola News Journal": 1,
       "Republic World": 1,
-      "Reuters": 36,
+      "Reuters": 37,
       "Seeking Alpha": 3,
       "Simple Flying on MSN": 1,
       "Tech Times on MSN": 2,
@@ -72,7 +72,7 @@
       "The Star": 1,
       "TravelBiz Monitor": 1,
       "Xinhua": 1,
-      "Yahoo Finance": 16,
+      "Yahoo Finance": 18,
       "Yahoo Finance UK": 2,
       "ZAWYA": 2,
       "ch-aviation": 1,
@@ -87,7 +87,7 @@
       "aviationnews_maintenance": 116,
       "aviationnews_people": 92,
       "aviationnews_regulatory": 80,
-      "bing_news_rss": 140,
+      "bing_news_rss": 143,
       "ishka_africa_rss": 9,
       "ishka_aircraft_rss": 10,
       "ishka_airlines_rss": 6,
@@ -105,7 +105,7 @@
       "ishka_oceania_rss": 9,
       "ishka_south_asia_rss": 9,
       "ishka_southeast_asia_rss": 5,
-      "reuters_via_bing": 36
+      "reuters_via_bing": 37
     }
   },
   "items": [
@@ -6071,6 +6071,23 @@
       "id": "a16f397ddd036d942c18d5ad"
     },
     {
+      "title": "Malaysia Aviation Group mulls Firefly ATR 72 replacement ‘very soon’",
+      "source": "Flightglobal",
+      "source_channel": "bing_news_rss",
+      "published_at": "2026-09-03T22:00:00Z",
+      "published_date": "2026-09-03",
+      "url": "https://www.flightglobal.com/airlines/2026/09/malaysia-aviation-group-mulls-firefly-atr-72-replacement-very-soon/",
+      "summary": "i The price is displayed as a monthly rate (VAT excl.), but payment is made annually. Please refer to our subscription terms for more details.",
+      "author": "",
+      "categories_raw": [],
+      "region_raw": "",
+      "discovered_via": "Bing News",
+      "discovery_query": "site:flightglobal.com Airbus deliveries airline",
+      "rights_mode": "search_result_metadata",
+      "fetched_at": "2026-09-15T01:30:08Z",
+      "id": "cb42fdafa065894fdc515b88"
+    },
+    {
       "title": "Malaysia Aviation Group to ‘grow with discipline’ as fuel challenges loom large",
       "source": "Flightglobal",
       "source_channel": "bing_news_rss",
@@ -6275,6 +6292,23 @@
       "rights_mode": "search_result_metadata",
       "fetched_at": "2026-09-14T08:30:18Z",
       "id": "4b79945fab3878f47d11cc46"
+    },
+    {
+      "title": "La Caisse and SMBC Aviation Capital double the size of their aircraft leasing platform, Maple Aircraft Company Holdings, to USD 3 billion",
+      "source": "Yahoo Finance",
+      "source_channel": "bing_news_rss",
+      "published_at": "2026-09-03T04:01:00Z",
+      "published_date": "2026-09-03",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/la-caisse-smbc-aviation-capital-110100470.html",
+      "summary": "La Caisse (formerly CDPQ), a global investment group, and SMBC Aviation Capital, the leading global aviation finance platform, announced today the expansion of Maple Aircraft Company Holdings Limited ...",
+      "author": "",
+      "categories_raw": [],
+      "region_raw": "",
+      "discovered_via": "Bing News",
+      "discovery_query": "\"aviation finance\" aircraft",
+      "rights_mode": "search_result_metadata",
+      "fetched_at": "2026-09-15T01:29:59Z",
+      "id": "7913ca331778911135b77ff9"
     },
     {
       "title": "India's Fly91 orders 40 ATR turboprops in bet on smaller cities",
@@ -9685,6 +9719,23 @@
       "rights_mode": "public_listing_metadata",
       "fetched_at": "2026-09-14T08:58:03Z",
       "id": "4d9f13181771610ec61df18c"
+    },
+    {
+      "title": "Northrop Grumman Corp",
+      "source": "Reuters",
+      "source_channel": "reuters_via_bing",
+      "published_at": "2026-08-25T16:59:00Z",
+      "published_date": "2026-08-25",
+      "url": "https://www.reuters.com/company/northrop-grumman-corp/",
+      "summary": "Poland pivots to home-grown defence production as it builds Europe's biggest army As Poland builds Europe's biggest army, it is pivoting toward domestic and other central European defence companies to ...",
+      "author": "",
+      "categories_raw": [],
+      "region_raw": "",
+      "discovered_via": "Bing News",
+      "discovery_query": "site:reuters.com Boeing Airbus deliveries",
+      "rights_mode": "search_result_metadata",
+      "fetched_at": "2026-09-15T01:30:09Z",
+      "id": "482d5fd8c684beb2527a8c16"
     },
     {
       "title": "Fly91 raises funds",
@@ -19772,6 +19823,23 @@
       "rights_mode": "search_result_metadata",
       "fetched_at": "2026-09-14T08:47:37Z",
       "id": "3f5977b9ff67715543c81e5b"
+    },
+    {
+      "title": "AerCap Announces Order for 15 Boeing 787 Dreamliners",
+      "source": "Yahoo Finance",
+      "source_channel": "bing_news_rss",
+      "published_at": "2026-07-21T05:00:00Z",
+      "published_date": "2026-07-21",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/aercap-announces-order-15-boeing-120000506.html",
+      "summary": "The above button links to Coinbase. Yahoo Finance is not a broker-dealer or investment adviser and does not offer securities or cryptocurrencies for sale or facilitate trading. Coinbase pays us for ...",
+      "author": "",
+      "categories_raw": [],
+      "region_raw": "",
+      "discovered_via": "Bing News",
+      "discovery_query": "AerCap aviation",
+      "rights_mode": "search_result_metadata",
+      "fetched_at": "2026-09-15T01:30:02Z",
+      "id": "5b91c31685880f5d5b3cc92b"
     },
     {
       "title": "BOC Aviation confirms order for up to 220 engines from RTX's Pratt & Whitney",

@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "checked_at": "2026-09-15T00:36:14Z",
+  "checked_at": "2026-09-15T01:30:15Z",
   "status": "pass",
   "deepseek_configured": true,
   "model": "deepseek-flash",
@@ -26,7 +26,7 @@
   "backfill_calls": 0,
   "backfill_failed_batches": 1,
   "backfill_errors": [
-    "batch_1: RuntimeError: ValueError: empty DeepSeek content; ValueError: empty DeepSeek content"
+    "batch_1: RuntimeError: JSONDecodeError: Expecting ',' delimiter: line 1 column 3387 (char 3386); ConnectionError: HTTPSConnectionPool(host='api.deepseek.com', port=443): Read timed out."
   ],
   "archive_fallback_story_count": 160,
   "archive_deepseek_story_count": 58
