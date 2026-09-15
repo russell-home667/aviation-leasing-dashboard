@@ -286,7 +286,7 @@
           <div class="quote-details">
             <span class="meta-label">LATEST</span><span class="meta-value" id="goldDate">--</span>
             <span class="meta-label">FREQUENCY</span><span class="meta-value" id="goldFrequency">30m checks</span>
-            <span class="meta-label">SOURCE</span><span class="meta-value" id="goldSource">XAUS Gold Data API</span>
+            <span class="meta-label">SOURCE</span><span class="meta-value" id="goldSource">--</span>
           </div>
         </div>
       </div>
@@ -358,7 +358,7 @@
     </section>
   </div>
 
-  <div class="footer">Data source: Yahoo Finance · Public Singapore jet/kerosene sources · XAUS Gold Data API XAU/USD · TAC Index / Baltic Exchange</div>
+  <div class="footer" id="footerSources">Data source: loading current quote sources…</div>
 </div>
 
 <script>
@@ -622,7 +622,7 @@
       updateChange(`${prefix}Change`, change, options.changePeriod || "DoD");
       document.getElementById(`${prefix}Date`).textContent = `${formatUpdatedAt(quote.timestamp)} BJT`;
       document.getElementById(`${prefix}Frequency`).textContent = options.quoteFrequency || dataset.quote_frequency || dataset.frequency || "--";
-      document.getElementById(`${prefix}Source`).textContent = dataset.source || "--";
+      document.getElementById(`${prefix}Source`).textContent = quote.source || dataset.source || "--";
       setDatasetStatus(`${prefix}Status`, quote.quote_status || dataset.status || "LIVE");
     } else {
       updateChange(`${prefix}Change`, getChange(data), options.changePeriod || "DoD");
@@ -681,6 +681,15 @@
           changePeriod: "DoD",
           quoteFrequency: "30m checks · daily history"
         });
+      }
+
+      const brentCurrentSource = market.brent?.latest_quote?.source || market.brent?.source || "--";
+      const jetCurrentSource = market.jet_fuel?.latest_quote?.source || market.jet_fuel?.source || "Public Singapore jet/kerosene sources";
+      const goldCurrentSource = gold?.latest_quote?.source || gold?.source || "--";
+      const baiCurrentSource = market.bai00?.source || "TAC Index / Baltic Exchange";
+      const footerSources = document.getElementById("footerSources");
+      if (footerSources) {
+        footerSources.textContent = `Current quote sources: Brent · ${brentCurrentSource} · Jet Kerosene · ${jetCurrentSource} · Gold · ${goldCurrentSource} · BAI00 · ${baiCurrentSource}`;
       }
 
       const brentSeries = toSeries(market.brent?.data || []);
