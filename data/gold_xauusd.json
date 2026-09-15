@@ -3,20 +3,26 @@
   "ticker": "XAU/USD",
   "unit": "USD/oz",
   "instrument_type": "spot",
-  "source": "World Bank Pink Sheet + XAUS Gold Data API",
-  "source_url": "https://xaus.com/api/",
+  "source": "World Bank Pink Sheet + Yahoo Finance XAUUSD=X",
+  "source_url": "https://finance.yahoo.com/quote/XAUUSD%3DX/history/",
   "historical_source": "World Bank Commodity Markets (Pink Sheet)",
   "historical_source_url": "https://www.worldbank.org/en/research/commodity-markets",
   "historical_ingest": "datasets/gold-prices mirror of World Bank monthly Gold series",
   "historical_ingest_url": "https://github.com/datasets/gold-prices",
-  "current_source": "XAUS Gold Data API",
-  "current_source_url": "https://xaus.com/api/",
+  "daily_source": "goldprice.dev XAU-USD-SPOT",
+  "daily_primary_source": "Yahoo Finance XAUUSD=X",
+  "daily_primary_url": "https://finance.yahoo.com/quote/XAUUSD%3DX/history/",
+  "daily_fallback_source": "goldprice.dev XAU-USD-SPOT",
+  "daily_fallback_url": "https://goldprice.dev/docs/historical",
+  "daily_fallback_used": true,
+  "live_primary_source": "XAUS Gold Data API",
+  "live_primary_url": "https://xaus.com/api/",
   "live_fallback_source": "gold-api.com",
   "live_fallback_url": "https://api.gold-api.com/price/XAU",
-  "frequency": "Monthly average 1990-01 to 2021-09; daily XAU/USD spot from 2021-09-13 onward; live updater checks every 30 minutes Monday-Saturday",
-  "price_field": "USD per troy ounce; World Bank monthly average for long history, XAUS daily/spot for recent history",
+  "frequency": "Monthly average 1990-01 to 2021-09; completed daily XAU/USD spot bars thereafter; live quote checks every 30 minutes Monday-Saturday",
+  "price_field": "USD per troy ounce; World Bank monthly average for long history; Yahoo Finance XAUUSD=X completed daily close for ongoing daily refresh",
   "status": "LIVE",
-  "history_scope": "World Bank Pink Sheet monthly gold averages from 1990-01 through 2021-09, then XAUS XAU/USD daily spot history from 2021-09-13 onward; no synthetic interpolation",
+  "history_scope": "World Bank Pink Sheet monthly gold averages from 1990-01 through 2021-09; stored daily spot history thereafter, with recent dates refreshed from Yahoo Finance XAUUSD=X and goldprice.dev used only as a fallback; no synthetic interpolation",
   "history_segments": [
     {
       "start": "1990-01-01",
@@ -29,24 +35,27 @@
       "start": "2021-09-13",
       "end": "2026-09-14",
       "frequency": "daily",
-      "source": "XAUS Gold Data API"
+      "source": "Stored XAU/USD spot history; recent dates refreshed by Yahoo Finance XAUUSD=X"
     }
   ],
   "history_start": "1990-01-01",
   "history_end": "2026-09-14",
-  "observation_count": 1639,
-  "history_data_state": {},
-  "history_fetch_warning": "503 Server Error: Service Unavailable for url: https://xaus.com/api/v1/history",
+  "observation_count": 1642,
+  "history_data_state": {
+    "daily_source": "goldprice.dev XAU-USD-SPOT",
+    "fallback_used": true
+  },
+  "history_fetch_warning": "Yahoo Finance: 404 Client Error: Not Found for url: https://query1.finance.yahoo.com/v8/finance/chart/XAUUSD%3DX?range=1y&interval=1d&events=history",
   "world_bank_fetch_warning": null,
   "latest_quote": {
-    "price": 4293.3,
-    "timestamp": "2026-09-15T06:01:10Z",
+    "price": 4293.8,
+    "timestamp": "2026-09-15T06:02:39Z",
     "quote_status": "GOLD_API_REALTIME",
     "source": "gold-api.com",
     "source_state": {
       "status": "fresh"
     },
-    "retrieved_at_bjt": "2026-09-15T14:01:38+08:00",
+    "retrieved_at_bjt": "2026-09-15T14:02:43+08:00",
     "observation_date": "2026-09-14"
   },
   "data": [
@@ -12623,67 +12632,84 @@
     },
     {
       "date": "2026-08-17",
-      "value": 4417.8,
+      "value": 4425.83,
       "frequency": "daily",
-      "source": "XAUS Gold Data API",
-      "high": 4428.5,
-      "low": 4386.5
+      "source": "goldprice.dev XAU-USD-SPOT",
+      "open": 4370.45,
+      "high": 4428.23,
+      "low": 4368.38
     },
     {
       "date": "2026-08-18",
-      "value": 4366.0,
+      "value": 4333.09,
       "frequency": "daily",
-      "source": "XAUS Gold Data API",
-      "high": 4434.1,
-      "low": 4330.7
+      "source": "goldprice.dev XAU-USD-SPOT",
+      "open": 4426.69,
+      "high": 4435.65,
+      "low": 4327.37
     },
     {
       "date": "2026-08-19",
-      "value": 4489.4,
+      "value": 4511.83,
       "frequency": "daily",
-      "source": "XAUS Gold Data API",
-      "high": 4524.1,
-      "low": 4327.6
+      "source": "goldprice.dev XAU-USD-SPOT",
+      "open": 4333.05,
+      "high": 4527.23,
+      "low": 4324.76
     },
     {
       "date": "2026-08-20",
-      "value": 4516.3,
+      "value": 4526.4,
       "frequency": "daily",
-      "source": "XAUS Gold Data API",
-      "high": 4530.0,
-      "low": 4486.0
+      "source": "goldprice.dev XAU-USD-SPOT",
+      "open": 4511.83,
+      "high": 4540.94,
+      "low": 4450.74
     },
     {
       "date": "2026-08-21",
-      "value": 4624.1,
+      "value": 4603.9,
       "frequency": "daily",
-      "source": "XAUS Gold Data API",
-      "high": 4624.1,
-      "low": 4560.0
+      "source": "goldprice.dev XAU-USD-SPOT",
+      "open": 4526.4,
+      "high": 4632.23,
+      "low": 4509.01
+    },
+    {
+      "date": "2026-08-23",
+      "value": 4624.23,
+      "frequency": "daily",
+      "source": "goldprice.dev XAU-USD-SPOT",
+      "open": 4603.81,
+      "high": 4624.73,
+      "low": 4603.81
     },
     {
       "date": "2026-08-24",
-      "value": 4640.8,
+      "value": 4680.01,
       "frequency": "daily",
-      "source": "XAUS Gold Data API",
-      "high": 4670.9,
-      "low": 4635.1
+      "source": "goldprice.dev XAU-USD-SPOT",
+      "open": 4624.23,
+      "high": 4682.81,
+      "low": 4595.21
     },
     {
       "date": "2026-08-25",
-      "value": 4638.1,
+      "value": 4654.96,
       "frequency": "daily",
-      "source": "XAUS Gold Data API",
-      "high": 4638.1,
-      "low": 4626.2
+      "source": "goldprice.dev XAU-USD-SPOT",
+      "open": 4679.99,
+      "high": 4696.69,
+      "low": 4605.55
     },
     {
       "date": "2026-08-26",
-      "value": 4598.2,
+      "value": 4623.71,
       "frequency": "daily",
-      "source": "XAUS Gold Data API",
-      "high": 4615.3,
-      "low": 4598.2
+      "source": "goldprice.dev XAU-USD-SPOT",
+      "open": 4654.96,
+      "high": 4670.84,
+      "low": 4583.16
     },
     {
       "date": "2026-08-27",
@@ -12702,12 +12728,22 @@
       "low": 4451.8
     },
     {
-      "date": "2026-08-31",
-      "value": 4431.1,
+      "date": "2026-08-30",
+      "value": 4454.92,
       "frequency": "daily",
-      "source": "XAUS Gold Data API",
-      "high": 4466.9,
-      "low": 4410.9
+      "source": "goldprice.dev XAU-USD-SPOT",
+      "open": 4454.62,
+      "high": 4457.88,
+      "low": 4452.85
+    },
+    {
+      "date": "2026-08-31",
+      "value": 4452.39,
+      "frequency": "daily",
+      "source": "goldprice.dev XAU-USD-SPOT",
+      "open": 4458.56,
+      "high": 4472.0,
+      "low": 4396.64
     },
     {
       "date": "2026-09-01",
@@ -12735,11 +12771,21 @@
     },
     {
       "date": "2026-09-04",
-      "value": 4429.8,
+      "value": 4430.75,
       "frequency": "daily",
-      "source": "XAUS Gold Data API",
-      "high": 4429.8,
-      "low": 4429.8
+      "source": "goldprice.dev XAU-USD-SPOT",
+      "open": 4480.11,
+      "high": 4490.66,
+      "low": 4365.7
+    },
+    {
+      "date": "2026-09-07",
+      "value": 4420.64,
+      "frequency": "daily",
+      "source": "goldprice.dev XAU-USD-SPOT",
+      "open": 4423.4,
+      "high": 4429.6,
+      "low": 4383.17
     },
     {
       "date": "2026-09-08",
@@ -12759,11 +12805,12 @@
     },
     {
       "date": "2026-09-10",
-      "value": 4364.5,
+      "value": 4361.82,
       "frequency": "daily",
-      "source": "XAUS Gold Data API",
-      "high": 4420.0,
-      "low": 4330.7
+      "source": "goldprice.dev XAU-USD-SPOT",
+      "open": 4394.25,
+      "high": 4432.47,
+      "low": 4325.01
     },
     {
       "date": "2026-09-11",
@@ -12782,5 +12829,5 @@
       "low": 4357.9
     }
   ],
-  "updated_at_bjt": "2026-09-15T14:01:38+08:00"
+  "updated_at_bjt": "2026-09-15T14:02:43+08:00"
 }
