@@ -46,34 +46,23 @@ jobs:
       - name: Validate source coverage
         run: python scripts/validate_news_coverage.py
 
-      - name: Process, cluster and classify news
+      - name: Step 2 Python clean, cluster and provisional classify
         env:
-          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
-          DEEPSEEK_MODEL: deepseek-flash
           NEWS_CURRENT_DAYS: '7'
           NEWS_ARCHIVE_DAYS: '120'
           NEWS_MAX_AI_CANDIDATES: '360'
-          NEWS_AI_BATCH_SIZE: '30'
         run: python scripts/process_news.py
 
       - name: Validate processed news
         run: python scripts/validate_processed_news.py
 
-      - name: Step 3 analyze, score and rank new or changed stories
+      - name: Unified DeepSeek final classification, analysis and ranking
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           DEEPSEEK_MODEL: deepseek-flash
           NEWS_STEP3_BATCH_SIZE: '45'
           NEWS_STEP3_MAX_AI_STORIES: '260'
         run: python scripts/run_analyze_news_resilient.py
-
-      - name: Step 5 gradually backfill historical AI enrichment
-        env:
-          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
-          DEEPSEEK_MODEL: deepseek-flash
-          NEWS_BACKFILL_BATCH_SIZE: '12'
-          NEWS_BACKFILL_MAX_STORIES: '12'
-        run: python scripts/backfill_news_enrichment.py
 
       - name: Validate enriched news
         run: python scripts/validate_enriched_news.py
@@ -87,7 +76,7 @@ jobs:
       - name: Validate dashboard news UI
         run: python scripts/validate_news_ui.py
 
-      - name: Step 5 operational health gate
+      - name: Operational health gate
         run: python scripts/check_news_pipeline_health.py
 
       - name: Publish pipeline summary to Actions
