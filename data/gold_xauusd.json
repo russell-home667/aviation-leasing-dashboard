@@ -49,16 +49,16 @@
   "world_bank_fetch_warning": null,
   "latest_quote": {
     "price": 4265.0,
-    "timestamp": "2026-09-16T21:01:00.522Z",
+    "timestamp": "2026-09-16T21:34:40.107Z",
     "quote_status": "XAUS_FRESH",
     "source": "XAUS Gold Data API",
     "source_state": {
       "status": "fresh",
-      "as_of": "2026-09-16T21:01:00.522Z",
+      "as_of": "2026-09-16T21:34:40.107Z",
       "source": "upstream",
       "age_seconds": 0
     },
-    "retrieved_at_bjt": "2026-09-17T05:01:21+08:00",
+    "retrieved_at_bjt": "2026-09-17T05:34:53+08:00",
     "observation_date": "2026-09-14"
   },
   "data": [
@@ -12841,5 +12841,5 @@
       "low": 4357.9
     }
   ],
-  "updated_at_bjt": "2026-09-17T05:01:21+08:00"
+  "updated_at_bjt": "2026-09-17T05:34:53+08:00"
 }
