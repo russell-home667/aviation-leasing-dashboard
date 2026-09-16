@@ -121,6 +121,7 @@
   const DATA_URL = "data/news_feed_archive.json";
   let allStories = [];
   let generatedAt = null;
+  let aircraftEntityKeys = new Set();
 
   const $ = id => document.getElementById(id);
   const esc = value => String(value ?? "").replace(/[&<>\"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',"'":'&#39;'}[c]));
@@ -141,12 +142,27 @@
     select.innerHTML = first + uniqueSorted(values).map(v => `<option value="${esc(v)}">${esc(v)}</option>`).join("");
   }
 
+  function entityKey(value) {
+    return String(value ?? "").toUpperCase().replace(/[\s\-_/().]/g, "");
+  }
+
+  function isAircraftOrEngineModel(value) {
+    const key = entityKey(value);
+    if (!key) return false;
+    if (aircraftEntityKeys.has(key)) return true;
+    return /^(?:A(?:220|319|320|321|330|340|350|380)(?:\d{3,4})?(?:NEO|XLR)?|B?7(?:37|47|67|77|87)(?:\d{3,4}|MAX\d*)?|E(?:170|175|190|195)(?:E2)?|CRJ(?:200|700|900|1000)|C(?:909|919|929)|ARJ21|ATR(?:42|72)(?:\d{3})?|PW(?:1100G|1500G)|LEAP1[ABC]|CFM56|GENX(?:\dB)?|GE9X|TRENT(?:7000|1000|XWB|700|800|900))$/.test(key);
+  }
+
   function storyCompanies(story) {
-    const p = (story.priority_matches || []).map(x => x.name);
-    return uniqueSorted([...(story.entities || []), ...p]);
+    const p = (story.priority_matches || []).map(x => x.name).filter(Boolean);
+    const entities = (story.entities || []).filter(x => x && !isAircraftOrEngineModel(x));
+    return uniqueSorted([...entities, ...p]);
   }
 
   function hydrateFilters() {
+    aircraftEntityKeys = new Set(
+      allStories.flatMap(s => s.aircraft_tags || []).map(entityKey).filter(Boolean)
+    );
     fillSelect("source", allStories.flatMap(s => (s.sources || []).map(x => x.name)));
     fillSelect("category", allStories.map(s => s.category));
     fillSelect("region", allStories.map(s => s.region));
