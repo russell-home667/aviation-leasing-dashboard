@@ -40,7 +40,7 @@
   ],
   "history_start": "1990-01-01",
   "history_end": "2026-09-14",
-  "observation_count": 1642,
+  "observation_count": 1643,
   "history_data_state": {
     "daily_source": "goldprice.dev XAU-USD-SPOT",
     "fallback_used": true
@@ -48,14 +48,14 @@
   "history_fetch_warning": "Yahoo Finance: 404 Client Error: Not Found for url: https://query1.finance.yahoo.com/v8/finance/chart/XAUUSD%3DX?range=1y&interval=1d&events=history",
   "world_bank_fetch_warning": null,
   "latest_quote": {
-    "price": 4284.9,
-    "timestamp": "2026-09-15T23:32:41Z",
+    "price": 4284.6,
+    "timestamp": "2026-09-16T00:00:41Z",
     "quote_status": "GOLD_API_REALTIME",
     "source": "gold-api.com",
     "source_state": {
       "status": "fresh"
     },
-    "retrieved_at_bjt": "2026-09-16T07:33:02+08:00",
+    "retrieved_at_bjt": "2026-09-16T08:01:07+08:00",
     "observation_date": "2026-09-14"
   },
   "data": [
@@ -12821,6 +12821,15 @@
       "low": 4365.8
     },
     {
+      "date": "2026-09-13",
+      "value": 4349.44,
+      "frequency": "daily",
+      "source": "goldprice.dev XAU-USD-SPOT",
+      "open": 4349.42,
+      "high": 4352.62,
+      "low": 4347.44
+    },
+    {
       "date": "2026-09-14",
       "value": 4363.4,
       "frequency": "daily",
@@ -12829,5 +12838,5 @@
       "low": 4357.9
     }
   ],
-  "updated_at_bjt": "2026-09-16T07:33:02+08:00"
+  "updated_at_bjt": "2026-09-16T08:01:07+08:00"
 }
