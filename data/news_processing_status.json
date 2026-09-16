@@ -1,9 +1,9 @@
 {
   "schema_version": 2,
-  "checked_at": "2026-09-15T01:30:10Z",
+  "checked_at": "2026-09-16T00:52:34Z",
   "status": "pass",
-  "analysis_mode": "deepseek",
-  "deepseek_configured": true,
+  "analysis_mode": "fallback_rules",
+  "deepseek_configured": false,
   "categories": [
     "Leasing & Trading",
     "Aircraft & OEM",
@@ -14,17 +14,19 @@
     "Legal & Regulatory",
     "Macro & Geopolitics"
   ],
-  "raw_pool_total": 1310,
-  "recent_raw_items": 223,
-  "new_raw_items": 1,
-  "new_preclusters": 1,
-  "current_stories": 183,
-  "archive_stories": 218,
-  "deepseek_calls": 1,
+  "raw_pool_total": 1355,
+  "recent_raw_items": 221,
+  "new_raw_items": 39,
+  "new_preclusters": 38,
+  "current_stories": 180,
+  "archive_stories": 254,
+  "deepseek_calls": 0,
   "deepseek_failed_batches": 0,
-  "deepseek_errors": [],
-  "clusters_submitted": 1,
-  "clusters_retained_or_accounted": 0,
-  "fallback_story_count": 156,
-  "deepseek_story_count": 27
+  "deepseek_errors": [
+    "DEEPSEEK_API_KEY missing; deterministic fallback used."
+  ],
+  "clusters_submitted": 38,
+  "clusters_retained_or_accounted": 37,
+  "fallback_story_count": 154,
+  "deepseek_story_count": 26
 }

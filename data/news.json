@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-15T01:30:10Z",
-  "model": "deepseek-flash",
-  "analysis_mode": "deepseek",
+  "generated_at": "2026-09-16T00:52:34Z",
+  "model": "rules-fallback",
+  "analysis_mode": "fallback_rules",
   "categories": [
     "Leasing & Trading",
     "Aircraft & OEM",
@@ -14,57 +14,55 @@
     "Macro & Geopolitics"
   ],
   "stats": {
-    "raw_pool_total": 1310,
-    "recent_raw_items": 223,
-    "already_processed_raw_items": 222,
-    "new_raw_items": 1,
-    "new_preclusters": 1,
-    "deepseek_calls": 1,
+    "raw_pool_total": 1355,
+    "recent_raw_items": 221,
+    "already_processed_raw_items": 182,
+    "new_raw_items": 39,
+    "new_preclusters": 38,
+    "deepseek_calls": 0,
     "deepseek_failed_batches": 0,
-    "deepseek_errors": [],
-    "clusters_submitted": 1,
-    "clusters_retained_or_accounted": 0,
-    "stories": 183,
+    "deepseek_errors": [
+      "DEEPSEEK_API_KEY missing; deterministic fallback used."
+    ],
+    "clusters_submitted": 38,
+    "clusters_retained_or_accounted": 37,
+    "stories": 180,
     "by_category": {
-      "Aircraft & OEM": 33,
-      "Airlines & Credit": 67,
-      "Engines & MRO": 12,
+      "Aircraft & OEM": 30,
+      "Airlines & Credit": 66,
+      "Engines & MRO": 9,
       "Financing & Capital Markets": 19,
-      "Leasing & Trading": 37,
-      "Legal & Regulatory": 7,
-      "Macro & Geopolitics": 7,
-      "Values & Lease Rates": 1
+      "Leasing & Trading": 44,
+      "Legal & Regulatory": 6,
+      "Macro & Geopolitics": 6
     },
     "source_mentions": {
       "ADS Advance": 1,
       "AeroTime": 2,
-      "Aerospace and Mechanical Insider on MSN": 1,
       "Agence France-Presse": 1,
       "Alternatives Watch": 1,
       "Aviacionline": 1,
-      "Aviation News Online": 97,
+      "Aviation News Online": 91,
       "Aviation24.be": 1,
       "Bizcommunity on MSN": 3,
       "Bloomberg": 1,
-      "Business Wire": 1,
       "China Daily": 1,
       "Devdiscourse": 1,
       "FLYING Magazine": 1,
-      "Flightglobal": 2,
+      "FinanzNachrichten.de": 1,
       "GlobalAir.com": 1,
       "Irish Examiner on MSN": 1,
-      "Ishka Airfinance": 44,
+      "Ishka Airfinance": 50,
       "Mint": 1,
       "Mint on MSN": 2,
-      "NHK": 1,
-      "Reuters": 18,
-      "Seeking Alpha": 1,
+      "Orange County Business Journal": 1,
+      "Reuters": 16,
       "Simple Flying on MSN": 1,
-      "Tech Times on MSN": 1,
+      "Tech Times on MSN": 2,
       "The Daily Star": 1,
       "The New Indian Express on MSN": 2,
       "The New Voice of Ukraine on MSN": 3,
-      "Yahoo Finance": 3,
+      "Yahoo Finance": 5,
       "Yahoo Finance UK": 1,
       "ZAWYA": 2,
       "ch-aviation": 1,
@@ -230,32 +228,32 @@
       "analysis_mode": "fallback_after_ai_error"
     },
     {
-      "id": "904c3561a8c92b1c60",
-      "title": "US Treasury ratchets up pressure on Iran with sweeping new aviation sanctions",
+      "id": "3063c27a1c0bec8d4c",
+      "title": "Strong demand meets fuel and financing pressures: ISTAT EMEA 2026",
       "summary_zh": "",
       "why_it_matters_zh": "",
-      "category": "Macro & Geopolitics",
-      "importance_score": 59,
+      "category": "Financing & Capital Markets",
+      "importance_score": 58,
       "region": "Global/Unspecified",
       "entities": [],
-      "published_at": "2026-09-08T07:52:00Z",
-      "updated_at": "2026-09-14T09:38:27Z",
-      "primary_source": "Reuters",
-      "primary_url": "https://www.reuters.com/business/aerospace-defense/us-issues-fresh-iran-related-sanctions-treasury-website-shows-2026-09-08/",
+      "published_at": "2026-09-15T14:05:51Z",
+      "updated_at": "2026-09-16T00:52:34Z",
+      "primary_source": "Ishka Airfinance",
+      "primary_url": "https://platform.ishkaairfinance.com/Articles/3601139",
       "source_count": 1,
       "sources": [
         {
-          "name": "Reuters",
-          "url": "https://www.reuters.com/business/aerospace-defense/us-issues-fresh-iran-related-sanctions-treasury-website-shows-2026-09-08/",
-          "published_at": "2026-09-08T07:52:00Z",
-          "source_channel": "reuters_via_bing",
-          "discovered_via": "Bing News"
+          "name": "Ishka Airfinance",
+          "url": "https://platform.ishkaairfinance.com/Articles/3601139",
+          "published_at": "2026-09-15T14:05:51Z",
+          "source_channel": "ishka_latest_rss",
+          "discovered_via": "direct"
         }
       ],
       "raw_ids": [
-        "f14011a8428e1c8185361e55"
+        "f33063aba93ca9edd3367acb"
       ],
-      "analysis_mode": "fallback_after_ai_error"
+      "analysis_mode": "fallback_no_deepseek_key"
     },
     {
       "id": "eea85e90ae66e6f2ec",
@@ -789,176 +787,34 @@
       "analysis_mode": "fallback_after_ai_error"
     },
     {
-      "id": "281196d17224abfafe",
-      "title": "easyJet sued for $72m over six former Russian-leased aircraft",
+      "id": "a1f9e8d491ef864904",
+      "title": "Airbus sees no softening in demand despite geopolitical headwinds",
       "summary_zh": "",
       "why_it_matters_zh": "",
-      "category": "Leasing & Trading",
-      "importance_score": 57,
-      "region": "Europe",
+      "category": "Aircraft & OEM",
+      "importance_score": 55,
+      "region": "Global/Unspecified",
       "entities": [
         "Airbus"
       ],
-      "published_at": "2026-09-09T00:00:00Z",
-      "updated_at": "2026-09-14T09:38:27Z",
-      "primary_source": "Aviation News Online",
-      "primary_url": "https://www.aviationnews-online.com/article/easyjet-sued-for-72m-over-six-former-russian-leased-aircraft",
+      "published_at": "2026-09-15T12:39:00Z",
+      "updated_at": "2026-09-16T00:52:34Z",
+      "primary_source": "Reuters",
+      "primary_url": "https://www.reuters.com/business/aerospace-defense/airbus-sees-no-softening-demand-despite-geopolitical-headwinds-2026-09-15/",
       "source_count": 1,
       "sources": [
         {
-          "name": "Aviation News Online",
-          "url": "https://www.aviationnews-online.com/article/easyjet-sued-for-72m-over-six-former-russian-leased-aircraft",
-          "published_at": "2026-09-09T00:00:00Z",
-          "source_channel": "aviationnews_legal",
-          "discovered_via": "direct"
+          "name": "Reuters",
+          "url": "https://www.reuters.com/business/aerospace-defense/airbus-sees-no-softening-demand-despite-geopolitical-headwinds-2026-09-15/",
+          "published_at": "2026-09-15T12:39:00Z",
+          "source_channel": "reuters_via_bing",
+          "discovered_via": "Bing News"
         }
       ],
       "raw_ids": [
-        "1d367a79a1e6580b55d6bb62"
+        "f5e1aa7886b1ab07459e2448"
       ],
-      "analysis_mode": "fallback_after_ai_error"
-    },
-    {
-      "id": "30a292c9459e8b348e",
-      "title": "US sanctions all remaining Iranian airlines in aviation crackdown",
-      "summary_zh": "",
-      "why_it_matters_zh": "",
-      "category": "Airlines & Credit",
-      "importance_score": 57,
-      "region": "Global/Unspecified",
-      "entities": [],
-      "published_at": "2026-09-09T00:00:00Z",
-      "updated_at": "2026-09-14T09:38:27Z",
-      "primary_source": "Aviation News Online",
-      "primary_url": "https://www.aviationnews-online.com/article/us-sanctions-all-remaining-iranian-airlines-in-aviation-crackdown",
-      "source_count": 1,
-      "sources": [
-        {
-          "name": "Aviation News Online",
-          "url": "https://www.aviationnews-online.com/article/us-sanctions-all-remaining-iranian-airlines-in-aviation-crackdown",
-          "published_at": "2026-09-09T00:00:00Z",
-          "source_channel": "aviationnews_regulatory",
-          "discovered_via": "direct"
-        }
-      ],
-      "raw_ids": [
-        "9d2395686ef0fb4a9330ccf2"
-      ],
-      "analysis_mode": "fallback_after_ai_error"
-    },
-    {
-      "id": "f99c2d124f42a4c465",
-      "title": "London Growth Frontier: Narrowbody engine risk rises as widebody scarcity underpins aircraft values",
-      "summary_zh": "",
-      "why_it_matters_zh": "",
-      "category": "Values & Lease Rates",
-      "importance_score": 57,
-      "region": "Global/Unspecified",
-      "entities": [],
-      "published_at": "2026-09-09T00:00:00Z",
-      "updated_at": "2026-09-14T09:38:27Z",
-      "primary_source": "Aviation News Online",
-      "primary_url": "https://www.aviationnews-online.com/article/aircraft-valuation-experts-flag-engine-exposure-and-tight-widebody-supply",
-      "source_count": 1,
-      "sources": [
-        {
-          "name": "Aviation News Online",
-          "url": "https://www.aviationnews-online.com/article/aircraft-valuation-experts-flag-engine-exposure-and-tight-widebody-supply",
-          "published_at": "2026-09-09T00:00:00Z",
-          "source_channel": "aviationnews_leasing",
-          "discovered_via": "direct"
-        }
-      ],
-      "raw_ids": [
-        "cc727a5c73fbbb7ab611c47b"
-      ],
-      "analysis_mode": "fallback_after_ai_error"
-    },
-    {
-      "id": "7db61a800190945b06",
-      "title": "Growth Frontiers London: abundant liquidity keeps aircraft finance pricing under pressure",
-      "summary_zh": "",
-      "why_it_matters_zh": "",
-      "category": "Financing & Capital Markets",
-      "importance_score": 57,
-      "region": "Global/Unspecified",
-      "entities": [],
-      "published_at": "2026-09-09T00:00:00Z",
-      "updated_at": "2026-09-14T09:38:27Z",
-      "primary_source": "Aviation News Online",
-      "primary_url": "https://www.aviationnews-online.com/article/growth-frontiers-london-abundant-liquidity-keeps-aircraft-finance-pricing-under-pressure",
-      "source_count": 1,
-      "sources": [
-        {
-          "name": "Aviation News Online",
-          "url": "https://www.aviationnews-online.com/article/growth-frontiers-london-abundant-liquidity-keeps-aircraft-finance-pricing-under-pressure",
-          "published_at": "2026-09-09T00:00:00Z",
-          "source_channel": "aviationnews_finance",
-          "discovered_via": "direct"
-        }
-      ],
-      "raw_ids": [
-        "830b6a018f3e89bb68cf5049"
-      ],
-      "analysis_mode": "fallback_after_ai_error"
-    },
-    {
-      "id": "0cbb037ed0e3eb0b39",
-      "title": "Growth Frontiers London: Lessors Warn Aircraft Demand Is Softening as Fuel Costs Rise and OEM Deliveries Recover",
-      "summary_zh": "",
-      "why_it_matters_zh": "",
-      "category": "Leasing & Trading",
-      "importance_score": 57,
-      "region": "Global/Unspecified",
-      "entities": [],
-      "published_at": "2026-09-09T00:00:00Z",
-      "updated_at": "2026-09-14T09:38:27Z",
-      "primary_source": "Aviation News Online",
-      "primary_url": "https://www.aviationnews-online.com/article/growth-frontiers-london-lessors-warn-aircraft-demand-is-softening-as-fuel-costs-rise-and-oem-deliveries-recover",
-      "source_count": 1,
-      "sources": [
-        {
-          "name": "Aviation News Online",
-          "url": "https://www.aviationnews-online.com/article/growth-frontiers-london-lessors-warn-aircraft-demand-is-softening-as-fuel-costs-rise-and-oem-deliveries-recover",
-          "published_at": "2026-09-09T00:00:00Z",
-          "source_channel": "aviationnews_leasing",
-          "discovered_via": "direct"
-        }
-      ],
-      "raw_ids": [
-        "2e042437d50718dd0e806992"
-      ],
-      "analysis_mode": "fallback_after_ai_error"
-    },
-    {
-      "id": "3ba4af1251eba2b794",
-      "title": "Avianca secured $300 million for engine MRO services from Brazil",
-      "summary_zh": "",
-      "why_it_matters_zh": "",
-      "category": "Engines & MRO",
-      "importance_score": 57,
-      "region": "Americas",
-      "entities": [
-        "CFM56"
-      ],
-      "published_at": "2026-09-09T00:00:00Z",
-      "updated_at": "2026-09-14T09:38:27Z",
-      "primary_source": "Aviation News Online",
-      "primary_url": "https://www.aviationnews-online.com/article/avianca-secured-300-million-for-engine-mro-services-from-brazil",
-      "source_count": 1,
-      "sources": [
-        {
-          "name": "Aviation News Online",
-          "url": "https://www.aviationnews-online.com/article/avianca-secured-300-million-for-engine-mro-services-from-brazil",
-          "published_at": "2026-09-09T00:00:00Z",
-          "source_channel": "aviationnews_finance",
-          "discovered_via": "direct"
-        }
-      ],
-      "raw_ids": [
-        "19e7e75c5f1697a6f26cd4e2"
-      ],
-      "analysis_mode": "fallback_after_ai_error"
+      "analysis_mode": "fallback_no_deepseek_key"
     },
     {
       "id": "adfc92c126a40a89a5",
@@ -1191,6 +1047,34 @@
       "analysis_mode": "fallback_after_ai_error"
     },
     {
+      "id": "5d540c96734debbe40",
+      "title": "(AIRG.DE) | Stock Price & Latest News | Reuters",
+      "summary_zh": "",
+      "why_it_matters_zh": "",
+      "category": "Aircraft & OEM",
+      "importance_score": 55,
+      "region": "Global/Unspecified",
+      "entities": [],
+      "published_at": "2026-09-09T06:37:00Z",
+      "updated_at": "2026-09-16T00:52:34Z",
+      "primary_source": "Reuters",
+      "primary_url": "https://www.reuters.com/markets/quote/AIRG.DE/",
+      "source_count": 1,
+      "sources": [
+        {
+          "name": "Reuters",
+          "url": "https://www.reuters.com/markets/quote/AIRG.DE/",
+          "published_at": "2026-09-09T06:37:00Z",
+          "source_channel": "reuters_via_bing",
+          "discovered_via": "Bing News"
+        }
+      ],
+      "raw_ids": [
+        "b60a1acd357de303ae9f5d8d"
+      ],
+      "analysis_mode": "fallback_no_deepseek_key"
+    },
+    {
       "id": "8208231646467b5cd2",
       "title": "EasyJet faces $72 million lawsuit over stranded Airbus planes, FT reports",
       "summary_zh": "",
@@ -1237,95 +1121,314 @@
       "analysis_mode": "fallback_after_ai_error"
     },
     {
-      "id": "e26f12de47e60a355e",
-      "title": "Dan Catchpole",
+      "id": "0cdc2efe843c47d01e",
+      "title": "Traders shift to current tech widebodies for yield: ISTAT EMEA 2026",
       "summary_zh": "",
       "why_it_matters_zh": "",
-      "category": "Aircraft & OEM",
-      "importance_score": 55,
+      "category": "Leasing & Trading",
+      "importance_score": 54,
       "region": "Global/Unspecified",
-      "entities": [
-        "Boeing"
-      ],
-      "published_at": "2026-09-08T17:01:00Z",
-      "updated_at": "2026-09-14T09:38:27Z",
-      "primary_source": "Reuters",
-      "primary_url": "https://www.reuters.com/authors/dan-catchpole/",
+      "entities": [],
+      "published_at": "2026-09-15T14:09:37Z",
+      "updated_at": "2026-09-16T00:52:34Z",
+      "primary_source": "Ishka Airfinance",
+      "primary_url": "https://platform.ishkaairfinance.com/Articles/3601140",
       "source_count": 1,
       "sources": [
         {
-          "name": "Reuters",
-          "url": "https://www.reuters.com/authors/dan-catchpole/",
-          "published_at": "2026-09-08T17:01:00Z",
-          "source_channel": "reuters_via_bing",
-          "discovered_via": "Bing News"
+          "name": "Ishka Airfinance",
+          "url": "https://platform.ishkaairfinance.com/Articles/3601140",
+          "published_at": "2026-09-15T14:09:37Z",
+          "source_channel": "ishka_latest_rss",
+          "discovered_via": "direct"
         }
       ],
       "raw_ids": [
-        "279b7d0156367ade009a15a2"
+        "97621f6b05e568a38508bac1"
       ],
-      "analysis_mode": "fallback_after_ai_error"
+      "analysis_mode": "fallback_no_deepseek_key"
     },
     {
-      "id": "01eedf558ee89781fd",
-      "title": "Boeing August deliveries dip as 787 handovers fall",
+      "id": "5312ce072a535bfe58",
+      "title": "Easyjet sale to create opportunities: Wizz Air chief",
       "summary_zh": "",
       "why_it_matters_zh": "",
-      "category": "Aircraft & OEM",
-      "importance_score": 55,
+      "category": "Leasing & Trading",
+      "importance_score": 54,
       "region": "Global/Unspecified",
-      "entities": [
-        "Boeing",
-        "787"
-      ],
-      "published_at": "2026-09-08T08:02:00Z",
-      "updated_at": "2026-09-14T09:38:27Z",
-      "primary_source": "Reuters",
-      "primary_url": "https://www.reuters.com/business/aerospace-defense/boeing-august-deliveries-dip-787-handovers-fall-2026-09-08/",
+      "entities": [],
+      "published_at": "2026-09-15T12:20:48Z",
+      "updated_at": "2026-09-16T00:52:34Z",
+      "primary_source": "Ishka Airfinance",
+      "primary_url": "https://platform.ishkaairfinance.com/Articles/3601138",
       "source_count": 1,
       "sources": [
         {
-          "name": "Reuters",
-          "url": "https://www.reuters.com/business/aerospace-defense/boeing-august-deliveries-dip-787-handovers-fall-2026-09-08/",
-          "published_at": "2026-09-08T08:02:00Z",
-          "source_channel": "reuters_via_bing",
-          "discovered_via": "Bing News"
+          "name": "Ishka Airfinance",
+          "url": "https://platform.ishkaairfinance.com/Articles/3601138",
+          "published_at": "2026-09-15T12:20:48Z",
+          "source_channel": "ishka_latest_rss",
+          "discovered_via": "direct"
         }
       ],
       "raw_ids": [
-        "9b74eaf9acf3b12f4353f108"
+        "5f4d400184b2631a98a427f4"
       ],
-      "analysis_mode": "fallback_after_ai_error"
+      "analysis_mode": "fallback_no_deepseek_key"
     },
     {
-      "id": "cebac7db1dd21bb7d1",
-      "title": "GE Aerospace to buy castings supplier for nearly $12 billion to tackle engine bottleneck",
+      "id": "b321287c5cadc13c36",
+      "title": "Air Baltic reports €1.4bn of debt entering Chapter 11",
       "summary_zh": "",
       "why_it_matters_zh": "",
-      "category": "Engines & MRO",
-      "importance_score": 55,
+      "category": "Financing & Capital Markets",
+      "importance_score": 54,
       "region": "Global/Unspecified",
-      "entities": [
-        "GE Aerospace"
-      ],
-      "published_at": "2026-09-08T04:38:00Z",
-      "updated_at": "2026-09-14T09:38:27Z",
-      "primary_source": "Reuters",
-      "primary_url": "https://www.reuters.com/legal/transactional/ge-aerospace-buy-castings-maker-cpp-nearly-12-billion-2026-09-08/",
+      "entities": [],
+      "published_at": "2026-09-15T11:22:58Z",
+      "updated_at": "2026-09-16T00:52:34Z",
+      "primary_source": "Ishka Airfinance",
+      "primary_url": "https://platform.ishkaairfinance.com/Articles/3601137",
       "source_count": 1,
       "sources": [
         {
-          "name": "Reuters",
-          "url": "https://www.reuters.com/legal/transactional/ge-aerospace-buy-castings-maker-cpp-nearly-12-billion-2026-09-08/",
-          "published_at": "2026-09-08T04:38:00Z",
-          "source_channel": "reuters_via_bing",
-          "discovered_via": "Bing News"
+          "name": "Ishka Airfinance",
+          "url": "https://platform.ishkaairfinance.com/Articles/3601137",
+          "published_at": "2026-09-15T11:22:58Z",
+          "source_channel": "ishka_latest_rss",
+          "discovered_via": "direct"
         }
       ],
       "raw_ids": [
-        "120beb19c1eb2e8f71a43f67"
+        "621b5e5ef49d5f11e632ba04"
       ],
-      "analysis_mode": "fallback_after_ai_error"
+      "analysis_mode": "fallback_no_deepseek_key"
+    },
+    {
+      "id": "d5bb36b3ae11346b86",
+      "title": "Aegean profit slips in Q2",
+      "summary_zh": "",
+      "why_it_matters_zh": "",
+      "category": "Airlines & Credit",
+      "importance_score": 54,
+      "region": "Global/Unspecified",
+      "entities": [],
+      "published_at": "2026-09-15T11:22:58Z",
+      "updated_at": "2026-09-16T00:52:34Z",
+      "primary_source": "Ishka Airfinance",
+      "primary_url": "https://platform.ishkaairfinance.com/Articles/3601136",
+      "source_count": 1,
+      "sources": [
+        {
+          "name": "Ishka Airfinance",
+          "url": "https://platform.ishkaairfinance.com/Articles/3601136",
+          "published_at": "2026-09-15T11:22:58Z",
+          "source_channel": "ishka_latest_rss",
+          "discovered_via": "direct"
+        }
+      ],
+      "raw_ids": [
+        "8b6c5a2770df2501c5585f52"
+      ],
+      "analysis_mode": "fallback_no_deepseek_key"
+    },
+    {
+      "id": "6a0cb12456dfde319b",
+      "title": "Hainan unit Urumqi Air agrees aircraft sales",
+      "summary_zh": "",
+      "why_it_matters_zh": "",
+      "category": "Leasing & Trading",
+      "importance_score": 54,
+      "region": "Global/Unspecified",
+      "entities": [],
+      "published_at": "2026-09-15T08:58:12Z",
+      "updated_at": "2026-09-16T00:52:34Z",
+      "primary_source": "Ishka Airfinance",
+      "primary_url": "https://platform.ishkaairfinance.com/Articles/3601135",
+      "source_count": 1,
+      "sources": [
+        {
+          "name": "Ishka Airfinance",
+          "url": "https://platform.ishkaairfinance.com/Articles/3601135",
+          "published_at": "2026-09-15T08:58:12Z",
+          "source_channel": "ishka_latest_rss",
+          "discovered_via": "direct"
+        }
+      ],
+      "raw_ids": [
+        "1c49b04d051c74a682c877a0"
+      ],
+      "analysis_mode": "fallback_no_deepseek_key"
+    },
+    {
+      "id": "62ca79df3a51c348fd",
+      "title": "Flair receives state loan",
+      "summary_zh": "",
+      "why_it_matters_zh": "",
+      "category": "Financing & Capital Markets",
+      "importance_score": 54,
+      "region": "Global/Unspecified",
+      "entities": [],
+      "published_at": "2026-09-15T08:58:02Z",
+      "updated_at": "2026-09-16T00:52:34Z",
+      "primary_source": "Ishka Airfinance",
+      "primary_url": "https://platform.ishkaairfinance.com/Articles/3601134",
+      "source_count": 1,
+      "sources": [
+        {
+          "name": "Ishka Airfinance",
+          "url": "https://platform.ishkaairfinance.com/Articles/3601134",
+          "published_at": "2026-09-15T08:58:02Z",
+          "source_channel": "ishka_latest_rss",
+          "discovered_via": "direct"
+        }
+      ],
+      "raw_ids": [
+        "171945546ada4a70f1078925"
+      ],
+      "analysis_mode": "fallback_no_deepseek_key"
+    },
+    {
+      "id": "cbb3108a1e8febf14b",
+      "title": "Fitch affirms Navigator 2024-1 ratings",
+      "summary_zh": "",
+      "why_it_matters_zh": "",
+      "category": "Leasing & Trading",
+      "importance_score": 54,
+      "region": "Global/Unspecified",
+      "entities": [],
+      "published_at": "2026-09-15T08:55:03Z",
+      "updated_at": "2026-09-16T00:52:34Z",
+      "primary_source": "Ishka Airfinance",
+      "primary_url": "https://platform.ishkaairfinance.com/Articles/3601133",
+      "source_count": 1,
+      "sources": [
+        {
+          "name": "Ishka Airfinance",
+          "url": "https://platform.ishkaairfinance.com/Articles/3601133",
+          "published_at": "2026-09-15T08:55:03Z",
+          "source_channel": "ishka_latest_rss",
+          "discovered_via": "direct"
+        }
+      ],
+      "raw_ids": [
+        "696e3881b641fbc98f309bea"
+      ],
+      "analysis_mode": "fallback_no_deepseek_key"
+    },
+    {
+      "id": "170655c7ca9c5b0afa",
+      "title": "Avora acquires A320 from lessor",
+      "summary_zh": "",
+      "why_it_matters_zh": "",
+      "category": "Leasing & Trading",
+      "importance_score": 54,
+      "region": "Global/Unspecified",
+      "entities": [
+        "A320"
+      ],
+      "published_at": "2026-09-15T08:54:52Z",
+      "updated_at": "2026-09-16T00:52:34Z",
+      "primary_source": "Ishka Airfinance",
+      "primary_url": "https://platform.ishkaairfinance.com/Articles/3601132",
+      "source_count": 1,
+      "sources": [
+        {
+          "name": "Ishka Airfinance",
+          "url": "https://platform.ishkaairfinance.com/Articles/3601132",
+          "published_at": "2026-09-15T08:54:52Z",
+          "source_channel": "ishka_latest_rss",
+          "discovered_via": "direct"
+        }
+      ],
+      "raw_ids": [
+        "56f5b1d5d372230243019cd0"
+      ],
+      "analysis_mode": "fallback_no_deepseek_key"
+    },
+    {
+      "id": "d2f4d0a63d9957ac18",
+      "title": "Avation unfazed by Air Baltic Chapter 11",
+      "summary_zh": "",
+      "why_it_matters_zh": "",
+      "category": "Airlines & Credit",
+      "importance_score": 54,
+      "region": "Global/Unspecified",
+      "entities": [],
+      "published_at": "2026-09-15T08:52:36Z",
+      "updated_at": "2026-09-16T00:52:34Z",
+      "primary_source": "Ishka Airfinance",
+      "primary_url": "https://platform.ishkaairfinance.com/Articles/3601131",
+      "source_count": 1,
+      "sources": [
+        {
+          "name": "Ishka Airfinance",
+          "url": "https://platform.ishkaairfinance.com/Articles/3601131",
+          "published_at": "2026-09-15T08:52:36Z",
+          "source_channel": "ishka_latest_rss",
+          "discovered_via": "direct"
+        }
+      ],
+      "raw_ids": [
+        "e96829fd47b3803c7560438e"
+      ],
+      "analysis_mode": "fallback_no_deepseek_key"
+    },
+    {
+      "id": "1ed1f612adf42cefc1",
+      "title": "JCAS Airways delays launch to 2027",
+      "summary_zh": "",
+      "why_it_matters_zh": "",
+      "category": "Leasing & Trading",
+      "importance_score": 54,
+      "region": "Global/Unspecified",
+      "entities": [],
+      "published_at": "2026-09-15T08:50:21Z",
+      "updated_at": "2026-09-16T00:52:34Z",
+      "primary_source": "Ishka Airfinance",
+      "primary_url": "https://platform.ishkaairfinance.com/Articles/3601130",
+      "source_count": 1,
+      "sources": [
+        {
+          "name": "Ishka Airfinance",
+          "url": "https://platform.ishkaairfinance.com/Articles/3601130",
+          "published_at": "2026-09-15T08:50:21Z",
+          "source_channel": "ishka_airlines_rss",
+          "discovered_via": "direct"
+        }
+      ],
+      "raw_ids": [
+        "b7ee01d126300afc7414857d"
+      ],
+      "analysis_mode": "fallback_no_deepseek_key"
+    },
+    {
+      "id": "ae73a660b1f8358d1c",
+      "title": "Xiamen Airlease sale nears completion",
+      "summary_zh": "",
+      "why_it_matters_zh": "",
+      "category": "Leasing & Trading",
+      "importance_score": 54,
+      "region": "Global/Unspecified",
+      "entities": [],
+      "published_at": "2026-09-15T08:50:14Z",
+      "updated_at": "2026-09-16T00:52:34Z",
+      "primary_source": "Ishka Airfinance",
+      "primary_url": "https://platform.ishkaairfinance.com/Articles/3601129",
+      "source_count": 1,
+      "sources": [
+        {
+          "name": "Ishka Airfinance",
+          "url": "https://platform.ishkaairfinance.com/Articles/3601129",
+          "published_at": "2026-09-15T08:50:14Z",
+          "source_channel": "ishka_lessors_rss",
+          "discovered_via": "direct"
+        }
+      ],
+      "raw_ids": [
+        "664bfa6c9ee37ed3711007d6"
+      ],
+      "analysis_mode": "fallback_no_deepseek_key"
     },
     {
       "id": "a2936c45f14208abeb",
@@ -2299,227 +2402,555 @@
       "analysis_mode": "fallback_after_ai_error"
     },
     {
-      "id": "2db565ca4d26932a4e",
-      "title": "Supply chain strains complicate Airbus production push",
+      "id": "8ceddecdf8bfc011af",
+      "title": "flydubai expects to exceed 100 aircraft this year",
       "summary_zh": "",
       "why_it_matters_zh": "",
       "category": "Aircraft & OEM",
-      "importance_score": 54,
-      "region": "Global/Unspecified",
+      "importance_score": 53,
+      "region": "Middle East/Africa",
       "entities": [
-        "Airbus"
+        "Boeing",
+        "737"
       ],
-      "published_at": "2026-09-08T18:08:27Z",
-      "updated_at": "2026-09-14T09:38:27Z",
-      "primary_source": "Ishka Airfinance",
-      "primary_url": "https://platform.ishkaairfinance.com/Articles/3601086",
+      "published_at": "2026-09-15T00:00:00Z",
+      "updated_at": "2026-09-16T00:52:34Z",
+      "primary_source": "Aviation News Online",
+      "primary_url": "https://www.aviationnews-online.com/article/flydubai-expects-to-exceed-100-aircraft-this-year",
       "source_count": 1,
       "sources": [
         {
-          "name": "Ishka Airfinance",
-          "url": "https://platform.ishkaairfinance.com/Articles/3601086",
-          "published_at": "2026-09-08T18:08:27Z",
-          "source_channel": "ishka_aircraft_rss",
-          "discovered_via": "direct"
-        }
-      ],
-      "raw_ids": [
-        "be2c141c143ae575851a17ef"
-      ],
-      "analysis_mode": "fallback_after_ai_error"
-    },
-    {
-      "id": "77e6593c2753c8dfa0",
-      "title": "Air Cairo orders 15 A320neos",
-      "summary_zh": "",
-      "why_it_matters_zh": "",
-      "category": "Aircraft & OEM",
-      "importance_score": 54,
-      "region": "Global/Unspecified",
-      "entities": [
-        "Airbus",
-        "A320neo"
-      ],
-      "published_at": "2026-09-08T15:31:41Z",
-      "updated_at": "2026-09-14T09:38:27Z",
-      "primary_source": "Ishka Airfinance",
-      "primary_url": "https://platform.ishkaairfinance.com/Articles/3601085",
-      "source_count": 3,
-      "sources": [
-        {
-          "name": "Ishka Airfinance",
-          "url": "https://platform.ishkaairfinance.com/Articles/3601085",
-          "published_at": "2026-09-08T15:31:41Z",
-          "source_channel": "ishka_middle_east_rss",
-          "discovered_via": "direct"
-        },
-        {
-          "name": "Flightglobal",
-          "url": "https://www.flightglobal.com/fleets/2026/09/air-cairo-orders-15-a320neos/",
-          "published_at": "2026-09-08T08:03:00Z",
-          "source_channel": "bing_news_rss",
-          "discovered_via": "Bing News"
-        },
-        {
           "name": "Aviation News Online",
-          "url": "https://www.aviationnews-online.com/article/egypts-air-cairo-plans-to-order-up-to-30-airbus-a320-family-jets",
-          "published_at": "2026-09-08T00:00:00Z",
+          "url": "https://www.aviationnews-online.com/article/flydubai-expects-to-exceed-100-aircraft-this-year",
+          "published_at": "2026-09-15T00:00:00Z",
           "source_channel": "aviationnews_airline",
           "discovered_via": "direct"
         }
       ],
       "raw_ids": [
-        "818f1d61217c50be131fa08a",
-        "31f91bee341f29cda3eb04b8",
-        "21cfe5fd60df98a7dc433f9c"
+        "3ae015015b47fd290eba6e4c"
       ],
-      "analysis_mode": "fallback_after_ai_error"
+      "analysis_mode": "fallback_no_deepseek_key"
     },
     {
-      "id": "9346699f62eacaf516",
-      "title": "Smith, Gambrell & Russell hires senior associate",
+      "id": "10e61756f4ab8787f3",
+      "title": "airBaltic CEO expects Chapter 11 process to last 9-12 months",
       "summary_zh": "",
       "why_it_matters_zh": "",
-      "category": "Leasing & Trading",
-      "importance_score": 54,
-      "region": "Global/Unspecified",
+      "category": "Airlines & Credit",
+      "importance_score": 53,
+      "region": "Europe",
       "entities": [],
-      "published_at": "2026-09-08T15:24:58Z",
-      "updated_at": "2026-09-14T09:38:27Z",
-      "primary_source": "Ishka Airfinance",
-      "primary_url": "https://platform.ishkaairfinance.com/Articles/3601084",
+      "published_at": "2026-09-15T00:00:00Z",
+      "updated_at": "2026-09-16T00:52:34Z",
+      "primary_source": "Aviation News Online",
+      "primary_url": "https://www.aviationnews-online.com/article/airbaltic-ceo-expects-chapter-11-process-to-last-9-12-months",
       "source_count": 1,
       "sources": [
         {
-          "name": "Ishka Airfinance",
-          "url": "https://platform.ishkaairfinance.com/Articles/3601084",
-          "published_at": "2026-09-08T15:24:58Z",
-          "source_channel": "ishka_law_rss",
+          "name": "Aviation News Online",
+          "url": "https://www.aviationnews-online.com/article/airbaltic-ceo-expects-chapter-11-process-to-last-9-12-months",
+          "published_at": "2026-09-15T00:00:00Z",
+          "source_channel": "aviationnews_finance",
           "discovered_via": "direct"
         }
       ],
       "raw_ids": [
-        "96ddb3e4b194bf670171c240"
+        "71139a6d97b8dc79ac84dc1c"
       ],
-      "analysis_mode": "fallback_after_ai_error"
+      "analysis_mode": "fallback_no_deepseek_key"
     },
     {
-      "id": "07784ea0dd7c4af190",
-      "title": "Jordan carrier adds A320",
+      "id": "598274fc9e271991c4",
+      "title": "US airlines' second-quarter profit falls sharply as fuel cost weight on earnings",
+      "summary_zh": "",
+      "why_it_matters_zh": "",
+      "category": "Airlines & Credit",
+      "importance_score": 53,
+      "region": "Americas",
+      "entities": [],
+      "published_at": "2026-09-15T00:00:00Z",
+      "updated_at": "2026-09-16T00:52:34Z",
+      "primary_source": "Aviation News Online",
+      "primary_url": "https://www.aviationnews-online.com/article/us-airlines-second-quarter-profit-falls-sharply-as-fuel-cost-weight-on-earnings",
+      "source_count": 1,
+      "sources": [
+        {
+          "name": "Aviation News Online",
+          "url": "https://www.aviationnews-online.com/article/us-airlines-second-quarter-profit-falls-sharply-as-fuel-cost-weight-on-earnings",
+          "published_at": "2026-09-15T00:00:00Z",
+          "source_channel": "aviationnews_airline",
+          "discovered_via": "direct"
+        }
+      ],
+      "raw_ids": [
+        "659202780186c19f13f3ebf7"
+      ],
+      "analysis_mode": "fallback_no_deepseek_key"
+    },
+    {
+      "id": "d27ec81b6a9c25516f",
+      "title": "TransNusa launches Premium Plus alongside Melbourne-Bali route",
+      "summary_zh": "",
+      "why_it_matters_zh": "",
+      "category": "Airlines & Credit",
+      "importance_score": 53,
+      "region": "Asia/Pacific",
+      "entities": [],
+      "published_at": "2026-09-15T00:00:00Z",
+      "updated_at": "2026-09-16T00:52:34Z",
+      "primary_source": "Aviation News Online",
+      "primary_url": "https://www.aviationnews-online.com/article/transnusa-launches-premium-plus-alongside-melbourne-bali-route",
+      "source_count": 1,
+      "sources": [
+        {
+          "name": "Aviation News Online",
+          "url": "https://www.aviationnews-online.com/article/transnusa-launches-premium-plus-alongside-melbourne-bali-route",
+          "published_at": "2026-09-15T00:00:00Z",
+          "source_channel": "aviationnews_airline",
+          "discovered_via": "direct"
+        }
+      ],
+      "raw_ids": [
+        "d94987739602e841e02f7535"
+      ],
+      "analysis_mode": "fallback_no_deepseek_key"
+    },
+    {
+      "id": "bbd3852ddded04c236",
+      "title": "Semiconductor and data-centre shipments drive Cathay Cargo growth",
+      "summary_zh": "",
+      "why_it_matters_zh": "",
+      "category": "Airlines & Credit",
+      "importance_score": 53,
+      "region": "Global/Unspecified",
+      "entities": [],
+      "published_at": "2026-09-15T00:00:00Z",
+      "updated_at": "2026-09-16T00:52:34Z",
+      "primary_source": "Aviation News Online",
+      "primary_url": "https://www.aviationnews-online.com/article/semiconductor-and-data-centre-shipments-drive-cathay-cargo-growth",
+      "source_count": 1,
+      "sources": [
+        {
+          "name": "Aviation News Online",
+          "url": "https://www.aviationnews-online.com/article/semiconductor-and-data-centre-shipments-drive-cathay-cargo-growth",
+          "published_at": "2026-09-15T00:00:00Z",
+          "source_channel": "aviationnews_airline",
+          "discovered_via": "direct"
+        }
+      ],
+      "raw_ids": [
+        "64474d7a5bc72c337d8a81fa"
+      ],
+      "analysis_mode": "fallback_no_deepseek_key"
+    },
+    {
+      "id": "a0ea3339e07bf5dff0",
+      "title": "Red Sea Airlines sign lease for two 737 MAX 8s",
       "summary_zh": "",
       "why_it_matters_zh": "",
       "category": "Aircraft & OEM",
-      "importance_score": 54,
-      "region": "Global/Unspecified",
+      "importance_score": 53,
+      "region": "Asia/Pacific",
       "entities": [
+        "Boeing",
+        "SMBC Aviation Capital",
+        "737",
+        "737 MAX 8"
+      ],
+      "published_at": "2026-09-15T00:00:00Z",
+      "updated_at": "2026-09-16T00:52:34Z",
+      "primary_source": "Aviation News Online",
+      "primary_url": "https://www.aviationnews-online.com/article/red-sea-airlines-sign-lease-for-two-737-max-8s",
+      "source_count": 1,
+      "sources": [
+        {
+          "name": "Aviation News Online",
+          "url": "https://www.aviationnews-online.com/article/red-sea-airlines-sign-lease-for-two-737-max-8s",
+          "published_at": "2026-09-15T00:00:00Z",
+          "source_channel": "aviationnews_leasing",
+          "discovered_via": "direct"
+        }
+      ],
+      "raw_ids": [
+        "99c63141daf5f866483f3d92"
+      ],
+      "analysis_mode": "fallback_no_deepseek_key"
+    },
+    {
+      "id": "c5dae594409d9c807c",
+      "title": "REPORT: How one crisis too many bankrupted airBaltic",
+      "summary_zh": "",
+      "why_it_matters_zh": "",
+      "category": "Airlines & Credit",
+      "importance_score": 53,
+      "region": "Europe",
+      "entities": [],
+      "published_at": "2026-09-15T00:00:00Z",
+      "updated_at": "2026-09-16T00:52:34Z",
+      "primary_source": "Aviation News Online",
+      "primary_url": "https://www.aviationnews-online.com/article/report-how-one-crisis-too-many-bankrupted-airbaltic",
+      "source_count": 1,
+      "sources": [
+        {
+          "name": "Aviation News Online",
+          "url": "https://www.aviationnews-online.com/article/report-how-one-crisis-too-many-bankrupted-airbaltic",
+          "published_at": "2026-09-15T00:00:00Z",
+          "source_channel": "aviationnews_finance",
+          "discovered_via": "direct"
+        }
+      ],
+      "raw_ids": [
+        "e9108d7d95dc7f34ea6bf3b5"
+      ],
+      "analysis_mode": "fallback_no_deepseek_key"
+    },
+    {
+      "id": "940c7b2d3a51785fea",
+      "title": "Jet2 calls for action after NATS disruption affects thousands",
+      "summary_zh": "",
+      "why_it_matters_zh": "",
+      "category": "Airlines & Credit",
+      "importance_score": 53,
+      "region": "Europe",
+      "entities": [],
+      "published_at": "2026-09-15T00:00:00Z",
+      "updated_at": "2026-09-16T00:52:34Z",
+      "primary_source": "Aviation News Online",
+      "primary_url": "https://www.aviationnews-online.com/article/jet2-calls-for-action-after-nats-disruption-affects-thousands",
+      "source_count": 1,
+      "sources": [
+        {
+          "name": "Aviation News Online",
+          "url": "https://www.aviationnews-online.com/article/jet2-calls-for-action-after-nats-disruption-affects-thousands",
+          "published_at": "2026-09-15T00:00:00Z",
+          "source_channel": "aviationnews_airline",
+          "discovered_via": "direct"
+        }
+      ],
+      "raw_ids": [
+        "8798f58252d2c7978e6094f3"
+      ],
+      "analysis_mode": "fallback_no_deepseek_key"
+    },
+    {
+      "id": "0fd7c73581730d3654",
+      "title": "IATA urges wider used engine parts access as shortages cost airlines billions",
+      "summary_zh": "",
+      "why_it_matters_zh": "",
+      "category": "Airlines & Credit",
+      "importance_score": 53,
+      "region": "Global/Unspecified",
+      "entities": [],
+      "published_at": "2026-09-15T00:00:00Z",
+      "updated_at": "2026-09-16T00:52:34Z",
+      "primary_source": "Aviation News Online",
+      "primary_url": "https://www.aviationnews-online.com/article/iata-urges-wider-used-engine-parts-access-as-shortages-cost-airlines-billions",
+      "source_count": 1,
+      "sources": [
+        {
+          "name": "Aviation News Online",
+          "url": "https://www.aviationnews-online.com/article/iata-urges-wider-used-engine-parts-access-as-shortages-cost-airlines-billions",
+          "published_at": "2026-09-15T00:00:00Z",
+          "source_channel": "aviationnews_engine",
+          "discovered_via": "direct"
+        }
+      ],
+      "raw_ids": [
+        "8b06d359da36571bc61aead1"
+      ],
+      "analysis_mode": "fallback_no_deepseek_key"
+    },
+    {
+      "id": "429fef3a9648b3680c",
+      "title": "Fitch rates $434m St. Louis airport revenue bonds ‘A’",
+      "summary_zh": "",
+      "why_it_matters_zh": "",
+      "category": "Financing & Capital Markets",
+      "importance_score": 53,
+      "region": "Americas",
+      "entities": [],
+      "published_at": "2026-09-15T00:00:00Z",
+      "updated_at": "2026-09-16T00:52:34Z",
+      "primary_source": "Aviation News Online",
+      "primary_url": "https://www.aviationnews-online.com/article/fitch-rates-434m-st-louis-airport-revenue-bonds-a",
+      "source_count": 1,
+      "sources": [
+        {
+          "name": "Aviation News Online",
+          "url": "https://www.aviationnews-online.com/article/fitch-rates-434m-st-louis-airport-revenue-bonds-a",
+          "published_at": "2026-09-15T00:00:00Z",
+          "source_channel": "aviationnews_finance",
+          "discovered_via": "direct"
+        }
+      ],
+      "raw_ids": [
+        "fd80e9d619032c5b9d435b6f"
+      ],
+      "analysis_mode": "fallback_no_deepseek_key"
+    },
+    {
+      "id": "002f62e70a598a7f2c",
+      "title": "Breeze pilots seek federal mediation after years of contract talks",
+      "summary_zh": "",
+      "why_it_matters_zh": "",
+      "category": "Airlines & Credit",
+      "importance_score": 53,
+      "region": "Americas",
+      "entities": [],
+      "published_at": "2026-09-15T00:00:00Z",
+      "updated_at": "2026-09-16T00:52:34Z",
+      "primary_source": "Aviation News Online",
+      "primary_url": "https://www.aviationnews-online.com/article/breeze-pilots-seek-federal-mediation-after-years-of-contract-talks",
+      "source_count": 1,
+      "sources": [
+        {
+          "name": "Aviation News Online",
+          "url": "https://www.aviationnews-online.com/article/breeze-pilots-seek-federal-mediation-after-years-of-contract-talks",
+          "published_at": "2026-09-15T00:00:00Z",
+          "source_channel": "aviationnews_people",
+          "discovered_via": "direct"
+        }
+      ],
+      "raw_ids": [
+        "5928a4745af5d8cf95182397"
+      ],
+      "analysis_mode": "fallback_no_deepseek_key"
+    },
+    {
+      "id": "e868e66b01c84973fb",
+      "title": "Boyu Capital agrees to acquire Xiamen Aircraft Leasing",
+      "summary_zh": "",
+      "why_it_matters_zh": "",
+      "category": "Leasing & Trading",
+      "importance_score": 53,
+      "region": "Asia/Pacific",
+      "entities": [],
+      "published_at": "2026-09-15T00:00:00Z",
+      "updated_at": "2026-09-16T00:52:34Z",
+      "primary_source": "Aviation News Online",
+      "primary_url": "https://www.aviationnews-online.com/article/boyu-capital-agrees-to-acquire-xiamen-aircraft-leasing",
+      "source_count": 1,
+      "sources": [
+        {
+          "name": "Aviation News Online",
+          "url": "https://www.aviationnews-online.com/article/boyu-capital-agrees-to-acquire-xiamen-aircraft-leasing",
+          "published_at": "2026-09-15T00:00:00Z",
+          "source_channel": "aviationnews_leasing",
+          "discovered_via": "direct"
+        }
+      ],
+      "raw_ids": [
+        "e244b2e4fa960318672b3626"
+      ],
+      "analysis_mode": "fallback_no_deepseek_key"
+    },
+    {
+      "id": "44227fc2c2695cf535",
+      "title": "Avora Aviation acquires Airbus A320 from ICBC Aviation Leasing",
+      "summary_zh": "",
+      "why_it_matters_zh": "",
+      "category": "Leasing & Trading",
+      "importance_score": 53,
+      "region": "Middle East/Africa",
+      "entities": [
+        "Airbus",
         "A320"
       ],
-      "published_at": "2026-09-08T10:02:57Z",
-      "updated_at": "2026-09-14T09:38:27Z",
-      "primary_source": "Ishka Airfinance",
-      "primary_url": "https://platform.ishkaairfinance.com/Articles/3601080",
+      "published_at": "2026-09-15T00:00:00Z",
+      "updated_at": "2026-09-16T00:52:34Z",
+      "primary_source": "Aviation News Online",
+      "primary_url": "https://www.aviationnews-online.com/article/avora-aviation-acquires-airbus-a320-from-icbc-aviation-leasing",
       "source_count": 1,
       "sources": [
         {
-          "name": "Ishka Airfinance",
-          "url": "https://platform.ishkaairfinance.com/Articles/3601080",
-          "published_at": "2026-09-08T10:02:57Z",
-          "source_channel": "ishka_middle_east_rss",
+          "name": "Aviation News Online",
+          "url": "https://www.aviationnews-online.com/article/avora-aviation-acquires-airbus-a320-from-icbc-aviation-leasing",
+          "published_at": "2026-09-15T00:00:00Z",
+          "source_channel": "aviationnews_leasing",
           "discovered_via": "direct"
         }
       ],
       "raw_ids": [
-        "b2b4ad3a23e5cd21af663c5c"
+        "4dda2f0c1dde1678f25f01ae"
       ],
-      "analysis_mode": "fallback_after_ai_error"
+      "analysis_mode": "fallback_no_deepseek_key"
     },
     {
-      "id": "c753c43aecbe04dc3b",
-      "title": "Qantas, Airbus participate in SAF producer fundraising",
+      "id": "21f8cf0f0e3f74e6f1",
+      "title": "Altitude Engineering wins long-term Xiamen Air line maintenance contract",
       "summary_zh": "",
       "why_it_matters_zh": "",
       "category": "Aircraft & OEM",
-      "importance_score": 54,
-      "region": "Global/Unspecified",
+      "importance_score": 53,
+      "region": "Asia/Pacific",
       "entities": [
-        "Airbus"
+        "Boeing",
+        "787"
       ],
-      "published_at": "2026-09-08T09:30:04Z",
-      "updated_at": "2026-09-14T09:38:27Z",
-      "primary_source": "Ishka Airfinance",
-      "primary_url": "https://platform.ishkaairfinance.com/Articles/3601078",
+      "published_at": "2026-09-15T00:00:00Z",
+      "updated_at": "2026-09-16T00:52:34Z",
+      "primary_source": "Aviation News Online",
+      "primary_url": "https://www.aviationnews-online.com/article/altitude-engineering-wins-long-term-xiamen-air-line-maintenance-contract",
       "source_count": 1,
       "sources": [
         {
-          "name": "Ishka Airfinance",
-          "url": "https://platform.ishkaairfinance.com/Articles/3601078",
-          "published_at": "2026-09-08T09:30:04Z",
-          "source_channel": "ishka_oceania_rss",
+          "name": "Aviation News Online",
+          "url": "https://www.aviationnews-online.com/article/altitude-engineering-wins-long-term-xiamen-air-line-maintenance-contract",
+          "published_at": "2026-09-15T00:00:00Z",
+          "source_channel": "aviationnews_airline",
           "discovered_via": "direct"
         }
       ],
       "raw_ids": [
-        "075152e5cb0a1a04743da9eb"
+        "c38d52e80803f3f3ca39a5e4"
       ],
-      "analysis_mode": "fallback_after_ai_error"
+      "analysis_mode": "fallback_no_deepseek_key"
     },
     {
-      "id": "b559b291ce87cfd76c",
-      "title": "Etihad leverage to almost double through 2026",
+      "id": "1eab6882d7f3bd7a34",
+      "title": "Air India expands Salesforce AI use",
       "summary_zh": "",
       "why_it_matters_zh": "",
-      "category": "Leasing & Trading",
-      "importance_score": 54,
-      "region": "Global/Unspecified",
+      "category": "Airlines & Credit",
+      "importance_score": 53,
+      "region": "Asia/Pacific",
       "entities": [],
-      "published_at": "2026-09-08T09:15:23Z",
-      "updated_at": "2026-09-14T09:38:27Z",
-      "primary_source": "Ishka Airfinance",
-      "primary_url": "https://platform.ishkaairfinance.com/Articles/3601076",
+      "published_at": "2026-09-15T00:00:00Z",
+      "updated_at": "2026-09-16T00:52:34Z",
+      "primary_source": "Aviation News Online",
+      "primary_url": "https://www.aviationnews-online.com/article/air-india-expands-salesforce-ai-use",
       "source_count": 1,
       "sources": [
         {
-          "name": "Ishka Airfinance",
-          "url": "https://platform.ishkaairfinance.com/Articles/3601076",
-          "published_at": "2026-09-08T09:15:23Z",
-          "source_channel": "ishka_middle_east_rss",
+          "name": "Aviation News Online",
+          "url": "https://www.aviationnews-online.com/article/air-india-expands-salesforce-ai-use",
+          "published_at": "2026-09-15T00:00:00Z",
+          "source_channel": "aviationnews_airline",
           "discovered_via": "direct"
         }
       ],
       "raw_ids": [
-        "54abca6f6bbf4f9b5676d80f"
+        "6becc5fea4c98f52c657a0e5"
       ],
-      "analysis_mode": "fallback_after_ai_error"
+      "analysis_mode": "fallback_no_deepseek_key"
     },
     {
-      "id": "f8bdc94f3fbda5acf6",
-      "title": "Boeing orders slow in August, deliveries edge lower",
+      "id": "53b2eb731c8996de32",
+      "title": "Air France to move into JFK's New Terminal One, including 29,000 sq ft lounge",
       "summary_zh": "",
       "why_it_matters_zh": "",
-      "category": "Aircraft & OEM",
-      "importance_score": 54,
-      "region": "Global/Unspecified",
-      "entities": [
-        "Boeing"
-      ],
-      "published_at": "2026-09-08T07:01:00Z",
-      "updated_at": "2026-09-14T09:38:27Z",
-      "primary_source": "Flightglobal",
-      "primary_url": "https://www.flightglobal.com/airframers/2026/09/boeing-orders-slow-in-august-deliveries-edge-lower/",
+      "category": "Airlines & Credit",
+      "importance_score": 53,
+      "region": "Europe",
+      "entities": [],
+      "published_at": "2026-09-15T00:00:00Z",
+      "updated_at": "2026-09-16T00:52:34Z",
+      "primary_source": "Aviation News Online",
+      "primary_url": "https://www.aviationnews-online.com/article/air-france-to-move-into-jfks-new-terminal-one-including-29000-sq-ft-lounge",
       "source_count": 1,
       "sources": [
         {
-          "name": "Flightglobal",
-          "url": "https://www.flightglobal.com/airframers/2026/09/boeing-orders-slow-in-august-deliveries-edge-lower/",
-          "published_at": "2026-09-08T07:01:00Z",
-          "source_channel": "bing_news_rss",
-          "discovered_via": "Bing News"
+          "name": "Aviation News Online",
+          "url": "https://www.aviationnews-online.com/article/air-france-to-move-into-jfks-new-terminal-one-including-29000-sq-ft-lounge",
+          "published_at": "2026-09-15T00:00:00Z",
+          "source_channel": "aviationnews_airline",
+          "discovered_via": "direct"
         }
       ],
       "raw_ids": [
-        "165c797a36aeba55649da800"
+        "2d9db5426382bc9da26aaf5d"
       ],
-      "analysis_mode": "fallback_after_ai_error"
+      "analysis_mode": "fallback_no_deepseek_key"
+    },
+    {
+      "id": "23064aa1d6576a0a74",
+      "title": "Air Cairo inks agreement with MTU for LEAP-1A engine support",
+      "summary_zh": "",
+      "why_it_matters_zh": "",
+      "category": "Engines & MRO",
+      "importance_score": 53,
+      "region": "Middle East/Africa",
+      "entities": [
+        "Airbus",
+        "MTU",
+        "A320neo",
+        "LEAP-1A"
+      ],
+      "published_at": "2026-09-15T00:00:00Z",
+      "updated_at": "2026-09-16T00:52:34Z",
+      "primary_source": "Aviation News Online",
+      "primary_url": "https://www.aviationnews-online.com/article/air-cairo-inks-agreement-with-mtu-for-leap-1a-engine-support",
+      "source_count": 1,
+      "sources": [
+        {
+          "name": "Aviation News Online",
+          "url": "https://www.aviationnews-online.com/article/air-cairo-inks-agreement-with-mtu-for-leap-1a-engine-support",
+          "published_at": "2026-09-15T00:00:00Z",
+          "source_channel": "aviationnews_airline",
+          "discovered_via": "direct"
+        }
+      ],
+      "raw_ids": [
+        "80961d1ba7f4f6857e3f14eb"
+      ],
+      "analysis_mode": "fallback_no_deepseek_key"
+    },
+    {
+      "id": "063c8344fe5292ec29",
+      "title": "Air Arabia to start Dammam operations with three Saudi routes",
+      "summary_zh": "",
+      "why_it_matters_zh": "",
+      "category": "Airlines & Credit",
+      "importance_score": 53,
+      "region": "Middle East/Africa",
+      "entities": [],
+      "published_at": "2026-09-15T00:00:00Z",
+      "updated_at": "2026-09-16T00:52:34Z",
+      "primary_source": "Aviation News Online",
+      "primary_url": "https://www.aviationnews-online.com/article/air-arabia-to-start-dammam-operations-with-three-saudi-routes",
+      "source_count": 1,
+      "sources": [
+        {
+          "name": "Aviation News Online",
+          "url": "https://www.aviationnews-online.com/article/air-arabia-to-start-dammam-operations-with-three-saudi-routes",
+          "published_at": "2026-09-15T00:00:00Z",
+          "source_channel": "aviationnews_airline",
+          "discovered_via": "direct"
+        }
+      ],
+      "raw_ids": [
+        "116b42ce5670479109ebf555"
+      ],
+      "analysis_mode": "fallback_no_deepseek_key"
+    },
+    {
+      "id": "f2a34557c100cd4097",
+      "title": "Aegean swings to first-half loss as fuel weigh on margins",
+      "summary_zh": "",
+      "why_it_matters_zh": "",
+      "category": "Airlines & Credit",
+      "importance_score": 53,
+      "region": "Europe",
+      "entities": [],
+      "published_at": "2026-09-15T00:00:00Z",
+      "updated_at": "2026-09-16T00:52:34Z",
+      "primary_source": "Aviation News Online",
+      "primary_url": "https://www.aviationnews-online.com/article/aegean-swings-to-first-half-loss-as-fuel-weigh-on-margins",
+      "source_count": 1,
+      "sources": [
+        {
+          "name": "Aviation News Online",
+          "url": "https://www.aviationnews-online.com/article/aegean-swings-to-first-half-loss-as-fuel-weigh-on-margins",
+          "published_at": "2026-09-15T00:00:00Z",
+          "source_channel": "aviationnews_airline",
+          "discovered_via": "direct"
+        }
+      ],
+      "raw_ids": [
+        "f79192ba5ddd2caa6b122afc"
+      ],
+      "analysis_mode": "fallback_no_deepseek_key"
     },
     {
       "id": "d5489b9b7404e48035",
@@ -4188,518 +4619,6 @@
       "analysis_mode": "fallback_after_ai_error"
     },
     {
-      "id": "02e1c7a7c72b94deb0",
-      "title": "United Airlines Ventures invests in Assaia airport operations technology",
-      "summary_zh": "",
-      "why_it_matters_zh": "",
-      "category": "Airlines & Credit",
-      "importance_score": 53,
-      "region": "Global/Unspecified",
-      "entities": [],
-      "published_at": "2026-09-09T00:00:00Z",
-      "updated_at": "2026-09-14T09:38:27Z",
-      "primary_source": "Aviation News Online",
-      "primary_url": "https://www.aviationnews-online.com/article/united-airlines-ventures-invests-in-assaia-airport-operations-technology",
-      "source_count": 1,
-      "sources": [
-        {
-          "name": "Aviation News Online",
-          "url": "https://www.aviationnews-online.com/article/united-airlines-ventures-invests-in-assaia-airport-operations-technology",
-          "published_at": "2026-09-09T00:00:00Z",
-          "source_channel": "aviationnews_airline",
-          "discovered_via": "direct"
-        }
-      ],
-      "raw_ids": [
-        "52d481c5999f56f99f98877f"
-      ],
-      "analysis_mode": "fallback_after_ai_error"
-    },
-    {
-      "id": "1faed0e2ed472014b6",
-      "title": "Stratos hires Christopher Luhrs to lead US investor coverage",
-      "summary_zh": "",
-      "why_it_matters_zh": "",
-      "category": "Airlines & Credit",
-      "importance_score": 53,
-      "region": "Global/Unspecified",
-      "entities": [],
-      "published_at": "2026-09-09T00:00:00Z",
-      "updated_at": "2026-09-14T09:38:27Z",
-      "primary_source": "Aviation News Online",
-      "primary_url": "https://www.aviationnews-online.com/article/stratos-hires-christopher-luhrs-to-lead-us-investor-coverage",
-      "source_count": 1,
-      "sources": [
-        {
-          "name": "Aviation News Online",
-          "url": "https://www.aviationnews-online.com/article/stratos-hires-christopher-luhrs-to-lead-us-investor-coverage",
-          "published_at": "2026-09-09T00:00:00Z",
-          "source_channel": "aviationnews_leasing",
-          "discovered_via": "direct"
-        }
-      ],
-      "raw_ids": [
-        "b5c1a6baed0940998736472b"
-      ],
-      "analysis_mode": "fallback_after_ai_error"
-    },
-    {
-      "id": "50e0b9301cb1345b3b",
-      "title": "Star Alliance to open lounge at Incheon as Asiana exits alliance",
-      "summary_zh": "",
-      "why_it_matters_zh": "",
-      "category": "Airlines & Credit",
-      "importance_score": 53,
-      "region": "Asia/Pacific",
-      "entities": [],
-      "published_at": "2026-09-09T00:00:00Z",
-      "updated_at": "2026-09-14T09:38:27Z",
-      "primary_source": "Aviation News Online",
-      "primary_url": "https://www.aviationnews-online.com/article/star-alliance-to-open-lounge-at-incheon-as-asiana-exits-alliance",
-      "source_count": 1,
-      "sources": [
-        {
-          "name": "Aviation News Online",
-          "url": "https://www.aviationnews-online.com/article/star-alliance-to-open-lounge-at-incheon-as-asiana-exits-alliance",
-          "published_at": "2026-09-09T00:00:00Z",
-          "source_channel": "aviationnews_airline",
-          "discovered_via": "direct"
-        }
-      ],
-      "raw_ids": [
-        "16b1a5e64bd272c9bfc711d2"
-      ],
-      "analysis_mode": "fallback_after_ai_error"
-    },
-    {
-      "id": "f139d72a95ed5ce066",
-      "title": "Southern Vision Investment takes strategic stake in AVi8 Airways",
-      "summary_zh": "",
-      "why_it_matters_zh": "",
-      "category": "Airlines & Credit",
-      "importance_score": 53,
-      "region": "Global/Unspecified",
-      "entities": [],
-      "published_at": "2026-09-09T00:00:00Z",
-      "updated_at": "2026-09-14T09:38:27Z",
-      "primary_source": "Aviation News Online",
-      "primary_url": "https://www.aviationnews-online.com/article/southern-vision-investment-takes-strategic-stake-in-avi8-airways",
-      "source_count": 1,
-      "sources": [
-        {
-          "name": "Aviation News Online",
-          "url": "https://www.aviationnews-online.com/article/southern-vision-investment-takes-strategic-stake-in-avi8-airways",
-          "published_at": "2026-09-09T00:00:00Z",
-          "source_channel": "aviationnews_finance",
-          "discovered_via": "direct"
-        }
-      ],
-      "raw_ids": [
-        "bb778457422687e9f7e3a712"
-      ],
-      "analysis_mode": "fallback_after_ai_error"
-    },
-    {
-      "id": "895604743466da6576",
-      "title": "Singapore Airlines looking for greater control over Air India for fresh funding",
-      "summary_zh": "",
-      "why_it_matters_zh": "",
-      "category": "Airlines & Credit",
-      "importance_score": 53,
-      "region": "Asia/Pacific",
-      "entities": [],
-      "published_at": "2026-09-09T00:00:00Z",
-      "updated_at": "2026-09-14T09:38:27Z",
-      "primary_source": "Aviation News Online",
-      "primary_url": "https://www.aviationnews-online.com/article/singapore-airlines-looking-for-greater-control-over-air-india-for-fresh-funding",
-      "source_count": 1,
-      "sources": [
-        {
-          "name": "Aviation News Online",
-          "url": "https://www.aviationnews-online.com/article/singapore-airlines-looking-for-greater-control-over-air-india-for-fresh-funding",
-          "published_at": "2026-09-09T00:00:00Z",
-          "source_channel": "aviationnews_finance",
-          "discovered_via": "direct"
-        }
-      ],
-      "raw_ids": [
-        "9b38f9f8b9d587b38f1f6523"
-      ],
-      "analysis_mode": "fallback_after_ai_error"
-    },
-    {
-      "id": "db7c09b7db7077f803",
-      "title": "NATS chief Rolfe expected to report back with investigation finding in a week",
-      "summary_zh": "",
-      "why_it_matters_zh": "",
-      "category": "Airlines & Credit",
-      "importance_score": 53,
-      "region": "Europe",
-      "entities": [],
-      "published_at": "2026-09-09T00:00:00Z",
-      "updated_at": "2026-09-14T09:38:27Z",
-      "primary_source": "Aviation News Online",
-      "primary_url": "https://www.aviationnews-online.com/article/nats-chief-rolfe-expected-to-report-back-to-transport-secretory-in-a-week",
-      "source_count": 1,
-      "sources": [
-        {
-          "name": "Aviation News Online",
-          "url": "https://www.aviationnews-online.com/article/nats-chief-rolfe-expected-to-report-back-to-transport-secretory-in-a-week",
-          "published_at": "2026-09-09T00:00:00Z",
-          "source_channel": "aviationnews_airline",
-          "discovered_via": "direct"
-        }
-      ],
-      "raw_ids": [
-        "0a75937cf049054685986381"
-      ],
-      "analysis_mode": "fallback_after_ai_error"
-    },
-    {
-      "id": "2bbef34fa69c1dceed",
-      "title": "Martin Rolfe has not resigned amid building pressure post ATS airport disruption",
-      "summary_zh": "",
-      "why_it_matters_zh": "",
-      "category": "Airlines & Credit",
-      "importance_score": 53,
-      "region": "Global/Unspecified",
-      "entities": [],
-      "published_at": "2026-09-09T00:00:00Z",
-      "updated_at": "2026-09-14T09:38:27Z",
-      "primary_source": "Aviation News Online",
-      "primary_url": "https://www.aviationnews-online.com/article/nats-chief-mark-rolfe-resigns-over-ats-technical-issue",
-      "source_count": 1,
-      "sources": [
-        {
-          "name": "Aviation News Online",
-          "url": "https://www.aviationnews-online.com/article/nats-chief-mark-rolfe-resigns-over-ats-technical-issue",
-          "published_at": "2026-09-09T00:00:00Z",
-          "source_channel": "aviationnews_people",
-          "discovered_via": "direct"
-        }
-      ],
-      "raw_ids": [
-        "378c8c7a4d8d68748128a1a2"
-      ],
-      "analysis_mode": "fallback_after_ai_error"
-    },
-    {
-      "id": "43527532344d5027c0",
-      "title": "MTU Maintenance signs first North African LEAP-1A contracts",
-      "summary_zh": "",
-      "why_it_matters_zh": "",
-      "category": "Engines & MRO",
-      "importance_score": 53,
-      "region": "Middle East/Africa",
-      "entities": [
-        "MTU",
-        "LEAP-1A"
-      ],
-      "published_at": "2026-09-09T00:00:00Z",
-      "updated_at": "2026-09-14T09:38:27Z",
-      "primary_source": "Aviation News Online",
-      "primary_url": "https://www.aviationnews-online.com/article/mtu-maintenance-signs-first-north-african-leap-1a-contracts",
-      "source_count": 1,
-      "sources": [
-        {
-          "name": "Aviation News Online",
-          "url": "https://www.aviationnews-online.com/article/mtu-maintenance-signs-first-north-african-leap-1a-contracts",
-          "published_at": "2026-09-09T00:00:00Z",
-          "source_channel": "aviationnews_engine",
-          "discovered_via": "direct"
-        }
-      ],
-      "raw_ids": [
-        "6be681e5254e1f2508874570"
-      ],
-      "analysis_mode": "fallback_after_ai_error"
-    },
-    {
-      "id": "4b7b392df3d1a0aa83",
-      "title": "Jeff Silverman partners with Odeon to launch Jigsaw Aviation Ventures, joins AFG as capital markets head",
-      "summary_zh": "",
-      "why_it_matters_zh": "",
-      "category": "Financing & Capital Markets",
-      "importance_score": 53,
-      "region": "Americas",
-      "entities": [],
-      "published_at": "2026-09-09T00:00:00Z",
-      "updated_at": "2026-09-14T09:38:27Z",
-      "primary_source": "Aviation News Online",
-      "primary_url": "https://www.aviationnews-online.com/article/jeff-silverman-partners-with-odeon-securities-to-launch-jigsaw-aviation-ventures-joins-afg-as-capital-markets-head",
-      "source_count": 1,
-      "sources": [
-        {
-          "name": "Aviation News Online",
-          "url": "https://www.aviationnews-online.com/article/jeff-silverman-partners-with-odeon-securities-to-launch-jigsaw-aviation-ventures-joins-afg-as-capital-markets-head",
-          "published_at": "2026-09-09T00:00:00Z",
-          "source_channel": "aviationnews_people",
-          "discovered_via": "direct"
-        }
-      ],
-      "raw_ids": [
-        "89c42aee65309c31880e9dcf"
-      ],
-      "analysis_mode": "fallback_after_ai_error"
-    },
-    {
-      "id": "8a057d3bb6ea84a743",
-      "title": "IATA welcomes Pratt & Whitney Canada aftermarket contract changes",
-      "summary_zh": "",
-      "why_it_matters_zh": "",
-      "category": "Engines & MRO",
-      "importance_score": 53,
-      "region": "Global/Unspecified",
-      "entities": [
-        "Pratt & Whitney"
-      ],
-      "published_at": "2026-09-09T00:00:00Z",
-      "updated_at": "2026-09-14T09:38:27Z",
-      "primary_source": "Aviation News Online",
-      "primary_url": "https://www.aviationnews-online.com/article/iata-welcomes-pratt-whitney-canada-aftermarket-contract-changes",
-      "source_count": 1,
-      "sources": [
-        {
-          "name": "Aviation News Online",
-          "url": "https://www.aviationnews-online.com/article/iata-welcomes-pratt-whitney-canada-aftermarket-contract-changes",
-          "published_at": "2026-09-09T00:00:00Z",
-          "source_channel": "aviationnews_engine",
-          "discovered_via": "direct"
-        }
-      ],
-      "raw_ids": [
-        "cd15aa01fd6eb8342a8fe722"
-      ],
-      "analysis_mode": "fallback_after_ai_error"
-    },
-    {
-      "id": "9a13569ba09cf8c30c",
-      "title": "Heathrow, Gatwick, UK airport flights experience turbulence due to ATC collapse",
-      "summary_zh": "",
-      "why_it_matters_zh": "",
-      "category": "Airlines & Credit",
-      "importance_score": 53,
-      "region": "Europe",
-      "entities": [],
-      "published_at": "2026-09-09T00:00:00Z",
-      "updated_at": "2026-09-14T09:38:27Z",
-      "primary_source": "Aviation News Online",
-      "primary_url": "https://www.aviationnews-online.com/article/heathrow-gatwick-uk-airport-flights-experience-turbulence-as-atc-collapses",
-      "source_count": 1,
-      "sources": [
-        {
-          "name": "Aviation News Online",
-          "url": "https://www.aviationnews-online.com/article/heathrow-gatwick-uk-airport-flights-experience-turbulence-as-atc-collapses",
-          "published_at": "2026-09-09T00:00:00Z",
-          "source_channel": "aviationnews_airline",
-          "discovered_via": "direct"
-        }
-      ],
-      "raw_ids": [
-        "23ecfe71bb8400d140f2e02f"
-      ],
-      "analysis_mode": "fallback_after_ai_error"
-    },
-    {
-      "id": "c9cb3c5e72bbc2bb48",
-      "title": "Growth Frontiers London: private capital reshapes aircraft investment market",
-      "summary_zh": "",
-      "why_it_matters_zh": "",
-      "category": "Financing & Capital Markets",
-      "importance_score": 53,
-      "region": "Global/Unspecified",
-      "entities": [],
-      "published_at": "2026-09-09T00:00:00Z",
-      "updated_at": "2026-09-14T09:38:27Z",
-      "primary_source": "Aviation News Online",
-      "primary_url": "https://www.aviationnews-online.com/article/growth-frontiers-london-private-capital-reshapes-aircraft-investment-market",
-      "source_count": 1,
-      "sources": [
-        {
-          "name": "Aviation News Online",
-          "url": "https://www.aviationnews-online.com/article/growth-frontiers-london-private-capital-reshapes-aircraft-investment-market",
-          "published_at": "2026-09-09T00:00:00Z",
-          "source_channel": "aviationnews_finance",
-          "discovered_via": "direct"
-        }
-      ],
-      "raw_ids": [
-        "2f4a93835d87b091bdbd7aa2"
-      ],
-      "analysis_mode": "fallback_after_ai_error"
-    },
-    {
-      "id": "ad1d14255a820d7f64",
-      "title": "Growth Frontiers London: Loganair and Azul adapt to fuel and supply chain pressures",
-      "summary_zh": "",
-      "why_it_matters_zh": "",
-      "category": "Airlines & Credit",
-      "importance_score": 53,
-      "region": "Global/Unspecified",
-      "entities": [],
-      "published_at": "2026-09-09T00:00:00Z",
-      "updated_at": "2026-09-14T09:38:27Z",
-      "primary_source": "Aviation News Online",
-      "primary_url": "https://www.aviationnews-online.com/article/growth-frontiers-london-loganair-and-azul-adapt-to-fuel-and-supply-chain-pressures",
-      "source_count": 1,
-      "sources": [
-        {
-          "name": "Aviation News Online",
-          "url": "https://www.aviationnews-online.com/article/growth-frontiers-london-loganair-and-azul-adapt-to-fuel-and-supply-chain-pressures",
-          "published_at": "2026-09-09T00:00:00Z",
-          "source_channel": "aviationnews_airline",
-          "discovered_via": "direct"
-        }
-      ],
-      "raw_ids": [
-        "ccc22680e0eccdfb2ef0b9af"
-      ],
-      "analysis_mode": "fallback_after_ai_error"
-    },
-    {
-      "id": "6ba752738d3d84cbd1",
-      "title": "Global Aerospace names Eric Donofrio president as Jeffrey Bruno retires",
-      "summary_zh": "",
-      "why_it_matters_zh": "",
-      "category": "Airlines & Credit",
-      "importance_score": 53,
-      "region": "Global/Unspecified",
-      "entities": [],
-      "published_at": "2026-09-09T00:00:00Z",
-      "updated_at": "2026-09-14T09:38:27Z",
-      "primary_source": "Aviation News Online",
-      "primary_url": "https://www.aviationnews-online.com/article/global-aerospace-names-eric-donofrio-president-as-jeffrey-bruno-retires",
-      "source_count": 1,
-      "sources": [
-        {
-          "name": "Aviation News Online",
-          "url": "https://www.aviationnews-online.com/article/global-aerospace-names-eric-donofrio-president-as-jeffrey-bruno-retires",
-          "published_at": "2026-09-09T00:00:00Z",
-          "source_channel": "aviationnews_people",
-          "discovered_via": "direct"
-        }
-      ],
-      "raw_ids": [
-        "ab88ac3169764bcd8454fec3"
-      ],
-      "analysis_mode": "fallback_after_ai_error"
-    },
-    {
-      "id": "ccd4596744d38e4561",
-      "title": "Contour Airlines launches seasonal Cape Girardeau-Orlando flight",
-      "summary_zh": "",
-      "why_it_matters_zh": "",
-      "category": "Airlines & Credit",
-      "importance_score": 53,
-      "region": "Americas",
-      "entities": [],
-      "published_at": "2026-09-09T00:00:00Z",
-      "updated_at": "2026-09-14T09:38:27Z",
-      "primary_source": "Aviation News Online",
-      "primary_url": "https://www.aviationnews-online.com/article/contour-airlines-launches-seasonal-cape-girardeau-orlando-flight",
-      "source_count": 1,
-      "sources": [
-        {
-          "name": "Aviation News Online",
-          "url": "https://www.aviationnews-online.com/article/contour-airlines-launches-seasonal-cape-girardeau-orlando-flight",
-          "published_at": "2026-09-09T00:00:00Z",
-          "source_channel": "aviationnews_airline",
-          "discovered_via": "direct"
-        }
-      ],
-      "raw_ids": [
-        "b88045b96841c556152fec4b"
-      ],
-      "analysis_mode": "fallback_after_ai_error"
-    },
-    {
-      "id": "cefbc3edfe0ba47290",
-      "title": "Aruba and San Marino agree aircraft oversight framework",
-      "summary_zh": "",
-      "why_it_matters_zh": "",
-      "category": "Legal & Regulatory",
-      "importance_score": 53,
-      "region": "Global/Unspecified",
-      "entities": [],
-      "published_at": "2026-09-09T00:00:00Z",
-      "updated_at": "2026-09-14T09:38:27Z",
-      "primary_source": "Aviation News Online",
-      "primary_url": "https://www.aviationnews-online.com/article/aruba-and-san-marino-agree-aircraft-oversight-framework",
-      "source_count": 1,
-      "sources": [
-        {
-          "name": "Aviation News Online",
-          "url": "https://www.aviationnews-online.com/article/aruba-and-san-marino-agree-aircraft-oversight-framework",
-          "published_at": "2026-09-09T00:00:00Z",
-          "source_channel": "aviationnews_legal",
-          "discovered_via": "direct"
-        }
-      ],
-      "raw_ids": [
-        "297ba3ddf3d9de28564d8c42"
-      ],
-      "analysis_mode": "fallback_after_ai_error"
-    },
-    {
-      "id": "fb68106020fa9a1e90",
-      "title": "Airline ancillary revenue grows nearly twice as fast as total revenue",
-      "summary_zh": "",
-      "why_it_matters_zh": "",
-      "category": "Airlines & Credit",
-      "importance_score": 53,
-      "region": "Global/Unspecified",
-      "entities": [],
-      "published_at": "2026-09-09T00:00:00Z",
-      "updated_at": "2026-09-14T09:38:27Z",
-      "primary_source": "Aviation News Online",
-      "primary_url": "https://www.aviationnews-online.com/article/airline-ancillary-revenue-grows-nearly-twice-as-fast-as-total-revenue",
-      "source_count": 1,
-      "sources": [
-        {
-          "name": "Aviation News Online",
-          "url": "https://www.aviationnews-online.com/article/airline-ancillary-revenue-grows-nearly-twice-as-fast-as-total-revenue",
-          "published_at": "2026-09-09T00:00:00Z",
-          "source_channel": "aviationnews_finance",
-          "discovered_via": "direct"
-        }
-      ],
-      "raw_ids": [
-        "d7dbfa54d6bc741d1240679e"
-      ],
-      "analysis_mode": "fallback_after_ai_error"
-    },
-    {
-      "id": "02a586724218a347b0",
-      "title": "AFG places third Airbus A321neo with IndiGo",
-      "summary_zh": "",
-      "why_it_matters_zh": "",
-      "category": "Aircraft & OEM",
-      "importance_score": 53,
-      "region": "Asia/Pacific",
-      "entities": [
-        "Airbus",
-        "A321neo"
-      ],
-      "published_at": "2026-09-09T00:00:00Z",
-      "updated_at": "2026-09-14T09:38:27Z",
-      "primary_source": "Aviation News Online",
-      "primary_url": "https://www.aviationnews-online.com/article/afg-places-third-airbus-a321neo-with-indigo",
-      "source_count": 1,
-      "sources": [
-        {
-          "name": "Aviation News Online",
-          "url": "https://www.aviationnews-online.com/article/afg-places-third-airbus-a321neo-with-indigo",
-          "published_at": "2026-09-09T00:00:00Z",
-          "source_channel": "aviationnews_leasing",
-          "discovered_via": "direct"
-        }
-      ],
-      "raw_ids": [
-        "48853861fc228f4bae5e185a"
-      ],
-      "analysis_mode": "fallback_after_ai_error"
-    },
-    {
       "id": "14b3a9bb15e5089f53",
       "title": "Boyu Is Said to Agree to Buy China’s Xiamen Aircraft Leasing",
       "summary_zh": "",
@@ -4740,7 +4659,7 @@
       "updated_at": "2026-09-14T20:27:11Z",
       "primary_source": "Tech Times on MSN",
       "primary_url": "https://www.msn.com/en-us/news/other/sophia-space-lands-300m-leasing-deal-to-fund-first-orbital-computing-constellation/ar-AA2ccHkL",
-      "source_count": 1,
+      "source_count": 2,
       "sources": [
         {
           "name": "Tech Times on MSN",
@@ -4748,10 +4667,18 @@
           "published_at": "2026-09-14T13:01:08Z",
           "source_channel": "bing_news_rss",
           "discovered_via": "Bing News"
+        },
+        {
+          "name": "Tech Times on MSN",
+          "url": "https://www.msn.com/en-us/money/general/sophia-space-lands-300m-leasing-deal-to-fund-first-orbital-computing-constellation/ar-AA2ccHkL",
+          "published_at": "2026-09-14T13:01:08Z",
+          "source_channel": "bing_news_rss",
+          "discovered_via": "Bing News"
         }
       ],
       "raw_ids": [
-        "1303e053dd292a47a7c57265"
+        "1303e053dd292a47a7c57265",
+        "dce0382d23c92ef52b155ce3"
       ],
       "analysis_mode": "fallback_after_ai_error"
     },
@@ -4954,32 +4881,102 @@
       "analysis_mode": "fallback_after_ai_error"
     },
     {
-      "id": "851f315cb961f1411c",
-      "title": "Finding Value In Uncommon Places: Aviation Finance",
+      "id": "069e6c5de7c1819594",
+      "title": "Contrail Names Aviation Finance Veteran Stuart G. Weinroth Chief Executive Officer",
       "summary_zh": "",
       "why_it_matters_zh": "",
       "category": "Financing & Capital Markets",
-      "importance_score": 49,
+      "importance_score": 45,
       "region": "Global/Unspecified",
       "entities": [],
-      "published_at": "2026-09-09T00:20:00Z",
-      "updated_at": "2026-09-14T09:38:27Z",
-      "primary_source": "Seeking Alpha",
-      "primary_url": "https://seekingalpha.com/article/4944174-finding-value-in-uncommon-places-aviation-finance",
-      "source_count": 1,
+      "published_at": "2026-09-15T13:30:00Z",
+      "updated_at": "2026-09-16T00:52:34Z",
+      "primary_source": "Yahoo Finance",
+      "primary_url": "https://finance.yahoo.com/small-business/articles/contrail-names-aviation-finance-veteran-203000275.html",
+      "source_count": 2,
       "sources": [
         {
-          "name": "Seeking Alpha",
-          "url": "https://seekingalpha.com/article/4944174-finding-value-in-uncommon-places-aviation-finance",
-          "published_at": "2026-09-09T00:20:00Z",
+          "name": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/small-business/articles/contrail-names-aviation-finance-veteran-203000275.html",
+          "published_at": "2026-09-15T13:30:00Z",
+          "source_channel": "bing_news_rss",
+          "discovered_via": "Bing News"
+        },
+        {
+          "name": "FinanzNachrichten.de",
+          "url": "https://www.finanznachrichten.de/nachrichten-2026-09/69588708-air-t-inc-contrail-names-aviation-finance-veteran-stuart-g-weinroth-chief-executive-officer-200.htm",
+          "published_at": "2026-09-15T01:00:00Z",
           "source_channel": "bing_news_rss",
           "discovered_via": "Bing News"
         }
       ],
       "raw_ids": [
-        "d91001f7a50e304c34712b32"
+        "00adaa71732776b5a05ff6f5",
+        "669a39a672445fd6db5ad211"
       ],
-      "analysis_mode": "fallback_after_ai_error"
+      "analysis_mode": "fallback_no_deepseek_key"
+    },
+    {
+      "id": "49d3860fbc3a1b9c92",
+      "title": "Aircraft Leasing Market Outlook 2026-2035 - Featuring Profiles of AerCap, Air Lease Corporation, and SMBC Aviation Capital",
+      "summary_zh": "",
+      "why_it_matters_zh": "",
+      "category": "Leasing & Trading",
+      "importance_score": 45,
+      "region": "Global/Unspecified",
+      "entities": [
+        "AerCap",
+        "Air Lease",
+        "SMBC Aviation Capital"
+      ],
+      "published_at": "2026-09-15T01:09:00Z",
+      "updated_at": "2026-09-16T00:52:34Z",
+      "primary_source": "Yahoo Finance",
+      "primary_url": "https://finance.yahoo.com/real-estate/articles/aircraft-leasing-market-outlook-2026-080900580.html",
+      "source_count": 1,
+      "sources": [
+        {
+          "name": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/real-estate/articles/aircraft-leasing-market-outlook-2026-080900580.html",
+          "published_at": "2026-09-15T01:09:00Z",
+          "source_channel": "bing_news_rss",
+          "discovered_via": "Bing News"
+        }
+      ],
+      "raw_ids": [
+        "386678f98fe0e7a6c13354a7"
+      ],
+      "analysis_mode": "fallback_no_deepseek_key"
+    },
+    {
+      "id": "4628695477864d0b29",
+      "title": "Aviation Capital Names New CFO",
+      "summary_zh": "",
+      "why_it_matters_zh": "",
+      "category": "Leasing & Trading",
+      "importance_score": 45,
+      "region": "Global/Unspecified",
+      "entities": [
+        "Aviation Capital Group"
+      ],
+      "published_at": "2026-09-14T09:27:00Z",
+      "updated_at": "2026-09-16T00:52:34Z",
+      "primary_source": "Orange County Business Journal",
+      "primary_url": "https://www.ocbj.com/newsletter-feed/jilinda-crowley-named-cfo-at-aviation-capital-group-in-newport-beach/",
+      "source_count": 1,
+      "sources": [
+        {
+          "name": "Orange County Business Journal",
+          "url": "https://www.ocbj.com/newsletter-feed/jilinda-crowley-named-cfo-at-aviation-capital-group-in-newport-beach/",
+          "published_at": "2026-09-14T09:27:00Z",
+          "source_channel": "bing_news_rss",
+          "discovered_via": "Bing News"
+        }
+      ],
+      "raw_ids": [
+        "59aebf82e0317a01d9dfd266"
+      ],
+      "analysis_mode": "fallback_no_deepseek_key"
     },
     {
       "id": "c265314671218fce24",
@@ -5456,90 +5453,6 @@
       ],
       "raw_ids": [
         "37732b3070e66c6c82963849"
-      ],
-      "analysis_mode": "fallback_after_ai_error"
-    },
-    {
-      "id": "7b0ae7de71a3f81562",
-      "title": "Japan firms investing in aircraft leasing businesses",
-      "summary_zh": "",
-      "why_it_matters_zh": "",
-      "category": "Financing & Capital Markets",
-      "importance_score": 45,
-      "region": "Japan",
-      "entities": [],
-      "published_at": "2026-09-08T17:01:00Z",
-      "updated_at": "2026-09-14T10:28:35Z",
-      "primary_source": "NHK",
-      "primary_url": "https://www3.nhk.or.jp/nhkworld/news/20260909de49343/",
-      "source_count": 1,
-      "sources": [
-        {
-          "name": "NHK",
-          "url": "https://www3.nhk.or.jp/nhkworld/news/20260909de49343/",
-          "published_at": "2026-09-08T17:01:00Z",
-          "source_channel": "bing_news_rss",
-          "discovered_via": "Bing News"
-        }
-      ],
-      "raw_ids": [
-        "b6f424f6c3e4f04f75b48f72"
-      ],
-      "analysis_mode": "deepseek"
-    },
-    {
-      "id": "fdee33781258d3b007",
-      "title": "Hawker Operators Gain Access to High-Speed Starlink Connectivity Through Textron Aviation Customer Support Network",
-      "summary_zh": "",
-      "why_it_matters_zh": "",
-      "category": "Airlines & Credit",
-      "importance_score": 45,
-      "region": "Global/Unspecified",
-      "entities": [],
-      "published_at": "2026-09-08T03:00:00Z",
-      "updated_at": "2026-09-14T09:38:27Z",
-      "primary_source": "Business Wire",
-      "primary_url": "https://www.businesswire.com/news/home/20260908170569/en/Hawker-Operators-Gain-Access-to-High-Speed-Starlink-Connectivity-Through-Textron-Aviation-Customer-Support-Network",
-      "source_count": 1,
-      "sources": [
-        {
-          "name": "Business Wire",
-          "url": "https://www.businesswire.com/news/home/20260908170569/en/Hawker-Operators-Gain-Access-to-High-Speed-Starlink-Connectivity-Through-Textron-Aviation-Customer-Support-Network",
-          "published_at": "2026-09-08T03:00:00Z",
-          "source_channel": "bing_news_rss",
-          "discovered_via": "Bing News"
-        }
-      ],
-      "raw_ids": [
-        "c471b20af088548e4dd33422"
-      ],
-      "analysis_mode": "fallback_after_ai_error"
-    },
-    {
-      "id": "f98879ae23ec318816",
-      "title": "Air New Zealand improves punctuality as engine shortages help drive NZ$336 million loss",
-      "summary_zh": "",
-      "why_it_matters_zh": "",
-      "category": "Airlines & Credit",
-      "importance_score": 45,
-      "region": "Global/Unspecified",
-      "entities": [],
-      "published_at": "2026-09-08T02:38:46Z",
-      "updated_at": "2026-09-14T09:38:27Z",
-      "primary_source": "Aerospace and Mechanical Insider on MSN",
-      "primary_url": "https://www.msn.com/en-us/money/general/air-new-zealand-improves-punctuality-as-engine-shortages-help-drive-nz-336-million-loss/ar-AA2bNlcq",
-      "source_count": 1,
-      "sources": [
-        {
-          "name": "Aerospace and Mechanical Insider on MSN",
-          "url": "https://www.msn.com/en-us/money/general/air-new-zealand-improves-punctuality-as-engine-shortages-help-drive-nz-336-million-loss/ar-AA2bNlcq",
-          "published_at": "2026-09-08T02:38:46Z",
-          "source_channel": "bing_news_rss",
-          "discovered_via": "Bing News"
-        }
-      ],
-      "raw_ids": [
-        "b78ec490f7e1c4d4a8fccf66"
       ],
       "analysis_mode": "fallback_after_ai_error"
     }
