@@ -48,17 +48,17 @@
   "history_fetch_warning": "Yahoo Finance: 404 Client Error: Not Found for url: https://query1.finance.yahoo.com/v8/finance/chart/XAUUSD%3DX?range=1y&interval=1d&events=history",
   "world_bank_fetch_warning": null,
   "latest_quote": {
-    "price": 4272.7,
-    "timestamp": "2026-09-17T00:01:06.314Z",
+    "price": 4289.0,
+    "timestamp": "2026-09-17T00:40:01.995Z",
     "quote_status": "XAUS_FRESH",
     "source": "XAUS Gold Data API",
     "source_state": {
       "status": "fresh",
-      "as_of": "2026-09-17T00:01:06.314Z",
+      "as_of": "2026-09-17T00:40:01.995Z",
       "source": "upstream",
       "age_seconds": 0
     },
-    "retrieved_at_bjt": "2026-09-17T08:01:29+08:00",
+    "retrieved_at_bjt": "2026-09-17T08:40:09+08:00",
     "observation_date": "2026-09-16"
   },
   "data": [
@@ -12850,5 +12850,5 @@
       "low": 4235.2
     }
   ],
-  "updated_at_bjt": "2026-09-17T08:01:29+08:00"
+  "updated_at_bjt": "2026-09-17T08:40:09+08:00"
 }
