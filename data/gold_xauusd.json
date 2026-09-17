@@ -9,12 +9,12 @@
   "historical_source_url": "https://www.worldbank.org/en/research/commodity-markets",
   "historical_ingest": "datasets/gold-prices mirror of World Bank monthly Gold series",
   "historical_ingest_url": "https://github.com/datasets/gold-prices",
-  "daily_source": "retained stored history",
+  "daily_source": "goldprice.dev XAU-USD-SPOT",
   "daily_primary_source": "Yahoo Finance XAUUSD=X",
   "daily_primary_url": "https://finance.yahoo.com/quote/XAUUSD%3DX/history/",
   "daily_fallback_source": "goldprice.dev XAU-USD-SPOT",
   "daily_fallback_url": "https://goldprice.dev/docs/historical",
-  "daily_fallback_used": false,
+  "daily_fallback_used": true,
   "live_primary_source": "XAUS Gold Data API",
   "live_primary_url": "https://xaus.com/api/",
   "live_fallback_source": "gold-api.com",
@@ -42,23 +42,23 @@
   "history_end": "2026-09-16",
   "observation_count": 1644,
   "history_data_state": {
-    "daily_source": "retained stored history",
-    "fallback_used": false
+    "daily_source": "goldprice.dev XAU-USD-SPOT",
+    "fallback_used": true
   },
-  "history_fetch_warning": "No reliable XAU/USD daily history source available: Yahoo Finance: 404 Client Error: Not Found for url: https://query1.finance.yahoo.com/v8/finance/chart/XAUUSD%3DX?range=1y&interval=1d&events=history | goldprice.dev: 525 Server Error: <none> for url: https://api.goldprice.dev/v1/bars?symbol=XAU-USD-SPOT&interval=1d&from=2026-08-19&to=2026-09-17&limit=100",
+  "history_fetch_warning": "Yahoo Finance: 404 Client Error: Not Found for url: https://query1.finance.yahoo.com/v8/finance/chart/XAUUSD%3DX?range=1y&interval=1d&events=history",
   "world_bank_fetch_warning": null,
   "latest_quote": {
-    "price": 4367.9,
-    "timestamp": "2026-09-17T14:00:58.547Z",
+    "price": 4365.7,
+    "timestamp": "2026-09-17T14:35:12.980Z",
     "quote_status": "XAUS_FRESH",
     "source": "XAUS Gold Data API",
     "source_state": {
       "status": "fresh",
-      "as_of": "2026-09-17T14:00:58.547Z",
+      "as_of": "2026-09-17T14:35:12.980Z",
       "source": "upstream",
       "age_seconds": 0
     },
-    "retrieved_at_bjt": "2026-09-17T22:01:23+08:00",
+    "retrieved_at_bjt": "2026-09-17T22:35:24+08:00",
     "observation_date": "2026-09-16"
   },
   "data": [
@@ -12850,5 +12850,5 @@
       "low": 4235.2
     }
   ],
-  "updated_at_bjt": "2026-09-17T22:01:23+08:00"
+  "updated_at_bjt": "2026-09-17T22:35:24+08:00"
 }
