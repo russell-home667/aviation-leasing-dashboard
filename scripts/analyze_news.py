@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Step 3: enrich, score and rank clustered aviation-leasing news.
 
-Inputs are Step-2 metadata plus public snippets already collected by Step 1. This
-script never fetches paid article bodies.
+Inputs are Step-2 metadata plus public article text/excerpts and snippets already
+collected upstream. This script never bypasses login or paywall controls.
 
 Outputs:
 - data/news_feed.json: ranked/enriched rolling 7-day feed
@@ -154,21 +154,71 @@ def raw_lookup() -> dict[str, dict[str, Any]]:
     return out
 
 
+CONTENT_BASIS_RANK = {
+    "headline_only": 0,
+    "rss_summary": 1,
+    "article_excerpt": 2,
+    "full_text": 3,
+}
+
+
+def analysis_content_basis(story: dict[str, Any], raw: dict[str, dict[str, Any]]) -> str:
+    best = "headline_only"
+    for rid in story.get("raw_ids") or []:
+        item = raw.get(str(rid))
+        if not item:
+            continue
+        basis = clean(item.get("content_basis"))
+        if basis not in CONTENT_BASIS_RANK:
+            if clean(item.get("public_article_text")):
+                basis = "article_excerpt"
+            elif len(clean(item.get("summary"))) >= 80:
+                basis = "rss_summary"
+            else:
+                basis = "headline_only"
+        if CONTENT_BASIS_RANK[basis] > CONTENT_BASIS_RANK[best]:
+            best = basis
+    return best
+
+
 def metadata_snippets(story: dict[str, Any], raw: dict[str, dict[str, Any]]) -> list[str]:
     snippets = []
     seen = set()
+    char_budget = 6800
+
+    # Prefer a publicly accessible article body/excerpt when Step 1.5 obtained one.
+    article_candidates = []
+    for rid in story.get("raw_ids") or []:
+        item = raw.get(str(rid))
+        if not item:
+            continue
+        text = clean(item.get("public_article_text"))
+        if text:
+            article_candidates.append(text)
+    if article_candidates:
+        article = max(article_candidates, key=len)[:5600]
+        snippets.append(article)
+        seen.add(article.lower())
+        char_budget -= len(article)
+
+    # Add short RSS/listing metadata as corroborating context.
     for rid in story.get("raw_ids") or []:
         item = raw.get(str(rid))
         if not item:
             continue
         for value in (item.get("summary"), item.get("description"), item.get("snippet")):
             text = clean(value)
-            if text and text.lower() not in seen:
-                seen.add(text.lower())
-                snippets.append(text[:650])
-        if len(snippets) >= 3:
+            if not text or text.lower() in seen:
+                continue
+            remaining = min(650, max(0, char_budget))
+            if remaining <= 0:
+                break
+            snippets.append(text[:remaining])
+            seen.add(text.lower())
+            char_budget -= min(len(text), remaining)
+        if len(snippets) >= 4 or char_budget <= 0:
             break
-    return snippets[:3]
+    return snippets[:4]
 
 
 def boundary_alias_match(text: str, alias: str) -> bool:
@@ -303,7 +353,7 @@ def parse_json(text: str) -> dict[str, Any]:
 
 def call_ai(key: str, candidates: list[dict[str, Any]]) -> dict[str, Any]:
     system = """You are the senior market-intelligence editor for an aircraft leasing front office.
-Use ONLY the supplied headline, public metadata snippets and structured fields. Never invent facts,
+Use ONLY the supplied headline, public article text/excerpts, RSS snippets and structured fields. Never invent facts,
 numbers, counterparties or conclusions. The user cares especially about lessee credit, aircraft
 supply/demand, lease rates and values, engine/MRO constraints, financing conditions, repossession /
 legal risk and macro/geopolitical transmission into aviation leasing.
@@ -379,6 +429,7 @@ def ai_candidate(story: dict[str, Any], raw: dict[str, dict[str, Any]], priority
         "entities": [clean(x) for x in (story.get("entities") or []) if clean(x)][:16],
         "sources": [clean(x.get("name")) for x in (story.get("sources") or []) if clean(x.get("name"))][:8],
         "metadata_snippets": metadata_snippets(story, raw),
+        "content_basis": analysis_content_basis(story, raw),
         "priority_entity_matches": [x["name"] for x in priority],
         "deterministic_macro_tags": macros,
     }
@@ -518,6 +569,10 @@ def enrich_story(story: dict[str, Any], analysis: dict[str, Any], config: dict[s
     out["critical_reason_zh"] = critical_reason
     out["score_components"] = components
     out["step3_ai_mode"] = clean(analysis.get("ai_mode")) or "unknown"
+    basis = analysis_content_basis(story, raw)
+    out["content_basis"] = basis
+    out["analysis_reused"] = bool(analysis.get("_reused"))
+    out["analysis_input_basis"] = "historical_reuse" if out["analysis_reused"] else basis
     out["analysis_fingerprint"] = story_fingerprint(story)
     out["step3_updated_at"] = iso(now)
     return out
@@ -559,8 +614,12 @@ def main() -> int:
         fallback = fallback_ai(story, text, priority, macros)
         prior = prior_by_id.get(sid)
         fingerprint = story_fingerprint(story)
+        current_basis = analysis_content_basis(story, raw)
+        prior_basis = clean(prior.get("content_basis")) if prior else ""
+        content_improved = CONTENT_BASIS_RANK.get(current_basis, 0) > CONTENT_BASIS_RANK.get(prior_basis, -1)
         if (
             prior
+            and not content_improved
             and prior.get("analysis_fingerprint") == fingerprint
             and clean(prior.get("summary_zh"))
             and clean(prior.get("why_it_matters_zh"))
@@ -578,6 +637,7 @@ def main() -> int:
                 "key_entities": [x.get("name") for x in (prior.get("priority_matches") or []) if isinstance(x, dict) and x.get("name")],
                 "aircraft_tags": list(prior.get("aircraft_tags") or []),
                 "ai_mode": clean(prior.get("step3_ai_mode")) or "reused",
+                "_reused": True,
             }
             reused += 1
         else:
@@ -672,6 +732,8 @@ def main() -> int:
         "step3_deepseek_updated": deepseek_updated,
         "step3_deepseek_calls": calls,
         "step3_failed_batches": failed_batches,
+        "content_basis_counts": dict(Counter(story.get("content_basis") or "unknown" for story in current)),
+        "historical_reuse_stories": sum(1 for story in current if story.get("analysis_reused")),
     }
 
     common = {
@@ -725,6 +787,8 @@ def main() -> int:
         "deepseek_errors": errors[:30],
         "fallback_story_count": sum(1 for story in current if story.get("step3_ai_mode") != "deepseek"),
         "deepseek_story_count": sum(1 for story in current if story.get("step3_ai_mode") == "deepseek"),
+        "content_basis_counts": dict(Counter(story.get("content_basis") or "unknown" for story in current)),
+        "historical_reuse_story_count": sum(1 for story in current if story.get("analysis_reused")),
     }
     STATUS_PATH.write_text(json.dumps(status, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(status, ensure_ascii=False, indent=2))
