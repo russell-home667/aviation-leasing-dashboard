@@ -104,7 +104,6 @@ def install(an) -> None:
     if getattr(an, "_unified_news_ai_installed", False):
         return
 
-    original_post = an.requests.post
     original_sanitize = an.sanitize_ai
     original_enrich = an.enrich_story
 
@@ -123,15 +122,6 @@ def install(an) -> None:
                 prior_category_by_id[sid] = category
     except Exception:
         prior_category_by_id = {}
-
-    def capped_post(*args, **kwargs):
-        requested = kwargs.get("timeout", 35)
-        try:
-            requested = float(requested)
-        except Exception:
-            requested = 35
-        kwargs["timeout"] = min(requested, 35)
-        return original_post(*args, **kwargs)
 
     def unified_call_ai(key: str, candidates: list[dict[str, Any]]) -> dict[str, Any]:
         prepared: list[dict[str, Any]] = []
@@ -157,7 +147,7 @@ def install(an) -> None:
         )
 
         system = """You are the senior market-intelligence editor for an aircraft leasing front office.
-Use ONLY the supplied headline, public metadata snippets and structured fields. Never invent facts,
+Use ONLY the supplied headline, public article text/excerpts, RSS snippets and structured fields. Never invent facts,
 numbers, counterparties or conclusions.
 
 Each story has category_locked=true or false.
@@ -219,13 +209,19 @@ Return JSON only. Do not drop any supplied story ID."""
                 {"role": "user", "content": json.dumps(prompt, ensure_ascii=False)},
             ],
             "response_format": {"type": "json_object"},
-            "max_tokens": 8000,
+            "max_tokens": 6000,
         }
         headers = {"Authorization": "Bearer " + key, "Content-Type": "application/json"}
         errors = []
-        for attempt in range(2):
+        retry_delays = (2, 5)
+        for attempt in range(3):
             try:
-                response = an.requests.post(an.CHAT_API, headers=headers, json=body, timeout=100)
+                response = an.requests.post(
+                    an.CHAT_API,
+                    headers=headers,
+                    json=body,
+                    timeout=(10, 75),
+                )
                 response.raise_for_status()
                 content = (((response.json().get("choices") or [{}])[0].get("message") or {}).get("content") or "").strip()
                 if not content:
@@ -233,8 +229,10 @@ Return JSON only. Do not drop any supplied story ID."""
                 return an.parse_json(content)
             except Exception as exc:
                 errors.append(f"{type(exc).__name__}: {exc}")
-                if attempt == 0:
-                    an.time.sleep(2)
+                if attempt < 2:
+                    delay = retry_delays[attempt]
+                    print(f"[news] DeepSeek attempt {attempt + 1}/3 failed; retrying in {delay}s: {type(exc).__name__}: {exc}")
+                    an.time.sleep(delay)
         raise RuntimeError("; ".join(errors))
 
     def unified_sanitize(row: dict[str, Any], fallback: dict[str, Any], allowed_macro_tags: set[str]) -> dict[str, Any]:
@@ -266,8 +264,6 @@ Return JSON only. Do not drop any supplied story ID."""
         enriched["analysis_fingerprint"] = an.story_fingerprint(story)
         return enriched
 
-    an.requests.post = capped_post
-    an.time.sleep = lambda _seconds: None
     an.call_ai = unified_call_ai
     an.sanitize_ai = unified_sanitize
     an.enrich_story = unified_enrich
