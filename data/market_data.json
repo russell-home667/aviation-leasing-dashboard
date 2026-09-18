@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-18T14:22:29+08:00",
+  "updated_at": "2026-09-18T06:25:29.742046Z",
   "brent": {
     "name": "Brent Crude",
     "ticker": "BZ=F",
@@ -44233,7 +44233,7 @@
       },
       {
         "date": "2026-08-05",
-        "value": 134.86
+        "value": 134.9
       },
       {
         "date": "2026-08-06",
@@ -44350,6 +44350,10 @@
       {
         "date": "2026-09-16",
         "value": 188.16
+      },
+      {
+        "date": "2026-09-17",
+        "value": 180.93
       }
     ],
     "source_url": "https://commodityscope.com/prices/singapore-jet-kerosene",
@@ -44370,8 +44374,8 @@
         "source": "Public FOB Singapore jet/kerosene archive",
         "source_url": "https://commodityscope.com/prices/singapore-jet-kerosene",
         "from": "2026-01-26",
-        "to": "2026-09-16",
-        "observations": 133,
+        "to": "2026-09-17",
+        "observations": 134,
         "note": "Current public indicative FOB Singapore mid; not a licensed Platts/CME settlement feed."
       }
     ],
