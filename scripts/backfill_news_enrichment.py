@@ -3,7 +3,7 @@
 
 The main Step-3 analyzer preserves coverage even when the model is unavailable.
 This job specifically revisits fallback stories so historical summaries do not
-remain permanently generic. It uses the best already-collected public context available: article text/excerpts first, then RSS metadata.
+remain permanently generic. It only uses already-collected public metadata.
 """
 from __future__ import annotations
 
@@ -29,6 +29,22 @@ CONFIG = ROOT / "data" / "news_priority_entities.json"
 
 BATCH_SIZE = max(1, int(os.getenv("NEWS_BACKFILL_BATCH_SIZE", "6")))
 MAX_STORIES = max(1, int(os.getenv("NEWS_BACKFILL_MAX_STORIES", "240")))
+
+# Keep model calls from occupying the hourly worker indefinitely.
+_original_post = an.requests.post
+
+def capped_post(*args, **kwargs):
+    requested = kwargs.get("timeout", 35)
+    try:
+        requested = float(requested)
+    except Exception:
+        requested = 35
+    kwargs["timeout"] = min(requested, 35)
+    return _original_post(*args, **kwargs)
+
+an.requests.post = capped_post
+an.time.sleep = lambda _seconds: None
+
 
 def load(path: Path, default):
     if not path.exists():
