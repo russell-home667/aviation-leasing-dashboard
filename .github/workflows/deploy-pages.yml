@@ -110,7 +110,7 @@ jobs:
       - name: Backfill verified JAL Singapore kerosene averages
         if: contains(github.event.head_commit.message, '[backfill-jal-static]')
         run: |
-          python scripts/backfill_jet_fuel_jal_static.py
+          python scripts/backfill_jet_fuel_jal.py
 
       - name: Update Baltic Air Freight Index data
         if: >
