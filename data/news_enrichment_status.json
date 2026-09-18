@@ -1,25 +1,25 @@
 {
   "schema_version": 3,
-  "checked_at": "2026-09-17T00:53:09Z",
+  "checked_at": "2026-09-18T00:52:04Z",
   "status": "pass",
   "deepseek_configured": true,
   "model": "deepseek-flash",
-  "step2_current_stories": 185,
-  "step2_archive_stories": 290,
-  "current_enriched_stories": 185,
-  "archive_enriched_stories": 290,
-  "priority_entity_stories": 56,
-  "macro_related_stories": 47,
-  "critical_stories": 52,
-  "reused_ai_stories": 253,
-  "pending_before_ai": 37,
-  "ai_submitted": 37,
+  "step2_current_stories": 179,
+  "step2_archive_stories": 331,
+  "current_enriched_stories": 179,
+  "archive_enriched_stories": 331,
+  "priority_entity_stories": 48,
+  "macro_related_stories": 49,
+  "critical_stories": 60,
+  "reused_ai_stories": 287,
+  "pending_before_ai": 44,
+  "ai_submitted": 44,
   "deepseek_updated": 0,
   "deepseek_calls": 0,
   "deepseek_failed_batches": 1,
   "deepseek_errors": [
-    "batch_1: RuntimeError: JSONDecodeError: Expecting ',' delimiter: line 251 column 6 (char 8660); ConnectionError: HTTPSConnectionPool(host='api.deepseek.com', port=443): Read timed out."
+    "batch_1: RuntimeError: ConnectionError: HTTPSConnectionPool(host='api.deepseek.com', port=443): Read timed out.; ConnectionError: HTTPSConnectionPool(host='api.deepseek.com', port=443): Read timed out."
   ],
-  "fallback_story_count": 142,
-  "deepseek_story_count": 43
+  "fallback_story_count": 156,
+  "deepseek_story_count": 23
 }

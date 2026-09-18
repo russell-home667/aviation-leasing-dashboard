@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "checked_at": "2026-09-17T00:53:05Z",
+  "checked_at": "2026-09-18T00:52:01Z",
   "status": "pass",
   "analysis_mode": "fallback_rules",
   "deepseek_configured": false,
@@ -14,19 +14,19 @@
     "Legal & Regulatory",
     "Macro & Geopolitics"
   ],
-  "raw_pool_total": 1392,
-  "recent_raw_items": 223,
-  "new_raw_items": 40,
-  "new_preclusters": 39,
-  "current_stories": 185,
-  "archive_stories": 290,
+  "raw_pool_total": 1439,
+  "recent_raw_items": 229,
+  "new_raw_items": 45,
+  "new_preclusters": 45,
+  "current_stories": 179,
+  "archive_stories": 331,
   "deepseek_calls": 0,
   "deepseek_failed_batches": 0,
   "deepseek_errors": [
     "DEEPSEEK_API_KEY missing; deterministic fallback used."
   ],
-  "clusters_submitted": 39,
-  "clusters_retained_or_accounted": 38,
-  "fallback_story_count": 159,
-  "deepseek_story_count": 26
+  "clusters_submitted": 45,
+  "clusters_retained_or_accounted": 44,
+  "fallback_story_count": 154,
+  "deepseek_story_count": 25
 }
