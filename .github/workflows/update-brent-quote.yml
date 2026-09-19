@@ -4,10 +4,10 @@ on:
   workflow_dispatch:
 
   # GitHub Actions' shortest supported scheduled interval is 5 minutes.
-  # Run Monday-Saturday in Beijing time to cover the US futures week,
-  # including the Friday US session that extends into Saturday Beijing time.
+  # Run every day in Beijing time. The updater writes only when Yahoo Finance
+  # publishes a new BZ=F source bar, so closed-market checks remain no-op runs.
   schedule:
-    - cron: '*/5 * * * 1-6'
+    - cron: '*/5 * * * *'
       timezone: 'Asia/Shanghai'
 
 permissions:
